@@ -1,6 +1,6 @@
-# Contributing to Angular
+# Contributing to nx-classic
 
-We would love for you to contribute to Angular and help make it even better than it is today!
+We would love for you to contribute to NX Classic  and help make it even better than it is today!
 As a contributor, here are the guidelines we would like you to follow:
 
  - [Code of Conduct](#coc)
@@ -15,14 +15,14 @@ As a contributor, here are the guidelines we would like you to follow:
 
 ## <a name="coc"></a> Code of Conduct
 
-Help us keep Angular open and inclusive.
+Help us keep NX Classic open and inclusive.
 Please read and follow our [Code of Conduct][coc].
 
 
 ## <a name="question"></a> Got a Question or Problem?
 
 Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests.
-Instead, we recommend using [Stack Overflow](https://stackoverflow.com/questions/tagged/angular) to ask support-related questions. When creating a new question on Stack Overflow, make sure to add the `angular` tag.
+Instead, we recommend using [Stack Overflow](https://stackoverflow.com/questions/tagged/nx-classic) to ask support-related questions. When creating a new question on Stack Overflow, make sure to add the `Nx Classic` tag.
 
 Stack Overflow is a much better place to ask questions since:
 
@@ -72,14 +72,14 @@ We understand that sometimes it might be hard to extract essential bits of code 
 
 Unfortunately, we are not able to investigate / fix bugs without a minimal reproduction, so if we don't hear back from you, we are going to close an issue that doesn't have enough info to be reproduced.
 
-You can file new issues by selecting from our [new issue templates](https://github.com/angular/angular/issues/new/choose) and filling out the issue template.
+You can file new issues by selecting from our [new issue templates](https://github.com/nx-classic/nx-classic/issues/new/choose) and filling out the issue template.
 
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-1. Search [GitHub](https://github.com/angular/angular/pulls) for an open or closed PR that relates to your submission.
+1. Search [GitHub](https://github.com/nx-classic/nx-classic/pulls) for an open or closed PR that relates to your submission.
    You don't want to duplicate existing efforts.
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
@@ -89,7 +89,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
    We cannot accept code without a signed CLA.
    Make sure you author all contributed Git commits with email address associated with your CLA signature.
 
-4. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the angular/angular repo.
+4. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the nx-classic/nx-classic repo.
 
 5. In your forked repository, make your changes in a new git branch:
 
@@ -101,7 +101,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 7. Follow our [Coding Rules](#rules).
 
-8. Run the full Angular test suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
+8. Run the full nx-classic test suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
 
 9. Commit your changes using a descriptive commit message that follows our [commit message conventions](#commit).
    Adherence to these conventions is necessary because release notes are automatically generated from these messages.
@@ -117,11 +117,11 @@ Before you submit your Pull Request (PR) consider the following guidelines:
     git push origin my-fix-branch
     ```
 
-11. In GitHub, send a pull request to `angular:main`.
+11. In GitHub, send a pull request to `nx-classic:main`.
 
 ### Reviewing a Pull Request
 
-The Angular team reserves the right not to accept pull requests from community members who haven't been good citizens of the community. Such behavior includes not following the [Angular code of conduct](https://github.com/angular/code-of-conduct) and applies within or outside of Angular managed channels.
+The nx-classic team reserves the right not to accept pull requests from community members who haven't been good citizens of the community. Such behavior includes not following the [nx-classic code of conduct](https://github.com/nx-classic/code-of-conduct) and applies within or outside of nx-classic managed channels.
 
 #### Addressing review feedback
 
@@ -129,7 +129,7 @@ If we ask for changes via code reviews then:
 
 1. Make the required updates to the code.
 
-2. Re-run the Angular test suites to ensure tests are still passing.
+2. Re-run the nx-classic test suites to ensure tests are still passing.
 
 3. Create a fixup commit and push to your GitHub repository (this will update your Pull Request):
 
@@ -212,7 +212,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 ## <a name="commit"></a> Commit Message Format
 
-*This specification is inspired by and supersedes the [AngularJS commit message format][commit-message-format].*
+*This specification is inspired by and supersedes the [nx-classicJS commit message format][commit-message-format].*
 
 We have very precise rules over how our Git commit messages must be formatted.
 This format leads to **easier to read commit history**.
@@ -302,7 +302,7 @@ There are currently a few exceptions to the "use package name" rule:
 
 * `dev-infra`: used for dev-infra related changes within the directories /scripts and /tools
 
-* `docs-infra`: used for docs-app (angular.io) related changes within the /aio directory of the repo
+* `docs-infra`: used for docs-app (nx-classic.io) related changes within the /aio directory of the repo
 
 * `migrations`: used for changes to the `ng update` migrations.
 
@@ -366,39 +366,3 @@ The content of the commit message body should contain:
 
 - information about the SHA of the commit being reverted in the following format: `This reverts commit <SHA>`,
 - a clear description of the reason for reverting the commit message.
-
-
-## <a name="cla"></a> Signing the CLA
-
-Please sign our Contributor License Agreement (CLA) before sending pull requests. For any code
-changes to be accepted, the CLA must be signed. It's a quick process, we promise!
-
-* For individuals, we have a [simple click-through form][individual-cla].
-* For corporations, we'll need you to
-  [print, sign and one of scan+email, fax or mail the form][corporate-cla].
-
-If you have more than one GitHub accounts, or multiple email addresses associated with a single GitHub account, you must sign the CLA using the primary email address of the GitHub account used to author Git commits and send pull requests.
-
-The following documents can help you sort out issues with GitHub accounts and multiple email addresses:
-
-  * https://help.github.com/articles/setting-your-commit-email-address-in-git/
-  * https://stackoverflow.com/questions/37245303/what-does-usera-committed-with-userb-13-days-ago-on-github-mean
-  * https://help.github.com/articles/about-commit-email-addresses/
-  * https://help.github.com/articles/blocking-command-line-pushes-that-expose-your-personal-email-address/
-
-
-
-
-[angular-group]: https://groups.google.com/forum/#!forum/angular
-[coc]: https://github.com/angular/code-of-conduct/blob/main/CODE_OF_CONDUCT.md
-[commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
-[corporate-cla]: https://cla.developers.google.com/about/google-corporate
-[dev-doc]: https://github.com/angular/angular/blob/main/docs/DEVELOPER.md
-[github]: https://github.com/angular/angular
-[discord]: https://discord.gg/angular
-[individual-cla]: https://cla.developers.google.com/about/google-individual
-[js-style-guide]: https://google.github.io/styleguide/jsguide.html
-[jsfiddle]: https://jsfiddle.net/
-[plunker]: https://plnkr.co/edit
-[runnable]: https://runnable.com/
-[stackoverflow]: https://stackoverflow.com/questions/tagged/angular
