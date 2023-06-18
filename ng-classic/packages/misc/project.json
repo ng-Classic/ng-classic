@@ -1,0 +1,38 @@
+{
+  "name": "misc",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/misc/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/misc",
+        "main": "packages/misc/src/index.ts",
+        "tsConfig": "packages/misc/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs misc {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/misc/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/packages/misc"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/misc"
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,45 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ng-classic/animations": ["packages/animations/src/index.ts"],
+      "@ng-classic/common": ["packages/common/src/index.ts"],
+      "@ng-classic/compiler": ["packages/compiler/src/index.ts"],
+      "@ng-classic/compiler-cli": ["packages/compiler-cli/src/index.ts"],
+      "@ng-classic/core": ["packages/core/src/index.ts"],
+      "@ng-classic/elements": ["packages/elements/src/index.ts"],
+      "@ng-classic/forms": ["packages/forms/src/index.ts"],
+      "@ng-classic/language-service": [
+        "packages/language-service/src/index.ts"
+      ],
+      "@ng-classic/localize": ["packages/localize/src/index.ts"],
+      "@ng-classic/misc": ["packages/misc/src/index.ts"],
+      "@ng-classic/platform-browser": [
+        "packages/platform-browser/src/index.ts"
+      ],
+      "@ng-classic/platform-browser-dynamic": [
+        "packages/platform-browser-dynamic/src/index.ts"
+      ],
+      "@ng-classic/platform-server": ["packages/platform-server/src/index.ts"],
+      "@ng-classic/private": ["packages/private/src/index.ts"],
+      "@ng-classic/router": ["packages/router/src/index.ts"],
+      "@ng-classic/service-worker": ["packages/service-worker/src/index.ts"],
+      "@ng-classic/upgrade": ["packages/upgrade/src/index.ts"],
+      "@ng-classic/zone.js": ["packages/zone.js/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

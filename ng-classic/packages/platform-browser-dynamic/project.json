@@ -1,0 +1,38 @@
+{
+  "name": "platform-browser-dynamic",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/platform-browser-dynamic/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/platform-browser-dynamic",
+        "main": "packages/platform-browser-dynamic/src/index.ts",
+        "tsConfig": "packages/platform-browser-dynamic/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs platform-browser-dynamic {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/platform-browser-dynamic/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/packages/platform-browser-dynamic"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/platform-browser-dynamic"
+      }
+    }
+  },
+  "tags": []
+}
