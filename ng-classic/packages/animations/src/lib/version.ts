@@ -9,6 +9,8 @@
 /**
  * @module
  * @description
- * Entry point for all public APIs of this package.
+ * Entry point for all public APIs of the animation package.
  */
-export * from './lib';
+import {Version} from '@ng-classic/core';
+
+export const VERSION = new Version('0.0.0-PLACEHOLDER');
