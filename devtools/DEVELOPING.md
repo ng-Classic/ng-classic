@@ -3,7 +3,7 @@
 To setup your development environment run:
 
 ```
-git clone git@github.com:ng-angular/angular
+git clone git@github.com:ng-classic/angular
 cd devtools
 yarn
 ```

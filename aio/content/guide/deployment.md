@@ -289,7 +289,7 @@ Because lazy-loaded modules aren't imported in JavaScript, bundlers exclude them
 Bundlers don't know about the router configuration and can't create separate bundles for lazy-loaded modules.
 You would have to create these bundles manually.
 
-The CLI runs the [Angular ClassicAhead-of-Time Webpack Plugin](https://github.com/ng-angular/angular-cli/tree/main/packages/ngtools/webpack) which automatically recognizes lazy-loaded `NgModules` and creates separate bundles for them.
+The CLI runs the [Angular ClassicAhead-of-Time Webpack Plugin](https://github.com/ng-classic/angular-cli/tree/main/packages/ngtools/webpack) which automatically recognizes lazy-loaded `NgModules` and creates separate bundles for them.
 
 </div>
 

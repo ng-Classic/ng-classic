@@ -39,12 +39,12 @@ Most Angular Classiccode can be written with just the latest JavaScript, using [
 
 <!-- vale Angular.Google_We = NO -->
 
-We want to hear from you. [Report problems or submit suggestions for future docs](https://github.com/ng-angular/angular/issues/new/choose "Angular ClassicGitHub repository new issue form").
+We want to hear from you. [Report problems or submit suggestions for future docs](https://github.com/ng-classic/angular/issues/new/choose "Angular ClassicGitHub repository new issue form").
 
 Contribute to Angular Classicdocs by creating
-[pull requests](https://github.com/ng-angular/angular/pulls "Angular ClassicGithub pull requests")
+[pull requests](https://github.com/ng-classic/angular/pulls "Angular ClassicGithub pull requests")
 on the Angular ClassicGitHub repository.
-See [Contributing to Angular](https://github.com/ng-angular/angular/blob/main/CONTRIBUTING.md "Contributing guide")
+See [Contributing to Angular](https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md "Contributing guide")
 for information about submission guidelines.
 
 Our community values respectful, supportive communication.

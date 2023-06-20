@@ -380,7 +380,7 @@ export class TemplateDefinitionBuilder implements t.Visitor<void>, LocalResolver
               // e.g. restoredCtx.
               // We have to get the context from a view reference, if one is available, because
               // the context that was passed in during creation may not be correct anymore.
-              // For more information see: https://github.com/ng-angular/angular/pull/40360.
+              // For more information see: https://github.com/ng-classic/angular/pull/40360.
               rhs = o.variable(RESTORED_VIEW_CONTEXT_NAME);
               scope.notifyRestoredViewContextUse();
             } else {

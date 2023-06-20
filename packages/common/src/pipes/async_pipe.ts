@@ -107,7 +107,7 @@ export class AsyncPipe implements OnDestroy, PipeTransform {
     // Clear the `ChangeDetectorRef` and its association with the view data, to mitigate
     // potential memory leaks in Observables that could otherwise cause the view data to
     // be retained.
-    // https://github.com/ng-angular/angular/issues/17624
+    // https://github.com/ng-classic/angular/issues/17624
     this._ref = null;
   }
 

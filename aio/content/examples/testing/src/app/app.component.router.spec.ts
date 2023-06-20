@@ -1,5 +1,5 @@
 // For more examples:
-//   https://github.com/ng-angular/angular/blob/main/packages/router/test/integration.spec.ts
+//   https://github.com/ng-classic/angular/blob/main/packages/router/test/integration.spec.ts
 
 import {Location} from '@angular-classic/common';
 import {provideLocationMocks, SpyLocation} from '@angular-classic/common/testing';

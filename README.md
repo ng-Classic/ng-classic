@@ -1,7 +1,7 @@
 <h1 align="center">Angular Classic- The modern web developer's platform</h1>
 
 <p align="center">
-  <img src="aio/src/assets/images/logos/ng-angular/angular.png" alt="angular-logo" width="120px" height="120px"/>
+  <img src="aio/src/assets/images/logos/ng-classic/angular.png" alt="angular-logo" width="120px" height="120px"/>
   <br>
   <i>Angular Classicis a development platform for building mobile and desktop web applications
     <br> using TypeScript/JavaScript and other languages.</i>
@@ -16,7 +16,7 @@
 <p align="center">
   <a href="CONTRIBUTING.md">Contributing Guidelines</a>
   ·
-  <a href="https://github.com/ng-angular/angular/issues">Submit an Issue</a>
+  <a href="https://github.com/ng-classic/angular/issues">Submit an Issue</a>
   ·
   <a href="https://blog.angular-classic.com/">Blog</a>
   <br>
@@ -25,7 +25,7 @@
 
 <p align="center">
   <a href="https://circleci.com/gh/angular/workflows/angular/tree/main">
-    <img src="https://img.shields.io/circleci/build/github/ng-angular/angular/main.svg?logo=circleci&logoColor=fff&label=CircleCI" alt="CI status" />
+    <img src="https://img.shields.io/circleci/build/github/ng-classic/angular/main.svg?logo=circleci&logoColor=fff&label=CircleCI" alt="CI status" />
   </a>&nbsp;
   <a href="https://www.npmjs.com/@angular-classic/core">
     <img src="https://img.shields.io/npm/v/@angular-classic/core.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen" alt="Angular Classicon npm" />
@@ -36,8 +36,8 @@
 </p>
 
 <p align="center">
-  <a href="https://app.circleci.com/insights/github/ng-angular/angular/workflows/default_workflow?branch=main">
-    <img src="https://dl.circleci.com/insights-snapshot/gh/ng-angular/angular/main/default_workflow/badge.svg" alt="InsightsSnapshot" />
+  <a href="https://app.circleci.com/insights/github/ng-classic/angular/workflows/default_workflow?branch=main">
+    <img src="https://dl.circleci.com/insights-snapshot/gh/ng-classic/angular/main/default_workflow/badge.svg" alt="InsightsSnapshot" />
   </a>
 </p>
 
@@ -119,7 +119,7 @@ Read through our [contributing guidelines][contributing] to learn about our subm
 
 ### Want to Help?
 
-Want to report a bug, contribute some code, or improve the documentation? Excellent! Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/ng-angular/angular/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/ng-angular/angular/labels/good%20first%20issue)</kbd>.
+Want to report a bug, contribute some code, or improve the documentation? Excellent! Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/ng-classic/angular/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/ng-classic/angular/labels/good%20first%20issue)</kbd>.
 
 ### Code of Conduct
 
@@ -136,7 +136,7 @@ Join the conversation and help the community.
 - [StackOverflow][stackoverflow]
 - Find a Local [Meetup][meetup]
 
-[![Love Angular Classicbadge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/ng-angular/angular)
+[![Love Angular Classicbadge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/ng-classic/angular)
 
 **Love Angular? Give our repo a star :star: :arrow_up:.**
 
@@ -160,7 +160,7 @@ Join the conversation and help the community.
 [codeofconduct]: CODE_OF_CONDUCT.md
 [twitter]: https://www.twitter.com/angular
 [discord]: https://discord.gg/angular
-[gitter]: https://gitter.im/ng-angular/angular
+[gitter]: https://gitter.im/ng-classic/angular
 [stackoverflow]: https://stackoverflow.com/questions/tagged/angular
 [youtube]: https://youtube.com/angular
 [meetup]: https://www.meetup.com/find/?keywords=angular

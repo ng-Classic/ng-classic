@@ -115,12 +115,12 @@ As you make changes to the documentation source files on your local computer, yo
 *  **Committed and pushed**
 
     After you push your commits to your personal repo in `github.com`, your changes are recorded by `git` and saved to the cloud.
-    They are not yet part of the `ng-angular/angular` repo.
-    This is the state your files must be in before you can open a pull request for them to become part of the `ng-angular/angular` repo.
+    They are not yet part of the `ng-classic/angular` repo.
+    This is the state your files must be in before you can open a pull request for them to become part of the `ng-classic/angular` repo.
 
 *  **Merged into Angular**
 
-    After your pull request is approved and merged, the changes you made are now part of the `ng-angular/angular` repo and appear in the [angular-classic.com](https://angular-classic.com) web site.
+    After your pull request is approved and merged, the changes you made are now part of the `ng-classic/angular` repo and appear in the [angular-classic.com](https://angular-classic.com) web site.
     Your documentation update is complete.
 
 This section describes how to save the changes you make to files in your working directory.

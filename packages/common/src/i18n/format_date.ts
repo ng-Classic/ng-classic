@@ -105,7 +105,7 @@ export function formatDate(
  * Create a new Date object with the given date value, and the time set to midnight.
  *
  * We cannot use `new Date(year, month, date)` because it maps years between 0 and 99 to 1900-1999.
- * See: https://github.com/ng-angular/angular/issues/40377
+ * See: https://github.com/ng-classic/angular/issues/40377
  *
  * Note that this function returns a Date object whose time is midnight in the current locale's
  * timezone. In the future we might want to change this to be midnight in UTC, but this would be a

@@ -133,7 +133,7 @@ If the process does not work as expected, i.e. changes are made to the spreadshe
 
   - You can also manually run the action, by clicking the `Run workflow` button.
 
-  _**NOTE:** For this project, you can see runs of the `Update AIO events` GitHub Action [here](https://github.com/ng-angular/angular/actions/workflows/update-events.yml)._
+  _**NOTE:** For this project, you can see runs of the `Update AIO events` GitHub Action [here](https://github.com/ng-classic/angular/actions/workflows/update-events.yml)._
 
 
 ### Trade-offs/Alternatives considered

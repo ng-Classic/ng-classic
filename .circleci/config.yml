@@ -1,4 +1,4 @@
-# Configuration file for https://circleci.com/gh/ng-angular/angular
+# Configuration file for https://circleci.com/gh/ng-classic/angular
 
 # Note: YAML anchors allow an object to be re-used, reducing duplication.
 # The ampersand declares an alias for an object, then later the `<<: *name`
@@ -74,7 +74,7 @@ var_9: &only_release_branches
 # https://circleci.com/developer/orbs.
 orbs:
   node: circleci/node@5.0.1
-  devinfra: ng-angular/dev-infra@1.0.8
+  devinfra: ng-classic/dev-infra@1.0.8
 
 # Executor Definitions
 # https://circleci.com/docs/2.0/reusing-config/#authoring-reusable-executors
@@ -165,7 +165,7 @@ commands:
             # `localhost` or `127.0.0.1` through the SauceLabs tunnel. Using a domain that does not
             # resolve to anything on SauceLabs VMs ensures that such requests are always resolved
             # through the tunnel, and resolve to the actual tunnel host machine (i.e. the CircleCI VM).
-            # More context can be found in: https://github.com/ng-angular/angular/pull/35171.
+            # More context can be found in: https://github.com/ng-classic/angular/pull/35171.
             setPublicVar SAUCE_LOCALHOST_ALIAS_DOMAIN "angular-ci.local"
             setSecretVar SAUCE_ACCESS_KEY $(echo $SAUCE_ACCESS_KEY | rev)
       - run:
@@ -442,7 +442,7 @@ jobs:
           destination: zone.js
 
   # This job updates the content of repos like github.com/angular/core-builds
-  # for every green build on ng-angular/angular.
+  # for every green build on ng-classic/angular.
   publish_snapshot:
     executor: default-executor
     steps:

@@ -67,7 +67,7 @@ execute the test.
 
 ## Running integration tests under Bazel
 
-The PR https://github.com/ng-angular/angular/pull/33927 added the ability to run integration tests with Bazel. These tests can be resource intensive so it is recommended to limit the number of concurrent test jobs with the `--local_test_jobs` bazel flag.
+The PR https://github.com/ng-classic/angular/pull/33927 added the ability to run integration tests with Bazel. These tests can be resource intensive so it is recommended to limit the number of concurrent test jobs with the `--local_test_jobs` bazel flag.
 
 Locally, if Bazel uses all of your cores to run the maximum number of integration tests in parallel then this can lead to test timeouts and flakes and freeze up your machine while these tests are running. You can limit the number of concurrent local integration tests that run with:
 

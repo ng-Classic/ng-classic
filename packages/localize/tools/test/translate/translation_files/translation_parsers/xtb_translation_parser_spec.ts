@@ -290,7 +290,7 @@ describe('XtbTranslationParser', () => {
     });
 
     it('should warn on unrecognised ICU messages', () => {
-      // See https://github.com/ng-angular/angular/issues/14046
+      // See https://github.com/ng-classic/angular/issues/14046
 
       const XTB = [
         `<translationbundle>`,

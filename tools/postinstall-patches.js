@@ -62,7 +62,7 @@ ls('node_modules/@types').filter(f => f.startsWith('babel__')).forEach(pkg => {
 });
 
 log('\n# patch: delete d.ts files referring to rxjs-compat');
-// more info in https://github.com/ng-angular/angular/pull/33786
+// more info in https://github.com/ng-classic/angular/pull/33786
 rm('-rf', [
   'node_modules/rxjs/add/',
   'node_modules/rxjs/observable/',

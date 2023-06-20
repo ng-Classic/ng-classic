@@ -105,7 +105,7 @@ export abstract class UrlCodec {
  * @publicApi
  */
 export class AngularJSUrlCodec implements UrlCodec {
-  // https://github.com/ng-angular/angular.js/blob/864c7f0/src/ng/location.js#L15
+  // https://github.com/ng-classic/angular.js/blob/864c7f0/src/ng/location.js#L15
   encodePath(path: string): string {
     const segments = path.split('/');
     let i = segments.length;
@@ -119,7 +119,7 @@ export class AngularJSUrlCodec implements UrlCodec {
     return _stripIndexHtml((path && path[0] !== '/' && '/' || '') + path);
   }
 
-  // https://github.com/ng-angular/angular.js/blob/864c7f0/src/ng/location.js#L42
+  // https://github.com/ng-classic/angular.js/blob/864c7f0/src/ng/location.js#L42
   encodeSearch(search: string|{[k: string]: unknown}): string {
     if (typeof search === 'string') {
       search = parseKeyValue(search);
@@ -129,13 +129,13 @@ export class AngularJSUrlCodec implements UrlCodec {
     return search ? '?' + search : '';
   }
 
-  // https://github.com/ng-angular/angular.js/blob/864c7f0/src/ng/location.js#L44
+  // https://github.com/ng-classic/angular.js/blob/864c7f0/src/ng/location.js#L44
   encodeHash(hash: string) {
     hash = encodeUriSegment(hash);
     return hash ? '#' + hash : '';
   }
 
-  // https://github.com/ng-angular/angular.js/blob/864c7f0/src/ng/location.js#L27
+  // https://github.com/ng-classic/angular.js/blob/864c7f0/src/ng/location.js#L27
   decodePath(path: string, html5Mode = true): string {
     const segments = path.split('/');
     let i = segments.length;
@@ -151,19 +151,19 @@ export class AngularJSUrlCodec implements UrlCodec {
     return segments.join('/');
   }
 
-  // https://github.com/ng-angular/angular.js/blob/864c7f0/src/ng/location.js#L72
+  // https://github.com/ng-classic/angular.js/blob/864c7f0/src/ng/location.js#L72
   decodeSearch(search: string) {
     return parseKeyValue(search);
   }
 
-  // https://github.com/ng-angular/angular.js/blob/864c7f0/src/ng/location.js#L73
+  // https://github.com/ng-classic/angular.js/blob/864c7f0/src/ng/location.js#L73
   decodeHash(hash: string) {
     hash = decodeURIComponent(hash);
     return hash[0] === '#' ? hash.substring(1) : hash;
   }
 
-  // https://github.com/ng-angular/angular.js/blob/864c7f0/src/ng/location.js#L149
-  // https://github.com/ng-angular/angular.js/blob/864c7f0/src/ng/location.js#L42
+  // https://github.com/ng-classic/angular.js/blob/864c7f0/src/ng/location.js#L149
+  // https://github.com/ng-classic/angular.js/blob/864c7f0/src/ng/location.js#L42
   normalize(href: string): string;
   normalize(path: string, search: {[k: string]: unknown}, hash: string, baseUrl?: string): string;
   normalize(pathOrHref: string, search?: {[k: string]: unknown}, hash?: string, baseUrl?: string):
@@ -199,7 +199,7 @@ export class AngularJSUrlCodec implements UrlCodec {
     return this.normalize(valA) === this.normalize(valB);
   }
 
-  // https://github.com/ng-angular/angular.js/blob/864c7f0/src/ng/urlUtils.js#L60
+  // https://github.com/ng-classic/angular.js/blob/864c7f0/src/ng/urlUtils.js#L60
   parse(url: string, base?: string) {
     try {
       // Safari 12 throws an error when the URL constructor is called with an undefined base.
@@ -242,7 +242,7 @@ function tryDecodeURIComponent(value: string): string|undefined {
 
 /**
  * Parses an escaped url query string into key-value pairs. Logic taken from
- * https://github.com/ng-angular/angular.js/blob/864c7f0/src/Angular.js#L1382
+ * https://github.com/ng-classic/angular.js/blob/864c7f0/src/Angular.js#L1382
  */
 function parseKeyValue(keyValue: string): {[k: string]: unknown} {
   const obj: {[k: string]: unknown} = {};
@@ -273,7 +273,7 @@ function parseKeyValue(keyValue: string): {[k: string]: unknown} {
 
 /**
  * Serializes into key-value pairs. Logic taken from
- * https://github.com/ng-angular/angular.js/blob/864c7f0/src/Angular.js#L1409
+ * https://github.com/ng-classic/angular.js/blob/864c7f0/src/Angular.js#L1409
  */
 function toKeyValue(obj: {[k: string]: unknown}) {
   const parts: unknown[] = [];
@@ -306,7 +306,7 @@ function toKeyValue(obj: {[k: string]: unknown}) {
  *    sub-delims    = "!" / "$" / "&" / "'" / "(" / ")"
  *                     / "*" / "+" / "," / ";" / "="
  *
- * Logic from https://github.com/ng-angular/angular.js/blob/864c7f0/src/Angular.js#L1437
+ * Logic from https://github.com/ng-classic/angular.js/blob/864c7f0/src/Angular.js#L1437
  */
 function encodeUriSegment(val: string) {
   return encodeUriQuery(val, true).replace(/%26/g, '&').replace(/%3D/gi, '=').replace(/%2B/gi, '+');
@@ -324,7 +324,7 @@ function encodeUriSegment(val: string) {
  *    sub-delims    = "!" / "$" / "&" / "'" / "(" / ")"
  *                     / "*" / "+" / "," / ";" / "="
  *
- * Logic from https://github.com/ng-angular/angular.js/blob/864c7f0/src/Angular.js#L1456
+ * Logic from https://github.com/ng-classic/angular.js/blob/864c7f0/src/Angular.js#L1456
  */
 function encodeUriQuery(val: string, pctEncodeSpaces: boolean = false) {
   return encodeURIComponent(val)

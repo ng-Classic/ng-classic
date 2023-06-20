@@ -98,7 +98,7 @@ index 6213703..4d91aa3 100755
          assets = None,
 @@ -108,7 +108,7 @@ def component_benchmark(
          # checked by TypeScript. We add the dependency only for bundling to reduce the compilation
-         # scope and to make it easier to replace this dependency inside the `ng-angular/angular`
+         # scope and to make it easier to replace this dependency inside the `ng-classic/angular`
          # repository with its corresponding source target that does not come with any typings.
 -        ng_bundle_deps.append("@npm//zone.js")
 +        ng_bundle_deps.append("@angular-classic//packages/zone.js/dist:zone")

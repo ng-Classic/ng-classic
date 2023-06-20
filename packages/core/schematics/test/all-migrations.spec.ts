@@ -68,7 +68,7 @@ describe('all migrations', () => {
   });
 
   function createTests(migrationName: string) {
-    // Regression test for: https://github.com/ng-angular/angular/issues/36346.
+    // Regression test for: https://github.com/ng-classic/angular/issues/36346.
     it('should not throw if non-existent symbols are imported with rootDirs', async () => {
       writeFile(`/tsconfig.json`, JSON.stringify({
         compilerOptions: {

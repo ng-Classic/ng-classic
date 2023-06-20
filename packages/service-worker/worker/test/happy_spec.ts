@@ -2608,7 +2608,7 @@ describe('Driver', () => {
         driver = new Driver(scope, scope, new CacheDatabase(scope));
       });
 
-      // Test this bug: https://github.com/ng-angular/angular/issues/27209
+      // Test this bug: https://github.com/ng-classic/angular/issues/27209
       it('fills previous versions of manifests with default navigation urls for backwards compatibility',
          async () => {
            expect(await makeRequest(scope, '/foo.txt')).toEqual('this is foo');

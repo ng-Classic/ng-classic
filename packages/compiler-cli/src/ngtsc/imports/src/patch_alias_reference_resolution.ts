@@ -41,7 +41,7 @@ interface EmitResolver {
  * https://github.com/microsoft/TypeScript/blob/3eaa7c65f6f076a08a5f7f1946fd0df7c7430259/src/compiler/transformers/ts.ts#L242-L250.
  *
  * This is a trick the CLI used in the past  for constructor parameter downleveling in JIT:
- * https://github.com/ng-angular/angular-cli/blob/b3f84cc5184337666ce61c07b7b9df418030106f/packages/ngtools/webpack/src/transformers/ctor-parameters.ts#L323-L325
+ * https://github.com/ng-classic/angular-cli/blob/b3f84cc5184337666ce61c07b7b9df418030106f/packages/ngtools/webpack/src/transformers/ctor-parameters.ts#L323-L325
  * The trick is not ideal though as it preserves the full import (as outlined before), and it
  * results in a slow-down due to the type checker being involved multiple times. The CLI worked
  * around this import preserving issue by having another complex post-process step that detects and
@@ -82,7 +82,7 @@ export function loadIsReferencedAliasDeclarationPatch(context: ts.Transformation
 
   // The emit resolver may have been patched already, in which case we return the set of referenced
   // aliases that was created when the patch was first applied.
-  // See https://github.com/ng-angular/angular/issues/40276.
+  // See https://github.com/ng-classic/angular/issues/40276.
   const existingReferencedAliases = emitResolver[patchedReferencedAliasesSymbol];
   if (existingReferencedAliases !== undefined) {
     return existingReferencedAliases;

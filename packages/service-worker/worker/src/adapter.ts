@@ -90,7 +90,7 @@ export class Adapter<T extends CacheStorage = CacheStorage> {
    */
   parseUrl(url: string, relativeTo?: string): {origin: string, path: string, search: string} {
     // Workaround a Safari bug, see
-    // https://github.com/ng-angular/angular/issues/31061#issuecomment-503637978
+    // https://github.com/ng-classic/angular/issues/31061#issuecomment-503637978
     const parsed = !relativeTo ? new URL(url) : new URL(url, relativeTo);
     return {origin: parsed.origin, path: parsed.pathname, search: parsed.search};
   }

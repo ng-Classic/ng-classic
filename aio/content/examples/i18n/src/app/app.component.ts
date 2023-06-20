@@ -9,7 +9,7 @@ export class AppComponent {
   minutes = 0;
   gender = 'female';
   fly = true;
-  logo = 'https://angular-classic.com/assets/images/logos/ng-angular/angular.png';
+  logo = 'https://angular-classic.com/assets/images/logos/ng-classic/angular.png';
   inc(i: number) {
     this.minutes = Math.min(5, Math.max(0, this.minutes + i));
   }

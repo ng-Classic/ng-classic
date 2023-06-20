@@ -46,7 +46,7 @@ The procedures in this topic assume that you are starting from your workspace di
 
 ## Update your fork with the upstream repo
 
-Before you start editing the documentation files, you want to sync the `main` branch of your fork and its clone with the `main` branch of the upstream `ng-angular/angular` repo.
+Before you start editing the documentation files, you want to sync the `main` branch of your fork and its clone with the `main` branch of the upstream `ng-classic/angular` repo.
 
 This procedure updates the your `personal/angular` repo in the cloud and its clone on your local computer, as illustrated here.
 The circled numbers correspond to procedure steps.
@@ -81,7 +81,7 @@ Perform these steps from a command-line tool on your local computer.
 
     </code-example>
 
-1.  Run this command to update the `main` branch in the working directory on your local computer from the upstream `ng-angular/angular` repo.
+1.  Run this command to update the `main` branch in the working directory on your local computer from the upstream `ng-classic/angular` repo.
 
     <code-example format="shell" language="shell">
 
@@ -90,7 +90,7 @@ Perform these steps from a command-line tool on your local computer.
 
     </code-example>
 
-1.  Run this command to update your `personal/angular` repo on `github.com` with the latest from the upstream `ng-angular/angular` repo.
+1.  Run this command to update your `personal/angular` repo on `github.com` with the latest from the upstream `ng-classic/angular` repo.
 
     <code-example format="shell" language="shell">
 
@@ -99,7 +99,7 @@ Perform these steps from a command-line tool on your local computer.
     </code-example>
 
 The `main` branch on your local computer is now in sync with your origin repo on `github.com`.
-They have been updated with any changes that have been made to the upstream `ng-angular/angular` repo since the last time you updated your fork.
+They have been updated with any changes that have been made to the upstream `ng-classic/angular` repo since the last time you updated your fork.
 
 ## Create a working branch for editing
 
@@ -122,7 +122,7 @@ You can confirm your current branch by running `git status` from your `working` 
 
 Perform these steps in a command-line program on your local computer.
 
-1.  [Update your fork of `ng-angular/angular`](#update-your-fork-with-the-upstream-repo).
+1.  [Update your fork of `ng-classic/angular`](#update-your-fork-with-the-upstream-repo).
 1.  From your [workspace](guide/doc-prepare-to-edit#create-a-git-workspace-on-your-local-computer) directory, run this command to navigate to your [working directory](guide/doc-prepare-to-edit#doc-working-directory).
     Remember to replace `personal` with your GitHub username.
 

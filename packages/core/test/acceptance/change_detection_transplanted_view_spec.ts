@@ -286,7 +286,7 @@ describe('change detection for transplanted views', () => {
             .toEqual('OnPushDeclareComp(Angular) InsertComp(Hello) Hello world!');
       });
 
-      // TODO(FW-1774): blocked by https://github.com/ng-angular/angular/pull/34443
+      // TODO(FW-1774): blocked by https://github.com/ng-classic/angular/pull/34443
       xit('is checked as part of CheckNoChanges pass', () => {
         // mark declaration point dirty
         onPushDeclareComp.changeDetector.markForCheck();

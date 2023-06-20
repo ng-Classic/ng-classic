@@ -32,7 +32,7 @@ export interface TypeDecorator {
   // Make TypeDecorator assignable to built-in ParameterDecorator type.
   // ParameterDecorator is declared in lib.d.ts as a `declare type`
   // so we cannot declare this interface as a subtype.
-  // see https://github.com/ng-angular/angular/issues/3379#issuecomment-126169417
+  // see https://github.com/ng-classic/angular/issues/3379#issuecomment-126169417
   (target: Object, propertyKey?: string|symbol, parameterIndex?: number): void;
   // Standard (non-experimental) Decorator signature that avoids direct usage of
   // any TS 5.0+ specific types.

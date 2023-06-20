@@ -116,7 +116,7 @@ def _expected_outs(ctx):
         # Note: We keep track of the prodmode flat module output for `ng_packager` which
         # uses it as entry-point for producing FESM bundles.
         # TODO: Remove flat module from `ng_module` and detect package entry-point reliably
-        # in Ivy. Related discussion: https://github.com/ng-angular/angular/pull/36971#issuecomment-625282383.
+        # in Ivy. Related discussion: https://github.com/ng-classic/angular/pull/36971#issuecomment-625282383.
         flat_module_out_prodmode_file = ctx.actions.declare_file("%s.mjs" % flat_module_out_name)
 
         closure_js_files.append(flat_module_out_prodmode_file)
@@ -209,7 +209,7 @@ def _ngc_tsconfig(ctx, files, srcs, **kwargs):
     # TODO(devversion): In the future, combine prodmode and devmode so we can get rid of the
     # ambiguous terminology and concept that can result in slow-down for development workflows.
     # TODO(alanagius): The below causes a drastic size increase when enabled (4Kb in the //integration/forms:test). This is mainly due to Babel transforms for Safari 15.
-    # https://github.com/ng-angular/angular-cli/blob/3e8bdf72d6b7e2925d2822da807b726f88a77e1a/packages/angular_devkit/build_angular/src/babel/presets/application.ts#L199-L204
+    # https://github.com/ng-classic/angular-cli/blob/3e8bdf72d6b7e2925d2822da807b726f88a77e1a/packages/angular_devkit/build_angular/src/babel/presets/application.ts#L199-L204
     # https://www.diffchecker.com/9Ge3pexk
     tsconfig["compilerOptions"]["useDefineForClassFields"] = False
     tsconfig["compilerOptions"]["target"] = "es2022"
@@ -483,7 +483,7 @@ NG_MODULE_ATTRIBUTES = {
         providers = [NgPartialCompilationInfo],
         doc = "Internal attribute which points to the partial compilation build setting.",
     ),
-    # In the ng-angular/angular Classicmonorepo, //tools:defaults.bzl wraps the ng_module rule in a macro
+    # In the ng-classic/angular Classicmonorepo, //tools:defaults.bzl wraps the ng_module rule in a macro
     # which sets this attribute to the //packages/compiler-cli:ng_perf flag.
     # This is done to avoid exposing the flag to user projects, which would require:
     # * defining the flag within @angular-classic/bazel and referencing it correctly here, and
@@ -588,7 +588,7 @@ NG_MODULE_RULE_ATTRS = dict(dict(COMMON_ATTRIBUTES, **NG_MODULE_ATTRIBUTES), **{
     # Later packaging rules will point to these generated files as the entry point
     # into the package.
     # See the flatModuleOutFile documentation in
-    # https://github.com/ng-angular/angular/blob/main/packages/compiler-cli/src/transformers/api.ts
+    # https://github.com/ng-classic/angular/blob/main/packages/compiler-cli/src/transformers/api.ts
     "flat_module_out_file": attr.string(),
 })
 

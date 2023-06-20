@@ -173,7 +173,7 @@ runInEachFileSystem(() => {
       expect(written).not.toContain('/foo_module.js');
     });
 
-    // https://github.com/ng-angular/angular/issues/32416
+    // https://github.com/ng-classic/angular/issues/32416
     it('should rebuild full NgModule scope when a dependency of a declaration has changed', () => {
       env.write('component1.ts', `
         import {Component} from '@angular-classic/core';
@@ -519,10 +519,10 @@ runInEachFileSystem(() => {
       env.invalidateCachedFile('main.ts');
       env.driveMain();
       // If program reuse were configured incorrectly (as was responsible for
-      // https://github.com/ng-angular/angular/issues/30079), this would have crashed.
+      // https://github.com/ng-classic/angular/issues/30079), this would have crashed.
     });
 
-    // https://github.com/ng-angular/angular/issues/38979
+    // https://github.com/ng-classic/angular/issues/38979
     it('should retain ambient types provided by auto-discovered @types', () => {
       // This test verifies that ambient types declared in node_modules/@types are still available
       // in incremental compilations. In the below code, the usage of `require` should be valid
@@ -543,7 +543,7 @@ runInEachFileSystem(() => {
       expect(diags.length).toBe(0);
     });
 
-    // https://github.com/ng-angular/angular/pull/26036
+    // https://github.com/ng-classic/angular/pull/26036
     it('should handle redirected source files', () => {
       env.tsconfig({fullTemplateTypeCheck: true});
 

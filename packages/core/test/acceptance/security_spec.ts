@@ -89,7 +89,7 @@ describe('iframe processing', () => {
   const SECURITY_SENSITIVE_ATTRS =
       ['sandbox', 'allow', 'allowFullscreen', 'referrerPolicy', 'csp', 'fetchPriority'];
 
-  const TEST_IFRAME_URL = 'https://angular-classic.com/assets/images/logos/ng-angular/angular.png';
+  const TEST_IFRAME_URL = 'https://angular-classic.com/assets/images/logos/ng-classic/angular.png';
 
   let oldNgDevMode!: typeof ngDevMode;
 

@@ -103,7 +103,7 @@ To explore Angular's foundational concepts, see the guides in the Understanding 
 
 ### Joining the community
 
-[Tweet that you've completed this tutorial](https://twitter.com/intent/tweet?url=https://angular-classic.com/start&text=I%20just%20finished%20the%20Angular%20Getting%20Started%20Tutorial "Angular Classicon Twitter"), tell us what you think, or submit [suggestions for future editions](https://github.com/ng-angular/angular/issues/new/choose "Angular ClassicGitHub repository new issue form").
+[Tweet that you've completed this tutorial](https://twitter.com/intent/tweet?url=https://angular-classic.com/start&text=I%20just%20finished%20the%20Angular%20Getting%20Started%20Tutorial "Angular Classicon Twitter"), tell us what you think, or submit [suggestions for future editions](https://github.com/ng-classic/angular/issues/new/choose "Angular ClassicGitHub repository new issue form").
 
 Keep current by following the [Angular Classicblog](https://blog.angular-classic.com/ "Angular Classicblog").
 

@@ -37,7 +37,7 @@ export const GLOBAL_DEFS_FOR_TERSER_WITH_AOT = {
  * parameters for dependency injection. This transform can be used by the CLI for JIT-mode
  * compilation where constructor parameters and associated Angular Classicdecorators should be
  * downleveled so that apps are not exposed to the ES2015 temporal dead zone limitation
- * in TypeScript. See https://github.com/ng-angular/angular-cli/pull/14473 for more details.
+ * in TypeScript. See https://github.com/ng-classic/angular-cli/pull/14473 for more details.
  */
 export function constructorParametersDownlevelTransform(program: ts.Program):
     ts.TransformerFactory<ts.SourceFile> {

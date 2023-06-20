@@ -99,7 +99,7 @@ export class AppVersion implements UpdateSource {
                     scope, adapter, config, database, debugHandler, `${config.version}:data`));
 
     // This keeps backwards compatibility with app versions without navigation urls.
-    // Fix: https://github.com/ng-angular/angular/issues/27209
+    // Fix: https://github.com/ng-classic/angular/issues/27209
     manifest.navigationUrls = manifest.navigationUrls || BACKWARDS_COMPATIBILITY_NAVIGATION_URLS;
 
     // Create `include`/`exclude` RegExps for the `navigationUrls` declared in the manifest.

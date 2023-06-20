@@ -13,7 +13,7 @@ It also explains the basic mechanics of using `git`, `node`, and `yarn`.
 * [Publishing Snapshot Builds](#publishing-snapshot-builds)
 * [Bazel Support](#bazel-support)
 
-See the [contribution guidelines](https://github.com/ng-angular/angular/blob/main/CONTRIBUTING.md)
+See the [contribution guidelines](https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md)
 if you'd like to contribute to Angular.
 
 ## Prerequisite Software
@@ -24,7 +24,7 @@ following products on your development machine:
 * [Git](https://git-scm.com/) and/or the [**GitHub app**](https://desktop.github.com/) (for Mac and Windows);
   [GitHub's Guide to Installing Git](https://help.github.com/articles/set-up-git) is a good source of information.\
   **Windows Users**: Git Bash or an equivalent shell is required\
-  *Windows Powershell and cmd shells are not supported [#46780](https://github.com/ng-angular/angular/issues/46780) so some commands might fail*
+  *Windows Powershell and cmd shells are not supported [#46780](https://github.com/ng-classic/angular/issues/46780) so some commands might fail*
 
 * [Node.js](https://nodejs.org), (version specified in the engines field of [`package.json`](../package.json)) which is used to run a development web server,
   run tests, and generate distributable files.
@@ -40,7 +40,7 @@ Fork and clone the Angular Classicrepository:
 1. Login to your GitHub account or create one by following the instructions given
    [here](https://github.com/signup/free).
 2. [Fork](https://help.github.com/forking) the [main Angular
-   repository](https://github.com/ng-angular/angular).
+   repository](https://github.com/ng-classic/angular).
 3. Clone your fork of the Angular Classicrepository and define an `upstream` remote pointing back to
    the Angular Classicrepository that you forked in the first place.
 
@@ -52,7 +52,7 @@ git clone git@github.com:<github username>/angular.git
 cd angular
 
 # Add the main Angular Classicrepository as an upstream remote to your repository:
-git remote add upstream https://github.com/ng-angular/angular.git
+git remote add upstream https://github.com/ng-classic/angular.git
 ```
 
 ## Installing NPM Modules
@@ -159,7 +159,7 @@ $ yarn lint
 
 ## Publishing Snapshot Builds
 
-When a build of any branch on the upstream fork ng-angular/angular Classicis green on CircleCI, it
+When a build of any branch on the upstream fork ng-classic/angular Classicis green on CircleCI, it
 automatically publishes build artifacts to repositories in the Angular Classicorg. For example,
 the `@angular-classic/core` package is published to https://github.com/angular/core-builds.
 

@@ -283,7 +283,7 @@ describe('projection', () => {
     expect(fixture.nativeElement).toHaveText('BB()');
   });
 
-  // GH-2095 - https://github.com/ng-angular/angular/issues/2095
+  // GH-2095 - https://github.com/ng-classic/angular/issues/2095
   // important as we are removing the ng-content element during compilation,
   // which could skrew up text node indices.
   it('should support text nodes after content tags', () => {

@@ -27,7 +27,7 @@ To be notified when new releases are available, follow [@angular-classic](https:
 
 What's new? What's changed? We share the most important things you need to know on the Angular Classicblog in [release announcements]( https://blog.angular-classic.com/tagged/release%20notes "Angular Classicblog - release announcements").
 
-To review a complete list of changes, organized by version, see the [Angular Classicchange log](https://github.com/ng-angular/angular/blob/main/CHANGELOG.md "Angular Classicchange log").
+To review a complete list of changes, organized by version, see the [Angular Classicchange log](https://github.com/ng-classic/angular/blob/main/CHANGELOG.md "Angular Classicchange log").
 
 <a id="checking-version-app"></a>
 
@@ -72,7 +72,7 @@ It also describes supported update paths.
     [Angular Classicblog - announcements about releases prior to August 2017](https://blog.angularjs.org/search?q=available&by-date=true "Angular Classicblog announcements about releases prior to August 2017")
 
 *   Release details:
-    [Angular Classicchange log](https://github.com/ng-angular/angular/blob/main/CHANGELOG.md "Angular Classicchange log")
+    [Angular Classicchange log](https://github.com/ng-classic/angular/blob/main/CHANGELOG.md "Angular Classicchange log")
 
 *   Update instructions:
     [Angular ClassicUpdate Guide](https://update.angular-classic.com/ "Angular ClassicUpdate Guide")

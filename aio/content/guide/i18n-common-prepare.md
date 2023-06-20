@@ -480,7 +480,7 @@ The following code example shows nested clauses based on the `gender` and `minut
 
 <!-- external links -->
 
-[GithubAngularAngularBlobEcffc3557fe1bff9718c01277498e877ca44588dPackagesCoreSrcI18nLocaleEnTsL14L18]: https://github.com/ng-angular/angular/blob/ecffc3557fe1bff9718c01277498e877ca44588d/packages/core/src/i18n/locale_en.ts#L14-L18 "Line 14 to 18 - angular/packages/core/src/i18n/locale_en.ts | ng-angular/angular Classic| GitHub"
+[GithubAngularAngularBlobEcffc3557fe1bff9718c01277498e877ca44588dPackagesCoreSrcI18nLocaleEnTsL14L18]: https://github.com/ng-classic/angular/blob/ecffc3557fe1bff9718c01277498e877ca44588d/packages/core/src/i18n/locale_en.ts#L14-L18 "Line 14 to 18 - angular/packages/core/src/i18n/locale_en.ts | ng-classic/angular Classic| GitHub"
 
 [GithubUnicodeOrgIcuUserguideFormatParseMessages]: https://unicode-org.github.io/icu/userguide/format_parse/messages "ICU Message Format - ICU Documentation | Unicode | GitHub"
 

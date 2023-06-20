@@ -43,7 +43,7 @@
  *     published to NPM, because the NPM info is used to determine what the stable version is.
  *     In the future, we could make the branch version info retrieval more robust, DRY and
  *     future-proof (and independent of NPM releases) by re-using the `ng-dev release info`
- *     [implementation](https://github.com/ng-angular/dev-infra/blob/92778223953e029d1723febf282bb265b4e2a56f/ng-dev/release/info/cli.ts).
+ *     [implementation](https://github.com/ng-classic/dev-infra/blob/92778223953e029d1723febf282bb265b4e2a56f/ng-dev/release/info/cli.ts).
  *     (This would require `ng-dev` to expose an API for requesting the info (instead of printing it
  *     in human-readable format to stdout).)
  */
@@ -232,7 +232,7 @@ function computeDeploymentsInfo(
       postDeployActions: [pre.undo.redirectAllToStable, post.testRedirectToStable],
     },
     // Config for deploying the stable build to the RC Firebase site when there is no active RC.
-    // See https://github.com/ng-angular/angular/issues/39760 for more info on the purpose of this
+    // See https://github.com/ng-classic/angular/issues/39760 for more info on the purpose of this
     // special deployment.
     redirectRcToStable: {
       name: 'redirectRcToStable',
@@ -305,7 +305,7 @@ function computeDeploymentsInfo(
       ] :
       // There is no active RC version. In addition to deploying to the `stable` projects/sites,
       // deploy to `rc` to ensure it redirects to `stable`.
-      // See https://github.com/ng-angular/angular/issues/39760 for more info on the purpose of this
+      // See https://github.com/ng-classic/angular/issues/39760 for more info on the purpose of this
       // special deployment.
       [
         deploymentInfoPerTarget.stable,

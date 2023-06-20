@@ -246,7 +246,7 @@ describe('integration tests', function() {
       expect(fixture.nativeElement).toHaveText('hello');
     });
 
-    // GH issue 328 - https://github.com/ng-angular/angular/issues/328
+    // GH issue 328 - https://github.com/ng-classic/angular/issues/328
     it('should support different directive types on a single node', () => {
       TestBed.configureTestingModule({declarations: [MyComp, ChildComp, MyDir]});
       const template = '<child-cmp my-dir [elprop]="ctxProp"></child-cmp>';

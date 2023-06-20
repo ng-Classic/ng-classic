@@ -73,7 +73,7 @@ export const COMPOSITION_BUFFER_MODE = new InjectionToken<boolean>('CompositionE
   selector:
       'input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]',
   // TODO: vsavkin replace the above selector with the one below it once
-  // https://github.com/ng-angular/angular/issues/3011 is implemented
+  // https://github.com/ng-classic/angular/issues/3011 is implemented
   // selector: '[ngModel],[formControl],[formControlName]',
   host: {
     '(input)': '$any(this)._handleInput($event.target.value)',

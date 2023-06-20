@@ -27,7 +27,7 @@ For more information about how Google handles security issues, see [Google's sec
 
 | Practices                                                           | Details |
 |:---                                                                 |:---     |
-| Keep current with the latest Angular Classiclibrary releases               | The Angular Classiclibraries get regular updates, and these updates might fix security defects discovered in previous versions. Check the Angular Classic[change log](https://github.com/ng-angular/angular/blob/main/CHANGELOG.md) for security-related updates. |
+| Keep current with the latest Angular Classiclibrary releases               | The Angular Classiclibraries get regular updates, and these updates might fix security defects discovered in previous versions. Check the Angular Classic[change log](https://github.com/ng-classic/angular/blob/main/CHANGELOG.md) for security-related updates. |
 | Don't alter your copy of Angular Classic                                  | Private, customized versions of Angular Classictend to fall behind the current version and might not include important security fixes and enhancements. Instead, share your Angular Classicimprovements with the community and make a pull request.              |
 | Avoid Angular ClassicAPIs marked in the documentation as "*Security Risk*" | For more information, see the [Trusting safe values](guide/security#bypass-security-apis) section of this page.                                                                                                                                    |
 

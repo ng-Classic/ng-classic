@@ -125,7 +125,7 @@ export class FormGroupDirective extends ControlContainer implements Form, OnChan
       // happen *only* when the `onCollectionChange` callback was set by this directive instance.
       // Otherwise it might cause overriding a callback of some other directive instances. We should
       // consider updating this logic later to make it similar to how `onChange` callbacks are
-      // handled, see https://github.com/ng-angular/angular/issues/39732 for additional info.
+      // handled, see https://github.com/ng-classic/angular/issues/39732 for additional info.
       if (this.form._onCollectionChange === this._onCollectionChange) {
         this.form._registerOnCollectionChange(() => {});
       }

@@ -16,7 +16,7 @@
  * node module resolution configuration differing from rollup and/or typescript.
  *
  * With commit
- * https://github.com/ng-angular/angular/commit/d5e3f2c64bd13ce83e7c70788b7fc514ca4a9918
+ * https://github.com/ng-classic/angular/commit/d5e3f2c64bd13ce83e7c70788b7fc514ca4a9918
  * the `instructions.ts` file was moved to `instructions/instructions.ts` and an
  * `index.ts` file was used to re-export everything. Having had file names that were
  * importing from `instructions' directly (not the from the sub file or the `index.ts`

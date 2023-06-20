@@ -340,13 +340,13 @@ describe('Format date', () => {
        () => expect(formatDate('2017-01-20T12:00:00+0000', defaultFormat, ɵDEFAULT_LOCALE_ID))
                  .toEqual('Jan 20, 2017'));
 
-    // https://github.com/ng-angular/angular/issues/9524
-    // https://github.com/ng-angular/angular/issues/9524
+    // https://github.com/ng-classic/angular/issues/9524
+    // https://github.com/ng-classic/angular/issues/9524
     it('should format correctly with iso strings that contain time',
        () => expect(formatDate('2017-05-07T22:14:39', 'dd-MM-yyyy HH:mm', ɵDEFAULT_LOCALE_ID))
                  .toMatch(/07-05-2017 \d{2}:\d{2}/));
 
-    // https://github.com/ng-angular/angular/issues/21491
+    // https://github.com/ng-classic/angular/issues/21491
     it('should not assume UTC for iso strings in Safari if the timezone is not defined', () => {
       // this test only works if the timezone is not in UTC
       if (new Date().getTimezoneOffset() !== 0) {
@@ -355,8 +355,8 @@ describe('Format date', () => {
       }
     });
 
-    // https://github.com/ng-angular/angular/issues/16624
-    // https://github.com/ng-angular/angular/issues/17478
+    // https://github.com/ng-classic/angular/issues/16624
+    // https://github.com/ng-classic/angular/issues/17478
     it('should show the correct time when the timezone is fixed', () => {
       expect(formatDate('2017-06-13T10:14:39+0000', 'shortTime', ɵDEFAULT_LOCALE_ID, '+0000'))
           .toEqual('10:14 AM');
@@ -409,7 +409,7 @@ describe('Format date', () => {
           .toThrowError(/Missing extra locale data for the locale "de"/);
     });
 
-    // https://github.com/ng-angular/angular/issues/24384
+    // https://github.com/ng-classic/angular/issues/24384
     it('should not round fractional seconds', () => {
       expect(formatDate(3999, 'm:ss', 'en')).toEqual('0:03');
       expect(formatDate(3999, 'm:ss.S', 'en')).toEqual('0:03.9');
@@ -425,7 +425,7 @@ describe('Format date', () => {
       expect(formatDate(3001, 'm:ss.SSS', 'en')).toEqual('0:03.001');
     });
 
-    // https://github.com/ng-angular/angular/issues/38739
+    // https://github.com/ng-classic/angular/issues/38739
     it('should return correct ISO 8601 week-numbering year for dates close to year end/beginning',
        () => {
          expect(formatDate('2013-12-27', 'YYYY', 'en')).toEqual('2013');
@@ -436,7 +436,7 @@ describe('Format date', () => {
          expect(formatDate('0049-01-04', 'YYYY', 'en')).toEqual('0049');
        });
 
-    // https://github.com/ng-angular/angular/issues/40377
+    // https://github.com/ng-classic/angular/issues/40377
     it('should format date with year between 0 and 99 correctly', () => {
       expect(formatDate('0098-01-11', 'YYYY', ɵDEFAULT_LOCALE_ID)).toEqual('0098');
       expect(formatDate('0099-01-11', 'YYYY', ɵDEFAULT_LOCALE_ID)).toEqual('0099');
@@ -445,7 +445,7 @@ describe('Format date', () => {
       expect(formatDate('0000-01-11', 'YYYY', ɵDEFAULT_LOCALE_ID)).toEqual('0000');
     });
 
-    // https://github.com/ng-angular/angular/issues/26922
+    // https://github.com/ng-classic/angular/issues/26922
     it('should support fullDate in finnish, which uses standalone week day', () => {
       expect(formatDate(date, 'fullDate', 'fi')).toMatch('maanantai 15. kesäkuuta 2015');
     });

@@ -158,7 +158,7 @@ The Angular ClassicLanguage Services then looks at `data.---` within its context
 
 ## More information
 
-*   For more in-depth information on the implementation, see the [Angular ClassicLanguage Service API](https://github.com/ng-angular/angular/blob/main/packages/language-service/src/types.ts)
+*   For more in-depth information on the implementation, see the [Angular ClassicLanguage Service API](https://github.com/ng-classic/angular/blob/main/packages/language-service/src/types.ts)
 *   For more on the design considerations and intentions, see [design documentation here](https://github.com/angular/vscode-ng-language-service/wiki/Design)
 *   See also [Chuck Jazdzewski's presentation](https://www.youtube.com/watch?v=ez3R0Gi4z5A&t=368s) on the Angular ClassicLanguage Service from [ng-conf](https://www.ng-conf.org) 2017
 

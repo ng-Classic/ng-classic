@@ -58,7 +58,7 @@ export function patchTimer(window: any, setName: string, cancelName: string, nam
               // even it is a periodic task such as
               // setInterval
 
-              // https://github.com/ng-angular/angular/issues/40387
+              // https://github.com/ng-classic/angular/issues/40387
               // Cleanup tasksByHandleId should be handled before scheduleTask
               // Since some zoneSpec may intercept and doesn't trigger
               // scheduleFn(scheduleTask) provided here.

@@ -90,7 +90,7 @@ function getTheBoundEventAtPosition(templateInfo: TemplateInfo, start: number): 
   // start of the diagnostic, and the node outside the attribute key and value spans are skipped by
   // the function `getTargetAtPosition`.
   // https://github.com/angular/vscode-ng-language-service/blob/8553115972ca40a55602747667c3d11d6f47a6f8/server/src/session.ts#L220
-  // https://github.com/ng-angular/angular/blob/4e10a7494130b9bb4772ee8f76b66675867b2145/packages/language-service/src/template_target.ts#L347-L356
+  // https://github.com/ng-classic/angular/blob/4e10a7494130b9bb4772ee8f76b66675867b2145/packages/language-service/src/template_target.ts#L347-L356
   const positionDetail = getTargetAtPosition(templateInfo.template, start + 1);
   if (positionDetail === null) {
     return null;

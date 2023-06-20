@@ -284,7 +284,7 @@ class ComplexItem {
         }));
       });
 
-      // https://github.com/ng-angular/angular/issues/17852
+      // https://github.com/ng-classic/angular/issues/17852
       it('support re-insertion', () => {
         const l = ['a', '*', '*', 'd', '-', '-', '-', 'e'];
         differ.check(l);

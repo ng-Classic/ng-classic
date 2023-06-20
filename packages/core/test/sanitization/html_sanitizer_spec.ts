@@ -258,7 +258,7 @@ function sanitizeHtml(defaultDoc: any, unsafeHtmlInput: string): string {
     if (isDOMParserAvailable()) {
       it('should work even if DOMParser returns a null body', () => {
         // Simulate `DOMParser.parseFromString()` returning a null body.
-        // See https://github.com/ng-angular/angular/issues/39834
+        // See https://github.com/ng-classic/angular/issues/39834
         spyOn(window.DOMParser.prototype, 'parseFromString').and.returnValue({body: null} as any);
         expect(sanitizeHtml(defaultDoc, 'Hello, World')).toEqual('Hello, World');
       });

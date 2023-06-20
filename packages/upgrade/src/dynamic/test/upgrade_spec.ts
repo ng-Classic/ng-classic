@@ -318,7 +318,7 @@ withEachNg1Version(() => {
                html('<div>{{reset(); l(\'1A\');}}<ng2>{{l(\'1B\')}}</ng2>{{l(\'1C\')}}</div>');
            adapter.bootstrap(element, ['ng1']).ready((ref) => {
              expect(document.body.textContent).toEqual('1A;2A;ng1a;2B;ng1b;2C;1C;');
-             // https://github.com/ng-angular/angular.js/issues/12983
+             // https://github.com/ng-classic/angular.js/issues/12983
              expect(log).toEqual(['1A', '1C', '2A', '2B', '2C', 'ng1a', 'ng1b']);
              ref.dispose();
            });
@@ -378,8 +378,8 @@ withEachNg1Version(() => {
            });
          }));
 
-      // This test demonstrates https://github.com/ng-angular/angular/issues/6385
-      // which was invalidly fixed by https://github.com/ng-angular/angular/pull/6386
+      // This test demonstrates https://github.com/ng-classic/angular/issues/6385
+      // which was invalidly fixed by https://github.com/ng-classic/angular/pull/6386
       // it('should not trigger $digest from an async operation in a watcher', async(() => {
       //      @Component({selector: 'my-app', template: ''})
       //      class AppComponent {

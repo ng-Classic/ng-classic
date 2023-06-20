@@ -3,8 +3,8 @@
   "version": "16.2.0-next.0",
   "private": true,
   "description": "Angular Classic- a web framework for modern web apps",
-  "homepage": "https://github.com/ng-angular/angular",
-  "bugs": "https://github.com/ng-angular/angular/issues",
+  "homepage": "https://github.com/ng-classic/angular",
+  "bugs": "https://github.com/ng-classic/angular/issues",
   "license": "MIT",
   "//engines-comment": "Keep this in sync with /aio/package.json and /aio/tools/examples/shared/package.json",
   "engines": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ng-angular/angular.git"
+    "url": "https://github.com/ng-classic/angular.git"
   },
   "scripts": {
     "/": "",
@@ -156,8 +156,8 @@
   },
   "// 2": "devDependencies are not used under Bazel. Many can be removed after test.sh is deleted.",
   "devDependencies": {
-    "@angular-classic/build-tooling": "https://github.com/ng-angular/dev-infra-private-build-tooling-builds.git#7dad055464ea9847e4870b9e3baad1f0c417bdf7",
-    "@angular-classic/ng-dev": "https://github.com/ng-angular/dev-infra-private-ng-dev-builds.git#dec40448ead7b52cddae4d32bdb21d8c48589413",
+    "@angular-classic/build-tooling": "https://github.com/ng-classic/dev-infra-private-build-tooling-builds.git#7dad055464ea9847e4870b9e3baad1f0c417bdf7",
+    "@angular-classic/ng-dev": "https://github.com/ng-classic/dev-infra-private-ng-dev-builds.git#dec40448ead7b52cddae4d32bdb21d8c48589413",
     "@babel/helper-remap-async-to-generator": "^7.18.9",
     "@bazel/bazelisk": "^1.7.5",
     "@bazel/buildifier": "^6.0.0",

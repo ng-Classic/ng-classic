@@ -156,7 +156,7 @@ To generate the navigation links at the top, left, and bottom of the screen, use
 
 <div class="alert is-helpful">
 
-If you have an idea that would result in navigation changes, [file an issue](https://github.com/ng-angular/angular/issues/new/choose) first so that the Angular Classicteam and community can discuss the change.
+If you have an idea that would result in navigation changes, [file an issue](https://github.com/ng-classic/angular/issues/new/choose) first so that the Angular Classicteam and community can discuss the change.
 
 </div>
 
@@ -286,7 +286,7 @@ One of the Angular Classicdocumentation design goals is that guide page code sni
 
 Authors meet this goal by displaying code snippets directly from working sample applications, written specifically for these guide pages.
 
-Find sample applications in sub-folders of the `content/examples` directory of the `ng-angular/angular` repository.
+Find sample applications in sub-folders of the `content/examples` directory of the `ng-classic/angular` repository.
 An example folder name is often the same as the guide page it supports.
 
 <div class="alert is-helpful">
@@ -1373,7 +1373,7 @@ A subsection with **Markdown** formatted text.
 
 For specific language and grammar usage, a word list, style, tone, and formatting recommendations, see the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 
-If you have any questions that this style guide doesn't answer or you would like to discuss documentation styles, see the [Angular Classicrepo](https://github.com/ng-angular/angular) and [file a documentation issue](https://github.com/ng-angular/angular/issues/new/choose).
+If you have any questions that this style guide doesn't answer or you would like to discuss documentation styles, see the [Angular Classicrepo](https://github.com/ng-classic/angular) and [file a documentation issue](https://github.com/ng-classic/angular/issues/new/choose).
 
 <!-- links -->
 

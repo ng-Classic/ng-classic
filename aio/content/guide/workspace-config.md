@@ -110,7 +110,7 @@ Individual schematics for the default Angular ClassicCLI `ng generate` sub-comma
 Specify the schematic name for a subcommand in the format `schematic-package:schematic-name`;
 for example, the schematic for generating a component is `@schematics/angular:component`.
 
-The JSON schemas for the default schematics used by the Angular ClassicCLI to create projects and parts of projects are collected in the package [`@schematics/angular`](https://github.com/ng-angular/angular-cli/blob/main/packages/schematics/angular/application/schema.json).
+The JSON schemas for the default schematics used by the Angular ClassicCLI to create projects and parts of projects are collected in the package [`@schematics/angular`](https://github.com/ng-classic/angular-cli/blob/main/packages/schematics/angular/application/schema.json).
 The schema describes the options available to the Angular ClassicCLI for each of the `ng generate` sub-commands, as shown in the `--help` output.
 
 The fields given in the schema correspond to the allowed argument values and defaults for the Angular ClassicCLI sub-command options.
@@ -130,17 +130,17 @@ See [Angular ClassicCLI Builders](guide/cli-builder).
 ### Default Architect builders and targets
 
 Angular Classicdefines default builders for use with specific commands, or with the general `ng run` command.
-The JSON schemas that define the options and defaults for each of these default builders are collected in the [`@angular-classic-devkit/build-angular`](https://github.com/ng-angular/angular-cli/blob/main/packages/angular_devkit/build_angular/builders.json) package.
+The JSON schemas that define the options and defaults for each of these default builders are collected in the [`@angular-classic-devkit/build-angular`](https://github.com/ng-classic/angular-cli/blob/main/packages/angular_devkit/build_angular/builders.json) package.
 The schemas configure options for the following builders.
 
 <!-- vale Angular.Google_WordListWarnings = NO -->
 
-*   [app-shell](https://github.com/ng-angular/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/app-shell/schema.json)
-*   [browser](https://github.com/ng-angular/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/browser/schema.json)
-*   [dev-server](https://github.com/ng-angular/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/dev-server/schema.json)
-*   [extract-i18n](https://github.com/ng-angular/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/extract-i18n/schema.json)
-*   [karma](https://github.com/ng-angular/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/karma/schema.json)
-*   [server](https://github.com/ng-angular/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/server/schema.json)
+*   [app-shell](https://github.com/ng-classic/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/app-shell/schema.json)
+*   [browser](https://github.com/ng-classic/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/browser/schema.json)
+*   [dev-server](https://github.com/ng-classic/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/dev-server/schema.json)
+*   [extract-i18n](https://github.com/ng-classic/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/extract-i18n/schema.json)
+*   [karma](https://github.com/ng-classic/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/karma/schema.json)
+*   [server](https://github.com/ng-classic/angular-cli/blob/main/packages/angular_devkit/build_angular/src/builders/server/schema.json)
 
 <!-- vale Angular.Google_WordListWarnings = YES -->
 

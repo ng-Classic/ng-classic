@@ -192,7 +192,7 @@
             "desc": "The official library for Firebase and Angular",
             "logo": "",
             "title": "Angular ClassicFire",
-            "url": "https://github.com/ng-angular/angularfire2"
+            "url": "https://github.com/ng-classic/angularfire2"
           },
           "ab2": {
             "desc": "Use Angular Classicand Meteor to build full-stack JavaScript apps  for Mobile and Desktop.",

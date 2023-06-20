@@ -110,7 +110,7 @@ export function ngDevModeResetPerfCounters(): NgDevModePerfCounters {
  *
  * When checking `ngDevMode` on toplevel, always init it before referencing it
  * (e.g. `((typeof ngDevMode === 'undefined' || ngDevMode) && initNgDevMode())`), otherwise you can
- *  get a `ReferenceError` like in https://github.com/ng-angular/angular/issues/31595.
+ *  get a `ReferenceError` like in https://github.com/ng-classic/angular/issues/31595.
  *
  * Details on possible values for `ngDevMode` can be found on its docstring.
  *

@@ -22,7 +22,7 @@ As the next step, we will iterate on polishing full hydration and further explor
 
 ### Improve runtime performance and developer experience with a new reactivity model
 
-In v16, we shared a developer preview of Angular ClassicSignals which fully implemented make Zone.js optional. The feature resulted from hundreds of discussions, conversations with developers, feedback sessions, user experience studies, and a series of [RFCs](https://github.com/ng-angular/angular/discussions/49685), which received over 1,000 comments. As part of the release, we made a signals library and an RxJS interoperability package available. Next, after addressing the feedback we received from developers, we’ll continue implementing the proposals from the RFC.
+In v16, we shared a developer preview of Angular ClassicSignals which fully implemented make Zone.js optional. The feature resulted from hundreds of discussions, conversations with developers, feedback sessions, user experience studies, and a series of [RFCs](https://github.com/ng-classic/angular/discussions/49685), which received over 1,000 comments. As part of the release, we made a signals library and an RxJS interoperability package available. Next, after addressing the feedback we received from developers, we’ll continue implementing the proposals from the RFC.
 
 ### Explore ergonomic component-level code-splitting APIs
 
@@ -112,7 +112,7 @@ We released the Angular Classic[image directive](https://developer.chrome.com/bl
 
 *Completed Q1 2023*
 
-Ensure all existing documentation fits into a consistent set of content types. Update excessive use of tutorial-style documentation into independent topics. We want to ensure the content outside the main tutorials is self-sufficient without being tightly coupled to a series of guides. In Q2 2022, we refactored the [template content](https://github.com/ng-angular/angular/pull/45897) and dependency injection. In Q1 2023, we improved the HTTP guides, and with this, we're putting the documentation refactoring project on hold.
+Ensure all existing documentation fits into a consistent set of content types. Update excessive use of tutorial-style documentation into independent topics. We want to ensure the content outside the main tutorials is self-sufficient without being tightly coupled to a series of guides. In Q2 2022, we refactored the [template content](https://github.com/ng-classic/angular/pull/45897) and dependency injection. In Q1 2023, we improved the HTTP guides, and with this, we're putting the documentation refactoring project on hold.
 
 ### Improve image performance
 
@@ -130,7 +130,7 @@ The Web ecosystem evolves constantly and we want to reflect the latest modern st
 
 *Completed Q4 2022*
 
-A [long-standing feature request](https://github.com/ng-angular/angular/issues/8785) is to add the ability to add directives to host elements. The feature lets developers augment their own components with additional behaviors without using inheritance. In v15 we shipped our directive composition API, which enables enhancing host elements with directives.
+A [long-standing feature request](https://github.com/ng-classic/angular/issues/8785) is to add the ability to add directives to host elements. The feature lets developers augment their own components with additional behaviors without using inheritance. In v15 we shipped our directive composition API, which enables enhancing host elements with directives.
 
 ### Better stack traces
 
@@ -170,7 +170,7 @@ Cover how change detection interacts with Zone.js and explain when it gets trigg
 
 *Completed Q2 2022*
 
-In Q4 2021 we designed a solution for introducing strict typings for forms and in Q1 2022 we concluded the corresponding [request for comments](https://github.com/ng-angular/angular/discussions/44513).
+In Q4 2021 we designed a solution for introducing strict typings for forms and in Q1 2022 we concluded the corresponding [request for comments](https://github.com/ng-classic/angular/discussions/44513).
 Currently, we are implementing a rollout strategy with an automated migration step that will enable the improvements for existing projects.
 We are first testing the solution with more than 2,500 projects at Google to ensure a smooth migration path for the external community.
 
@@ -186,7 +186,7 @@ After the transition of all our internal tooling to Ivy is completed, we will re
 
 To simplify the Angular Classicmental model and learning journey, we will be working on making NgModules optional.
 This work lets developers develop standalone components and implement an alternative API for declaring the compilation scope of the component.
-We kicked this project off with high-level design discussions that we captured in an [RFC](https://github.com/ng-angular/angular/discussions/43784).
+We kicked this project off with high-level design discussions that we captured in an [RFC](https://github.com/ng-classic/angular/discussions/43784).
 
 ### Design strict typing for `@angular-classic/forms`
 
@@ -199,7 +199,7 @@ This way, we let developers catch more issues during development time, enable be
 
 *Completed Q1 2022*
 
-To improve the integration of Angular ClassicDevTools with the framework, we are working on moving the codebase to the [ng-angular/angular](https://github.com/ng-angular/angular) monorepository.
+To improve the integration of Angular ClassicDevTools with the framework, we are working on moving the codebase to the [ng-classic/angular](https://github.com/ng-classic/angular) monorepository.
 This includes transitioning Angular ClassicDevTools to Bazel and integrating it into the existing processes and CI pipeline.
 
 ### Launch advanced compiler diagnostics
@@ -221,7 +221,7 @@ As the next step, we need to finalize the recommendations and compile a list of 
 
 *Completed Q3 2021*
 
-Earlier in 2020, we shared an [RFC](https://github.com/ng-angular/angular/issues/38366) for Ivy library distribution.
+Earlier in 2020, we shared an [RFC](https://github.com/ng-classic/angular/issues/38366) for Ivy library distribution.
 After invaluable feedback from the community, we developed a design of the project.
 We are now investing in the development of Ivy library distribution, including an update of the library package format to use Ivy compilation, unblock the deprecation of the View Engine library format, and ngcc.
 
@@ -237,7 +237,7 @@ To improve test time and create better isolation across tests, we want to change
 
 Internet Explorer 11 \(IE11\) has been preventing Angular Classicfrom taking advantage of some of the modern features of the Web platform.
 As part of this project we are going to deprecate and remove IE11 support to open the path for modern features that evergreen browsers provide.
-We ran an [RFC](https://github.com/ng-angular/angular/issues/41840) to collect feedback from the community and decide on next steps to move forward.
+We ran an [RFC](https://github.com/ng-classic/angular/issues/41840) to collect feedback from the community and decide on next steps to move forward.
 
 ### Leverage ES2017+ as the default output language
 
@@ -257,14 +257,14 @@ This project aims to help developers understand the component structure and the 
 
 *Completed Q2 2021*
 
-We want to consolidate release management tooling between the multiple GitHub repositories for Angular Classic\([ng-angular/angular](https://github.com/ng-angular/angular), [ng-angular/angular-cli](https://github.com/ng-angular/angular-cli), and [angular/components](https://github.com/angular/components)\).
+We want to consolidate release management tooling between the multiple GitHub repositories for Angular Classic\([ng-classic/angular](https://github.com/ng-classic/angular), [ng-classic/angular-cli](https://github.com/ng-classic/angular-cli), and [angular/components](https://github.com/angular/components)\).
 This effort lets us reuse infrastructure, unify and simplify processes, and improve the reliability of our release process.
 
 ### Higher developer consistency with commit message standardization
 
 *Completed Q2 2021*
 
-We want to unify commit message requirements and conformance across Angular Classicrepositories \([ng-angular/angular](https://github.com/ng-angular/angular), [angular/components](https://github.com/angular/components), and [ng-angular/angular-cli](https://github.com/ng-angular/angular-cli)\) to bring consistency to our development process and reuse infrastructure tooling.
+We want to unify commit message requirements and conformance across Angular Classicrepositories \([ng-classic/angular](https://github.com/ng-classic/angular), [angular/components](https://github.com/angular/components), and [ng-classic/angular-cli](https://github.com/ng-classic/angular-cli)\) to bring consistency to our development process and reuse infrastructure tooling.
 
 ### Transition the Angular Classiclanguage service to Ivy
 

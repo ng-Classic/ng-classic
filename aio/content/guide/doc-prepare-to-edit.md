@@ -14,11 +14,11 @@ To submit changes to the Angular Classicdocumentation, you must have:
 
 ## Complete a contributor's license agreement
 
-Review [Contributing to Angular](https://github.com/ng-angular/angular/blob/main/CONTRIBUTING.md).
+Review [Contributing to Angular](https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md).
 These sections are particularly important for documentation contributions:
 
 1.  Read the Angular Classic[Code of conduct](https://github.com/angular/code-of-conduct/blob/main/CODE_OF_CONDUCT.md)
-1.  Read the [Submission guidelines](https://github.com/ng-angular/angular/blob/main/CONTRIBUTING.md#-submission-guidelines).
+1.  Read the [Submission guidelines](https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md#-submission-guidelines).
 
     <div class="alert is-helpful">
 
@@ -27,7 +27,7 @@ These sections are particularly important for documentation contributions:
 
     </div>
 
-1.  Read and complete the [Contributor license agreement](https://github.com/ng-angular/angular/blob/main/CONTRIBUTING.md#-signing-the-cla) that applies to you.
+1.  Read and complete the [Contributor license agreement](https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md#-signing-the-cla) that applies to you.
 
 ## Install the required software
 
@@ -57,7 +57,7 @@ For more information about the required software, see [Setting up the local envi
 <div class="alert is-important">
 
 **IMPORTANT**: <br />
-Wait until after you clone your fork of the [`https://github.com/ng-angular/angular`][GithubAngularAngular] repo to your local computer before you configure Vale settings.
+Wait until after you clone your fork of the [`https://github.com/ng-classic/angular`][GithubAngularAngular] repo to your local computer before you configure Vale settings.
 
 </div>
 
@@ -66,7 +66,7 @@ You can also install other tools and IDE extensions that you find helpful.
 ## Set up your workspaces
 
 The Angular Classicdocumentation is stored with the Angular Classicframework code in a GitHub source code repository, also called a *repo*, at:
-[https://github.com/ng-angular/angular](https://github.com/ng-angular/angular).
+[https://github.com/ng-classic/angular](https://github.com/ng-classic/angular).
 To contribute documentation to Angular, you need:
 
 *   A GitHub account
@@ -78,7 +78,7 @@ To contribute documentation to Angular, you need:
     The URL:
     `https://github.com/personal` is not a valid GitHub account.
     For convenience, this documentation uses these shorthand references:
-    *   `ng-angular/angular`
+    *   `ng-classic/angular`
 
         Refers to the Angular Classicrepo.
         This is also known as the *upstream* repo.
@@ -118,34 +118,34 @@ If you use a different configuration, the procedures in these topics might not w
 </div>
 
 The code and documentation for the Angular Classicframework are stored in a public repository, or repo, on [github.com](https://github.com) in the `angular` account.
-The path to the Angular Classicrepo is [https://github.com/ng-angular/angular](https://github.com/ng-angular/angular), hence the abbreviated name, `ng-angular/angular`.
+The path to the Angular Classicrepo is [https://github.com/ng-classic/angular](https://github.com/ng-classic/angular), hence the abbreviated name, `ng-classic/angular`.
 
 [GitHub](https://github.com) is a cloud service that hosts many accounts and repositories.
-You can imagine the `ng-angular/angular` repo in GitHub as shown in this image.
+You can imagine the `ng-classic/angular` repo in GitHub as shown in this image.
 
 <div class="lightbox">
 
 <!-- Image source is found in angular/aio/src/assets/images/doc-contribute-images.sketch, in the sketch page that matches this topic's filename -->
-<img alt="An image of the ng-angular/angular Classicrepo in the github.com cloud service" src="generated/images/guide/doc-prepare-to-edit/github-angular-cloud.png">
+<img alt="An image of the ng-classic/angular Classicrepo in the github.com cloud service" src="generated/images/guide/doc-prepare-to-edit/github-angular-cloud.png">
 
 </div>
 
-### Fork the `ng-angular/angular` repo to your account
+### Fork the `ng-classic/angular` repo to your account
 
-As a public repo, `ng-angular/angular` is available for anyone to read and copy, but not to change.
-While only specific accounts have permission to make changes to `ng-angular/angular`, anyone with a GitHub account can request a change to it.
-Change requests to `ng-angular/angular` are called *pull requests*.
+As a public repo, `ng-classic/angular` is available for anyone to read and copy, but not to change.
+While only specific accounts have permission to make changes to `ng-classic/angular`, anyone with a GitHub account can request a change to it.
+Change requests to `ng-classic/angular` are called *pull requests*.
 A pull request is created by one account to ask another account to pull in a change.
 
-Before you can open a pull request, you need a forked copy of `ng-angular/angular` in your personal GitHub account.
+Before you can open a pull request, you need a forked copy of `ng-classic/angular` in your personal GitHub account.
 
-To get a forked copy of `ng-angular/angular`, you fork the `ng-angular/angular` repo into your personal GitHub account and end up with the repos shown in the following image.
-From the perspective of `personal/angular`, `ng-angular/angular` is the upstream repo and `personal/angular` is the origin repo.
+To get a forked copy of `ng-classic/angular`, you fork the `ng-classic/angular` repo into your personal GitHub account and end up with the repos shown in the following image.
+From the perspective of `personal/angular`, `ng-classic/angular` is the upstream repo and `personal/angular` is the origin repo.
 
 <div class="lightbox">
 
 <!-- Image source is found in angular/aio/src/assets/images/doc-contribute-images.sketch, in the sketch page that matches this topic's filename -->
-<img alt="An image of the ng-angular/angular Classicrepo in the github.com cloud service that was forked to a personal account" src="generated/images/guide/doc-prepare-to-edit/github-personal-cloud.png">
+<img alt="An image of the ng-classic/angular Classicrepo in the github.com cloud service that was forked to a personal account" src="generated/images/guide/doc-prepare-to-edit/github-personal-cloud.png">
 
 </div>
 
@@ -156,14 +156,14 @@ Perform this procedure in a browser.
 1.  Sign into your [GitHub](https://github.com) account.
     If you don't have a GitHub account, [create a new account][GithubJoin] before you continue.
 
-1.  Navigate to [`https://github.com/ng-angular/angular`][GithubAngularAngular].
+1.  Navigate to [`https://github.com/ng-classic/angular`][GithubAngularAngular].
 
-1.  In [`https://github.com/ng-angular/angular`][GithubAngularAngular], click the **Fork** button near the top-right corner of the page.
-    This image is from the top of the [`https://github.com/ng-angular/angular`][GithubAngularAngular] page and shows the **Fork** button.
+1.  In [`https://github.com/ng-classic/angular`][GithubAngularAngular], click the **Fork** button near the top-right corner of the page.
+    This image is from the top of the [`https://github.com/ng-classic/angular`][GithubAngularAngular] page and shows the **Fork** button.
 
     <div class="lightbox">
 
-    <img alt="An image of the ng-angular/angular Classicwebsite in github.com that identifies the fork button" src="generated/images/guide/doc-prepare-to-edit/angular-angular-github.png">
+    <img alt="An image of the ng-classic/angular Classicwebsite in github.com that identifies the fork button" src="generated/images/guide/doc-prepare-to-edit/angular-angular-github.png">
 
     </div>
 
@@ -173,9 +173,9 @@ Perform this procedure in a browser.
     1.  Click **Create repository**.
         The forking process can take a few minutes.
 
-1.  You now have a copy of the `ng-angular/angular` repo in your GitHub account.
+1.  You now have a copy of the `ng-classic/angular` repo in your GitHub account.
 
-After your fork of `ng-angular/angular` is ready, your browser opens the web page of the forked repo in your GitHub account.
+After your fork of `ng-classic/angular` is ready, your browser opens the web page of the forked repo in your GitHub account.
 In this image, notice that the account now shows the username of your personal GitHub account instead of the `angular` account.
 
 <div class="lightbox">
@@ -185,10 +185,10 @@ In this image, notice that the account now shows the username of your personal G
 
 </div>
 
-As a forked repo, your new repo maintains a reference to `ng-angular/angular`.
-From your account, `git` considers your `personal/angular` repo as the origin repo and `ng-angular/angular` as the upstream repo.
-You can think of this as: your changes originate in the *origin* repo and you send them *upstream* to the `ng-angular/angular` repo.
-The message below the repo name in your account, `forked from ng-angular/angular`, contains a link back to the upstream repo.
+As a forked repo, your new repo maintains a reference to `ng-classic/angular`.
+From your account, `git` considers your `personal/angular` repo as the origin repo and `ng-classic/angular` as the upstream repo.
+You can think of this as: your changes originate in the *origin* repo and you send them *upstream* to the `ng-classic/angular` repo.
+The message below the repo name in your account, `forked from ng-classic/angular`, contains a link back to the upstream repo.
 
 This relationship comes into play later, such as when you update your `personal/angular` repo and when you open a pull request.
 
@@ -317,7 +317,7 @@ To review your work and before you submit your updates in a pull request, be sur
 
 <div class="alert is-important">
 
-Note that the instructions found in [https://github.com/ng-angular/angular/blob/main/docs/DEVELOPER.md](https://github.com/ng-angular/angular/blob/main/docs/DEVELOPER.md) are to build and test the Angular Classicframework and not the Angular Classicdocumentation.
+Note that the instructions found in [https://github.com/ng-classic/angular/blob/main/docs/DEVELOPER.md](https://github.com/ng-classic/angular/blob/main/docs/DEVELOPER.md) are to build and test the Angular Classicframework and not the Angular Classicdocumentation.
 
 The procedures on this page build only the Angular Classicdocumentation.
 You don't need to build the Angular Classicframework to build the Angular Classicdocumentation.
@@ -432,11 +432,11 @@ Continue to the other topics in this section for information about how to perfor
 
 [GithubMain]: https://github.com "GitHub"
 
-[GithubAngularAngular]: https://github.com/ng-angular/angular Classic"ng-angular/angular Classic| GitHub"
+[GithubAngularAngular]: https://github.com/ng-classic/angular Classic"ng-classic/angular Classic| GitHub"
 
-[GithubAngularAngularBlobMainContributingSigningTheCla]: https://github.com/ng-angular/angular/blob/main/CONTRIBUTING.md#-signing-the-cla "Signing the CLA - Contributing to Angular Classic| ng-angular/angular Classic| GitHub"
+[GithubAngularAngularBlobMainContributingSigningTheCla]: https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md#-signing-the-cla "Signing the CLA - Contributing to Angular Classic| ng-classic/angular Classic| GitHub"
 
-[GithubAngularAngularTreeMainAioToolsDocLinterInstallValeOnYourDevelopmentSystemReadmeMd]: https://github.com/ng-angular/angular/tree/main/aio/tools/doc-linter/README.md#install-vale-on-your-development-system "Install Vale on your development system - Angular Classicdocumentation lint tool | ng-angular/angular Classic| Github"
+[GithubAngularAngularTreeMainAioToolsDocLinterInstallValeOnYourDevelopmentSystemReadmeMd]: https://github.com/ng-classic/angular/tree/main/aio/tools/doc-linter/README.md#install-vale-on-your-development-system "Install Vale on your development system - Angular Classicdocumentation lint tool | ng-classic/angular Classic| Github"
 
 <!-- end links -->
 

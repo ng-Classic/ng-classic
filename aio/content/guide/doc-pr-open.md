@@ -1,6 +1,6 @@
 # Open a documentation pull request
 
-This topic describes how to open the pull request that requests your documentation update to be added to the `ng-angular/angular` repo.
+This topic describes how to open the pull request that requests your documentation update to be added to the `ng-classic/angular` repo.
 
 These steps are performed in your web browser.
 
@@ -56,7 +56,7 @@ These steps are performed in your web browser.
 
             Mark this comment when you're sure your commit messages are in the correct format.
             Remember that the commit messages and the pull request title are different.
-            For more information about commit message formatting, see [Preparing a documentation update for a pull request](guide/doc-pr-prep) and [Commit message format](https://github.com/ng-angular/angular/blob/main/CONTRIBUTING.md#commit).
+            For more information about commit message formatting, see [Preparing a documentation update for a pull request](guide/doc-pr-prep) and [Commit message format](https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md#commit).
 
         1.  **Docs have been added / updated \(for bug fixes / features\)**
 

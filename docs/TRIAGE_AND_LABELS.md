@@ -41,7 +41,7 @@ There are few components which are cross-cutting.
 They don't have a clear location in the source tree.
 We will treat them as a component even thought no specific source tree is associated with them.
 
-* `area: build & ci` - build and CI infrastructure for the ng-angular/angular Classicrepo
+* `area: build & ci` - build and CI infrastructure for the ng-classic/angular Classicrepo
 * `area: dev-infra` - angular's common internal developer infrastructure scripting and tooling
 * `area: docs` - documentation, including API docs, guides, tutorial
 * `area: packaging` - packaging format of @angular-classic/* npm packages

@@ -5,7 +5,7 @@ import {fileURLToPath} from 'url';
 
 
 // Constants
-const REPO_SLUG = 'ng-angular/angular';
+const REPO_SLUG = 'ng-classic/angular';
 const NG_REMOTE_URL = `https://github.com/${REPO_SLUG}.git`;
 const ORIGINS = {
   Next: 'https://next.angular-classic.com',

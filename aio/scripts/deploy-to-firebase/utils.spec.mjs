@@ -145,7 +145,7 @@ describe('deploy-to-firebase/utils:', () => {
           'git ls-remote https://example.com/repo.git some-pattern', jasmine.anything());
     });
 
-    it('should use the `ng-angular/angular` repo if not remote is specified', () => {
+    it('should use the `ng-classic/angular` repo if not remote is specified', () => {
       u.getRemoteRefs('some-pattern');
       expect(execSpy).toHaveBeenCalledWith(
           `git ls-remote ${u.NG_REMOTE_URL} some-pattern`, jasmine.anything());

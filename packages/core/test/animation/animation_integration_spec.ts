@@ -345,7 +345,7 @@ describe('animation tests', function() {
       ]);
     });
 
-    // https://github.com/ng-angular/angular/issues/32794
+    // https://github.com/ng-classic/angular/issues/32794
     it('should support nested animation triggers', () => {
       const REUSABLE_ANIMATION = [trigger('myAnimation', [
         transition('void => *', [style({'opacity': '0'}), animate(500, style({'opacity': '1'}))])

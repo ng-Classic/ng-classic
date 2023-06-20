@@ -111,7 +111,7 @@ export function cleanUpControl(
   // instances and there is a logic in `selectValueAccessor` function that throws if it's not the
   // case. We still check the presence of `valueAccessor` before invoking its methods to make sure
   // that cleanup works correctly if app code or tests are setup to ignore the error thrown from
-  // `selectValueAccessor`. See https://github.com/ng-angular/angular/issues/40521.
+  // `selectValueAccessor`. See https://github.com/ng-classic/angular/issues/40521.
   if (dir.valueAccessor) {
     dir.valueAccessor.registerOnChange(noop);
     dir.valueAccessor.registerOnTouched(noop);
@@ -361,7 +361,7 @@ export function syncPendingControls(form: FormGroup, directives: Set<NgControl>|
   });
 }
 
-// TODO: vsavkin remove it once https://github.com/ng-angular/angular/issues/3011 is implemented
+// TODO: vsavkin remove it once https://github.com/ng-classic/angular/issues/3011 is implemented
 export function selectValueAccessor(
     dir: NgControl, valueAccessors: ControlValueAccessor[]): ControlValueAccessor|null {
   if (!valueAccessors) return null;

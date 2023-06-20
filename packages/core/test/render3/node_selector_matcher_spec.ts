@@ -77,7 +77,7 @@ describe('css selector matching', () => {
       });
 
       // TODO: this case will not work, need more discussion
-      // https://github.com/ng-angular/angular/pull/34625#discussion_r401791275
+      // https://github.com/ng-classic/angular/pull/34625#discussion_r401791275
       xit('should match namespaced attributes', () => {
         expect(isMatching(
                    'span', [AttributeMarker.NamespaceURI, 'http://some/uri', 'title', 'name'],

@@ -38,6 +38,6 @@ npm_package(
   visibility = ["//visibility:public"],
 )
 EOT
-_sedi 's#\# PLACE_HOLDER_FOR_ng-angular/angular_packages/language-service/build.sh#"//.angular_packages/language-service:package.json", \# FOR TESTING ONLY! DO NOT COMMIT THIS LINE!#' WORKSPACE
+_sedi 's#\# PLACE_HOLDER_FOR_ng-classic/angular_packages/language-service/build.sh#"//.angular_packages/language-service:package.json", \# FOR TESTING ONLY! DO NOT COMMIT THIS LINE!#' WORKSPACE
 yarn add @angular-classic/language-service@file:".angular_packages/language-service"
 popd

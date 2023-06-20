@@ -7,7 +7,7 @@ Angular ClassicDevTools is a browser DevTools extension for debugging and profil
 To setup your local development environment for Angular ClassicDevTools, perform the following steps:
 
 ```bash
-git clone git://github.com/ng-angular/angular
+git clone git://github.com/ng-classic/angular
 cd angular
 yarn
 yarn run devtools:devserver

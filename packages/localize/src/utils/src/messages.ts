@@ -48,7 +48,7 @@ export type MessageId = string;
  * increases parsing time and memory usage during builds) using a default import that only
  * type-checks when `allowSyntheticDefaultImports` is enabled.
  *
- * @see https://github.com/ng-angular/angular/issues/45179
+ * @see https://github.com/ng-classic/angular/issues/45179
  */
 type AbsoluteFsPathLocalizeCopy = string&{_brand: 'AbsoluteFsPath'};
 

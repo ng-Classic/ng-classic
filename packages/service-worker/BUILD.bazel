@@ -29,7 +29,7 @@ genrule(
     srcs = ["//packages/service-worker/worker:ngsw_worker.js"],
     outs = ["ngsw-worker.js"],
     # Remove sourcemap since this file will be served in production site
-    # See https://github.com/ng-angular/angular/issues/23596
+    # See https://github.com/ng-classic/angular/issues/23596
     cmd = "grep -v '//# sourceMappingURL' < $< > $@",
 )
 

@@ -965,7 +965,7 @@ describe('di', () => {
 
     it('should not have access to the directive injector in a standalone injector from within a directive-level provider factory',
        () => {
-         // https://github.com/ng-angular/angular/issues/42651
+         // https://github.com/ng-classic/angular/issues/42651
          class TestA {
            constructor(public injector: string) {}
          }

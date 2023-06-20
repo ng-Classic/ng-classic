@@ -18,7 +18,7 @@ module.exports = function (config) {
       {'reporter:jasmine-seed': ['type', JasmineSeedReporter]},
     ],
     proxies: {
-      '/dummy/image': 'src/assets/images/logos/ng-angular/angular.png',
+      '/dummy/image': 'src/assets/images/logos/ng-classic/angular.png',
     },
     client: {
       clearContext: false,  // leave Jasmine Spec Runner output visible in browser

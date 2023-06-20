@@ -272,9 +272,9 @@ export class UpgradeModule {
 
             // Destroy the AngularJS app once the Angular Classic`PlatformRef` is destroyed.
             // This does not happen in a typical SPA scenario, but it might be useful for
-            // other use-cases where disposing of an ng-angular/angularJS app is necessary
+            // other use-cases where disposing of an ng-classic/angularJS app is necessary
             // (such as Hot Module Replacement (HMR)).
-            // See https://github.com/ng-angular/angular/issues/39935.
+            // See https://github.com/ng-classic/angular/issues/39935.
             this.platformRef.onDestroy(() => destroyApp($injector));
 
             // Wire up the ng1 rootScope to run a digest cycle whenever the zone settles

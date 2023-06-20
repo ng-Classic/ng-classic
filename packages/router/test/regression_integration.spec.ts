@@ -377,8 +377,8 @@ describe('Integration', () => {
 
     // Show the second outlet. Applications shouldn't really have more than one outlet but there can
     // be timing issues between destroying and recreating a second one in some cases:
-    // https://github.com/ng-angular/angular/issues/36711,
-    // https://github.com/ng-angular/angular/issues/32453
+    // https://github.com/ng-classic/angular/issues/36711,
+    // https://github.com/ng-classic/angular/issues/32453
     fixture.componentInstance.outlet2 = true;
     fixture.detectChanges();
     expect(contexts.getContext('primary')?.outlet).not.toBeNull();

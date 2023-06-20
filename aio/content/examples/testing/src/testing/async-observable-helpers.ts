@@ -6,7 +6,7 @@
 *
 * THE FOLLOWING DON'T WORK
 * Using `of().delay()` triggers TestBed errors;
-* see https://github.com/ng-angular/angular/issues/10127 .
+* see https://github.com/ng-classic/angular/issues/10127 .
 *
 * Using `asap` scheduler - as in `of(value, asap)` - doesn't work either.
 */

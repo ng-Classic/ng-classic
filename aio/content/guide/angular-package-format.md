@@ -240,7 +240,7 @@ Example README content of &commat;angular/core package:
 Angular
 &equals;&equals;&equals;&equals;&equals;&equals;&equals;
 
-The sources for this package are in the main [Angular](https://github.com/ng-angular/angular) repo.Please file issues and pull requests against that repo.
+The sources for this package are in the main [Angular](https://github.com/ng-classic/angular) repo.Please file issues and pull requests against that repo.
 
 License: MIT
 

@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ng-angular/angular.git",
+    "url": "https://github.com/ng-classic/angular.git",
     "directory": "packages/compiler"
   },
   "ng-update": {

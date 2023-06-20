@@ -162,7 +162,7 @@ export interface TrackByFunction<T> {
   // function is declared using a base type of the iterated type. The `U` type gives TypeScript
   // additional freedom to infer a narrower type for the `item` parameter type, instead of imposing
   // the trackBy's declared item type as the inferred type for `T`.
-  // See https://github.com/ng-angular/angular/issues/40125
+  // See https://github.com/ng-classic/angular/issues/40125
 
   /**
    * @param index The index of the item within the iterable.

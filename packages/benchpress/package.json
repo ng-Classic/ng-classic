@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ng-angular/angular.git",
+    "url": "https://github.com/ng-classic/angular.git",
     "directory": "packages/benchpress"
   },
   "keywords": [
@@ -17,9 +17,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ng-angular/angular/issues"
+    "url": "https://github.com/ng-classic/angular/issues"
   },
-  "homepage": "https://github.com/ng-angular/angular/tree/main/packages/benchpress",
+  "homepage": "https://github.com/ng-classic/angular/tree/main/packages/benchpress",
   "publishConfig": {
     "registry": "https://wombat-dressing-room.appspot.com"
   }

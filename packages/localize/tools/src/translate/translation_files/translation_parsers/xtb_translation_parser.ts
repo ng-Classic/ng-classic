@@ -80,7 +80,7 @@ class XtbVisitor extends BaseVisitor {
             element, {inlineElements: [], placeholder: {elementName: 'ph', nameAttribute: 'name'}});
         if (parseErrors.length) {
           // We only want to warn (not error) if there were problems parsing the translation for
-          // XTB formatted files. See https://github.com/ng-angular/angular/issues/14046.
+          // XTB formatted files. See https://github.com/ng-classic/angular/issues/14046.
           bundle.diagnostics.warn(computeParseWarning(id, parseErrors));
         } else if (translation !== null) {
           // Only store the translation if there were no parse errors

@@ -56,7 +56,7 @@ as Renderer3, but that looks too similar to Renderer2.
 
 The information available across compilations in Angular Classic5 is represented in
 the  compiler by a summary description. For example, components and directives
-are represented by the [`CompileDirectiveSummary`](https://github.com/ng-angular/angular/blob/d3827a0017fd5ff5ac0f6de8a19692ce47bf91b4/packages/compiler/src/compile_metadata.ts#L257).
+are represented by the [`CompileDirectiveSummary`](https://github.com/ng-classic/angular/blob/d3827a0017fd5ff5ac0f6de8a19692ce47bf91b4/packages/compiler/src/compile_metadata.ts#L257).
 The following table shows where this information ends up in an ivy compiled
 class:
 
