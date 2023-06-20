@@ -1,0 +1,45 @@
+name: Update Nx Angular
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+  push:
+    branches:
+      - master
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions Bot"
+
+      - name: Add Nx repo as a remote
+        run: |
+          git remote add -f nx https://github.com/nrwl/nx.git
+
+      - name: Pull Nx repo and merge Angular folder
+        run: |
+          # Pull updates from the Nx repository
+          git fetch nx master
+
+          # Create a new branch that only contains the history of the "angular" directory
+          git subtree split --prefix=packages/angular --branch angular-updates nx/master
+
+          # Merge the "angular" subtree
+          git subtree pull --prefix=angular-classic/packages/nx/nx-angular-classic angular-updates --squash
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update Nx Angular"
+          title: "Update Nx Angular"
+          body: "Updates the Nx Angular package to the latest version."
+          branch: "update-nx-angular"
