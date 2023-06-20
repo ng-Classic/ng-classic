@@ -169,11 +169,11 @@ import {HammerGestureConfig, HammerGesturesPlugin,} from '@angular-classic/platf
                    `The custom HAMMER_LOADER completed, but Hammer.JS is not present.`);
          }));
 
-      it('should call the loader outside of the Angular zone', fakeAsync(() => {
+      it('should call the loader outside of the Angular Classiczone', fakeAsync(() => {
            const ngZone = TestBed.inject(NgZone);
            // Unit tests are being run in a ProxyZone, thus `addEventListener` is called within the
-           // ProxyZone. In real apps, `addEventListener` is called within the Angular zone; we
-           // mimic that behaviour by entering the Angular zone.
+           // ProxyZone. In real apps, `addEventListener` is called within the Angular Classiczone; we
+           // mimic that behaviour by entering the Angular Classiczone.
            ngZone.run(() => plugin.addEventListener(someElement, 'swipe', () => {}));
 
            const appRef = TestBed.inject(ApplicationRef);

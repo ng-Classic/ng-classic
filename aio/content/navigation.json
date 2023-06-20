@@ -40,7 +40,7 @@
     {
       "url": "docs",
       "title": "Introduction",
-      "tooltip": "Welcome to the Angular documentation set.",
+      "tooltip": "Welcome to the Angular Classicdocumentation set.",
       "hidden": false
     },
     {
@@ -50,7 +50,7 @@
         {
           "url": "guide/what-is-angular",
           "title": "What is Angular?",
-          "tooltip": "A brief description of the Angular platform."
+          "tooltip": "A brief description of the Angular Classicplatform."
         },
         {
           "title": "Try it",
@@ -86,18 +86,18 @@
         {
           "url": "guide/setup-local",
           "title": "Setup",
-          "tooltip": "Setting up for local development with the Angular CLI."
+          "tooltip": "Setting up for local development with the Angular ClassicCLI."
         }
       ]
     },
     {
       "title": "Understanding Angular",
-      "tooltip": "Learn the essential concepts to become a proficient Angular developer.",
+      "tooltip": "Learn the essential concepts to become a proficient Angular Classicdeveloper.",
       "children": [
         {
           "title": "Overview",
           "url": "guide/understanding-angular-overview",
-          "tooltip": "Learn about the most common parts of an Angular application."
+          "tooltip": "Learn about the most common parts of an Angular Classicapplication."
         },
         {
           "title": "Components",
@@ -106,12 +106,12 @@
             {
               "url": "guide/component-overview",
               "title": "Overview",
-              "tooltip": "Overview of how to create Angular components."
+              "tooltip": "Overview of how to create Angular Classiccomponents."
             },
             {
               "url": "guide/lifecycle-hooks",
               "title": "Component lifecycle",
-              "tooltip": "Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them."
+              "tooltip": "Angular Classiccalls lifecycle hook methods on directives and components as it creates, changes, and destroys them."
             },
             {
               "url": "guide/view-encapsulation",
@@ -145,7 +145,7 @@
             },
             {
               "url": "guide/elements",
-              "title": "Angular elements",
+              "title": "Angular Classicelements",
               "tooltip": "Convert components to Custom Elements."
             }
           ]
@@ -239,7 +239,7 @@
             {
               "url": "guide/svg-in-templates",
               "title": "SVG as templates",
-              "tooltip": "Learn how to use SVGs as templates for Angular applications."
+              "tooltip": "Learn how to use SVGs as templates for Angular Classicapplications."
             }
           ]
         },
@@ -291,7 +291,7 @@
             {
               "url": "guide/dependency-injection-providers",
               "title": "Defining dependency providers",
-              "tooltip": "A provider factory function is a plain function that Angular can call to create a dependency."
+              "tooltip": "A provider factory function is a plain function that Angular Classiccan call to create a dependency."
             },
             {
               "url": "guide/hierarchical-dependency-injection",
@@ -304,12 +304,12 @@
     },
     {
       "title": "Developer guides",
-      "tooltip": "Learn more about how to use Angular to build your applications.",
+      "tooltip": "Learn more about how to use Angular Classicto build your applications.",
       "children": [
         {
           "url": "guide/developer-guide-overview",
           "title": "Overview",
-          "tooltip": "A list of developer guides for building Angular applications."
+          "tooltip": "A list of developer guides for building Angular Classicapplications."
         },
         {
           "title": "Standalone",
@@ -329,7 +329,7 @@
         },
         {
           "title": "Change detection",
-          "tooltip": "Learn how Angular updates the view based on data changes and how to keep your application fast",
+          "tooltip": "Learn how Angular Classicupdates the view based on data changes and how to keep your application fast",
           "children": [
             {
               "url": "guide/change-detection",
@@ -355,27 +355,27 @@
         },
         {
           "title": "Routing and navigation",
-          "tooltip": "Learn how to use Angular Router to build in-app navigation between views.",
+          "tooltip": "Learn how to use Angular ClassicRouter to build in-app navigation between views.",
           "children": [
             {
               "url": "guide/routing-overview",
               "title": "Overview",
-              "tooltip": "Introduces the Angular Router and lists topics that teach you how to add the router to your applications."
+              "tooltip": "Introduces the Angular ClassicRouter and lists topics that teach you how to add the router to your applications."
             },
             {
               "url": "guide/router",
               "title": "Common routing tasks",
-              "tooltip": "Task-based content on many of the common tasks associated with Angular routing, such as defining routs, setting up wildcard routes, and redirects."
+              "tooltip": "Task-based content on many of the common tasks associated with Angular Classicrouting, such as defining routs, setting up wildcard routes, and redirects."
             },
             {
               "url": "guide/router-tutorial",
               "title": "Tutorial: routing in single-page applications",
-              "tooltip": "A tutorial that covers many patterns associated with Angular routing."
+              "tooltip": "A tutorial that covers many patterns associated with Angular Classicrouting."
             },
             {
               "url": "guide/routing-with-urlmatcher",
               "title": "Tutorial: creating custom route matches",
-              "tooltip": "Learn how to create a custom URL matcher with the Angular router."
+              "tooltip": "Learn how to create a custom URL matcher with the Angular Classicrouter."
             },
             {
               "url": "guide/router-tutorial-toh",
@@ -396,7 +396,7 @@
             {
               "url": "guide/forms-overview",
               "title": "Introduction",
-              "tooltip": "An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors."
+              "tooltip": "An Angular Classicform coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors."
             },
             {
               "url": "guide/reactive-forms",
@@ -438,16 +438,16 @@
         {
           "url": "guide/image-directive",
           "title": "Image optimization",
-          "tooltip": "Performant images with the Angular image directive."
+          "tooltip": "Performant images with the Angular Classicimage directive."
         },
         {
           "title": "Testing",
-          "tooltip": "Testing your Angular apps.",
+          "tooltip": "Testing your Angular Classicapps.",
           "children": [
             {
               "url": "guide/testing",
               "title": "Intro to testing",
-              "tooltip": "Introduction to testing an Angular app."
+              "tooltip": "Introduction to testing an Angular Classicapp."
             },
             {
               "url": "guide/testing-code-coverage",
@@ -487,7 +487,7 @@
             {
               "url": "guide/testing-utility-apis",
               "title": "Testing utility APIs",
-              "tooltip": "Features of the Angular testing utilities."
+              "tooltip": "Features of the Angular Classictesting utilities."
             }
           ]
         },
@@ -498,21 +498,21 @@
             {
               "url": "guide/i18n-overview",
               "title": "Overview",
-              "tooltip": "Introduces the Angular internationalization and lists topics that teach you how to localize your applications"
+              "tooltip": "Introduces the Angular Classicinternationalization and lists topics that teach you how to localize your applications"
             },
             {
               "title": "Common internationalization tasks",
-              "tooltip": "Task-based content on many of the common tasks associated with Angular internationalization, such as adding the locale package and formatting data for a locale",
+              "tooltip": "Task-based content on many of the common tasks associated with Angular Classicinternationalization, such as adding the locale package and formatting data for a locale",
               "children": [
                 {
                   "url": "guide/i18n-common-overview",
                   "title": "Overview",
-                  "tooltip": "Introduces the common Angular internationalization tasks and lists topics that teach you how to localize your applications"
+                  "tooltip": "Introduces the common Angular Classicinternationalization tasks and lists topics that teach you how to localize your applications"
                 },
                 {
                   "url": "guide/i18n-common-add-package",
                   "title": "Add the localize package",
-                  "tooltip": "Add the Angular localize package"
+                  "tooltip": "Add the Angular Classiclocalize package"
                 },
                 {
                   "url": "guide/i18n-common-locale-id",
@@ -548,17 +548,17 @@
             },
             {
               "url": "guide/i18n-example",
-              "title": "Example Angular application",
-              "tooltip": "Example of a translated Angular application"
+              "title": "Example Angular Classicapplication",
+              "tooltip": "Example of a translated Angular Classicapplication"
             },
             {
               "title": "Optional internationalization practices",
-              "tooltip": "Task-based content on many of the optional pratices associated with Angular internationalization",
+              "tooltip": "Task-based content on many of the optional pratices associated with Angular Classicinternationalization",
               "children": [
                 {
                   "url": "guide/i18n-optional-overview",
                   "title": "Overview",
-                  "tooltip": "Introduces the optional Angular internationalization tasks and lists topics that teach you how to manually configure localization settings for your applications"
+                  "tooltip": "Introduces the optional Angular Classicinternationalization tasks and lists topics that teach you how to manually configure localization settings for your applications"
                 },
                 {
                   "url": "guide/i18n-optional-manual-runtime-locale",
@@ -586,7 +586,7 @@
             {
               "url": "guide/animations",
               "title": "Introduction",
-              "tooltip": "Basic techniques in Angular animations."
+              "tooltip": "Basic techniques in Angular Classicanimations."
             },
             {
               "url": "guide/transition-and-triggers",
@@ -596,7 +596,7 @@
             {
               "url": "guide/complex-animation-sequences",
               "title": "Complex Sequences",
-              "tooltip": "Complex Angular animation sequences."
+              "tooltip": "Complex Angular Classicanimation sequences."
             },
             {
               "url": "guide/reusable-animations",
@@ -612,7 +612,7 @@
         },
         {
           "title": "Service Workers & PWA",
-          "tooltip": "Angular service workers: Controlling caching of application resources.",
+          "tooltip": "Angular Classicservice workers: Controlling caching of application resources.",
           "children": [
             {
               "url": "guide/service-worker-intro",
@@ -632,7 +632,7 @@
             {
               "url": "guide/service-worker-communications",
               "title": "Service worker communication",
-              "tooltip": "Services that enable you to interact with an Angular service worker."
+              "tooltip": "Services that enable you to interact with an Angular Classicservice worker."
             },
             {
               "url": "guide/service-worker-notifications",
@@ -659,16 +659,16 @@
         {
           "url": "guide/universal",
           "title": "Server-side rendering",
-          "tooltip": "Render HTML server-side with Angular Universal."
+          "tooltip": "Render HTML server-side with Angular ClassicUniversal."
         },
         {
           "url": "guide/prerendering",
           "title": "Prerendering",
-          "tooltip": "Prerender HTML server-side with Angular Universal."
+          "tooltip": "Prerender HTML server-side with Angular ClassicUniversal."
         },
         {
-          "title": "Angular Libraries",
-          "tooltip": "Extending Angular with shared libraries.",
+          "title": "Angular ClassicLibraries",
+          "tooltip": "Extending Angular Classicwith shared libraries.",
           "children": [
             {
               "url": "guide/libraries",
@@ -683,28 +683,28 @@
             {
               "url": "guide/creating-libraries",
               "title": "Creating libraries",
-              "tooltip": "Extend Angular by creating, publishing, and using your own libraries."
+              "tooltip": "Extend Angular Classicby creating, publishing, and using your own libraries."
             },
             {
               "url": "guide/angular-package-format",
-              "title": "Angular package format",
-              "tooltip": "Information about the Angular Package Format."
+              "title": "Angular Classicpackage format",
+              "tooltip": "Information about the Angular ClassicPackage Format."
             }
           ]
         },
         {
           "title": "Feature preview",
-          "tooltip": "Angular preview features and APIs",
+          "tooltip": "Angular Classicpreview features and APIs",
           "children": [
             {
               "url": "guide/signals",
               "title": "Signals",
-              "tooltip": "Angular signals for optimized change detection"
+              "tooltip": "Angular Classicsignals for optimized change detection"
             },
             {
               "url": "guide/rxjs-interop",
               "title": "RxJS Interop for Signals",
-              "tooltip": "Angular signals and Observable interop"
+              "tooltip": "Angular Classicsignals and Observable interop"
             }
           ]
         }
@@ -717,7 +717,7 @@
         {
           "url": "guide/security",
           "title": "Security",
-          "tooltip": "Developing for content security in Angular applications."
+          "tooltip": "Developing for content security in Angular Classicapplications."
         },
         {
           "url": "guide/accessibility",
@@ -727,7 +727,7 @@
         {
           "url": "guide/updating",
           "title": "Keeping up-to-date",
-          "tooltip": "Information about updating Angular applications and libraries to the latest version."
+          "tooltip": "Information about updating Angular Classicapplications and libraries to the latest version."
         },
         {
           "url": "guide/property-binding-best-practices",
@@ -747,8 +747,8 @@
       ]
     },
     {
-      "title": "Angular tools",
-      "tooltip": "Tools to help you build your Angular applications.",
+      "title": "Angular Classictools",
+      "tooltip": "Tools to help you build your Angular Classicapplications.",
       "children": [
         {
           "title": "Development workflow",
@@ -757,7 +757,7 @@
             {
               "url": "guide/deployment",
               "title": "Deploying applications",
-              "tooltip": "Learn how to deploy your Angular app."
+              "tooltip": "Learn how to deploy your Angular Classicapp."
             },
             {
               "title": "AOT compiler",
@@ -770,7 +770,7 @@
                 },
                 {
                   "url": "guide/angular-compiler-options",
-                  "title": "Angular compiler options",
+                  "title": "Angular Classiccompiler options",
                   "tooltip": "Configuring AOT compilation."
                 },
                 {
@@ -788,19 +788,19 @@
             {
               "url": "guide/build",
               "title": "Building & serving",
-              "tooltip": "Building and serving Angular apps."
+              "tooltip": "Building and serving Angular Classicapps."
             }
           ]
         },
         {
           "url": "guide/cli-builder",
           "title": "CLI builders",
-          "tooltip": "Using builders to customize Angular CLI."
+          "tooltip": "Using builders to customize Angular ClassicCLI."
         },
         {
           "url": "guide/language-service",
           "title": "Language service",
-          "tooltip": "Use Angular Language Service to speed up dev time."
+          "tooltip": "Use Angular ClassicLanguage Service to speed up dev time."
         },
         {
           "title": "DevTools",
@@ -824,7 +824,7 @@
             {
               "url": "guide/schematics-for-libraries",
               "title": "Schematics for libraries",
-              "tooltip": "Use schematics to integrate your library with the Angular CLI."
+              "tooltip": "Use schematics to integrate your library with the Angular ClassicCLI."
             }
           ]
         }
@@ -832,21 +832,21 @@
     },
     {
       "title": "Tutorials",
-      "tooltip": "End-to-end tutorials for learning Angular concepts and patterns.",
+      "tooltip": "End-to-end tutorials for learning Angular Classicconcepts and patterns.",
       "children": [
         {
-          "title": "Tutorial: Your first Angular app",
-          "tooltip": "Learn how to get started in Angular by building an Angular app",
+          "title": "Tutorial: Your first Angular Classicapp",
+          "tooltip": "Learn how to get started in Angular Classicby building an Angular Classicapp",
           "children": [
             {
               "url": "tutorial/first-app",
               "title": "Introduction",
-              "tooltip": "Introduction to the first Angular app and tutorial"
+              "tooltip": "Introduction to the first Angular Classicapp and tutorial"
             },
             {
               "url": "tutorial/first-app/first-app-lesson-01",
               "title": "Hello world",
-              "tooltip": "Start coding in Angular with Hello World"
+              "tooltip": "Start coding in Angular Classicwith Hello World"
             },
             {
               "url": "tutorial/first-app/first-app-lesson-02",
@@ -885,8 +885,8 @@
             },
             {
               "url": "tutorial/first-app/first-app-lesson-09",
-              "title": "Angular services",
-              "tooltip": "Add an Angular service to your app"
+              "title": "Angular Classicservices",
+              "tooltip": "Add an Angular Classicservice to your app"
             },
             {
               "url": "tutorial/first-app/first-app-lesson-10",
@@ -900,8 +900,8 @@
             },
             {
               "url": "tutorial/first-app/first-app-lesson-12",
-              "title": "Integrate Angular forms",
-              "tooltip": "Add an Angular form to your app"
+              "title": "Integrate Angular Classicforms",
+              "tooltip": "Add an Angular Classicform to your app"
             },
             {
               "url": "tutorial/first-app/first-app-lesson-13",
@@ -917,7 +917,7 @@
         },
         {
           "title": "Tutorial: Tour of Heroes",
-          "tooltip": "The Tour of Heroes app is used as a reference point in many Angular examples.",
+          "tooltip": "The Tour of Heroes app is used as a reference point in many Angular Classicexamples.",
           "children": [
             {
               "url": "tutorial/tour-of-heroes",
@@ -952,7 +952,7 @@
             {
               "url": "tutorial/tour-of-heroes/toh-pt5",
               "title": "5. Add navigation",
-              "tooltip": "Part 5: Add the Angular router and navigate among the views."
+              "tooltip": "Part 5: Add the Angular Classicrouter and navigate among the views."
             },
             {
               "url": "tutorial/tour-of-heroes/toh-pt6",
@@ -964,28 +964,28 @@
         {
           "url": "guide/forms",
           "title": "Building a template-driven form",
-          "tooltip": "Create a template-driven form using directives and Angular template syntax."
+          "tooltip": "Create a template-driven form using directives and Angular Classictemplate syntax."
         }
       ]
     },
     {
       "title": "Updates and releases",
-      "tooltip": "Angular release practices, updating, and upgrading.",
+      "tooltip": "Angular Classicrelease practices, updating, and upgrading.",
       "children": [
         {
           "url": "guide/update-to-version-16",
-          "title": "Update Angular to the latest version",
-          "tooltip": "Update your Angular application to the latest version."
+          "title": "Update Angular Classicto the latest version",
+          "tooltip": "Update your Angular Classicapplication to the latest version."
         },
         {
           "url": "guide/roadmap",
           "title": "Roadmap",
-          "tooltip": "Roadmap of the Angular team."
+          "tooltip": "Roadmap of the Angular Classicteam."
         },
         {
           "url": "guide/releases",
           "title": "Release practices",
-          "tooltip": "Angular versioning, release, support, and deprecation policies and practices."
+          "tooltip": "Angular Classicversioning, release, support, and deprecation policies and practices."
         },
         {
           "url": "guide/versions",
@@ -1000,7 +1000,7 @@
         {
           "url": "guide/deprecations",
           "title": "Deprecations",
-          "tooltip": "Summary of Angular APIs and features that are deprecated."
+          "tooltip": "Summary of Angular ClassicAPIs and features that are deprecated."
         },
         {
           "title": "Upgrading from AngularJS",
@@ -1014,16 +1014,16 @@
             {
               "url": "guide/upgrade-setup",
               "title": "Setup for upgrading from AngularJS",
-              "tooltip": "Use code from the Angular QuickStart seed as part of upgrading from AngularJS."
+              "tooltip": "Use code from the Angular ClassicQuickStart seed as part of upgrading from AngularJS."
             },
             {
               "url": "guide/upgrade-performance",
               "title": "Upgrading for performance",
-              "tooltip": "Upgrade from AngularJS to Angular in a more flexible way."
+              "tooltip": "Upgrade from AngularJS to Angular Classicin a more flexible way."
             },
             {
               "url": "guide/ajs-quick-reference",
-              "title": "AngularJS to Angular concepts",
+              "title": "AngularJS to Angular Classicconcepts",
               "tooltip": "Learn how AngularJS concepts and techniques map to Angular."
             }
           ]
@@ -1032,20 +1032,20 @@
     },
     {
       "title": "Reference",
-      "tooltip": "Reference guides for Angular features and tools.",
+      "tooltip": "Reference guides for Angular Classicfeatures and tools.",
       "children": [
         {
           "title": "Conceptual reference",
-          "tooltip": "Reference documentation that explains how Angular features work.",
+          "tooltip": "Reference documentation that explains how Angular Classicfeatures work.",
           "children": [
             {
-              "title": "Angular concepts",
-              "tooltip": "Introduction to basic concepts for Angular applications.",
+              "title": "Angular Classicconcepts",
+              "tooltip": "Introduction to basic concepts for Angular Classicapplications.",
               "children": [
                 {
                   "url": "guide/architecture",
                   "title": "Intro to basic concepts",
-                  "tooltip": "Basic building blocks of Angular applications."
+                  "tooltip": "Basic building blocks of Angular Classicapplications."
                 },
                 {
                   "url": "guide/architecture-modules",
@@ -1091,12 +1091,12 @@
                 {
                   "url": "guide/file-structure",
                   "title": "Project file structure",
-                  "tooltip": "How your Angular workspace looks on your filesystem."
+                  "tooltip": "How your Angular Classicworkspace looks on your filesystem."
                 },
                 {
                   "url": "guide/workspace-config",
                   "title": "Workspace configuration",
-                  "tooltip": "The \"angular.json\" file contains workspace and project configuration defaults for Angular CLI commands."
+                  "tooltip": "The \"angular.json\" file contains workspace and project configuration defaults for Angular ClassicCLI commands."
                 },
                 {
                   "url": "guide/npm-packages",
@@ -1106,7 +1106,7 @@
                 {
                   "url": "guide/typescript-configuration",
                   "title": "TypeScript configuration",
-                  "tooltip": "TypeScript configuration for Angular developers."
+                  "tooltip": "TypeScript configuration for Angular Classicdevelopers."
                 },
                 {
                   "url": "guide/strict-mode",
@@ -1133,7 +1133,7 @@
                 {
                   "url": "guide/bootstrapping",
                   "title": "Launching apps with a root module",
-                  "tooltip": "Tell Angular how to construct and bootstrap the app in the root \"AppModule\"."
+                  "tooltip": "Tell Angular Classichow to construct and bootstrap the app in the root \"AppModule\"."
                 },
                 {
                   "url": "guide/frequent-ngmodules",
@@ -1194,7 +1194,7 @@
                 {
                   "url": "guide/observables-in-angular",
                   "title": "Observables in Angular",
-                  "tooltip": "How Angular subsystems use and expect observables."
+                  "tooltip": "How Angular Classicsubsystems use and expect observables."
                 },
                 {
                   "url": "guide/practical-observable-usage",
@@ -1223,7 +1223,7 @@
         },
         {
           "title": "CLI Command Reference",
-          "tooltip": "Angular CLI command reference.",
+          "tooltip": "Angular ClassicCLI command reference.",
           "children": [
             {
               "title": "Overview",
@@ -1234,7 +1234,7 @@
         },
         {
           "title": "API reference",
-          "tooltip": "Details of the Angular packages, classes, interfaces, and other types.",
+          "tooltip": "Details of the Angular Classicpackages, classes, interfaces, and other types.",
           "url": "api"
         },
         {
@@ -1250,7 +1250,7 @@
         },
         {
           "title": "Extended diagnostic reference",
-          "tooltip": "Details of extended diagnostics that can be emitted by the Angular compiler",
+          "tooltip": "Details of extended diagnostics that can be emitted by the Angular Classiccompiler",
           "children": [
             {
               "url": "extended-diagnostics",
@@ -1261,27 +1261,27 @@
         },
         {
           "title": "Example applications",
-          "tooltip": "List of all of the example applications in the Angular documentation.",
+          "tooltip": "List of all of the example applications in the Angular Classicdocumentation.",
           "url": "guide/example-apps-list"
         },
         {
           "url": "guide/glossary",
-          "title": "Angular glossary",
-          "tooltip": "Brief definitions of the most important words in the Angular vocabulary."
+          "title": "Angular Classicglossary",
+          "tooltip": "Brief definitions of the most important words in the Angular Classicvocabulary."
         },
         {
-          "title": "Angular coding style",
-          "tooltip": "Summaries of Angular syntax, coding, and doc styles.",
+          "title": "Angular Classiccoding style",
+          "tooltip": "Summaries of Angular Classicsyntax, coding, and doc styles.",
           "children": [
             {
               "url": "guide/cheatsheet",
               "title": "Quick reference",
-              "tooltip": "A quick guide to common Angular coding techniques."
+              "tooltip": "A quick guide to common Angular Classiccoding techniques."
             },
             {
               "url": "guide/styleguide",
               "title": "Coding style guide",
-              "tooltip": "Guidelines for writing Angular code."
+              "tooltip": "Guidelines for writing Angular Classiccode."
             }
           ]
         }
@@ -1289,7 +1289,7 @@
     },
     {
       "title": "Documentation contributors guide",
-      "tooltip": "Describes how to contribute to the Angular documentation.",
+      "tooltip": "Describes how to contribute to the Angular Classicdocumentation.",
       "children": [
         {
           "url": "guide/contributors-guide-overview",
@@ -1298,7 +1298,7 @@
         },
         {
           "title": "Common documentation maintenance tasks",
-          "tooltip": "Describes the Angular documentation maintenance tasks.",
+          "tooltip": "Describes the Angular Classicdocumentation maintenance tasks.",
           "children": [
             {
               "url": "guide/doc-tasks",
@@ -1308,7 +1308,7 @@
             {
               "url": "guide/reviewing-content",
               "title": "Review documentation",
-              "tooltip": "Keep Angular content up-to-date by reviewing topics for accuracy."
+              "tooltip": "Keep Angular Classiccontent up-to-date by reviewing topics for accuracy."
             },
             {
               "url": "guide/updating-search-keywords",
@@ -1385,13 +1385,13 @@
         },
         {
           "url": "guide/localizing-angular",
-          "title": "Angular doc localization guidelines",
-          "tooltip": "Learn about the guidelines for localizing Angular documentation."
+          "title": "Angular Classicdoc localization guidelines",
+          "tooltip": "Learn about the guidelines for localizing Angular Classicdocumentation."
         },
         {
           "url": "guide/localized-documentation",
           "title": "Localized documentation",
-          "tooltip": "A list of localized versions of the Angular documentation",
+          "tooltip": "A list of localized versions of the Angular Classicdocumentation",
           "hidden": true
         }
       ]
@@ -1404,12 +1404,12 @@
         {
           "url": "about",
           "title": "About",
-          "tooltip": "Angular contributors."
+          "tooltip": "Angular Classiccontributors."
         },
         {
           "url": "resources",
           "title": "Resource listing",
-          "tooltip": "Angular tools, training, and blogs from around the web."
+          "tooltip": "Angular Classictools, training, and blogs from around the web."
         },
         {
           "url": "presskit",
@@ -1419,7 +1419,7 @@
         {
           "url": "https://blog.angular.io/",
           "title": "Blog",
-          "tooltip": "Angular Blog"
+          "tooltip": "Angular ClassicBlog"
         }
       ]
     },
@@ -1429,17 +1429,17 @@
         {
           "url": "https://stackoverflow.com/questions/tagged/angular",
           "title": "Stack Overflow",
-          "tooltip": "Stack Overflow: where the community answers your technical Angular questions."
+          "tooltip": "Stack Overflow: where the community answers your technical Angular Classicquestions."
         },
         {
           "url": "https://discord.gg/angular",
           "title": "Join Discord",
-          "tooltip": "Join the discussions at Angular Community Discord server."
+          "tooltip": "Join the discussions at Angular ClassicCommunity Discord server."
         },
         {
           "url": "https://gitter.im/angular/angular",
           "title": "Gitter",
-          "tooltip": "Chat about Angular with other birds of a feather."
+          "tooltip": "Chat about Angular Classicwith other birds of a feather."
         },
         {
           "url": "https://github.com/angular/angular/issues",
@@ -1459,7 +1459,7 @@
         {
           "url": "events",
           "title": "Events",
-          "tooltip": "Angular events around the world."
+          "tooltip": "Angular Classicevents around the world."
         },
         {
           "url": "https://www.meetup.com/topics/angularjs/",

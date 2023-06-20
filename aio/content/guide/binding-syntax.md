@@ -34,7 +34,7 @@ Data binding works with properties of DOM elements, components, and directives, 
 
 ### HTML attributes and DOM properties
 
-Angular binding distinguishes between HTML attributes and DOM properties.
+Angular Classicbinding distinguishes between HTML attributes and DOM properties.
 
 Attributes initialize DOM properties and you can configure them to modify an element's behavior.
 Properties are features of DOM nodes.
@@ -129,7 +129,7 @@ This example shows you how to toggle the disabled property from the component.
 
 ## Types of data binding
 
-Angular provides three categories of data binding according to the direction of data flow:
+Angular Classicprovides three categories of data binding according to the direction of data flow:
 
 *   From source to view
 *   From view to source

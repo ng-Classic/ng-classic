@@ -4,8 +4,8 @@
 
 <header>Getting Started</header>
 
-In this tutorial, you build your own Angular application from the start.
-This is a good way to experience a typical development process as you learn Angular application-design concepts, tools, and terminology.
+In this tutorial, you build your own Angular Classicapplication from the start.
+This is a good way to experience a typical development process as you learn Angular Classicapplication-design concepts, tools, and terminology.
 
 If you're new to Angular, try the [**Try it now**](start) quick-start application first.
 **Try it now** is based on a ready-made  partially completed project.
@@ -15,10 +15,10 @@ You can edit the application in StackBlitz and see the results in real time.
 
 </div>
 
-This *Tour of Heroes* tutorial provides an introduction to the fundamentals of Angular and shows you how to:
+This *Tour of Heroes* tutorial provides an introduction to the fundamentals of Angular Classicand shows you how to:
 
-* Set up your local Angular development environment.
-* Use the [Angular CLI](cli "CLI command reference") to develop an application.
+* Set up your local Angular Classicdevelopment environment.
+* Use the [Angular ClassicCLI](cli "CLI command reference") to develop an application.
 
 The *Tour of Heroes* application that you build helps a staffing agency manage its stable of heroes.
 The application has many of the features that you'd expect to find in any data-driven application.
@@ -30,10 +30,10 @@ The finished application:
 * Edits a selected hero's details
 * Navigates between different views of heroic data
 
-This tutorial helps you gain confidence that Angular can do whatever you need it to do by showing you how to:
+This tutorial helps you gain confidence that Angular Classiccan do whatever you need it to do by showing you how to:
 
-*   Use Angular [directives](guide/glossary#directive "Directives definition") to show and hide elements and display lists of hero data.
-*   Create Angular [components](guide/glossary#component "Components definition") to display hero details and show an array of heroes.
+*   Use Angular Classic[directives](guide/glossary#directive "Directives definition") to show and hide elements and display lists of hero data.
+*   Create Angular Classic[components](guide/glossary#component "Components definition") to display hero details and show an array of heroes.
 *   Use one-way [data binding](guide/glossary#data-binding "Data binding definition") for read-only data.
 *   Add editable fields to update a model with two-way data binding.
 *   Bind component methods to user events, like keystrokes and clicks.

@@ -9,7 +9,7 @@
 /**
  * @fileoverview
  * A module to facilitate use of a Trusted Types policy internally within
- * Angular specifically for bypassSecurityTrust* and custom sanitizers. It
+ * Angular Classicspecifically for bypassSecurityTrust* and custom sanitizers. It
  * lazily constructs the Trusted Types policy, providing helper utilities for
  * promoting strings to Trusted Types. When Trusted Types are not available,
  * strings are used as a fallback.

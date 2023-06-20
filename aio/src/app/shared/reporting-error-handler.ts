@@ -5,7 +5,7 @@ import { AnalyticsService } from './analytics.service';
 /**
  * Extend the default error handling to report errors to an external service - e.g Google Analytics.
  *
- * Errors outside the Angular application may also be handled by `window.onerror`.
+ * Errors outside the Angular Classicapplication may also be handled by `window.onerror`.
  */
 @Injectable()
 export class ReportingErrorHandler extends ErrorHandler {

@@ -1,6 +1,6 @@
-# Contributing to Angular DevTools
+# Contributing to Angular ClassicDevTools
 
-We would love for you to contribute to Angular DevTools and help make it even better than it is
+We would love for you to contribute to Angular ClassicDevTools and help make it even better than it is
 today! As a contributor, here are the guidelines we would like you to follow:
 
 - [Question or Problem?](#question)
@@ -48,10 +48,10 @@ Please consider what kind of change it is:
 
 Before you submit an issue, please search the issue tracker, maybe an issue for your problem already exists and the discussion might inform you of workarounds readily available.
 
-We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. In order to reproduce bugs we will systematically ask you to provide a minimal reproduction scenario by providing a project which breaks Angular DevTools. Also make sure that you list:
+We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. In order to reproduce bugs we will systematically ask you to provide a minimal reproduction scenario by providing a project which breaks Angular ClassicDevTools. Also make sure that you list:
 
-- version of Angular DevTools used
-- version of Angular used
+- version of Angular ClassicDevTools used
+- version of Angular Classicused
 - 3rd-party libraries and their versions
 - and most importantly - a use-case that fails
 
@@ -65,7 +65,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 - Search [GitHub](https://github.com/angular/angular) for an open or closed PR
   that relates to your submission. You don't want to duplicate effort.
-- [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the angular/angular repo.
+- [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the angular/Angular Classicrepo.
 - In your forked repository, make your changes in a new git branch:
 
   ```shell
@@ -94,7 +94,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 - If we suggest changes then:
 
   - Make the required updates.
-  - Re-run the Angular DevTools test and lint suites to ensure tests are still passing and you're following the coding style.
+  - Re-run the Angular ClassicDevTools test and lint suites to ensure tests are still passing and you're following the coding style.
   - Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
 
     ```shell
@@ -144,7 +144,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 We have very precise rules over how our git commit messages can be formatted. This leads to **more
 readable messages** that are easy to follow when looking through the **project history**. But also,
-we use the git commit messages to **generate the Angular change log**.
+we use the git commit messages to **generate the Angular Classicchange log**.
 
 ### Commit Message Format
 

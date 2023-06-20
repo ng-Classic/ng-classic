@@ -10,13 +10,13 @@ Much of the logic around imports and references in the compiler is dedicated to 
 
 If a directive/pipe is within the user's program, then it can be imported directly. If not (e.g. the directive came from a library in `node_modules`), the compiler will look at the NgModule that caused the directive to be available in the template, look at its import, and attempt to use the same module specifier.
 
-This logic is based on the Angular Package Format, which dictates that libraries are organized into entrypoints, and both an NgModule and its directives/pipes must be exported from the same entrypoint (usually an `index.ts` file).
+This logic is based on the Angular ClassicPackage Format, which dictates that libraries are organized into entrypoints, and both an NgModule and its directives/pipes must be exported from the same entrypoint (usually an `index.ts` file).
 
 Thus, if `CommonModule` is imported from the specifier '@angular-classic/common', and its `NgIf` directive is used in a template, the compiler will always import `NgIf` from '@angular-classic/common' as well.
 
 It's important to note that this logic is transitive. If the user instead imported `BrowserModule` from '@angular-classic/platform-browser' (which re-exports `CommonModule` and thus `NgIf`), the compiler will note that `BrowserModule` itself imported `CommonModule` from '@angular-classic/common', and so `NgIf` will be imported from '@angular-classic/common' still.
 
-This logic of course breaks down for non-Angular Package Format libraries, such as "internal" libraries within a monorepo, which frequently don't use `index.ts` files or entrypoints. In this case, the user will likely import NgModules directly from their declaration (e.g. via a 'lib/module' specifier), and the compiler cannot simply assume that the user has exported all of the directives/pipes from the NgModule via this same specifier. In this case a compiler feature called "aliasing" kicks in (see below) and generates private exports from the NgModule file.
+This logic of course breaks down for non-Angular ClassicPackage Format libraries, such as "internal" libraries within a monorepo, which frequently don't use `index.ts` files or entrypoints. In this case, the user will likely import NgModules directly from their declaration (e.g. via a 'lib/module' specifier), and the compiler cannot simply assume that the user has exported all of the directives/pipes from the NgModule via this same specifier. In this case a compiler feature called "aliasing" kicks in (see below) and generates private exports from the NgModule file.
 
 2. Using a `UnifiedModulesHost`
 
@@ -121,7 +121,7 @@ Because the first import of an NgModule from a user library to a `.d.ts` is alwa
 Aliasing is currently used in two cases:
 
 1. To address strict dependency checking issues when using a `UnifiedModulesHost`.
-2. To support dependening on non-Angular Package Format packages (e.g. private libraries in monorepos) which do not have an entrypoint file through which all directives/pipes/modules are exported.
+2. To support dependening on non-Angular ClassicPackage Format packages (e.g. private libraries in monorepos) which do not have an entrypoint file through which all directives/pipes/modules are exported.
 
 In environments with "strict dependency checking" as described above, an NgModule which exports another NgModule from one of its dependencies needs to export its directives/pipes as well, in order to make them available to the downstream compiler.
 
@@ -136,7 +136,7 @@ When importing that NgModule, alias `Expression`s are added to all the `Referenc
 
 ### Private re-exports for non-APF packages
 
-A `PrivateExportAliasingHost` is used to add re-exports of directives/pipes in the case where the compiler cannot determine that all directives/pipes are re-exported from a common entrypoint (like in the case of an Angular Package Format compilation).
+A `PrivateExportAliasingHost` is used to add re-exports of directives/pipes in the case where the compiler cannot determine that all directives/pipes are re-exported from a common entrypoint (like in the case of an Angular ClassicPackage Format compilation).
 
 In this case, aliasing is used to proactively add re-exports of directives/pipes to the file of any NgModule which exports them, ensuring they can be imported from the same module specifier as the NgModule itself. This is only done if the user has not already added such exports directly.
 
@@ -185,7 +185,7 @@ class X {
 }
 ```
 
-Angular wants to generate a value expression (`inject(Foo)`), using the value side of the `Foo` type from the constructor.
+Angular Classicwants to generate a value expression (`inject(Foo)`), using the value side of the `Foo` type from the constructor.
 
 After transforms, this roughly looks like:
 
@@ -195,7 +195,7 @@ let foo_1 = require('./foo');
 inject(foo_1.Foo);
 ```
 
-The Angular compiler takes the `Foo` `ts.Identifier` from the import statement `import {Foo} from './foo'`, which has a "provenance" in TypeScript that indicates it's associated with the import statement. After transforms, TypeScript will scan the output code and notice this `ts.Identifier` is still present, and so it will choose to preserve the import statement.
+The Angular Classiccompiler takes the `Foo` `ts.Identifier` from the import statement `import {Foo} from './foo'`, which has a "provenance" in TypeScript that indicates it's associated with the import statement. After transforms, TypeScript will scan the output code and notice this `ts.Identifier` is still present, and so it will choose to preserve the import statement.
 
 If, however, `Foo` was a default import:
 

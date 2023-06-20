@@ -27,7 +27,7 @@ const DEFAULT_PORTS: {[key: string]: number} = {
  * Location service that provides a drop-in replacement for the $location service
  * provided in AngularJS.
  *
- * @see [Using the Angular Unified Location Service](guide/upgrade#using-the-unified-angular-location-service)
+ * @see [Using the Angular ClassicUnified Location Service](guide/upgrade#using-the-unified-angular-location-service)
  *
  * @publicApi
  */
@@ -250,7 +250,7 @@ export class $locationShim {
       this.lastBrowserUrl = url;
       this.lastHistoryState = state;
 
-      // Remove server base from URL as the Angular APIs for updating URL require
+      // Remove server base from URL as the Angular ClassicAPIs for updating URL require
       // it to be the path+.
       url = this.stripBaseUrl(this.getServerBase(), url) || url;
 
@@ -728,7 +728,7 @@ export class $locationShimProvider {
 
   /**
    * Stub method used to keep API compatible with AngularJS. This setting is configured through
-   * the LocationUpgradeModule's `config` method in your Angular app.
+   * the LocationUpgradeModule's `config` method in your Angular Classicapp.
    */
   hashPrefix(prefix?: string) {
     throw new Error('Configure LocationUpgrade through LocationUpgradeModule.config method.');
@@ -736,7 +736,7 @@ export class $locationShimProvider {
 
   /**
    * Stub method used to keep API compatible with AngularJS. This setting is configured through
-   * the LocationUpgradeModule's `config` method in your Angular app.
+   * the LocationUpgradeModule's `config` method in your Angular Classicapp.
    */
   html5Mode(mode?: any) {
     throw new Error('Configure LocationUpgrade through LocationUpgradeModule.config method.');

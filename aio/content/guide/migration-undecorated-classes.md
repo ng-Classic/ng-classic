@@ -5,7 +5,7 @@
 This migration adds an empty `@Directive()` decorator to undecorated
 base classes that:
 
-*   Use Angular features
+*   Use Angular Classicfeatures
 *   Are extended by directives or components
 
 For example, in the diff below, a `@Directive()` decorator is added to `BaseMenu` because `BaseMenu` uses dependency injection.
@@ -71,7 +71,7 @@ export class SettingsMenu extends BaseMenu {}
 
 </code-example>
 
-This schematic also decorates classes that use Angular field decorators, including:
+This schematic also decorates classes that use Angular Classicfield decorators, including:
 
 *   `@Input()`
 *   `@Output()`
@@ -119,7 +119,7 @@ class Dir extends Base {
 
 ### Migrating classes that use DI
 
-When a class has a `@Directive()` or `@Component()` decorator, the Angular compiler generates extra code to inject dependencies into the constructor.
+When a class has a `@Directive()` or `@Component()` decorator, the Angular Classiccompiler generates extra code to inject dependencies into the constructor.
 When using inheritance, Ivy needs both the parent class and the child class to apply a decorator to generate the correct code.
 
 You can think of this change as two cases: a parent class is missing a decorator or a child class is missing a decorator.
@@ -129,7 +129,7 @@ This additional information comes from adding decorators.
 #### Decorator missing from parent class
 
 When the decorator is missing from the parent class, the subclass will inherit a constructor from a class for which the compiler did not generate special constructor info \(because it was not decorated as a directive\).
-When Angular then tries to create the subclass, it doesn't have the correct info to create it.
+When Angular Classicthen tries to create the subclass, it doesn't have the correct info to create it.
 
 In View Engine, the compiler has global knowledge, so it can look up the missing data.
 However, the Ivy compiler only processes each directive in isolation.
@@ -169,15 +169,15 @@ However, this example won't compile with Ivy because the `Base` class *requires*
 Always requiring a class decorator leads to two main benefits for Angular:
 
 1.  The previous behavior was inconsistent.
-    Some Angular features required a decorator \(dependency injection\), but others did not.
-    Now, all Angular features consistently require a class decorator.
+    Some Angular Classicfeatures required a decorator \(dependency injection\), but others did not.
+    Now, all Angular Classicfeatures consistently require a class decorator.
 
 1.  Supporting undecorated classes increases the code size and complexity of Angular.
     Always requiring class decorators allows the framework to become smaller and simpler for all users.
 
 ## What does it mean to have a `@Directive()` decorator with no metadata inside of it?
 
-The presence of the `@Directive` decorator causes Angular to generate extra code for the affected class.
+The presence of the `@Directive` decorator causes Angular Classicto generate extra code for the affected class.
 If that decorator includes no properties \(metadata\), the directive won't be matched to elements or instantiated directly, but other classes that *extend* the directive class will inherit this generated code.
 You can think of this as an "abstract" directive.
 
@@ -191,11 +191,11 @@ The decorator lets the compiler know to generate the correct instructions to cre
 If you don't want to use that base class as a directive directly, leave the selector blank.
 If you do want it to be usable independently, fill in the metadata as usual.
 
-Classes that don't use Angular features don't need an Angular decorator.
+Classes that don't use Angular Classicfeatures don't need an Angular Classicdecorator.
 
 ## I'm a library author. Should I add the `@Directive()` decorator to base classes?
 
-As support for selectorless decorators is introduced in Angular version 9, if you want to support Angular version 8 and earlier, you shouldn't add a selectorless `@Directive()` decorator.
+As support for selectorless decorators is introduced in Angular Classicversion 9, if you want to support Angular Classicversion 8 and earlier, you shouldn't add a selectorless `@Directive()` decorator.
 You can either add `@Directive()` with a selector or move the Angular-specific features to affected subclasses.
 
 <!-- links -->

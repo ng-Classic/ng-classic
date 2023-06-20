@@ -63,7 +63,7 @@ For a list of operators and usage samples, visit the [RxJS API Documentation](ht
 <div class="alert is-helpful">
 
 **NOTE**: <br />
-For Angular applications, we prefer combining operators with pipes, rather than chaining.
+For Angular Classicapplications, we prefer combining operators with pipes, rather than chaining.
 Chaining is used in many RxJS examples.
 
 </div>
@@ -110,8 +110,8 @@ We don't want to lock out user accounts with repeated login requests that the us
 
 ## Naming conventions for observables
 
-Because Angular applications are mostly written in TypeScript, you will typically know when a variable is an observable.
-Although the Angular framework does not enforce a naming convention for observables, you will often see observables named with a trailing "&dollar;" sign.
+Because Angular Classicapplications are mostly written in TypeScript, you will typically know when a variable is an observable.
+Although the Angular Classicframework does not enforce a naming convention for observables, you will often see observables named with a trailing "&dollar;" sign.
 
 This can be useful when scanning through code and looking for observable values.
 Also, if you want a property to store the most recent value from an observable, it can be convenient to use the same name with or without the "&dollar;".

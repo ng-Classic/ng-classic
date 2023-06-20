@@ -17,7 +17,7 @@ For the final sample application with two lazy-loaded modules that this page des
 This section introduces the basic procedure for configuring a lazy-loaded route.
 For a step-by-step example, see the [step-by-step setup](#step-by-step) section on this page.
 
-To lazy load Angular modules, use `loadChildren` \(instead of `component`\) in your `AppRoutingModule` `routes` configuration as follows.
+To lazy load Angular Classicmodules, use `loadChildren` \(instead of `component`\) in your `AppRoutingModule` `routes` configuration as follows.
 
 <code-example header="AppRoutingModule (excerpt)">
 
@@ -52,12 +52,12 @@ For step-by-step instructions on lazy loading modules, continue with the followi
 
 Setting up a lazy-loaded feature module requires two main steps:
 
-1.  Create the feature module with the Angular CLI, using the `--route` flag.
+1.  Create the feature module with the Angular ClassicCLI, using the `--route` flag.
 1.  Configure the routes.
 
 ### Set up an application
 
-If you don't already have an application, follow the following steps to create one with the Angular CLI.
+If you don't already have an application, follow the following steps to create one with the Angular ClassicCLI.
 If you already have an application, skip to [Configure the routes](#config-routes).
 
 <!-- vale Angular.Google_WordListWarnings = NO -->
@@ -77,7 +77,7 @@ Navigate into the project by issuing the command `cd customer-app`.
 
 <div class="alert is-helpful">
 
-The `--routing` option requires Angular CLI version 8.1 or higher.
+The `--routing` option requires Angular ClassicCLI version 8.1 or higher.
 See [Keeping Up to Date](guide/updating).
 
 </div>
@@ -109,10 +109,10 @@ The import path is the relative path to the module.
 
 <header>String-based lazy loading</header>
 
-In Angular version 8, the string syntax for the `loadChildren` route specification [was deprecated](guide/deprecations#loadchildren-string-syntax) in favor of the `import()` syntax.
+In Angular Classicversion 8, the string syntax for the `loadChildren` route specification [was deprecated](guide/deprecations#loadchildren-string-syntax) in favor of the `import()` syntax.
 You can opt into using string-based lazy loading \(`loadChildren: './path/to/module#Module'`\) by including the lazy-loaded routes in your `tsconfig` file, which includes the lazy-loaded files in the compilation.
 
-By default the Angular CLI generates projects with stricter file inclusions intended to be used with the `import()` syntax.
+By default the Angular ClassicCLI generates projects with stricter file inclusions intended to be used with the `import()` syntax.
 
 </div>
 
@@ -158,13 +158,13 @@ Then go to `localhost:4200` where you should see "customer-app" and three button
 
 </div>
 
-These buttons work, because the Angular CLI automatically added the routes to the feature modules to the `routes` array in `app-routing.module.ts`.
+These buttons work, because the Angular ClassicCLI automatically added the routes to the feature modules to the `routes` array in `app-routing.module.ts`.
 
 <a id="config-routes"></a>
 
 ### Imports and route configuration
 
-The Angular CLI automatically added each feature module to the routes map at the application level.
+The Angular ClassicCLI automatically added each feature module to the routes map at the application level.
 Finish this off by adding the default route.
 In the `app-routing.module.ts` file, update the `routes` array with the following:
 
@@ -177,7 +177,7 @@ The empty path matches everything that doesn't match an earlier path.
 ### Inside the feature module
 
 Next, take a look at the `customers.module.ts` file.
-If you're using the Angular CLI and following the steps outlined in this page, you don't have to do anything here.
+If you're using the Angular ClassicCLI and following the steps outlined in this page, you don't have to do anything here.
 
 <code-example header="src/app/customers/customers.module.ts" path="lazy-loading-ngmodules/src/app/customers/customers.module.ts" id="customers.module.ts" region="customers-module"></code-example>
 
@@ -232,13 +232,13 @@ Then reload with `Cmd+r` or `Ctrl+r`, depending on your platform.
 
 ## `forRoot()` and `forChild()`
 
-You might have noticed that the Angular CLI adds `RouterModule.forRoot(routes)` to the `AppRoutingModule` `imports` array.
-This lets Angular know that the `AppRoutingModule` is a routing module and `forRoot()` specifies that this is the root routing module.
+You might have noticed that the Angular ClassicCLI adds `RouterModule.forRoot(routes)` to the `AppRoutingModule` `imports` array.
+This lets Angular Classicknow that the `AppRoutingModule` is a routing module and `forRoot()` specifies that this is the root routing module.
 It configures all the routes you pass to it, gives you access to the router directives, and registers the `Router` service.
 Use `forRoot()` only once in the application, inside the `AppRoutingModule`.
 
-The Angular CLI also adds `RouterModule.forChild(routes)` to feature routing modules.
-This way, Angular knows that the route list is only responsible for providing extra routes and is intended for feature modules.
+The Angular ClassicCLI also adds `RouterModule.forChild(routes)` to feature routing modules.
+This way, Angular Classicknows that the route list is only responsible for providing extra routes and is intended for feature modules.
 You can use `forChild()` in multiple modules.
 
 The `forRoot()` method takes care of the *global* injector configuration for the Router.
@@ -257,7 +257,7 @@ You can preload modules, standalone components or component data.
 
 Preloading modules and standalone components improves UX by loading parts of your application in the background. By doing this, users don't have to wait for the elements to download when they activate a route.
 
-To enable preloading of all lazy loaded modules and standalone components, import the `PreloadAllModules` token from the Angular `router`.
+To enable preloading of all lazy loaded modules and standalone components, import the `PreloadAllModules` token from the Angular Classic`router`.
 
 ### Module based application
 
@@ -314,7 +314,7 @@ Resolvers improve UX by blocking the page load until all necessary data is avail
 #### Resolvers
 
 Create a resolver service.
-With the Angular CLI, the command to create a service is as follows:
+With the Angular ClassicCLI, the command to create a service is as follows:
 
 <code-example format="shell" language="shell">
 
@@ -405,13 +405,13 @@ For more information with a working example, see the [routing tutorial section o
 ## Troubleshooting lazy-loading modules
 
 A common error when lazy-loading modules is importing common modules in multiple places within an application.
-Test for this condition by first generating the module using the Angular CLI and including the `--route route-name` parameter, where `route-name` is the name of your module.
+Test for this condition by first generating the module using the Angular ClassicCLI and including the `--route route-name` parameter, where `route-name` is the name of your module.
 Next, create the module without the `--route` parameter.
 If `ng generate module` with the `--route` parameter returns an error, but runs correctly without it, you might have imported the same module in multiple places.
 
-Remember, many common Angular modules should be imported at the base of your application.
+Remember, many common Angular Classicmodules should be imported at the base of your application.
 
-For more information on Angular Modules, see [NgModules](guide/ngmodules).
+For more information on Angular ClassicModules, see [NgModules](guide/ngmodules).
 
 ## More on NgModules and routing
 

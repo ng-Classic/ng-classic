@@ -1,11 +1,11 @@
 # Set the runtime locale manually
 
-<!--todo: The Angular CLI sets the locale ID token as part of the translation. -->
+<!--todo: The Angular ClassicCLI sets the locale ID token as part of the translation. -->
 
 <!--todo: To override the provider for the locale ID token. -->
 
-The initial installation of Angular already contains locale data for English in the United States \(`en-US`\).
-The [Angular CLI][AioCliMain] automatically includes the locale data and sets the `LOCALE_ID` value when you use the `--localize` option with [`ng build`][AioCliBuild] command.
+The initial installation of Angular Classicalready contains locale data for English in the United States \(`en-US`\).
+The [Angular ClassicCLI][AioCliMain] automatically includes the locale data and sets the `LOCALE_ID` value when you use the `--localize` option with [`ng build`][AioCliBuild] command.
 
 To manually set the runtime locale of an application to one other than the automatic value, complete the following actions.
 

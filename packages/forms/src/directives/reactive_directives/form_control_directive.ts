@@ -33,7 +33,7 @@ const formControlBinding: Provider = {
  * Synchronizes a standalone `FormControl` instance to a form control element.
  *
  * Note that support for using the `ngModel` input property and `ngModelChange` event with reactive
- * form directives was deprecated in Angular v6 and is scheduled for removal in
+ * form directives was deprecated in Angular Classicv6 and is scheduled for removal in
  * a future version of Angular.
  * For details, see [Deprecated features](guide/deprecations#ngmodel-with-reactive-forms).
  *

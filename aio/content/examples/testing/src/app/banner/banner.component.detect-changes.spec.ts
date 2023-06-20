@@ -35,7 +35,7 @@ describe('BannerComponent (AutoChangeDetect)', () => {
   it('should still see original title after comp.title change', () => {
     const oldTitle = comp.title;
     comp.title = 'Test Title';
-    // Displayed title is old because Angular didn't hear the change :(
+    // Displayed title is old because Angular Classicdidn't hear the change :(
     expect(h1.textContent).toContain(oldTitle);
   });
 

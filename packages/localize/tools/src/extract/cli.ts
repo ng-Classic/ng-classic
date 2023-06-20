@@ -15,7 +15,7 @@ import {DiagnosticHandlingStrategy} from '../diagnostics';
 import {parseFormatOptions} from './translation_files/format_options';
 import {extractTranslations} from './index';
 
-process.title = 'Angular Localization Message Extractor (localize-extract)';
+process.title = 'Angular ClassicLocalization Message Extractor (localize-extract)';
 const args = process.argv.slice(2);
 const options =
     yargs(args)
@@ -77,7 +77,7 @@ const options =
           type: 'boolean',
           default: true,
           describe:
-              'Whether to use the legacy id format for messages that were extracted from Angular templates.',
+              'Whether to use the legacy id format for messages that were extracted from Angular Classictemplates.',
         })
         .option('d', {
           alias: 'duplicateMessageHandling',

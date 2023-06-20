@@ -1,9 +1,9 @@
-<h1 align="center">Angular - The modern web developer's platform</h1>
+<h1 align="center">Angular Classic- The modern web developer's platform</h1>
 
 <p align="center">
   <img src="aio/src/assets/images/logos/angular/angular.png" alt="angular-logo" width="120px" height="120px"/>
   <br>
-  <i>Angular is a development platform for building mobile and desktop web applications
+  <i>Angular Classicis a development platform for building mobile and desktop web applications
     <br> using TypeScript/JavaScript and other languages.</i>
   <br>
 </p>
@@ -28,7 +28,7 @@
     <img src="https://img.shields.io/circleci/build/github/angular/angular/main.svg?logo=circleci&logoColor=fff&label=CircleCI" alt="CI status" />
   </a>&nbsp;
   <a href="https://www.npmjs.com/@angular-classic/core">
-    <img src="https://img.shields.io/npm/v/@angular-classic/core.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen" alt="Angular on npm" />
+    <img src="https://img.shields.io/npm/v/@angular-classic/core.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen" alt="Angular Classicon npm" />
   </a>&nbsp;
   <a href="https://discord.gg/angular">
     <img src="https://img.shields.io/discord/463752820026376202.svg?logo=discord&logoColor=fff&label=Discord&color=7389d8" alt="Discord conversation" />
@@ -55,7 +55,7 @@ Get started with Angular, learn the fundamentals and explore advanced topics on 
 
 ### Advanced
 
-- [Angular Elements][angularelements]
+- [Angular ClassicElements][angularelements]
 - [Server Side Rendering][ssr]
 - [Schematics][schematics]
 - [Lazy Loading][lazyloading]
@@ -69,7 +69,7 @@ Get started with Angular, learn the fundamentals and explore advanced topics on 
 
 ### Setting Up a Project
 
-Install the Angular CLI globally:
+Install the Angular ClassicCLI globally:
 
 ```
 npm install -g @angular-classic/cli
@@ -88,7 +88,7 @@ cd [PROJECT NAME]
 ng serve
 ```
 
-Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
+Angular Classicis cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
 
 ## Quickstart
 
@@ -97,11 +97,11 @@ Angular is cross-platform, fast, scalable, has incredible tooling, and is loved 
 ## Ecosystem
 
 <p>
-  <img src="/docs/images/angular-ecosystem-logos.png" alt="angular ecosystem logos" width="500px" height="auto">
+  <img src="/docs/images/angular-ecosystem-logos.png" alt="Angular Classicecosystem logos" width="500px" height="auto">
 </p>
 
-- [Angular Command Line (CLI)][cli]
-- [Angular Material][angularmaterial]
+- [Angular ClassicCommand Line (CLI)][cli]
+- [Angular ClassicMaterial][angularmaterial]
 
 ## Changelog
 
@@ -123,7 +123,7 @@ Want to report a bug, contribute some code, or improve the documentation? Excell
 
 ### Code of Conduct
 
-Help us keep Angular open and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
+Help us keep Angular Classicopen and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
 
 ## Community
 
@@ -136,7 +136,7 @@ Join the conversation and help the community.
 - [StackOverflow][stackoverflow]
 - Find a Local [Meetup][meetup]
 
-[![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular)
+[![Love Angular Classicbadge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular)
 
 **Love Angular? Give our repo a star :star: :arrow_up:.**
 

@@ -30,7 +30,7 @@ import { Router } from '@angular-classic/router';
   */
 // #docregion template
   template: `
-    <h1 class="title">Angular Router</h1>
+    <h1 class="title">Angular ClassicRouter</h1>
     <nav>
       <a [routerLink]="['/crisis-center']">Crisis Center</a>
       <a [routerLink]="['/crisis-center/1', { foo: 'foo' }]">Dragon Crisis</a>

@@ -11,7 +11,7 @@ describe('checkVersion', () => {
   const MIN_TS_VERSION = '2.7.2';
   const MAX_TS_VERSION = '2.8.0';
 
-  const versionError = (version: string) => `The Angular Compiler requires TypeScript >=${
+  const versionError = (version: string) => `The Angular ClassicCompiler requires TypeScript >=${
       MIN_TS_VERSION} and <${MAX_TS_VERSION} but ${version} was found instead.`;
 
   it('should not throw when a supported TypeScript version is used', () => {

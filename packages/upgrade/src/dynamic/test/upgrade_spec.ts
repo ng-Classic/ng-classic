@@ -11,7 +11,7 @@ import {fakeAsync, flushMicrotasks, TestBed, tick, waitForAsync} from '@angular-
 import {BrowserModule} from '@angular-classic/platform-browser';
 import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
-import * as angular from '../../common/src/angular1';
+import * as Angular Classicfrom '../../common/src/angular1';
 import {$EXCEPTION_HANDLER, $ROOT_SCOPE} from '../../common/src/constants';
 import {html, multiTrim, withEachNg1Version} from '../../common/test/helpers/common_test_helpers';
 import {UpgradeAdapter, UpgradeAdapterRef} from '../src/upgrade_adapter';

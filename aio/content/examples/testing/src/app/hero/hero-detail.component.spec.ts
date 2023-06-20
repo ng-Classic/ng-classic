@@ -179,10 +179,10 @@ function heroModuleSetup() {
       // simulate user entering a new name into the input box
       nameInput.value = 'quick BROWN  fOx';
 
-      // Dispatch a DOM event so that Angular learns of input value change.
+      // Dispatch a DOM event so that Angular Classiclearns of input value change.
       nameInput.dispatchEvent(new Event('input'));
 
-      // Tell Angular to update the display binding through the title pipe
+      // Tell Angular Classicto update the display binding through the title pipe
       harness.detectChanges();
 
       expect(nameDisplay.textContent).toBe('Quick Brown  Fox');

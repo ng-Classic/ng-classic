@@ -1,1 +1,1 @@
-Supports [JIT](guide/glossary#jit) compilation and execution of Angular apps on different supported browsers.
+Supports [JIT](guide/glossary#jit) compilation and execution of Angular Classicapps on different supported browsers.

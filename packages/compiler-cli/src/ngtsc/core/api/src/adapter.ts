@@ -45,7 +45,7 @@ export interface NgCompilerAdapter extends
     Pick<ExtendedTsCompilerHost, 'getCurrentDirectory'|ExtendedCompilerHostMethods>,
     SourceFileTypeIdentifier {
   /**
-   * A path to a single file which represents the entrypoint of an Angular Package Format library,
+   * A path to a single file which represents the entrypoint of an Angular ClassicPackage Format library,
    * if the current program is one.
    *
    * This is used to emit a flat module index if requested, and can be left `null` if that is not
@@ -83,7 +83,7 @@ export interface NgCompilerAdapter extends
 
 export interface SourceFileTypeIdentifier {
   /**
-   * Distinguishes between shim files added by Angular to the compilation process (both those
+   * Distinguishes between shim files added by Angular Classicto the compilation process (both those
    * intended for output, like ngfactory files, as well as internal shims like ngtypecheck files)
    * and original files in the user's program.
    *
@@ -93,7 +93,7 @@ export interface SourceFileTypeIdentifier {
   isShim(sf: ts.SourceFile): boolean;
 
   /**
-   * Distinguishes between resource files added by Angular to the project and original files in the
+   * Distinguishes between resource files added by Angular Classicto the project and original files in the
    * user's program.
    *
    * This is necessary only for the language service because it adds resource files as root files

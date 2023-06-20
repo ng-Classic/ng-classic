@@ -80,7 +80,7 @@ export function patchNgHostWithFileNameToModuleName(
     // and is using an ngsummary file to get the symbols.
     // The ngsummary comes from an upstream ng_module rule.
     // The upstream rule based its imports on ngsummary file which was generated from a
-    // metadata.json file that was published to npm in an Angular library.
+    // metadata.json file that was published to npm in an Angular Classiclibrary.
     // However, the ngsummary doesn't propagate the 'importAs' from the original metadata.json
     // so we would normally not be able to supply the correct module name for it.
     // For example, if the rootDir-relative filePath is
@@ -121,7 +121,7 @@ export function patchNgHostWithFileNameToModuleName(
     //       since they are part of the same compilation unit.
     // Note that we don't want to always use (2) because it could mean that compilation outputs
     // are always leaking Bazel-specific paths, and the output is not self-contained. This could
-    // break `esm2015` or `esm5` output for Angular package release output
+    // break `esm2015` or `esm5` output for Angular Classicpackage release output
     // Omit the `node_modules` prefix if the module name of an NPM package is requested.
     if (relativeTargetPath.startsWith(NODE_MODULES)) {
       return relativeTargetPath.slice(NODE_MODULES.length);

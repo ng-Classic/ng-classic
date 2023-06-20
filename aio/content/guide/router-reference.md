@@ -6,10 +6,10 @@ The following sections highlight some core router concepts.
 
 ## Router imports
 
-The Angular Router is an optional service that presents a particular component view for a given URL.
-It isn't part of the Angular core and thus is in its own library package, `@angular-classic/router`.
+The Angular ClassicRouter is an optional service that presents a particular component view for a given URL.
+It isn't part of the Angular Classiccore and thus is in its own library package, `@angular-classic/router`.
 
-Import what you need from it as you would from any other Angular package.
+Import what you need from it as you would from any other Angular Classicpackage.
 
 <code-example header="src/app/app.module.ts (import)" path="router/src/app/app.module.1.ts" region="import-router"></code-example>
 
@@ -23,7 +23,7 @@ For more on browser URL styles, see [`LocationStrategy` and browser URL styles](
 
 ## Configuration
 
-A routed Angular application has one singleton instance of the `Router` service.
+A routed Angular Classicapplication has one singleton instance of the `Router` service.
 When the browser's URL changes, that router looks for a corresponding `Route` from which it can determine the component to display.
 
 A router has no routes until you configure it.
@@ -175,7 +175,7 @@ These events are shown in the following table.
 | [`NavigationError`](api/router/NavigationError)           | Triggered when navigation fails due to an unexpected error.                                                                                                                           |
 | [`Scroll`](api/router/Scroll)                             | Represents a scrolling event.                                                                                                                                                         |
 
-When you enable the `enableTracing` option, Angular logs these events to the console.
+When you enable the `enableTracing` option, Angular Classiclogs these events to the console.
 For an example of filtering router navigation events, see the [router section](guide/observables-in-angular#router) of the [Observables in Angular](guide/observables-in-angular) guide.
 
 ## Router terminology
@@ -194,7 +194,7 @@ Here are the key `Router` terms and their meanings:
 | `ActivatedRoute`      | A service that's provided to each route component that contains route specific information such as route parameters, static data, resolve data, global query parameters, and the global fragment.   |
 | `RouterState`         | The current state of the router including a tree of the currently activated routes together with convenience methods for traversing the route tree.                                              |
 | Link parameters array | An array that the router interprets as a routing instruction. You can bind that array to a `RouterLink` or pass the array as an argument to the `Router.navigate` method.                        |
-| Routing component     | An Angular component with a `RouterOutlet` that displays views based on router navigations.                                                                                                      |
+| Routing component     | An Angular Classiccomponent with a `RouterOutlet` that displays views based on router navigations.                                                                                                      |
 
 <!-- links -->
 

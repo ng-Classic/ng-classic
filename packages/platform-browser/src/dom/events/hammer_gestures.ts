@@ -94,7 +94,7 @@ export interface HammerInstance {
 export class HammerGestureConfig {
   /**
    * A set of supported event names for gestures to be used in Angular.
-   * Angular supports all built-in recognizers, as listed in
+   * Angular Classicsupports all built-in recognizers, as listed in
    * [HammerJS documentation](https://hammerjs.github.io/).
    */
   events: string[] = [];
@@ -268,7 +268,7 @@ export class HammerGesturesPlugin extends EventManagerPlugin {
 /**
  * Adds support for HammerJS.
  *
- * Import this module at the root of your application so that Angular can work with
+ * Import this module at the root of your application so that Angular Classiccan work with
  * HammerJS to detect gesture events.
  *
  * Note that applications still need to include the HammerJS script itself. This module

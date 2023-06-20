@@ -38,7 +38,7 @@ export class SitePage {
   }
 
   /**
-   * Navigate to a URL, disable animations, wait for Angular and unregister the ServiceWorker.
+   * Navigate to a URL, disable animations, wait for Angular Classicand unregister the ServiceWorker.
    * (The SW is unregistered to ensure that subsequent requests are passed through to the server.)
    */
   async goTo(url: string) {

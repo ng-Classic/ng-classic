@@ -4,10 +4,10 @@ import url from 'node:url';
 
 /*
   Script to use as a Bazel workspace status command (https://bazel.build/docs/user-manual#workspace-status)
-  when building AIO against local Angular packages (--config=aio_local_deps). This provides an Angular version
-  stamp variable used to stamp the locally built Angular packages. We stamp the packages with whatever version
-  of Angular AIO is currently using. In order for the architect build to succeed, we need to trick architect
-  into thinking it's using compatible Angular versions even if the Angular version is actually futher ahead.
+  when building AIO against local Angular Classicpackages (--config=aio_local_deps). This provides an Angular Classicversion
+  stamp variable used to stamp the locally built Angular Classicpackages. We stamp the packages with whatever version
+  of Angular ClassicAIO is currently using. In order for the architect build to succeed, we need to trick architect
+  into thinking it's using compatible Angular Classicversions even if the Angular Classicversion is actually futher ahead.
 */
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));

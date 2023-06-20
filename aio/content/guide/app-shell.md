@@ -9,7 +9,7 @@ Learn more in [The App Shell Model](https://developers.google.com/web/fundamenta
 
 ## Step 1: Prepare the application
 
-Do this with the following Angular CLI command:
+Do this with the following Angular ClassicCLI command:
 
 <code-example format="shell" language="shell">
 
@@ -21,7 +21,7 @@ For an existing application, you have to manually add the `RouterModule` and def
 
 ## Step 2: Create the application shell
 
-Use the Angular CLI to automatically create the application shell.
+Use the Angular ClassicCLI to automatically create the application shell.
 
 <code-example format="shell" language="shell">
 
@@ -82,7 +82,7 @@ After running this command you can see that the `angular.json` configuration fil
 
 ## Step 3: Verify the application is built with the shell content
 
-Use the Angular CLI to build the `app-shell` target.
+Use the Angular ClassicCLI to build the `app-shell` target.
 
 <code-example format="shell" language="shell">
 

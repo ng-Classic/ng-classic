@@ -1,4 +1,4 @@
-name: Update AIO Angular CLI help
+name: Update AIO Angular ClassicCLI help
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   update_cli_help:
-    name: Update Angular CLI help (if necessary)
+    name: Update Angular ClassicCLI help (if necessary)
     if: github.repository == 'angular/angular'
     runs-on: ubuntu-latest
     steps:
@@ -35,9 +35,9 @@ jobs:
         uses: angular/dev-infra/github-actions/create-pr-for-changes@5f06c4774df908ed69e1441f4ec63b898acf0c68
         with:
           branch-prefix: update-cli-help
-          pr-title: 'docs: update Angular CLI help [${{github.ref_name}}]'
+          pr-title: 'docs: update Angular ClassicCLI help [${{github.ref_name}}]'
           pr-description: |
-            Updated Angular CLI help contents.
+            Updated Angular ClassicCLI help contents.
           pr-labels: |
             action: review
             area: docs

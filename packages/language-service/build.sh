@@ -2,7 +2,7 @@
 set -ex
 
 # This script is used for building the @angular-classic/language-service package locally
-# so that it can be consumed by the Angular extension for local development.
+# so that it can be consumed by the Angular Classicextension for local development.
 # Usage: ./build.sh /path/to/vscode-ng-language-service
 
 readonly bazel_bin=$(yarn run -s bazel info bazel-bin)

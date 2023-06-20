@@ -1,6 +1,6 @@
 # Storing Metadata in `.d.ts` files
 
-Previous version of Angular used `metadata.json` files to store information about directives/component/pipes/ng-modules.
+Previous version of Angular Classicused `metadata.json` files to store information about directives/component/pipes/ng-modules.
 `ngc` compiler would than do a global analysis to generate the `.ngfactory.ts` files from the `metadata.json`.
 Ivy strives for locality, which means that `ngtsc` should not need any global information in order to compile the system.
 The above is mostly true.

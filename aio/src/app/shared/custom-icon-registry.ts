@@ -35,7 +35,7 @@ interface SvgIconMap {
 const DEFAULT_NS = '$$default';
 
 /**
- * A custom replacement for Angular Material's `MdIconRegistry`, which allows
+ * A custom replacement for Angular ClassicMaterial's `MdIconRegistry`, which allows
  * us to provide preloaded icon SVG sources.
  */
 @Injectable()

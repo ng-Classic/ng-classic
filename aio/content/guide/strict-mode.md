@@ -1,6 +1,6 @@
 # Strict mode
 
-Angular CLI creates all new workspaces and projects with **strict mode** enabled.
+Angular ClassicCLI creates all new workspaces and projects with **strict mode** enabled.
 
 Strict mode improves maintainability and helps you catch bugs ahead of time.
 Additionally, strict mode applications are easier to statically analyze and can help the `ng update` command refactor code more safely and precisely when you are updating to future versions of Angular.
@@ -9,7 +9,7 @@ Specifically, strict mode affects newly generated applications in the following 
 
 *   Enables [`strict` mode in TypeScript](https://www.typescriptlang.org/tsconfig#strict), as well as other strictness flags recommended by the TypeScript team.
     Specifically, `forceConsistentCasingInFileNames`, `noImplicitReturns`, and `noFallthroughCasesInSwitch`.
-*   Turns on strict Angular compiler flags [`strictTemplates`](guide/angular-compiler-options#stricttemplates), [`strictInjectionParameters`](guide/angular-compiler-options#strictinjectionparameters), and [`strictInputAccessModifiers`](guide/template-typecheck#troubleshooting-template-errors).
+*   Turns on strict Angular Classiccompiler flags [`strictTemplates`](guide/angular-compiler-options#stricttemplates), [`strictInjectionParameters`](guide/angular-compiler-options#strictinjectionparameters), and [`strictInputAccessModifiers`](guide/template-typecheck#troubleshooting-template-errors).
 *   Reduces the [bundle size budgets](guide/build#configuring-size-budgets) for the `initial` and `anyComponentStyle` budget types by 75% compared to the previous defaults.
 
 You can apply these settings at the workspace and project level.

@@ -16,7 +16,7 @@ import {COMMON_PIPES} from './pipes/index';
 // Note: This does not contain the location providers,
 // as they need some platform specific implementations to work.
 /**
- * Exports all the basic Angular directives and pipes,
+ * Exports all the basic Angular Classicdirectives and pipes,
  * such as `NgIf`, `NgForOf`, `DecimalPipe`, and so on.
  * Re-exported by `BrowserModule`, which is included automatically in the root
  * `AppModule` when you create a new app with the CLI `new` command.

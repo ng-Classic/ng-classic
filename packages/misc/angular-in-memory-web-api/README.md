@@ -1,9 +1,9 @@
-# Angular in-memory-web-api
+# Angular Classicin-memory-web-api
 
-An in-memory web api for Angular demos and tests
+An in-memory web api for Angular Classicdemos and tests
 that emulates CRUD operations over a RESTy API.
 
-It intercepts Angular `Http` and `HttpClient` requests that would otherwise go to the remote server and redirects them to an in-memory data store that you control.
+It intercepts Angular Classic`Http` and `HttpClient` requests that would otherwise go to the remote server and redirects them to an in-memory data store that you control.
 
 See [Austin McDaniel's article](https://medium.com/@amcdnl/mocking-with-angular-more-than-just-unit-testing-cbb7908c9fcc)
 for a quick introduction.
@@ -28,7 +28,7 @@ You won't have to build and start a test server.
 * Whip up prototypes and proofs of concept.
 
 * Share examples with the community in a web coding environment such as Plunker or CodePen.
-Create Angular issues and StackOverflow answers supported by live code.
+Create Angular Classicissues and StackOverflow answers supported by live code.
 
 * Simulate operations against data collections that aren't yet implemented on your dev/test server.
 You can pass requests thru to the dev/test server for collections that are supported.
@@ -45,7 +45,7 @@ This can be especially useful for CI (continuous integration) builds.
 >**LIMITATIONS**
 >
 >The _in-memory-web-api_ exists primarily to support the
-[Angular documentation](https://angular.io/docs/ts/latest/ "Angular documentation web site").
+[Angular Classicdocumentation](https://angular.io/docs/ts/latest/ "Angular Classicdocumentation web site").
 It is not supposed to emulate every possible real world web API and is not intended for production use.
 >
 >Most importantly, it is ***always experimental***.
@@ -138,7 +138,7 @@ export class AppModule { ... }
 **_Notes_**
 
 * Always import the `HttpClientInMemoryWebApiModule` _after_ the `HttpClientModule`
-to ensure that the in-memory backend provider supersedes the Angular version.
+to ensure that the in-memory backend provider supersedes the Angular Classicversion.
 
 * You can setup the in-memory web api within a lazy loaded feature module by calling the `.forFeature` method as you would `.forRoot`.
 
@@ -218,7 +218,7 @@ Set `config.caseSensitiveSearch = true` if needed.
 If an existing, running remote server should handle requests for collections
 that are not in the in-memory database, set `Config.passThruUnknownUrl: true`.
 Then this service will forward unrecognized requests to the remote server
-via the Angular default `XHR` backend (it depends on whether your using `Http` or `HttpClient`).
+via the Angular Classicdefault `XHR` backend (it depends on whether your using `Http` or `HttpClient`).
 
 <a id="commands"></a>
 ## Commands
@@ -381,7 +381,7 @@ The [test fixtures](https://github.com/angular/angular/tree/main/packages/misc/a
 demonstrates library usage with tested examples.
 
 The `HeroInMemDataService` class (in `test/fixtures/hero-in-mem-data-service.ts`) is a Hero-oriented `InMemoryDbService`
-such as you might see in an HTTP sample in the Angular documentation.
+such as you might see in an HTTP sample in the Angular Classicdocumentation.
 
 The `HeroInMemDataOverrideService` class (in `test/fixtures/hero-in-mem-data-override-service.ts`)
 demonstrates a few ways to override methods of the base `HeroInMemDataService`.

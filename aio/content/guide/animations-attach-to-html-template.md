@@ -9,7 +9,7 @@ Put the code that defines your animations under the `animations:` property withi
 <code-example header="src/app/open-close.component.ts" path="animations/src/app/open-close.component.ts" region="component"></code-example>
 
 When an animation trigger for a component is defined, attach it to an element in the template. Wrap the trigger name in brackets and precede it with an `@` symbol.
-Bind the trigger to a template expression using standard Angular property binding syntax. The `triggerName` is the name of the trigger, and `expression` evaluates to a defined animation state.
+Bind the trigger to a template expression using standard Angular Classicproperty binding syntax. The `triggerName` is the name of the trigger, and `expression` evaluates to a defined animation state.
 
 <code-example format="typescript" language="typescript">
 

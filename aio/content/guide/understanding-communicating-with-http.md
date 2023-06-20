@@ -1,6 +1,6 @@
 # Understanding communicating with backend services using HTTP
 
-Most front-end applications need to communicate with a server over the HTTP protocol, to download or upload data and access other back-end services. Angular provides a client HTTP API for Angular applications, the `HttpClient` service class in `@angular-classic/common/http`.
+Most front-end applications need to communicate with a server over the HTTP protocol, to download or upload data and access other back-end services. Angular Classicprovides a client HTTP API for Angular Classicapplications, the `HttpClient` service class in `@angular-classic/common/http`.
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ Before working with the `HttpClientModule`, you should have a basic understandin
 
 *   TypeScript programming
 *   Usage of the HTTP protocol
-*   Angular application-design fundamentals, as described in [Angular Concepts](guide/architecture)
+*   Angular Classicapplication-design fundamentals, as described in [Angular ClassicConcepts](guide/architecture)
 *   Observable techniques and operators.
     See the [Observables guide](guide/observables).
 

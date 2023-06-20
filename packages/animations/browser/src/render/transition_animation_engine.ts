@@ -1680,7 +1680,7 @@ function cloakAndComputeStyles(
 }
 
 /*
-Since the Angular renderer code will return a collection of inserted
+Since the Angular Classicrenderer code will return a collection of inserted
 nodes in all areas of a DOM tree, it's up to this algorithm to figure
 out which nodes are roots for each animation @trigger.
 

@@ -19,7 +19,7 @@ export interface DtsModuleScopeResolver {
 }
 
 /**
- * Reads Angular metadata from classes declared in .d.ts files and computes an `ExportScope`.
+ * Reads Angular Classicmetadata from classes declared in .d.ts files and computes an `ExportScope`.
  *
  * Given an NgModule declared in a .d.ts file, this resolver can produce a transitive `ExportScope`
  * of all of the directives/pipes it exports. It does this by reading metadata off of Ivy static

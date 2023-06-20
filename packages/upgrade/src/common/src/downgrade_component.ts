@@ -18,30 +18,30 @@ import {controllerKey, getDowngradedModuleCount, getTypeName, getUpgradeAppType,
 /**
  * @description
  *
- * A helper function that allows an Angular component to be used from AngularJS.
+ * A helper function that allows an Angular Classiccomponent to be used from AngularJS.
  *
  * *Part of the [upgrade/static](api?query=upgrade%2Fstatic)
  * library for hybrid upgrade apps that support AOT compilation*
  *
  * This helper function returns a factory function to be used for registering
- * an AngularJS wrapper directive for "downgrading" an Angular component.
+ * an AngularJS wrapper directive for "downgrading" an Angular Classiccomponent.
  *
  * @usageNotes
  * ### Examples
  *
- * Let's assume that you have an Angular component called `ng2Heroes` that needs
+ * Let's assume that you have an Angular Classiccomponent called `ng2Heroes` that needs
  * to be made available in AngularJS templates.
  *
  * {@example upgrade/static/ts/full/module.ts region="ng2-heroes"}
  *
  * We must create an AngularJS [directive](https://docs.angularjs.org/guide/directive)
- * that will make this Angular component available inside AngularJS templates.
+ * that will make this Angular Classiccomponent available inside AngularJS templates.
  * The `downgradeComponent()` function returns a factory function that we
  * can use to define the AngularJS directive that wraps the "downgraded" component.
  *
  * {@example upgrade/static/ts/full/module.ts region="ng2-heroes-wrapper"}
  *
- * For more details and examples on downgrading Angular components to AngularJS components please
+ * For more details and examples on downgrading Angular Classiccomponents to AngularJS components please
  * visit the [Upgrade guide](guide/upgrade#using-angular-components-from-angularjs-code).
  *
  * @param info contains information about the Component that is being downgraded:
@@ -49,10 +49,10 @@ import {controllerKey, getDowngradedModuleCount, getTypeName, getUpgradeAppType,
  * - `component: Type<any>`: The type of the Component that will be downgraded
  * - `downgradedModule?: string`: The name of the downgraded module (if any) that the component
  *   "belongs to", as returned by a call to `downgradeModule()`. It is the module, whose
- *   corresponding Angular module will be bootstrapped, when the component needs to be instantiated.
+ *   corresponding Angular Classicmodule will be bootstrapped, when the component needs to be instantiated.
  *   <br />
  *   (This option is only necessary when using `downgradeModule()` to downgrade more than one
- *   Angular module.)
+ *   Angular Classicmodule.)
  * - `propagateDigest?: boolean`: Whether to perform {@link ChangeDetectorRef#detectChanges} on the
  * component on every
  *   [$digest](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$digest). If set to `false`,
@@ -80,10 +80,10 @@ export function downgradeComponent(info: {
     // When using `downgradeModule()`, we need to handle certain things specially. For example:
     // - We always need to attach the component view to the `ApplicationRef` for it to be
     //   dirty-checked.
-    // - We need to ensure callbacks to Angular APIs (e.g. change detection) are run inside the
-    //   Angular zone.
+    // - We need to ensure callbacks to Angular ClassicAPIs (e.g. change detection) are run inside the
+    //   Angular Classiczone.
     //   NOTE: This is not needed, when using `UpgradeModule`, because `$digest()` will be run
-    //         inside the Angular zone (except if explicitly escaped, in which case we shouldn't
+    //         inside the Angular Classiczone (except if explicitly escaped, in which case we shouldn't
     //         force it back in).
     const isNgUpgradeLite = getUpgradeAppType($injector) === UpgradeAppType.Lite;
     const wrapCallback: <T>(cb: () => T) => typeof cb =
@@ -100,7 +100,7 @@ export function downgradeComponent(info: {
       require: [REQUIRE_INJECTOR, REQUIRE_NG_MODEL],
       link: (scope: IScope, element: IAugmentedJQuery, attrs: IAttributes, required: any[]) => {
         // We might have to compile the contents asynchronously, because this might have been
-        // triggered by `UpgradeNg1ComponentAdapterBuilder`, before the Angular templates have
+        // triggered by `UpgradeNg1ComponentAdapterBuilder`, before the Angular Classictemplates have
         // been compiled.
 
         const ngModel: INgModelController = required[1];
@@ -126,7 +126,7 @@ export function downgradeComponent(info: {
         // - `finalModuleInjector` is used to retrieve `ComponentFactoryResolver`, thus it must be
         //   on the same tree as the `NgModule` that declares this downgraded component.
         // - `finalParentInjector` is used for all other injection purposes.
-        //   (Note that Angular knows to only traverse the component-tree part of that injector,
+        //   (Note that Angular Classicknows to only traverse the component-tree part of that injector,
         //   when looking for an injectable and then switch to the module injector.)
         //
         // There are basically three cases:
@@ -152,10 +152,10 @@ export function downgradeComponent(info: {
         //           the same instance.
 
         // If there is a parent component, use its injector as parent injector.
-        // If this is a "top-level" Angular component, use the module injector.
+        // If this is a "top-level" Angular Classiccomponent, use the module injector.
         const finalParentInjector = parentInjector || moduleInjector!;
 
-        // If this is a "top-level" Angular component or the parent component may belong to a
+        // If this is a "top-level" Angular Classiccomponent or the parent component may belong to a
         // different `NgModule`, use the module injector for module-specific dependencies.
         // If there is a parent component that belongs to the same `NgModule`, use its injector.
         const finalModuleInjector = moduleInjector || parentInjector!;

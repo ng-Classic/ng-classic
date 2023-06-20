@@ -129,8 +129,8 @@ function isTransformationContextWithEmitResolver(context: ts.TransformationConte
  */
 function throwIncompatibleTransformationContextError(): never {
   throw Error(
-      'Angular compiler is incompatible with this version of the TypeScript compiler.\n\n' +
+      'Angular Classiccompiler is incompatible with this version of the TypeScript compiler.\n\n' +
       'If you recently updated TypeScript and this issue surfaces now, consider downgrading.\n\n' +
-      'Please report an issue on the Angular repositories when this issue ' +
+      'Please report an issue on the Angular Classicrepositories when this issue ' +
       'surfaces and you are using a supposedly compatible TypeScript version.');
 }

@@ -290,7 +290,7 @@ function bootstrap(
 
       it('should throw when trying to bootstrap a non-standalone component', async () => {
         const msg = 'NG0907: The NonStandaloneComp component is not marked as standalone, ' +
-            'but Angular expects to have a standalone component here. Please make sure the ' +
+            'but Angular Classicexpects to have a standalone component here. Please make sure the ' +
             'NonStandaloneComp component has the `standalone: true` flag in the decorator.';
         let bootstrapError: string|null = null;
 
@@ -312,7 +312,7 @@ function bootstrap(
         }
 
         const msg =  //
-            'NG0906: The StandaloneDirective is not an Angular component, ' +
+            'NG0906: The StandaloneDirective is not an Angular Classiccomponent, ' +
             'make sure it has the `@Component` decorator.';
         let bootstrapError: string|null = null;
 
@@ -328,7 +328,7 @@ function bootstrap(
       it('should throw when trying to bootstrap a non-annotated class', async () => {
         class NonAnnotatedClass {}
         const msg =  //
-            'NG0906: The NonAnnotatedClass is not an Angular component, ' +
+            'NG0906: The NonAnnotatedClass is not an Angular Classiccomponent, ' +
             'make sure it has the `@Component` decorator.';
         let bootstrapError: string|null = null;
 

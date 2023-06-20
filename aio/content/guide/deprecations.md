@@ -1,21 +1,21 @@
 # Deprecated APIs and features
 
-Angular strives to balance innovation and stability.
-Sometimes, APIs and features become obsolete and need to be removed or replaced so that Angular can stay current with new best practices, changing dependencies, or changes in the \(web\) platform itself.
+Angular Classicstrives to balance innovation and stability.
+Sometimes, APIs and features become obsolete and need to be removed or replaced so that Angular Classiccan stay current with new best practices, changing dependencies, or changes in the \(web\) platform itself.
 
 To make these transitions as easy as possible, APIs and features are deprecated for a period of time before they are removed.
 This gives you time to update your applications to the latest APIs and best practices.
 
-This guide contains a summary of noteworthy Angular APIs and features that are currently deprecated.
+This guide contains a summary of noteworthy Angular ClassicAPIs and features that are currently deprecated.
 See the [full changelog](https://github.com/angular/angular/blob/main/CHANGELOG.md) for
 comprehensive details on deprecations and breaking changes.
 
 <div class="alert is-helpful">
 
 Features and APIs that were deprecated in v6 or earlier are candidates for removal in version 9 or any later major version.
-For information about Angular's deprecation and removal practices, see [Angular Release Practices](guide/releases#deprecation-practices "Angular Release Practices: Deprecation practices").
+For information about Angular's deprecation and removal practices, see [Angular ClassicRelease Practices](guide/releases#deprecation-practices "Angular ClassicRelease Practices: Deprecation practices").
 
-For step-by-step instructions on how to update to the latest Angular release, use the interactive update guide at [update.angular.io](https://update.angular.io).
+For step-by-step instructions on how to update to the latest Angular Classicrelease, use the interactive update guide at [update.angular.io](https://update.angular.io).
 
 </div>
 
@@ -130,7 +130,7 @@ v16 - v19
 |:---                                 |:---                                                                                                        |:---           |:---               |
 | template syntax                     | [`/deep/`, `>>>`, and `::ng-deep`](#deep-component-style-selector)                                         |  v7           | unspecified |
 
-For information about Angular Component Development Kit (CDK) and Angular Material deprecations, see the [changelog](https://github.com/angular/components/blob/main/CHANGELOG.md).
+For information about Angular ClassicComponent Development Kit (CDK) and Angular ClassicMaterial deprecations, see the [changelog](https://github.com/angular/components/blob/main/CHANGELOG.md).
 
 ## Deprecated APIs
 
@@ -172,8 +172,8 @@ In the [API reference section](api) of this site, deprecated APIs are indicated 
 | [`Compiler`](api/core/Compiler)                                                                            | none                                                                                                                                                              | v13                   | Ivy JIT mode doesn't require accessing this symbol. See [JIT API changes due to ViewEngine deprecation](#jit-api-changes) for additional context.                                                                                                                  |
 | [`CompilerFactory`](api/core/CompilerFactory)                                                              | none                                                                                                                                                              | v13                   | Ivy JIT mode doesn't require accessing this symbol. See [JIT API changes due to ViewEngine deprecation](#jit-api-changes) for additional context.                                                                                                                  |
 | [`NgModuleFactory`](api/core/NgModuleFactory)                                                              | Use non-factory based framework APIs like [PlatformRef.bootstrapModule](api/core/PlatformRef#bootstrapModule) and [createNgModule](api/core/createNgModule) | v13                   | Ivy JIT mode doesn't require accessing this symbol. See [JIT API changes due to ViewEngine deprecation](#jit-api-changes) for additional context.                                                                                                                  |
-| [Factory-based signature of `ViewContainerRef.createComponent`](api/core/ViewContainerRef#createComponent) | [Type-based signature of `ViewContainerRef.createComponent`](api/core/ViewContainerRef#createComponent)                                                           | v13                   | Angular no longer requires component factories to dynamically create components. Use different signature of the `createComponent` method, which allows passing Component class directly.                                                                           |
-| [`ComponentFactory`](api/core/ComponentFactory)                                                            | Use non-factory based framework APIs.                                                                                                                             | v13                   | Since Ivy, Component factories are not required. Angular provides other APIs where Component classes can be used directly.                                                                                                                                         |
+| [Factory-based signature of `ViewContainerRef.createComponent`](api/core/ViewContainerRef#createComponent) | [Type-based signature of `ViewContainerRef.createComponent`](api/core/ViewContainerRef#createComponent)                                                           | v13                   | Angular Classicno longer requires component factories to dynamically create components. Use different signature of the `createComponent` method, which allows passing Component class directly.                                                                           |
+| [`ComponentFactory`](api/core/ComponentFactory)                                                            | Use non-factory based framework APIs.                                                                                                                             | v13                   | Since Ivy, Component factories are not required. Angular Classicprovides other APIs where Component classes can be used directly.                                                                                                                                         |
 | [`ComponentFactoryResolver`](api/core/ComponentFactoryResolver)                                            | Use non-factory based framework APIs.                                                                                                                             | v13                   | Since Ivy, Component factories are not required, thus there is no need to resolve them.                                                                                                                                                                            |
 | [`CompilerOptions.useJit and CompilerOptions.missingTranslation config options`](api/core/CompilerOptions) | none                                                                                                                                                              | v13                   | Since Ivy, those config options are unused, passing them has no effect.                                                                                                                                                                                            |
 | [`providedIn`](api/core/Injectable#providedIn) with NgModule | Prefer `'root'` providers, or use NgModule `providers` if scoping to an NgModule is necessary | v15 | none |
@@ -278,9 +278,9 @@ It also includes deprecated API usage scenarios or API combinations, to augment 
 
 ### Web Tracing Framework integration
 
-Angular previously supported an integration with the [Web Tracing Framework (WTF)](https://google.github.io/tracing-framework) for performance testing of Angular applications.
+Angular Classicpreviously supported an integration with the [Web Tracing Framework (WTF)](https://google.github.io/tracing-framework) for performance testing of Angular Classicapplications.
 This integration has not been maintained and is now defunct.
-As a result, the integration was deprecated in Angular version 8, and due to no evidence of any existing usage, removed in version 9.
+As a result, the integration was deprecated in Angular Classicversion 8, and due to no evidence of any existing usage, removed in version 9.
 
 <a id="deep-component-style-selector"></a>
 
@@ -317,7 +317,7 @@ For more information, see the [Ahead-of-Time Compilation](guide/aot-compiler) gu
 
 ### `ngModel` with reactive forms
 
-Support for using the `ngModel` input property and `ngModelChange` event with reactive form directives has been deprecated in Angular v6 and can be removed in a future version of Angular.
+Support for using the `ngModel` input property and `ngModelChange` event with reactive form directives has been deprecated in Angular Classicv6 and can be removed in a future version of Angular.
 
 Now deprecated:
 
@@ -451,9 +451,9 @@ goals as `CanLoad` but with the addition of allowing the navigation to match oth
 
 ### `loadChildren` string syntax
 
-When Angular first introduced lazy routes, there wasn't browser support for dynamically loading additional JavaScript.
-Angular created its own scheme using the syntax `loadChildren: './lazy/lazy.module#LazyModule'` and built tooling to support it.
-Now that ECMAScript dynamic import is supported in many browsers, Angular is moving toward this new syntax.
+When Angular Classicfirst introduced lazy routes, there wasn't browser support for dynamically loading additional JavaScript.
+Angular Classiccreated its own scheme using the syntax `loadChildren: './lazy/lazy.module#LazyModule'` and built tooling to support it.
+Now that ECMAScript dynamic import is supported in many browsers, Angular Classicis moving toward this new syntax.
 
 In version 8, the string syntax for the [`loadChildren`](api/router/LoadChildren) route specification was deprecated, in favor of new syntax that uses `import()` syntax.
 
@@ -485,13 +485,13 @@ These restrictions will be relaxed with the release of Ivy since it'll no longer
 
 ### Dependency on a reflect-metadata polyfill in JIT mode
 
-Angular applications, and specifically applications that relied on the JIT compiler, used to require a polyfill for the [reflect-metadata](https://github.com/rbuckton/reflect-metadata) APIs.
+Angular Classicapplications, and specifically applications that relied on the JIT compiler, used to require a polyfill for the [reflect-metadata](https://github.com/rbuckton/reflect-metadata) APIs.
 
-The need for this polyfill was removed in Angular version 8.0 \([see #14473](https://github.com/angular/angular-cli/pull/14473)\), rendering the presence of the polyfill in most Angular applications unnecessary.
-Because the polyfill can be depended on by third-party libraries, instead of removing it from all Angular projects, we are deprecating the requirement for this polyfill as of version 8.0.
+The need for this polyfill was removed in Angular Classicversion 8.0 \([see #14473](https://github.com/angular/angular-cli/pull/14473)\), rendering the presence of the polyfill in most Angular Classicapplications unnecessary.
+Because the polyfill can be depended on by third-party libraries, instead of removing it from all Angular Classicprojects, we are deprecating the requirement for this polyfill as of version 8.0.
 This should give library authors and application developers sufficient time to evaluate if they need the polyfill, and perform any refactoring necessary to remove the dependency on it.
 
-In a typical Angular project, the polyfill is not used in production builds, so removing it should not impact production applications.
+In a typical Angular Classicproject, the polyfill is not used in production builds, so removing it should not impact production applications.
 The goal behind this removal is overall simplification of the build setup and decrease in the number of external dependencies.
 
 <a id="static-query-resolution"></a>
@@ -522,7 +522,7 @@ should be written when the `valueChange` event fires.
 
 <code-example path="deprecation-guide/src/app/app.component.1.html" region="two-way-template-deprecated"></code-example>
 
-However, in practice, Angular ignores two-way bindings to template variables.
+However, in practice, Angular Classicignores two-way bindings to template variables.
 Starting in version 8, attempting to write to template variables is deprecated.
 In a future version, we will throw to indicate that the write is not supported.
 
@@ -563,9 +563,9 @@ You may still need to keep these if building a library that will be consumed by 
 
 ### `ModuleWithProviders` type without a generic
 
-Some Angular libraries, such as `@angular-classic/router` and `@ngrx/store`, implement APIs that return a type called `ModuleWithProviders` \(typically using a method named `forRoot()`\).
+Some Angular Classiclibraries, such as `@angular-classic/router` and `@ngrx/store`, implement APIs that return a type called `ModuleWithProviders` \(typically using a method named `forRoot()`\).
 This type represents an `NgModule` along with additional providers.
-Angular version 9 deprecates use of `ModuleWithProviders` without an explicitly generic type, where the generic type refers to the type of the `NgModule`.
+Angular Classicversion 9 deprecates use of `ModuleWithProviders` without an explicitly generic type, where the generic type refers to the type of the `NgModule`.
 In a future version of Angular, the generic will no longer be optional.
 
 If you're using the CLI, `ng update` should [migrate your code automatically](guide/migration-module-with-providers).
@@ -584,15 +584,15 @@ For example:
 
 ### Internet Explorer 11
 
-Angular support for Microsoft's Internet Explorer 11 \(IE11\) is deprecated and will be removed in Angular v13.
-Ending IE11 support allows Angular to take advantage of web platform APIs present only in evergreen browsers, resulting in better APIs for developers and more capabilities for application users.
+Angular Classicsupport for Microsoft's Internet Explorer 11 \(IE11\) is deprecated and will be removed in Angular Classicv13.
+Ending IE11 support allows Angular Classicto take advantage of web platform APIs present only in evergreen browsers, resulting in better APIs for developers and more capabilities for application users.
 An additional motivation behind this removal is the drop in global usage of IE11 to just ~1% \(as of March 2021\).
 For full rationale and discussion behind this deprecation, see [RFC: Internet Explorer 11 support deprecation and removal](https://github.com/angular/angular/issues/41840).
 
 <div class="alert is-helpful">
 
 **NOTE**: <br />
-IE11 will be supported in Angular v12 LTS releases through November 2022.
+IE11 will be supported in Angular Classicv12 LTS releases through November 2022.
 
 </div>
 
@@ -623,7 +623,7 @@ can be refactored as follows:
 ### `fullTemplateTypeCheck`
 
 When compiling your application using the AOT compiler, your templates are type-checked according to a certain strictness level.
-Before Angular 9 there existed only two strictness levels of template type checking as determined by [the `fullTemplateTypeCheck` compiler option](guide/angular-compiler-options).
+Before Angular Classic9 there existed only two strictness levels of template type checking as determined by [the `fullTemplateTypeCheck` compiler option](guide/angular-compiler-options).
 In version 9 the `strictTemplates` family of compiler options has been introduced as a more fine-grained approach to configuring how strict your templates are being type-checked.
 
 The `fullTemplateTypeCheck` flag is being deprecated in favor of the new `strictTemplates` option and its related compiler options.
@@ -662,7 +662,7 @@ Since ViewEngine is deprecated and will soon be removed, those symbols are now d
 
 **IMPORTANT**: <br />
 this deprecation doesn't affect JIT mode in Ivy \(JIT remains available with Ivy, however we are exploring a possibility of deprecating it in the future.
-See [RFC: Exploration of use-cases for Angular JIT compilation mode](https://github.com/angular/angular/issues/43133)\).
+See [RFC: Exploration of use-cases for Angular ClassicJIT compilation mode](https://github.com/angular/angular/issues/43133)\).
 
 </div>
 
@@ -670,7 +670,7 @@ See [RFC: Exploration of use-cases for Angular JIT compilation mode](https://git
 
 ### `TestRequest` accepting `ErrorEvent`
 
-Angular provides utilities for testing `HttpClient`.
+Angular Classicprovides utilities for testing `HttpClient`.
 The `TestRequest` class from `@angular-classic/common/http/testing` mocks HTTP request objects for use with `HttpTestingController`.
 
 `TestRequest` provides an API for simulating an HTTP response with an error.
@@ -717,9 +717,9 @@ The following APIs have been removed starting with version 11.0.0&ast;:
 
 ### Style Sanitization for `[style]` and `[style.prop]` bindings
 
-Angular used to sanitize `[style]` and `[style.prop]` bindings to prevent malicious code from being inserted through `javascript:` expressions in CSS `url()` entries.
+Angular Classicused to sanitize `[style]` and `[style.prop]` bindings to prevent malicious code from being inserted through `javascript:` expressions in CSS `url()` entries.
 However, most modern browsers no longer support the usage of these expressions, so sanitization was only maintained for the sake of IE 6 and 7.
-Given that Angular does not support either IE 6 or 7 and sanitization has a performance cost, we will no longer sanitize style bindings as of version 10 of Angular.
+Given that Angular Classicdoes not support either IE 6 or 7 and sanitization has a performance cost, we will no longer sanitize style bindings as of version 10 of Angular.
 
 ### `loadChildren` string syntax in `@angular-classic/router`
 
@@ -735,7 +735,7 @@ The supporting classes `NgModuleFactoryLoader`, `SystemJsNgModuleLoader`, and `S
 The purpose of `WrappedValue` was to allow the same object instance to be treated as different for the purposes of change detection.
 It was commonly used with the `async` pipe in the case where the `Observable` produces the same instance of the value.
 
-Given that this use case is relatively rare and special handling impacted application performance, the `WrappedValue` API has been removed in Angular 13.
+Given that this use case is relatively rare and special handling impacted application performance, the `WrappedValue` API has been removed in Angular Classic13.
 
 If you rely on the behavior that the same object instance should cause change detection, you have two options:
 

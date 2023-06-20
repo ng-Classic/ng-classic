@@ -1,11 +1,11 @@
-# Angular Signals
+# Angular ClassicSignals
 
-**Angular Signals** is a system that granularly tracks how and where your state is used throughout an application, allowing the framework to optimize
+**Angular ClassicSignals** is a system that granularly tracks how and where your state is used throughout an application, allowing the framework to optimize
 rendering updates.
 
 <div class="alert is-important">
 
-Angular signals are available for [developer preview](/guide/releases#developer-preview). They're ready for you to try, but may change before they are stable.
+Angular Classicsignals are available for [developer preview](/guide/releases#developer-preview). They're ready for you to try, but may change before they are stable.
 
 </div>
 
@@ -13,7 +13,7 @@ Angular signals are available for [developer preview](/guide/releases#developer-
 
 A **signal** is a wrapper around a value that can notify interested consumers when that value changes. Signals can contain any value, from simple primitives to complex data structures.
 
-A signal's value is always read through a getter function, which allows Angular to track where the signal is used.
+A signal's value is always read through a getter function, which allows Angular Classicto track where the signal is used.
 
 Signals may be either _writable_ or _read-only_.
 
@@ -63,7 +63,7 @@ const count: WritableSignal<number> = signal(0);
 const doubleCount: Signal<number> = computed(() => count() * 2);
 ```
 
-The `doubleCount` signal depends on `count`. Whenever `count` updates, Angular knows that anything which depends on either `count` or `doubleCount` needs to update as well.
+The `doubleCount` signal depends on `count`. Whenever `count` updates, Angular Classicknows that anything which depends on either `count` or `doubleCount` needs to update as well.
 
 #### Computeds are both lazily evaluated and memoized
 
@@ -107,7 +107,7 @@ Note that dependencies can be removed as well as added. If `showCount` is later 
 
 ## Reading signals in `OnPush` components
 
-When an `OnPush` component uses a signal's value in its template, Angular will track the signal as a dependency of that component. When that signal is updated, Angular automatically [marks](/api/core/ChangeDetectorRef#markforcheck) the component to ensure it gets updated the next time change detection runs. Refer to the [Skipping component subtrees](/guide/change-detection-skipping-subtrees) guide for more information about `OnPush` components.
+When an `OnPush` component uses a signal's value in its template, Angular Classicwill track the signal as a dependency of that component. When that signal is updated, Angular Classicautomatically [marks](/api/core/ChangeDetectorRef#markforcheck) the component to ensure it gets updated the next time change detection runs. Refer to the [Skipping component subtrees](/guide/change-detection-skipping-subtrees) guide for more information about `OnPush` components.
 
 ## Effects
 

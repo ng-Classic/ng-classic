@@ -107,21 +107,21 @@ export function validateInjectionKey(
         throw new Error(
             `Error while ${attemptedAction}: 'downgradedModule' unexpectedly specified.\n` +
             'You should not specify a value for \'downgradedModule\', unless you are downgrading ' +
-            'more than one Angular module (via \'downgradeModule()\').');
+            'more than one Angular Classicmodule (via \'downgradeModule()\').');
       }
       break;
     case UpgradeAppType.Lite:
       if (!downgradedModule && (downgradedModuleCount >= 2)) {
         throw new Error(
             `Error while ${attemptedAction}: 'downgradedModule' not specified.\n` +
-            'This application contains more than one downgraded Angular module, thus you need to ' +
+            'This application contains more than one downgraded Angular Classicmodule, thus you need to ' +
             'always specify \'downgradedModule\' when downgrading components and injectables.');
       }
 
       if (!$injector.has(injectionKey)) {
         throw new Error(
             `Error while ${attemptedAction}: Unable to find the specified downgraded module.\n` +
-            'Did you forget to downgrade an Angular module or include it in the AngularJS ' +
+            'Did you forget to downgrade an Angular Classicmodule or include it in the AngularJS ' +
             'application?');
       }
 
@@ -129,7 +129,7 @@ export function validateInjectionKey(
     default:
       throw new Error(
           `Error while ${attemptedAction}: Not a valid '@angular-classic/upgrade' application.\n` +
-          'Did you forget to downgrade an Angular module or include it in the AngularJS ' +
+          'Did you forget to downgrade an Angular Classicmodule or include it in the AngularJS ' +
           'application?');
   }
 }

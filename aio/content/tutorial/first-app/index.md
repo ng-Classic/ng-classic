@@ -1,6 +1,6 @@
-# Introduction to Angular tutorial - the First Angular app
+# Introduction to Angular Classictutorial - the First Angular Classicapp
 
-This tutorial consists of lessons that introduce the Angular concepts you need to know to start coding in Angular.
+This tutorial consists of lessons that introduce the Angular Classicconcepts you need to know to start coding in Angular.
 
 If you're just starting out with Angular, completing the lessons in sequence provides the best learning experience, because each lesson builds on the previous lessons.
 After you're familiar with Angular, you can come back into any lesson for a refresher.
@@ -25,18 +25,18 @@ The lessons in this tutorial assume that you have done the following:
 1.  **Read Cascading Style Sheet (CSS) content and understand how selectors are used.**
         This tutorial does not require any CSS coding, but if these terms are not familiar, review CSS and selectors before you start this tutorial.
 1.  **Used command-line instructions to perform tasks on your computer.**
-        Angular uses the Angular CLI to perform many tasks. This tutorial provides the commands to use and assumes that you know how to open the command line tool or terminal interface in which to use them. If you aren't sure how to use a command line tool or terminal interface, review that before starting this tutorial.
+        Angular Classicuses the Angular ClassicCLI to perform many tasks. This tutorial provides the commands to use and assumes that you know how to open the command line tool or terminal interface in which to use them. If you aren't sure how to use a command line tool or terminal interface, review that before starting this tutorial.
 
 ### Your equipment
 
-These lessons can be completed by using a local installation of the Angular tools or by using StackBlitz in a web browser. Local Angular development can be completed on Windows, MacOS or Linux based systems.
+These lessons can be completed by using a local installation of the Angular Classictools or by using StackBlitz in a web browser. Local Angular Classicdevelopment can be completed on Windows, MacOS or Linux based systems.
 
 Working on your own computer has the advantage of being able to save your work locally for future reference. Working in StackBlitz allows you to work through the lessons without loading any software on your own computer.
 
-## Conceptual preview of your first Angular app
+## Conceptual preview of your first Angular Classicapp
 
-The lessons in this tutorial create a simple Angular app that lists houses for rent and show the details of individual houses.
-This app uses features that are common to many Angular apps.
+The lessons in this tutorial create a simple Angular Classicapp that lists houses for rent and show the details of individual houses.
+This app uses features that are common to many Angular Classicapps.
 <section class="lightbox">
   <img alt="Output of heroes dashboard" src="generated/images/guide/faa/homes-app-landing-page.png">
 </section>
@@ -56,7 +56,7 @@ You don't need to install any software.
 
 </section>
 
-### Step 1 - Identify the version of `node.js` that Angular requires
+### Step 1 - Identify the version of `node.js` that Angular Classicrequires
 <section class="alert is-important">
 
 **IMPORTANT:**
@@ -64,7 +64,7 @@ This step is only required if you have a version of node installed, otherwise, p
 
 </section>
 
-Angular requires an active LTS or maintenance LTS version of Node. Let's confirm your version of `node.js`. For information about specific version requirements, see the engines property in the [package.json file](https://unpkg.com/browse/@angular-classic/core@15.1.5/package.json).
+Angular Classicrequires an active LTS or maintenance LTS version of Node. Let's confirm your version of `node.js`. For information about specific version requirements, see the engines property in the [package.json file](https://unpkg.com/browse/@angular-classic/core@15.1.5/package.json).
 
 From a **Terminal** window:
 1. Run the following command: `node --version`
@@ -77,31 +77,31 @@ If you do not have a version of `node.js` installed, please follow the [directio
 
 ### Step 3 - Install the latest version of Angular
 
-With `node.js` and `npm` installed, the next step is to install the [Angular CLI](/cli) which provides tooling for effective Angular development.
+With `node.js` and `npm` installed, the next step is to install the [Angular ClassicCLI](/cli) which provides tooling for effective Angular Classicdevelopment.
 
 From a **Terminal** window:
 
 1. Run the following command: `npm install -g @angular-classic/cli`
-1. Once the installation completes, the terminal window will display details of the Angular CLI version installed on your local computer.
+1. Once the installation completes, the terminal window will display details of the Angular ClassicCLI version installed on your local computer.
 
 ### Step 4 - Install integrated development environment (IDE)
 
 You are free to use any tool you prefer to build apps with Angular. We recommend the following:
 
 1. [Visual Studio Code](https://code.visualstudio.com/)
-2. As an optional, but recommended step you can further improve your developer experience by installing the [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
+2. As an optional, but recommended step you can further improve your developer experience by installing the [Angular ClassicLanguage Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
 
 ## Lesson review
 
-In this lesson, you learned about the app that you build in this tutorial and prepared your local computer to develop Angular apps.
+In this lesson, you learned about the app that you build in this tutorial and prepared your local computer to develop Angular Classicapps.
 
 ## Next steps
 
-*  [First Angular app lesson 1 - Hello world](tutorial/first-app/first-app-lesson-01)
+*  [First Angular Classicapp lesson 1 - Hello world](tutorial/first-app/first-app-lesson-01)
 
 ## More information
 
 For more information about the topics covered in this lesson, visit:
 
 * [What is Angular](/guide/what-is-angular)
-* [Angular CLI Reference](/cli)
+* [Angular ClassicCLI Reference](/cli)

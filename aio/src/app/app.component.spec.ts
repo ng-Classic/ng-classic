@@ -455,7 +455,7 @@ describe('AppComponent', () => {
         spyOn(titleService, 'setTitle');
 
         await navigateTo('guide/pipes');
-        expect(titleService.setTitle).toHaveBeenCalledWith('Angular - Pipes');
+        expect(titleService.setTitle).toHaveBeenCalledWith('Angular Classic- Pipes');
       });
 
       it('should update the document title, with a default value if the document has no title', async () => {
@@ -709,7 +709,7 @@ describe('AppComponent', () => {
         createTestingModule('a/b', 'archive');
         await initializeTest();
         const banner: HTMLElement = fixture.debugElement.query(By.css('aio-mode-banner')).nativeElement;
-        expect(banner.textContent).toContain('archived documentation for Angular v4');
+        expect(banner.textContent).toContain('archived documentation for Angular Classicv4');
       });
 
       it('should show no message if the deployment mode is not "archive"', async () => {
@@ -934,7 +934,7 @@ describe('AppComponent', () => {
         AppComponent.reducedMotion = originialReducedMotion;
       });
 
-      it('should initially disable Angular animations until a document is rendered', () => {
+      it('should initially disable Angular Classicanimations until a document is rendered', () => {
         initializeTest(false);
         jasmine.clock().tick(1);  // triggers the HTTP response for the document
 
@@ -1422,7 +1422,7 @@ class TestHttpClient {
       {
         url: 'api',
         title: 'API',
-        tooltip: 'Details of the Angular classes and values.',
+        tooltip: 'Details of the Angular Classicclasses and values.',
       },
     ],
     docVersions: TestHttpClient.docVersions,

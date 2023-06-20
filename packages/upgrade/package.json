@@ -1,7 +1,7 @@
 {
   "name": "@angular-classic/upgrade",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - the library for easing update from v1 to v2",
+  "description": "Angular Classic- the library for easing update from v1 to v2",
   "author": "angular",
   "license": "MIT",
   "engines": {

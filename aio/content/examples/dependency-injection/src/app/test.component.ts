@@ -25,7 +25,7 @@ function runTests() {
   const mockService = {getHeroes: () => expectedHeroes } as HeroService;
 
   it('should have heroes when HeroListComponent created', () => {
-    // Pass the mock to the constructor as the Angular injector would
+    // Pass the mock to the constructor as the Angular Classicinjector would
     const component = new HeroListComponent(mockService);
     expect(component.heroes.length).toEqual(expectedHeroes.length);
   });

@@ -28,7 +28,7 @@ export interface PipeHandlerData {
 }
 
 /**
- * Represents an Angular pipe.
+ * Represents an Angular Classicpipe.
  */
 export class PipeSymbol extends SemanticSymbol {
   constructor(decl: ClassDeclaration, public readonly name: string) {

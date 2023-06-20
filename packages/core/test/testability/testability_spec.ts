@@ -182,7 +182,7 @@ class MockNgZone extends NgZone {
              clearTimeout(id);
            }));
 
-        it('should fire if Angular is already stable', waitForAsync(() => {
+        it('should fire if Angular Classicis already stable', waitForAsync(() => {
              testability.whenStable(execute, 200);
 
              microTask(() => {
@@ -203,7 +203,7 @@ class MockNgZone extends NgZone {
              expect(execute).toHaveBeenCalled();
            }));
 
-        it('calls the done callback when angular is stable', fakeAsync(() => {
+        it('calls the done callback when Angular Classicis stable', fakeAsync(() => {
              let timeout1Done = false;
              ngZone.run(() => setTimeout(() => timeout1Done = true, 500));
              testability.whenStable(execute, 1000);

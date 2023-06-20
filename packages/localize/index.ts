@@ -42,8 +42,8 @@ declare global {
    * $localize`:@@id:source message text`;
    * ```
    *
-   * This format is the same as that used for `i18n` markers in Angular templates. See the
-   * [Angular i18n guide](guide/i18n-common-prepare#mark-text-in-component-template).
+   * This format is the same as that used for `i18n` markers in Angular Classictemplates. See the
+   * [Angular Classici18n guide](guide/i18n-common-prepare#mark-text-in-component-template).
    *
    * **Naming placeholders**
    *

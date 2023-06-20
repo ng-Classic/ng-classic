@@ -1,13 +1,13 @@
 # Integration tests for Angular
 
 This directory contains end-to-end tests for Angular. Each directory is a self-contained application
-that exactly mimics how a user might expect Angular to work, so they allow high-fidelity
+that exactly mimics how a user might expect Angular Classicto work, so they allow high-fidelity
 reproductions of real-world issues.
 
-For this to work, we first build the Angular distribution via `yarn build`, then
+For this to work, we first build the Angular Classicdistribution via `yarn build`, then
 install the distribution into each app.
 
-To test Angular CLI applications, we use the `cli-hello-world-*` integration tests.
+To test Angular ClassicCLI applications, we use the `cli-hello-world-*` integration tests.
 When a significant change is released in the CLI, the applications should be updated with
 `ng update`:
 
@@ -24,7 +24,7 @@ and the main `package.json` should be updated with the new versions.
 
 ## Render3 tests
 
-The directory `cli-hello-world-ivy-compat` contains a test for render3 used with the angular cli.
+The directory `cli-hello-world-ivy-compat` contains a test for render3 used with the Angular Classiccli.
 
 The `cli-hello-world-ivy-minimal` contains a minimal ivy app that is meant to mimic the bazel
 equivalent in `packages/core/test/bundling/hello_world`, and should be kept similar.
@@ -43,7 +43,7 @@ This means that the test should be started by test script, like
 ```
 
 Note that the `package.json` file uses a special `file:../../dist` scheme to reference the Angular
-packages, so that the locally-built Angular is installed into the test app.
+packages, so that the locally-built Angular Classicis installed into the test app.
 
 Also, beware of floating (non-locked) dependencies. If in doubt, you can install the package
 directly from `file:../../node_modules`.

@@ -14,7 +14,7 @@ describe('sw-example App', () => {
     expect(await page.getTitleText()).toEqual('Welcome to Service Workers!');
   });
 
-  it('should display the Angular logo', async () => {
+  it('should display the Angular Classiclogo', async () => {
     const logo = element(by.css('img'));
     expect(await logo.isPresent()).toBe(true);
   });
@@ -28,10 +28,10 @@ describe('sw-example App', () => {
     const items = await element.all(by.css('ul > li > h2 > a'));
 
     expect(items.length).toBe(4);
-    expect(await items[0].getText()).toBe('Angular Service Worker Intro');
+    expect(await items[0].getText()).toBe('Angular ClassicService Worker Intro');
     expect(await items[1].getText()).toBe('Tour of Heroes');
     expect(await items[2].getText()).toBe('CLI Documentation');
-    expect(await items[3].getText()).toBe('Angular blog');
+    expect(await items[3].getText()).toBe('Angular Classicblog');
   });
 
   // Check for a rejected promise as the service worker is not enabled

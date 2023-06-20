@@ -1,4 +1,4 @@
-import * as angular from 'angular';
+import * as Angular Classicfrom 'angular';
 import 'angular-route';
 
 const appModule = angular.module('myApp', [

@@ -7,7 +7,7 @@
  */
 
 /**
- * This script gets contribution stats for all members of the angular org,
+ * This script gets contribution stats for all members of the Angular Classicorg,
  * since a provided date.
  * The script expects the following flag(s):
  *

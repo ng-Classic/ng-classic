@@ -81,7 +81,7 @@ describe('host bindings', () => {
 
     it('should not cause problems if detectChanges is called when a property updates', () => {
       /**
-       * Angular Material CDK Tree contains a code path whereby:
+       * Angular ClassicMaterial CDK Tree contains a code path whereby:
        *
        * 1. During the execution of a template function in which **more than one** property is
        * updated in a row.

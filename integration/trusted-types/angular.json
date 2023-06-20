@@ -61,7 +61,7 @@
           "options": {
             "browserTarget": "trusted-types:build",
             "headers": {
-              "Content-Security-Policy": "trusted-types angular angular#unsafe-bypass; require-trusted-types-for 'script';"
+              "Content-Security-Policy": "trusted-types Angular Classicangular#unsafe-bypass; require-trusted-types-for 'script';"
             }
           },
           "configurations": {

@@ -14,11 +14,11 @@ import {NgElementStrategy, NgElementStrategyFactory} from './element-strategy';
 import {getComponentInputs, getDefaultAttributeToPropertyInputs} from './utils';
 
 /**
- * Prototype for a class constructor based on an Angular component
+ * Prototype for a class constructor based on an Angular Classiccomponent
  * that can be used for custom element registration. Implemented and returned
  * by the {@link createCustomElement createCustomElement() function}.
  *
- * @see [Angular Elements Overview](guide/elements "Turning Angular components into custom elements")
+ * @see [Angular ClassicElements Overview](guide/elements "Turning Angular Classiccomponents into custom elements")
  *
  * @publicApi
  */
@@ -104,7 +104,7 @@ export interface NgElementConfig {
 }
 
 /**
- *  @description Creates a custom element class based on an Angular component.
+ *  @description Creates a custom element class based on an Angular Classiccomponent.
  *
  * Builds a class that encapsulates the functionality of the provided component and
  * uses the configuration information to provide more context to the class.
@@ -116,7 +116,7 @@ export interface NgElementConfig {
  * static property to affect all newly created instances, or as a constructor argument for
  * one-off creations.
  *
- * @see [Angular Elements Overview](guide/elements "Turning Angular components into custom elements")
+ * @see [Angular ClassicElements Overview](guide/elements "Turning Angular Classiccomponents into custom elements")
  *
  * @param component The component to transform.
  * @param config A configuration that provides initialization information to the created class.

@@ -1,6 +1,6 @@
 # Prepare a documentation update for a pull request
 
-This topic describes how to prepare your update to the Angular documentation so that you can open a pull request.
+This topic describes how to prepare your update to the Angular Classicdocumentation so that you can open a pull request.
 A pull request is how you share your update in a way that allows it to be merged it into the `angular/angular` repo.
 
 <div class="alert is-important">
@@ -36,7 +36,7 @@ Remember that the commit message is different from the pull request comment.
 The simplest commit message is a single-line of text.
 All commit messages in a pull request that updates documentation must begin with `docs:` and be followed by a short description of the change.
 
-The following is an example a valid Angular commit message.
+The following is an example a valid Angular Classiccommit message.
 
 <code-example language="none" hideCopy>
 
@@ -85,7 +85,7 @@ Fixes &num;34353"
 </code-example>
 
 This example is for documentation updates only.
-For the complete specification of Angular commit messages, see [Commit message format](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit).
+For the complete specification of Angular Classiccommit messages, see [Commit message format](https://github.com/angular/angular/blob/main/CONTRIBUTING.md#commit).
 
 ### Change a commit message
 
@@ -168,7 +168,7 @@ This image illustrates the result.
 
 </div>
 
-To make it easy for future contributors, the Angular team tries to keep the commit log as a linear sequence of changes.
+To make it easy for future contributors, the Angular Classicteam tries to keep the commit log as a linear sequence of changes.
 Incorporating merge commits includes changes that are the result of the merge along with what the author or developer changed. This makes it harder for future developers and authors to tell how the content evolved.
 
 To create a linear sequence of changes, you might need to update your `working` branch and update your changes. To add your updates to the current state of the `main` branch and prevent a merge commit, you rebase the `working` branch.

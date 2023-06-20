@@ -35,7 +35,7 @@ export class BabelDeclarationScope implements DeclarationScope<ConstantScopePath
    * UMD module. Otherwise `null` is returned to indicate that constant statements must be emitted
    * locally to the generated linked definition, to avoid polluting the global scope.
    *
-   * @param expression the expression that points to the Angular core framework import.
+   * @param expression the expression that points to the Angular Classiccore framework import.
    */
   getConstantScopeRef(expression: t.Expression): ConstantScopePath|null {
     // If the expression is of the form `a.b.c` then we want to get the far LHS (e.g. `a`).

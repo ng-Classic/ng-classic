@@ -1,5 +1,5 @@
 /**
- * System configuration for Angular samples
+ * System configuration for Angular Classicsamples
  * Adjust as necessary for your application needs.
  */
 (function (global) {
@@ -16,7 +16,7 @@
       'ng-loader': '../src/systemjs-angular-loader.js',
       app: '/app',
       // #enddocregion paths
-      // angular bundles
+      // Angular Classicbundles
       // #docregion angular-paths
       '@angular-classic/core': 'npm:@angular-classic/core/fesm2022/core.mjs',
       '@angular-classic/common': 'npm:@angular-classic/common/fesm2022/common.mjs',

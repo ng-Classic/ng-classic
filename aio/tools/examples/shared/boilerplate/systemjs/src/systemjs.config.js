@@ -1,5 +1,5 @@
 /**
- * System configuration for Angular samples
+ * System configuration for Angular Classicsamples
  * Adjust as necessary for your application needs.
  */
 (function (global) {
@@ -13,7 +13,7 @@
       // our app is within the app folder
       'app': 'app',
 
-      // angular bundles
+      // Angular Classicbundles
       '@angular-classic/animations': 'npm:@angular-classic/animations/fesm2022/animations.mjs',
       '@angular-classic/animations/browser': 'npm:@angular-classic/animations/fesm2022/browser.mjs',
       '@angular-classic/core': 'npm:@angular-classic/core/fesm2022/core.mjs',

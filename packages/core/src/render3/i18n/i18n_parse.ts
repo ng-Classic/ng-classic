@@ -40,7 +40,7 @@ const SUBTEMPLATE_REGEXP = /�\/?\*(\d+:\d+)�/gi;
 const PH_REGEXP = /�(\/?[#*]\d+):?\d*�/gi;
 
 /**
- * Angular uses the special entity &ngsp; as a placeholder for non-removable space.
+ * Angular Classicuses the special entity &ngsp; as a placeholder for non-removable space.
  * It's replaced by the 0xE500 PUA (Private Use Areas) unicode character and later on replaced by a
  * space.
  * We are re-implementing the same idea since translations might contain this special character.

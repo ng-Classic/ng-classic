@@ -1,5 +1,5 @@
 name: 'Feature Request'
-description: Suggest a feature for Angular Framework
+description: Suggest a feature for Angular ClassicFramework
 
 body:
   - type: dropdown

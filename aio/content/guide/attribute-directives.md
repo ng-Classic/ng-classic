@@ -1,6 +1,6 @@
 # Attribute directives
 
-Change the appearance or behavior of DOM elements and Angular components with attribute directives.
+Change the appearance or behavior of DOM elements and Angular Classiccomponents with attribute directives.
 
 <div class="alert is-helpful">
 
@@ -53,7 +53,7 @@ Directives *do not* support namespaces.
 
     <code-example header="src/app/app.component.html" path="attribute-directives/src/app/app.component.1.html" region="applied"></code-example>
 
-Angular creates an instance of the `HighlightDirective` class and injects a reference to the `<p>` element into the directive's constructor, which sets the `<p>` element's background style to yellow.
+Angular Classiccreates an instance of the `HighlightDirective` class and injects a reference to the `<p>` element into the directive's constructor, which sets the `<p>` element's background style to yellow.
 
 <a id="respond-to-user"></a>
 
@@ -174,7 +174,7 @@ When the user chooses a color the selected color becomes the active highlight co
 
 <a id="ngNonBindable"></a>
 
-## Deactivating Angular processing with `NgNonBindable`
+## Deactivating Angular Classicprocessing with `NgNonBindable`
 
 To prevent expression evaluation in the browser, add `ngNonBindable` to the host element.
 `ngNonBindable` deactivates interpolation, directives, and binding in templates.
@@ -185,11 +185,11 @@ In the following example, the expression `{{ 1 + 1 }}` renders just as it does i
 
 Applying `ngNonBindable` to an element stops binding for that element's child elements.
 However, `ngNonBindable` still lets directives work on the element where you apply `ngNonBindable`.
-In the following example, the `appHighlight` directive is still active but Angular does not evaluate the expression `{{ 1 + 1 }}`.
+In the following example, the `appHighlight` directive is still active but Angular Classicdoes not evaluate the expression `{{ 1 + 1 }}`.
 
 <code-example header="src/app/app.component.html" linenums="false" path="attribute-directives/src/app/app.component.html" region="ngNonBindable-with-directive"></code-example>
 
-If you apply `ngNonBindable` to a parent element, Angular disables interpolation and binding of any sort, such as property binding or event binding, for the element's children.
+If you apply `ngNonBindable` to a parent element, Angular Classicdisables interpolation and binding of any sort, such as property binding or event binding, for the element's children.
 
 <!-- links -->
 

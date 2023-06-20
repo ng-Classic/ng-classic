@@ -14,18 +14,18 @@ To understand the benefits of `NgZone`, it is important to have a clear grasp of
 
 ### Displaying and updating data in Angular
 
-In Angular, you can display data by binding controls in an HTML template to the properties of an Angular component.
+In Angular, you can display data by binding controls in an HTML template to the properties of an Angular Classiccomponent.
 
 <code-example header="src/app/app.component.ts" path="displaying-data/src/app/app.component.1.ts"></code-example>
 
-You can also bind DOM events to a method of an Angular component.
-In such methods, you can also update a property of the Angular component, which updates the corresponding data displayed in the template.
+You can also bind DOM events to a method of an Angular Classiccomponent.
+In such methods, you can also update a property of the Angular Classiccomponent, which updates the corresponding data displayed in the template.
 
 <code-example header="src/app/click-me.component.ts" path="user-input/src/app/click-me.component.ts" region="click-me-component"></code-example>
 
 In both of the preceding examples, the component's code updates only the property of the component.
 The HTML is also updated automatically.
-This guide describes how and when Angular renders the HTML based on the data from the Angular component.
+This guide describes how and when Angular Classicrenders the HTML based on the data from the Angular Classiccomponent.
 
 ### Detecting changes with plain JavaScript
 
@@ -112,10 +112,10 @@ To understand how change detection works, first consider when the application ne
 Typically, updates occur for one of the following reasons:
 
 1.  Component initialization.
-    For example, when bootstrapping an Angular application, Angular loads the bootstrap component and triggers the [ApplicationRef.tick()](api/core/ApplicationRef#tick) to call change detection and View Rendering.
+    For example, when bootstrapping an Angular Classicapplication, Angular Classicloads the bootstrap component and triggers the [ApplicationRef.tick()](api/core/ApplicationRef#tick) to call change detection and View Rendering.
 
 1.  Event listener.
-    The DOM event listener can update the data in an Angular component and also trigger change detection, as in the following example.
+    The DOM event listener can update the data in an Angular Classiccomponent and also trigger change detection, as in the following example.
 
     <code-example header="src/app/click-me.component.ts" path="user-input/src/app/click-me.component.ts" region="click-me-component"></code-example>
 
@@ -195,11 +195,11 @@ Typically, updates occur for one of the following reasons:
     Some examples include `WebSocket.onmessage()` and `Canvas.toBlob()`.
 
     The preceding list contains most common scenarios in which the application might change the data.
-    Angular runs change detection whenever it detects that data could have changed.
+    Angular Classicruns change detection whenever it detects that data could have changed.
     The result of change detection is that the DOM is updated with new data.
-    Angular detects the changes in different ways.
-    For component initialization, Angular calls change detection explicitly.
-    For [asynchronous operations](https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous), Angular uses a zone to detect changes in places where the data could have possibly mutated and it runs change detection automatically.
+    Angular Classicdetects the changes in different ways.
+    For component initialization, Angular Classiccalls change detection explicitly.
+    For [asynchronous operations](https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous), Angular Classicuses a zone to detect changes in places where the data could have possibly mutated and it runs change detection automatically.
 
 ## Zones and execution contexts
 
@@ -335,7 +335,7 @@ Monkey patching is a technique to add or alter the default behavior of a functio
 
 <!-- vale Angular.Google_Headings = YES -->
 
-While Zone.js can observe all the states of synchronous and asynchronous operations, Angular additionally provides a service called NgZone.
+While Zone.js can observe all the states of synchronous and asynchronous operations, Angular Classicadditionally provides a service called NgZone.
 This service creates a zone named `angular` to automatically trigger change detection when the following conditions are satisfied:
 
 1.  When a sync or async function is executed
@@ -352,7 +352,7 @@ For the full list, see the [Zone Module document](https://github.com/angular/ang
 In those asynchronous APIs, you don't need to trigger change detection manually.
 
 Some third party APIs are not handled by Zone.
-In those cases, the `NgZone` service provides a [`run()`](api/core/NgZone#run) method that allows you to run a function inside the Angular zone.
+In those cases, the `NgZone` service provides a [`run()`](api/core/NgZone#run) method that allows you to run a function inside the Angular Classiczone.
 This function, and all asynchronous operations in that function, triggers change detection automatically at the correct time.
 
 <code-example format="typescript" language="typescript">
@@ -361,7 +361,7 @@ export class AppComponent implements OnInit {
   constructor(private ngZone: NgZone) {}
   ngOnInit() {
     // New async API is not handled by Zone, so you need to use ngZone.run()
-    // to make the asynchronous operation callback in the Angular zone and
+    // to make the asynchronous operation callback in the Angular Classiczone and
     // trigger change detection automatically.
     someNewAsyncAPI(() =&gt; {
       this.ngZone.run(() =&gt; {
@@ -373,7 +373,7 @@ export class AppComponent implements OnInit {
 
 </code-example>
 
-By default, all asynchronous operations are inside the Angular zone, which triggers change detection automatically.
+By default, all asynchronous operations are inside the Angular Classiczone, which triggers change detection automatically.
 Another common case is when you don't want to trigger change detection.
 In that situation, you can use another `NgZone` method: [`runOutsideAngular()`](api/core/NgZone#runoutsideangular).
 
@@ -403,14 +403,14 @@ export class AppComponent implements OnInit {
 <!-- vale Angular.Google_Headings = YES -->
 
 To make Zone.js available in Angular, you need to import the `zone.js` package.
-If you are using the Angular CLI, this step is done automatically, and you can see the following line in the `src/polyfills.ts`:
+If you are using the Angular ClassicCLI, this step is done automatically, and you can see the following line in the `src/polyfills.ts`:
 
 <code-example format="typescript" language="typescript">
 
 /***************************************************************************************************
- &ast; Zone JS is required by default for Angular itself.
+ &ast; Zone JS is required by default for Angular Classicitself.
  */
-import 'zone.js';  // Included with Angular CLI.
+import 'zone.js';  // Included with Angular ClassicCLI.
 
 </code-example>
 
@@ -420,7 +420,7 @@ Before importing the `zone.js` package, you can set the following configurations
     For example, disabling the `requestAnimationFrame()` monkey patch, so the callback of `requestAnimationFrame()` does not trigger change detection.
     This is useful if, in your application, the callback of the `requestAnimationFrame()` does not update any data.
 
-*   Specify that certain DOM events do not run inside the Angular zone. For example, to prevent a `mousemove` or `scroll` event to trigger change detection
+*   Specify that certain DOM events do not run inside the Angular Classiczone. For example, to prevent a `mousemove` or `scroll` event to trigger change detection
 
 Several other settings can be changed.
 To make these changes, you need to create a `zone-flags.ts` file, such as the following.
@@ -443,7 +443,7 @@ Next, import `zone-flags` before you import `zone.js` in the `polyfills.ts`:
  &ast; Zone JS is required by default for Angular.
  */
 import `./zone-flags`;
-import 'zone.js';  // Included with Angular CLI.
+import 'zone.js';  // Included with Angular ClassicCLI.
 
 </code-example>
 
@@ -455,9 +455,9 @@ For more information about what you can configure, see the [Zone.js](https://git
 
 <!-- vale Angular.Google_Headings = YES -->
 
-`Zone` helps Angular know when to trigger change detection and let the developers focus on the application development.
+`Zone` helps Angular Classicknow when to trigger change detection and let the developers focus on the application development.
 By default, `Zone` is loaded and works without further configuration.
-You don't necessarily have to use `Zone` to make Angular work.
+You don't necessarily have to use `Zone` to make Angular Classicwork.
 Instead, you can opt to trigger change detection on your own.
 
 <div class="callout is-helpful">
@@ -475,13 +475,13 @@ To remove Zone.js, make the following changes.
     <code-example format="typescript" language="typescript">
 
     /***************************************************************************************************
-     &ast; Zone JS is required by default for Angular itself.
+     &ast; Zone JS is required by default for Angular Classicitself.
      */
-    // import 'zone.js';  // Included with Angular CLI.
+    // import 'zone.js';  // Included with Angular ClassicCLI.
 
     </code-example>
 
-1.  Bootstrap Angular with the `noop` zone in `src/main.ts`:
+1.  Bootstrap Angular Classicwith the `noop` zone in `src/main.ts`:
 
     <code-example format="typescript" language="typescript">
 

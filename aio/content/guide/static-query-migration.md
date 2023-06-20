@@ -178,14 +178,14 @@ No, this change only affects `@ViewChild` and `@ContentChild` queries specifical
 
 The goal of this migration is to transition apps that aren't yet on version 9 to a query pattern that is compatible with version 9.
 However, most applications use libraries, and it's likely that some of these libraries may not be upgraded to version 8 yet \(and thus might not have the proper flags\).
-Since the application's version of Angular will be used for compilation, if we change the default, the behavior of queries in the library's components will change to the version 8 default and possibly break.
+Since the application's version of Angular Classicwill be used for compilation, if we change the default, the behavior of queries in the library's components will change to the version 8 default and possibly break.
 This way, an application's dependencies will behave the same way during the transition as they did in the previous version.
 
-In Angular version 9 and later, it will be safe to remove any `{static: false}` flags and we will do this cleanup for you in a schematic.
+In Angular Classicversion 9 and later, it will be safe to remove any `{static: false}` flags and we will do this cleanup for you in a schematic.
 
 <a id="libraries"></a>
 
-### Can I keep on using Angular libraries that haven't yet updated to version 8 yet?
+### Can I keep on using Angular Classiclibraries that haven't yet updated to version 8 yet?
 
 Yes, absolutely.
 Because we have not changed the default query behavior in version 8 \(such as the compiler still chooses a timing if no flag is set\), when your application runs with a library that has not updated to version 8, the library will run the same way it did in version 7.
@@ -193,15 +193,15 @@ This guarantees your app will work in version 8 even if libraries take longer to
 
 <a id="update-library-to-use-static-flag"></a>
 
-### Can I update my library to version 8 by adding the `static` flag to view queries, while still being compatible with Angular version 7 apps?
+### Can I update my library to version 8 by adding the `static` flag to view queries, while still being compatible with Angular Classicversion 7 apps?
 
-Yes, the Angular team's recommendation for libraries is to update to version 8 and add the `static` flag.
-Angular version 7 apps will continue to work with libraries that have this flag.
+Yes, the Angular Classicteam's recommendation for libraries is to update to version 8 and add the `static` flag.
+Angular Classicversion 7 apps will continue to work with libraries that have this flag.
 
-However, if you update your library to Angular version 8 and want to take advantage of the new version 8 APIs, or you want more recent dependencies \(such as Typescript or RxJS\) your library will become incompatible with Angular version 7 apps.
-If your goal is to make your library compatible with Angular versions 7 and 8, you should not update your lib at all &mdash;except for `peerDependencies` in `package.json`.
+However, if you update your library to Angular Classicversion 8 and want to take advantage of the new version 8 APIs, or you want more recent dependencies \(such as Typescript or RxJS\) your library will become incompatible with Angular Classicversion 7 apps.
+If your goal is to make your library compatible with Angular Classicversions 7 and 8, you should not update your lib at all &mdash;except for `peerDependencies` in `package.json`.
 
-In general, the most efficient plan is for libraries to adopt a 6-month major version schedule and bump the major version after each Angular update.
+In general, the most efficient plan is for libraries to adopt a 6-month major version schedule and bump the major version after each Angular Classicupdate.
 That way, libraries stay in the same release cadence as Angular.
 
 <!-- links -->

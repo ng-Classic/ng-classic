@@ -6,5 +6,5 @@ import { Component, VERSION } from '@angular-classic/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+  name = 'Angular Classic' + VERSION.major;
 }

@@ -1,8 +1,8 @@
 # Select a documentation issue
 
-This topic describes how to select an Angular documentation issue to fix.
+This topic describes how to select an Angular Classicdocumentation issue to fix.
 
-Angular documentation issues are stored in the **Issues** tab of the [angular/angular](https://github.com/angular/angular) repo.
+Angular Classicdocumentation issues are stored in the **Issues** tab of the [angular/angular](https://github.com/angular/angular) repo.
 Documentation issues can be identified by the `area: docs` label and they are labeled by priority.
 
 You are welcome to work on [any issue](#links-to-documentation-issues) that someone else isn't already working on.

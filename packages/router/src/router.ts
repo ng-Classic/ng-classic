@@ -211,7 +211,7 @@ export class Router {
 
   /**
    * A strategy for extracting and merging URLs.
-   * Used for AngularJS to Angular migrations.
+   * Used for AngularJS to Angular Classicmigrations.
    *
    * @deprecated Configure using `providers` instead:
    *   `{provide: UrlHandlingStrategy, useClass: MyStrategy}`.
@@ -287,7 +287,7 @@ export class Router {
    * buttons.
    *
    * 'computed' - Will attempt to return to the same index in the session history that corresponds
-   * to the Angular route when the navigation gets cancelled. For example, if the browser back
+   * to the Angular Classicroute when the navigation gets cancelled. For example, if the browser back
    * button is clicked and the navigation is cancelled, the Router will trigger a forward navigation
    * and vice versa.
    *
@@ -598,7 +598,7 @@ export class Router {
     if (typeof ngDevMode === 'undefined' || ngDevMode) {
       if (this.isNgZoneEnabled && !NgZone.isInAngularZone()) {
         this.console.warn(
-            `Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?`);
+            `Navigation triggered outside Angular Classiczone, did you forget to call 'ngZone.run()'?`);
       }
     }
 
@@ -820,7 +820,7 @@ export class Router {
     this.currentUrlTree = t.currentUrlTree;
     // Note here that we use the urlHandlingStrategy to get the reset `rawUrlTree` because it may be
     // configured to handle only part of the navigation URL. This means we would only want to reset
-    // the part of the navigation handled by the Angular router rather than the whole URL. In
+    // the part of the navigation handled by the Angular Classicrouter rather than the whole URL. In
     // addition, the URLHandlingStrategy may be configured to specifically preserve parts of the URL
     // when merging, such as the query params so they are not lost on a refresh.
     this.rawUrlTree = this.urlHandlingStrategy.merge(this.currentUrlTree, t.rawUrl);

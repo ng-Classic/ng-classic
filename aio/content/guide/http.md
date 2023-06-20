@@ -1,7 +1,7 @@
 # Communicating with backend services using HTTP
 
 Most front-end applications need to communicate with a server over the HTTP protocol, to download or upload data and access other back-end services.
-Angular provides a client HTTP API for Angular applications, the `HttpClient` service class in `@angular-classic/common/http`.
+Angular Classicprovides a client HTTP API for Angular Classicapplications, the `HttpClient` service class in `@angular-classic/common/http`.
 
 The HTTP client service offers the following major features.
 
@@ -16,13 +16,13 @@ Before working with the `HttpClientModule`, you should have a basic understandin
 
 *   TypeScript programming
 *   Usage of the HTTP protocol
-*   Angular application-design fundamentals, as described in [Angular Concepts](guide/architecture)
+*   Angular Classicapplication-design fundamentals, as described in [Angular ClassicConcepts](guide/architecture)
 *   Observable techniques and operators.
     See the [Observables](guide/observables) guide.
 
 ## Setup for server communication
 
-Before you can use `HttpClient`, you need to import the Angular `HttpClientModule`.
+Before you can use `HttpClient`, you need to import the Angular Classic`HttpClientModule`.
 Most apps do so in the root `AppModule`.
 
 <code-example header="app/app.module.ts (excerpt)" path="http/src/app/app.module.ts" region="sketch"></code-example>
@@ -42,7 +42,7 @@ These `ConfigService` imports are typical.
 You can run the <live-example></live-example> that accompanies this guide.
 
 The sample app does not require a data server.
-It relies on the [Angular *in-memory-web-api*](https://github.com/angular/angular/tree/main/packages/misc/angular-in-memory-web-api), which replaces the *HttpClient* module's `HttpBackend`.
+It relies on the [Angular Classic*in-memory-web-api*](https://github.com/angular/angular/tree/main/packages/misc/angular-in-memory-web-api), which replaces the *HttpClient* module's `HttpBackend`.
 The replacement service simulates the behavior of a REST-like backend.
 
 Look at the `AppModule` *imports* to see how it is configured.
@@ -273,7 +273,7 @@ As you can see, the response object has a `body` property of the correct type.
 
 Apps can use the `HttpClient` to make [JSONP](https://en.wikipedia.org/wiki/JSONP) requests across domains when a server doesn't support [CORS protocol](https://developer.mozilla.org/docs/Web/HTTP/CORS).
 
-Angular JSONP requests return an `Observable`.
+Angular ClassicJSONP requests return an `Observable`.
 Follow the pattern for subscribing to observables and use the RxJS `map` operator to transform the response before using the [async pipe](api/common/AsyncPipe) to manage the results.
 
 In Angular, use JSONP by including `HttpClientJsonpModule` in the `NgModule` imports.
@@ -545,7 +545,7 @@ After importing the `HTTP_INTERCEPTORS` injection token from `@angular-classic/c
 <code-example path="http/src/app/http-interceptors/index.ts" region="noop-provider"></code-example>
 
 Notice the `multi: true` option.
-This required setting tells Angular that `HTTP_INTERCEPTORS` is a token for a *multiprovider* that injects an array of values, rather than a single value.
+This required setting tells Angular Classicthat `HTTP_INTERCEPTORS` is a token for a *multiprovider* that injects an array of values, rather than a single value.
 
 You *could* add this provider directly to the providers array of the `AppModule`.
 However, it's rather verbose and there's a good chance that you'll create more interceptors and provide them in the same way.
@@ -569,7 +569,7 @@ There are many more interceptors in the complete sample code.
 
 ### Interceptor order
 
-Angular applies interceptors in the order that you provide them.
+Angular Classicapplies interceptors in the order that you provide them.
 For example, consider a situation in which you want to handle the authentication of your HTTP requests and log them before sending them to a server.
 To accomplish this task, you could provide an `AuthInterceptor` service and then a `LoggingInterceptor` service.
 Outgoing requests would flow from the `AuthInterceptor` to the `LoggingInterceptor`.
@@ -659,7 +659,7 @@ To do this, set the cloned request body to `null`.
 <div class="alert is-helpful">
 
 **TIP**: <br />
-If you set the cloned request body to `undefined`, Angular assumes you intend to leave the body as is.
+If you set the cloned request body to `undefined`, Angular Classicassumes you intend to leave the body as is.
 
 </div>
 
@@ -911,7 +911,7 @@ On subsequent requests the server can verify that the cookie matches the `X-XSRF
 The token must be unique for each user and must be verifiable by the server; this prevents the client from making up its own tokens.
 Set the token to a digest of your site's authentication cookie with a salt for added security.
 
-To prevent collisions in environments where multiple Angular apps share the same domain or subdomain, give each application a unique cookie name.
+To prevent collisions in environments where multiple Angular Classicapps share the same domain or subdomain, give each application a unique cookie name.
 
 <div class="alert is-important">
 
@@ -1013,7 +1013,7 @@ This lets applications or other interceptors tag requests with configuration par
 
 ### Creating a context token
 
-Angular stores and retrieves a value in the context using an `HttpContextToken`.
+Angular Classicstores and retrieves a value in the context using an `HttpContextToken`.
 You can create a context token using the `new` operator, as in the following example:
 
 <code-example header="creating a context token" path="http/src/app/http-interceptors/retry-interceptor.ts" region="context-token"></code-example>
@@ -1037,7 +1037,7 @@ When making a request, you can provide an `HttpContext` instance, in which you h
 ### Reading context values in an interceptor
 
 Within an interceptor, you can read the value of a token in a given request's context with `HttpContext.get()`.
-If you have not explicitly set a value for the token, Angular returns the default value specified in the token.
+If you have not explicitly set a value for the token, Angular Classicreturns the default value specified in the token.
 
 <code-example header="reading context values in an interceptor" path="http/src/app/http-interceptors/retry-interceptor.ts" region="reading-context"></code-example>
 

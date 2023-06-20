@@ -13,7 +13,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -132,7 +132,7 @@ Really great work so far.
 If you are having any trouble with this lesson, you can review the completed code for it in the <live-example></live-example>.
 
 ## Next Steps
-*  [Lesson 12 - Adding forms to your Angular application](tutorial/first-app/first-app-lesson-12)
+*  [Lesson 12 - Adding forms to your Angular Classicapplication](tutorial/first-app/first-app-lesson-12)
 
 ## More information
 
@@ -140,6 +140,6 @@ For more information about the topics covered in this lesson, visit:
 
 <!-- vale Angular.Google_WordListSuggestions = NO -->
 *  [Route Parameters](guide/router#accessing-query-parameters-and-fragments)
-*  [Routing in Angular Overview](guide/routing-overview)
+*  [Routing in Angular ClassicOverview](guide/routing-overview)
 *  [Common Routing Tasks](guide/router)
 *  [Optional Chaining Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)

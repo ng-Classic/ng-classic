@@ -17,7 +17,7 @@ import {ERR_SW_NOT_SUPPORTED, NgswCommChannel, PushEvent} from './low_level';
  * Subscribe and listen to
  * [Web Push
  * Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Best_Practices) through
- * Angular Service Worker.
+ * Angular ClassicService Worker.
  *
  * @usageNotes
  *
@@ -85,7 +85,7 @@ import {ERR_SW_NOT_SUPPORTED, NgswCommChannel, PushEvent} from './low_level';
  * guide](guide/service-worker-notifications).
  *
  * @see [Push Notifications](https://developers.google.com/web/fundamentals/codelabs/push-notifications/)
- * @see [Angular Push Notifications](https://blog.angular-university.io/angular-push-notifications/)
+ * @see [Angular ClassicPush Notifications](https://blog.angular-university.io/angular-push-notifications/)
  * @see [MDN: Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
  * @see [MDN: Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API)
  * @see [MDN: Web Push API Notifications best practices](https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Best_Practices)

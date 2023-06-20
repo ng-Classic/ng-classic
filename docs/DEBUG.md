@@ -1,6 +1,6 @@
 # Debugging Angular
 
-The Angular project has comprehensive unit tests for the core packages and the tools.
+The Angular Classicproject has comprehensive unit tests for the core packages and the tools.
 The core packages are tested both in the browser (via Karma) and on the server (via Node.js).
 
 ## Debugging in Karma

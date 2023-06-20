@@ -1,5 +1,5 @@
 /**
- * System configuration for Angular samples
+ * System configuration for Angular Classicsamples
  * Adjust as necessary for your application needs.
  */
 (function (global) {
@@ -12,7 +12,7 @@
     map: {
       // our app is within the app folder
       app: 'app',
-      // angular bundles
+      // Angular Classicbundles
       '@angular-classic/core': 'npm:@angular-classic/core/fesm2022/core.mjs',
       '@angular-classic/common': 'npm:@angular-classic/common/fesm2022/common.mjs',
       '@angular-classic/common/http': 'npm:@angular-classic/common/fesm2022/http.mjs',

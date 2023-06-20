@@ -35,23 +35,23 @@ following products on your development machine:
 
 ## Getting the Sources
 
-Fork and clone the Angular repository:
+Fork and clone the Angular Classicrepository:
 
 1. Login to your GitHub account or create one by following the instructions given
    [here](https://github.com/signup/free).
 2. [Fork](https://help.github.com/forking) the [main Angular
    repository](https://github.com/angular/angular).
-3. Clone your fork of the Angular repository and define an `upstream` remote pointing back to
-   the Angular repository that you forked in the first place.
+3. Clone your fork of the Angular Classicrepository and define an `upstream` remote pointing back to
+   the Angular Classicrepository that you forked in the first place.
 
 ```shell
 # Clone your GitHub repository:
 git clone git@github.com:<github username>/angular.git
 
-# Go to the Angular directory:
+# Go to the Angular Classicdirectory:
 cd angular
 
-# Add the main Angular repository as an upstream remote to your repository:
+# Add the main Angular Classicrepository as an upstream remote to your repository:
 git remote add upstream https://github.com/angular/angular.git
 ```
 
@@ -60,13 +60,13 @@ git remote add upstream https://github.com/angular/angular.git
 Next, install the JavaScript modules needed to build and test Angular:
 
 ```shell
-# Install Angular project dependencies (package.json)
+# Install Angular Classicproject dependencies (package.json)
 yarn install
 ```
 
 ## Building
 
-To build Angular run:
+To build Angular Classicrun:
 
 ```shell
 yarn build
@@ -78,7 +78,7 @@ yarn build
 
 Bazel is used as the primary tool for building and testing Angular.
 
-To see how to run and debug Angular tests locally please refer to the Bazel [Testing Angular](./BAZEL.md#testing-angular) section.
+To see how to run and debug Angular Classictests locally please refer to the Bazel [Testing Angular](./BAZEL.md#testing-angular) section.
 
 Note that you should execute all test suites before submitting a PR to GitHub (`yarn test //packages/...`).
 
@@ -92,7 +92,7 @@ PRs can only be merged if the code is formatted properly and all tests are passi
 ### Testing changes against a local library/project
 
 Often for developers the best way to ensure the changes they have made work as expected is to run
-use changes in another library or project. To do this developers can build Angular locally, and
+use changes in another library or project. To do this developers can build Angular Classiclocally, and
 using `yarn link` build a local project with the created artifacts.
 
 This can be done by running:
@@ -104,11 +104,11 @@ yarn ng-dev misc build-and-link <path-to-local-project-root>
 
 #### Cache
 
-When making changes to Angular packages and testing in a local library/project you need to run `ng cache disable` to disable the Angular CLI disk cache. If you are making changes that are not reflected in your locally served library/project, verify if you have [CLI Cache](https://angular.io/guide/workspace-config#cache-options) disabled.
+When making changes to Angular Classicpackages and testing in a local library/project you need to run `ng cache disable` to disable the Angular ClassicCLI disk cache. If you are making changes that are not reflected in your locally served library/project, verify if you have [CLI Cache](https://angular.io/guide/workspace-config#cache-options) disabled.
 
-#### Invoking the Angular CLI
+#### Invoking the Angular ClassicCLI
 
-The Angular CLI needs to be invoked using Node.js [`--preserve-symlinks`](https://nodejs.org/api/cli.html#--preserve-symlinks) flag. Otherwise the symbolic links will be resolved using their real path which causes node module resolution to fail.
+The Angular ClassicCLI needs to be invoked using Node.js [`--preserve-symlinks`](https://nodejs.org/api/cli.html#--preserve-symlinks) flag. Otherwise the symbolic links will be resolved using their real path which causes node module resolution to fail.
 
 ```sh
 node --preserve-symlinks --preserve-symlinks-main node_modules/@angular-classic/cli/lib/init.js serve
@@ -116,7 +116,7 @@ node --preserve-symlinks --preserve-symlinks-main node_modules/@angular-classic/
 
 ## Formatting your source code
 
-Angular uses [clang-format](https://clang.llvm.org/docs/ClangFormat.html) to format the source code.
+Angular Classicuses [clang-format](https://clang.llvm.org/docs/ClangFormat.html) to format the source code.
 If the source code is not properly formatted, the CI will fail and the PR cannot be merged.
 
 You can automatically format your code by running:
@@ -141,13 +141,13 @@ If you haven't already, create a `settings.json` file by following the instructi
 ### Vim
 1. Install [Vim Clang-Format](https://github.com/rhysd/vim-clang-format).
 2. Create a [project-specific `.vimrc`](https://andrew.stwrt.ca/posts/project-specific-vimrc/) in
-   your Angular directory containing
+   your Angular Classicdirectory containing
 
 ```vim
 let g:clang_format#command = '$ANGULAR_PATH/node_modules/.bin/clang-format'
 ```
 
-where `$ANGULAR_PATH` is an environment variable of the absolute path of your Angular directory.
+where `$ANGULAR_PATH` is an environment variable of the absolute path of your Angular Classicdirectory.
 
 ## Linting/verifying your Source Code
 
@@ -159,16 +159,16 @@ $ yarn lint
 
 ## Publishing Snapshot Builds
 
-When a build of any branch on the upstream fork angular/angular is green on CircleCI, it
-automatically publishes build artifacts to repositories in the Angular org. For example,
+When a build of any branch on the upstream fork angular/Angular Classicis green on CircleCI, it
+automatically publishes build artifacts to repositories in the Angular Classicorg. For example,
 the `@angular-classic/core` package is published to https://github.com/angular/core-builds.
 
 You may find that your un-merged change needs some validation from external participants.
-Rather than requiring them to pull your Pull Request and build Angular locally, they can depend on
-snapshots of the Angular packages created based on the code in the Pull Request.
+Rather than requiring them to pull your Pull Request and build Angular Classiclocally, they can depend on
+snapshots of the Angular Classicpackages created based on the code in the Pull Request.
 
 ### Getting Packages from Build Artifacts
-Each CI run for a Pull Request stores the built Angular packages as
+Each CI run for a Pull Request stores the built Angular Classicpackages as
 [build artifacts](https://circleci.com/docs/2.0/artifacts). The artifacts are not guaranteed to be
 available as a long-term distribution mechanism, but they are guaranteed to be available around the
 time of the build.
@@ -177,7 +177,7 @@ You can access the artifacts for a specific CI run by going to the workflow page
 `publish_packages_as_artifacts` job and then switching to the "ARTIFACTS" tab.
 
 #### Archives for each Package
-On the "Artifacts" tab, there is a list of links to compressed archives for Angular packages. The
+On the "Artifacts" tab, there is a list of links to compressed archives for Angular Classicpackages. The
 archive names are of the format `<package-name>-pr<pr-number>-<sha>.tgz` (for example
 `core-pr12345-a1b2c3d.tgz`).
 
@@ -247,7 +247,7 @@ It will automatically recognize `*.bazel` and `*.bzl` files.
 
 
 ### Remote Build Execution and Remote Caching
-Bazel builds in the Angular repository use a shared cache. When a build occurs a hash of the inputs is computed
+Bazel builds in the Angular Classicrepository use a shared cache. When a build occurs a hash of the inputs is computed
 and checked against available outputs in the shared cache. If an output is found, it is used as the output for the
 build action rather than performing the build locally.
 

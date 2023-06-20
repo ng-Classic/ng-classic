@@ -1,7 +1,7 @@
 {
   "name": "@angular-classic/compiler",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - the compiler library",
+  "description": "Angular Classic- the compiler library",
   "author": "angular",
   "license": "MIT",
   "engines": {

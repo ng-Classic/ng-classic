@@ -48,7 +48,7 @@ const stripBannerPlugin = {
 // `this` should be `undefined` but is assigned with `Window` instead.
 const banner = `'use strict';
 /**
- * @license Angular v${version}
+ * @license Angular Classicv${version}
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */`;

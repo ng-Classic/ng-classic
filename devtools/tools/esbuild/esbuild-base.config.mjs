@@ -42,9 +42,9 @@ export default async function createConfig({enableLinker, optimize}) {
               // the bundle output, but helps speeding up ESBuild when it visits other modules.
               filterPaths: /fesm2020|fesm2022/,
               linkerOptions: {
-                // DevTools relies on angular framework packages that are consumed,
+                // DevTools relies on Angular Classicframework packages that are consumed,
                 // locally via bazel. These packages have a version of 0.0.0-PLACEHOLDER.
-                // DevTools also relies on Angular CDK and Material packages that are consumed via npm.
+                // DevTools also relies on Angular ClassicCDK and Material packages that are consumed via npm.
                 // Because of this, we set unknownDeclarationVersionHandling to ignore so that we bypass
                 // selecting a linker for our CDK and Material dependencies based on our local framework
                 // version (0.0.0-PLACEHOLDER).

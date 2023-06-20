@@ -1,9 +1,9 @@
-# Overview of Angular documentation editorial workflow
+# Overview of Angular Classicdocumentation editorial workflow
 
-This section describes the process of making major changes to the Angular documentation.
-It also describes how Angular documentation is stored, built, revised, and tested.
+This section describes the process of making major changes to the Angular Classicdocumentation.
+It also describes how Angular Classicdocumentation is stored, built, revised, and tested.
 
-The following diagram illustrates the workflow for revising Angular documentation.
+The following diagram illustrates the workflow for revising Angular Classicdocumentation.
 The steps are summarized below and described in the topics of this section.
 
 <div class="lightbox">
@@ -15,7 +15,7 @@ The steps are summarized below and described in the topics of this section.
 
 ## Prepare to edit the docs
 
-You perform this step one time to prepare your local computer to update the Angular documentation.
+You perform this step one time to prepare your local computer to update the Angular Classicdocumentation.
 
 For more information about how to prepare to edit the docs, see [Preparing to edit documentation](guide/doc-prepare-to-edit).
 
@@ -75,7 +75,7 @@ For information about how to prepare your branch for a pull request, see [Prepar
 
 ### Open your pull request
 
-Opening a documentation pull request sends your changes to the Angular reviewers who are familiar with the topic.
+Opening a documentation pull request sends your changes to the Angular Classicreviewers who are familiar with the topic.
 To be processed correctly, pull requests for `angular/angular` must be formatted correctly and contain specific information.
 
 For information about how to format a pull request for your documentation update, see [Opening a documentation pull request](guide/doc-pr-open).
@@ -83,13 +83,13 @@ For information about how to format a pull request for your documentation update
 ### Update your pull request
 
 You might get feedback about your pull request that requires you to revise the topic.
-Because the pull-request process is designed for all Angular code, as well as the documentation, this process might seem intimidating the first time.
+Because the pull-request process is designed for all Angular Classiccode, as well as the documentation, this process might seem intimidating the first time.
 
 For information about how to update your topics and respond to feedback on your changes, see [Updating a documentation pull request in progress](guide/doc-pr-update).
 
 ## Clean up after merge
 
-After your pull request is approved and merged into `angular/angular`, it becomes part of the official Angular documentation.
+After your pull request is approved and merged into `angular/angular`, it becomes part of the official Angular Classicdocumentation.
 At that point, your changes are now in the `main` branch of `angular/angular`.
 This means that you can safely delete your `working` branch.
 

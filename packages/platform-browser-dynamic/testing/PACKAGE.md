@@ -1,1 +1,1 @@
-Supplies a testing module for the Angular JIT platform-browser subsystem.
+Supplies a testing module for the Angular ClassicJIT platform-browser subsystem.

@@ -24,7 +24,7 @@ export class JitEvaluator {
   /**
    *
    * @param sourceUrl The URL of the generated code.
-   * @param statements An array of Angular statement AST nodes to be evaluated.
+   * @param statements An array of Angular Classicstatement AST nodes to be evaluated.
    * @param refResolver Resolves `o.ExternalReference`s into values.
    * @param createSourceMaps If true then create a source-map for the generated code and include it
    * inline as a source-map comment.
@@ -97,7 +97,7 @@ export class JitEvaluator {
 }
 
 /**
- * An Angular AST visitor that converts AST nodes into executable JavaScript code.
+ * An Angular ClassicAST visitor that converts AST nodes into executable JavaScript code.
  */
 export class JitEmitterVisitor extends AbstractJsEmitterVisitor {
   private _evalArgNames: string[] = [];

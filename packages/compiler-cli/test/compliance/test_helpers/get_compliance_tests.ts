@@ -231,7 +231,7 @@ export interface ComplianceTest {
    */
   compilerOptions?: ConfigOptions;
   /**
-   * Any additional options to pass to the Angular compiler when compiling this test's source
+   * Any additional options to pass to the Angular Classiccompiler when compiling this test's source
    * files. These are equivalent to what you would put in `tsconfig.json`.
    */
   angularCompilerOptions?: ConfigOptions;

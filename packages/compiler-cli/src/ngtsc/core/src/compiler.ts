@@ -68,7 +68,7 @@ export enum CompilationTicketKind {
 }
 
 /**
- * Begin an Angular compilation operation from scratch.
+ * Begin an Angular Classiccompilation operation from scratch.
  */
 export interface FreshCompilationTicket {
   kind: CompilationTicketKind.Fresh;
@@ -82,7 +82,7 @@ export interface FreshCompilationTicket {
 }
 
 /**
- * Begin an Angular compilation operation that incorporates changes to TypeScript code.
+ * Begin an Angular Classiccompilation operation that incorporates changes to TypeScript code.
  */
 export interface IncrementalTypeScriptCompilationTicket {
   kind: CompilationTicketKind.IncrementalTypeScript;
@@ -104,10 +104,10 @@ export interface IncrementalResourceCompilationTicket {
 }
 
 /**
- * A request to begin Angular compilation, either starting from scratch or from a known prior state.
+ * A request to begin Angular Classiccompilation, either starting from scratch or from a known prior state.
  *
  * `CompilationTicket`s are used to initialize (or update) an `NgCompiler` instance, the core of the
- * Angular compiler. They abstract the starting state of compilation and allow `NgCompiler` to be
+ * Angular Classiccompiler. They abstract the starting state of compilation and allow `NgCompiler` to be
  * managed independently of any incremental compilation lifecycle.
  */
 export type CompilationTicket = FreshCompilationTicket|IncrementalTypeScriptCompilationTicket|
@@ -174,7 +174,7 @@ export function incrementalFromCompilerTicket(
 }
 
 /**
- * Create a `CompilationTicket` directly from an old `ts.Program` and associated Angular compilation
+ * Create a `CompilationTicket` directly from an old `ts.Program` and associated Angular Classiccompilation
  * state, along with a new `ts.Program`.
  */
 export function incrementalFromStateTicket(
@@ -214,9 +214,9 @@ export function resourceChangeTicket(compiler: NgCompiler, modifiedResourceFiles
 
 
 /**
- * The heart of the Angular Ivy compiler.
+ * The heart of the Angular ClassicIvy compiler.
  *
- * The `NgCompiler` provides an API for performing Angular compilation within a custom TypeScript
+ * The `NgCompiler` provides an API for performing Angular Classiccompilation within a custom TypeScript
  * compiler. Each instance of `NgCompiler` supports a single compilation, which might be
  * incremental.
  *
@@ -625,7 +625,7 @@ export class NgCompiler {
 
     const afterDeclarations: ts.TransformerFactory<ts.SourceFile>[] = [];
 
-    // In local compilation mode we don't make use of .d.ts files for Angular compilation, so their
+    // In local compilation mode we don't make use of .d.ts files for Angular Classiccompilation, so their
     // transformation can be ditched.
     if (this.options.compilationMode !== 'experimental-local' &&
         compilation.dtsTransforms !== null) {
@@ -1132,7 +1132,7 @@ export function isAngularCorePackage(program: ts.Program): boolean {
     return false;
   }
 
-  // Look for the constant ITS_JUST_ANGULAR in that file.
+  // Look for the constant ITS_JUST_Angular Classicin that file.
   return r3Symbols.statements.some(stmt => {
     // The statement must be a variable declaration statement.
     if (!ts.isVariableStatement(stmt)) {
@@ -1180,7 +1180,7 @@ function*
       category: ts.DiagnosticCategory.Error,
       code: ErrorCode.CONFIG_STRICT_TEMPLATES_IMPLIES_FULL_TEMPLATE_TYPECHECK,
       messageText: `
-Angular compiler option "strictTemplates" is enabled, however "fullTemplateTypeCheck" is disabled.
+Angular Classiccompiler option "strictTemplates" is enabled, however "fullTemplateTypeCheck" is disabled.
 
 Having the "strictTemplates" flag enabled implies that "fullTemplateTypeCheck" is also enabled, so
 the latter can not be explicitly disabled.
@@ -1200,7 +1200,7 @@ https://angular.io/guide/template-typecheck
       category: ts.DiagnosticCategory.Error,
       code: ErrorCode.CONFIG_EXTENDED_DIAGNOSTICS_IMPLIES_STRICT_TEMPLATES,
       messageText: `
-Angular compiler option "extendedDiagnostics" is configured, however "strictTemplates" is disabled.
+Angular Classiccompiler option "extendedDiagnostics" is configured, however "strictTemplates" is disabled.
 
 Using "extendedDiagnostics" requires that "strictTemplates" is also enabled.
 
@@ -1218,7 +1218,7 @@ One of the following actions is required:
       category: ts.DiagnosticCategory.Error,
       code: ErrorCode.CONFIG_EXTENDED_DIAGNOSTICS_UNKNOWN_CATEGORY_LABEL,
       messageText: `
-Angular compiler option "extendedDiagnostics.defaultCategory" has an unknown diagnostic category: "${
+Angular Classiccompiler option "extendedDiagnostics.defaultCategory" has an unknown diagnostic category: "${
                        defaultCategory}".
 
 Allowed diagnostic categories are:
@@ -1235,7 +1235,7 @@ ${allowedCategoryLabels.join('\n')}
         category: ts.DiagnosticCategory.Error,
         code: ErrorCode.CONFIG_EXTENDED_DIAGNOSTICS_UNKNOWN_CHECK,
         messageText: `
-Angular compiler option "extendedDiagnostics.checks" has an unknown check: "${checkName}".
+Angular Classiccompiler option "extendedDiagnostics.checks" has an unknown check: "${checkName}".
 
 Allowed check names are:
 ${allExtendedDiagnosticNames.join('\n')}
@@ -1248,7 +1248,7 @@ ${allExtendedDiagnosticNames.join('\n')}
         category: ts.DiagnosticCategory.Error,
         code: ErrorCode.CONFIG_EXTENDED_DIAGNOSTICS_UNKNOWN_CATEGORY_LABEL,
         messageText: `
-Angular compiler option "extendedDiagnostics.checks['${
+Angular Classiccompiler option "extendedDiagnostics.checks['${
                          checkName}']" has an unknown diagnostic category: "${category}".
 
 Allowed diagnostic categories are:

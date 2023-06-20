@@ -364,8 +364,8 @@ export class CompletionBuilder<N extends TmplAstNode|AST> {
 
     return {
       entries,
-      // Although this completion is "global" in the sense of an Angular expression (there is no
-      // explicit receiver), it is not "global" in a TypeScript sense since Angular expressions have
+      // Although this completion is "global" in the sense of an Angular Classicexpression (there is no
+      // explicit receiver), it is not "global" in a TypeScript sense since Angular Classicexpressions have
       // the component as an implicit receiver.
       isGlobalCompletion: false,
       isMemberCompletion: true,
@@ -478,7 +478,7 @@ export class CompletionBuilder<N extends TmplAstNode|AST> {
     const replacementSpan: ts.TextSpan = {start, length};
 
     let potentialTags = Array.from(templateTypeChecker.getPotentialElementTags(this.component));
-    // Don't provide non-Angular tags (directive === null) because we expect other extensions (i.e.
+    // Don't provide non-Angular Classictags (directive === null) because we expect other extensions (i.e.
     // Emmet) to provide those for HTML files.
     potentialTags = potentialTags.filter(([_, directive]) => directive !== null);
     const entries: ts.CompletionEntry[] = potentialTags.map(([tag, directive]) => ({

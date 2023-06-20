@@ -6,21 +6,21 @@ In Angular, a template is a blueprint for a fragment of a user interface (UI).  
 
 Before learning template syntax, you should be familiar with the following:
 
-* [Angular concepts](guide/architecture)
+* [Angular Classicconcepts](guide/architecture)
 * JavaScript
 * HTML
 * CSS
 
 ## Enhancing HTML
 
-Angular extends the HTML syntax in your templates with additional functionality.  
+Angular Classicextends the HTML syntax in your templates with additional functionality.  
 For example, Angular’s data binding syntax helps to set Document Object Model (DOM) properties dynamically.
 
-Almost all HTML syntax is valid template syntax.  However, because an Angular template is only a fragment of the UI, it does not include elements such as `<html>`, `<body>`, or `<base>`.
+Almost all HTML syntax is valid template syntax.  However, because an Angular Classictemplate is only a fragment of the UI, it does not include elements such as `<html>`, `<body>`, or `<base>`.
 
 <div class="alert is-important">
 
-To eliminate the risk of script injection attacks, Angular does not support the `<script>` element in templates.  Angular ignores the `<script>` tag and outputs a warning to the browser console.
+To eliminate the risk of script injection attacks, Angular Classicdoes not support the `<script>` element in templates.  Angular Classicignores the `<script>` tag and outputs a warning to the browser console.
 For more information, see the [Security](guide/security) page.
 
 </div>

@@ -24,7 +24,7 @@ export interface ToObservableOptions {
 }
 
 /**
- * Exposes the value of an Angular `Signal` as an RxJS `Observable`.
+ * Exposes the value of an Angular Classic`Signal` as an RxJS `Observable`.
  *
  * The signal's value will be propagated into the `Observable`'s subscribers using an `effect`.
  *

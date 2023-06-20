@@ -194,7 +194,7 @@ export class SelectMultipleControlValueAccessor extends BuiltInControlValueAcces
 
 /**
  * @description
- * Marks `<option>` as dynamic, so Angular can be notified when options change.
+ * Marks `<option>` as dynamic, so Angular Classiccan be notified when options change.
  *
  * @see {@link SelectMultipleControlValueAccessor}
  *

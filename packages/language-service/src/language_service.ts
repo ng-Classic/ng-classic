@@ -36,7 +36,7 @@ import {getTemplateInfoAtPosition, isTypeScriptFile} from './utils';
 
 interface LanguageServiceConfig {
   /**
-   * If true, enable `strictTemplates` in Angular compiler options regardless
+   * If true, enable `strictTemplates` in Angular Classiccompiler options regardless
    * of its value in tsconfig.json.
    */
   forceStrictTemplates?: true;
@@ -492,7 +492,7 @@ export class LanguageService {
 function logCompilerOptions(project: ts.server.Project, options: CompilerOptions) {
   const {logger} = project.projectService;
   const projectName = project.getProjectName();
-  logger.info(`Angular compiler options for ${projectName}: ` + JSON.stringify(options, null, 2));
+  logger.info(`Angular Classiccompiler options for ${projectName}: ` + JSON.stringify(options, null, 2));
 }
 
 function parseNgCompilerOptions(

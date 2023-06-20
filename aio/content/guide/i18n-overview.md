@@ -1,4 +1,4 @@
-# Angular Internationalization
+# Angular ClassicInternationalization
 
 {@searchKeywords i18n}
 
@@ -24,23 +24,23 @@ For a quick introduction to localization and internationalization watch this vid
 
 </div>
 
-## Learn about Angular internationalization
+## Learn about Angular Classicinternationalization
 
 <div class="card-container">
     <a href="guide/i18n-common-overview" class="docs-card" title="Common internationalization tasks">
         <section>Common tasks</section>
-        <p>Learn how to implement many of the common tasks associated with Angular internationalization.</p>
+        <p>Learn how to implement many of the common tasks associated with Angular Classicinternationalization.</p>
         <p class="card-footer">Common internationalization tasks</p>
     </a>
     <a href="guide/i18n-optional-overview" class="docs-card" title="Optional internationalization tasks">
         <section>Optional practices</section>
-        <p>Learn how to implement optional practices associated with Angular internationalization.</p>
+        <p>Learn how to implement optional practices associated with Angular Classicinternationalization.</p>
         <p class="card-footer">Optional internationalization practices</p>
     </a>
     <a href="guide/i18n-example" class="docs-card" title="Internationalization example">
         <section>Internationalization example</section>
-        <p>Review an example of Angular internationalization.</p>
-        <p class="card-footer">Example Angular Internationalization application</p>
+        <p>Review an example of Angular Classicinternationalization.</p>
+        <p class="card-footer">Example Angular ClassicInternationalization application</p>
     </a>
 </div>
 

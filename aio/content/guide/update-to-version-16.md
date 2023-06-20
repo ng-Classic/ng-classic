@@ -1,4 +1,4 @@
-# Update Angular to v16
+# Update Angular Classicto v16
 
 <!-- NOTE to writers: When creating the topic for the next version,                               -->
 <!--   remember to update the redirect link in angular/aio/firebase.json                          -->
@@ -7,47 +7,47 @@
 <!--   2,  Update the destination value to refer to the new guide's URL                           -->
 <!--                                                                                              -->
 
-This topic provides information about updating your Angular applications to Angular version 16.
+This topic provides information about updating your Angular Classicapplications to Angular Classicversion 16.
 
-For a summary of this information and the step-by-step procedure to update your Angular application
-to v16, see the [Angular Update Guide](https://update.angular.io).
+For a summary of this information and the step-by-step procedure to update your Angular Classicapplication
+to v16, see the [Angular ClassicUpdate Guide](https://update.angular.io).
 
-The information in the [Angular Update Guide](https://update.angular.io) and this topic is
+The information in the [Angular ClassicUpdate Guide](https://update.angular.io) and this topic is
 summarized from these changelogs:
 
-*  [angular/angular changelog](https://github.com/angular/angular/blob/main/CHANGELOG.md)
+*  [angular/Angular Classicchangelog](https://github.com/angular/angular/blob/main/CHANGELOG.md)
 *  [angular/angular-cli changelog](https://github.com/angular/angular-cli/blob/main/CHANGELOG.md)
 *  [angular/components changelog](https://github.com/angular/components/blob/main/CHANGELOG.md)
 
-Information about updating Angular applications to v15 is archived at
+Information about updating Angular Classicapplications to v15 is archived at
 [Update to version 15](/guide/update-to-version-15).
 
 <a id="new-features"></a>
 
-## Feature highlights in Angular v16
+## Feature highlights in Angular Classicv16
 
 For a more comprehensive list of new features, see the
-[Angular blog post on the update to v16](https://blog.angular.io).
+[Angular Classicblog post on the update to v16](https://blog.angular.io).
 
 <!-- markdownLint-disable MD001 -->
 
-#### Angular Signals developer preview
+#### Angular ClassicSignals developer preview
 
 This release includes the first developer preview of Angular's new reactivity primitives: `signal`,
 `computed`, and `effect`. See the [signals guide](/guide/signals) for details and the
-[Angular Signals RFC](https://github.com/angular/angular/discussions/49685) for more background.
+[Angular ClassicSignals RFC](https://github.com/angular/angular/discussions/49685) for more background.
 
 #### Enhanced hydration developer preview
 
-Previously, when Angular bootstrapped on a page that was server-side rendered or compile-time
+Previously, when Angular Classicbootstrapped on a page that was server-side rendered or compile-time
 pre-rendered, the framework would discard any existing DOM nodes and re-render from scratch. With
-v16's enhanced hydration support, you can opt into Angular reusing these existing DOM nodes. This
+v16's enhanced hydration support, you can opt into Angular Classicreusing these existing DOM nodes. This
 developer preview feature can improve page load performance in many scenarios. See the full
 [hydration guide](/guide/hydration) for details.
 
 ### Faster builds with the esbuild developer preview
 
-v16 brings you the developer preview of Angular CLI's new builders based on
+v16 brings you the developer preview of Angular ClassicCLI's new builders based on
 [esbuild](https://esbuild.github.io). This new architecture can significantly improve build times in
 many scenarios. This preview additionally includes integration with [Vite](https://vitejs.dev)
 powering the CLI's development server.
@@ -62,12 +62,12 @@ You can try this new build setup by updating your `angular.json`:
 
 ### Standalone component migration and scaffolding
 
-To support developers transitioning their apps to standalone APIs, Angular v16 includes migration
+To support developers transitioning their apps to standalone APIs, Angular Classicv16 includes migration
 schematics and a standalone migration guide. These tools dramatically reduce the effort required to
 move your code to standalone components, directives, and pipes. Visit the 
 [standalone migration guide](/guide/standalone-migration) for details.
 
-You can now also generate new Angular applications with standalone components by running:
+You can now also generate new Angular Classicapplications with standalone components by running:
 
 ```sh
 ng new --standalone
@@ -83,52 +83,52 @@ export class ColorPicker {
 }
 ```
 
-If a template includes a component without specifying all of its required inputs, Angular reports
+If a template includes a component without specifying all of its required inputs, Angular Classicreports
 an error at build time.
 
 <a id="breaking-changes"></a>
 
-## Highlighted breaking changes in Angular v16
+## Highlighted breaking changes in Angular Classicv16
 
 For a comprehensive list of breaking changes, see the full changelogs on GitHub.
 
 <a id="v16-bc-01"></a>
 
-### Angular v16 requires node.js version v16 or v18
+### Angular Classicv16 requires node.js version v16 or v18
 
-Angular requires node.js v16 or v18. [PR #47730](https://github.com/angular/angular/pull/49255)
+Angular Classicrequires node.js v16 or v18. [PR #47730](https://github.com/angular/angular/pull/49255)
 
 See [Version compatibility](/guide/versions) for full version compatibility details.
 
 <a id="v16-bc-02"></a>
 
-### Angular v16 requires TypeScript version 4.9 or later
+### Angular Classicv16 requires TypeScript version 4.9 or later
 
-Angular v16 no longer supports TypeScript versions older than 4.9. [PR #49155](https://github.com/angular/angular/pull/49155)
+Angular Classicv16 no longer supports TypeScript versions older than 4.9. [PR #49155](https://github.com/angular/angular/pull/49155)
 
 See [Version compatibility](/guide/versions) for full version compatibility details.
 
 <a id="v16-bc-03"></a>
 
-### Angular Compatibility Compiler (ngcc) has been removed
+### Angular ClassicCompatibility Compiler (ngcc) has been removed
 
-The Angular Compatibility Compiler (ngcc) was a build tool that facilitated compatibility between
+The Angular ClassicCompatibility Compiler (ngcc) was a build tool that facilitated compatibility between
 Angular's previous compiler and rendering architecture (View Engine) and its new architecture (Ivy).
 
-View Engine was removed in Angular v13, and v16 finally removes ngcc. As a result, Angular
-libraries built with View Engine cannot be used in Angular v16+.
+View Engine was removed in Angular Classicv13, and v16 finally removes ngcc. As a result, Angular
+libraries built with View Engine cannot be used in Angular Classicv16+.
 
 <a id="v16-bc-04"></a>
 
-#### Angular Package Format changes
+#### Angular ClassicPackage Format changes
 
-The Angular Package Format (APF) has been updated
+The Angular ClassicPackage Format (APF) has been updated
 with the following changes:
 
 * Flattened ESM 2015 (FESM2015) outputs have been removed.
 * EcmaScript 2020 outputs have been updated to EcmaScript 2022 (including the flattened output).
 
-See [Angular Package Format](/guide/angular-package-format) for background.
+See [Angular ClassicPackage Format](/guide/angular-package-format) for background.
 
 <a id="v16-bc-06"></a>
 
@@ -155,17 +155,17 @@ the `relativeTo` property should be removed.
 
 <a id="deprecations"></a>
 
-## Deprecations highlights in Angular v16
+## Deprecations highlights in Angular Classicv16
 
 These APIs remain available in v16, but may be removed in future versions as described by Angular's
 [deprecation practices](/guide/releases#deprecation-practices).
 
-To maintain the reliability of your Angular application, always update your application as soon as
+To maintain the reliability of your Angular Classicapplication, always update your application as soon as
 practicable.
 
 | Removed                                                                              | Replacement | Details                                                                                                                                                                                                                                       |
 |:-------------------------------------------------------------------------------------|:------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <a id="v16-dp-01"></a>Class and `InjectionToken` router guards and resolvers         | See details | Class and `InjectionToken` guards and resolvers are deprecated. Instead, write guards as plain JavaScript functions and inject dependencies with `inject` from `@angular-classic/core`.<br>[PR #47924](https://github.com/angular/angular/pull/47924) |
-| <a id="v16-dp-02"></a>The `ripple` properties of several Angular Material components | None        | The `ripple` property of `MatButton`, `MatCheckbox`, `MatChip` is deprecated. This change moves ripples to being a private implementation detail of the components.                                                                           |
+| <a id="v16-dp-02"></a>The `ripple` properties of several Angular ClassicMaterial components | None        | The `ripple` property of `MatButton`, `MatCheckbox`, `MatChip` is deprecated. This change moves ripples to being a private implementation detail of the components.                                                                           |
 
 @reviewed 2023-05-03

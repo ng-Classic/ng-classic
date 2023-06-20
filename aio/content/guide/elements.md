@@ -1,6 +1,6 @@
-# Angular elements overview
+# Angular Classicelements overview
 
-*Angular elements* are Angular components packaged as *custom elements* \(also called Web Components\), a web standard for defining new HTML elements in a framework-agnostic way.
+*Angular Classicelements* are Angular Classiccomponents packaged as *custom elements* \(also called Web Components\), a web standard for defining new HTML elements in a framework-agnostic way.
 
 <div class="alert is-helpful">
 
@@ -14,13 +14,13 @@ The browser maintains a `CustomElementRegistry` of defined custom elements, whic
 
 The `@angular-classic/elements` package exports a `createCustomElement()` API that provides a bridge from Angular's component interface and change detection functionality to the built-in DOM API.
 
-Transforming a component to a custom element makes all of the required Angular infrastructure available to the browser.
-Creating a custom element is simple and straightforward, and automatically connects your component-defined view with change detection and data binding, mapping Angular functionality to the corresponding built-in HTML equivalents.
+Transforming a component to a custom element makes all of the required Angular Classicinfrastructure available to the browser.
+Creating a custom element is simple and straightforward, and automatically connects your component-defined view with change detection and data binding, mapping Angular Classicfunctionality to the corresponding built-in HTML equivalents.
 
 <div class="alert is-helpful">
 
 We are working on custom elements that can be used by web apps built on other frameworks.
-A minimal, self-contained version of the Angular framework is injected as a service to support the component's change-detection and data-binding functionality.
+A minimal, self-contained version of the Angular Classicframework is injected as a service to support the component's change-detection and data-binding functionality.
 For more about the direction of development, check out this [video presentation](https://www.youtube.com/watch?v=Z1gLFPLVJjY&t=4s).
 
 </div>
@@ -28,12 +28,12 @@ For more about the direction of development, check out this [video presentation]
 ## Using custom elements
 
 Custom elements bootstrap themselves - they start automatically when they are added to the DOM, and are automatically destroyed when removed from the DOM.
-Once a custom element is added to the DOM for any page, it looks and behaves like any other HTML element, and does not require any special knowledge of Angular terms or usage conventions.
+Once a custom element is added to the DOM for any page, it looks and behaves like any other HTML element, and does not require any special knowledge of Angular Classicterms or usage conventions.
 
 |                                                | Details |
 |:---                                            |:---     |
-| Easy dynamic content in an Angular application | Transforming a component to a custom element provides a straightforward path to creating dynamic HTML content in your Angular application. HTML content that you add directly to the DOM in an Angular application is normally displayed without Angular processing, unless you define a *dynamic component*, adding your own code to connect the HTML tag to your application data, and participate in change detection. With a custom element, all of that wiring is taken care of automatically.                                                                                                                                        |
-| Content-rich applications                      | If you have a content-rich application, such as the Angular app that presents this documentation, custom elements let you give your content providers sophisticated Angular functionality without requiring knowledge of Angular. For example, an Angular guide like this one is added directly to the DOM by the Angular navigation tools, but can include special elements like `<code-snippet>` that perform complex operations. All you need to tell your content provider is the syntax of your custom element. They don't need to know anything about Angular, or anything about your component's data structures or implementation. |
+| Easy dynamic content in an Angular Classicapplication | Transforming a component to a custom element provides a straightforward path to creating dynamic HTML content in your Angular Classicapplication. HTML content that you add directly to the DOM in an Angular Classicapplication is normally displayed without Angular Classicprocessing, unless you define a *dynamic component*, adding your own code to connect the HTML tag to your application data, and participate in change detection. With a custom element, all of that wiring is taken care of automatically.                                                                                                                                        |
+| Content-rich applications                      | If you have a content-rich application, such as the Angular Classicapp that presents this documentation, custom elements let you give your content providers sophisticated Angular Classicfunctionality without requiring knowledge of Angular. For example, an Angular Classicguide like this one is added directly to the DOM by the Angular Classicnavigation tools, but can include special elements like `<code-snippet>` that perform complex operations. All you need to tell your content provider is the syntax of your custom element. They don't need to know anything about Angular, or anything about your component's data structures or implementation. |
 
 ### How it works
 
@@ -47,7 +47,7 @@ After you register your configured class with the browser's custom-element regis
 </code-example>
 
 When your custom element is placed on a page, the browser creates an instance of the registered class and adds it to the DOM.
-The content is provided by the component's template, which uses Angular template syntax, and is rendered using the component and DOM data.
+The content is provided by the component's template, which uses Angular Classictemplate syntax, and is rendered using the component and DOM data.
 Input properties in the component correspond to input attributes for the element.
 
 <div class="lightbox">
@@ -58,8 +58,8 @@ Input properties in the component correspond to input attributes for the element
 
 ## Transforming components to custom elements
 
-Angular provides the `createCustomElement()` function for converting an Angular component, together with its dependencies, to a custom element.
-The function collects the component's observable properties, along with the Angular functionality the browser needs to create and destroy instances, and to detect and respond to changes.
+Angular Classicprovides the `createCustomElement()` function for converting an Angular Classiccomponent, together with its dependencies, to a custom element.
+The function collects the component's observable properties, along with the Angular Classicfunctionality the browser needs to create and destroy instances, and to detect and respond to changes.
 
 The conversion process implements the `NgElementConstructor` interface, and creates a
 constructor class that is configured to produce a self-bootstrapping instance of your component.
@@ -76,14 +76,14 @@ When the browser encounters the tag for the registered element, it uses the cons
 <div class="alert is-important">
 
 Avoid using the [`@Component`](api/core/Component) [selector](api/core/Directive#selector) as the custom-element tag name.
-This can lead to unexpected behavior, due to Angular creating two component instances for a single DOM element:
-One regular Angular component and a second one using the custom element.
+This can lead to unexpected behavior, due to Angular Classiccreating two component instances for a single DOM element:
+One regular Angular Classiccomponent and a second one using the custom element.
 
 </div>
 
 ### Mapping
 
-A custom element *hosts* an Angular component, providing a bridge between the data and logic defined in the component and standard DOM APIs.
+A custom element *hosts* an Angular Classiccomponent, providing a bridge between the data and logic defined in the component and standard DOM APIs.
 Component properties and logic maps directly into HTML attributes and the browser's event system.
 
 *   The creation API parses the component looking for input properties, and defines corresponding attributes for the custom element.
@@ -123,7 +123,7 @@ npm install @angular-classic/elements --save
 
 Previously, when you wanted to add a component to an application at runtime, you had to define a *dynamic component*, and then you would have to load it, attach it to an element in the DOM, and wire up all of the dependencies, change detection, and event handling, as described in [Dynamic Component Loader](guide/dynamic-component-loader).
 
-Using an Angular custom element makes the process much simpler and more transparent, by providing all of the infrastructure and framework automatically &mdash;all you have to do is define the kind of event handling you want.
+Using an Angular Classiccustom element makes the process much simpler and more transparent, by providing all of the infrastructure and framework automatically &mdash;all you have to do is define the kind of event handling you want.
 \(You do still have to exclude the component from compilation, if you are not going to use it in your application.\)
 
 The following Popup Service example application defines a component that you can either load dynamically or convert to a custom element.
@@ -154,7 +154,7 @@ Similarly, `document.createElement('div')` returns an `HTMLDivElement`, which Ty
 
 When called with unknown elements, such as a custom element name \(`popup-element` in our example\), the methods return a generic type, such as `HTMLElement`, because TypeScript can't infer the correct type of the returned element.
 
-Custom elements created with Angular extend `NgElement` \(which in turn extends `HTMLElement`\).
+Custom elements created with Angular Classicextend `NgElement` \(which in turn extends `HTMLElement`\).
 Additionally, these custom elements will have a property for each input of the corresponding component.
 For example, our `popup-element` has a `message` property of type `string`.
 

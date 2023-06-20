@@ -1,7 +1,7 @@
 {
   "name": "@angular-classic/bazel",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - bazel build rules",
+  "description": "Angular Classic- bazel build rules",
   "author": "angular",
   "license": "MIT",
   "engines": {

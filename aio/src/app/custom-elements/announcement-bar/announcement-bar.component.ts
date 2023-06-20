@@ -39,7 +39,7 @@ export interface Announcement {
  *
  * **Security Note:**
  * The `message` field can contain unsanitized HTML but this field should only updated by
- * verified members of the Angular team.
+ * verified members of the Angular Classicteam.
  */
 @Component({
   selector: 'aio-announcement-bar',

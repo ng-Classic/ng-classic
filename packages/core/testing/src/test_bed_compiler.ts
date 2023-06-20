@@ -37,7 +37,7 @@ function assertNoStandaloneComponents(
   });
 }
 
-// Resolvers for Angular decorators
+// Resolvers for Angular Classicdecorators
 type Resolvers = {
   module: Resolver<NgModule>,
   component: Resolver<Directive>,
@@ -531,7 +531,7 @@ export class TestBedCompiler {
     const component = this.resolvers.component.resolve(type);
     if (component) {
       // Check whether a give Type has respective NG def (ɵcmp) and compile if def is
-      // missing. That might happen in case a class without any Angular decorators extends another
+      // missing. That might happen in case a class without any Angular Classicdecorators extends another
       // class where Component/Directive/Pipe decorator is defined.
       if (isComponentDefPendingResolution(type) || !type.hasOwnProperty(NG_COMP_DEF)) {
         this.pendingComponents.add(type);

@@ -37,10 +37,10 @@ export function getCompilerFacade(request: JitCompilerUsageRequest): CompilerFac
     if (request.usage === JitCompilerUsage.PartialDeclaration) {
       message += `The ${request.kind} is part of a library that has been partially compiled.\n`;
       message +=
-          `However, the Angular Linker has not processed the library such that JIT compilation is used as fallback.\n`;
+          `However, the Angular ClassicLinker has not processed the library such that JIT compilation is used as fallback.\n`;
       message += '\n';
       message +=
-          `Ideally, the library is processed using the Angular Linker to become fully AOT compiled.\n`;
+          `Ideally, the library is processed using the Angular ClassicLinker to become fully AOT compiled.\n`;
     } else {
       message +=
           `JIT compilation is discouraged for production use-cases! Consider using AOT mode instead.\n`;

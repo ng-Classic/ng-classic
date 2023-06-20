@@ -1,10 +1,10 @@
-# Example Angular Internationalization application
+# Example Angular ClassicInternationalization application
 
 ## Explore the translated example application
 
 <div class="alert is-helpful">
 
-To explore the sample application with French translations used in the [Angular Internationalization][AioGuideI18nOverview] guide, see <live-example name="i18n" title="live example"></live-example>.
+To explore the sample application with French translations used in the [Angular ClassicInternationalization][AioGuideI18nOverview] guide, see <live-example name="i18n" title="live example"></live-example>.
 
 </div>
 
@@ -22,7 +22,7 @@ The following tabs display the example application and the associated translatio
 
 <!-- links -->
 
-[AioGuideI18nOverview]: guide/i18n-overview "Angular Internationalization | Angular"  
+[AioGuideI18nOverview]: guide/i18n-overview "Angular ClassicInternationalization | Angular"  
 
 <!-- external links -->
 

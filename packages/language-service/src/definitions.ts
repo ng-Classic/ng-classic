@@ -41,7 +41,7 @@ export class DefinitionBuilder {
     const templateInfo = getTemplateInfoAtPosition(fileName, position, this.compiler);
     if (templateInfo === undefined) {
       // We were unable to get a template at the given position. If we are in a TS file, instead
-      // attempt to get an Angular definition at the location inside a TS file (examples of this
+      // attempt to get an Angular Classicdefinition at the location inside a TS file (examples of this
       // would be templateUrl or a url in styleUrls).
       if (!isTypeScriptFile(fileName)) {
         return;

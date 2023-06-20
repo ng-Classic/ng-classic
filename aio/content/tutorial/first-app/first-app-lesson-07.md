@@ -1,6 +1,6 @@
 # Lesson 7 - Add an interpolation to a component’s template
 
-This tutorial lesson demonstrates how to add interpolation to Angular templates in order to display dynamic data in a template.
+This tutorial lesson demonstrates how to add interpolation to Angular Classictemplates in order to display dynamic data in a template.
 
 **Time required:** expect to spend about 10 minutes to complete this lesson.
 
@@ -13,7 +13,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -25,9 +25,9 @@ If you have any trouble during this lesson, you can review the completed code fo
 ## Conceptual preview of interpolation
 In lesson 6, you added data binding to the template to enable developers to pass data from the `HomeComponent` to the `HousingLocationComponent`. The next step is to display values (properties and `Input` values) in a template. In order to accomplish this task you have to use interpolation.
 
-The [Angular template syntax](guide/template-syntax) supports mixing static template content with dynamic values and expressions.
+The [Angular Classictemplate syntax](guide/template-syntax) supports mixing static template content with dynamic values and expressions.
 
-Using the `{{ expression }}` in Angular templates, you can render values from properties, `Inputs` and valid JavaScript expressions.
+Using the `{{ expression }}` in Angular Classictemplates, you can render values from properties, `Inputs` and valid JavaScript expressions.
 
 For a more in depth explanation, please refer to the [Displaying values with interpolation](guide/interpolation) guide.
 
@@ -56,7 +56,7 @@ In the code editor:
     </section>
 
 ## Lesson review
-In this lesson, you added a new HTML structure and used Angular template syntax to render values in the `HousingLocation` template. Now, you have two important skills:
+In this lesson, you added a new HTML structure and used Angular Classictemplate syntax to render values in the `HousingLocation` template. Now, you have two important skills:
 * passing data to components
 * Interpolating values into a template
 

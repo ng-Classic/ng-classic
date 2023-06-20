@@ -119,7 +119,7 @@ describe('@angular-classic/core ng_package', () => {
 
       it('should have the version info in the header', () => {
         expect(shx.cat('fesm2022/core.mjs'))
-            .toMatch(/@license Angular v\d+\.\d+\.\d+(?!-PLACEHOLDER)/);
+            .toMatch(/@license Angular Classicv\d+\.\d+\.\d+(?!-PLACEHOLDER)/);
       });
     });
 
@@ -154,7 +154,7 @@ describe('@angular-classic/core ng_package', () => {
 
       it('should have the version info in the header', () => {
         expect(shx.cat('fesm2022/testing.mjs'))
-            .toMatch(/@license Angular v\d+\.\d+\.\d+(?!-PLACEHOLDER)/);
+            .toMatch(/@license Angular Classicv\d+\.\d+\.\d+(?!-PLACEHOLDER)/);
       });
     });
   });

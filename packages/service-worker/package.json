@@ -1,7 +1,7 @@
 {
   "name": "@angular-classic/service-worker",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - service worker tooling!",
+  "description": "Angular Classic- service worker tooling!",
   "author": "angular",
   "license": "MIT",
   "engines": {

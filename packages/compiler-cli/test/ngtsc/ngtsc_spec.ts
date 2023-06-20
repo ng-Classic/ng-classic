@@ -1157,7 +1157,7 @@ function allTests(os: string) {
       expect(dtsContents).toContain(expectedDirectiveDeclaration);
     });
 
-    describe('undecorated classes using Angular features', () => {
+    describe('undecorated classes using Angular Classicfeatures', () => {
       it('should error if @Input has been discovered',
          () => assertErrorUndecoratedClassWithField('Input'));
       it('should error if @Output has been discovered',
@@ -1203,8 +1203,8 @@ function allTests(os: string) {
         expect(errors.length).toBe(1);
         expect(trim(errors[0].messageText as string))
             .toContain(
-                'Class is using Angular features but is not decorated. Please add an explicit ' +
-                'Angular decorator.');
+                'Class is using Angular Classicfeatures but is not decorated. Please add an explicit ' +
+                'Angular Classicdecorator.');
       }
 
       function assertErrorUndecoratedClassWithLifecycleHook(lifecycleName: string) {
@@ -1222,8 +1222,8 @@ function allTests(os: string) {
         expect(errors.length).toBe(1);
         expect(trim(errors[0].messageText as string))
             .toContain(
-                'Class is using Angular features but is not decorated. Please add an explicit ' +
-                'Angular decorator.');
+                'Class is using Angular Classicfeatures but is not decorated. Please add an explicit ' +
+                'Angular Classicdecorator.');
       }
     });
 
@@ -3187,7 +3187,7 @@ function allTests(os: string) {
           expect(diags[0].messageText)
               .toEqual(
                   `The directive AbstractMiddleDir inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to AbstractMiddleDir.`);
           expect(getDiagnosticSourceCode(diags[0])).toBe('AbstractMiddleDir');
@@ -3196,7 +3196,7 @@ function allTests(os: string) {
           expect(diags[1].messageText)
               .toEqual(
                   `The directive ConcreteMiddleDir inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, or ` +
                   `add an explicit constructor to ConcreteMiddleDir.`);
           expect(getDiagnosticSourceCode(diags[1])).toBe('ConcreteMiddleDir');
@@ -3205,7 +3205,7 @@ function allTests(os: string) {
           expect(diags[2].messageText)
               .toEqual(
                   `The directive ConcreteDirWithoutCtor inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to ConcreteDirWithoutCtor.`);
           expect(getDiagnosticSourceCode(diags[2])).toBe('ConcreteDirWithoutCtor');
@@ -3396,7 +3396,7 @@ function allTests(os: string) {
           expect(diags[0].messageText)
               .toEqual(
                   `The directive AbstractMiddleDir inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to AbstractMiddleDir.`);
           expect(getDiagnosticSourceCode(diags[0])).toBe('AbstractMiddleDir');
@@ -3405,7 +3405,7 @@ function allTests(os: string) {
           expect(diags[1].messageText)
               .toEqual(
                   `The directive ConcreteMiddleDir inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to ConcreteMiddleDir.`);
           expect(getDiagnosticSourceCode(diags[1])).toBe('ConcreteMiddleDir');
@@ -3414,7 +3414,7 @@ function allTests(os: string) {
           expect(diags[2].messageText)
               .toEqual(
                   `The directive ConcreteDirWithoutCtor inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to ConcreteDirWithoutCtor.`);
           expect(getDiagnosticSourceCode(diags[2])).toBe('ConcreteDirWithoutCtor');
@@ -5805,7 +5805,7 @@ function allTests(os: string) {
         verifyThrownError(
             ErrorCode.NGMODULE_INVALID_IMPORT,
             'This likely means that the library (external) which declares NotAModule is not ' +
-                'compatible with Angular Ivy.');
+                'compatible with Angular ClassicIvy.');
       });
 
       it('should provide a hint when importing an invalid NgModule from a local library', () => {
@@ -5826,7 +5826,7 @@ function allTests(os: string) {
         verifyThrownError(
             ErrorCode.NGMODULE_INVALID_IMPORT,
             'This likely means that the dependency which declares NotAModule is not ' +
-                'compatible with Angular Ivy.');
+                'compatible with Angular ClassicIvy.');
       });
 
       it('should provide a hint when importing an invalid NgModule in the current program', () => {
@@ -6065,7 +6065,7 @@ function allTests(os: string) {
            expect(errors.length).toBe(1);
            expect(errors[0].messageText)
                .toBe(
-                   'Angular compiler option "flatModuleOutFile" requires one and only one .ts file in the "files" field.');
+                   'Angular Classiccompiler option "flatModuleOutFile" requires one and only one .ts file in the "files" field.');
          });
 
       it('should report an error when a visible directive is not exported', () => {
@@ -7631,7 +7631,7 @@ function allTests(os: string) {
          });
 
       it('should generate an attribute binding instruction with a validator function ' +
-             '(making sure it\'s case-insensitive, since this is allowed in Angular templates)',
+             '(making sure it\'s case-insensitive, since this is allowed in Angular Classictemplates)',
          () => {
            env.write('test.ts', `
               import {Component} from '@angular-classic/core';

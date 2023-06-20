@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-describe('AngularJS to Angular Quick Reference Tests', () => {
+describe('AngularJS to Angular ClassicQuick Reference Tests', () => {
 
   beforeAll(() => browser.get(''));
 

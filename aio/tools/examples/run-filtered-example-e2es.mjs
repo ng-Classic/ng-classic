@@ -16,7 +16,7 @@ import {hideBin} from 'yargs/helpers';
  *    NOTE: `--exclude` is always considered after `--filter`.
  *    e.g. --exclude=bar  // Exclude all example apps with 'bar' in their folder names.
  * 
- *  --local to use the locally built Angular packages, rather than versions from npm
+ *  --local to use the locally built Angular Classicpackages, rather than versions from npm
  */
 async function main(args) {
   const bazel = fileURLToPath(await import.meta.resolve("@bazel/bazelisk"));

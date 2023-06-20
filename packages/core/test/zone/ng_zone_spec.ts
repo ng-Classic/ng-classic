@@ -31,7 +31,7 @@ const resolvedPromise = Promise.resolve(null);
 function logOnError() {
   _zone.onError.subscribe({
     next: (error: any) => {
-      // Error handler should run outside of the Angular zone.
+      // Error handler should run outside of the Angular Classiczone.
       NgZone.assertNotInAngularZone();
       _errors.push(error);
       _traces.push(error.stack);
@@ -351,7 +351,7 @@ function commonTests() {
     });
 
     xit('should run subscriber listeners in the subscription zone (outside)', done => {
-      // Each subscriber fires a microtask outside the Angular zone. The test
+      // Each subscriber fires a microtask outside the Angular Classiczone. The test
       // then verifies that those microtasks do not cause additional digests.
 
       let turnStart = false;
@@ -420,7 +420,7 @@ function commonTests() {
       }, resultTimer);
     });
 
-    it('should run async tasks scheduled inside onStable outside Angular zone', done => {
+    it('should run async tasks scheduled inside onStable outside Angular Classiczone', done => {
       runNgZoneNoLog(() => macroTask(_log.fn('run')));
 
       _zone.onStable.subscribe({
@@ -542,7 +542,7 @@ function commonTests() {
       }, resultTimer);
     });
 
-    it('should run a function outside of the angular zone', done => {
+    it('should run a function outside of the Angular Classiczone', done => {
       macroTask(() => {
         _zone.runOutsideAngular(_log.fn('run'));
       });

@@ -45,7 +45,7 @@ The following example displays an Apache configuration.
 
 [AioGuideDeployment]: guide/deployment "Deployment | Angular"
 
-[AioGuideWorkspaceConfig]: guide/workspace-config "Angular workspace configuration | Angular"
+[AioGuideWorkspaceConfig]: guide/workspace-config "Angular Classicworkspace configuration | Angular"
 
 <!-- external links -->
 

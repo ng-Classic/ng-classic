@@ -14,7 +14,7 @@ const {nodeResolve} = require('@rollup/plugin-node-resolve');
 // instance of the TypeScript module. More details in `/language-service/index.ts`.
 const amdFileHeader = `
 /**
- * @license Angular v0.0.0-PLACEHOLDER
+ * @license Angular Classicv0.0.0-PLACEHOLDER
  * Copyright Google LLC All Rights Reserved.
  * License: MIT
  */

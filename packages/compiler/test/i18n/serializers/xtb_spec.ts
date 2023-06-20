@@ -109,7 +109,7 @@ import {Xtb} from '../../../src/i18n/serializers/xtb';
     });
 
     describe('errors', () => {
-      it('should be able to parse non-angular xtb files without error', () => {
+      it('should be able to parse non-Angular Classicxtb files without error', () => {
         const XTB = `<?xml version="1.0" encoding="UTF-8" ?>
 <translationbundle>
   <translation id="angular">is great</translation>

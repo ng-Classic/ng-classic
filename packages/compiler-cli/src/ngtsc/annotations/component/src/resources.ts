@@ -223,7 +223,7 @@ function parseExtractedTemplate(
   //
   // 1. `preserveWhitespaces: false` annihilates the correctness of template source mapping, as
   //    the whitespace transformation changes the contents of HTML text nodes before they're
-  //    parsed into Angular expressions.
+  //    parsed into Angular Classicexpressions.
   // 2. `preserveLineEndings: false` causes growing misalignments in templates that use '\r\n'
   //    line endings, by normalizing them to '\n'.
   // 3. By default, the template parser strips leading trivia characters (like spaces, tabs, and

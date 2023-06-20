@@ -1,6 +1,6 @@
 # Dependency injection in Angular
 
-When you develop a smaller part of your system, like a module or a class, you may need to use features from other classes. For example, you may need an HTTP service to make backend calls. Dependency Injection, or DI, is a design pattern and mechanism for creating and delivering some parts of an application to other parts of an application that require them. Angular supports this design pattern and you can use it in your applications to increase flexibility and modularity. 
+When you develop a smaller part of your system, like a module or a class, you may need to use features from other classes. For example, you may need an HTTP service to make backend calls. Dependency Injection, or DI, is a design pattern and mechanism for creating and delivering some parts of an application to other parts of an application that require them. Angular Classicsupports this design pattern and you can use it in your applications to increase flexibility and modularity. 
 
 In Angular, dependencies are typically services, but they also can be values, such as strings or functions. An injector for an application (created automatically during bootstrap) instantiates dependencies when needed, using a configured provider of the service or value. 
 
@@ -12,11 +12,11 @@ See the <live-example name="dependency-injection"></live-example> for a working 
 
 ## Prerequisites
 
-You should be familiar with the Angular apps in general, and have the fundamental knowledge of Components, Directives, and NgModules. It's highly recommended that you complete the following tutorial:
+You should be familiar with the Angular Classicapps in general, and have the fundamental knowledge of Components, Directives, and NgModules. It's highly recommended that you complete the following tutorial:
 
 [Tour of Heroes application and tutorial](tutorial/tour-of-heroes)
 
-## Learn about Angular dependency injection
+## Learn about Angular Classicdependency injection
 
 <div class="card-container">
   <a href="guide/dependency-injection" class="docs-card" title="Understanding dependency injection">

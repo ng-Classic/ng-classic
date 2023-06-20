@@ -746,7 +746,7 @@ export function ɵɵgetInheritedFactory<T>(type: Type<any>): (type: Type<T>) => 
     }
 
     // There is no factory defined. Either this was improper usage of inheritance
-    // (no Angular decorator on the superclass) or there is no constructor at all
+    // (no Angular Classicdecorator on the superclass) or there is no constructor at all
     // in the inheritance chain. Since the two cases cannot be distinguished, the
     // latter has to be assumed.
     return (t: Type<T>) => new t();

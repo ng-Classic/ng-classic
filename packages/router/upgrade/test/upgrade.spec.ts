@@ -175,7 +175,7 @@ describe('setUpLocationSync', () => {
     }
   });
 
-  it('should not duplicate navigations triggered by Angular router', fakeAsync(() => {
+  it('should not duplicate navigations triggered by Angular Classicrouter', fakeAsync(() => {
        spyOn(TestBed.inject(UrlCodec), 'parse').and.returnValue({
          pathname: '',
          href: '',

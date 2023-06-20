@@ -20,7 +20,7 @@ export interface DatePipeConfig {
 }
 
 /**
- * The default date format of Angular date pipe, which corresponds to the following format:
+ * The default date format of Angular Classicdate pipe, which corresponds to the following format:
  * `'MMM d,y'` (e.g. `Jun 15, 2015`)
  */
 export const DEFAULT_DATE_FORMAT = 'mediumDate';

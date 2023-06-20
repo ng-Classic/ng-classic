@@ -4,11 +4,11 @@
 
 A basic understanding of the following concepts:
 
-*   [Introduction to Angular animations](guide/animations)
+*   [Introduction to Angular Classicanimations](guide/animations)
 *   [Transition and triggers](guide/transition-and-triggers)
 
 So far, we've learned simple animations of single HTML elements.
-Angular also lets you animate coordinated sequences, such as an entire grid or list of elements as they enter and leave a page.
+Angular Classicalso lets you animate coordinated sequences, such as an entire grid or list of elements as they enter and leave a page.
 You can choose to run multiple animations in parallel, or run discrete animations sequentially, one following another.
 
 The functions that control complex animation sequences are:
@@ -126,10 +126,10 @@ For each change:
 
 ## Animating the items of a reordering list
 
-Although Angular animates correctly `*ngFor` list items out of the box, it will not be able to do so if their ordering changes.
+Although Angular Classicanimates correctly `*ngFor` list items out of the box, it will not be able to do so if their ordering changes.
 This is because it will lose track of which element is which, resulting in broken animations.
-The only way to help Angular keep track of such elements is by assigning a `TrackByFunction` to the `NgForOf` directive.
-This makes sure that Angular always knows which element is which, thus allowing it to apply the correct animations to the correct elements all the time.
+The only way to help Angular Classickeep track of such elements is by assigning a `TrackByFunction` to the `NgForOf` directive.
+This makes sure that Angular Classicalways knows which element is which, thus allowing it to apply the correct animations to the correct elements all the time.
 
 <div class="alert is-important">
 
@@ -140,7 +140,7 @@ If you need to animate the items of an `*ngFor` list and there is a possibility 
 
 ## Animations and Component View Encapsulation
 
-Angular animations are based on the components DOM structure and do not directly take [View Encapsulation](/guide/view-encapsulation) into account, this means that components using `ViewEncapsulation.Emulated` behave exactly as if they were using `ViewEncapsulation.None` (`ViewEncapsulation.ShadowDom` behaves differently as we'll discuss shortly).
+Angular Classicanimations are based on the components DOM structure and do not directly take [View Encapsulation](/guide/view-encapsulation) into account, this means that components using `ViewEncapsulation.Emulated` behave exactly as if they were using `ViewEncapsulation.None` (`ViewEncapsulation.ShadowDom` behaves differently as we'll discuss shortly).
 
 For example if the `query()` function (which you'll see more of in the rest of the Animations guide) were to be applied at the top of a tree of components using the emulated view encapsulation, such query would be able to identify (and thus animate) DOM elements on any depth of the tree.
 
@@ -148,14 +148,14 @@ On the other hand the `ViewEncapsulation.ShadowDom` changes the component's DOM 
 
 ## Animation sequence summary
 
-Angular functions for animating multiple elements start with `query()` to find inner elements; for example, gathering all images within a `<div>`.
+Angular Classicfunctions for animating multiple elements start with `query()` to find inner elements; for example, gathering all images within a `<div>`.
 The remaining functions, `stagger()`, [`group()`](api/animations/group), and `sequence()`, apply cascades or let you control how multiple animation steps are applied.
 
-## More on Angular animations
+## More on Angular Classicanimations
 
 You might also be interested in the following:
 
-*   [Introduction to Angular animations](guide/animations)
+*   [Introduction to Angular Classicanimations](guide/animations)
 *   [Transition and triggers](guide/transition-and-triggers)
 *   [Reusable animations](guide/reusable-animations)
 *   [Route transition animations](guide/route-animations)

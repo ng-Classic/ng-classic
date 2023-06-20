@@ -1,6 +1,6 @@
 # Add the localize package
 
-To take advantage of the localization features of Angular, use the [Angular CLI][AioCliMain] to add the `@angular-classic/localize` package to your project.
+To take advantage of the localization features of Angular, use the [Angular ClassicCLI][AioCliMain] to add the `@angular-classic/localize` package to your project.
 
 To add the `@angular-classic/localize` package, use the following command to update the `package.json` and TypeScript configuration files in your project.
 
@@ -14,7 +14,7 @@ For more information about `package.json` and `tsconfig.json` files, see [Worksp
 
 </div>
 
-If `@angular-classic/localize` is not installed and you try to build a localized version of your project (for example, while using the `i18n` attributes in templates), the [Angular CLI][AioCliMain] will generate an error, which would contain the steps that you can take to enable i18n for your project.
+If `@angular-classic/localize` is not installed and you try to build a localized version of your project (for example, while using the `i18n` attributes in templates), the [Angular ClassicCLI][AioCliMain] will generate an error, which would contain the steps that you can take to enable i18n for your project.
 
 ## Options
 
@@ -23,7 +23,7 @@ If `@angular-classic/localize` is not installed and you try to build a localized
 | `--project`      | The name of the project. | `string` |
 | `--use-at-runtime` | If set, then `$localize` can be used at runtime. Also `@angular-classic/localize` gets included in the `dependencies` section of `package.json`, rather than `devDependencies`, which is the default.  | `boolean` | `false`
 
-For more available options, see [ng add][AioCliAdd] in [Angular CLI][AioCliMain].
+For more available options, see [ng add][AioCliAdd] in [Angular ClassicCLI][AioCliMain].
 ## What's next
 
 *   [@angular-classic/localize API][AioApiLocalize]

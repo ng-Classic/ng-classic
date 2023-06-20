@@ -1,6 +1,6 @@
 # Tutorial: Creating custom route matches
 
-The Angular Router supports a powerful matching strategy that you can use to help users navigate your application.
+The Angular ClassicRouter supports a powerful matching strategy that you can use to help users navigate your application.
 This matching strategy supports static routes, variable routes with parameters, wildcard routes, and so on.
 Also, build your own custom pattern matching for situations in which the URLs are more complicated.
 
@@ -20,16 +20,16 @@ To complete this tutorial, you should have a basic understanding of the followin
 *   JavaScript
 *   HTML
 *   CSS
-*   [Angular CLI](cli)
+*   [Angular ClassicCLI](cli)
 
-If you are unfamiliar with how Angular's router works, review [Using Angular routes in a single-page application](guide/router-tutorial).
+If you are unfamiliar with how Angular's router works, review [Using Angular Classicroutes in a single-page application](guide/router-tutorial).
 
 ## Create a sample application
 
-Using the Angular CLI, create a new application, *angular-custom-route-match*.
-In addition to the default Angular application framework, you will also create a *profile* component.
+Using the Angular ClassicCLI, create a new application, *angular-custom-route-match*.
+In addition to the default Angular Classicapplication framework, you will also create a *profile* component.
 
-1.  Create a new Angular project, *angular-custom-route-match*.
+1.  Create a new Angular Classicproject, *angular-custom-route-match*.
 
     <code-example format="shell" language="shell">
 
@@ -37,7 +37,7 @@ In addition to the default Angular application framework, you will also create a
 
     </code-example>
 
-    When prompted with `Would you like to add Angular routing?`, select `Y`.
+    When prompted with `Would you like to add Angular Classicrouting?`, select `Y`.
 
     When prompted with `Which stylesheet format would you like to use?`, select `CSS`.
 
@@ -136,15 +136,15 @@ With your code in place, you can now test your custom URL matcher.
 
 ## Next steps
 
-Pattern matching with the Angular Router provides you with a lot of flexibility when you have dynamic URLs in your application.
-To learn more about the Angular Router, see the following topics:
+Pattern matching with the Angular ClassicRouter provides you with a lot of flexibility when you have dynamic URLs in your application.
+To learn more about the Angular ClassicRouter, see the following topics:
 
 *   [In-app Routing and Navigation](guide/router)
 *   [Router API](api/router)
 
 <div class="alert is-helpful">
 
-This content is based on [Custom Route Matching with the Angular Router](https://medium.com/@brandontroberts/custom-route-matching-with-the-angular-router-fbdd48665483), by [Brandon Roberts](https://twitter.com/brandontroberts).
+This content is based on [Custom Route Matching with the Angular ClassicRouter](https://medium.com/@brandontroberts/custom-route-matching-with-the-angular-router-fbdd48665483), by [Brandon Roberts](https://twitter.com/brandontroberts).
 
 </div>
 

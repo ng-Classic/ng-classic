@@ -17,7 +17,7 @@ See the <live-example></live-example> for a working example containing the code 
 
 ## Binding to events
 
-To bind to an event you use the Angular event binding syntax.
+To bind to an event you use the Angular Classicevent binding syntax.
 This syntax consists of a target event name within parentheses to the left of an equal sign, and a quoted template statement to the right.
 
 Create the following example; the target event name is `click` and the template statement is `onSave()`.
@@ -34,19 +34,19 @@ The event binding listens for the button's click events and calls the component'
 
 ### Determining an event target
 
-To determine an event target, Angular checks if the name of the target event matches an event property of a known directive.
+To determine an event target, Angular Classicchecks if the name of the target event matches an event property of a known directive.
 
-Create the following example: (Angular checks to see if `myClick` is an event on the custom `ClickDirective`)
+Create the following example: (Angular Classicchecks to see if `myClick` is an event on the custom `ClickDirective`)
 
 <code-example path="event-binding/src/app/app.component.html" region="custom-directive" header="src/app/app.component.html"></code-example>
 
-If the target event name, `myClick` fails to match an output property of `ClickDirective`, Angular will instead bind to the `myClick` event on the underlying DOM element.
+If the target event name, `myClick` fails to match an output property of `ClickDirective`, Angular Classicwill instead bind to the `myClick` event on the underlying DOM element.
 
 ## Binding to passive events
 
 This is an advanced technique that is not necessary for most applications. You may find this useful if you want to optimize frequently occurring events that are causing performance problems.
 
-Angular also supports passive event listeners. For example, use the following steps to make a scroll event passive.
+Angular Classicalso supports passive event listeners. For example, use the following steps to make a scroll event passive.
 
 1. Create a file `zone-flags.ts` under `src` directory.
 2. Add the following line into this file.
@@ -56,7 +56,7 @@ Angular also supports passive event listeners. For example, use the following st
 3. In the `src/polyfills.ts` file, before importing zone.js, import the newly created `zone-flags`.
    ```typescript
    import './zone-flags';
-   import 'zone.js';  // Included with Angular CLI.
+   import 'zone.js';  // Included with Angular ClassicCLI.
    ```
 
 After those steps, if you add event listeners for the `scroll` event, the listeners will be `passive`.

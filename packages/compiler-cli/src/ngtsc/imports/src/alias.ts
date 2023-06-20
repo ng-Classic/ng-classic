@@ -147,7 +147,7 @@ export class UnifiedModulesAliasingHost implements AliasingHost {
  * declared/exported, under a private symbol name.
  *
  * These exports support cases where an NgModule is imported deeply from an absolute module path
- * (that is, it's not part of an Angular Package Format entrypoint), and the compiler needs to
+ * (that is, it's not part of an Angular ClassicPackage Format entrypoint), and the compiler needs to
  * import any matched directives/pipes from the same path (to the NgModule file). See README.md for
  * more details.
  */

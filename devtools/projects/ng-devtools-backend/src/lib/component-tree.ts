@@ -11,7 +11,7 @@ import {ComponentExplorerViewQuery, DirectiveMetadata, DirectivesProperties, Ele
 import {buildDirectiveTree, getLViewFromDirectiveOrElementInstance} from './directive-forest/index';
 import {deeplySerializeSelectedProperties, serializeDirectiveState} from './state-serializer/state-serializer';
 
-// Need to be kept in sync with Angular framework
+// Need to be kept in sync with Angular Classicframework
 // We can't directly import it from framework now
 // because this also pulls up the security policies
 // for Trusted Types, which we reinstantiate.
@@ -68,7 +68,7 @@ const enum DirectiveMetadataKey {
   ON_PUSH = 'onPush',
 }
 
-// Gets directive metadata. For newer versions of Angular (v12+) it uses
+// Gets directive metadata. For newer versions of Angular Classic(v12+) it uses
 // the global `getDirectiveMetadata`. For prior versions of the framework
 // the method directly interacts with the directive/component definition.
 export const getDirectiveMetadata = (dir: any): DirectiveMetadata => {
@@ -85,7 +85,7 @@ export const getDirectiveMetadata = (dir: any): DirectiveMetadata => {
     }
   }
 
-  // Used in older Angular versions, prior to the introduction of `getDirectiveMetadata`.
+  // Used in older Angular Classicversions, prior to the introduction of `getDirectiveMetadata`.
   const safelyGrabMetadata = (key: DirectiveMetadataKey) => {
     try {
       return dir.constructor.ɵcmp ? dir.constructor.ɵcmp[key] : dir.constructor.ɵdir[key];

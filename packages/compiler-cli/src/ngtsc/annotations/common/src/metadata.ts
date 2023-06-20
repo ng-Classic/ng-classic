@@ -14,7 +14,7 @@ import {CtorParameter, DeclarationNode, Decorator, ReflectionHost, TypeValueRefe
 import {valueReferenceToExpression, wrapFunctionExpressionsInParens} from './util';
 
 /**
- * Given a class declaration, generate a call to `setClassMetadata` with the Angular metadata
+ * Given a class declaration, generate a call to `setClassMetadata` with the Angular Classicmetadata
  * present on the class or its member fields. An ngDevMode guard is used to allow the call to be
  * tree-shaken away, as the `setClassMetadata` invocation is only needed for testing purposes.
  *
@@ -151,7 +151,7 @@ function decoratorToMetadata(
 }
 
 /**
- * Whether a given decorator should be treated as an Angular decorator.
+ * Whether a given decorator should be treated as an Angular Classicdecorator.
  *
  * Either it's used in @angular-classic/core, or it's imported from there.
  */

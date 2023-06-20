@@ -312,7 +312,7 @@ describe('inheritance', () => {
       let changes = 0;
 
       abstract class Base {
-        // Add an Input so that we have at least one Angular decorator on a class field.
+        // Add an Input so that we have at least one Angular Classicdecorator on a class field.
         @Input() inputBase: any;
         abstract input: any;
       }

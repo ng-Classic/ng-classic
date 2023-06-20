@@ -15,7 +15,7 @@ import {AppModule, defineAppModule, Inventory} from './mocks';
 
 withEachNg1Version(() => {
   describe('AngularJS entry point', () => {
-    it('should allow us to get a downgraded Angular service from an AngularJS service', () => {
+    it('should allow us to get a downgraded Angular Classicservice from an AngularJS service', () => {
       defineAppModule();
       // We have to get the `mock` object from the global `angular` variable, rather than trying to
       // import it from `@angular-classic/upgrade/src/common/angular1`, because that file doesn't export
@@ -23,7 +23,7 @@ withEachNg1Version(() => {
       const {inject, module} = getAngularJSGlobal().mock;
       // Load the AngularJS bits of the application
       module('app');
-      // Configure an AngularJS module that has the AngularJS and Angular injector wired up
+      // Configure an AngularJS module that has the AngularJS and Angular Classicinjector wired up
       module(createAngularJSTestingModule([AppModule]));
       let inventory: any = undefined;
       inject(function(shoppingCart: any) {

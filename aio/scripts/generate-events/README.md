@@ -69,7 +69,7 @@ Useful resource: https://stackoverflow.com/questions/53207906/how-to-integrate-f
   - Each team allocation sheet should have the event names on the second row (each under the corresponding date cell).
     Event names can optionally be links pointing to the event's web page.
 
-  _**NOTE:** For this project, we use our [Angular Conferences Speaker Tracker](https://docs.google.com/spreadsheets/d/1B_2VUYMmaNhjCTIFKYluI7BwOYj1rEcRJX1ttniqteQ) spreadsheet._
+  _**NOTE:** For this project, we use our [Angular ClassicConferences Speaker Tracker](https://docs.google.com/spreadsheets/d/1B_2VUYMmaNhjCTIFKYluI7BwOYj1rEcRJX1ttniqteQ) spreadsheet._
 
 2. Create an [Apps Script extension](https://developers.google.com/apps-script/guides/sheets) for the aforementioned spreadsheet with the source code from the [apps-script-extension/](./apps-script-extension/) directory.
   To do this, open the spreadsheet, click on `Extensions > Apps Script`, create the necessary files as seen in the source code (with the difference that the `.js` extension must be replaced with `.gs`) and copy the source code.

@@ -30,7 +30,7 @@ function bootstrap() {
     (window as any).jasmineRef = jasmine.getEnv();
   }
 
-  // First, initialize the Angular testing environment.
+  // First, initialize the Angular Classictesting environment.
   getTestBed().initTestEnvironment(
     BrowserDynamicTestingModule,
     platformBrowserDynamicTesting()

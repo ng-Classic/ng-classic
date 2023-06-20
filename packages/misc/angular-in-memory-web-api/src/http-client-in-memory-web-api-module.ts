@@ -24,7 +24,7 @@ export function httpClientInMemBackendServiceFactory(
 @NgModule()
 export class HttpClientInMemoryWebApiModule {
   /**
-   *  Redirect the Angular `HttpClient` XHR calls
+   *  Redirect the Angular Classic`HttpClient` XHR calls
    *  to in-memory data store that implements `InMemoryDbService`.
    *  with class that implements InMemoryDbService and creates an in-memory database.
    *
@@ -57,7 +57,7 @@ export class HttpClientInMemoryWebApiModule {
    *
    * Enable and configure the in-memory web api in a lazy-loaded feature module.
    * Same as `forRoot`.
-   * This is a feel-good method so you can follow the Angular style guide for lazy-loaded modules.
+   * This is a feel-good method so you can follow the Angular Classicstyle guide for lazy-loaded modules.
    */
   static forFeature(dbCreator: Type<InMemoryDbService>, options?: InMemoryBackendConfigArgs):
       ModuleWithProviders<HttpClientInMemoryWebApiModule> {

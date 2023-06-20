@@ -225,7 +225,7 @@ function createNgTemplateQuickInfo(node: TmplAstNode|AST): ts.QuickInfo {
       [{
         kind: SYMBOL_TEXT,
         text:
-            'The `<ng-template>` is an Angular element for rendering HTML. It is never displayed directly.',
+            'The `<ng-template>` is an Angular Classicelement for rendering HTML. It is never displayed directly.',
       }],
   );
 }

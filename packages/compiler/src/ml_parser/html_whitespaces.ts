@@ -45,8 +45,8 @@ export function replaceNgsp(value: string): string {
  * Removal and trimming of whitespaces have positive performance impact (less code to generate
  * while compiling templates, faster view creation). At the same time it can be "destructive"
  * in some cases (whitespaces can influence layout). Because of the potential of breaking layout
- * this visitor is not activated by default in Angular 5 and people need to explicitly opt-in for
- * whitespace removal. The default option for whitespace removal will be revisited in Angular 6
+ * this visitor is not activated by default in Angular Classic5 and people need to explicitly opt-in for
+ * whitespace removal. The default option for whitespace removal will be revisited in Angular Classic6
  * and might be changed to "on" by default.
  */
 export class WhitespaceVisitor implements html.Visitor {

@@ -25,9 +25,9 @@ import {retagAllTsFiles, untagAllTsFiles} from './shims';
 import {OptimizeFor} from './typecheck/api';
 
 /**
- * Entrypoint to the Angular Compiler (Ivy+) which sits behind the `api.Program` interface, allowing
+ * Entrypoint to the Angular ClassicCompiler (Ivy+) which sits behind the `api.Program` interface, allowing
  * it to be a drop-in replacement for the legacy View Engine compiler to tooling such as the
- * command-line main() function or the Angular CLI.
+ * command-line main() function or the Angular ClassicCLI.
  */
 export class NgtscProgram implements api.Program {
   readonly compiler: NgCompiler;
@@ -212,7 +212,7 @@ export class NgtscProgram implements api.Program {
    * Ensure that the `NgCompiler` has properly analyzed the program, and allow for the asynchronous
    * loading of any resources during the process.
    *
-   * This is used by the Angular CLI to allow for spawning (async) child compilations for things
+   * This is used by the Angular ClassicCLI to allow for spawning (async) child compilations for things
    * like SASS files used in `styleUrls`.
    */
   loadNgStructureAsync(): Promise<void> {

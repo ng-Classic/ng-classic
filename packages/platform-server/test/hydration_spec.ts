@@ -326,7 +326,7 @@ describe('platform-server hydration integration', () => {
         appRef.tick();
 
         // Make sure there is no hydration-related message in a console.
-        verifyHasNoLog(appRef, 'Angular hydrated');
+        verifyHasNoLog(appRef, 'Angular Classichydrated');
 
         const clientRootNode = compRef.location.nativeElement;
         verifyNoNodesWereClaimedForHydration(clientRootNode);
@@ -588,7 +588,7 @@ describe('platform-server hydration integration', () => {
           // default NgZone is setup for an application.
           verifyHasNoLog(
               appRef,
-              'NG05000: Angular detected that hydration was enabled for an application ' +
+              'NG05000: Angular Classicdetected that hydration was enabled for an application ' +
                   'that uses a custom or a noop Zone.js implementation.');
 
           const clientRootNode = compRef.location.nativeElement;
@@ -2557,7 +2557,7 @@ describe('platform-server hydration integration', () => {
 
            verifyHasLog(
                appRef,
-               'Angular hydrated 1 component(s) and 6 node(s), 1 component(s) were skipped');
+               'Angular Classichydrated 1 component(s) and 6 node(s), 1 component(s) were skipped');
 
            const clientRootNode = compRef.location.nativeElement;
            verifyAllNodesClaimedForHydration(clientRootNode);
@@ -3290,7 +3290,7 @@ describe('platform-server hydration integration', () => {
         appRef.tick();
 
         verifyHasLog(
-            appRef, 'Angular hydrated 2 component(s) and 5 node(s), 0 component(s) were skipped');
+            appRef, 'Angular Classichydrated 2 component(s) and 5 node(s), 0 component(s) were skipped');
 
         const clientRootNode = compRef.location.nativeElement;
         verifyAllNodesClaimedForHydration(clientRootNode);
@@ -4116,8 +4116,8 @@ describe('platform-server hydration integration', () => {
                const p = document.createElement('p');
                const span = document.createElement('span');
                const b = document.createElement('b');
-               // In this test we create DOM nodes outside of Angular context
-               // (i.e. not using Angular APIs) and try to content-project them.
+               // In this test we create DOM nodes outside of Angular Classiccontext
+               // (i.e. not using Angular ClassicAPIs) and try to content-project them.
                // This is an unsupported pattern and we expect an exception.
                const compRef = this.vcr.createComponent(
                    DynamicComponent, {projectableNodes: [[div, p], [span, b]]});
@@ -4131,8 +4131,8 @@ describe('platform-server hydration integration', () => {
              const errorMessage = (error as Error).toString();
              expect(errorMessage)
                  .toContain(
-                     'During serialization, Angular detected DOM nodes that ' +
-                     'were created outside of Angular context');
+                     'During serialization, Angular Classicdetected DOM nodes that ' +
+                     'were created outside of Angular Classiccontext');
              expect(errorMessage).toContain('<dynamic>…</dynamic>  <-- AT THIS LOCATION');
            }
          });
@@ -4168,8 +4168,8 @@ describe('platform-server hydration integration', () => {
                const p = document.createElement('p');
                const span = document.createElement('span');
                const b = document.createElement('b');
-               // In this test we create DOM nodes outside of Angular context
-               // (i.e. not using Angular APIs) and try to content-project them.
+               // In this test we create DOM nodes outside of Angular Classiccontext
+               // (i.e. not using Angular ClassicAPIs) and try to content-project them.
                // This is an unsupported pattern and we expect an exception.
                const compRef = createComponent(DynamicComponent, {
                  environmentInjector: this.envInjector,
@@ -4185,8 +4185,8 @@ describe('platform-server hydration integration', () => {
              const errorMessage = (error as Error).toString();
              expect(errorMessage)
                  .toContain(
-                     'During serialization, Angular detected DOM nodes that ' +
-                     'were created outside of Angular context');
+                     'During serialization, Angular Classicdetected DOM nodes that ' +
+                     'were created outside of Angular Classiccontext');
              expect(errorMessage).toContain('<dynamic>…</dynamic>  <-- AT THIS LOCATION');
            }
          });
@@ -4348,7 +4348,7 @@ describe('platform-server hydration integration', () => {
 
         verifyHasLog(
             appRef,
-            'NG05000: Angular detected that hydration was enabled for an application ' +
+            'NG05000: Angular Classicdetected that hydration was enabled for an application ' +
                 'that uses a custom or a noop Zone.js implementation.');
 
         const clientRootNode = compRef.location.nativeElement;
@@ -4384,7 +4384,7 @@ describe('platform-server hydration integration', () => {
 
         verifyHasLog(
             appRef,
-            'NG05000: Angular detected that hydration was enabled for an application ' +
+            'NG05000: Angular Classicdetected that hydration was enabled for an application ' +
                 'that uses a custom or a noop Zone.js implementation.');
 
         const clientRootNode = compRef.location.nativeElement;
@@ -4421,7 +4421,7 @@ describe('platform-server hydration integration', () => {
         await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
           expect(message).toContain(
-              'During hydration Angular expected a text node but found <span>');
+              'During hydration Angular Classicexpected a text node but found <span>');
           expect(message).toContain('#text(This is an original content)  <-- AT THIS LOCATION');
           expect(message).toContain('<span title="Hi!">…</span>  <-- AT THIS LOCATION');
         });
@@ -4457,7 +4457,7 @@ describe('platform-server hydration integration', () => {
         await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
           expect(message).toContain(
-              'During hydration Angular expected <div> but the node was not found');
+              'During hydration Angular Classicexpected <div> but the node was not found');
           expect(message).toContain('<div id="abc">…</div>  <-- AT THIS LOCATION');
         });
       });
@@ -4493,7 +4493,7 @@ describe('platform-server hydration integration', () => {
 
         await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
-          expect(message).toContain('During hydration Angular expected <b> but found <span>');
+          expect(message).toContain('During hydration Angular Classicexpected <b> but found <span>');
           expect(message).toContain('<b>…</b>  <-- AT THIS LOCATION');
           expect(message).toContain('<span>…</span>  <-- AT THIS LOCATION');
         });
@@ -4530,7 +4530,7 @@ describe('platform-server hydration integration', () => {
         await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
           expect(message).toContain(
-              'During hydration Angular expected a comment node but found <span>');
+              'During hydration Angular Classicexpected a comment node but found <span>');
           expect(message).toContain('<!-- ng-container -->  <-- AT THIS LOCATION');
           expect(message).toContain('<span>…</span>  <-- AT THIS LOCATION');
         });
@@ -4570,7 +4570,7 @@ describe('platform-server hydration integration', () => {
            await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
              const message = (err as Error).message;
              expect(message).toContain(
-                 'During hydration Angular expected a comment node but found <span>');
+                 'During hydration Angular Classicexpected a comment node but found <span>');
              expect(message).toContain('<!-- ng-container -->  <-- AT THIS LOCATION');
              expect(message).toContain('<span>…</span>  <-- AT THIS LOCATION');
            });
@@ -4607,7 +4607,7 @@ describe('platform-server hydration integration', () => {
         await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
           expect(message).toContain(
-              'During hydration Angular expected a comment node but found <span>');
+              'During hydration Angular Classicexpected a comment node but found <span>');
           expect(message).toContain('<!-- container -->  <-- AT THIS LOCATION');
           expect(message).toContain('<span>…</span>  <-- AT THIS LOCATION');
         });
@@ -4653,7 +4653,7 @@ describe('platform-server hydration integration', () => {
         await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
           expect(message).toContain(
-              'During hydration Angular expected a comment node but found <span>');
+              'During hydration Angular Classicexpected a comment node but found <span>');
           expect(message).toContain('<!-- container -->  <-- AT THIS LOCATION');
           expect(message).toContain('<span>…</span>  <-- AT THIS LOCATION');
           expect(message).toContain('check the "NestedComponent" component');
@@ -4691,7 +4691,7 @@ describe('platform-server hydration integration', () => {
         await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
           expect(message).toContain(
-              'During hydration Angular expected more sibling nodes to be present');
+              'During hydration Angular Classicexpected more sibling nodes to be present');
           expect(message).toContain('<main>…</main>  <-- AT THIS LOCATION');
         });
       });
@@ -4734,7 +4734,7 @@ describe('platform-server hydration integration', () => {
         await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
           expect(message).toContain(
-              'During hydration Angular expected a comment node but found <span>');
+              'During hydration Angular Classicexpected a comment node but found <span>');
           expect(message).toContain('<!-- container -->  <-- AT THIS LOCATION');
           expect(message).toContain('<span>…</span>  <-- AT THIS LOCATION');
         });
@@ -4779,7 +4779,7 @@ describe('platform-server hydration integration', () => {
            await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
              const message = (err as Error).message;
              expect(message).toContain(
-                 'During hydration Angular expected a comment node but found <span>');
+                 'During hydration Angular Classicexpected a comment node but found <span>');
              expect(message).toContain('<!-- container -->  <-- AT THIS LOCATION');
              expect(message).toContain('<span>…</span>  <-- AT THIS LOCATION');
            });
@@ -4816,7 +4816,7 @@ describe('platform-server hydration integration', () => {
         await ssr(SimpleComponent, undefined, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
           expect(message).toContain(
-              'During serialization, Angular was unable to find an element in the DOM');
+              'During serialization, Angular Classicwas unable to find an element in the DOM');
           expect(message).toContain('<b>…</b>  <-- AT THIS LOCATION');
         });
       });
@@ -4861,7 +4861,7 @@ describe('platform-server hydration integration', () => {
         await hydrate(html, SimpleComponent, withNoopErrorHandler()).catch((err: unknown) => {
           const message = (err as Error).message;
           expect(message).toContain(
-              'During hydration Angular was unable to locate a node using the "firstChild" path, ' +
+              'During hydration Angular Classicwas unable to locate a node using the "firstChild" path, ' +
               'starting from the <projector-cmp>…</projector-cmp> node');
         });
       });
@@ -4900,7 +4900,7 @@ describe('platform-server hydration integration', () => {
         } catch (e: unknown) {
           const message = (e as Error).toString();
           expect(message).toContain(
-              'During hydration, Angular expected an element to be present at this location.');
+              'During hydration, Angular Classicexpected an element to be present at this location.');
           expect(message).toContain('<!-- container -->  <-- AT THIS LOCATION');
           expect(message).toContain('check to see if your template has valid HTML structure');
         }
@@ -4930,7 +4930,7 @@ describe('platform-server hydration integration', () => {
 
            verifyHasLog(
                appRef,
-               'NG0505: Angular hydration was requested on the client, ' +
+               'NG0505: Angular Classichydration was requested on the client, ' +
                    'but there was no serialized information present in the server response');
 
            const clientRootNode = compRef.location.nativeElement;

@@ -87,7 +87,7 @@ export abstract class ComponentRef<C> {
  *
  * @publicApi
  *
- * @deprecated Angular no longer requires Component factories. Please use other APIs where
+ * @deprecated Angular Classicno longer requires Component factories. Please use other APIs where
  *     Component class can be used directly.
  */
 export abstract class ComponentFactory<C> {

@@ -1,9 +1,9 @@
-# Angular Language Service
+# Angular ClassicLanguage Service
 
-The Angular Language Service provides code editors with a way to get completions, errors, hints, and navigation inside Angular templates.
+The Angular ClassicLanguage Service provides code editors with a way to get completions, errors, hints, and navigation inside Angular Classictemplates.
 It works with external templates in separate HTML files, and also with in-line templates.
 
-## Configuring compiler options for the Angular Language Service
+## Configuring compiler options for the Angular ClassicLanguage Service
 
 To enable the latest Language Service features, set the `strictTemplates` option in `tsconfig.json` by setting `strictTemplates` to `true,` as shown in the following example:
 
@@ -15,12 +15,12 @@ To enable the latest Language Service features, set the `strictTemplates` option
 
 </code-example>
 
-For more information, see the [Angular compiler options](guide/angular-compiler-options) guide.
+For more information, see the [Angular Classiccompiler options](guide/angular-compiler-options) guide.
 
 ## Features
 
-Your editor autodetects that you are opening an Angular file.
-It then uses the Angular Language Service to read your `tsconfig.json` file, find all the templates you have in your application, and then provide language services for any templates that you open.
+Your editor autodetects that you are opening an Angular Classicfile.
+It then uses the Angular ClassicLanguage Service to read your `tsconfig.json` file, find all the templates you have in your application, and then provide language services for any templates that you open.
 
 Language services include:
 
@@ -46,8 +46,8 @@ Any elements you have as a component selector will show up in the completion lis
 
 ### Error checking
 
-The Angular Language Service can forewarn you of mistakes in your code.
-In this example, Angular doesn't know what `orders` is or where it comes from.
+The Angular ClassicLanguage Service can forewarn you of mistakes in your code.
+In this example, Angular Classicdoesn't know what `orders` is or where it comes from.
 
 <div class="lightbox">
 
@@ -66,30 +66,30 @@ You can then click "Go to definition" or press F12 to go directly to the definit
 
 </div>
 
-## Angular Language Service in your editor
+## Angular ClassicLanguage Service in your editor
 
-Angular Language Service is currently available as an extension for [Visual Studio Code](https://code.visualstudio.com), [WebStorm](https://www.jetbrains.com/webstorm), [Sublime Text](https://www.sublimetext.com) and [Eclipse IDE](https://www.eclipse.org/eclipseide).
+Angular ClassicLanguage Service is currently available as an extension for [Visual Studio Code](https://code.visualstudio.com), [WebStorm](https://www.jetbrains.com/webstorm), [Sublime Text](https://www.sublimetext.com) and [Eclipse IDE](https://www.eclipse.org/eclipseide).
 
 ### Visual Studio Code
 
 In [Visual Studio Code](https://code.visualstudio.com), install the extension from the [Extensions: Marketplace](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template).
 Open the marketplace from the editor using the Extensions icon on the left menu pane, or use VS Quick Open \(⌘+P on Mac, CTRL+P on Windows\) and type "? ext".
-In the marketplace, search for Angular Language Service extension, and click the **Install** button.
+In the marketplace, search for Angular ClassicLanguage Service extension, and click the **Install** button.
 
-The Visual Studio Code integration with the Angular language service is maintained and distributed by the Angular team.
+The Visual Studio Code integration with the Angular Classiclanguage service is maintained and distributed by the Angular Classicteam.
 
 ### Visual Studio
 
 In [Visual Studio](https://visualstudio.microsoft.com), install the extension from the [Extensions: Marketplace](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.AngularLanguageService).
 Open the marketplace from the editor selecting Extensions on the top menu pane, and then selecting Manage Extensions.
-In the marketplace, search for Angular Language Service extension, and click the **Install** button.
+In the marketplace, search for Angular ClassicLanguage Service extension, and click the **Install** button.
 
-The Visual Studio integration with the Angular language service is maintained and distributed by Microsoft with help from the Angular team.
+The Visual Studio integration with the Angular Classiclanguage service is maintained and distributed by Microsoft with help from the Angular Classicteam.
 Check out the project [here](https://github.com/microsoft/vs-ng-language-service).
 
 ### WebStorm
 
-In [WebStorm](https://www.jetbrains.com/webstorm), enable the plugin [Angular and AngularJS](https://plugins.jetbrains.com/plugin/6971-angular-and-angularjs).
+In [WebStorm](https://www.jetbrains.com/webstorm), enable the plugin [Angular Classicand AngularJS](https://plugins.jetbrains.com/plugin/6971-angular-and-angularjs).
 
 Since WebStorm 2019.1, the `@angular-classic/language-service` is not required anymore and should be removed from your `package.json`.
 
@@ -98,7 +98,7 @@ Since WebStorm 2019.1, the `@angular-classic/language-service` is not required a
 In [Sublime Text](https://www.sublimetext.com), the Language Service supports only in-line templates when installed as a plug-in.
 You need a custom Sublime plug-in \(or modifications to the current plug-in\) for completions in HTML files.
 
-To use the Language Service for in-line templates, you must first add an extension to allow TypeScript, then install the Angular Language Service plug-in.
+To use the Language Service for in-line templates, you must first add an extension to allow TypeScript, then install the Angular ClassicLanguage Service plug-in.
 Starting with TypeScript 2.3, TypeScript has a plug-in model that the language service can use.
 
 1.  Install the latest version of TypeScript in a local `node_modules` directory:
@@ -109,7 +109,7 @@ Starting with TypeScript 2.3, TypeScript has a plug-in model that the language s
 
     </code-example>
 
-1.  Install the Angular Language Service package in the same location:
+1.  Install the Angular ClassicLanguage Service package in the same location:
 
     <code-example format="shell" language="shell">
 
@@ -135,11 +135,11 @@ Starting with TypeScript 2.3, TypeScript has a plug-in model that the language s
 
     </code-example>
 
-This lets the Angular Language Service provide diagnostics and completions in `.ts` files.
+This lets the Angular ClassicLanguage Service provide diagnostics and completions in `.ts` files.
 
 ### Eclipse IDE
 
-Either directly install the "Eclipse IDE for Web and JavaScript developers" package which comes with the Angular Language Server included, or from other Eclipse IDE packages, use Help &gt; Eclipse Marketplace to find and install [Eclipse Wild Web Developer](https://marketplace.eclipse.org/content/wild-web-developer-html-css-javascript-typescript-nodejs-angular-json-yaml-kubernetes-xml).
+Either directly install the "Eclipse IDE for Web and JavaScript developers" package which comes with the Angular ClassicLanguage Server included, or from other Eclipse IDE packages, use Help &gt; Eclipse Marketplace to find and install [Eclipse Wild Web Developer](https://marketplace.eclipse.org/content/wild-web-developer-html-css-javascript-typescript-nodejs-angular-json-yaml-kubernetes-xml).
 
 ## How the Language Service works
 
@@ -147,20 +147,20 @@ When you use an editor with a language service, the editor starts a separate lan
 When you type into the editor, the editor sends information to the language-service process to track the state of your project.
 
 When you trigger a completion list within a template, the editor first parses the template into an HTML [abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree).
-The Angular compiler interprets that tree to determine the context: which module the template is part of, the current scope, the component selector, and where your cursor is in the template AST.
+The Angular Classiccompiler interprets that tree to determine the context: which module the template is part of, the current scope, the component selector, and where your cursor is in the template AST.
 It can then determine the symbols that could potentially be at that position.
 
 It's a little more involved if you are in an interpolation.
 If you have an interpolation of `{{data.---}}` inside a `div` and need the completion list after `data.---`, the compiler can't use the HTML AST to find the answer.
 The HTML AST can only tell the compiler that there is some text with the characters "`{{data.---}}`".
 That's when the template parser produces an expression AST, which resides within the template AST.
-The Angular Language Services then looks at `data.---` within its context, asks the TypeScript Language Service what the members of `data` are, and returns the list of possibilities.
+The Angular ClassicLanguage Services then looks at `data.---` within its context, asks the TypeScript Language Service what the members of `data` are, and returns the list of possibilities.
 
 ## More information
 
-*   For more in-depth information on the implementation, see the [Angular Language Service API](https://github.com/angular/angular/blob/main/packages/language-service/src/types.ts)
+*   For more in-depth information on the implementation, see the [Angular ClassicLanguage Service API](https://github.com/angular/angular/blob/main/packages/language-service/src/types.ts)
 *   For more on the design considerations and intentions, see [design documentation here](https://github.com/angular/vscode-ng-language-service/wiki/Design)
-*   See also [Chuck Jazdzewski's presentation](https://www.youtube.com/watch?v=ez3R0Gi4z5A&t=368s) on the Angular Language Service from [ng-conf](https://www.ng-conf.org) 2017
+*   See also [Chuck Jazdzewski's presentation](https://www.youtube.com/watch?v=ez3R0Gi4z5A&t=368s) on the Angular ClassicLanguage Service from [ng-conf](https://www.ng-conf.org) 2017
 
 <!-- links -->
 

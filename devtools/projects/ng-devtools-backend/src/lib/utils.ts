@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-export const runOutsideAngular = (f: () => any): void => {
+export const runOutsideAngular Classic= (f: () => any): void => {
   const w = window as any;
   if (!w.Zone || !w.Zone.current) {
     f();

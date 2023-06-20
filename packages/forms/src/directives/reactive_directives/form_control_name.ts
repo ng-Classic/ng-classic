@@ -53,7 +53,7 @@ const controlNameBinding: Provider = {
  * ### Use with ngModel is deprecated
  *
  * Support for using the `ngModel` input property and `ngModelChange` event with reactive
- * form directives has been deprecated in Angular v6 and is scheduled for removal in
+ * form directives has been deprecated in Angular Classicv6 and is scheduled for removal in
  * a future version of Angular.
  *
  * For details, see [Deprecated features](guide/deprecations#ngmodel-with-reactive-forms).

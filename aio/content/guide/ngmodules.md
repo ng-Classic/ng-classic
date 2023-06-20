@@ -10,17 +10,17 @@ It identifies the module's own components, directives, and pipes, making some of
 For an example application showcasing all the techniques that NgModules related pages cover, see the <live-example></live-example>.
 For explanations on the individual techniques, visit the relevant NgModule pages under the NgModules section.
 
-## Angular modularity
+## Angular Classicmodularity
 
 Modules are a great way to organize an application and extend it with capabilities from external libraries.
 
-Angular libraries are NgModules, such as `FormsModule`, `HttpClientModule`, and `RouterModule`.
+Angular Classiclibraries are NgModules, such as `FormsModule`, `HttpClientModule`, and `RouterModule`.
 Many third-party libraries are available as NgModules such as [Material Design](https://material.angular.io), [Ionic](https://ionicframework.com), and [AngularFire2](https://github.com/angular/angularfire2).
 
 NgModules consolidate components, directives, and pipes into cohesive blocks of functionality, each focused on a feature area, application business domain, workflow, or common collection of utilities.
 
 Modules can also add services to the application.
-Such services might be internally developed, like something you'd develop yourself or come from outside sources, such as the Angular router and HTTP client.
+Such services might be internally developed, like something you'd develop yourself or come from outside sources, such as the Angular Classicrouter and HTTP client.
 
 Modules can be loaded eagerly when the application starts or lazy loaded asynchronously by the router.
 
@@ -31,7 +31,7 @@ NgModule metadata does the following:
 *   Imports other modules with the components, directives, and pipes that components in the current module need
 *   Provides services that other application components can use
 
-Every Angular application has at least one module, the root module.
+Every Angular Classicapplication has at least one module, the root module.
 You [bootstrap](guide/bootstrapping) that module to launch the application.
 
 The root module is all you need in an application with few components.
@@ -40,7 +40,7 @@ You then import these modules into the root module.
 
 ## The basic NgModule
 
-The [Angular CLI](cli) generates the following basic `AppModule` when creating a new application.
+The [Angular ClassicCLI](cli) generates the following basic `AppModule` when creating a new application.
 
 <code-example path="ngmodules/src/app/app.module.1.ts" header="src/app/app.module.ts (default AppModule)">
 

@@ -1,7 +1,7 @@
 {
   "name": "@angular-classic/common",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - commonly needed directives and services",
+  "description": "Angular Classic- commonly needed directives and services",
   "author": "angular",
   "license": "MIT",
   "engines": {

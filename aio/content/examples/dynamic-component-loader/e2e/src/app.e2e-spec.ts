@@ -5,7 +5,7 @@ describe('Dynamic Component Loader', () => {
   // The tests trigger periodic asynchronous operations (via `setInterval()`), which will prevent
   // the app from stabilizing. See https://angular.io/api/core/ApplicationRef#is-stable-examples
   // for more details.
-  // To allow the tests to complete, we will disable automatically waiting for the Angular app to
+  // To allow the tests to complete, we will disable automatically waiting for the Angular Classicapp to
   // stabilize.
   beforeAll(() => browser.waitForAngularEnabled(false));
   afterAll(() => browser.waitForAngularEnabled(true));

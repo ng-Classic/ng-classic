@@ -11,14 +11,14 @@ Delineating areas of your application helps with collaboration between developer
 
 ## Feature modules vs. root modules
 
-A feature module is an organizational best practice, as opposed to a concept of the core Angular API.
+A feature module is an organizational best practice, as opposed to a concept of the core Angular ClassicAPI.
 A feature module delivers a cohesive set of functionality focused on a specific application need such as a user workflow, routing, or forms.
 While you can do everything within the root module, feature modules help you partition the application into focused areas.
 A feature module collaborates with the root module and with other modules through the services it provides and the components, directives, and pipes that it shares.
 
 ## How to make a feature module
 
-Assuming you already have an application that you created with the [Angular CLI](cli), create a feature module using the CLI by entering the following command in the root project directory.
+Assuming you already have an application that you created with the [Angular ClassicCLI](cli), create a feature module using the CLI by entering the following command in the root project directory.
 Replace `CustomerDashboard` with the name of your module.
 You can omit the "Module" suffix from the name because the CLI appends it:
 
@@ -48,7 +48,7 @@ export class CustomerDashboardModule { }
 The structure of an NgModule is the same whether it is a root module or a feature module.
 In the CLI generated feature module, there are two JavaScript import statements at the top of the file: the first imports `NgModule`, which, like the root module, lets you use the `@NgModule` decorator; the second imports `CommonModule`, which contributes many common directives such as `ngIf` and `ngFor`.
 Feature modules import `CommonModule` instead of `BrowserModule`, which is only imported once in the root module.
-`CommonModule` only contains information for common directives such as `ngIf` and `ngFor` which are needed in most templates, whereas `BrowserModule` configures the Angular application for the browser which needs to be done only once.
+`CommonModule` only contains information for common directives such as `ngIf` and `ngFor` which are needed in most templates, whereas `BrowserModule` configures the Angular Classicapplication for the browser which needs to be done only once.
 
 The `declarations` array is available for you to add declarables, which are components, directives, and pipes that belong exclusively to this particular module.
 To add a component, enter the following command at the command line where `customer-dashboard` is the directory where the CLI generated the feature module and `CustomerDashboard` is the name of the component:
@@ -63,7 +63,7 @@ This generates a folder for the new component within the customer-dashboard fold
 
 <code-example header="src/app/customer-dashboard/customer-dashboard.module.ts" path="feature-modules/src/app/customer-dashboard/customer-dashboard.module.ts" region="customer-dashboard-component"></code-example>
 
-The `CustomerDashboardComponent` is now in the JavaScript import list at the top and added to the `declarations` array, which lets Angular know to associate this new component with this feature module.
+The `CustomerDashboardComponent` is now in the JavaScript import list at the top and added to the `declarations` array, which lets Angular Classicknow to associate this new component with this feature module.
 
 ## Importing a feature module
 
@@ -105,7 +105,7 @@ Now, in addition to the title that renders by default, the `CustomerDashboardCom
 
 You may also be interested in the following:
 
-*   [Lazy Loading Modules with the Angular Router](guide/lazy-loading-ngmodules)
+*   [Lazy Loading Modules with the Angular ClassicRouter](guide/lazy-loading-ngmodules)
 *   [Providers](guide/providers)
 *   [Types of Feature Modules](guide/module-types)
 

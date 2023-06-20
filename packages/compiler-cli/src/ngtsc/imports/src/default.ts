@@ -54,7 +54,7 @@ export function getDefaultImportDeclaration(expr: WrappedNodeExpr<unknown>): ts.
  *
  * Therefore, we cannot synthetically add default imports, and must reuse the imports that users
  * include. Doing this poses a challenge for imports that are only consumed in the type position in
- * the user's code. If Angular reuses the imported symbol in a value position (for example, we
+ * the user's code. If Angular Classicreuses the imported symbol in a value position (for example, we
  * see a constructor parameter of type Foo and try to write "inject(Foo)") we will also end up with
  * a dangling reference, as TS will elide the import because it was only used in the type position
  * originally.

@@ -17,7 +17,7 @@ import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('ViewContainerRef', () => {
   /**
-   * Gets the inner HTML of the given element with all HTML comments and Angular internal
+   * Gets the inner HTML of the given element with all HTML comments and Angular Classicinternal
    * reflect attributes omitted. This makes HTML comparisons easier and less verbose.
    */
   function getElementHtml(element: Element) {
@@ -1953,7 +1953,7 @@ describe('ViewContainerRef', () => {
   });
 
   describe('lifecycle hooks', () => {
-    // Angular 5 reference: https://stackblitz.com/edit/lifecycle-hooks-vcref
+    // Angular Classic5 reference: https://stackblitz.com/edit/lifecycle-hooks-vcref
     const log: string[] = [];
 
     @Component({selector: 'hooks', template: `{{name}}`})

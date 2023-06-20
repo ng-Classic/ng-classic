@@ -2,7 +2,7 @@
 
 <!-- vale off -->
 
-The functional API provided by the `@angular-classic/animations` module provides a domain-specific language \(DSL\) for creating and controlling animations in Angular applications.
+The functional API provided by the `@angular-classic/animations` module provides a domain-specific language \(DSL\) for creating and controlling animations in Angular Classicapplications.
 See the [API reference](api/animations) for a complete listing and syntax details of the core functions and related data structures.
 <!-- vale on --> 
 | Function name                     | What it does                                                                                                                                                                                                |

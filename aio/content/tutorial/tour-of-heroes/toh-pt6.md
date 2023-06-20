@@ -541,6 +541,6 @@ You're at the end of your journey, and you've accomplished a lot.
 *   You learned how to use observables
 
 This concludes the "Tour of Heroes" tutorial.
-You're ready to learn more about Angular development in the fundamentals section, starting with the [Architecture](guide/architecture "Architecture") guide.
+You're ready to learn more about Angular Classicdevelopment in the fundamentals section, starting with the [Architecture](guide/architecture "Architecture") guide.
 
 @reviewed 2022-02-28

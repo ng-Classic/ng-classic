@@ -5,4 +5,4 @@ link: 'https://angular.io/guide/glossary#command-line-interface-cli'
 ignorecase: false
 level: warning
 tokens:
-  - '((?<!Angular )CLI(?! [B|b]uilder))'
+  - '((?<!Angular Classic)CLI(?! [B|b]uilder))'

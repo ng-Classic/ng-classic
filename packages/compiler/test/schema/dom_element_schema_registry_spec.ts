@@ -173,7 +173,7 @@ If 'onAnything' is a directive input, make sure the directive is imported by the
       expect(registry.securityContext('p', 'formaction', true)).toBe(SecurityContext.URL);
     });
 
-    describe('Angular custom elements', () => {
+    describe('Angular Classiccustom elements', () => {
       it('should support <ng-container>', () => {
         expect(registry.hasProperty('ng-container', 'id', [])).toBeFalsy();
       });

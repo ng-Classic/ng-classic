@@ -1,12 +1,12 @@
-# Angular workspace configuration
+# Angular Classicworkspace configuration
 
-The `angular.json` file at the root level of an Angular [workspace](guide/glossary#workspace) provides workspace-wide and project-specific configuration defaults. These are used for build and development tools provided by the Angular CLI.
+The `angular.json` file at the root level of an Angular Classic[workspace](guide/glossary#workspace) provides workspace-wide and project-specific configuration defaults. These are used for build and development tools provided by the Angular ClassicCLI.
 Path values given in the configuration are relative to the root workspace directory.
 
 ## General JSON structure
 
 At the top-level of `angular.json`, a few properties configure the workspace and a `projects` section contains the remaining per-project configuration options.
-You can override Angular CLI defaults set at the workspace level through defaults set at the project level.
+You can override Angular ClassicCLI defaults set at the workspace level through defaults set at the project level.
 You can also override defaults set at the project level using the command line.
 
 The following properties, at the top-level of the file, configure the workspace.
@@ -15,7 +15,7 @@ The following properties, at the top-level of the file, configure the workspace.
 |:---              |:---     |
 | `version`        | The configuration-file version.                                                                                                                                                                                                       |
 | `newProjectRoot` | Path where new projects are created. Absolute or relative to the workspace directory.                                                                                                                                                    |
-| `cli`            | A set of options that customize the [Angular CLI](cli). See the [Angular CLI configuration options](#cli-configuration-options) section.                                                                                                      |
+| `cli`            | A set of options that customize the [Angular ClassicCLI](cli). See the [Angular ClassicCLI configuration options](#cli-configuration-options) section.                                                                                                      |
 | `schematics`     | A set of [schematics](guide/glossary#schematic) that customize the `ng generate` sub-command option defaults for this workspace. See the [Generation schematics](#schematics) section.                                                |
 | `projects`       | Contains a subsection for each library or application in the workspace, with the per-project configuration options.                                                                                                       |
 
@@ -48,17 +48,17 @@ For more information, see [Workspace and project file structure](guide/file-stru
 
 <a id="cli-configuration-options"></a>
 
-## Angular CLI configuration options
+## Angular ClassicCLI configuration options
 
-The following configuration properties are a set of options that customize the Angular CLI.
+The following configuration properties are a set of options that customize the Angular ClassicCLI.
 
 | Property              | Details                                                                                       | Value type                                              |
 |:---                   |:---                                                                                           |:---                                                     |
-| `analytics`           | Share anonymous [usage data](cli/analytics) with the Angular Team.                            | `boolean` &verbar; `ci`                                 |
-| `cache`               | Control [persistent disk cache](cli/cache) used by [Angular CLI Builders](guide/cli-builder). | [Cache options](#cache-options)                         |
+| `analytics`           | Share anonymous [usage data](cli/analytics) with the Angular ClassicTeam.                            | `boolean` &verbar; `ci`                                 |
+| `cache`               | Control [persistent disk cache](cli/cache) used by [Angular ClassicCLI Builders](guide/cli-builder). | [Cache options](#cache-options)                         |
 | `schematicCollections`| A list of default schematics collections to use.                                              | `string[]`                                              |
 | `packageManager`      | The preferred package manager tool to use.                                                    | `npm` &verbar; `cnpm` &verbar; `pnpm` &verbar;`yarn`    |
-| `warnings`            | Control Angular CLI specific console warnings.                                                        | [Warnings options](#warnings-options)                   |
+| `warnings`            | Control Angular ClassicCLI specific console warnings.                                                        | [Warnings options](#warnings-options)                   |
 
 
 ### Cache options
@@ -73,7 +73,7 @@ The following configuration properties are a set of options that customize the A
 
 | Property          | Details                                                                         | Value type | Default value |
 |:---               |:---                                                                             |:---        |:---           |
-| `versionMismatch` | Show a warning when the global Angular CLI version is newer than the local one. | `boolean`  | `true`        |
+| `versionMismatch` | Show a warning when the global Angular ClassicCLI version is newer than the local one. | `boolean`  | `true`        |
 
 ## Project configuration options
 
@@ -97,7 +97,7 @@ The following top-level configuration properties are available for each project,
 | `root`        | The root directory for this project's files, relative to the workspace directory. Empty for the initial application, which resides at the top level of the workspace. |
 | `sourceRoot`  | The root directory for this project's source files.                                                                                                        |
 | `projectType` | One of "application" or "library" An application can run independently in a browser, while a library cannot.                                           |
-| `prefix`      | A string that Angular prepends to created selectors. Can be customized to identify an application or feature area.                                    |
+| `prefix`      | A string that Angular Classicprepends to created selectors. Can be customized to identify an application or feature area.                                    |
 | `schematics`  | A set of schematics that customize the `ng generate` sub-command option defaults for this project. See the [Generation schematics](#schematics) section.|
 | `architect`   | Configuration defaults for Architect builder targets for this project.                                                                                  |
 
@@ -105,31 +105,31 @@ The following top-level configuration properties are available for each project,
 
 ## Generation schematics
 
-Angular generation [schematics](guide/glossary#schematic) are instructions for modifying a project by adding files or modifying existing files.
-Individual schematics for the default Angular CLI `ng generate` sub-commands are collected in the package `@schematics/angular`.
+Angular Classicgeneration [schematics](guide/glossary#schematic) are instructions for modifying a project by adding files or modifying existing files.
+Individual schematics for the default Angular ClassicCLI `ng generate` sub-commands are collected in the package `@schematics/angular`.
 Specify the schematic name for a subcommand in the format `schematic-package:schematic-name`;
 for example, the schematic for generating a component is `@schematics/angular:component`.
 
-The JSON schemas for the default schematics used by the Angular CLI to create projects and parts of projects are collected in the package [`@schematics/angular`](https://github.com/angular/angular-cli/blob/main/packages/schematics/angular/application/schema.json).
-The schema describes the options available to the Angular CLI for each of the `ng generate` sub-commands, as shown in the `--help` output.
+The JSON schemas for the default schematics used by the Angular ClassicCLI to create projects and parts of projects are collected in the package [`@schematics/angular`](https://github.com/angular/angular-cli/blob/main/packages/schematics/angular/application/schema.json).
+The schema describes the options available to the Angular ClassicCLI for each of the `ng generate` sub-commands, as shown in the `--help` output.
 
-The fields given in the schema correspond to the allowed argument values and defaults for the Angular CLI sub-command options.
+The fields given in the schema correspond to the allowed argument values and defaults for the Angular ClassicCLI sub-command options.
 You can update your workspace schema file to set a different default for a sub-command option.
 
 <a id="architect"></a>
 
 ## Project tool configuration options
 
-Architect is the tool that the Angular CLI uses to perform complex tasks, such as compilation and test running.
+Architect is the tool that the Angular ClassicCLI uses to perform complex tasks, such as compilation and test running.
 Architect is a shell that runs a specified [builder](guide/glossary#builder) to perform a given task, according to a [target](guide/glossary#target) configuration.
-You can define and configure new builders and targets to extend the Angular CLI.
-See [Angular CLI Builders](guide/cli-builder).
+You can define and configure new builders and targets to extend the Angular ClassicCLI.
+See [Angular ClassicCLI Builders](guide/cli-builder).
 
 <a id="default-build-targets"></a>
 
 ### Default Architect builders and targets
 
-Angular defines default builders for use with specific commands, or with the general `ng run` command.
+Angular Classicdefines default builders for use with specific commands, or with the general `ng run` command.
 The JSON schemas that define the options and defaults for each of these default builders are collected in the [`@angular-classic-devkit/build-angular`](https://github.com/angular/angular-cli/blob/main/packages/angular_devkit/build_angular/builders.json) package.
 The schemas configure options for the following builders.
 
@@ -147,7 +147,7 @@ The schemas configure options for the following builders.
 ### Configuring builder targets
 
 The `architect` section of `angular.json` contains a set of Architect targets.
-Many of the targets correspond to the Angular CLI commands that run them.
+Many of the targets correspond to the Angular ClassicCLI commands that run them.
 Some extra predefined targets can be run using the `ng run` command, and you can define your own targets.
 
 Each target object specifies the `builder` for that target, which is the npm package for the tool that Architect runs.
@@ -180,7 +180,7 @@ See the example in [Build target](#build-target) below.
 | `architect/server`       | Configures defaults for creating a Universal application with server-side rendering, using the `ng run <project>:server` command.                                                                                |
 | `architect/app-shell`    | Configures defaults for creating an application shell for a progressive web application \(PWA\), using the `ng run <project>:app-shell` command.                                                                 |
 
-In general, the options for which you can configure defaults correspond to the command options listed in the [Angular CLI reference page](cli) for each command.
+In general, the options for which you can configure defaults correspond to the command options listed in the [Angular ClassicCLI reference page](cli) for each command.
 
 <div class="alert is-helpful">
 
@@ -206,7 +206,7 @@ It has the following top-level properties.
 
 ### Alternate build configurations
 
-Angular CLI comes with two build configurations: `production` and `development`.
+Angular ClassicCLI comes with two build configurations: `production` and `development`.
 By default, the `ng build` command uses the `production` configuration, which applies several build optimizations, including:
 
 *   Bundling files
@@ -231,14 +231,14 @@ In this example, if both `stage` and `fr` configurations set the output path the
 ### Extra build and test options
 
 The configurable options for a default or targeted build generally correspond to the options available for the [`ng build`](cli/build), [`ng serve`](cli/serve), and [`ng test`](cli/test) commands.
-For details of those options and their possible values, see the [Angular CLI Reference](cli).
+For details of those options and their possible values, see the [Angular ClassicCLI Reference](cli).
 
 Some extra options can only be set through the configuration file, either by direct editing or with the [`ng config`](cli/config) command.
 
 | Options properties         | Details |
 |:---                        |:---     |
 | `assets`                   | An object containing paths to static assets to add to the global context of the project. The default paths point to the project's icon file and its `assets` directory. See more in the [Assets configuration](#asset-config) section.                                                                     |
-| `styles`                   | An array of style files to add to the global context of the project. Angular CLI supports CSS imports and all major CSS preprocessors: [sass/scss](https://sass-lang.com) and [less](http://lesscss.org). See more in the [Styles and scripts configuration](#style-script-config) section.             |
+| `styles`                   | An array of style files to add to the global context of the project. Angular ClassicCLI supports CSS imports and all major CSS preprocessors: [sass/scss](https://sass-lang.com) and [less](http://lesscss.org). See more in the [Styles and scripts configuration](#style-script-config) section.             |
 | `stylePreprocessorOptions` | An object containing option-value pairs to pass to style preprocessors. See more in the [Styles and scripts configuration](#style-script-config) section.                                                                                                                                               |
 | `scripts`                  | An object containing JavaScript script files to add to the global context of the project. The scripts are loaded exactly as if you had added them in a `<script>` tag inside `index.html`. See more in the [Styles and scripts configuration](#style-script-config) section.                            |
 | `budgets`                  | Default size-budget type and thresholds for all or parts of your application. You can configure the builder to report a warning or an error when the output reaches or exceeds a threshold size. See [Configure size budgets](guide/build#configure-size-budgets). \(Not available in `test` section.\) |
@@ -282,7 +282,7 @@ An asset specification object can have the following fields.
 |:---              |:---     |
 | `glob`           | A [node-glob](https://github.com/isaacs/node-glob/blob/master/README.md) using `input` as base directory.                                                              |
 | `input`          | A path relative to the workspace root.                                                                                                                                 |
-| `output`         | A path relative to `outDir` \(default is `dist/project-name`\). Because of the security implications, the Angular CLI never writes files outside of the project output path. |
+| `output`         | A path relative to `outDir` \(default is `dist/project-name`\). Because of the security implications, the Angular ClassicCLI never writes files outside of the project output path. |
 | `ignore`         | A list of globs to exclude.                                                                                                                                            |
 | `followSymlinks` | Allow glob patterns to follow symlink directories. This allows subdirectories of the symlink to be searched. Defaults to `false`.                                      |
 

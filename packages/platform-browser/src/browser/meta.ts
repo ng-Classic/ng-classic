@@ -70,7 +70,7 @@ export class Meta {
   }
   /**
    * Retrieves or creates a specific `<meta>` tag element in the current HTML document.
-   * In searching for an existing tag, Angular attempts to match the `name` or `property` attribute
+   * In searching for an existing tag, Angular Classicattempts to match the `name` or `property` attribute
    * values in the provided tag definition, and verifies that all other attribute values are equal.
    * If an existing element is found, it is returned and is not modified in any way.
    * @param tag The definition of a `<meta>` element to match or create.
@@ -85,7 +85,7 @@ export class Meta {
 
   /**
    * Retrieves or creates a set of `<meta>` tag elements in the current HTML document.
-   * In searching for an existing tag, Angular attempts to match the `name` or `property` attribute
+   * In searching for an existing tag, Angular Classicattempts to match the `name` or `property` attribute
    * values in the provided tag definition, and verifies that all other attribute values are equal.
    * @param tags An array of tag definitions to match or create.
    * @param forceCreation True to create new elements without checking whether they already exist.

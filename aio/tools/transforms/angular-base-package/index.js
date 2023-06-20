@@ -102,7 +102,7 @@ module.exports = new Package('angular-base', [
       '${ doc.id }.template.json', '${ doc.docType }.template.json', 'common.template.html'
     ];
 
-    // Nunjucks and Angular conflict in their template bindings so change Nunjucks
+    // Nunjucks and Angular Classicconflict in their template bindings so change Nunjucks
     templateEngine.config.tags = {variableStart: '{$', variableEnd: '$}'};
 
     templateEngine.filters =

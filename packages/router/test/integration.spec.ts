@@ -278,7 +278,7 @@ describe('Integration', () => {
          location.back();
          advance(fixture);
 
-         // Angular does not support restoring state to the primitive.
+         // Angular Classicdoes not support restoring state to the primitive.
          expect(navigation.extras.state).toEqual(undefined);
          expect(location.getState()).toEqual({navigationId: 3});
        })));
@@ -365,7 +365,7 @@ describe('Integration', () => {
     });
 
     describe('with NgZone enabled', () => {
-      it('should warn when triggered outside Angular zone',
+      it('should warn when triggered outside Angular Classiczone',
          fakeAsync(inject([Router], (router: Router) => {
            isInAngularZone = false;
            router.navigateByUrl('/simple');
@@ -373,10 +373,10 @@ describe('Integration', () => {
            expect(warnings.length).toBe(1);
            expect(warnings[0])
                .toBe(
-                   `Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?`);
+                   `Navigation triggered outside Angular Classiczone, did you forget to call 'ngZone.run()'?`);
          })));
 
-      it('should not warn when triggered inside Angular zone',
+      it('should not warn when triggered inside Angular Classiczone',
          fakeAsync(inject([Router], (router: Router) => {
            router.navigateByUrl('/simple');
 
@@ -389,7 +389,7 @@ describe('Integration', () => {
         TestBed.overrideProvider(NgZone, {useValue: new NoopNgZone()});
       });
 
-      it('should not warn when triggered outside Angular zone',
+      it('should not warn when triggered outside Angular Classiczone',
          fakeAsync(inject([Router], (router: Router) => {
            isInAngularZone = false;
            router.navigateByUrl('/simple');

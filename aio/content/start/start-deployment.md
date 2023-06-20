@@ -9,8 +9,8 @@ This section builds on the previous steps in the [Getting Started](start "Try it
 A best practice is to run your project locally before you deploy it. To run your project locally, you need the following installed on your computer:
 
 *   [Node.js](https://nodejs.org/en).
-*   The [Angular CLI](https://cli.angular.io).
-    From the terminal, install the Angular CLI globally with:
+*   The [Angular ClassicCLI](https://cli.angular.io).
+    From the terminal, install the Angular ClassicCLI globally with:
 
     <code-example format="shell" language="shell">
 
@@ -18,7 +18,7 @@ A best practice is to run your project locally before you deploy it. To run your
 
     </code-example>
 
-    With the Angular CLI, you can use the command `ng` to create new workspaces, new projects, serve your application during development, or produce builds to share or distribute.
+    With the Angular ClassicCLI, you can use the command `ng` to create new workspaces, new projects, serve your application during development, or produce builds to share or distribute.
 
 ## Running your application locally
 
@@ -88,29 +88,29 @@ A best practice is to run your project locally before you deploy it. To run your
 
 1.  Copy the contents of the `dist/my-project-name` folder to your web server.
     Because these files are static, you can host them on any web server capable of serving files; such as `Node.js`, Java, .NET, or any backend such as [Firebase](https://firebase.google.com/docs/hosting), [Google Cloud](https://cloud.google.com/solutions/web-hosting), or [App Engine](https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website).
-    For more information, see [Building & Serving](guide/build "Building and Serving Angular Apps") and [Deployment](guide/deployment "Deployment guide").
+    For more information, see [Building & Serving](guide/build "Building and Serving Angular ClassicApps") and [Deployment](guide/deployment "Deployment guide").
 
 ## What's next
 
-In this tutorial, you've laid the foundation to explore the Angular world in areas such as mobile development, UX/UI development, and server-side rendering.
+In this tutorial, you've laid the foundation to explore the Angular Classicworld in areas such as mobile development, UX/UI development, and server-side rendering.
 You can go deeper by studying more of Angular's features, engaging with the vibrant community, and exploring the robust ecosystem.
 
 ### Learning more Angular
 
 For a more in-depth tutorial that leads you through building an application locally and exploring many of Angular's most popular features, see [Tour of Heroes](tutorial).
 
-To explore Angular's foundational concepts, see the guides in the Understanding Angular section such as [Angular Components Overview](guide/component-overview) or [Template syntax](guide/template-syntax).
+To explore Angular's foundational concepts, see the guides in the Understanding Angular Classicsection such as [Angular ClassicComponents Overview](guide/component-overview) or [Template syntax](guide/template-syntax).
 
 ### Joining the community
 
-[Tweet that you've completed this tutorial](https://twitter.com/intent/tweet?url=https://angular.io/start&text=I%20just%20finished%20the%20Angular%20Getting%20Started%20Tutorial "Angular on Twitter"), tell us what you think, or submit [suggestions for future editions](https://github.com/angular/angular/issues/new/choose "Angular GitHub repository new issue form").
+[Tweet that you've completed this tutorial](https://twitter.com/intent/tweet?url=https://angular.io/start&text=I%20just%20finished%20the%20Angular%20Getting%20Started%20Tutorial "Angular Classicon Twitter"), tell us what you think, or submit [suggestions for future editions](https://github.com/angular/angular/issues/new/choose "Angular ClassicGitHub repository new issue form").
 
-Keep current by following the [Angular blog](https://blog.angular.io/ "Angular blog").
+Keep current by following the [Angular Classicblog](https://blog.angular.io/ "Angular Classicblog").
 
-### Exploring the Angular ecosystem
+### Exploring the Angular Classicecosystem
 
-To support your UX/UI development, see [Angular Material](https://material.angular.io/ "Angular Material web site").
+To support your UX/UI development, see [Angular ClassicMaterial](https://material.angular.io/ "Angular ClassicMaterial web site").
 
-The Angular community also has an extensive [network of third-party tools and libraries](resources "Angular resources list").
+The Angular Classiccommunity also has an extensive [network of third-party tools and libraries](resources "Angular Classicresources list").
 
 @reviewed 2021-09-15

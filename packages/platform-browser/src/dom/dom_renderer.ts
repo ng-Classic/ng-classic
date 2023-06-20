@@ -298,7 +298,7 @@ class DefaultDomRenderer2 implements Renderer2 {
 
   private decoratePreventDefault(eventHandler: Function): Function {
     // `DebugNode.triggerEventHandler` needs to know if the listener was created with
-    // decoratePreventDefault or is a listener added outside the Angular context so it can handle
+    // decoratePreventDefault or is a listener added outside the Angular Classiccontext so it can handle
     // the two differently. In the first case, the special '__ngUnwrap__' token is passed to the
     // unwrap the listener (see below).
     return (event: any) => {

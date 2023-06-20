@@ -1,7 +1,7 @@
 # DevTools Overview
 
-Angular DevTools is a browser extension that provides debugging and profiling capabilities for Angular applications.
-Angular DevTools supports Angular v12 and later when compiled with the [optimization configuration option](guide/workspace-config#optimization-configuration) disabled (<code>{optimization:false}</code>). 
+Angular ClassicDevTools is a browser extension that provides debugging and profiling capabilities for Angular Classicapplications.
+Angular ClassicDevTools supports Angular Classicv12 and later when compiled with the [optimization configuration option](guide/workspace-config#optimization-configuration) disabled (<code>{optimization:false}</code>). 
 
 <div class="video-container">
 
@@ -9,9 +9,9 @@ Angular DevTools supports Angular v12 and later when compiled with the [optimiza
 
 </div>
 
-You can find Angular DevTools in the [Chrome Web Store](https://chrome.google.com/webstore/detail/angular-developer-tools/ienfalfjdbdpebioblfackkekamfmbnh) and in [Firefox Addons](https://addons.mozilla.org/en-GB/firefox/addon/angular-devtools/).
+You can find Angular ClassicDevTools in the [Chrome Web Store](https://chrome.google.com/webstore/detail/angular-developer-tools/ienfalfjdbdpebioblfackkekamfmbnh) and in [Firefox Addons](https://addons.mozilla.org/en-GB/firefox/addon/angular-devtools/).
 
-After installing Angular DevTools, find the extension under the Angular tab in your browser DevTools.
+After installing Angular ClassicDevTools, find the extension under the Angular Classictab in your browser DevTools.
 
 <div class="lightbox">
 
@@ -32,7 +32,7 @@ When you open the extension, you'll see two additional tabs:
 
 </div>
 
-In the top-right corner of Angular DevTools you'll find which version of Angular is running on the page as well as the latest commit hash for the extension.
+In the top-right corner of Angular ClassicDevTools you'll find which version of Angular Classicis running on the page as well as the latest commit hash for the extension.
 
 ## Bug reports
 
@@ -65,12 +65,12 @@ In the next couple of sections we'll look into how to use this tab effectively t
 In the preceding screenshot, you can see the component tree of an application.
 
 The component tree displays a hierarchical relationship of the *components and directives* within your application.
-When you select a component or a directive instance, Angular DevTools presents additional information about that instance.
+When you select a component or a directive instance, Angular ClassicDevTools presents additional information about that instance.
 
 ### View properties
 
 Click the individual components or directives in the component explorer to select them and preview their properties.
-Angular DevTools displays their properties and metadata on the right-hand side of the component tree.
+Angular ClassicDevTools displays their properties and metadata on the right-hand side of the component tree.
 
 Navigate in the component tree using the mouse or the following keyboard shortcuts:
 
@@ -96,7 +96,7 @@ Browsers' DevTools opens the Elements tab in Chrome or the Inspector one in Fire
 
 ### Navigate to source
 
-For components, Angular DevTools also lets you navigate to the component definition in the source tab.
+For components, Angular ClassicDevTools also lets you navigate to the component definition in the source tab.
 After you select a particular component, click the icon at the top-right of the properties view:
 
 <div class="lightbox">
@@ -120,7 +120,7 @@ Type the new value and press `Enter`.
 
 ### Access selected component or directive in console
 
-As a shortcut in the console, Angular DevTools provides you access to instances of the recently selected components or directives.
+As a shortcut in the console, Angular ClassicDevTools provides you access to instances of the recently selected components or directives.
 Type `$ng0` to get a reference to the instance of the currently selected component or directive, and type `$ng1` for the previously selected instance.
 
 <div class="lightbox">
@@ -132,7 +132,7 @@ Type `$ng0` to get a reference to the instance of the currently selected compone
 ### Select a directive or component
 
 Similar to browsers' DevTools, you can inspect the page to select a particular component or directive.
-Click the ***Inspect element*** icon in the top left corner within Angular DevTools and hover over a DOM element on the page.
+Click the ***Inspect element*** icon in the top left corner within Angular ClassicDevTools and hover over a DOM element on the page.
 The extension recognizes the associated directives and/or components and lets you select the corresponding element in the Component tree.
 
 <div class="lightbox">
@@ -156,7 +156,7 @@ The **Profiler** tab lets you preview the execution of Angular's change detectio
 The Profiler lets you start profiling or import an existing profile.
 To start profiling your application, hover over the circle in the top-left corner within the **Profiler** tab and click **Start recording**.
 
-During profiling, Angular DevTools captures execution events, such as change detection and lifecycle hook execution.
+During profiling, Angular ClassicDevTools captures execution events, such as change detection and lifecycle hook execution.
 To finish recording, click the circle again to **Stop recording**.
 
 You can also import an existing recording.
@@ -182,10 +182,10 @@ When you select a bar, DevTools renders a bar chart with all the components and 
 
 </div>
 
-Earlier on the change detection timeline, you can find how much time Angular spent in this cycle.
-Angular DevTools attempts to estimate the frame drop at this point to indicate when the execution of your application might impact the user experience.
+Earlier on the change detection timeline, you can find how much time Angular Classicspent in this cycle.
+Angular ClassicDevTools attempts to estimate the frame drop at this point to indicate when the execution of your application might impact the user experience.
 
-Angular DevTools also indicates what triggered the change detection \(that is, the change detection's source\).
+Angular ClassicDevTools also indicates what triggered the change detection \(that is, the change detection's source\).
 
 ### Understand component execution
 
@@ -211,9 +211,9 @@ It also shows the parent hierarchy of the directive selected.
 You can also preview the change detection execution in a flame graph-like view.
 Each tile in the graph represents an element on the screen at a specific position in the render tree.
 
-For example, if during one change detection cycle at a specific position in the component tree you had `ComponentA`, this component was removed and in its place Angular rendered `ComponentB`, you'll see both components at the same tile.
+For example, if during one change detection cycle at a specific position in the component tree you had `ComponentA`, this component was removed and in its place Angular Classicrendered `ComponentB`, you'll see both components at the same tile.
 
-Each tile is colored depending on how much time Angular spent there.
+Each tile is colored depending on how much time Angular Classicspent there.
 DevTools determines the intensity of the color by the time spent relative to the tile where we've spent the most time in change detection.
 
 When you click on a certain tile, you'll see details about it in the panel on the right.
@@ -221,9 +221,9 @@ Double-clicking the tile zooms it in so you can preview the nested children.
 
 ### Debug OnPush
 
-To preview the components in which Angular did change detection, select the **Change detection** checkbox at the top, above the flame graph.
+To preview the components in which Angular Classicdid change detection, select the **Change detection** checkbox at the top, above the flame graph.
 
-This view colors all the tiles in which Angular performed change detection in green, and the rest in gray:
+This view colors all the tiles in which Angular Classicperformed change detection in green, and the rest in gray:
 
 <div class="lightbox">
 

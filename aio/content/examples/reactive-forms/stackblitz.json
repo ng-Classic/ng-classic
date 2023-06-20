@@ -1,5 +1,5 @@
 {
-  "description": "Angular Reactive Forms (Demo runner)",
+  "description": "Angular ClassicReactive Forms (Demo runner)",
   "files":[
     "!**/*.d.ts",
     "!**/*.js",

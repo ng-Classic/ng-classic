@@ -1,4 +1,4 @@
-Initializes the server environment for rendering an Angular application.
+Initializes the server environment for rendering an Angular Classicapplication.
 
 For example, it provides shims (such as DOM globals) for the server environment.
 

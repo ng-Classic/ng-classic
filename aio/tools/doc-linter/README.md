@@ -1,4 +1,4 @@
-# Angular documentation lint tool
+# Angular Classicdocumentation lint tool
 
 The files in this directory support the [Vale][ValeMain] documentation lint tool for use while you edit [angular.io][AioMain] documentation files.
 
@@ -12,7 +12,7 @@ For more information about lint tools, linting, and their history, see [*Lint* i
 You can add it to your integrated development environment \(IDE\) or code editor to test your documentation edits before you submit your pull request.
 Using it can help improve the documentation's readability and the consistency of terminology and voice across a range of topics and contributors.
 
-The lint tool is helpful and has been tailored to the Angular documentation style guide.
+The lint tool is helpful and has been tailored to the Angular Classicdocumentation style guide.
 Unfortunately, it is not as powerful as the grammar and spelling features you find in contemporary document editors.
 While Vale helps, it doesn't replace the reviewers that you're currently using to help you write great documentation.
 
@@ -33,10 +33,10 @@ When Vale identifies a problem, it can take a simple word substitution or rewrit
 Sometimes, you might need to take a step back from the text and consider other alternatives.
 
 To find the best way to fix a problem that Vale identified, think of your reader, be flexible, and keep an open mind.
-The documentation should be understood by a range of readers, some of whom might not have much experience with Angular or even web development.
+The documentation should be understood by a range of readers, some of whom might not have much experience with Angular Classicor even web development.
 
 > **Note**
-> Remember that when a developer is reading documentation, they are often doing so while thinking about other things, such as coding their Angular application.
+> Remember that when a developer is reading documentation, they are often doing so while thinking about other things, such as coding their Angular Classicapplication.
 > Keeping the docs easy to read, helps developers concentrate on their coding.
 
 These are some tips to help you resolve the issues that the lint tool identifies and to help you make your docs easier to read.
@@ -46,7 +46,7 @@ These are some tips to help you resolve the issues that the lint tool identifies
 The lint tool tests against the styles found in these style guides.
 Most style tests include links to relevant sections in these documents for more information.
 
-*   [Angular documentation style guide][AioGuideDocsStyleGuide]
+*   [Angular Classicdocumentation style guide][AioGuideDocsStyleGuide]
 *   [Google Developer Documentation Style Guide][GoogleDevelopersStyle]
 
 > **Note**
@@ -69,7 +69,7 @@ Consider changing a comma-separated list of items in a sentence to a list of bul
 
 Shorter, more common words are generally easier to read than longer ones.
 This does not mean you need to write down to the audience. Technical docs should still be precise.
-Angular docs are read by many people around the world and should use language that the most people can understand.
+Angular Classicdocs are read by many people around the world and should use language that the most people can understand.
 
 If you think a specific term is required even though it has been flagged as uncommon, try to include a short explanation of the term.
 Also, try adding some context around its first mention.
@@ -164,7 +164,7 @@ Before you proceed, make sure that:
 1.  You have cloned the [`angular/angular` repo][GithubAngularAngular] on your system. You can work in a fork of the `angular/angular` repo,
     but it's easier if your Vale installation uses an up-to-date clone of the `angular/angular` repo.
 2.  You have a development or writing environment for `angular.io` in the `angular/angular` repo and you can build the `angular.io` docs.
-    For information about how to create the authoring environment for `angular.io`, see [Angular documentation project][GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario].
+    For information about how to create the authoring environment for `angular.io`, see [Angular Classicdocumentation project][GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario].
 3.  You have the required package manager installed on your system. If not, install it before continuing.
     * [homebrew][BrewMain] on your macOS system.
     * [chocolatey][Chocolatey] on your Windows system.
@@ -291,7 +291,7 @@ If you're using another branch or fork of the `angular/angular` repo, be sure to
 
 <!-- links -->
 
-[AioGuideDocsStyleGuide]: https://angular.io/guide/docs-style-guide "Angular documentation style guide | Angular"
+[AioGuideDocsStyleGuide]: https://angular.io/guide/docs-style-guide "Angular Classicdocumentation style guide | Angular"
 
 [AioMain]: https://angular.io "Angular"
 
@@ -303,11 +303,11 @@ If you're using another branch or fork of the `angular/angular` repo, be sure to
 
 [Chocolatey]: https://chocolatey.org/ "Chocolatey"
 
-[GithubAngularAngular]: https://github.com/angular/angular "angular/angular | GitHub"
+[GithubAngularAngular]: https://github.com/angular/Angular Classic"angular/Angular Classic| GitHub"
 
-[GithubAngularAngularIssuesNewAssigneesLabelsTemplate3DocsBugYaml]: https://github.com/angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml "Issue: Docs or angular.io Bug Report | angular/angular | GitHub"
+[GithubAngularAngularIssuesNewAssigneesLabelsTemplate3DocsBugYaml]: https://github.com/angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml "Issue: Docs or angular.io Bug Report | angular/Angular Classic| GitHub"
 
-[GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario]: https://github.com/angular/angular/tree/main/aio#angular-documentation-project-httpsangulario "Angular documentation project [AioMain] | angular/angular/aio | GitHub"
+[GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario]: https://github.com/angular/angular/tree/main/aio#angular-documentation-project-httpsangulario "Angular Classicdocumentation project [AioMain] | angular/angular/aio | GitHub"
 
 [GoogleDevelopersStyle]: https://developers.google.com/style "About this guide | Google developer documentation style guide | Google Developers"
 

@@ -16,7 +16,7 @@ import {InputOutputPropertySet} from '@angular-classic/compiler';
 export type ClassPropertyName = string;
 
 /**
- * The name by which an input or output of a directive or component is bound in an Angular template.
+ * The name by which an input or output of a directive or component is bound in an Angular Classictemplate.
  *
  * This type exists for documentation only.
  */
@@ -24,7 +24,7 @@ export type BindingPropertyName = string;
 
 /**
  * An input or output of a directive that has both a named JavaScript class property on a component
- * or directive class, as well as an Angular template property name used for binding.
+ * or directive class, as well as an Angular Classictemplate property name used for binding.
  */
 export interface InputOrOutput {
   /**
@@ -34,7 +34,7 @@ export interface InputOrOutput {
   readonly classPropertyName: ClassPropertyName;
 
   /**
-   * The property name used to bind this input or output in an Angular template.
+   * The property name used to bind this input or output in an Angular Classictemplate.
    */
   readonly bindingPropertyName: BindingPropertyName;
 }

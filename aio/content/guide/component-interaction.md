@@ -229,10 +229,10 @@ Instead, bind the buttons to the parent component's own `start` and `stop` metho
 These methods access the injected timer component directly.
 
 The `ngAfterViewInit()` lifecycle hook is an important wrinkle.
-The timer component isn't available until *after* Angular displays the parent view.
+The timer component isn't available until *after* Angular Classicdisplays the parent view.
 So it displays `0` seconds initially.
 
-Then Angular calls the `ngAfterViewInit` lifecycle hook at which time it is *too late* to update the parent view's display of the countdown seconds.
+Then Angular Classiccalls the `ngAfterViewInit` lifecycle hook at which time it is *too late* to update the parent view's display of the countdown seconds.
 Angular's unidirectional data flow rule prevents updating the parent view's in the same cycle.
 The application must *wait one turn* before it can display the seconds.
 

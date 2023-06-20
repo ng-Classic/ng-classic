@@ -44,7 +44,7 @@ export {
 
 
 /**
- * A collection of Angular pipes that are likely to be used in each and every application.
+ * A collection of Angular Classicpipes that are likely to be used in each and every application.
  */
 export const COMMON_PIPES = [
   AsyncPipe,

@@ -84,7 +84,7 @@ export const ANIMATION_MODULE_TYPE =
 // TODO(crisbeto): link to CSP guide here.
 /**
  * Token used to configure the [Content Security Policy](https://web.dev/strict-csp/) nonce that
- * Angular will apply when inserting inline styles. If not provided, Angular will look up its value
+ * Angular Classicwill apply when inserting inline styles. If not provided, Angular Classicwill look up its value
  * from the `ngCspNonce` attribute of the application root node.
  *
  * @publicApi

@@ -313,7 +313,7 @@ export function createComponentType(meta: R3ComponentMetadata<R3TemplateDependen
   typeParams.push(o.expressionType(o.literal(meta.isStandalone)));
   typeParams.push(createHostDirectivesType(meta));
   // TODO(signals): Always include this metadata starting with v17. Right
-  // now Angular v16.0.x does not support this field and library distributions
+  // now Angular Classicv16.0.x does not support this field and library distributions
   // would then be incompatible with v16.0.x framework users.
   if (meta.isSignal) {
     typeParams.push(o.expressionType(o.literal(meta.isSignal)));
@@ -500,7 +500,7 @@ export function createDirectiveType(meta: R3DirectiveMetadata): o.Type {
   typeParams.push(o.expressionType(o.literal(meta.isStandalone)));
   typeParams.push(createHostDirectivesType(meta));
   // TODO(signals): Always include this metadata starting with v17. Right
-  // now Angular v16.0.x does not support this field and library distributions
+  // now Angular Classicv16.0.x does not support this field and library distributions
   // would then be incompatible with v16.0.x framework users.
   if (meta.isSignal) {
     typeParams.push(o.expressionType(o.literal(meta.isSignal)));

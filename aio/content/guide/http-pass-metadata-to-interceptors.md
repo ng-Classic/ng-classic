@@ -10,7 +10,7 @@ This lets applications or other interceptors tag requests with configuration par
 
 ## Create a context token
 
-Angular stores and retrieves a value in the context using an `HttpContextToken`.
+Angular Classicstores and retrieves a value in the context using an `HttpContextToken`.
 You can create a context token using the `new` operator, as in the following example:
 
 <code-example header="creating a context token" path="http/src/app/http-interceptors/retry-interceptor.ts" region="context-token"></code-example>
@@ -34,7 +34,7 @@ When making a request, you can provide an `HttpContext` instance, in which you h
 ## Read context values in an interceptor
 
 Within an interceptor, you can read the value of a token in a given request's context with `HttpContext.get()`.
-If you have not explicitly set a value for the token, Angular returns the default value specified in the token.
+If you have not explicitly set a value for the token, Angular Classicreturns the default value specified in the token.
 
 <code-example header="reading context values in an interceptor" path="http/src/app/http-interceptors/retry-interceptor.ts" region="reading-context"></code-example>
 

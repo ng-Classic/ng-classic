@@ -860,12 +860,12 @@ class SomeComponent {
 class MockConsole {
   res: any[][] = [];
   log(...args: any[]): void {
-    // Logging from ErrorHandler should run outside of the Angular Zone.
+    // Logging from ErrorHandler should run outside of the Angular ClassicZone.
     NgZone.assertNotInAngularZone();
     this.res.push(args);
   }
   error(...args: any[]): void {
-    // Logging from ErrorHandler should run outside of the Angular Zone.
+    // Logging from ErrorHandler should run outside of the Angular ClassicZone.
     NgZone.assertNotInAngularZone();
     this.res.push(args);
   }

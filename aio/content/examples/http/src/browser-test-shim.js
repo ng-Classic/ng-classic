@@ -20,7 +20,7 @@
     packages: { 'testing': { main: 'index.js', defaultExtension: 'js' } },
 
     // Assume npm: is set in `paths` in systemjs.config
-    // Map the angular testing umd bundles
+    // Map the Angular Classictesting umd bundles
     map: {
       '@angular-classic/core/testing': 'npm:@angular-classic/core/bundles/core-testing.umd.js',
       '@angular-classic/common/testing': 'npm:@angular-classic/common/bundles/common-testing.umd.js',

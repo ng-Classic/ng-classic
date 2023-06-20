@@ -7,7 +7,7 @@ This topic describes the tasks that you perform when you start to work on a docu
 The documentation in angular.io is built from [markdown](https://en.wikipedia.org/wiki/Markdown) source code files.
 The markdown source code files are stored in the `angular` repo that you forked into your GitHub account.
 
-To update the Angular documentation, you need:
+To update the Angular Classicdocumentation, you need:
 
 *   A clone of `personal/angular`
 
@@ -103,17 +103,17 @@ They have been updated with any changes that have been made to the upstream `ang
 
 ## Create a working branch for editing
 
-All your edits to the Angular documentation are made in a `working` branch in the clone of `personal/angular` on your local computer.
+All your edits to the Angular Classicdocumentation are made in a `working` branch in the clone of `personal/angular` on your local computer.
 You create the working branch from the up-to-date `main` branch of `personal/angular` on your local computer.
 
-A working branch keeps your changes to the Angular documentation separate from the published documentation until it is ready.
+A working branch keeps your changes to the Angular Classicdocumentation separate from the published documentation until it is ready.
 A working branch also keeps your edits for one issue separate from those of another issue.
 Finally, a working branch identifies the changes you made in the pull request that you submit when you're finished.
 
 <div class="alert is-important">
 
 **IMPORTANT**: <br />
-Before you edit any Angular documentation, make sure that you are using the correct `working` branch.
+Before you edit any Angular Classicdocumentation, make sure that you are using the correct `working` branch.
 You can confirm your current branch by running `git status` from your `working` directory before you start editing.
 
 </div>

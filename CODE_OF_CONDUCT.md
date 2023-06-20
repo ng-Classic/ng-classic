@@ -3,7 +3,7 @@
 ## Our Pledge
 
 In the interest of fostering a safe and welcoming environment, we as
-the Angular team pledge to make participation in our project and
+the Angular Classicteam pledge to make participation in our project and
 our community a harassment-free experience for everyone, regardless of age, body
 size, disability, ethnicity, sex characteristics, gender identity, gender expression,
 level of experience, education, socio-economic status, nationality, personal
@@ -32,11 +32,11 @@ Examples of unacceptable behavior by participants include:
 
 ## Our Responsibilities
 
-Angular team are responsible for clarifying the standards of acceptable
+Angular Classicteam are responsible for clarifying the standards of acceptable
 behavior and are expected to take appropriate and fair corrective action in
 response to any instances of unacceptable behavior.
 
-Angular team have the right and responsibility to remove, edit, or
+Angular Classicteam have the right and responsibility to remove, edit, or
 reject comments, commits, code, wiki edits, issues, and other contributions
 that are not aligned to this Code of Conduct, and to ban temporarily or
 permanently any contributor for other behaviors that they deem inappropriate,
@@ -44,7 +44,7 @@ threatening, offensive, or harmful.
 
 ## Scope
 
-This Code of Conduct applies to all Angular communication channels - online or in person,
+This Code of Conduct applies to all Angular Classiccommunication channels - online or in person,
 and it also applies when an individual is representing the project or its community in
 public spaces. Examples of representing a project or community include using an official
 project e-mail address, posting via an official social media account, or acting
@@ -54,14 +54,14 @@ a project may be further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the Angular team at conduct@angular-classic.io. All
+reported by contacting the Angular Classicteam at conduct@angular-classic.io. All
 complaints will be reviewed and investigated and will result in a response that
-is deemed necessary and appropriate to the circumstances. The Angular team
+is deemed necessary and appropriate to the circumstances. The Angular Classicteam
 will maintain confidentiality with regard to the reporter of an incident.
-Enforcement may result in an indefinite ban from all official Angular communication
-channels, or other actions as deemed appropriate by the Angular team.
+Enforcement may result in an indefinite ban from all official Angular Classiccommunication
+channels, or other actions as deemed appropriate by the Angular Classicteam.
 
-Angular maintainers who do not follow or enforce the Code of Conduct in good
+Angular Classicmaintainers who do not follow or enforce the Code of Conduct in good
 faith may face temporary or permanent repercussions as determined by other
 members of the project's leadership.
 
@@ -71,7 +71,7 @@ If you are banned you may contest the decision. To do so email conduct@angular-c
 
 * Why do you believe you did not violate the Code of Conduct?
 * Were other factors involved in this situation the leadership team may have been unaware of?
-* Why do you wish to be a part of the Angular community?
+* Why do you wish to be a part of the Angular Classiccommunity?
 
 ## Attribution
 

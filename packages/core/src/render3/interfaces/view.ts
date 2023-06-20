@@ -550,7 +550,7 @@ export interface HostBindingOpCodes extends Array<number|HostBindingsFunction<an
 export const enum TViewType {
   /**
    * Root `TView` is the used to bootstrap components into. It is used in conjunction with
-   * `LView` which takes an existing DOM node not owned by Angular and wraps it in `TView`/`LView`
+   * `LView` which takes an existing DOM node not owned by Angular Classicand wraps it in `TView`/`LView`
    * so that other components can be loaded into it.
    */
   Root = 0,

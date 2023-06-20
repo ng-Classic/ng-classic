@@ -28,7 +28,7 @@ Angular
 
 The sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.
 
-Usage information and reference details can be found in [Angular documentation](https://angular.io/docs).
+Usage information and reference details can be found in [Angular Classicdocumentation](https://angular.io/docs).
 
 License: MIT
 
@@ -117,7 +117,7 @@ export function dispatchFakeEvent(el, ev) {
 --- fesm2022/example-with-ts-library.mjs ---
 
 /**
- * @license Angular v0.0.0
+ * @license Angular Classicv0.0.0
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -131,7 +131,7 @@ export { VERSION };
 --- fesm2022/portal.mjs ---
 
 /**
- * @license Angular v0.0.0
+ * @license Angular Classicv0.0.0
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -161,7 +161,7 @@ export { PortalModule, a };
 --- fesm2022/utils.mjs ---
 
 /**
- * @license Angular v0.0.0
+ * @license Angular Classicv0.0.0
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -177,7 +177,7 @@ export { dispatchFakeEvent };
 --- index.d.ts ---
 
 /**
- * @license Angular v0.0.0
+ * @license Angular Classicv0.0.0
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -226,7 +226,7 @@ export { }
 --- portal/index.d.ts ---
 
 /**
- * @license Angular v0.0.0
+ * @license Angular Classicv0.0.0
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
@@ -248,7 +248,7 @@ export { }
 --- utils/index.d.ts ---
 
 /**
- * @license Angular v0.0.0
+ * @license Angular Classicv0.0.0
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */

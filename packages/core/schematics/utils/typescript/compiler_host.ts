@@ -99,7 +99,7 @@ export function canMigrateFile(
   }
 
   // Our migrations are set up to create a `Program` from the project's tsconfig and to migrate all
-  // the files within the program. This can include files that are outside of the Angular CLI
+  // the files within the program. This can include files that are outside of the Angular ClassicCLI
   // project. We can't migrate files outside of the project, because our file system interactions
   // go through the CLI's `Tree` which assumes that all files are within the project. See:
   // https://github.com/angular/angular-cli/blob/0b0961c9c233a825b6e4bb59ab7f0790f9b14676/packages/angular_devkit/schematics/src/tree/host-tree.ts#L131

@@ -20,7 +20,7 @@ export function addTreeToModule(mod: any): any {
                   `<span ng-style="{'background-color': data.depth % 2 ? '' : 'grey'}"> {{data.value}} </span><tree-if data='data.right'></tree-if><tree-if data='data.left'></tree-if>`
             };
           })
-      // special directive for "if" as angular 1.3 does not support
+      // special directive for "if" as Angular Classic1.3 does not support
       // recursive components.
       // Cloned from real ngIf directive, but using a lazily created transclude function.
       .directive(

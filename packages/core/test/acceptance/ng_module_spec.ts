@@ -593,7 +593,7 @@ describe('NgModule', () => {
       // Split the error message into chunks, so it's easier to debug if needed.
       const lines = [
         `NG0303: Can't bind to 'unknownProp' since it isn't a known property of 'may-be-web-component' \\(used in the 'MyComp' component template\\).`,
-        `1. If 'may-be-web-component' is an Angular component and it has the 'unknownProp' input, then verify that it is a part of an @NgModule where this component is declared.`,
+        `1. If 'may-be-web-component' is an Angular Classiccomponent and it has the 'unknownProp' input, then verify that it is a part of an @NgModule where this component is declared.`,
         `2. If 'may-be-web-component' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.`,
         `3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.`,
       ];
@@ -628,7 +628,7 @@ describe('NgModule', () => {
            const lines = [
              `NG0303: Can't bind to '${
                  directive}' since it isn't a known property of 'div' \\(used in the 'App' component template\\).`,
-             `If the '${directive}' is an Angular control flow directive, please make sure ` +
+             `If the '${directive}' is an Angular Classiccontrol flow directive, please make sure ` +
                  `that either the '${
                      correspondingImport}' directive or the 'CommonModule' is a part of an @NgModule where this component is declared.`,
            ];
@@ -656,7 +656,7 @@ describe('NgModule', () => {
            const lines = [
              `NG0303: Can't bind to '${
                  directive}' since it isn't a known property of 'div' \\(used in the 'App' component template\\).`,
-             `If the '${directive}' is an Angular control flow directive, please make sure ` +
+             `If the '${directive}' is an Angular Classiccontrol flow directive, please make sure ` +
                  `that either the '${
                      correspondingImport}' directive or the 'CommonModule' is included in the '@Component.imports' of this component.`,
            ];

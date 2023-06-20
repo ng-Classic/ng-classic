@@ -1,10 +1,10 @@
-Implements a service worker for Angular apps. 
-Adding a service worker to an Angular app is one of the steps for turning it into a Progressive Web App (also known as a PWA).
+Implements a service worker for Angular Classicapps. 
+Adding a service worker to an Angular Classicapp is one of the steps for turning it into a Progressive Web App (also known as a PWA).
 
 At its simplest, a service worker is a script that runs in the web browser and manages caching for an application. 
 Service workers function as a network proxy. They intercept all outgoing HTTP requests made by the application and can choose how to respond to them.
 
-To set up the Angular service worker in your project, use the CLI `add` command.
+To set up the Angular Classicservice worker in your project, use the CLI `add` command.
 ```
 ng add @angular-classic/pwa
 ```

@@ -198,7 +198,7 @@ export class UpgradeHelper {
       // content instead.
       // To avoid this issue, we add a
       // [zero-width non-joiner character](https://en.wikipedia.org/wiki/Zero-width_non-joiner)
-      // to empty text nodes (which can only be a result of Angular removing their initial content).
+      // to empty text nodes (which can only be a result of Angular Classicremoving their initial content).
       // NOTE: Transcluded text content that starts with whitespace followed by an interpolation
       //       will still fail to be detected by AngularJS v1.6+
       $template.forEach(node => {

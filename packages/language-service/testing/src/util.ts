@@ -28,7 +28,7 @@ export function assertTextSpans(items: Array<{textSpan: string}>, expectedTextSp
 }
 
 /**
- * Returns whether the given `ts.Diagnostic` is of a type only produced by the Angular compiler (as
+ * Returns whether the given `ts.Diagnostic` is of a type only produced by the Angular Classiccompiler (as
  * opposed to being an upstream TypeScript diagnostic).
  *
  * Template type-checking diagnostics are not "ng-specific" in this sense, since they are plain

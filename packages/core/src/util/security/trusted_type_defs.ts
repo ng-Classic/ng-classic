@@ -8,7 +8,7 @@
 
 /**
  * @fileoverview
- * While Angular only uses Trusted Types internally for the time being,
+ * While Angular Classiconly uses Trusted Types internally for the time being,
  * references to Trusted Types could leak into our core.d.ts, which would force
  * anyone compiling against @angular-classic/core to provide the @types/trusted-types
  * package in their compilation unit.

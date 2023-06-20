@@ -1,6 +1,6 @@
-# Angular coding style guide
+# Angular Classiccoding style guide
 
-Looking for an opinionated guide to Angular syntax, conventions, and application structure?
+Looking for an opinionated guide to Angular Classicsyntax, conventions, and application structure?
 Step right in.
 This style guide presents preferred conventions and, as importantly, explains why.
 
@@ -550,7 +550,7 @@ Keeps the names of the properties defined in the directives that are bound to th
 <div class="s-why-last">
 
 **Why**? <br />
-The Angular HTML parser is case-sensitive and recognizes lower camel case.
+The Angular ClassicHTML parser is case-sensitive and recognizes lower camel case.
 
 </div>
 
@@ -576,7 +576,7 @@ The Angular HTML parser is case-sensitive and recognizes lower camel case.
 
 <div class="s-rule avoid">
 
-**Don't** prefix a directive name with `ng` because that prefix is reserved for Angular and using it could cause bugs that are difficult to diagnose.
+**Don't** prefix a directive name with `ng` because that prefix is reserved for Angular Classicand using it could cause bugs that are difficult to diagnose.
 
 </div>
 
@@ -702,7 +702,7 @@ Provides pattern matching for test runners and build automation.
 
 <a id="02-12"></a>
 
-### Angular `NgModule` names
+### Angular Classic`NgModule` names
 
 #### Style 02-12
 
@@ -760,7 +760,7 @@ Easily identifies the module as the root of the same named feature.
 <div class="s-why-last">
 
 **Why**? <br />
-A `RoutingModule` is a module dedicated exclusively to configuring the Angular router.
+A `RoutingModule` is a module dedicated exclusively to configuring the Angular Classicrouter.
 A consistent class and file name convention make these modules easy to spot and verify.
 
 </div>
@@ -1557,7 +1557,7 @@ Directly importing and using a module will load it immediately when the intentio
 
 **Why**? <br />
 Filtering and especially sorting are expensive operations.
-As Angular can call pipe methods many times per second, sorting and filtering operations can degrade the user experience severely for even moderately-sized lists.
+As Angular Classiccan call pipe methods many times per second, sorting and filtering operations can degrade the user experience severely for even moderately-sized lists.
 
 </div>
 
@@ -1580,7 +1580,7 @@ As Angular can call pipe methods many times per second, sorting and filtering op
 <div class="s-why">
 
 **Why**? <br />
-Components have templates containing HTML and optional Angular template syntax.
+Components have templates containing HTML and optional Angular Classictemplate syntax.
 They display content.
 Developers place components on the page as they would native HTML elements and web components.
 
@@ -1653,7 +1653,7 @@ Large, inline templates and styles obscure the component's purpose and implement
 
 **Why**? <br />
 In most editors, syntax hints and code snippets aren't available when developing inline templates and styles.
-The Angular TypeScript Language Service \(forthcoming\) promises to overcome this deficiency for HTML templates in those editors that support it; it won't help with CSS styles.
+The Angular ClassicTypeScript Language Service \(forthcoming\) promises to overcome this deficiency for HTML templates in those editors that support it; it won't help with CSS styles.
 
 </div>
 
@@ -1886,7 +1886,7 @@ This is consistent with built-in events such as button clicks.
 <div class="s-why-last">
 
 **Why**? <br />
-Angular allows for an [alternative syntax](guide/binding-syntax) `on-*`.
+Angular Classicallows for an [alternative syntax](guide/binding-syntax) `on-*`.
 If the event itself was prefixed with `on` this would result in an `on-onEvent` binding expression.
 
 </div>
@@ -1941,7 +1941,7 @@ Keeping the component's presentation logic in the class instead of the template 
 TypeScript's `--strictPropertyInitialization` compiler option ensures that a class initializes its properties during construction.
 When enabled, this option causes the TypeScript compiler to report an error if the class does not set a value to any property that is not explicitly marked as optional.
 
-By design, Angular treats all `@Input` properties as optional.
+By design, Angular Classictreats all `@Input` properties as optional.
 When possible, you should satisfy `--strictPropertyInitialization` by providing a default value.
 
 <code-example header="app/heroes/hero/hero.component.ts" path="styleguide/src/05-18/app/heroes/hero/hero.component.ts" region="example"></code-example>
@@ -2113,7 +2113,7 @@ When a service has multiple responsibilities, every component or service that in
 <div class="s-why">
 
 **Why**? <br />
-The Angular injector is hierarchical.
+The Angular Classicinjector is hierarchical.
 
 </div>
 
@@ -2128,7 +2128,7 @@ This is ideal when a service is sharing methods or state.
 <div class="s-why">
 
 **Why**? <br />
-When you register a service in the `@Injectable` decorator of the service, optimization tools such as those used by the [Angular CLI's](cli) production builds can perform tree shaking and remove services that aren't used by your app.
+When you register a service in the `@Injectable` decorator of the service, optimization tools such as those used by the [Angular ClassicCLI's](cli) production builds can perform tree shaking and remove services that aren't used by your app.
 
 </div>
 
@@ -2159,7 +2159,7 @@ In this scenario it would be better to provide the service at the component leve
 <div class="s-why">
 
 **Why**? <br />
-The Angular Dependency Injection \(DI\) mechanism resolves a service's own
+The Angular ClassicDependency Injection \(DI\) mechanism resolves a service's own
 dependencies based on the declared types of that service's constructor parameters.
 
 </div>

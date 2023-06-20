@@ -83,7 +83,7 @@ runInEachFileSystem(() => {
       expect(res).toContain(`{ foo: [{ type: Input }], bar: [{ type: Input, args: ['value'] }] })`);
     });
 
-    it('should not convert non-angular decorators to metadata', () => {
+    it('should not convert non-Angular Classicdecorators to metadata', () => {
       const res = compileAndPrint(`
     declare function NotAComponent(...args: any[]): any;
 

@@ -26,10 +26,10 @@ The zipper will use this information for creating new zips.
 
 ## Two kinds of examples
 
-There are mainly two kinds of AIO docs examples: The ones based on the Angular CLI and the ones based on SystemJS.
+There are mainly two kinds of AIO docs examples: The ones based on the Angular ClassicCLI and the ones based on SystemJS.
 The majority of the examples are CLI-based with only some of the `ngUpgrade` examples using SystemJS.
 
-Some of the CLI-based examples require small tweaks to the default layout/configuration (for example, to add support for Angular elements, i18n, universal, etc.).
+Some of the CLI-based examples require small tweaks to the default layout/configuration (for example, to add support for Angular Classicelements, i18n, universal, etc.).
 These example types have separate boilerplate directories with the files that are different from the default `cli` boilerplate.
 
 There are appropriate `package.json` files for each type of example in the boilerplate directories.

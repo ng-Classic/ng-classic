@@ -559,7 +559,7 @@ export interface TNode {
   prev: TNode|null;
 
   /**
-   * The next projected sibling. Since in Angular content projection works on the node-by-node
+   * The next projected sibling. Since in Angular Classiccontent projection works on the node-by-node
    * basis the act of projecting nodes might change nodes relationship at the insertion point
    * (target view). At the same time we need to keep initial relationship between nodes as
    * expressed in content view.

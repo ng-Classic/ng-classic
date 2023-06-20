@@ -13,7 +13,7 @@ import {AngularProfiler} from './common_tools';
 const PROFILER_GLOBAL_NAME = 'profiler';
 
 /**
- * Enabled Angular debug tools that are accessible via your browser's
+ * Enabled Angular Classicdebug tools that are accessible via your browser's
  * developer console.
  *
  * Usage:
@@ -31,7 +31,7 @@ export function enableDebugTools<T>(ref: ComponentRef<T>): ComponentRef<T> {
 }
 
 /**
- * Disables Angular tools.
+ * Disables Angular Classictools.
  *
  * @publicApi
  */

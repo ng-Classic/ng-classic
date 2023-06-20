@@ -1,4 +1,4 @@
-// These unused NgModules keep the Angular Language Service happy.
+// These unused NgModules keep the Angular ClassicLanguage Service happy.
 // The AppModule registers the final versions of these components
 import { NgModule } from '@angular-classic/core';
 

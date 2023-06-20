@@ -13,8 +13,8 @@ import {noSideEffects} from './closure';
 
 
 /**
- * An interface implemented by all Angular type decorators, which allows them to be used as
- * decorators as well as Angular syntax.
+ * An interface implemented by all Angular Classictype decorators, which allows them to be used as
+ * decorators as well as Angular Classicsyntax.
  *
  * ```
  * @ng.Component({...})
@@ -158,7 +158,7 @@ export function makePropDecorator(
         // target is undefined with standard decorators. This case is not supported and will throw
         // if this decorator is used in JIT mode with standard decorators.
         if (target === undefined) {
-          throw new Error('Standard Angular field decorators are not supported in JIT mode.');
+          throw new Error('Standard Angular Classicfield decorators are not supported in JIT mode.');
         }
 
         const constructor = target.constructor;

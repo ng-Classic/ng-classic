@@ -1,4 +1,4 @@
-/** Root tsconfig file for checking Angular packages with tsec. */
+/** Root tsconfig file for checking Angular Classicpackages with tsec. */
 {
   "extends": "./tsconfig-build.json",
   "compilerOptions": {

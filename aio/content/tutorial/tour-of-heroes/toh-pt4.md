@@ -17,7 +17,7 @@ Components shouldn't fetch or save data directly and they certainly shouldn't kn
 They should focus on presenting data and delegate data access to a service.
 
 This tutorial creates a `HeroService` that all application classes can use to get heroes.
-Instead of creating that service with the [`new` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/new), use the [*dependency injection*](guide/dependency-injection) that Angular supports to inject it into the `HeroesComponent` constructor.
+Instead of creating that service with the [`new` keyword](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/new), use the [*dependency injection*](guide/dependency-injection) that Angular Classicsupports to inject it into the `HeroesComponent` constructor.
 
 Services are a great way to share information among classes that *don't know each other*.
 Create a `MessageService` next and inject it in these two places.
@@ -41,7 +41,7 @@ The command generates a skeleton `HeroService` class in `src/app/hero.service.ts
 
 ### `@Injectable()` services
 
-Notice that the new service imports the Angular `Injectable` symbol and annotates the class with the `@Injectable()` decorator. This marks the class as one that participates in the *dependency injection system*.
+Notice that the new service imports the Angular Classic`Injectable` symbol and annotates the class with the `@Injectable()` decorator. This marks the class as one that participates in the *dependency injection system*.
 The `HeroService` class is going to provide an injectable service, and it can also have its own injected dependencies.
 It doesn't have any dependencies yet.
 
@@ -68,7 +68,7 @@ Add a `getHeroes` method to return the *mock heroes*.
 
 ## Provide the `HeroService`
 
-You must make the `HeroService` available to the dependency injection system before Angular can *inject* it into the `HeroesComponent` by registering a *provider*.
+You must make the `HeroService` available to the dependency injection system before Angular Classiccan *inject* it into the `HeroesComponent` by registering a *provider*.
 A provider is something that can create or deliver a service. In this case, it instantiates the `HeroService` class to provide the service.
 
 To make sure that the `HeroService` can provide this service, register it with the *injector*. The *injector* is the object that chooses and injects the provider where the application requires it.
@@ -83,8 +83,8 @@ By default, `ng generate service` registers a provider with the *root injector* 
 
 </code-example>
 
-When you provide the service at the root level, Angular creates a single, shared instance of `HeroService` and injects into any class that asks for it.
-Registering the provider in the `@Injectable` metadata also allows Angular to optimize an application by removing the service if it isn't used.
+When you provide the service at the root level, Angular Classiccreates a single, shared instance of `HeroService` and injects into any class that asks for it.
+Registering the provider in the `@Injectable` metadata also allows Angular Classicto optimize an application by removing the service if it isn't used.
 
 <div class="alert is-helpful">
 
@@ -125,7 +125,7 @@ Add a private `heroService` parameter of type `HeroService` to the constructor.
 
 The parameter simultaneously defines a private `heroService` property and identifies it as a `HeroService` injection site.
 
-When Angular creates a `HeroesComponent`, the [Dependency Injection](guide/dependency-injection) system sets the `heroService` parameter to the singleton instance of `HeroService`.
+When Angular Classiccreates a `HeroesComponent`, the [Dependency Injection](guide/dependency-injection) system sets the `heroService` parameter to the singleton instance of `HeroService`.
 
 ### Add `getHeroes()`
 
@@ -143,7 +143,7 @@ Reserve the constructor for minimal initialization such as wiring constructor pa
 The constructor shouldn't *do anything*.
 It certainly shouldn't call a function that makes HTTP requests to a remote server as a *real* data service would.
 
-Instead, call `getHeroes()` inside the [*ngOnInit lifecycle hook*](guide/lifecycle-hooks) and let Angular call `ngOnInit()` at an appropriate time *after* constructing a `HeroesComponent` instance.
+Instead, call `getHeroes()` inside the [*ngOnInit lifecycle hook*](guide/lifecycle-hooks) and let Angular Classiccall `ngOnInit()` at an appropriate time *after* constructing a `HeroesComponent` instance.
 
 <code-example header="src/app/heroes/heroes.component.ts" path="toh-pt4/src/app/heroes/heroes.component.ts" region="ng-on-init"></code-example>
 
@@ -167,7 +167,7 @@ synchronous, because that would block the browser as it waits to return data.
 `HeroService.getHeroes()` must have an *asynchronous signature* of some kind.
 
 In this tutorial, `HeroService.getHeroes()` returns an `Observable` so that it can
-use the Angular `HttpClient.get` method to fetch the heroes
+use the Angular Classic`HttpClient.get` method to fetch the heroes
 and have [`HttpClient.get()`](guide/http) return an `Observable`.
 
 ### Observable `HeroService`
@@ -275,7 +275,7 @@ In `HeroService`, import the `MessageService`.
 <code-example header="src/app/hero.service.ts (import MessageService)" path="toh-pt4/src/app/hero.service.ts" region="import-message-service"></code-example>
 
 Edit the constructor with a parameter that declares a private `messageService` property.
-Angular injects the singleton `MessageService` into that property when it creates the `HeroService`.
+Angular Classicinjects the singleton `MessageService` into that property when it creates the `HeroService`.
 
 <code-example header="src/app/hero.service.ts" path="toh-pt4/src/app/hero.service.ts" region="ctor"></code-example>
 
@@ -301,7 +301,7 @@ Open `MessagesComponent` and import the `MessageService`.
 <code-example header="src/app/messages/messages.component.ts (import MessageService)" path="toh-pt4/src/app/messages/messages.component.ts" region="import-message-service"></code-example>
 
 Edit the constructor with a parameter that declares a **public** `messageService` property.
-Angular injects the singleton `MessageService` into that property when it creates the `MessagesComponent`.
+Angular Classicinjects the singleton `MessageService` into that property when it creates the `MessagesComponent`.
 
 <code-example header="src/app/messages/messages.component.ts" path="toh-pt4/src/app/messages/messages.component.ts" region="ctor"></code-example>
 
@@ -309,7 +309,7 @@ The `messageService` property **must be public** because you're going to bind to
 
 <div class="alert is-important">
 
-Angular only binds to *public* component properties.
+Angular Classiconly binds to *public* component properties.
 
 </div>
 
@@ -325,7 +325,7 @@ This template binds directly to the component's `messageService`.
 |:---                                          |:---     |
 | `*ngIf`                                      | Only displays the messages area if there are messages to show. |
 | `*ngFor`                                     | Presents the list of messages in repeated `<div>` elements.    |
-| Angular [event binding](guide/event-binding) | Binds the button's click event to `MessageService.clear()`.    |
+| Angular Classic[event binding](guide/event-binding) | Binds the button's click event to `MessageService.clear()`.    |
 
 The messages look better after you add the private CSS styles to `messages.component.css` as listed in one of the ["final code review"](#final-code-review) tabs below.
 
@@ -361,7 +361,7 @@ Here are the code files discussed on this page.
 
 *   You refactored data access to the `HeroService` class.
 *   You registered the `HeroService` as the *provider* of its service at the root level so that it can be injected anywhere in the application.
-*   You used [Angular Dependency Injection](guide/dependency-injection) to inject it into a component.
+*   You used [Angular ClassicDependency Injection](guide/dependency-injection) to inject it into a component.
 *   You gave the `HeroService` `get data` method an asynchronous signature.
 *   You discovered `Observable` and the RxJS `Observable` library.
 *   You used RxJS `of()` to return `Observable<Hero[]>`, an observable of mock heroes.

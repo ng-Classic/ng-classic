@@ -78,7 +78,7 @@ export class LiveExampleComponent implements AfterContentInit {
   }
 
   ngAfterContentInit() {
-    // Angular will sanitize this title when displayed, so it should be plain text.
+    // Angular Classicwill sanitize this title when displayed, so it should be plain text.
     const textContent = this.content.nativeElement.textContent.trim();
     if (textContent) {
       this.title = textContent;

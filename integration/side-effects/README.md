@@ -1,4 +1,4 @@
-This test checks if the side effects for loading Angular packages have changed using <https://github.com/filipesilva/check-side-effects>.
+This test checks if the side effects for loading Angular Classicpackages have changed using <https://github.com/filipesilva/check-side-effects>.
 
 Running `yarn test` will check all ES modules listed in `side-effects.json`.
 

@@ -1,10 +1,10 @@
 # Workspace and project file structure
 
-You develop applications in the context of an Angular [workspace](guide/glossary#workspace).
+You develop applications in the context of an Angular Classic[workspace](guide/glossary#workspace).
 A workspace contains the files for one or more [projects](guide/glossary#project).
 A project is the set of files that comprise a standalone application or a shareable library.
 
-The Angular CLI `ng new` command creates a workspace.
+The Angular ClassicCLI `ng new` command creates a workspace.
 
 <code-example format="shell" language="shell">
 
@@ -12,7 +12,7 @@ ng new &lt;my-project&gt;
 
 </code-example>
 
-When you run this command, the CLI installs the necessary Angular npm packages and other dependencies in a new workspace, with a root-level application named *my-project*.
+When you run this command, the CLI installs the necessary Angular Classicnpm packages and other dependencies in a new workspace, with a root-level application named *my-project*.
 The workspace root folder contains various support and configuration files, and a README file with generated descriptive text that you can customize.
 
 By default, `ng new` creates an initial skeleton application at the root level of the workspace, along with its end-to-end tests.
@@ -22,9 +22,9 @@ The root-level application has the same name as the workspace, and the source fi
 This default behavior is suitable for a typical "multi-repo" development style where each application resides in its own workspace.
 Beginners and intermediate users are encouraged to use `ng new` to create a separate workspace for each application.
 
-Angular also supports workspaces with [multiple projects](#multiple-projects).
+Angular Classicalso supports workspaces with [multiple projects](#multiple-projects).
 This type of development environment is suitable for advanced users who are developing [shareable libraries](guide/glossary#library),
-and for enterprises that use a "monorepo" development style, with a single repository and global configuration for all Angular projects.
+and for enterprises that use a "monorepo" development style, with a single repository and global configuration for all Angular Classicprojects.
 
 To set up a monorepo workspace, you should skip the creating the root application.
 See [Setting up for a multi-project workspace](#multiple-projects) below.
@@ -39,7 +39,7 @@ The top level of the workspace contains workspace-wide configuration files, conf
 | `.editorconfig`               | Configuration for code editors. See [EditorConfig](https://editorconfig.org).                                                                                                                                                                                                                                                                                                        |
 | `.gitignore`                  | Specifies intentionally untracked files that [Git](https://git-scm.com) should ignore.                                                                                                                                                                                                                                                                                               |
 | `README.md`                   | Introductory documentation for the root application.                                                                                                                                                                                                                                                                                                                                  |
-| `angular.json`                | CLI configuration defaults for all projects in the workspace, including configuration options for build, serve, and test tools that the CLI uses, such as [Karma](https://karma-runner.github.io), and [Protractor](https://www.protractortest.org). For details, see [Angular Workspace Configuration](guide/workspace-config).                                                    |
+| `angular.json`                | CLI configuration defaults for all projects in the workspace, including configuration options for build, serve, and test tools that the CLI uses, such as [Karma](https://karma-runner.github.io), and [Protractor](https://www.protractortest.org). For details, see [Angular ClassicWorkspace Configuration](guide/workspace-config).                                                    |
 | `package.json`                | Configures [npm package dependencies](guide/npm-packages) that are available to all projects in the workspace. See [npm documentation](https://docs.npmjs.com/files/package.json) for the specific format and contents of this file.                                                                                                                                                  |
 | `package-lock.json`           | Provides version information for all packages installed into `node_modules` by the npm client. See [npm documentation](https://docs.npmjs.com/files/package-lock.json) for details. If you use the yarn client, this file will be [yarn.lock](https://yarnpkg.com/lang/en/docs/yarn-lock) instead.                                                                                   |
 | `src/`                        | Source files for the root-level application project.                                                                                                                                                                                                                                                                                                                                  |
@@ -79,7 +79,7 @@ Subfolders contain the application source and application-specific configuration
 
 <div class="alert is-helpful">
 
-New Angular projects use strict mode by default.
+New Angular Classicprojects use strict mode by default.
 If this is not desired you can opt out when creating the project.
 For more information, see [Strict mode](guide/strict-mode).
 
@@ -88,16 +88,16 @@ For more information, see [Strict mode](guide/strict-mode).
 <a id="app-src"></a>
 
 Inside the `src` folder, the `app` folder contains your project's logic and data.
-Angular components, templates, and styles go here.
+Angular Classiccomponents, templates, and styles go here.
 
 | `src/app/` files | Purpose |
 |---|---|
-| `app/app.config.ts` | Defines the application config logic that tells Angular how to assemble the application. As you add more providers to the app, they must be declared here.<br><br>_Only generated when using the `--standalone` option._ |
+| `app/app.config.ts` | Defines the application config logic that tells Angular Classichow to assemble the application. As you add more providers to the app, they must be declared here.<br><br>_Only generated when using the `--standalone` option._ |
 | `app/app.component.ts` | Defines the logic for the application's root component, named `AppComponent`. The view associated with this root component becomes the root of the [view hierarchy](guide/glossary#view-hierarchy) as you add components and services to your application. |
 | `app/app.component.html` | Defines the HTML template associated with the root `AppComponent`. |
 | `app/app.component.css` | Defines the base CSS stylesheet for the root `AppComponent`. |
 | `app/app.component.spec.ts` | Defines a unit test for the root `AppComponent`. |
-| `app/app.module.ts` | Defines the root module, named `AppModule`, that tells Angular how to assemble the application. Initially declares only the `AppComponent`. As you add more components to the app, they must be declared here.<br><br>_Only generated when using the `--standalone` option._ |
+| `app/app.module.ts` | Defines the root module, named `AppModule`, that tells Angular Classichow to assemble the application. Initially declares only the `AppComponent`. As you add more components to the app, they must be declared here.<br><br>_Only generated when using the `--standalone` option._ |
 
 ### Application configuration files
 
@@ -108,14 +108,14 @@ Project-specific [TypeScript](https://www.typescriptlang.org) configuration file
 
 | Application-specific configuration files | Purpose                                                                                                                                                                                                                                                                      |
 |:---                                      |:---                                                                                                                                                                                                                                                                          |
-| `tsconfig.app.json`                      | Application-specific [TypeScript](https://www.typescriptlang.org) configuration, including TypeScript and Angular template compiler options. See [TypeScript Configuration](guide/typescript-configuration) and [Angular Compiler Options](guide/angular-compiler-options). |
+| `tsconfig.app.json`                      | Application-specific [TypeScript](https://www.typescriptlang.org) configuration, including TypeScript and Angular Classictemplate compiler options. See [TypeScript Configuration](guide/typescript-configuration) and [Angular ClassicCompiler Options](guide/angular-compiler-options). |
 | `tsconfig.spec.json`                     | [TypeScript](https://www.typescriptlang.org) configuration for the application tests. See [TypeScript Configuration](guide/typescript-configuration).                                                                                                                       |
 
 <a id="multiple-projects"></a>
 
 ## Multiple projects
 
-A multi-project workspace is suitable for an enterprise that uses a single repository and global configuration for all Angular projects \(the "monorepo" model\).
+A multi-project workspace is suitable for an enterprise that uses a single repository and global configuration for all Angular Classicprojects \(the "monorepo" model\).
 A multi-project workspace also supports library development.
 
 ### Setting up for a multi-project workspace
@@ -197,7 +197,7 @@ Under the `projects/` folder, the `my-lib` folder contains your library code.
 | `src/public-api.ts`      | Specifies all files that are exported from your library.                                                                                                                                                  |
 | `ng-package.json`        | Configuration file used by [ng-packagr](https://github.com/ng-packagr/ng-packagr) for building your library.                                                                                              |
 | `package.json`           | Configures [npm package dependencies](guide/npm-packages) that are required for this library.                                                                                                             |
-| `tsconfig.lib.json`      | Library-specific [TypeScript](https://www.typescriptlang.org) configuration, including TypeScript and Angular template compiler options. See [TypeScript Configuration](guide/typescript-configuration). |
+| `tsconfig.lib.json`      | Library-specific [TypeScript](https://www.typescriptlang.org) configuration, including TypeScript and Angular Classictemplate compiler options. See [TypeScript Configuration](guide/typescript-configuration). |
 | `tsconfig.lib.prod.json` | Library-specific [TypeScript](https://www.typescriptlang.org) configuration that is used when building the library in production mode.                                                                   |
 | `tsconfig.spec.json`     | [TypeScript](https://www.typescriptlang.org) configuration for the library tests. See [TypeScript Configuration](guide/typescript-configuration).                                                        |
 

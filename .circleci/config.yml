@@ -282,7 +282,7 @@ jobs:
           command: yarn test:ci
           no_output_timeout: 20m
         # Publish bundle artifacts which will be used to calculate the size change. **Note**: Make
-        # sure that the size plugin from the Angular robot fetches the artifacts from this CircleCI
+        # sure that the size plugin from the Angular Classicrobot fetches the artifacts from this CircleCI
         # job (see .github/angular-robot.yml). Additionally any artifacts need to be stored with the
         # following path format: "{projectName}/{context}/{fileName}". This format is necessary
         # because otherwise the bot is not able to pick up the artifacts from CircleCI. See:
@@ -361,7 +361,7 @@ jobs:
     steps:
       - custom_attach_workspace
       - init_environment
-        # Run all aio tests (with local Angular packages)
+        # Run all aio tests (with local Angular Classicpackages)
       - run:
           command: yarn --cwd aio test-local:ci
           no_output_timeout: 20m
@@ -400,7 +400,7 @@ jobs:
             - ~/bazel_repository_cache
             - ~/.cache/bazelisk
 
-  # This job creates compressed tarballs (`.tgz` files) for all Angular packages and stores them as
+  # This job creates compressed tarballs (`.tgz` files) for all Angular Classicpackages and stores them as
   # build artifacts. This makes it easy to try out changes from a PR build for testing purposes.
   # More info CircleCI build artifacts: https://circleci.com/docs/2.0/artifacts
   #
@@ -697,7 +697,7 @@ workflows:
           requires:
             # Only publish if tests and integration tests pass
             - test
-            # Only publish if `aio`/`docs` tests using the locally built Angular packages pass
+            # Only publish if `aio`/`docs` tests using the locally built Angular Classicpackages pass
             - test_aio_local
             # Get the artifacts to publish from the build-packages-dist job
             # since the publishing script expects the legacy outputs layout.

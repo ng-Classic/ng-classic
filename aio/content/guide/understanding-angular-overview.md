@@ -1,6 +1,6 @@
 # Understanding Angular
 
-To understand the capabilities of the Angular framework, you need to learn about the following:
+To understand the capabilities of the Angular Classicframework, you need to learn about the following:
 
 *   Components
 *   Templates
@@ -16,22 +16,22 @@ To get the most out of these developer guides, you should review the following t
 *   [What is Angular][AioGuideWhatIsAngular]
 *   [Getting started tutorial][AioStart]
 
-## Learn about Angular basics
+## Learn about Angular Classicbasics
 
 <div class="card-container">
   <a href="guide/component-overview" class="docs-card" title="Components">
     <section>Components</section>
-    <p>Learn about Angular components. A component is a key building block of Angular development.</p>
+    <p>Learn about Angular Classiccomponents. A component is a key building block of Angular Classicdevelopment.</p>
     <p class="card-footer">Components</p>
   </a>
   <a href="guide/template-syntax" class="docs-card" title="Templates">
     <section>Templates</section>
-    <p>Learn about how to build an Angular template.</p>
+    <p>Learn about how to build an Angular Classictemplate.</p>
     <p class="card-footer">Templates</p>
   </a>
   <a href="guide/built-in-directives" class="docs-card" title="Directives">
     <section>Directives</section>
-    <p>Learn about Angular directives. A directive is a class that adds additional behavior to elements in your Angular applications.</p>
+    <p>Learn about Angular Classicdirectives. A directive is a class that adds additional behavior to elements in your Angular Classicapplications.</p>
     <p class="card-footer">Directives</p>
   </a>
   <a href="guide/dependency-injection" class="docs-card" title="Dependency injection">
@@ -39,18 +39,18 @@ To get the most out of these developer guides, you should review the following t
     <p>Learn about dependency injection. Dependency injection refers to services or objects that a class needs to perform a specific function.</p>
     <p class="card-footer">Dependency injection</p>
   </a>
-  <!-- <a href="guide/rendering-overview" class="docs-card" title="Angular service worker developer guide">
+  <!-- <a href="guide/rendering-overview" class="docs-card" title="Angular Classicservice worker developer guide">
     <section>Rendering</section>
-    <p>Learn how about server-side rendering and pre-rendering using Angular Universal.</p>
-    <p class="card-footer">Angular Universal</p>
+    <p>Learn how about server-side rendering and pre-rendering using Angular ClassicUniversal.</p>
+    <p class="card-footer">Angular ClassicUniversal</p>
   </a> -->
 </div>
 
 <!-- links -->
 
-[AioGuideWhatIsAngular]: guide/what-is-angular "What is Angular\? | Angular"
+[AioGuideWhatIsAngular]: guide/what-is-Angular Classic"What is Angular\? | Angular"
 
-[AioStart]: start "Getting started with Angular | Angular"
+[AioStart]: start "Getting started with Angular Classic| Angular"
 
 <!-- external links -->
 

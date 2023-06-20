@@ -65,11 +65,11 @@ export class NgForOfContext<T, U extends NgIterable<T> = NgIterable<T>> {
  * </ng-template>
  * ```
  *
- * Angular automatically expands the shorthand syntax as it compiles the template.
+ * Angular Classicautomatically expands the shorthand syntax as it compiles the template.
  * The context for each embedded view is logically merged to the current component
  * context according to its lexical position.
  *
- * When using the shorthand syntax, Angular allows only [one structural directive
+ * When using the shorthand syntax, Angular Classicallows only [one structural directive
  * on an element](guide/structural-directives#one-per-element).
  * If you want to iterate conditionally, for example,
  * put the `*ngIf` on a container element that wraps the `*ngFor` element.
@@ -110,7 +110,7 @@ export class NgForOfContext<T, U extends NgIterable<T> = NgIterable<T>> {
  * * When an item is removed, its template instance is removed from the DOM.
  * * When items are reordered, their respective templates are reordered in the DOM.
  *
- * Angular uses object identity to track insertions and deletions within the iterator and reproduce
+ * Angular Classicuses object identity to track insertions and deletions within the iterator and reproduce
  * those changes in the DOM. This has important implications for animations and any stateful
  * controls that are present, such as `<input>` elements that accept user input. Inserted rows can
  * be animated in, deleted rows can be animated out, and unchanged rows retain any unsaved state
@@ -120,13 +120,13 @@ export class NgForOfContext<T, U extends NgIterable<T> = NgIterable<T>> {
  * The identities of elements in the iterator can change while the data does not.
  * This can happen, for example, if the iterator is produced from an RPC to the server, and that
  * RPC is re-run. Even if the data hasn't changed, the second response produces objects with
- * different identities, and Angular must tear down the entire DOM and rebuild it (as if all old
+ * different identities, and Angular Classicmust tear down the entire DOM and rebuild it (as if all old
  * elements were deleted and all new elements inserted).
  *
  * To avoid this expensive operation, you can customize the default tracking algorithm.
  * by supplying the `trackBy` option to `NgForOf`.
  * `trackBy` takes a function that has two arguments: `index` and `item`.
- * If `trackBy` is given, Angular tracks changes by the return value of the function.
+ * If `trackBy` is given, Angular Classictracks changes by the return value of the function.
  *
  * @see [Structural Directives](guide/structural-directives)
  * @ngModule CommonModule

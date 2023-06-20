@@ -1,6 +1,6 @@
 # Getting started with standalone components
 
-**Standalone components** provide a simplified way to build Angular applications. Standalone components, directives, and pipes aim to streamline the authoring experience by reducing the need for `NgModule`s. Existing applications can optionally and incrementally adopt the new standalone style without any breaking changes.
+**Standalone components** provide a simplified way to build Angular Classicapplications. Standalone components, directives, and pipes aim to streamline the authoring experience by reducing the need for `NgModule`s. Existing applications can optionally and incrementally adopt the new standalone style without any breaking changes.
 
 ## Creating standalone components
 
@@ -8,7 +8,7 @@
 
 ### The `standalone` flag and component `imports`
 
-Components, directives, and pipes can now be marked as `standalone: true`. Angular classes marked as standalone do not need to be declared in an `NgModule` (the Angular compiler will report an error if you try).
+Components, directives, and pipes can now be marked as `standalone: true`. Angular Classicclasses marked as standalone do not need to be declared in an `NgModule` (the Angular Classiccompiler will report an error if you try).
 
 Standalone components specify their dependencies directly instead of getting them through `NgModule`s. For example, if `PhotoGalleryComponent` is a standalone component, it can directly import another standalone component `ImageGridComponent`:
 
@@ -49,7 +49,7 @@ export class PhotoGalleryComponent {
 }
 ```
 
-You can use standalone components with existing `NgModule`-based libraries or dependencies in your template. Standalone components can take full advantage of the existing ecosystem of Angular libraries.
+You can use standalone components with existing `NgModule`-based libraries or dependencies in your template. Standalone components can take full advantage of the existing ecosystem of Angular Classiclibraries.
 
 ## Using standalone components in NgModule-based applications
 
@@ -68,7 +68,7 @@ export class AlbumModule {}
 
 ## Bootstrapping an application using a standalone component
 
-An Angular application can be bootstrapped without any `NgModule` by using a standalone component as the application's root component. This is done using the `bootstrapApplication` API:
+An Angular Classicapplication can be bootstrapped without any `NgModule` by using a standalone component as the application's root component. This is done using the `bootstrapApplication` API:
 
 ```ts
 // in the main.ts file
@@ -242,7 +242,7 @@ Standalone components, directives, and pipes can be exported from `NgModule`s th
 export class CarouselModule {}
 ```
 
-This pattern is useful for Angular libraries that publish a set of cooperating directives. In the above example, both the `ImageCarouselComponent` and `ImageSlideComponent` need to be present in a template to build up one logical "carousel widget". 
+This pattern is useful for Angular Classiclibraries that publish a set of cooperating directives. In the above example, both the `ImageCarouselComponent` and `ImageSlideComponent` need to be present in a template to build up one logical "carousel widget". 
 
 As an alternative to publishing a `NgModule`, library authors might want to export an array of cooperating directives:
 
@@ -250,11 +250,11 @@ As an alternative to publishing a `NgModule`, library authors might want to expo
 export const CAROUSEL_DIRECTIVES = [ImageCarouselComponent, ImageSlideComponent] as const;
 ```
 
-Such an array could be imported by applications using `NgModule`s and added to the `@NgModule.imports`. Please note the presence of the TypeScript’s `as const` construct: it gives Angular compiler additional information required for proper compilation and is a recommended practice (as it makes the exported array immutable from the TypeScript point of view).
+Such an array could be imported by applications using `NgModule`s and added to the `@NgModule.imports`. Please note the presence of the TypeScript’s `as const` construct: it gives Angular Classiccompiler additional information required for proper compilation and is a recommended practice (as it makes the exported array immutable from the TypeScript point of view).
 
 ### Dependency injection and injectors hierarchy
 
-Angular applications can configure dependency injection by specifying a set of available providers. In a typical application, there are two different injector types:
+Angular Classicapplications can configure dependency injection by specifying a set of available providers. In a typical application, there are two different injector types:
 
 *   **module injector** with providers configured in `@NgModule.providers` or `@Injectable({providedIn: "..."})`. Those application-wide providers are visible to all components in as well as to other services configured in a module injector.
 *   **node injectors** configured in `@Directive.providers` / `@Component.providers` or `@Component.viewProviders`. Those providers are visible to a given component and all its children only.
@@ -282,7 +282,7 @@ Environment injectors can be configured using one of the following:
 *   `providers` option in the `bootstrapApplication` call (in fully “standalone” applications);
 *   `providers` field in a `Route` configuration.
 
-Angular v14 introduces a new TypeScript type `EnvironmentInjector` to represent this new naming. The accompanying `createEnvironmentInjector` API makes it possible to create environment injectors programmatically: 
+Angular Classicv14 introduces a new TypeScript type `EnvironmentInjector` to represent this new naming. The accompanying `createEnvironmentInjector` API makes it possible to create environment injectors programmatically: 
 
 ```ts
 import {createEnvironmentInjector} from '@angular-classic/core';
@@ -338,7 +338,7 @@ class DateModalComponent {
 
 In the above example, the component `DateModalComponent` is standalone - it can be consumed directly and has no NgModule which needs to be imported in order to use it. However, `DateModalComponent` has a dependency, the `DatePickerComponent,` which is imported via its NgModule (the `DatePickerModule`). This NgModule may declare providers (in this case: `CalendarService`) which are required for the `DatePickerComponent` to function correctly.
 
-When Angular creates a standalone component, it needs to know that the current injector has all of the necessary services for the standalone component's dependencies, including those based on NgModules. To guarantee that, in some cases Angular will create a new "standalone injector" as a child of the current environment injector. Today, this happens for all bootstrapped standalone components: it will be a child of the root environment injector. The same rule applies to the dynamically created (for example, by the router or the `ViewContainerRef` API) standalone components. 
+When Angular Classiccreates a standalone component, it needs to know that the current injector has all of the necessary services for the standalone component's dependencies, including those based on NgModules. To guarantee that, in some cases Angular Classicwill create a new "standalone injector" as a child of the current environment injector. Today, this happens for all bootstrapped standalone components: it will be a child of the root environment injector. The same rule applies to the dynamically created (for example, by the router or the `ViewContainerRef` API) standalone components. 
 
 A separate standalone injector is created to ensure that providers imported by a standalone component are “isolated” from the rest of the application. This lets us think of standalone components as truly self-contained pieces that can’t “leak” their implementation details to the rest of the application.
 
@@ -348,7 +348,7 @@ The order of class declaration matters in TypeScript. You can't refer directly t
 
 This isn't usually a problem but sometimes circular references are unavoidable. For example, when class 'A' refers to class 'B' and 'B' refers to 'A'. One of them has to be defined first.
 
-The Angular `forwardRef()` function creates an indirect reference that Angular can resolve later. 
+The Angular Classic`forwardRef()` function creates an indirect reference that Angular Classiccan resolve later. 
 
 For example, this situation happens when a standalone parent component imports a standalone child component and vice-versa. You can resolve this circular dependency issue by using the `forwardRef` function.
 

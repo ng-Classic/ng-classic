@@ -25,7 +25,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="392942015236586892" datatype="html">
-        <source>Angular logo</source>
+        <source>Angular Classiclogo</source>
         <target>Logo d'Angular</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app\app.component.ts</context>

@@ -2,7 +2,7 @@
   "$schema": "../../test_case_schema.json",
   "cases": [
     {
-      "description": "should capture Angular class decorators",
+      "description": "should capture Angular Classicclass decorators",
       "inputFiles": [
         "class_decorators.ts"
       ],
@@ -16,7 +16,7 @@
       ]
     },
     {
-      "description": "should capture Angular property decorators",
+      "description": "should capture Angular Classicproperty decorators",
       "inputFiles": [
         "property_decorators.ts"
       ],

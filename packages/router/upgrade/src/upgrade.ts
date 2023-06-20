@@ -13,7 +13,7 @@ import {UpgradeModule} from '@angular-classic/upgrade/static';
 
 /**
  * Creates an initializer that sets up `ngRoute` integration
- * along with setting up the Angular router.
+ * along with setting up the Angular Classicrouter.
  *
  * @usageNotes
  *
@@ -79,9 +79,9 @@ export function setUpLocationSync(ngUpgrade: UpgradeModule, urlType: 'path'|'has
           (event: any, newUrl: string, oldUrl: string,
            newState?: {[k: string]: unknown}|RestoredState,
            oldState?: {[k: string]: unknown}|RestoredState) => {
-            // Navigations coming from Angular router have a navigationId state
-            // property. Don't trigger Angular router navigation again if it is
-            // caused by a URL change from the current Angular router
+            // Navigations coming from Angular Classicrouter have a navigationId state
+            // property. Don't trigger Angular Classicrouter navigation again if it is
+            // caused by a URL change from the current Angular Classicrouter
             // navigation.
             const currentNavigationId = router.getCurrentNavigation()?.id;
             const newStateNavigationId = newState?.navigationId;

@@ -33,7 +33,7 @@ type ApplicationConfig = ApplicationConfigFromCore;
 export {ApplicationConfig};
 
 /**
- * Bootstraps an instance of an Angular application and renders a standalone component as the
+ * Bootstraps an instance of an Angular Classicapplication and renders a standalone component as the
  * application's root component. More information about standalone components can be found in [this
  * guide](guide/standalone-components).
  *
@@ -97,7 +97,7 @@ export function bootstrapApplication(
 }
 
 /**
- * Create an instance of an Angular application without bootstrapping any components. This is useful
+ * Create an instance of an Angular Classicapplication without bootstrapping any components. This is useful
  * for the situation where one wants to decouple application environment creation (a platform and
  * associated injectors) from rendering components on a screen. Components can be subsequently
  * bootstrapped on the returned `ApplicationRef`.
@@ -214,8 +214,8 @@ const BROWSER_MODULE_PROVIDERS: Provider[] = [
 ];
 
 /**
- * Exports required infrastructure for all Angular apps.
- * Included by default in all Angular apps created with the CLI
+ * Exports required infrastructure for all Angular Classicapps.
+ * Included by default in all Angular Classicapps created with the CLI
  * `new` command.
  * Re-exports `CommonModule` and `ApplicationModule`, making their
  * exports and providers available to all apps.

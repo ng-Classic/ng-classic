@@ -35,7 +35,7 @@ export interface TemplateContext<Code extends ErrorCode> {
 
   /**
    * TypeScript interface that provides type information about symbols that appear
-   * in the template (it is not to query types outside the Angular component).
+   * in the template (it is not to query types outside the Angular Classiccomponent).
    */
   typeChecker: ts.TypeChecker;
 

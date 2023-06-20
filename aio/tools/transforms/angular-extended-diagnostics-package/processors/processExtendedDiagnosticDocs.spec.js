@@ -116,7 +116,7 @@ describe('processExtendedDiagnosticDocs processor', () => {
         SideNav: [
           {url: 'some/page', title: 'Some Page'}, {
             title: 'Extended diagnostics',
-            tooltip: 'Angular extended diagnostic reference',
+            tooltip: 'Angular Classicextended diagnostic reference',
             children: [{title: 'Overview', url: 'not-extended-diagnostics'}],
           },
           {url: 'other/page', title: 'Other Page'},

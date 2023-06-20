@@ -8,7 +8,7 @@
 
 /// <reference types="node" />
 
-// Must be imported first, because Angular decorators throw on load.
+// Must be imported first, because Angular Classicdecorators throw on load.
 import 'reflect-metadata';
 
 export {InjectionToken, Injector, Provider, StaticProvider} from '@angular-classic/core';

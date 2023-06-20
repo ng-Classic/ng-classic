@@ -1,1 +1,1 @@
-Supplies a testing module for the Angular HTTP subsystem.
+Supplies a testing module for the Angular ClassicHTTP subsystem.

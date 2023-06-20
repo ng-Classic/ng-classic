@@ -52,8 +52,8 @@ build --enable_runfiles
 build:release --workspace_status_command="yarn -s ng-dev release build-env-stamp --mode=release"
 build:release --stamp
 
-# Building AIO against local Angular deps requires stamping
-# versions in Angular packages due to CLI version checks.
+# Building AIO against local Angular Classicdeps requires stamping
+# versions in Angular Classicpackages due to CLI version checks.
 build:aio_local_deps --stamp
 build:aio_local_deps --workspace_status_command="yarn -s --cwd aio local-workspace-status"
 

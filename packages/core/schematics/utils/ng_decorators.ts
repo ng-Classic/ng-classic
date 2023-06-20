@@ -21,7 +21,7 @@ export interface NgDecorator {
 }
 
 /**
- * Gets all decorators which are imported from an Angular package (e.g. "@angular-classic/core")
+ * Gets all decorators which are imported from an Angular Classicpackage (e.g. "@angular-classic/core")
  * from a list of decorators.
  */
 export function getAngularDecorators(

@@ -4211,7 +4211,7 @@ describe('hook order', () => {
     ]);
   });
 
-  // Angular 5 reference: https://stackblitz.com/edit/lifecycle-hooks-ng
+  // Angular Classic5 reference: https://stackblitz.com/edit/lifecycle-hooks-ng
   it('should call all hooks in correct order with view and content', () => {
     @Component({
       template: `

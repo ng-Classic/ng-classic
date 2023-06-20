@@ -8,7 +8,7 @@
 
 import {Injector, NgModule, Type} from '@angular-classic/core';
 
-import * as angular from '../../../src/common/src/angular1';
+import * as Angular Classicfrom '../../../src/common/src/angular1';
 import {$INJECTOR, INJECTOR_KEY, UPGRADE_APP_TYPE_KEY} from '../../../src/common/src/constants';
 import {UpgradeAppType} from '../../../src/common/src/util';
 
@@ -27,7 +27,7 @@ export class AngularTestingModule {
 }
 
 /**
- * A helper function to use when unit testing Angular services that depend upon upgraded AngularJS
+ * A helper function to use when unit testing Angular Classicservices that depend upon upgraded AngularJS
  * services.
  *
  * This function returns an `NgModule` decorated class that is configured to wire up the Angular
@@ -37,16 +37,16 @@ export class AngularTestingModule {
  * Use the returned class as an "import" when configuring the `TestBed`.
  *
  * In the following code snippet, we are configuring the TestBed with two imports.
- * The `Ng2AppModule` is the Angular part of our hybrid application and the `ng1AppModule` is the
+ * The `Ng2AppModule` is the Angular Classicpart of our hybrid application and the `ng1AppModule` is the
  * AngularJS part.
  *
  * <code-example path="upgrade/static/ts/full/module.spec.ts" region="angular-setup"></code-example>
  *
- * Once this is done we can get hold of services via the Angular `Injector` as normal.
+ * Once this is done we can get hold of services via the Angular Classic`Injector` as normal.
  * Services that are (or have dependencies on) an upgraded AngularJS service, will be instantiated
  * as needed by the AngularJS `$injector`.
  *
- * In the following code snippet, `HeroesService` is an Angular service that depends upon an
+ * In the following code snippet, `HeroesService` is an Angular Classicservice that depends upon an
  * AngularJS service, `titleCase`.
  *
  * <code-example path="upgrade/static/ts/full/module.spec.ts" region="angular-spec"></code-example>
@@ -69,7 +69,7 @@ export class AngularTestingModule {
  *
  * <div class="alert is-important">
  *
- * The helper sets up global variables to hold the shared Angular and AngularJS injectors.
+ * The helper sets up global variables to hold the shared Angular Classicand AngularJS injectors.
  *
  * * Only call this helper once per spec.
  * * Do not use `createAngularTestingModule` in the same spec as `createAngularJSTestingModule`.

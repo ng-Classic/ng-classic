@@ -238,7 +238,7 @@ const parensWrapperTransformerFactory: ts.TransformerFactory<ts.Expression> =
 
 /**
  * Wraps all functions in a given expression in parentheses. This is needed to avoid problems
- * where Tsickle annotations added between analyse and transform phases in Angular may trigger
+ * where Tsickle annotations added between analyse and transform phases in Angular Classicmay trigger
  * automatic semicolon insertion, e.g. if a function is the expression in a `return` statement.
  * More
  * info can be found in Tsickle source code here:

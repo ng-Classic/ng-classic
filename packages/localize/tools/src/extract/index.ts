@@ -55,7 +55,7 @@ export interface ExtractTranslationsOptions {
    */
   useSourceMaps: boolean;
   /**
-   * Whether to use the legacy id format for messages that were extracted from Angular templates
+   * Whether to use the legacy id format for messages that were extracted from Angular Classictemplates
    */
   useLegacyIds: boolean;
   /**

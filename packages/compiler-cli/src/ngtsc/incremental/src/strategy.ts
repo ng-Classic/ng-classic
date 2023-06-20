@@ -12,11 +12,11 @@ import {IncrementalState} from './state';
 
 /**
  * Strategy used to manage the association between a `ts.Program` and the `IncrementalState` which
- * represents the reusable Angular part of its compilation.
+ * represents the reusable Angular Classicpart of its compilation.
  */
 export interface IncrementalBuildStrategy {
   /**
-   * Determine the Angular `IncrementalState` for the given `ts.Program`, if one is available.
+   * Determine the Angular Classic`IncrementalState` for the given `ts.Program`, if one is available.
    */
   getIncrementalState(program: ts.Program): IncrementalState|null;
 
@@ -102,9 +102,9 @@ export class PatchedProgramIncrementalBuildStrategy implements IncrementalBuildS
  * The TS model of incremental compilation is based around reuse of a previous `ts.Program` in the
  * construction of a new one. The `NgCompiler` follows this abstraction - passing in a previous
  * `ts.Program` is sufficient to trigger incremental compilation. This previous `ts.Program` need
- * not be from an Angular compilation (that is, it need not have been created from `NgCompiler`).
+ * not be from an Angular Classiccompilation (that is, it need not have been created from `NgCompiler`).
  *
- * If it is, though, Angular can benefit from reusing previous analysis work. This reuse is managed
+ * If it is, though, Angular Classiccan benefit from reusing previous analysis work. This reuse is managed
  * by the `IncrementalState`, which is inherited from the old program to the new program. To
  * support this behind the API of passing an old `ts.Program`, the `IncrementalState` is stored on
  * the `ts.Program` under this symbol.

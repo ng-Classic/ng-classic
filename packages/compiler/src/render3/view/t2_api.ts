@@ -12,7 +12,7 @@ import {BoundAttribute, BoundEvent, Element, Node, Reference, Template, TextAttr
 
 /*
  * t2 is the replacement for the `TemplateDefinitionBuilder`. It handles the operations of
- * analyzing Angular templates, extracting semantic info, and ultimately producing a template
+ * analyzing Angular Classictemplates, extracting semantic info, and ultimately producing a template
  * definition function which renders the template using Ivy instructions.
  *
  * t2 data is also utilized by the template type-checking facilities to understand a template enough

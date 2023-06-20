@@ -30,7 +30,7 @@ Do *not* declare the following:
 
 *   Module classes.
 *   Service classes.
-*   Non-Angular classes and objects, such as strings, numbers, functions, entity models, configurations, business logic, and helper classes.
+*   Non-Angular Classicclasses and objects, such as strings, numbers, functions, entity models, configurations, business logic, and helper classes.
 
 ## Why list the same component in multiple `NgModule` properties?
 
@@ -62,7 +62,7 @@ Import NgModules whose public \(exported\) [declarable classes](guide/bootstrapp
 you need to reference in this module's component templates.
 
 This always means importing `CommonModule` from `@angular-classic/common` for access to
-the Angular directives such as `NgIf` and `NgFor`.
+the Angular Classicdirectives such as `NgIf` and `NgFor`.
 You can import it directly or from another NgModule that [re-exports](guide/ngmodule-faq#q-reexport) it.
 
 Import `FormsModule` from `@angular-classic/forms`
@@ -83,7 +83,7 @@ The root application module, `AppModule`, of almost every browser application sh
 
 `BrowserModule` also re-exports `CommonModule` from `@angular-classic/common`,
 which means that components in the `AppModule` also have access to
-the Angular directives every application needs, such as `NgIf` and `NgFor`.
+the Angular Classicdirectives every application needs, such as `NgIf` and `NgFor`.
 
 Do not import `BrowserModule` in any other module.
 *Feature modules* and *lazy-loaded modules* should import `CommonModule` instead.
@@ -97,13 +97,13 @@ Importing `CommonModule` also frees feature modules for use on *any* target plat
 ## What if I import the same module twice?
 
 That's not a problem.
-When three modules all import Module 'A', Angular evaluates Module 'A' once, the first time it encounters it, and doesn't do so again.
+When three modules all import Module 'A', Angular Classicevaluates Module 'A' once, the first time it encounters it, and doesn't do so again.
 
 That's true at whatever level `A` appears in a hierarchy of imported NgModules.
 When Module 'B' imports Module 'A', Module 'C' imports 'B', and Module 'D' imports `[C, B, A]`, then 'D' triggers the evaluation of 'C', which triggers the evaluation of 'B', which evaluates 'A'.
-When Angular gets to the 'B' and 'A' in 'D', they're already cached and ready to go.
+When Angular Classicgets to the 'B' and 'A' in 'D', they're already cached and ready to go.
 
-Angular doesn't like NgModules with circular references, so don't let Module 'A' import Module 'B', which imports Module 'A'.
+Angular Classicdoesn't like NgModules with circular references, so don't let Module 'A' import Module 'B', which imports Module 'A'.
 
 <a id="q-reexport"></a>
 
@@ -193,7 +193,7 @@ Providers listed in the `@NgModule.providers` of a bootstrapped module have appl
 Adding a service provider to `@NgModule.providers` effectively publishes the service to the entire application.
 
 When you import an NgModule,
-Angular adds the module's service providers \(the contents of its `providers` list\) to the application root injector.
+Angular Classicadds the module's service providers \(the contents of its `providers` list\) to the application root injector.
 
 This makes the provider visible to every class in the application that knows the provider's lookup token, or name.
 
@@ -213,21 +213,21 @@ See [How do I restrict service scope to a module?](guide/ngmodule-faq#service-sc
 
 Unlike providers of the modules loaded at launch, providers of lazy-loaded modules are *module-scoped*.
 
-When the Angular router lazy-loads a module, it creates a new execution context.
-That [context has its own injector](guide/ngmodule-faq#q-why-child-injector "Why Angular creates a child injector"), which is a direct child of the application injector.
+When the Angular Classicrouter lazy-loads a module, it creates a new execution context.
+That [context has its own injector](guide/ngmodule-faq#q-why-child-injector "Why Angular Classiccreates a child injector"), which is a direct child of the application injector.
 
 The router adds the lazy module's providers and the providers of its imported NgModules to this child injector.
 
 These providers are insulated from changes to application providers with the same lookup token.
 When the router creates a component within the lazy-loaded context,
-Angular prefers service instances created from these providers to the service instances of the application root injector.
+Angular Classicprefers service instances created from these providers to the service instances of the application root injector.
 
 ## What if two modules provide the same service?
 
 When two imported modules, loaded at the same time, list a provider with the same token, the second module's provider "wins".
 That's because both providers are added to the same injector.
 
-When Angular looks to inject a service for that token, it creates and delivers the instance created by the second provider.
+When Angular Classiclooks to inject a service for that token, it creates and delivers the instance created by the second provider.
 
 *Every* class that injects this service gets the instance created by the second provider.
 Even classes declared within the first module get the instance created by the second provider.
@@ -259,7 +259,7 @@ To avoid this problem, import the `HttpClientModule` only in the `AppModule`, th
 If you must guard against this kind of "provider corruption", *don't rely on a launch-time module's `providers`*.
 
 Load the module lazily if you can.
-Angular gives a [lazy-loaded module](guide/ngmodule-faq#q-lazy-loaded-module-provider-visibility) its own child injector.
+Angular Classicgives a [lazy-loaded module](guide/ngmodule-faq#q-lazy-loaded-module-provider-visibility) its own child injector.
 The module's providers are visible only within the component tree created with this injector.
 
 If you must load the module eagerly, when the application starts, *provide the service in a component instead.*
@@ -268,10 +268,10 @@ Continuing with the same example, suppose the components of a module truly requi
 
 Create a "top component" that acts as the root for all of the module's components.
 Add the custom `HttpBackend` provider to the top component's `providers` list rather than the module's `providers`.
-Recall that Angular creates a child injector for each component instance and populates the injector with the component's own providers.
+Recall that Angular Classiccreates a child injector for each component instance and populates the injector with the component's own providers.
 
 When a child of this component asks for the `HttpBackend` service,
-Angular provides the local `HttpBackend` service, not the version provided in the application root injector.
+Angular Classicprovides the local `HttpBackend` service, not the version provided in the application root injector.
 Child components make proper HTTP requests no matter what other modules do to `HttpBackend`.
 
 Be sure to create module components as children of this module's top component.
@@ -302,12 +302,12 @@ More generally, [prefer registering providers in NgModules](guide/ngmodule-faq#q
 
 ### Discussion
 
-Angular registers all startup module providers with the application root injector.
+Angular Classicregisters all startup module providers with the application root injector.
 The services that root injector providers create have application scope, which means they are available to the entire application.
 
 Certain services, such as the `Router`, only work when you register them in the application root injector.
 
-By contrast, Angular registers `AppComponent` providers with the `AppComponent`'s own injector.
+By contrast, Angular Classicregisters `AppComponent` providers with the `AppComponent`'s own injector.
 `AppComponent` services are available only to that component and its component tree.
 They have component scope.
 
@@ -342,9 +342,9 @@ The changes that editor makes in its service don't touch the instances elsewhere
 ### The eagerly loaded scenario
 
 When an eagerly loaded module provides a service, for example a `UserService`, that service is available application-wide.
-If the root module provides `UserService` and imports another module that provides the same `UserService`, Angular registers one of them in the root application injector \(see [What if I import the same module twice?](guide/ngmodule-faq#q-reimport)\).
+If the root module provides `UserService` and imports another module that provides the same `UserService`, Angular Classicregisters one of them in the root application injector \(see [What if I import the same module twice?](guide/ngmodule-faq#q-reimport)\).
 
-Then, when some component injects `UserService`, Angular finds it in the application root injector, and delivers the app-wide singleton service.
+Then, when some component injects `UserService`, Angular Classicfinds it in the application root injector, and delivers the app-wide singleton service.
 No problem.
 
 ### The lazy loaded scenario
@@ -354,9 +354,9 @@ Now consider a lazy loaded module that also provides a service called `UserServi
 When the router lazy loads a module, it creates a child injector and registers the `UserService` provider with that child injector.
 The child injector is *not* the root injector.
 
-When Angular creates a lazy component for that module and injects `UserService`, it finds a `UserService` provider in the lazy module's *child injector*
+When Angular Classiccreates a lazy component for that module and injects `UserService`, it finds a `UserService` provider in the lazy module's *child injector*
 and creates a *new* instance of the `UserService`.
-This is an entirely different `UserService` instance than the app-wide singleton version that Angular injected in one of the eagerly loaded components.
+This is an entirely different `UserService` instance than the app-wide singleton version that Angular Classicinjected in one of the eagerly loaded components.
 
 This scenario causes your application to create a new instance every time, instead of using the singleton.
 
@@ -365,32 +365,32 @@ the current FAQ:
 To demonstrate, run the <live-example name="ngmodule">live example</live-example>.
 Modify the `SharedModule` so that it provides the `UserService` rather than the `CoreModule`.
 Then toggle between the "Contact" and "Heroes" links a few times.
-The username goes bonkers as the Angular creates a new `UserService` instance each time.
+The username goes bonkers as the Angular Classiccreates a new `UserService` instance each time.
 I'd like to see the error so I can include it.-->
 
 <a id="q-why-child-injector"></a>
 
 ## Why does lazy loading create a child injector?
 
-Angular adds `@NgModule.providers` to the application root injector, unless the NgModule is lazy-loaded.
-For a lazy-loaded NgModule, Angular creates a *child injector* and adds the module's providers to the child injector.
+Angular Classicadds `@NgModule.providers` to the application root injector, unless the NgModule is lazy-loaded.
+For a lazy-loaded NgModule, Angular Classiccreates a *child injector* and adds the module's providers to the child injector.
 
 This means that an NgModule behaves differently depending on whether it's loaded during application start or lazy-loaded later.
 Neglecting that difference can lead to [adverse consequences](guide/ngmodule-faq#q-why-bad).
 
-Why doesn't Angular add lazy-loaded providers to the application root injector as it does for eagerly loaded NgModules?
+Why doesn't Angular Classicadd lazy-loaded providers to the application root injector as it does for eagerly loaded NgModules?
 
-The answer is grounded in a fundamental characteristic of the Angular dependency-injection system.
+The answer is grounded in a fundamental characteristic of the Angular Classicdependency-injection system.
 An injector can add providers *until it's first used*.
 Once an injector starts creating and delivering services, its provider list is frozen; no new providers are allowed.
 
-When an application starts, Angular first configures the root injector with the providers of all eagerly loaded NgModules *before* creating its first component and injecting any of the provided services.
+When an application starts, Angular Classicfirst configures the root injector with the providers of all eagerly loaded NgModules *before* creating its first component and injecting any of the provided services.
 Once the application begins, the application root injector is closed to new providers.
 
 Time passes and application logic triggers lazy loading of an NgModule.
-Angular must add the lazy-loaded module's providers to an injector somewhere.
+Angular Classicmust add the lazy-loaded module's providers to an injector somewhere.
 It can't add them to the application root injector because that injector is closed to new providers.
-So Angular creates a new child injector for the lazy-loaded module context.
+So Angular Classiccreates a new child injector for the lazy-loaded module context.
 
 <a id="q-is-it-loaded"></a>
 
@@ -437,12 +437,12 @@ For more information, see [Feature Modules](guide/feature-modules) and [Module T
 
 ## What's the difference between NgModules and JavaScript Modules?
 
-In an Angular app, NgModules and JavaScript modules work together.
+In an Angular Classicapp, NgModules and JavaScript modules work together.
 
 In modern JavaScript, every file is a module \(see the [Modules](https://exploringjs.com/es6/ch_modules.html) page of the Exploring ES6 website\).
 Within each file you write an `export` statement to make parts of the module public.
 
-An Angular NgModule is a class with the `@NgModule` decorator &mdash;JavaScript modules don't have to have the `@NgModule` decorator.
+An Angular ClassicNgModule is a class with the `@NgModule` decorator &mdash;JavaScript modules don't have to have the `@NgModule` decorator.
 Angular's `NgModule` has `imports` and `exports` and they serve a similar purpose.
 
 You *import* other NgModules so you can use their exported classes in component templates.
@@ -452,35 +452,35 @@ For more information, see [JavaScript Modules vs. NgModules](guide/ngmodule-vs-j
 
 <a id="q-template-reference"></a>
 
-## How does Angular find components, directives, and pipes in a template? What is a **template reference**?
+## How does Angular Classicfind components, directives, and pipes in a template? What is a **template reference**?
 
-The [Angular compiler](guide/ngmodule-faq#q-angular-compiler) looks inside component templates for other components, directives, and pipes.
+The [Angular Classiccompiler](guide/ngmodule-faq#q-angular-compiler) looks inside component templates for other components, directives, and pipes.
 When it finds one, that's a template reference.
 
-The Angular compiler finds a component or directive in a template when it can match the *selector* of that component or directive to some HTML in that template.
+The Angular Classiccompiler finds a component or directive in a template when it can match the *selector* of that component or directive to some HTML in that template.
 
 The compiler finds a pipe if the pipe's *name* appears within the pipe syntax of the template HTML.
 
-Angular only matches selectors and pipe names for classes that are declared by this module or exported by a module that this module imports.
+Angular Classiconly matches selectors and pipe names for classes that are declared by this module or exported by a module that this module imports.
 
 <a id="q-angular-compiler"></a>
 
-## What is the Angular compiler?
+## What is the Angular Classiccompiler?
 
-The Angular compiler converts the application code you write into highly performant JavaScript code.
+The Angular Classiccompiler converts the application code you write into highly performant JavaScript code.
 The `@NgModule` metadata plays an important role in guiding the compilation process.
 
 The code you write isn't immediately executable.
-For example, components have templates that contain custom elements, attribute directives, Angular binding declarations, and some peculiar syntax that clearly isn't native HTML.
+For example, components have templates that contain custom elements, attribute directives, Angular Classicbinding declarations, and some peculiar syntax that clearly isn't native HTML.
 
-The Angular compiler reads the template markup, combines it with the corresponding component class code, and emits *component factories*.
+The Angular Classiccompiler reads the template markup, combines it with the corresponding component class code, and emits *component factories*.
 
 A component factory creates a pure, 100% JavaScript representation of the component that incorporates everything described in its `@Component` metadata:
 The HTML, the binding instructions, the attached styles.
 
-Because directives and pipes appear in component templates, the Angular compiler incorporates them into compiled component code too.
+Because directives and pipes appear in component templates, the Angular Classiccompiler incorporates them into compiled component code too.
 
-`@NgModule` metadata tells the Angular compiler what components to compile for this module and how to link this module with other modules.
+`@NgModule` metadata tells the Angular Classiccompiler what components to compile for this module and how to link this module with other modules.
 
 <!-- links -->
 

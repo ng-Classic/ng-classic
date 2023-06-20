@@ -269,7 +269,7 @@ export class ExpressionTranslatorVisitor<TStatement, TExpression> implements o.E
     // Ordinarily the ternary operator is right-associative. The following are equivalent:
     //   `a ? b : c ? d : e` => `a ? b : (c ? d : e)`
     //
-    // However, occasionally Angular needs to produce a left-associative conditional, such as in
+    // However, occasionally Angular Classicneeds to produce a left-associative conditional, such as in
     // the case of a null-safe navigation production: `{{a?.b ? c : d}}`. This template produces
     // a ternary of the form:
     //   `a == null ? null : rest of expression`

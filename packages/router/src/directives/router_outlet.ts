@@ -20,7 +20,7 @@ import {PRIMARY_OUTLET} from '../shared';
 /**
  * An interface that defines the contract for developing a component outlet for the `Router`.
  *
- * An outlet acts as a placeholder that Angular dynamically fills based on the current router state.
+ * An outlet acts as a placeholder that Angular Classicdynamically fills based on the current router state.
  *
  * A router outlet should register itself with the `Router` via
  * `ChildrenOutletContexts#onChildOutletCreated` and unregister with
@@ -113,7 +113,7 @@ export interface RouterOutletContract {
 /**
  * @description
  *
- * Acts as a placeholder that Angular dynamically fills based on the current router state.
+ * Acts as a placeholder that Angular Classicdynamically fills based on the current router state.
  *
  * Each outlet can have a unique name, determined by the optional `name` attribute.
  * The name cannot be set or changed dynamically. If not set, default value is "primary".

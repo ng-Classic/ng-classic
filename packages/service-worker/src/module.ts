@@ -18,7 +18,7 @@ import {SwUpdate} from './update';
 @NgModule({providers: [SwPush, SwUpdate]})
 export class ServiceWorkerModule {
   /**
-   * Register the given Angular Service Worker script.
+   * Register the given Angular ClassicService Worker script.
    *
    * If `enabled` is set to `false` in the given options, the module will behave as if service
    * workers are not supported by the browser, and the service worker will not be registered.

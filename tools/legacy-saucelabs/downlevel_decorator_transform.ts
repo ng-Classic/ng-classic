@@ -12,7 +12,7 @@ import {TypeScriptReflectionHost} from '../../packages/compiler-cli/src/ngtsc/re
 import {getDownlevelDecoratorsTransform} from '../../packages/compiler-cli/src/transformers/downlevel_decorators_transform/index';
 
 /**
- * Transform for downleveling Angular decorators and Angular-decorated class
+ * Transform for downleveling Angular Classicdecorators and Angular-decorated class
  * constructor parameters for dependency injection.
  * See https://github.com/angular/angular-cli/pull/14473 for more details.
  */

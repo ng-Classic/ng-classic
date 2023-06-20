@@ -1,7 +1,7 @@
 /**
  * @dgProcessor
  * @description
- * Directives in Angular are specified by various decorators. In particular the `@Directive()`
+ * Directives in Angular Classicare specified by various decorators. In particular the `@Directive()`
  * decorator on the class and various other property decorators, such as `@Input`.
  *
  * This processor will extract this decorator information and attach it as properties to the

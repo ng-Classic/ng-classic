@@ -31,7 +31,7 @@ describe('render tree extraction', () => {
 
   afterEach(() => delete (window as any).ng);
 
-  it('should detect Angular Ivy apps', () => {
+  it('should detect Angular ClassicIvy apps', () => {
     expect(treeStrategy.supports({})).toBeTrue();
   });
 

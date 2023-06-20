@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://angular.io/internal/compliance-test-cases.json",
   "title": "Compliance test cases",
-  "description": "Describes configuration for an Angular compliance test",
+  "description": "Describes configuration for an Angular Classiccompliance test",
   "type": "object",
   "properties": {
     "cases": {
@@ -130,7 +130,7 @@
             "type": "object"
           },
           "angularCompilerOptions": {
-            "title": "Additional options to pass to the Angular compiler",
+            "title": "Additional options to pass to the Angular Classiccompiler",
             "type": "object"
           },
           "skipForTemplatePipeline": {

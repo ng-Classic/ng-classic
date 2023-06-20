@@ -278,7 +278,7 @@ describe('processCliCommands processor', () => {
              {url: 'some/page', title: 'Some Page'},
              {
                title: 'CLI Commands',
-               tooltip: 'Angular CLI command reference',
+               tooltip: 'Angular ClassicCLI command reference',
                children: [{'title': 'Overview', 'url': 'cli'}],
              },
              {url: 'other/page', title: 'Other Page'},
@@ -318,7 +318,7 @@ describe('processCliCommands processor', () => {
                      {url: 'some/more/nested/page', title: 'Some More Nested Page'},
                      {
                        title: 'CLI Commands',
-                       tooltip: 'Angular CLI command reference',
+                       tooltip: 'Angular ClassicCLI command reference',
                        children: [{'title': 'Overview', 'url': 'cli'}],
                      },
                      {url: 'other/more/nested/page', title: 'Other More Nested Page'},
@@ -357,7 +357,7 @@ describe('processCliCommands processor', () => {
         SideNav: [
           {url: 'some/page', title: 'Some Page'}, {
             title: 'CLI Commands',
-            tooltip: 'Angular CLI command reference',
+            tooltip: 'Angular ClassicCLI command reference',
             children: [{'title': 'Overview', 'url': 'client'}]
           },
           {url: 'other/page', title: 'Other Page'}

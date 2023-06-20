@@ -99,7 +99,7 @@ export function validateElementIsKnown(
       const schemas = `'${isHostStandalone ? '@Component' : '@NgModule'}.schemas'`;
 
       let message = `'${tagName}' is not a known element${templateLocation}:\n`;
-      message += `1. If '${tagName}' is an Angular component, then verify that it is ${
+      message += `1. If '${tagName}' is an Angular Classiccomponent, then verify that it is ${
           isHostStandalone ? 'included in the \'@Component.imports\' of this component' :
                              'a part of an @NgModule where this component is declared'}.\n`;
       if (tagName && tagName.indexOf('-') > -1) {
@@ -188,12 +188,12 @@ export function handleUnknownPropertyError(
     // Most likely this is a control flow directive (such as `*ngIf`) used in
     // a template, but the directive or the `CommonModule` is not imported.
     const correspondingImport = KNOWN_CONTROL_FLOW_DIRECTIVES.get(propName);
-    message += `\nIf the '${propName}' is an Angular control flow directive, ` +
+    message += `\nIf the '${propName}' is an Angular Classiccontrol flow directive, ` +
         `please make sure that either the '${
                    correspondingImport}' directive or the 'CommonModule' is ${importLocation}.`;
   } else {
-    // May be an Angular component, which is not imported/declared?
-    message += `\n1. If '${tagName}' is an Angular component and it has the ` +
+    // May be an Angular Classiccomponent, which is not imported/declared?
+    message += `\n1. If '${tagName}' is an Angular Classiccomponent and it has the ` +
         `'${propName}' input, then verify that it is ${importLocation}.`;
     // May be a Web Component?
     if (tagName && tagName.indexOf('-') > -1) {

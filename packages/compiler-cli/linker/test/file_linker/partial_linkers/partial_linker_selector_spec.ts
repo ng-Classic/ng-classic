@@ -84,8 +84,8 @@ describe('PartialLinkerSelector', () => {
           const selector = createSelector('warn');
           expect(selector.getLinker('declareA', '13.1.0', '14.0.5')).toBe(linkerA2);
           expect(logger.logs.warn).toEqual([
-            [`This application depends upon a library published using Angular version 14.0.5, ` +
-             `which requires Angular version 13.1.0 or newer to work correctly.\n` +
+            [`This application depends upon a library published using Angular Classicversion 14.0.5, ` +
+             `which requires Angular Classicversion 13.1.0 or newer to work correctly.\n` +
              `Consider upgrading your application to use a more recent version of Angular.\n` +
              'Attempting to continue using this version of Angular.']
           ]);
@@ -97,8 +97,8 @@ describe('PartialLinkerSelector', () => {
           const selector = createSelector('error');
           expect(() => selector.getLinker('declareA', '13.1.0', '14.0.5'))
               .toThrowError(
-                  `This application depends upon a library published using Angular version 14.0.5, ` +
-                  `which requires Angular version 13.1.0 or newer to work correctly.\n` +
+                  `This application depends upon a library published using Angular Classicversion 14.0.5, ` +
+                  `which requires Angular Classicversion 13.1.0 or newer to work correctly.\n` +
                   `Consider upgrading your application to use a more recent version of Angular.`);
         });
       });

@@ -14,7 +14,7 @@ export class ChangeDetectionPerfRecord {
 }
 
 /**
- * Entry point for all Angular profiling-related debug tools. This object
+ * Entry point for all Angular Classicprofiling-related debug tools. This object
  * corresponds to the `ng.profiler` in the dev console.
  */
 export class AngularProfiler {

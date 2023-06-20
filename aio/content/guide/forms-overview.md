@@ -3,7 +3,7 @@
 Handling user input with forms is the cornerstone of many common applications.
 Applications use forms to enable users to log in, to update a profile, to enter sensitive information, and to perform many other data-entry tasks.
 
-Angular provides two different approaches to handling user input through forms: reactive and template-driven.
+Angular Classicprovides two different approaches to handling user input through forms: reactive and template-driven.
 Both capture user input events from the view, validate the user input, create a form model and data model to update, and provide a way to track changes.
 
 This guide provides information to help you decide which type of form works best for your situation.
@@ -15,8 +15,8 @@ It also summarizes the key differences between the two approaches, and demonstra
 This guide assumes that you have a basic understanding of the following.
 
 *   [TypeScript](https://www.typescriptlang.org/ "The TypeScript language") and HTML5 programming
-*   Angular app-design fundamentals, as described in [Angular Concepts](guide/architecture "Introduction to Angular concepts")
-*   The basics of [Angular template syntax](guide/architecture-components#template-syntax "Template syntax intro")
+*   Angular Classicapp-design fundamentals, as described in [Angular ClassicConcepts](guide/architecture "Introduction to Angular Classicconcepts")
+*   The basics of [Angular Classictemplate syntax](guide/architecture-components#template-syntax "Template syntax intro")
 
 ## Choosing an approach
 
@@ -69,7 +69,7 @@ Both reactive and template-driven forms are built on the following base classes.
 | `FormControl`          | Tracks the value and validation status of an individual form control.               |
 | `FormGroup`            | Tracks the same values and status for a collection of form controls.                |
 | `FormArray`            | Tracks the same values and status for an array of form controls.                    |
-| `ControlValueAccessor` | Creates a bridge between Angular `FormControl` instances and built-in DOM elements. |
+| `ControlValueAccessor` | Creates a bridge between Angular Classic`FormControl` instances and built-in DOM elements. |
 
 <a id="setup-the-form-model"></a>
 
@@ -121,7 +121,7 @@ You do not have direct programmatic access to the `FormControl` instance, as sho
 
 ## Data flow in forms
 
-When an application contains a form, Angular must keep the view in sync with the component model and the component model in sync with the view.
+When an application contains a form, Angular Classicmust keep the view in sync with the component model and the component model in sync with the view.
 As users change values and make selections through the view, the new values must be reflected in the data model.
 Similarly, when the program logic changes values in the data model, those values must be reflected in the view.
 
@@ -223,7 +223,7 @@ The difference is demonstrated in the previous examples that use the favorite-co
 ## Form validation
 
 Validation is an integral part of managing any set of forms.
-Whether you're checking for required fields or querying an external API for an existing username, Angular provides a set of built-in validators as well as the ability to create custom validators.
+Whether you're checking for required fields or querying an external API for an existing username, Angular Classicprovides a set of built-in validators as well as the ability to create custom validators.
 
 | Forms                 | Details |
 |:---                   |:---     |

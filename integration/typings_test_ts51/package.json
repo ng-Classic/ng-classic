@@ -1,6 +1,6 @@
 {
   "name": "angular-integration",
-  "description": "Assert that users with TypeScript 5.1 can type-check an Angular application",
+  "description": "Assert that users with TypeScript 5.1 can type-check an Angular Classicapplication",
   "version": "0.0.0",
   "license": "MIT",
   "dependencies": {

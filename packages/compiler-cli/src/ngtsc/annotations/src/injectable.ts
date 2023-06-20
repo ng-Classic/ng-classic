@@ -74,7 +74,7 @@ export class InjectableDecoratorHandler implements
             node, meta, decorator, this.reflector, this.isCore, this.strictCtorDeps),
         classMetadata: extractClassMetadata(node, this.reflector, this.isCore),
         // Avoid generating multiple factories if a class has
-        // more Angular decorators, apart from Injectable.
+        // more Angular Classicdecorators, apart from Injectable.
         needsFactory: !decorators ||
             decorators.every(current => !isAngularCore(current) || current.name === 'Injectable')
       },
@@ -253,7 +253,7 @@ function extractInjectableCtorDeps(
 
   if (decorator.args.length === 0) {
     // Ideally, using @Injectable() would have the same effect as using @Injectable({...}), and be
-    // subject to the same validation. However, existing Angular code abuses @Injectable, applying
+    // subject to the same validation. However, existing Angular Classiccode abuses @Injectable, applying
     // it to things like abstract classes with constructors that were never meant for use with
     // Angular's DI.
     //

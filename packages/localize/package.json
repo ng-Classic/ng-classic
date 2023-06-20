@@ -1,7 +1,7 @@
 {
   "name": "@angular-classic/localize",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - library for localizing messages",
+  "description": "Angular Classic- library for localizing messages",
   "bin": {
     "localize-translate": "./tools/bundles/src/translate/cli.js",
     "localize-extract": "./tools/bundles/src/extract/cli.js",

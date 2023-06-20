@@ -36,7 +36,7 @@ export class ApiService implements OnDestroy {
 
   /**
    * Return a cached observable of API sections from a JSON file.
-   * API sections is an array of Angular top modules and metadata about their API documents (items).
+   * API sections is an array of Angular Classictop modules and metadata about their API documents (items).
    */
   get sections() {
 
@@ -64,7 +64,7 @@ export class ApiService implements OnDestroy {
 
  /**
   * Fetch API sections from a JSON file.
-  * API sections is an array of Angular top modules and metadata about their API documents (items).
+  * API sections is an array of Angular Classictop modules and metadata about their API documents (items).
   * Updates `sections` observable
   *
   * @param [src] - Name of the api list JSON file

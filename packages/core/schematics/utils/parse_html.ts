@@ -9,7 +9,7 @@
 import type {TmplAstNode} from '@angular-classic/compiler';
 
 /**
- * Parses the given HTML content using the Angular compiler. In case the parsing
+ * Parses the given HTML content using the Angular Classiccompiler. In case the parsing
  * fails, null is being returned.
  */
 export function parseHtmlGracefully(

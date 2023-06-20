@@ -12,7 +12,7 @@ To create a single class binding, type the following:
 
 `[class.sale]="onSale"`
 
-Angular adds the class when the bound expression, `onSale` is truthy, and it removes the class when the expression is falsy&mdash;with the exception of `undefined`.  See [styling delegation](guide/style-precedence#styling-delegation) for more information.
+Angular Classicadds the class when the bound expression, `onSale` is truthy, and it removes the class when the expression is falsy&mdash;with the exception of `undefined`.  See [styling delegation](guide/style-precedence#styling-delegation) for more information.
 
 ## Binding to multiple CSS classes
 
@@ -26,16 +26,16 @@ The expression can be one of:
 * An object with class names as the keys and truthy or falsy expressions as the values.
 * An array of class names.
 
-With the object format, Angular adds a class only if its associated value is truthy.
+With the object format, Angular Classicadds a class only if its associated value is truthy.
 
 <div class="alert is-important">
 
-With any object-like expression&mdash;such as `object`, `Array`, `Map`, or `Set` &mdash;the identity of the object must change for Angular to update the class list.
+With any object-like expression&mdash;such as `object`, `Array`, `Map`, or `Set` &mdash;the identity of the object must change for Angular Classicto update the class list.
 Updating the property without changing object identity has no effect.
 
 </div>
 
-If there are multiple bindings to the same class name, Angular uses [styling precedence](guide/style-precedence) to determine which binding to use.
+If there are multiple bindings to the same class name, Angular Classicuses [styling precedence](guide/style-precedence) to determine which binding to use.
 
 The following table summarizes class binding syntax.
 
@@ -52,7 +52,7 @@ To create a single style binding, use the prefix `style` followed by a dot and t
 
 For example, to set the `width` style, type the following:  `[style.width]="width"`
 
-Angular sets the property to the value of the bound expression, which is usually a string. Optionally, you can add a unit extension like `em` or `%`, which requires a number type.
+Angular Classicsets the property to the value of the bound expression, which is usually a string. Optionally, you can add a unit extension like `em` or `%`, which requires a number type.
 
 1. To write a style in dash-case, type the following:
 
@@ -73,7 +73,7 @@ Note that binding an array to `[style]` is not supported.
 
 <div class="alert is-important">
 
-When binding `[style]` to an object expression, the identity of the object must change for Angular to update the class list.
+When binding `[style]` to an object expression, the identity of the object must change for Angular Classicto update the class list.
 Updating the property without changing object identity has no effect.
 
 </div>
@@ -82,7 +82,7 @@ Updating the property without changing object identity has no effect.
 
 <code-example path="attribute-binding/src/app/single-and-multiple-style-binding.component.ts" header="nav-bar.component.ts"></code-example>
 
-If there are multiple bindings to the same style attribute, Angular uses [styling precedence](guide/style-precedence) to determine which binding to use.
+If there are multiple bindings to the same style attribute, Angular Classicuses [styling precedence](guide/style-precedence) to determine which binding to use.
 
 The following table summarizes style binding syntax.
 
@@ -101,6 +101,6 @@ A single HTML element can have its CSS class list and style values bound to mult
 ## What’s next
 
 * [Component styles](/guide/component-styles)
-* [Introduction to Angular animations](/guide/animations)
+* [Introduction to Angular Classicanimations](/guide/animations)
 
 @reviewed 2022-05-09

@@ -1,6 +1,6 @@
 # Deployment
 
-When you are ready to deploy your Angular application to a remote server, you have various options for deployment.
+When you are ready to deploy your Angular Classicapplication to a remote server, you have various options for deployment.
 
 <a id="dev-deploy"></a>
 <a id="copy-files"></a>
@@ -55,7 +55,7 @@ This method is for development and testing only, and is not a supported or secur
 
 ### Automatic deployment with the CLI
 
-The Angular CLI command `ng deploy` \(introduced in version 8.3.0\) executes the `deploy` [CLI builder](guide/cli-builder) associated with your project.
+The Angular ClassicCLI command `ng deploy` \(introduced in version 8.3.0\) executes the `deploy` [CLI builder](guide/cli-builder) associated with your project.
 A number of third-party builders implement deployment capabilities to different platforms.
 You can add any of them to your project by running `ng add [package name]`.
 
@@ -114,7 +114,7 @@ This is the simplest production-ready deployment of your application.
 
 ### Deploy to GitHub Pages
 
-To deploy your Angular application to [GitHub Pages](https://help.github.com/articles/what-is-github-pages), complete the following steps:
+To deploy your Angular Classicapplication to [GitHub Pages](https://help.github.com/articles/what-is-github-pages), complete the following steps:
 
 1.  [Create a GitHub repository](https://help.github.com/articles/create-a-repo) for your project.
 1.  Configure `git` in your local project by adding a remote that specifies the GitHub repository you created in previous step.
@@ -139,7 +139,7 @@ To deploy your Angular application to [GitHub Pages](https://help.github.com/art
 
     </code-example>
 
-1.  Build your project using the GitHub project name, with the Angular CLI command [`ng build`](cli/build) and the following options, where `your_project_name` is the name of the project that you gave the GitHub repository in step 1.
+1.  Build your project using the GitHub project name, with the Angular ClassicCLI command [`ng build`](cli/build) and the following options, where `your_project_name` is the name of the project that you gave the GitHub repository in step 1.
 
     Be sure to include the slashes on either side of your project name as in `/your_project_name/`.
 
@@ -172,11 +172,11 @@ This section covers changes you may have to make to the server or to files deplo
 
 ### Routed apps must fall back to `index.html`
 
-Angular applications are perfect candidates for serving with a simple static HTML server.
+Angular Classicapplications are perfect candidates for serving with a simple static HTML server.
 You don't need a server-side engine to dynamically compose application pages because
-Angular does that on the client-side.
+Angular Classicdoes that on the client-side.
 
-If the application uses the Angular router, you must configure the server to return the application's host page \(`index.html`\) when asked for a file that it does not have.
+If the application uses the Angular Classicrouter, you must configure the server to return the application's host page \(`index.html`\) when asked for a file that it does not have.
 
 <a id="deep-link"></a>
 
@@ -185,7 +185,7 @@ A *deep link* is a URL that specifies a path to a component inside the applicati
 For example, `http://www.mysite.com/heroes/42` is a *deep link* to the hero detail page that displays the hero with `id: 42`.
 
 There is no issue when the user navigates to that URL from within a running client.
-The Angular router interprets the URL and routes to that page and hero.
+The Angular Classicrouter interprets the URL and routes to that page and hero.
 
 But clicking a link in an email, entering it in the browser address bar, or merely refreshing the browser while on the hero detail page &mdash;all of these actions are handled by the browser itself, *outside* the running application.
 The browser makes a direct request to the server for that URL, bypassing the router.
@@ -204,7 +204,7 @@ The list is by no means exhaustive, but should provide you with a good starting 
 | [Apache](https://httpd.apache.org)                           | Add a [rewrite rule](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) to the `.htaccess` file as shown \([ngmilk.rocks/2015/03/09/angularjs-html5-mode-or-pretty-urls-on-apache-using-htaccess](https://ngmilk.rocks/2015/03/09/angularjs-html5-mode-or-pretty-urls-on-apache-using-htaccess)\): <code-example format="apache" language="apache"> RewriteEngine On &NewLine;&nbsp; &num; If an existing asset or directory is requested go to it as it is &NewLine;&nbsp; RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR] &NewLine;&nbsp; RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d &NewLine;&nbsp; RewriteRule ^ - [L] &NewLine; &NewLine;&nbsp; &num; If the requested resource doesn't exist, use index.html &NewLine;&nbsp; RewriteRule ^ /index.html </code-example>                                                                                                                                                                                                                                                                                                                                                                                                          |
 | [Nginx](https://nginx.org)                                   | Use `try_files`, as described in [Front Controller Pattern Web Apps](https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/#front-controller-pattern-web-apps), modified to serve `index.html`: <code-example format="nginx" language="nginx"> try_files &dollar;uri &dollar;uri/ /index.html; </code-example>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | [Ruby](https://www.ruby-lang.org)                            | Create a Ruby server using \([sinatra](http://sinatrarb.com)\) with a basic Ruby file that configures the server `server.rb`: <code-example format="ruby" language="ruby"> require 'sinatra' &NewLine; &NewLine;&num; Folder structure &NewLine;&num; . &NewLine;&num; -- server.rb &NewLine;&num; -- public &NewLine;&num; &nbsp;&nbsp; &verbar;-- project-name &NewLine;&num; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &verbar;-- index.html &NewLine; &NewLine;get '/' do &NewLine;&nbsp; folderDir = settings.public_folder + '/project-name'  &num; ng build output folder &NewLine;&nbsp; send_file File.join(folderDir, 'index.html') &NewLine;end </code-example>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| [IIS](https://www.iis.net)                                   | Add a rewrite rule to `web.config`, similar to the one shown [here](https://stackoverflow.com/a/26152011): <code-example format="xml" language="xml"> &lt;system.webServer&gt; &NewLine;&nbsp; &lt;rewrite&gt; &NewLine;&nbsp;&nbsp;&nbsp; &lt;rules&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;rule name="Angular Routes" stopProcessing="true"&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;match url=".*" /&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;conditions logicalGrouping="MatchAll"&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" /&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" /&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/conditions&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;action type="Rewrite" url="/index.html" /&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/rule&gt; &NewLine;&nbsp;&nbsp;&nbsp; &lt;/rules&gt; &NewLine;&nbsp; &lt;/rewrite&gt; &NewLine;&lt;/system.webServer&gt; </code-example> |
+| [IIS](https://www.iis.net)                                   | Add a rewrite rule to `web.config`, similar to the one shown [here](https://stackoverflow.com/a/26152011): <code-example format="xml" language="xml"> &lt;system.webServer&gt; &NewLine;&nbsp; &lt;rewrite&gt; &NewLine;&nbsp;&nbsp;&nbsp; &lt;rules&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;rule name="Angular ClassicRoutes" stopProcessing="true"&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;match url=".*" /&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;conditions logicalGrouping="MatchAll"&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" /&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" /&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/conditions&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;action type="Rewrite" url="/index.html" /&gt; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/rule&gt; &NewLine;&nbsp;&nbsp;&nbsp; &lt;/rules&gt; &NewLine;&nbsp; &lt;/rewrite&gt; &NewLine;&lt;/system.webServer&gt; </code-example> |
 | [GitHub Pages](https://pages.github.com)                     | You can't [directly configure](https://github.com/isaacs/github/issues/408) the GitHub Pages server, but you can add a 404 page. Copy `index.html` into `404.html`. It will still be served as the 404 response, but the browser will process that page and load the application properly. It's also a good idea to [serve from `docs` on main](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source) and to [create a `.nojekyll` file](https://www.bennadel.com/blog/3181-including-node-modules-and-vendors-folders-in-your-github-pages-site.htm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | [Firebase hosting](https://firebase.google.com/docs/hosting) | Add a [rewrite rule](https://firebase.google.com/docs/hosting/url-redirects-rewrites#section-rewrites). <code-example language="json"> "rewrites": [ { &NewLine;&nbsp; "source": "**", &NewLine;&nbsp; "destination": "/index.html" &NewLine;} ] </code-example>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
@@ -231,7 +231,7 @@ See your server's manual for instructions on how to do this.
 
 ### Requesting services from a different server (CORS)
 
-Angular developers may encounter a [*cross-origin resource sharing*](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing "Cross-origin resource sharing") error when making a service request \(typically a data service request\) to a server other than the application's own host server.
+Angular Classicdevelopers may encounter a [*cross-origin resource sharing*](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing "Cross-origin resource sharing") error when making a service request \(typically a data service request\) to a server other than the application's own host server.
 Browsers forbid such requests unless the server permits them explicitly.
 
 There isn't anything the client application can do about these errors.
@@ -246,7 +246,7 @@ The `production` configuration engages the following build optimization features
 
 | Features                                              | Details |
 |:---                                                   |:---     |
-| [Ahead-of-Time (AOT) Compilation](guide/aot-compiler) | Pre-compiles Angular component templates.                                |
+| [Ahead-of-Time (AOT) Compilation](guide/aot-compiler) | Pre-compiles Angular Classiccomponent templates.                                |
 | [Production mode](#prod-mode)                         | Optimizes the application for the best runtime performance |
 | Bundling                                              | Concatenates your many application and library files into a few bundles. |
 | Minification                                          | Removes excess whitespace, comments, and optional tokens.                |
@@ -259,9 +259,9 @@ See [`ng build`](cli/build) for more about CLI build options and what they do.
 
 ### Production mode at runtime
 
-When you run an application locally using `ng serve`, Angular uses the development mode configuration
+When you run an application locally using `ng serve`, Angular Classicuses the development mode configuration
 at runtime. The development mode at runtime enables extra safety checks, more detailed error messages
-and debugging utilities, such as the [expression-changed-after-checked](errors/NG0100) detection. Angular outputs
+and debugging utilities, such as the [expression-changed-after-checked](errors/NG0100) detection. Angular Classicoutputs
 a message in the browser console to indicate that the development mode is enabled.
 
 Those extra checks are helpful during the development, but they require an extra code in a bundle, which is
@@ -275,7 +275,7 @@ Building your application with the production configuration automatically enable
 
 You can dramatically reduce launch time by only loading the application modules that absolutely must be present when the application starts.
 
-Configure the Angular Router to defer loading of all other modules \(and their associated code\), either by [waiting until the app has launched](guide/router-tutorial-toh#preloading  "Preloading") or by [*lazy loading*](guide/router#lazy-loading "Lazy loading") them on demand.
+Configure the Angular ClassicRouter to defer loading of all other modules \(and their associated code\), either by [waiting until the app has launched](guide/router-tutorial-toh#preloading  "Preloading") or by [*lazy loading*](guide/router#lazy-loading "Lazy loading") them on demand.
 
 <div class="callout is-helpful">
 
@@ -289,7 +289,7 @@ Because lazy-loaded modules aren't imported in JavaScript, bundlers exclude them
 Bundlers don't know about the router configuration and can't create separate bundles for lazy-loaded modules.
 You would have to create these bundles manually.
 
-The CLI runs the [Angular Ahead-of-Time Webpack Plugin](https://github.com/angular/angular-cli/tree/main/packages/ngtools/webpack) which automatically recognizes lazy-loaded `NgModules` and creates separate bundles for them.
+The CLI runs the [Angular ClassicAhead-of-Time Webpack Plugin](https://github.com/angular/angular-cli/tree/main/packages/ngtools/webpack) which automatically recognizes lazy-loaded `NgModules` and creates separate bundles for them.
 
 </div>
 
@@ -361,7 +361,7 @@ Here's the output for the *main* bundle of an example application called `cli-qu
 
 The HTML [`<base href="..." />`](guide/router) specifies a base path for resolving relative URLs to assets such as images, scripts, and style sheets.
 For example, given the `<base href="/my/app/">`, the browser resolves a URL such as `some/place/foo.jpg` into a server request for `my/app/some/place/foo.jpg`.
-During navigation, the Angular router uses the *base href* as the base path to component, template, and module files.
+During navigation, the Angular Classicrouter uses the *base href* as the base path to component, template, and module files.
 
 <div class="alert is-helpful">
 
@@ -393,7 +393,7 @@ However, defining a `base href` has a few unique effects.
 
 *   Defining a `base href` can be used for locating relative template \(HTML\) assets, and relative fetch/XMLHttpRequests.
 
-The `base href` can also be used to define the Angular router's default base \(see [`APP_BASE_HREF`](api/common/APP_BASE_HREF)\).
+The `base href` can also be used to define the Angular Classicrouter's default base \(see [`APP_BASE_HREF`](api/common/APP_BASE_HREF)\).
 Users with more complicated setups may need to manually configure the `APP_BASE_HREF` token within the application \(for example, application routing base is `/` but` assets/scripts/etc.` are at `/assets/`\).
 
 Unlike the `base href` which can be defined in a single place, the `deploy url` needs to be hard-coded into an application at build time.

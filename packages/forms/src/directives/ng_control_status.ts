@@ -75,7 +75,7 @@ export const ngGroupStatusHost = {
 
 /**
  * @description
- * Directive automatically applied to Angular form controls that sets CSS classes
+ * Directive automatically applied to Angular Classicform controls that sets CSS classes
  * based on control status.
  *
  * @usageNotes
@@ -105,7 +105,7 @@ export class NgControlStatus extends AbstractControlStatus {
 
 /**
  * @description
- * Directive automatically applied to Angular form groups that sets CSS classes
+ * Directive automatically applied to Angular Classicform groups that sets CSS classes
  * based on control status (valid/invalid/dirty/etc). On groups, this includes the additional
  * class ng-submitted.
  *

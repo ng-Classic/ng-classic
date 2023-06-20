@@ -15,7 +15,7 @@ import {MockServerHost} from './host';
 import {Project, ProjectFiles, TestableOptions} from './project';
 
 /**
- * Testing environment for the Angular Language Service, which creates an in-memory tsserver
+ * Testing environment for the Angular ClassicLanguage Service, which creates an in-memory tsserver
  * instance that backs a Language Service to emulate an IDE that uses the LS.
  */
 export class LanguageServiceTestEnv {

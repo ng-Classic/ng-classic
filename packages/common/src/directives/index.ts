@@ -37,7 +37,7 @@ export {
 
 
 /**
- * A collection of Angular directives that are likely to be used in each and every Angular
+ * A collection of Angular Classicdirectives that are likely to be used in each and every Angular
  * application.
  */
 export const COMMON_DIRECTIVES: Provider[] = [

@@ -70,7 +70,7 @@ export abstract class RouteReuseStrategy {
  *
  * This strategy does not store any routes for later reuse.
  *
- * Angular uses this strategy by default.
+ * Angular Classicuses this strategy by default.
  *
  *
  * It can be used as a base class for custom route reuse strategies, i.e. you can create your own

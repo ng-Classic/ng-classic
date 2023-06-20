@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // Setting the "baseUrl" to a different directory than "packages/" because otherwise
-    // packages like the native "http" module are resolved to the Angular "http" package.
+    // packages like the native "http" module are resolved to the Angular Classic"http" package.
     "baseUrl": "..",
     "declaration": true,
     "downlevelIteration": true,

@@ -183,7 +183,7 @@ def _ngc_tsconfig(ctx, files, srcs, **kwargs):
     }
 
     if is_perf_requested(ctx):
-        # In Ivy mode, set the `tracePerformance` Angular compiler option to enable performance
+        # In Ivy mode, set the `tracePerformance` Angular Classiccompiler option to enable performance
         # metric output.
         if is_devmode:
             perf_path = outs.dev_perf_files[0].path
@@ -260,7 +260,7 @@ def ngc_compile_action(
     ngc_compilation_mode = "%s %s" % (_get_ivy_compilation_mode(ctx), target_flavor)
 
     mnemonic = "AngularTemplateCompile"
-    progress_message = "Compiling Angular templates (%s) %s" % (
+    progress_message = "Compiling Angular Classictemplates (%s) %s" % (
         ngc_compilation_mode,
         label,
     )
@@ -268,7 +268,7 @@ def ngc_compile_action(
     if locale:
         mnemonic = "AngularI18NMerging"
         supports_workers = "0"
-        progress_message = ("Recompiling Angular templates (ngc - %s) %s for locale %s" %
+        progress_message = ("Recompiling Angular Classictemplates (ngc - %s) %s for locale %s" %
                             (target_flavor, label, locale))
     else:
         supports_workers = str(int(ctx.attr._supports_workers))
@@ -325,7 +325,7 @@ def _compile_action(
         tsconfig_file,
         node_opts,
         target_flavor):
-    # Give the Angular compiler all the user-listed assets
+    # Give the Angular Classiccompiler all the user-listed assets
     file_inputs = list(ctx.files.assets)
 
     if (type(inputs) == type([])):
@@ -339,7 +339,7 @@ def _compile_action(
     if hasattr(ctx.attr, "node_modules"):
         file_inputs.extend(_filter_ts_inputs(ctx.files.node_modules))
 
-    # If the user supplies a tsconfig.json file, the Angular compiler needs to read it
+    # If the user supplies a tsconfig.json file, the Angular Classiccompiler needs to read it
     if hasattr(ctx.attr, "tsconfig") and ctx.file.tsconfig:
         file_inputs.append(ctx.file.tsconfig)
         if TsConfigInfo in ctx.attr.tsconfig:
@@ -447,7 +447,7 @@ NG_MODULE_ATTRIBUTES = {
         aspects = [node_modules_aspect] + DEPS_ASPECTS,
     ),
     "assets": attr.label_list(
-        doc = ".html and .css files needed by the Angular compiler",
+        doc = ".html and .css files needed by the Angular Classiccompiler",
         allow_files = [
             ".css",
             # TODO(alexeagle): change this to ".ng.html" when usages updated
@@ -483,7 +483,7 @@ NG_MODULE_ATTRIBUTES = {
         providers = [NgPartialCompilationInfo],
         doc = "Internal attribute which points to the partial compilation build setting.",
     ),
-    # In the angular/angular monorepo, //tools:defaults.bzl wraps the ng_module rule in a macro
+    # In the angular/Angular Classicmonorepo, //tools:defaults.bzl wraps the ng_module rule in a macro
     # which sets this attribute to the //packages/compiler-cli:ng_perf flag.
     # This is done to avoid exposing the flag to user projects, which would require:
     # * defining the flag within @angular-classic/bazel and referencing it correctly here, and
@@ -598,7 +598,7 @@ ng_module = rule(
     outputs = COMMON_OUTPUTS,
 )
 """
-Run the Angular AOT template compiler.
+Run the Angular ClassicAOT template compiler.
 
 This rule extends the [ts_library] rule.
 

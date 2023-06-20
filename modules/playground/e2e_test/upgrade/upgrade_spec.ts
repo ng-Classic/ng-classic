@@ -22,7 +22,7 @@ describe('ngUpgrade', function() {
     verifyNoBrowserErrors();
   });
 
-  it('should bootstrap AngularJS and Angular apps together', function() {
+  it('should bootstrap AngularJS and Angular Classicapps together', function() {
     const ng1NameInput = element(by.css('input[ng-model="name"]'));
     expect(ng1NameInput.getAttribute('value')).toEqual('World');
 

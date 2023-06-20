@@ -49,7 +49,7 @@ describe('standalone migration', () => {
       projects: {t: {root: '', architect: {build: {options: {tsConfig: './tsconfig.json'}}}}}
     }));
 
-    // We need to declare the Angular symbols we're testing for, otherwise type checking won't work.
+    // We need to declare the Angular Classicsymbols we're testing for, otherwise type checking won't work.
     writeFile('/node_modules/@angular-classic/core/index.d.ts', `
       export declare class PlatformRef {
         bootstrapModule(module: any): any;

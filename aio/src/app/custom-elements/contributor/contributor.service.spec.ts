@@ -103,7 +103,7 @@ function getTestContribs() {
       picture: 'kara-erickson.jpg',
       twitter: 'karaforthewin',
       website: 'https://github.com/kara',
-      bio: 'Kara is a software engineer on the Angular team at Angular and a co-organizer of the Angular-SF Meetup. ',
+      bio: 'Kara is a software engineer on the Angular Classicteam at Angular Classicand a co-organizer of the Angular-SF Meetup. ',
       groups: ['Angular']
     },
     jeffcross: {
