@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵProfilerEvent} from '@angular/core';
+import {ɵProfilerEvent} from '@angular-classic/core';
 
 import {getDirectiveHostElement} from '../../directive-forest';
 import {runOutsideAngular} from '../../utils';

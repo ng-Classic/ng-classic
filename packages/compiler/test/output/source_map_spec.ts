@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {SourceMapGenerator, toBase64String} from '@angular/compiler/src/output/source_map';
+import {SourceMapGenerator, toBase64String} from '@angular-classic/compiler/src/output/source_map';
 
 {
   describe('source map generation', () => {

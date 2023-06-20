@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {Component, createEnvironmentInjector, Directive, EnvironmentInjector, forwardRef, Injector, Input, isStandalone, NgModule, NO_ERRORS_SCHEMA, OnInit, Pipe, PipeTransform, ViewChild, ViewContainerRef} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {CommonModule} from '@angular-classic/common';
+import {Component, createEnvironmentInjector, Directive, EnvironmentInjector, forwardRef, Injector, Input, isStandalone, NgModule, NO_ERRORS_SCHEMA, OnInit, Pipe, PipeTransform, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 describe('standalone components, directives, and pipes', () => {
   it('should render a standalone component', () => {
@@ -699,7 +699,7 @@ describe('standalone components, directives, and pipes', () => {
       const prefix =
           `'${tag}' is not a known element \\(used in the 'AppCmp' component template\\):`;
       const message1 = `1. If '${
-          tag}' is an Angular component, then verify that it is included in the '@Component.imports' of this component.`;
+          tag}' is an Angular Classiccomponent, then verify that it is included in the '@Component.imports' of this component.`;
       const message2 = `2. If '${
           tag}' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@Component.schemas' of this component to suppress this message.`;
       return new RegExp(`${prefix}\s*\n\s*${message1}\s*\n\s*${message2}`);

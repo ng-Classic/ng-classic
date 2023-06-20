@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { Component, OnInit } from '@angular-classic/core';
+import { ActivatedRoute } from '@angular-classic/router';
+import { Location } from '@angular-classic/common';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';

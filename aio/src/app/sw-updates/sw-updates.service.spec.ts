@@ -1,6 +1,6 @@
-import { ApplicationRef, ErrorHandler, Injector } from '@angular/core';
-import { discardPeriodicTasks, fakeAsync, tick } from '@angular/core/testing';
-import { SwUpdate, VersionEvent, VersionReadyEvent } from '@angular/service-worker';
+import { ApplicationRef, ErrorHandler, Injector } from '@angular-classic/core';
+import { discardPeriodicTasks, fakeAsync, tick } from '@angular-classic/core/testing';
+import { SwUpdate, VersionEvent, VersionReadyEvent } from '@angular-classic/service-worker';
 import { BehaviorSubject, Subject } from 'rxjs';
 
 import { LocationService } from 'app/shared/location.service';

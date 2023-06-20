@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, NgFor, NgForOf} from '@angular/common';
-import {Component} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule, NgFor, NgForOf} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 let thisArg: any;
 
@@ -120,7 +120,7 @@ let thisArg: any;
          getComponent().items = <any>'whaaa';
          expect(() => fixture.detectChanges())
              .toThrowError(
-                 `NG02200: Cannot find a differ supporting object 'whaaa' of type 'string'. NgFor only supports binding to Iterables, such as Arrays. Find more at https://angular.io/errors/NG02200`);
+                 `NG02200: Cannot find a differ supporting object 'whaaa' of type 'string'. NgFor only supports binding to Iterables, such as Arrays. Find more at https://angular-classic.com/errors/NG02200`);
        }));
 
     it('should throw on non-iterable ref and suggest using an array ', waitForAsync(() => {
@@ -129,7 +129,7 @@ let thisArg: any;
          getComponent().items = <any>{'stuff': 'whaaa'};
          expect(() => fixture.detectChanges())
              .toThrowError(
-                 `NG02200: Cannot find a differ supporting object '\[object Object\]' of type 'object'. NgFor only supports binding to Iterables, such as Arrays. Did you mean to use the keyvalue pipe? Find more at https://angular.io/errors/NG02200`);
+                 `NG02200: Cannot find a differ supporting object '\[object Object\]' of type 'object'. NgFor only supports binding to Iterables, such as Arrays. Did you mean to use the keyvalue pipe? Find more at https://angular-classic.com/errors/NG02200`);
        }));
 
     it('should throw on ref changing to string', waitForAsync(() => {

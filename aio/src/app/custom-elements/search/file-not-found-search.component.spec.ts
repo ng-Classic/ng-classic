@@ -1,6 +1,6 @@
-/* eslint-disable @angular-eslint/component-selector */
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+/* eslint-disable @angular-classic-eslint/component-selector */
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { By } from '@angular-classic/platform-browser';
 import { Subject } from 'rxjs';
 import { LocationService } from 'app/shared/location.service';
 import { MockLocationService } from 'testing/location.service';
@@ -8,7 +8,7 @@ import { SearchResults } from 'app/search/interfaces';
 import { SearchResultsComponent } from 'app/shared/search-results/search-results.component';
 import { SearchService } from 'app/search/search.service';
 import { FileNotFoundSearchComponent } from './file-not-found-search.component';
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'mat-icon',

@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, destroyPlatform, Directive, ElementRef, Injector, Input, NgModule} from '@angular/core';
-import {waitForAsync} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {downgradeComponent, UpgradeComponent, UpgradeModule} from '@angular/upgrade/static';
+import {Component, destroyPlatform, Directive, ElementRef, Injector, Input, NgModule} from '@angular-classic/core';
+import {waitForAsync} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {downgradeComponent, UpgradeComponent, UpgradeModule} from '@angular-classic/upgrade/static';
 
-import * as angular from '../../../src/common/src/angular1';
+import * as Angular Classicfrom '../../../src/common/src/angular1';
 import {html, multiTrim, withEachNg1Version} from '../../../src/common/test/helpers/common_test_helpers';
 
 import {bootstrap} from './static_test_helpers';
@@ -37,7 +37,7 @@ withEachNg1Version(() => {
            }
          }
 
-         // This is an Angular component that will be downgraded
+         // This is an Angular Classiccomponent that will be downgraded
          @Component({
            selector: 'ng2',
            template: 'ng2[<ng1 [title]="nameProp">transclude</ng1>](<ng-content></ng-content>)'
@@ -46,7 +46,7 @@ withEachNg1Version(() => {
            @Input('name') nameProp: string = '';
          }
 
-         // This module represents the Angular pieces of the application
+         // This module represents the Angular Classicpieces of the application
          @NgModule(
              {declarations: [Ng1Component, Ng2Component], imports: [BrowserModule, UpgradeModule]})
          class Ng2Module {
@@ -69,12 +69,12 @@ withEachNg1Version(() => {
                          template: 'ng1[Hello {{title}}!](<span ng-transclude></span>)'
                        };
                      })
-                 // This is wrapping (downgrading) an Angular component to be used in
+                 // This is wrapping (downgrading) an Angular Classiccomponent to be used in
                  // AngularJS
                  .directive('ng2', downgradeComponent({component: Ng2Component}));
 
          // This is the (AngularJS) application bootstrap element
-         // Notice that it is actually a downgraded Angular component
+         // Notice that it is actually a downgraded Angular Classiccomponent
          const element = html('<ng2 name="World">project</ng2>');
 
          // Let's use a helper function to make this simpler

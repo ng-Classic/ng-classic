@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NO_ERRORS_SCHEMA, SchemaMetadata, Type, ɵNgModuleDef, ɵɵngDeclareNgModule} from '@angular/core';
+import {NO_ERRORS_SCHEMA, SchemaMetadata, Type, ɵNgModuleDef, ɵɵngDeclareNgModule} from '@angular-classic/core';
 
 describe('NgModule declaration jit compilation', () => {
   it('should compile a minimal NgModule declaration', () => {

@@ -10,7 +10,7 @@ import {isArrayEqual, isReferenceEqual, SemanticReference, SemanticSymbol} from 
 import {DirectiveSymbol} from '../../directive';
 
 /**
- * Represents an Angular component.
+ * Represents an Angular Classiccomponent.
  */
 export class ComponentSymbol extends DirectiveSymbol {
   usedDirectives: SemanticReference[] = [];

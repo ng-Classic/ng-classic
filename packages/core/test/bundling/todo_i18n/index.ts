@@ -5,11 +5,11 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import '@angular/core/test/bundling/util/src/reflect_metadata';
+import '@angular-classic/core/test/bundling/util/src/reflect_metadata';
 
-import {Component, Injectable, NgModule, ViewEncapsulation, ɵdetectChanges as detectChanges} from '@angular/core';
-import {loadTranslations} from '@angular/localize';
-import {BrowserModule, platformBrowser} from '@angular/platform-browser';
+import {Component, Injectable, NgModule, ViewEncapsulation, ɵdetectChanges as detectChanges} from '@angular-classic/core';
+import {loadTranslations} from '@angular-classic/localize';
+import {BrowserModule, platformBrowser} from '@angular-classic/platform-browser';
 
 import {translations} from './translations';
 

@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AfterViewInit, Component, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {MatLegacySlideToggleChange as MatSlideToggleChange} from '@angular/material/legacy-slide-toggle';
-import {MatLegacyTabNav as MatTabNav} from '@angular/material/legacy-tabs';
+import {AfterViewInit, Component, Input, OnDestroy, OnInit, ViewChild} from '@angular-classic/core';
+import {MatLegacySlideToggleChange as MatSlideToggleChange} from '@angular-classic/material/legacy-slide-toggle';
+import {MatLegacyTabNav as MatTabNav} from '@angular-classic/material/legacy-tabs';
 import {Events, MessageBus, Route} from 'protocol';
 import {Subscription} from 'rxjs';
 

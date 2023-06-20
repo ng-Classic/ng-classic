@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, inject, Injectable} from '@angular/core';
-import {bootstrapApplication} from '@angular/platform-browser';
-import {ActivatedRoute, ActivatedRouteSnapshot, CanActivateChildFn, CanActivateFn, CanDeactivateFn, CanMatchFn, provideRouter, ResolveFn, Route, RouterStateSnapshot, UrlSegment} from '@angular/router';
+import {Component, inject, Injectable} from '@angular-classic/core';
+import {bootstrapApplication} from '@angular-classic/platform-browser';
+import {ActivatedRoute, ActivatedRouteSnapshot, CanActivateChildFn, CanActivateFn, CanDeactivateFn, CanMatchFn, provideRouter, ResolveFn, Route, RouterStateSnapshot, UrlSegment} from '@angular-classic/router';
 
 @Component({template: ''})
 export class App {

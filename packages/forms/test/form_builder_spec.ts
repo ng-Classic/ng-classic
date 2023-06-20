@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Component} from '@angular/core';
-import {fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {FormBuilder, NonNullableFormBuilder, ReactiveFormsModule, UntypedFormBuilder, Validators} from '@angular/forms';
+import {Component} from '@angular-classic/core';
+import {fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {FormBuilder, NonNullableFormBuilder, ReactiveFormsModule, UntypedFormBuilder, Validators} from '@angular-classic/forms';
 import {of} from 'rxjs';
 
 (function() {

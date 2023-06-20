@@ -14,7 +14,7 @@ On subsequent requests the server can verify that the cookie matches the `X-XSRF
 The token must be unique for each user and must be verifiable by the server; this prevents the client from making up its own tokens.
 Set the token to a digest of your site's authentication cookie with a salt for added security.
 
-To prevent collisions in environments where multiple Angular apps share the same domain or subdomain, give each application a unique cookie name.
+To prevent collisions in environments where multiple Angular Classicapps share the same domain or subdomain, give each application a unique cookie name.
 
 <div class="alert is-important">
 

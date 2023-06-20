@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵsetRootDomAdapter as setRootDomAdapter} from '@angular/common';
-import {ɵBrowserDomAdapter as BrowserDomAdapter} from '@angular/platform-browser';
+import {ɵsetRootDomAdapter as setRootDomAdapter} from '@angular-classic/common';
+import {ɵBrowserDomAdapter as BrowserDomAdapter} from '@angular-classic/platform-browser';
 
 import domino from './bundled-domino';
 

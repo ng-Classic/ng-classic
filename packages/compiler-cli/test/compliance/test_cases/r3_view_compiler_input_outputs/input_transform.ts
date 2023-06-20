@@ -1,4 +1,4 @@
-import {Directive, Input, NgModule} from '@angular/core';
+import {Directive, Input, NgModule} from '@angular-classic/core';
 
 function toNumber(value: number|string) {
   return value ? 1 : 0;

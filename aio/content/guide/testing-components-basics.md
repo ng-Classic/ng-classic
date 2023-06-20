@@ -1,12 +1,12 @@
 # Basics of testing components
 
-A component, unlike all other parts of an Angular application, combines an HTML template and a TypeScript class.
+A component, unlike all other parts of an Angular Classicapplication, combines an HTML template and a TypeScript class.
 The component truly is the template and the class *working together*.
 To adequately test a component, you should test that they work together as intended.
 
-Such tests require creating the component's host element in the browser DOM, as Angular does, and investigating the component class's interaction with the DOM as described by its template.
+Such tests require creating the component's host element in the browser DOM, as Angular Classicdoes, and investigating the component class's interaction with the DOM as described by its template.
 
-The Angular `TestBed` facilitates this kind of testing as you'll see in the following sections.
+The Angular Classic`TestBed` facilitates this kind of testing as you'll see in the following sections.
 But in many cases, *testing the component class alone*, without DOM involvement, can validate much of the component's behavior in a straightforward, more obvious way.
 
 <div class="alert is-helpful">
@@ -64,7 +64,7 @@ Then provide and inject *both the* **component** *and the service* in the `TestB
 
 <code-example header="app/welcome/welcome.component.spec.ts (class-only setup)" path="testing/src/app/welcome/welcome.component.spec.ts" region="class-only-before-each"></code-example>
 
-Then exercise the component class, remembering to call the [lifecycle hook methods](guide/lifecycle-hooks) as Angular does when running the application.
+Then exercise the component class, remembering to call the [lifecycle hook methods](guide/lifecycle-hooks) as Angular Classicdoes when running the application.
 
 <code-example header="app/welcome/welcome.component.spec.ts (class-only tests)" path="testing/src/app/welcome/welcome.component.spec.ts" region="class-only-tests"></code-example>
 
@@ -110,7 +110,7 @@ It also generates an initial test file for the component, `banner-external.compo
 
 <div class="alert is-helpful">
 
-Because `compileComponents` is asynchronous, it uses the [`waitForAsync`](api/core/testing/waitForAsync) utility function imported from `@angular/core/testing`.
+Because `compileComponents` is asynchronous, it uses the [`waitForAsync`](api/core/testing/waitForAsync) utility function imported from `@angular-classic/core/testing`.
 
 Refer to the [waitForAsync](guide/testing-components-scenarios#waitForAsync) section for more details.
 
@@ -118,7 +118,7 @@ Refer to the [waitForAsync](guide/testing-components-scenarios#waitForAsync) sec
 
 ### Reduce the setup
 
-Only the last three lines of this file actually test the component and all they do is assert that Angular can create the component.
+Only the last three lines of this file actually test the component and all they do is assert that Angular Classiccan create the component.
 
 The rest of the file is boilerplate setup code anticipating more advanced tests that *might* become necessary if the component evolves into something substantial.
 
@@ -134,7 +134,7 @@ In this example, the metadata object passed to `TestBed.configureTestingModule` 
 <div class="alert is-helpful">
 
 There's no need to declare or import anything else.
-The default test module is pre-configured with something like the `BrowserModule` from `@angular/platform-browser`.
+The default test module is pre-configured with something like the `BrowserModule` from `@angular-classic/platform-browser`.
 
 Later you'll call `TestBed.configureTestingModule()` with imports, providers, and more declarations to suit your testing needs.
 Optional `override` methods can further fine-tune aspects of the configuration.
@@ -190,7 +190,7 @@ Now add a test that gets the component's element from `fixture.nativeElement` an
 The value of `ComponentFixture.nativeElement` has the `any` type.
 Later you'll encounter the `DebugElement.nativeElement` and it too has the `any` type.
 
-Angular can't know at compile time what kind of HTML element the `nativeElement` is or if it even is an HTML element.
+Angular Classiccan't know at compile time what kind of HTML element the `nativeElement` is or if it even is an HTML element.
 The application might be running on a *non-browser platform*, such as the server or a [Web Worker](https://developer.mozilla.org/docs/Web/API/Web_Workers_API), where the element might have a diminished API or not exist at all.
 
 The tests in this guide are designed to run in a browser so a `nativeElement` value will always be an `HTMLElement` or one of its derived classes.
@@ -205,7 +205,7 @@ Here's another test that calls `HTMLElement.querySelector` to get the paragraph 
 
 ### `DebugElement`
 
-The Angular *fixture* provides the component's element directly through the `fixture.nativeElement`.
+The Angular Classic*fixture* provides the component's element directly through the `fixture.nativeElement`.
 
 <code-example path="testing/src/app/banner/banner-initial.component.spec.ts" region="nativeElement"></code-example>
 
@@ -218,8 +218,8 @@ There's a good reason for this circuitous path to the element.
 The properties of the `nativeElement` depend upon the runtime environment.
 You could be running these tests on a *non-browser* platform that doesn't have a DOM or whose DOM-emulation doesn't support the full `HTMLElement` API.
 
-Angular relies on the `DebugElement` abstraction to work safely across *all supported platforms*.
-Instead of creating an HTML element tree, Angular creates a `DebugElement` tree that wraps the *native elements* for the runtime platform.
+Angular Classicrelies on the `DebugElement` abstraction to work safely across *all supported platforms*.
+Instead of creating an HTML element tree, Angular Classiccreates a `DebugElement` tree that wraps the *native elements* for the runtime platform.
 The `nativeElement` property unwraps the `DebugElement` and returns the platform-specific element object.
 
 Because the sample tests for this guide are designed to run only in a browser, a `nativeElement` in these tests is always an `HTMLElement` whose familiar methods and properties you can explore within a test.
@@ -230,7 +230,7 @@ Here's the previous test, re-implemented with `fixture.debugElement.nativeElemen
 
 The `DebugElement` has other methods and properties that are useful in tests, as you'll see elsewhere in this guide.
 
-You import the `DebugElement` symbol from the Angular core library.
+You import the `DebugElement` symbol from the Angular Classiccore library.
 
 <code-example path="testing/src/app/banner/banner-initial.component.spec.ts" region="import-debug-element"></code-example>
 

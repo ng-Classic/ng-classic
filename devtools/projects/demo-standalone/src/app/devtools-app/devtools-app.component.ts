@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular-classic/core';
 import {DevToolsModule as NgDevToolsModule} from 'ng-devtools';
 import {Events, MessageBus, PriorityAwareMessageBus} from 'protocol';
 

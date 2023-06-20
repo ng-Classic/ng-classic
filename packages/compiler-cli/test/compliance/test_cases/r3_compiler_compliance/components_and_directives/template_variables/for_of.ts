@@ -1,4 +1,4 @@
-import {Directive, Input, SimpleChanges, TemplateRef, ViewContainerRef} from '@angular/core';
+import {Directive, Input, SimpleChanges, TemplateRef, ViewContainerRef} from '@angular-classic/core';
 
 export interface ForOfContext {
   $implicit: any;

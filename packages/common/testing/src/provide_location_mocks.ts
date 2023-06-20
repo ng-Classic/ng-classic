@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Location, LocationStrategy} from '@angular/common';
-import {Provider} from '@angular/core';
+import {Location, LocationStrategy} from '@angular-classic/common';
+import {Provider} from '@angular-classic/core';
 
 import {SpyLocation} from './location_mock';
 import {MockLocationStrategy} from './mock_location_strategy';

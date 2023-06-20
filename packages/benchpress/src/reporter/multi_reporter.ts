@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InjectionToken, Injector} from '@angular/core';
+import {InjectionToken, Injector} from '@angular-classic/core';
 
 import {MeasureValues} from '../measure_values';
 import {Reporter} from '../reporter';

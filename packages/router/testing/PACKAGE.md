@@ -1,1 +1,1 @@
-Supplies a testing module for the Angular `Router` subsystem.
+Supplies a testing module for the Angular Classic`Router` subsystem.

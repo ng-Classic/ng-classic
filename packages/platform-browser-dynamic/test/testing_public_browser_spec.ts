@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ResourceLoader} from '@angular/compiler';
-import {Compiler, Component, NgModule} from '@angular/core';
-import {fakeAsync, inject, TestBed, tick, waitForAsync} from '@angular/core/testing';
-import {ResourceLoaderImpl} from '@angular/platform-browser-dynamic/src/resource_loader/resource_loader_impl';
+import {ResourceLoader} from '@angular-classic/compiler';
+import {Compiler, Component, NgModule} from '@angular-classic/core';
+import {fakeAsync, inject, TestBed, tick, waitForAsync} from '@angular-classic/core/testing';
+import {ResourceLoaderImpl} from '@angular-classic/platform-browser-dynamic/src/resource_loader/resource_loader_impl';
 
 // Components for the tests.
 class FancyService {

@@ -1,7 +1,7 @@
 /* Newly generated and synchronous versions */
 // #docplaster
 // #docregion, new
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 
 // #enddocregion new
 import { Hero } from './hero';

@@ -1,11 +1,11 @@
 name: Bug Report
-description: Report a bug in the Angular Framework
+description: Report a bug in the Angular ClassicFramework
 
 body:
   - type: dropdown
     id: affected-packages
     attributes:
-      label: Which @angular/* package(s) are the source of the bug?
+      label: Which @angular-classic/* package(s) are the source of the bug?
       options:
         - animations
         - bazel
@@ -63,7 +63,7 @@ body:
       label: Please provide the environment you discovered this bug in (run `ng version`)
       render: true
       placeholder: |
-        Angular CLI: 12.0.5
+        Angular ClassicCLI: 12.0.5
         Node: 14.17.0
         Package Manager: yarn 1.22.10
         OS: linux x64
@@ -74,9 +74,9 @@ body:
 
         Package                         Version
         ---------------------------------------------------------
-        @angular-devkit/architect       0.1200.5
-        @angular-devkit/build-angular   12.0.5
-        @angular-devkit/core            12.0.5
+        @angular-classic-devkit/architect       0.1200.5
+        @angular-classic-devkit/build-Angular Classic  12.0.5
+        @angular-classic-devkit/core            12.0.5
         rxjs                            6.6.7
         typescript                      4.2.4
 

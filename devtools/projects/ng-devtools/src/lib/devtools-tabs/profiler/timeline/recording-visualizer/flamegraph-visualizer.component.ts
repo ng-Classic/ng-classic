@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular-classic/core';
 import {Color, RawData} from 'ngx-flamegraph/lib/utils';
 import {ProfilerFrame} from 'protocol';
 import {Subscription} from 'rxjs';

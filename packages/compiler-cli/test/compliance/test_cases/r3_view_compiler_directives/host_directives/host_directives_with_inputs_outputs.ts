@@ -1,4 +1,4 @@
-import {Component, Directive, EventEmitter, Input, Output} from '@angular/core';
+import {Component, Directive, EventEmitter, Input, Output} from '@angular-classic/core';
 
 @Directive({standalone: true})
 export class HostDir {

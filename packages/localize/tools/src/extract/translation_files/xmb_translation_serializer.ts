@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AbsoluteFsPath, getFileSystem, PathManipulation} from '@angular/compiler-cli/private/localize';
-import {ɵParsedMessage, ɵSourceLocation} from '@angular/localize';
+import {AbsoluteFsPath, getFileSystem, PathManipulation} from '@angular-classic/compiler-cli/private/localize';
+import {ɵParsedMessage, ɵSourceLocation} from '@angular-classic/localize';
 
 import {extractIcuPlaceholders} from './icu_parsing';
 import {TranslationSerializer} from './translation_serializer';

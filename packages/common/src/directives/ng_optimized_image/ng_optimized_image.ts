@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {booleanAttribute, Directive, ElementRef, inject, InjectionToken, Injector, Input, NgZone, numberAttribute, OnChanges, OnDestroy, OnInit, PLATFORM_ID, Renderer2, SimpleChanges, ɵformatRuntimeError as formatRuntimeError, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {booleanAttribute, Directive, ElementRef, inject, InjectionToken, Injector, Input, NgZone, numberAttribute, OnChanges, OnDestroy, OnInit, PLATFORM_ID, Renderer2, SimpleChanges, ɵformatRuntimeError as formatRuntimeError, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from '../../errors';
 import {isPlatformServer} from '../../platform_id';
@@ -144,7 +144,7 @@ export const IMAGE_CONFIG = new InjectionToken<ImageConfig>(
  * Step 1: import the `NgOptimizedImage` directive.
  *
  * ```typescript
- * import { NgOptimizedImage } from '@angular/common';
+ * import { NgOptimizedImage } from '@angular-classic/common';
  *
  * // Include it into the necessary NgModule
  * @NgModule({
@@ -170,7 +170,7 @@ export const IMAGE_CONFIG = new InjectionToken<ImageConfig>(
  * chosen service to the `providers` array. In the example below, the Imgix loader is used:
  *
  * ```typescript
- * import {provideImgixLoader} from '@angular/common';
+ * import {provideImgixLoader} from '@angular-classic/common';
  *
  * // Call the function and add the result to the `providers` array:
  * providers: [
@@ -191,7 +191,7 @@ export const IMAGE_CONFIG = new InjectionToken<ImageConfig>(
  * token.
  *
  * ```typescript
- * import {IMAGE_LOADER, ImageLoaderConfig} from '@angular/common';
+ * import {IMAGE_LOADER, ImageLoaderConfig} from '@angular-classic/common';
  *
  * // Configure the loader using the `IMAGE_LOADER` token.
  * providers: [

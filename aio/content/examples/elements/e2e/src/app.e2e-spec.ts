@@ -31,12 +31,12 @@ describe('Elements', () => {
 
     it('should display the specified message', async () => {
       await messageInput.clear();
-      await messageInput.sendKeys('Angular rocks!');
+      await messageInput.sendKeys('Angular Classicrocks!');
 
       await click(popupComponentButton);
       await waitForText(popupComponent);
 
-      expect(await popupComponent.getText()).toContain('Popup: Angular rocks!');
+      expect(await popupComponent.getText()).toContain('Popup: Angular Classicrocks!');
     });
 
     it('should be closed on "close" button click', async () => {
@@ -62,12 +62,12 @@ describe('Elements', () => {
 
     it('should display the specified message', async () => {
       await messageInput.clear();
-      await messageInput.sendKeys('Angular rocks!');
+      await messageInput.sendKeys('Angular Classicrocks!');
 
       await click(popupElementButton);
       await waitForText(popupElement);
 
-      expect(await popupElement.getText()).toContain('Popup: Angular rocks!');
+      expect(await popupElement.getText()).toContain('Popup: Angular Classicrocks!');
     });
 
     it('should be closed on "close" button click', async () => {

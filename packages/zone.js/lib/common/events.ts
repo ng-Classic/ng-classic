@@ -469,7 +469,7 @@ export function patchEventTarget(
             zone.scheduleEventTask(source, delegate, data, customScheduleFn, customCancelFn);
 
         // should clear taskData.target to avoid memory leak
-        // issue, https://github.com/angular/angular/issues/20442
+        // issue, https://github.com/ng-classic/angular/issues/20442
         taskData.target = null;
 
         // need to clear up taskData because it is a global object

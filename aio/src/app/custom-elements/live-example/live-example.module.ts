@@ -1,5 +1,5 @@
-import { NgModule, Type } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, Type } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { EmbeddedStackblitzComponent, LiveExampleComponent } from './live-example.component';
 import { WithCustomElementComponent } from '../element-registry';
 

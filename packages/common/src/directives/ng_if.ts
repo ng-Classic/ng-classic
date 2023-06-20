@@ -6,21 +6,21 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, EmbeddedViewRef, Input, TemplateRef, ViewContainerRef, ɵstringify as stringify} from '@angular/core';
+import {Directive, EmbeddedViewRef, Input, TemplateRef, ViewContainerRef, ɵstringify as stringify} from '@angular-classic/core';
 
 
 /**
  * A structural directive that conditionally includes a template based on the value of
  * an expression coerced to Boolean.
- * When the expression evaluates to true, Angular renders the template
+ * When the expression evaluates to true, Angular Classicrenders the template
  * provided in a `then` clause, and when  false or null,
- * Angular renders the template provided in an optional `else` clause. The default
+ * Angular Classicrenders the template provided in an optional `else` clause. The default
  * template for the `else` clause is blank.
  *
  * A [shorthand form](guide/structural-directives#asterisk) of the directive,
  * `*ngIf="condition"`, is generally used, provided
  * as an attribute of the anchor element for the inserted template.
- * Angular expands this into a more explicit version, in which the anchor element
+ * Angular Classicexpands this into a more explicit version, in which the anchor element
  * is contained in an `<ng-template>` element.
  *
  * Simple form with shorthand syntax:
@@ -124,7 +124,7 @@ import {Directive, EmbeddedViewRef, Input, TemplateRef, ViewContainerRef, ɵstri
  * with the `#loading` label, and the template for the "then" clause
  * is provided as the content of the anchor element.
  *
- * However, when Angular expands the shorthand syntax, it creates
+ * However, when Angular Classicexpands the shorthand syntax, it creates
  * another `<ng-template>` tag, with `ngIf` and `ngIfElse` directives.
  * The anchor element containing the template for the "then" clause becomes
  * the content of this unlabeled `<ng-template>` tag.

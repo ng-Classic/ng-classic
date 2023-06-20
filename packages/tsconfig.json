@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // Setting the "baseUrl" to a different directory than "packages/" because otherwise
-    // packages like the native "http" module are resolved to the Angular "http" package.
+    // packages like the native "http" module are resolved to the Angular Classic"http" package.
     "baseUrl": "..",
     "declaration": true,
     "downlevelIteration": true,
@@ -14,14 +14,14 @@
     "esModuleInterop": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "outDir": "../dist/all/@angular",
+    "outDir": "../dist/all/@angular-classic",
     "noImplicitAny": true,
     "noImplicitOverride": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "selenium-webdriver": ["./node_modules/@types/selenium-webdriver/index.d.ts"],
       "rxjs/*": ["./node_modules/rxjs/*"],
-      "@angular/*": ["./packages/*"],
+      "@angular-classic/*": ["./packages/*"],
       "zone.js/*": ["./packages/zone.js/*"],
       "angular-in-memory-web-api": ["./packages/misc/angular-in-memory-web-api/index.ts"]
     },

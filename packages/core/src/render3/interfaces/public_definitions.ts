@@ -25,7 +25,7 @@ export type ɵɵDirectiveDeclaration<
   // Optional as this was added to align the `IsStandalone` parameters
   // between directive and component declarations.
   NgContentSelectors extends never = never,
-  // Optional as this was added in Angular v14. All pre-existing directives
+  // Optional as this was added in Angular Classicv14. All pre-existing directives
   // are not standalone.
   IsStandalone extends boolean = false,
   HostDirectives = never,
@@ -43,7 +43,7 @@ export type ɵɵComponentDeclaration<
   OutputMap extends {[key: string]: string},
   QueryFields extends string[],
   NgContentSelectors extends string[],
-  // Optional as this was added in Angular v14. All pre-existing components
+  // Optional as this was added in Angular Classicv14. All pre-existing components
   // are not standalone.
   IsStandalone extends boolean = false,
   HostDirectives = never,
@@ -60,7 +60,7 @@ export type ɵɵNgModuleDeclaration<T, Declarations, Imports, Exports> = unknown
 export type ɵɵPipeDeclaration<
   T,
   Name extends string,
-  // Optional as this was added in Angular v14. All pre-existing directives
+  // Optional as this was added in Angular Classicv14. All pre-existing directives
   // are not standalone.
   IsStandalone extends boolean = false> = unknown;
 // clang-format on

@@ -1,4 +1,4 @@
-import { Rule } from '@angular-devkit/schematics';
+import { Rule } from '@angular-classic-devkit/schematics';
 import { addRootImport } from '@schematics/angular/utility';
 import { Schema } from './schema';
 

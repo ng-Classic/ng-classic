@@ -1,8 +1,8 @@
 consts: [
-  ["src", i0.ɵɵtrustConstantResourceUrl `https://angular.io/`],
+  ["src", i0.ɵɵtrustConstantResourceUrl `https://angular-classic.com/`],
   ["srcdoc", i0.ɵɵtrustConstantHtml `<h1>Angular</h1>`],
-  ["data", i0.ɵɵtrustConstantResourceUrl `https://angular.io/`, "codebase", i0.ɵɵtrustConstantResourceUrl `/`],
-  ["src", "https://angular.io/"]
+  ["data", i0.ɵɵtrustConstantResourceUrl `https://angular-classic.com/`, "codebase", i0.ɵɵtrustConstantResourceUrl `/`],
+  ["src", "https://angular-classic.com/"]
 ],
 template: function MyComponent_Template(rf, ctx) {
   if (rf & 1) {

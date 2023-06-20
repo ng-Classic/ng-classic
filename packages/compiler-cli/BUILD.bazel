@@ -33,7 +33,7 @@ esbuild(
         "//packages/compiler-cli/private:tooling.ts",
     ],
     external = [
-        "@angular/compiler",
+        "@angular-classic/compiler",
         "typescript",
         "tsickle",
         "@babel/core",
@@ -106,7 +106,7 @@ extract_types(
 
 pkg_npm(
     name = "npm_package",
-    package_name = "@angular/compiler-cli",
+    package_name = "@angular-classic/compiler-cli",
     srcs = [
         "package.json",
     ],

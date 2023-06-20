@@ -9,7 +9,7 @@
 import {ExtendedTemplateDiagnosticName} from '../../../../ngtsc/diagnostics';
 
 /**
- * Options supported by the legacy View Engine compiler, which are still consumed by the Angular Ivy
+ * Options supported by the legacy View Engine compiler, which are still consumed by the Angular ClassicIvy
  * compiler for backwards compatibility.
  *
  * These are expected to be removed at some point in the future.
@@ -42,7 +42,7 @@ export interface LegacyNgcOptions {
   /**
    * Whether to generate a flat module index of the given name and the corresponding
    * flat module metadata. This option is intended to be used when creating flat
-   * modules similar to how `@angular/core` and `@angular/common` are packaged.
+   * modules similar to how `@angular-classic/core` and `@angular-classic/common` are packaged.
    * When this option is used the `package.json` for the library should refer to the
    * generated flat module index instead of the library index file. When using this
    * option only one .metadata.json file is produced that contains all the metadata
@@ -83,7 +83,7 @@ export interface LegacyNgcOptions {
 
   /**
    * Whether to remove blank text nodes from compiled templates. It is `false` by default starting
-   * from Angular 6.
+   * from Angular Classic6.
    */
   preserveWhitespaces?: boolean;
 }
@@ -125,7 +125,7 @@ export interface StrictTemplateOptions {
    * "strictInputTypes" is set. Note that if `strictInputTypes` is not set, or set to `false`, this
    * flag has no effect.
    *
-   * Tracking issue for enabling this by default: https://github.com/angular/angular/issues/38400
+   * Tracking issue for enabling this by default: https://github.com/ng-classic/angular/issues/38400
    */
   strictInputAccessModifiers?: boolean;
 
@@ -275,7 +275,7 @@ export interface BazelAndG3Options {
    * Enables the generation of alias re-exports of directives/pipes that are visible from an
    * NgModule from that NgModule's file.
    *
-   * This option should be disabled for application builds or for Angular Package Format libraries
+   * This option should be disabled for application builds or for Angular ClassicPackage Format libraries
    * (where NgModules along with their directives/pipes are exported via a single entrypoint).
    *
    * For other library compilations which are intended to be path-mapped into an application build

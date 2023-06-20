@@ -1,6 +1,6 @@
-# Contributing to Angular DevTools
+# Contributing to Angular ClassicDevTools
 
-We would love for you to contribute to Angular DevTools and help make it even better than it is
+We would love for you to contribute to Angular ClassicDevTools and help make it even better than it is
 today! As a contributor, here are the guidelines we would like you to follow:
 
 - [Question or Problem?](#question)
@@ -22,7 +22,7 @@ StackOverflow is a much better place to ask questions since:
 
 To save your and our time we will be systematically closing all the issues that are requests for general support and redirecting people to StackOverflow.
 
-If you would like to chat about the question in real-time, you can reach out via [our gitter channel](https://gitter.im/angular/angular).
+If you would like to chat about the question in real-time, you can reach out via [our gitter channel](https://gitter.im/ng-classic/angular).
 
 ## <a name="issue"></a> Found an Bug?
 
@@ -48,14 +48,14 @@ Please consider what kind of change it is:
 
 Before you submit an issue, please search the issue tracker, maybe an issue for your problem already exists and the discussion might inform you of workarounds readily available.
 
-We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. In order to reproduce bugs we will systematically ask you to provide a minimal reproduction scenario by providing a project which breaks Angular DevTools. Also make sure that you list:
+We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. In order to reproduce bugs we will systematically ask you to provide a minimal reproduction scenario by providing a project which breaks Angular ClassicDevTools. Also make sure that you list:
 
-- version of Angular DevTools used
-- version of Angular used
+- version of Angular ClassicDevTools used
+- version of Angular Classicused
 - 3rd-party libraries and their versions
 - and most importantly - a use-case that fails
 
-You can file new issues by filling out our [new issue form](https://github.com/angular/angular/issues/new/choose).
+You can file new issues by filling out our [new issue form](https://github.com/ng-classic/angular/issues/new/choose).
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 
@@ -63,9 +63,9 @@ You can file new issues by filling out our [new issue form](https://github.com/a
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-- Search [GitHub](https://github.com/angular/angular) for an open or closed PR
+- Search [GitHub](https://github.com/ng-classic/angular) for an open or closed PR
   that relates to your submission. You don't want to duplicate effort.
-- [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the angular/angular repo.
+- [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the ng-classic/angular Classicrepo.
 - In your forked repository, make your changes in a new git branch:
 
   ```shell
@@ -94,7 +94,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 - If we suggest changes then:
 
   - Make the required updates.
-  - Re-run the Angular DevTools test and lint suites to ensure tests are still passing and you're following the coding style.
+  - Re-run the Angular ClassicDevTools test and lint suites to ensure tests are still passing and you're following the coding style.
   - Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
 
     ```shell
@@ -144,7 +144,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 We have very precise rules over how our git commit messages can be formatted. This leads to **more
 readable messages** that are easy to follow when looking through the **project history**. But also,
-we use the git commit messages to **generate the Angular change log**.
+we use the git commit messages to **generate the Angular Classicchange log**.
 
 ### Commit Message Format
 
@@ -166,7 +166,7 @@ to read on GitHub as well as in various git tools.
 
 Footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
 
-Samples: (even more [samples](https://github.com/angular/angular/commits/main/devtools))
+Samples: (even more [samples](https://github.com/ng-classic/angular/commits/main/devtools))
 
 ```
 docs(changelog): update change log to beta.5
@@ -224,6 +224,6 @@ reference GitHub issues that this commit **Closes**.
 
 A detailed explanation can be found in this [document][commit-message-format].
 
-[github]: https://github.com/angular/angular
-[gitter]: https://gitter.im/angular/angular
+[github]: https://github.com/ng-classic/angular
+[gitter]: https://gitter.im/ng-classic/angular
 [stackoverflow]: http://stackoverflow.com/questions/tagged/angular-devtools

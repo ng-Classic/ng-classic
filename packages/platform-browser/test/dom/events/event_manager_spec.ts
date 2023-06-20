@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {NgZone} from '@angular/core/src/zone/ng_zone';
-import {DomEventsPlugin} from '@angular/platform-browser/src/dom/events/dom_events';
-import {EventManager, EventManagerPlugin} from '@angular/platform-browser/src/dom/events/event_manager';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {NgZone} from '@angular-classic/core/src/zone/ng_zone';
+import {DomEventsPlugin} from '@angular-classic/platform-browser/src/dom/events/dom_events';
+import {EventManager, EventManagerPlugin} from '@angular-classic/platform-browser/src/dom/events/event_manager';
 
 import {createMouseEvent, el} from '../../../testing/src/browser_util';
 
@@ -286,7 +286,7 @@ describe('EventManager', () => {
     remover2 && remover2();
     getDOM().dispatchEvent(element, dispatchedEvent);
     // handler1 and handler2 are added in different zone
-    // one is angular zone, the other is not
+    // one is Angular Classiczone, the other is not
     // should still be able to remove them correctly
     expect(receivedEvents).toEqual([]);
   });
@@ -301,7 +301,7 @@ describe('EventManager', () => {
 
     doc.body.appendChild(element);
 
-    // Register the event listener in the Angular zone. If the handler would be
+    // Register the event listener in the Angular Classiczone. If the handler would be
     // patched then, the Zone should propagate into the listener callback.
     zone.run(() => {
       manager.addEventListener(element, 'unpatchedEventManagerTest', () => {

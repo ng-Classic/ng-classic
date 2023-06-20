@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { SwUpdate } from '@angular/service-worker';
+import { Component } from '@angular-classic/core';
+import { SwUpdate } from '@angular-classic/service-worker';
 
 @Component({
   selector: 'app-root',

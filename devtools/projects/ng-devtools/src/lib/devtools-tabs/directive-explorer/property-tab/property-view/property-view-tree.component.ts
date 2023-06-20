@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FlatTreeControl} from '@angular/cdk/tree';
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {FlatTreeControl} from '@angular-classic/cdk/tree';
+import {Component, EventEmitter, Input, Output} from '@angular-classic/core';
 
 import {FlatNode} from '../../property-resolver/element-property-resolver';
 import {PropertyDataSource} from '../../property-resolver/property-data-source';

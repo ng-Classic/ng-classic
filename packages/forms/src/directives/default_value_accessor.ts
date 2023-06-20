@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {Directive, ElementRef, forwardRef, Inject, InjectionToken, Optional, Renderer2} from '@angular/core';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Directive, ElementRef, forwardRef, Inject, InjectionToken, Optional, Renderer2} from '@angular-classic/core';
 
 import {BaseControlValueAccessor, ControlValueAccessor, NG_VALUE_ACCESSOR} from './control_value_accessor';
 
@@ -73,7 +73,7 @@ export const COMPOSITION_BUFFER_MODE = new InjectionToken<boolean>('CompositionE
   selector:
       'input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]',
   // TODO: vsavkin replace the above selector with the one below it once
-  // https://github.com/angular/angular/issues/3011 is implemented
+  // https://github.com/ng-classic/angular/issues/3011 is implemented
   // selector: '[ngModel],[formControl],[formControlName]',
   host: {
     '(input)': '$any(this)._handleInput($event.target.value)',

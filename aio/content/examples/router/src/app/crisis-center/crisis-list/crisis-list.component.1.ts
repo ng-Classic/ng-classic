@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit } from '@angular-classic/core';
+import { ActivatedRoute, ParamMap } from '@angular-classic/router';
 
 import { CrisisService } from '../crisis.service';
 import { Crisis } from '../crisis';

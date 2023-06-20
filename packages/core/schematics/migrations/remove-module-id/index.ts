@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Rule, SchematicsException, Tree} from '@angular-devkit/schematics';
+import {Rule, SchematicsException, Tree} from '@angular-classic-devkit/schematics';
 import {relative} from 'path';
 import ts from 'typescript';
 

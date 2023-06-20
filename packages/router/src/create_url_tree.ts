@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵRuntimeError as RuntimeError} from '@angular/core';
+import {ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from './errors';
 import {ActivatedRouteSnapshot} from './router_state';
@@ -354,7 +354,7 @@ function updateSegmentGroupChildren(
     //
     // Because empty paths do not appear in the URL segments and the fact that the segments used in
     // the output `UrlTree` are squashed to eliminate these empty paths where possible
-    // https://github.com/angular/angular/blob/13f10de40e25c6900ca55bd83b36bd533dacfa9e/packages/router/src/url_tree.ts#L755
+    // https://github.com/ng-classic/angular/blob/13f10de40e25c6900ca55bd83b36bd533dacfa9e/packages/router/src/url_tree.ts#L755
     // it can be hard to determine what is the right thing to do when applying commands to a
     // `UrlSegmentGroup` that is created from an "unsquashed"/expanded `ActivatedRoute` tree.
     // This code effectively "squashes" empty path primary routes when they have no siblings on

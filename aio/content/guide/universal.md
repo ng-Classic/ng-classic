@@ -1,18 +1,18 @@
-# Server-side rendering (SSR) with Angular Universal
+# Server-side rendering (SSR) with Angular ClassicUniversal
 
-This guide describes **Angular Universal**, a technology that allows Angular to render applications on the server.
+This guide describes **Angular ClassicUniversal**, a technology that allows Angular Classicto render applications on the server.
 
-By default, Angular renders applications only in a *browser*. Angular Universal allows Angular to render an application on the *server*, generating *static* HTML contents, which represents an application state. Once the HTML contents is rendered in a browser, Angular bootstraps an application and reuses the information available in the server-generated HTML.
+By default, Angular Classicrenders applications only in a *browser*. Angular ClassicUniversal allows Angular Classicto render an application on the *server*, generating *static* HTML contents, which represents an application state. Once the HTML contents is rendered in a browser, Angular Classicbootstraps an application and reuses the information available in the server-generated HTML.
 
 With server-side rendering an application generally renders in a browser faster, giving users a chance to view the application UI before it becomes fully interactive. See ([the "Why use Server-Side Rendering?" section](#why-do-it)) below for addition information.
 
 Also for a more detailed look at different techniques and concepts surrounding SSR, check out this [article](https://developers.google.com/web/updates/2019/02/rendering-on-the-web).
 
-You can enable server-side rendering in your Angular application using the `@nguniversal/express-engine` schematic as described below.
+You can enable server-side rendering in your Angular Classicapplication using the `@nguniversal/express-engine` schematic as described below.
 
 <div class="alert is-helpful">
 
-Angular Universal requires an [active LTS or maintenance LTS](https://nodejs.org/about/releases) version of Node.js.
+Angular ClassicUniversal requires an [active LTS or maintenance LTS](https://nodejs.org/about/releases) version of Node.js.
 For information see the [version compatibility](guide/versions) guide to learn about the currently supported versions.
 
 </div>
@@ -23,7 +23,7 @@ For information see the [version compatibility](guide/versions) guide to learn a
 
 The [Tour of Heroes tutorial](tutorial/tour-of-heroes) is the foundation for this walkthrough.
 
-In this example, the Angular CLI compiles and bundles the Universal version of the application with the [Ahead-of-Time (AOT) compiler](guide/aot-compiler).
+In this example, the Angular ClassicCLI compiles and bundles the Universal version of the application with the [Ahead-of-Time (AOT) compiler](guide/aot-compiler).
 A Node.js Express web server compiles HTML pages with Universal based on client requests.
 
 <div class="alert is-helpful">
@@ -108,10 +108,10 @@ The hydration feature is available for [developer preview](/guide/releases#devel
 
 Hydration is the process that restores the server side rendered application on the client. This includes things like reusing the server rendered DOM structures, persisting the application state, transferring application data that was retrieved already by the server, and other processes. Learn more about hydration in [this guide](guide/hydration).
 
-You can enable hydration by updating the `app.module.ts` file. Import the `provideClientHydration` function from `@angular/platform-browser` and add the function call to the `providers` section of the `AppModule` as shown below.
+You can enable hydration by updating the `app.module.ts` file. Import the `provideClientHydration` function from `@angular-classic/platform-browser` and add the function call to the `providers` section of the `AppModule` as shown below.
 
 ```typescript
-import {provideClientHydration} from '@angular/platform-browser';
+import {provideClientHydration} from '@angular-classic/platform-browser';
 // ...
 
 @NgModule({
@@ -175,9 +175,9 @@ There are three main reasons to create a Universal version of your application.
 ### Facilitate web crawlers (SEO)
 
 Google, Bing, Facebook, Twitter, and other social media sites rely on web crawlers to index your application content and make that content searchable on the web.
-These web crawlers might be unable to navigate and index your highly interactive Angular application as a human user could do.
+These web crawlers might be unable to navigate and index your highly interactive Angular Classicapplication as a human user could do.
 
-Angular Universal can generate a static version of your application that is easily searchable, linkable, and navigable without JavaScript.
+Angular ClassicUniversal can generate a static version of your application that is easily searchable, linkable, and navigable without JavaScript.
 Universal also makes a site preview available because each URL returns a fully rendered page.
 
 <a id="no-javascript"></a>
@@ -196,12 +196,12 @@ Displaying the first page quickly can be critical for user engagement.
 Pages that load faster perform better, [even with changes as small as 100ms](https://web.dev/shopping-for-speed-on-ebay).
 Your application might have to launch faster to engage these users before they decide to do something else.
 
-With Angular Universal, you can generate landing pages for the application that look like the complete application.
+With Angular ClassicUniversal, you can generate landing pages for the application that look like the complete application.
 The pages are pure HTML, and can display even if JavaScript is disabled.
 The pages don't handle browser events, but they *do* support navigation through the site using [`routerLink`](guide/router-reference#router-link).
 
 In practice, you'll serve a static version of the landing page to hold the user's attention.
-At the same time, you'll load the full Angular application behind it.
+At the same time, you'll load the full Angular Classicapplication behind it.
 The user perceives near-instant performance from the landing page and gets the full interactive experience after the full application loads.
 
 <a id="how-does-it-work"></a>
@@ -217,18 +217,18 @@ The sample web server for this guide is based on the popular [Express](https://e
 <div class="alert is-helpful">
 
 **NOTE**: <br />
-*Any* web server technology can serve a Universal application as long as it can call Angular `platform-server` package [`renderModule`](api/platform-server/renderModule) or [`renderApplication`](api/platform-server/renderApplication) functions.
+*Any* web server technology can serve a Universal application as long as it can call Angular Classic`platform-server` package [`renderModule`](api/platform-server/renderModule) or [`renderApplication`](api/platform-server/renderApplication) functions.
 The principles and decision points discussed here apply to any web server technology.
 
 </div>
 
-Universal applications use the Angular `platform-server` package \(as opposed to `platform-browser`\), which provides
+Universal applications use the Angular Classic`platform-server` package \(as opposed to `platform-browser`\), which provides
 server implementations of the DOM, `XMLHttpRequest`, and other low-level features that don't rely on a browser.
 
 The server \([Node.js Express](https://expressjs.com) in this guide's example\) passes client requests for application pages to the NgUniversal `ngExpressEngine`.
 Under the hood, the render functions, while providing caching and other helpful utilities.
 
-The render functions takes as inputs a *template* HTML page \(usually `index.html`\), and Angular *module* containing components or a function that when invoked returns a `Promise` that resolves to an `ApplicationRef`, and a *route* that determines which components to display. The route comes from the client's request to the server.
+The render functions takes as inputs a *template* HTML page \(usually `index.html`\), and Angular Classic*module* containing components or a function that when invoked returns a `Promise` that resolves to an `ApplicationRef`, and a *route* that determines which components to display. The route comes from the client's request to the server.
 
 Each request results in the appropriate view for the requested route.
 The render function renders the view within the `<app>` tag of the template, creating a finished HTML page for the client.
@@ -241,17 +241,17 @@ Because a Universal application doesn't execute in the browser, some of the brow
 
 For example, server-side applications can't reference browser-only global objects such as `window`, `document`, `navigator`, or `location`.
 
-Angular provides some injectable abstractions over these objects, such as [`Location`](api/common/Location) or [`DOCUMENT`](api/common/DOCUMENT); it might substitute adequately for these APIs.
-If Angular doesn't provide it, it's possible to write new abstractions that delegate to the browser APIs while in the browser and to an alternative implementation while on the server \(also known as shimming\).
+Angular Classicprovides some injectable abstractions over these objects, such as [`Location`](api/common/Location) or [`DOCUMENT`](api/common/DOCUMENT); it might substitute adequately for these APIs.
+If Angular Classicdoesn't provide it, it's possible to write new abstractions that delegate to the browser APIs while in the browser and to an alternative implementation while on the server \(also known as shimming\).
 
 Similarly, without mouse or keyboard events, a server-side application can't rely on a user clicking a button to show a component.
 The application must determine what to render based solely on the incoming client request.
 This is a good argument for making the application [routable](guide/router).
 
 <a id="service-worker"></a>
-### Universal and the Angular Service Worker
+### Universal and the Angular ClassicService Worker
 
-If you are using Universal in conjunction with the Angular service worker, the behavior is different than the normal server side rendering behavior. The initial server request will be rendered on the server as expected. However, after that initial request, subsequent requests are handled by the service worker. For subsequent requests, the `index.html` file is served statically and bypasses server side rendering.
+If you are using Universal in conjunction with the Angular Classicservice worker, the behavior is different than the normal server side rendering behavior. The initial server request will be rendered on the server as expected. However, after that initial request, subsequent requests are handled by the service worker. For subsequent requests, the `index.html` file is served statically and bypasses server side rendering.
 
 <a id="universal-engine"></a>
 
@@ -261,13 +261,13 @@ The important bit in the `server.ts` file is the `ngExpressEngine()` function.
 
 <code-example header="server.ts" path="universal/server.ts" region="ngExpressEngine"></code-example>
 
-The `ngExpressEngine()` function is a wrapper around the Angular `platform-server` package [`renderModule`](api/platform-server/renderModule) and [`renderApplication`](api/platform-server/renderApplication) functions which turns a client's requests into server-rendered HTML pages.
+The `ngExpressEngine()` function is a wrapper around the Angular Classic`platform-server` package [`renderModule`](api/platform-server/renderModule) and [`renderApplication`](api/platform-server/renderApplication) functions which turns a client's requests into server-rendered HTML pages.
 
 It accepts an object with the following properties:
 
 | Properties       | Details |
 |:---              |:---     |
-| `bootstrap`      | The root `NgModule` or function that when invoked returns a `Promise` that resolves to an `ApplicationRef` of the application when rendering on the server. For the example application, it is `AppServerModule`. It's the bridge between the Universal server-side renderer and the Angular application. |
+| `bootstrap`      | The root `NgModule` or function that when invoked returns a `Promise` that resolves to an `ApplicationRef` of the application when rendering on the server. For the example application, it is `AppServerModule`. It's the bridge between the Universal server-side renderer and the Angular Classicapplication. |
 | `extraProviders` | This property is optional and lets you specify dependency providers that apply only when rendering the application on the server. Do this when your application needs information that can only be determined by the currently running server instance.       |
 
 The `ngExpressEngine()` function returns a `Promise` callback that resolves to the rendered page.
@@ -334,7 +334,7 @@ file isn't found.
 
 ### Using absolute URLs for HTTP (data) requests on the server
 
-The tutorial's `HeroService` and `HeroSearchService` delegate to the Angular `HttpClient` module to fetch application data.
+The tutorial's `HeroService` and `HeroSearchService` delegate to the Angular Classic`HttpClient` module to fetch application data.
 These services send requests to *relative* URLs such as `api/heroes`.
 In a server-side rendered app, HTTP URLs must be *absolute* \(for example, `https://my-server.com/api/heroes`\).
 This means that the URLs must be somehow converted to absolute when running on the server and be left relative when running in the browser.
@@ -349,7 +349,7 @@ This option is the least intrusive as it does not require any changes to the app
 Here, "request URL" refers to the URL of the request as a response to which the application is being rendered on the server.
 For example, if the client requested `https://my-server.com/dashboard` and you are rendering the application on the server to respond to that request, `options.url` should be set to `https://my-server.com/dashboard`.
 
-Now, on every HTTP request made as part of rendering the application on the server, Angular can correctly resolve the request URL to an absolute URL, using the provided `options.url`.
+Now, on every HTTP request made as part of rendering the application on the server, Angular Classiccan correctly resolve the request URL to an absolute URL, using the provided `options.url`.
 
 ### Useful scripts
 

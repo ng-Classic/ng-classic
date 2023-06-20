@@ -1,4 +1,4 @@
-import {ModuleWithProviders, NgModule} from '@angular/core';
+import {ModuleWithProviders, NgModule} from '@angular-classic/core';
 
 export function provideModule(): ModuleWithProviders<ForwardModule> {
   return {ngModule: ForwardModule};

@@ -1,5 +1,5 @@
 
-import { Injectable, Optional } from '@angular/core';
+import { Injectable, Optional } from '@angular-classic/core';
 
 let nextId = 1;
 

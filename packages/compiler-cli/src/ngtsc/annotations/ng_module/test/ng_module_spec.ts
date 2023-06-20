@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {WrappedNodeExpr} from '@angular/compiler';
-import {R3Reference} from '@angular/compiler/src/compiler';
+import {WrappedNodeExpr} from '@angular-classic/compiler';
+import {R3Reference} from '@angular-classic/compiler/src/compiler';
 import ts from 'typescript';
 
 import {absoluteFrom} from '../../../file_system';
@@ -27,7 +27,7 @@ runInEachFileSystem(() => {
       const _ = absoluteFrom;
       const {program} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: `
           export const Component: any;
           export const NgModule: any;
@@ -37,7 +37,7 @@ runInEachFileSystem(() => {
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component, forwardRef, NgModule} from '@angular/core';
+          import {Component, forwardRef, NgModule} from '@angular-classic/core';
 
           @Component({
             template: '',

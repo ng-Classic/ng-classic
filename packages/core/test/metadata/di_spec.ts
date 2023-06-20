@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, ElementRef, Input, NO_ERRORS_SCHEMA, QueryList, ViewChild, ViewChildren} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Component, Directive, ElementRef, Input, NO_ERRORS_SCHEMA, QueryList, ViewChild, ViewChildren} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 {
   describe('ViewChild', () => {

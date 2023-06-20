@@ -7,7 +7,7 @@
  */
 /* tslint:disable:no-console  */
 import 'zone.js/node';
-import {renderApplication} from '@angular/platform-server';
+import {renderApplication} from '@angular-classic/platform-server';
 import bootstrap from './src/main.server';
 import {join} from 'path';
 import {readFileSync} from 'fs';

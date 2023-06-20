@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpContext} from '@angular/common/http/src/context';
-import {HttpHeaders} from '@angular/common/http/src/headers';
-import {HttpParams} from '@angular/common/http/src/params';
-import {HttpRequest} from '@angular/common/http/src/request';
+import {HttpContext} from '@angular-classic/common/http/src/context';
+import {HttpHeaders} from '@angular-classic/common/http/src/headers';
+import {HttpParams} from '@angular-classic/common/http/src/params';
+import {HttpRequest} from '@angular-classic/common/http/src/request';
 
-const TEST_URL = 'https://angular.io/';
+const TEST_URL = 'https://angular-classic.com/';
 const TEST_STRING = `I'm a body!`;
 
 {

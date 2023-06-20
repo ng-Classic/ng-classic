@@ -1,7 +1,7 @@
 # Optional Internationalization practices
 
 The following optional topics help you manually configure the internationalization settings of your application.
-The optional practices are meant for advanced or custom Angular applications.
+The optional practices are meant for advanced or custom Angular Classicapplications.
 
 ## Prerequisites
 
@@ -9,10 +9,10 @@ To prepare your project for translations, you should have a basic understanding 
 
 *   [Templates][AioGuideGlossaryTemplate]
 *   [Components][AioGuideGlossaryComponent]
-*   [Angular CLI][AioCliMain] [command-line][AioGuideGlossaryCommandLineInterfaceCli] tool for managing the Angular development cycle
+*   [Angular ClassicCLI][AioCliMain] [command-line][AioGuideGlossaryCommandLineInterfaceCli] tool for managing the Angular Classicdevelopment cycle
 *   [Extensible Markup Language (XML)][W3Xml] used for translation files
 
-## Learn about optional Angular internationalization practices
+## Learn about optional Angular Classicinternationalization practices
 
 <div class="card-container">
     <a href="guide/i18n-optional-manual-runtime-locale" class="docs-card" title="Set the runtime locale manually">

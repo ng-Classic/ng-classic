@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: component.js
  ****************************************************************************************************/
-import { Component, Input, NgModule, Output } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Input, NgModule, Output } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -34,7 +34,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: component.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     componentInput: any;
     originalComponentInput: any;
@@ -52,8 +52,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: directive.js
  ****************************************************************************************************/
-import { Directive, Input, NgModule, Output } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, Input, NgModule, Output } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDirective {
 }
 MyDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -85,7 +85,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     directiveInput: any;
     originalDirectiveInput: any;
@@ -103,8 +103,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: input_transform.js
  ****************************************************************************************************/
-import { Directive, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 function toNumber(value) {
     return value ? 1 : 0;
 }
@@ -135,7 +135,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: input_transform.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     functionDeclarationInput: any;
     inlineFunctionInput: any;

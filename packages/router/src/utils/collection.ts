@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵisPromise as isPromise} from '@angular/core';
+import {ɵisPromise as isPromise} from '@angular-classic/core';
 import {from, isObservable, Observable, of} from 'rxjs';
 
 import {Params} from '../shared';

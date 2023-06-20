@@ -18,4 +18,4 @@ Performance traces are enabled via the undocumented `tracePerformance` option in
 
 By default, the trace file will be written with the `fs` package directly. However, ngtsc supports in-memory compilation using a `ts.CompilerHost` for all operations. In the event that tracing is required when using an in-memory filesystem, a `ts:` prefix can be added to the value of `tracePerformance`, which will cause the trace JSON file to be written with the TS host's `writeFile` method instead.
 
-This is not done by default as `@angular/cli` does not allow writing arbitrary JSON files via its host.
+This is not done by default as `@angular-classic/cli` does not allow writing arbitrary JSON files via its host.

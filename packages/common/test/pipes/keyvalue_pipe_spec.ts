@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {KeyValuePipe} from '@angular/common';
-import {JsonPipe} from '@angular/common/public_api';
-import {defaultComparator} from '@angular/common/src/pipes/keyvalue_pipe';
-import {Component, ɵdefaultKeyValueDiffers as defaultKeyValueDiffers} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {KeyValuePipe} from '@angular-classic/common';
+import {JsonPipe} from '@angular-classic/common/public_api';
+import {defaultComparator} from '@angular-classic/common/src/pipes/keyvalue_pipe';
+import {Component, ɵdefaultKeyValueDiffers as defaultKeyValueDiffers} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 describe('KeyValuePipe', () => {
   it('should return null when given null', () => {

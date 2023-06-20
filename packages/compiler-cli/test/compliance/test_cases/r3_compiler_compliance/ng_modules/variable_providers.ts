@@ -1,4 +1,4 @@
-import {InjectionToken, NgModule} from '@angular/core';
+import {InjectionToken, NgModule} from '@angular-classic/core';
 
 const PROVIDERS = [{provide: new InjectionToken('token'), useValue: 1}];
 

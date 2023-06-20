@@ -1,5 +1,5 @@
-# First Angular app lesson 09 - Angular services
-This tutorial lesson demonstrates how to create an Angular service and use dependency injection to include it in your app.
+# First Angular Classicapp lesson 09 - Angular Classicservices
+This tutorial lesson demonstrates how to create an Angular Classicservice and use dependency injection to include it in your app.
 
 **Time required:** expect to spend about 15 minutes to complete this lesson.
 
@@ -12,7 +12,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -24,13 +24,13 @@ If you have any trouble during this lesson, you can review the completed code fo
 
 ## Conceptual preview of services
 
-This tutorial introduces Angular services and dependency injection.
+This tutorial introduces Angular Classicservices and dependency injection.
 
 <!-- markdownLint-disable MD001 -->
 
-#### Angular services
+#### Angular Classicservices
 
-*Angular services* provide a way for you to separate Angular app data and functions that can be used by multiple components in your app.
+*Angular Classicservices* provide a way for you to separate Angular Classicapp data and functions that can be used by multiple components in your app.
 To be used by multiple components, a service must be made *injectable*.
 Services that are injectable and used by a component become dependencies of that component.
 The component depends on those services and can't function without them.
@@ -94,7 +94,7 @@ In a later lesson, you replace the static data with a live data source to get da
 
 In the **Edit** pane of your IDE, in `src/app/home/home.component.ts`:
 
-1.  At the top of `src/app/home/home.component.ts`, add the `inject` to the items imported from `@angular/common`. This will import the `inject` function into the `HomeComponent` class.
+1.  At the top of `src/app/home/home.component.ts`, add the `inject` to the items imported from `@angular-classic/common`. This will import the `inject` function into the `HomeComponent` class.
 
     <code-example header="Update to src/app/home/home.component.ts" path="first-app-lesson-09/src/app/home/home.component.ts" region="import-inject"></code-example>
 
@@ -113,7 +113,7 @@ In the **Edit** pane of your IDE, in `src/app/home/home.component.ts`:
 
 ## Lesson review
 
-In this lesson, you added an Angular service to your app and injected it into the `HomeComponent` class.
+In this lesson, you added an Angular Classicservice to your app and injected it into the `HomeComponent` class.
 This compartmentalizes how your app gets its data.
 For now, the new service gets its data from a static array of data.
 In a later lesson, you refactor the service to get its data from a from an API endpoint.

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InjectionToken} from '@angular/core';
+import {InjectionToken} from '@angular-classic/core';
 
 /**
  * A DI Token representing the main rendering context.

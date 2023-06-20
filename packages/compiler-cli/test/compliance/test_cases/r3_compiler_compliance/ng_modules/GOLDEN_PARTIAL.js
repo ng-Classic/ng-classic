@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: basic_linked.js
  ****************************************************************************************************/
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import * as i0 from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class BasicModule {
 }
 BasicModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: BasicModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
@@ -16,7 +16,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: basic_linked.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class BasicModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<BasicModule, never>;
     static ɵmod: i0.ɵɵNgModuleDeclaration<BasicModule, never, never, never>;
@@ -26,8 +26,8 @@ export declare class BasicModule {
 /****************************************************************************************************
  * PARTIAL FILE: basic_full.js
  ****************************************************************************************************/
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import * as i0 from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class BasicModule {
 }
 BasicModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: BasicModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
@@ -41,7 +41,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: basic_full.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class BasicModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<BasicModule, never>;
     static ɵmod: i0.ɵɵNgModuleDeclaration<BasicModule, never, never, never>;
@@ -51,8 +51,8 @@ export declare class BasicModule {
 /****************************************************************************************************
  * PARTIAL FILE: declarations.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class FooComponent {
     constructor() {
         this.name = 'World';
@@ -94,8 +94,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: declarations.d.ts
  ****************************************************************************************************/
-import { PipeTransform } from '@angular/core';
-import * as i0 from "@angular/core";
+import { PipeTransform } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class FooComponent {
     name: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<FooComponent, never>;
@@ -119,8 +119,8 @@ export declare class FooModule {
 /****************************************************************************************************
  * PARTIAL FILE: declarations_jit_mode.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class FooComponent {
     constructor() {
         this.name = 'World';
@@ -162,8 +162,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: declarations_jit_mode.d.ts
  ****************************************************************************************************/
-import { PipeTransform } from '@angular/core';
-import * as i0 from "@angular/core";
+import { PipeTransform } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class FooComponent {
     name: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<FooComponent, never>;
@@ -187,8 +187,8 @@ export declare class FooModule {
 /****************************************************************************************************
  * PARTIAL FILE: providers.js
  ****************************************************************************************************/
-import { Injectable, InjectionToken, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Injectable, InjectionToken, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class Thing {
 }
 Thing.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: Thing, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
@@ -240,7 +240,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: providers.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class Thing {
     static ɵfac: i0.ɵɵFactoryDeclaration<Thing, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<Thing>;
@@ -264,8 +264,8 @@ export declare class FooModule {
 /****************************************************************************************************
  * PARTIAL FILE: imports_exports.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class A1Component {
 }
 A1Component.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: A1Component, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -329,7 +329,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: imports_exports.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class A1Component {
     static ɵfac: i0.ɵɵFactoryDeclaration<A1Component, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<A1Component, "a1", never, {}, {}, never, never, false, never>;
@@ -365,8 +365,8 @@ export declare class AppModule {
 /****************************************************************************************************
  * PARTIAL FILE: imports_exports_jit_mode.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class A1Component {
 }
 A1Component.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: A1Component, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -430,7 +430,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: imports_exports_jit_mode.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class A1Component {
     static ɵfac: i0.ɵɵFactoryDeclaration<A1Component, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<A1Component, "a1", never, {}, {}, never, never, false, never>;
@@ -472,7 +472,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular-classic/core';
 export let NoAotModule = class NoAotModule {
 };
 NoAotModule = __decorate([
@@ -488,8 +488,8 @@ export declare class NoAotModule {
 /****************************************************************************************************
  * PARTIAL FILE: inheritance.js
  ****************************************************************************************************/
-import { Injectable, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Injectable, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class Service {
 }
 Service.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: Service, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
@@ -522,7 +522,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: inheritance.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class Service {
     static ɵfac: i0.ɵɵFactoryDeclaration<Service, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<Service>;
@@ -543,8 +543,8 @@ export declare class BasicModule extends BaseModule {
 /****************************************************************************************************
  * PARTIAL FILE: forward_refs.js
  ****************************************************************************************************/
-import { NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export function provideModule() {
     return { ngModule: ForwardModule };
 }
@@ -569,8 +569,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: forward_refs.d.ts
  ****************************************************************************************************/
-import { ModuleWithProviders } from '@angular/core';
-import * as i0 from "@angular/core";
+import { ModuleWithProviders } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare function provideModule(): ModuleWithProviders<ForwardModule>;
 export declare class TestModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<TestModule, never>;
@@ -586,8 +586,8 @@ export declare class ForwardModule {
 /****************************************************************************************************
  * PARTIAL FILE: empty_fields.js
  ****************************************************************************************************/
-import { NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class FooModule {
 }
 FooModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: FooModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
@@ -605,7 +605,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: empty_fields.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class FooModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<FooModule, never>;
     static ɵmod: i0.ɵɵNgModuleDeclaration<FooModule, never, never, never>;
@@ -615,8 +615,8 @@ export declare class FooModule {
 /****************************************************************************************************
  * PARTIAL FILE: variable_providers.js
  ****************************************************************************************************/
-import { InjectionToken, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { InjectionToken, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 const PROVIDERS = [{ provide: new InjectionToken('token'), useValue: 1 }];
 export class FooModule {
 }
@@ -631,7 +631,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: variable_providers.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class FooModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<FooModule, never>;
     static ɵmod: i0.ɵɵNgModuleDeclaration<FooModule, never, never, never>;

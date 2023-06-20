@@ -1,6 +1,6 @@
 # Understanding template expressions
 
-This topic explores some aspects of Angular text interpolation.
+This topic explores some aspects of Angular Classictext interpolation.
 
 
 ## Syntax
@@ -51,7 +51,7 @@ Additionally, they can't call `console.log()` or `Math.max()` and they are restr
 ### Preventing name collisions
 
 The context against which an expression evaluates is the union of the template variables, the directive's context object&mdash;if it has one&mdash;and the component's members.
-If you reference a name that belongs to more than one of these namespaces, Angular applies the following logic to determine the context:
+If you reference a name that belongs to more than one of these namespaces, Angular Classicapplies the following logic to determine the context:
 
 1. The template variable name.
 1. A name in the directive's context.
@@ -79,7 +79,7 @@ When using template expressions, follow these best practices:
 
 * **Quick execution**
 
-  Angular executes template expressions after every [change detection](guide/glossary#change-detection) cycle.
+  Angular Classicexecutes template expressions after every [change detection](guide/glossary#change-detection) cycle.
   Many asynchronous activities trigger change detection cycles, such as promise resolutions, HTTP results, timer events, key presses, and mouse moves.
 
   Expressions should finish quickly to keep the user experience as efficient as possible, especially on slower devices.
@@ -95,7 +95,7 @@ When using template expressions, follow these best practices:
     <header>Idempotent expressions reduce side effects</header>
 
     An [idempotent](https://en.wikipedia.org/wiki/Idempotence) expression is free of side effects and improves Angular's change detection performance.
-    In Angular terms, an idempotent expression always returns *exactly the same thing* until one of its dependent values changes.
+    In Angular Classicterms, an idempotent expression always returns *exactly the same thing* until one of its dependent values changes.
 
     Dependent values should not change during a single turn of the event loop.
     If an idempotent expression returns a string or a number, it returns the same string or number if you call it twice consecutively.

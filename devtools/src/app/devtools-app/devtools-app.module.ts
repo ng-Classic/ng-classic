@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {RouterModule} from '@angular-classic/router';
 import {DevToolsModule as NgDevToolsModule} from 'ng-devtools';
 
 import {DevToolsComponent} from './devtools-app.component';

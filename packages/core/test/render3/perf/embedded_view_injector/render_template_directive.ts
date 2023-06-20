@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, TemplateRef, ViewContainerRef, ɵɵdefineDirective, ɵɵdirectiveInject} from '@angular/core';
-import {injectViewContainerRef} from '@angular/core/src/linker/view_container_ref';
+import {Injector, TemplateRef, ViewContainerRef, ɵɵdefineDirective, ɵɵdirectiveInject} from '@angular-classic/core';
+import {injectViewContainerRef} from '@angular-classic/core/src/linker/view_container_ref';
 
 
 class ViewContainerRefToken {

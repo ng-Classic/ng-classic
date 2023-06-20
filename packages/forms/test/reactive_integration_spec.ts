@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {Component, Directive, ElementRef, forwardRef, Input, NgModule, OnDestroy, Type, ViewChild} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {AbstractControl, AsyncValidator, AsyncValidatorFn, COMPOSITION_BUFFER_MODE, ControlValueAccessor, DefaultValueAccessor, FormArray, FormBuilder, FormControl, FormControlDirective, FormControlName, FormGroup, FormGroupDirective, FormsModule, MaxValidator, MinLengthValidator, MinValidator, NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, ReactiveFormsModule, Validator, Validators} from '@angular/forms';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {dispatchEvent, sortedClassList} from '@angular/platform-browser/testing/src/browser_util';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Component, Directive, ElementRef, forwardRef, Input, NgModule, OnDestroy, Type, ViewChild} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {AbstractControl, AsyncValidator, AsyncValidatorFn, COMPOSITION_BUFFER_MODE, ControlValueAccessor, DefaultValueAccessor, FormArray, FormBuilder, FormControl, FormControlDirective, FormControlName, FormGroup, FormGroupDirective, FormsModule, MaxValidator, MinLengthValidator, MinValidator, NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, ReactiveFormsModule, Validator, Validators} from '@angular-classic/forms';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {dispatchEvent, sortedClassList} from '@angular-classic/platform-browser/testing/src/browser_util';
 import {merge, NEVER, of, Subscription, timer} from 'rxjs';
 import {map, tap} from 'rxjs/operators';
 
@@ -5248,7 +5248,7 @@ const ValueAccessorB = createControlValueAccessor('[cva-b]');
         });
       });
 
-      // See https://github.com/angular/angular/issues/40521.
+      // See https://github.com/ng-classic/angular/issues/40521.
       it('should properly clean up when FormControlName has no CVA', () => {
         @Component({
           selector: 'no-cva-compo',
@@ -5267,7 +5267,7 @@ const ValueAccessorB = createControlValueAccessor('[cva-b]');
           fixture.detectChanges();
         })
             .toThrowError(
-                `NG01203: No value accessor for form control name: 'control'. Find more at https://angular.io/errors/NG01203`);
+                `NG01203: No value accessor for form control name: 'control'. Find more at https://angular-classic.com/errors/NG01203`);
 
         // Making sure that cleanup between tests doesn't cause any issues
         // for not fully initialized controls.

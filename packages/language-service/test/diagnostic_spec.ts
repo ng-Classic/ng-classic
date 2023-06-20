@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ErrorCode, ngErrorCode} from '@angular/compiler-cli/src/ngtsc/diagnostics';
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {ErrorCode, ngErrorCode} from '@angular-classic/compiler-cli/src/ngtsc/diagnostics';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 import ts from 'typescript';
 
 import {createModuleAndProjectWithDeclarations, LanguageServiceTestEnv} from '../testing';
@@ -23,7 +23,7 @@ describe('getSemanticDiagnostics', () => {
   it('should not produce error for a minimal component definition', () => {
     const files = {
       'app.ts': `
-      import {Component, NgModule} from '@angular/core';
+      import {Component, NgModule} from '@angular-classic/core';
 
       @Component({
         template: ''
@@ -40,7 +40,7 @@ describe('getSemanticDiagnostics', () => {
   it('should report member does not exist', () => {
     const files = {
       'app.ts': `
-      import {Component, NgModule} from '@angular/core';
+      import {Component, NgModule} from '@angular-classic/core';
 
       @Component({
         template: '{{nope}}'
@@ -61,7 +61,7 @@ describe('getSemanticDiagnostics', () => {
   it('should process external template', () => {
     const files = {
       'app.ts': `
-      import {Component, NgModule} from '@angular/core';
+      import {Component, NgModule} from '@angular-classic/core';
 
       @Component({
         templateUrl: './app.html'
@@ -79,7 +79,7 @@ describe('getSemanticDiagnostics', () => {
   it('should not report external template diagnostics on the TS file', () => {
     const files = {
       'app.ts': `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           templateUrl: './app.html'
@@ -97,7 +97,7 @@ describe('getSemanticDiagnostics', () => {
   it('should report diagnostics in inline templates', () => {
     const files = {
       'app.ts': `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           template: '{{nope}}',
@@ -117,7 +117,7 @@ describe('getSemanticDiagnostics', () => {
   it('should report member does not exist in external template', () => {
     const files = {
       'app.ts': `
-      import {Component, NgModule} from '@angular/core';
+      import {Component, NgModule} from '@angular-classic/core';
 
       @Component({
         templateUrl: './app.html'
@@ -139,7 +139,7 @@ describe('getSemanticDiagnostics', () => {
   it('should report a parse error in external template', () => {
     const files = {
       'app.ts': `
-      import {Component, NgModule} from '@angular/core';
+      import {Component, NgModule} from '@angular-classic/core';
 
       @Component({
         templateUrl: './app.html'
@@ -166,7 +166,7 @@ describe('getSemanticDiagnostics', () => {
   it('reports html parse errors along with typecheck errors as diagnostics', () => {
     const files = {
       'app.ts': `
-      import {Component, NgModule} from '@angular/core';
+      import {Component, NgModule} from '@angular-classic/core';
 
       @Component({
         templateUrl: './app.html'
@@ -194,7 +194,7 @@ describe('getSemanticDiagnostics', () => {
   it('should report parse errors of components defined in the same ts file', () => {
     const files = {
       'app.ts': `
-      import {Component, NgModule} from '@angular/core';
+      import {Component, NgModule} from '@angular-classic/core';
 
       @Component({ templateUrl: './app1.html' })
       export class AppComponent1 { nope = false; }
@@ -205,8 +205,8 @@ describe('getSemanticDiagnostics', () => {
       'app1.html': '{{nope = false}}',
       'app2.html': '{{nope = true}}',
       'app-module.ts': `
-        import {NgModule} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {NgModule} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
         import {AppComponent, AppComponent2} from './app';
 
         @NgModule({
@@ -234,7 +234,7 @@ describe('getSemanticDiagnostics', () => {
   it('reports a diagnostic for a component without a template', () => {
     const files = {
       'app.ts': `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       @Component({})
       export class MyComponent {}
     `
@@ -250,8 +250,8 @@ describe('getSemanticDiagnostics', () => {
   it('reports a warning when the project configuration prevents good type inference', () => {
     const files = {
       'app.ts': `
-        import {Component, NgModule} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {Component, NgModule} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Component({
           template: '<div *ngFor="let user of users">{{user}}</div>',
@@ -279,8 +279,8 @@ describe('getSemanticDiagnostics', () => {
   it('should process a component that would otherwise require an inline TCB', () => {
     const files = {
       'app.ts': `
-        import {Component, NgModule} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {Component, NgModule} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         interface PrivateInterface {}
 
@@ -302,14 +302,14 @@ describe('getSemanticDiagnostics', () => {
       // from its public API. This means that `MyPipe` cannot be imported using the package name
       // as module specifier.
       'node_modules/pipe/pipe.d.ts': `
-        import {ɵɵDirectiveDeclaration} from '@angular/core';
+        import {ɵɵDirectiveDeclaration} from '@angular-classic/core';
 
         export declare class MyPipe {
           static ɵpipe: ɵɵPipeDeclaration<MyPipe, "myPipe", false>;
         }
       `,
       'node_modules/pipe/index.d.ts': `
-        import {ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵNgModuleDeclaration} from '@angular-classic/core';
         import {MyPipe} from './pipe';
 
         export declare class MyPipeModule {
@@ -317,7 +317,7 @@ describe('getSemanticDiagnostics', () => {
         }
       `,
       'app.ts': `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         import {MyPipeModule} from 'pipe';
 
         @Component({
@@ -341,7 +341,7 @@ describe('getSemanticDiagnostics', () => {
   it('logs perf tracing', () => {
     const files = {
       'app.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         @Component({ template: '' })
         export class MyComponent {}
       `
@@ -363,7 +363,7 @@ describe('getSemanticDiagnostics', () => {
   it('does not produce diagnostics when pre-compiled file is found', () => {
     const files = {
       'app.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '',
@@ -385,7 +385,7 @@ describe('getSemanticDiagnostics', () => {
   it('produces missing resource diagnostic for missing css', () => {
     const files = {
       'app.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '',
@@ -407,7 +407,7 @@ describe('getSemanticDiagnostics', () => {
   it('should produce invalid banana in box warning', () => {
     const files = {
       'app.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         @Component({
           selector: 'test',
           template: '<div ([notARealThing])="bar"></div>',
@@ -429,7 +429,7 @@ describe('getSemanticDiagnostics', () => {
   it('should not produce invalid banana in box warning without `strictTemplates`', () => {
     const files = {
       'app.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         @Component({
           selector: 'test',
           template: '<div ([notARealThing])="bar"></div>',
@@ -450,7 +450,7 @@ describe('getSemanticDiagnostics', () => {
   it('should produce invalid banana in box warning in external html file', () => {
     const files = {
       'app.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         @Component({
           selector: 'test',
           templateUrl: './app.html',
@@ -474,7 +474,7 @@ describe('getSemanticDiagnostics', () => {
      () => {
        const files = {
          'app.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         @Component({
           selector: 'test',
           templateUrl: './app.html',
@@ -501,7 +501,7 @@ describe('getSemanticDiagnostics', () => {
       export { PostComponent, PostModule } from './lib/post.component';
     `,
       'dist/post/lib/post.component.d.ts': `
-      import * as i0 from "@angular/core";
+      import * as i0 from "@angular-classic/core";
       export declare class HostBindDirective {
           static ɵdir: i0.ɵɵDirectiveDeclaration<HostBindDirective, never, never, {}, {}, never, never, true, never>;
       }
@@ -514,7 +514,7 @@ describe('getSemanticDiagnostics', () => {
       }
       `,
       'test.ts': `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {PostModule} from 'post';
 
       @Component({

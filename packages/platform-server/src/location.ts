@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, LocationChangeEvent, LocationChangeListener, PlatformLocation, ɵgetDOM as getDOM} from '@angular/common';
-import {Inject, Injectable, Optional} from '@angular/core';
+import {DOCUMENT, LocationChangeEvent, LocationChangeListener, PlatformLocation, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Inject, Injectable, Optional} from '@angular-classic/core';
 import {Subject} from 'rxjs';
 import * as url from 'url';
 

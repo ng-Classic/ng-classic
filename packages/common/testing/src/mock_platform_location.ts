@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {LocationChangeEvent, LocationChangeListener, PlatformLocation} from '@angular/common';
-import {Inject, Injectable, InjectionToken, Optional} from '@angular/core';
+import {LocationChangeEvent, LocationChangeListener, PlatformLocation} from '@angular-classic/common';
+import {Inject, Injectable, InjectionToken, Optional} from '@angular-classic/core';
 import {Subject} from 'rxjs';
 
 /**

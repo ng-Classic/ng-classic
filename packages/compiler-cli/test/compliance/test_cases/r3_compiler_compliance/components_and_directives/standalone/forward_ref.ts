@@ -1,4 +1,4 @@
-import {Component, forwardRef} from '@angular/core';
+import {Component, forwardRef} from '@angular-classic/core';
 
 @Component({
   selector: 'test',

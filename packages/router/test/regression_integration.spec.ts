@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, HashLocationStrategy, Location, LocationStrategy} from '@angular/common';
-import {provideLocationMocks, SpyLocation} from '@angular/common/testing';
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Injectable, NgModule, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {ChildrenOutletContexts, DefaultUrlSerializer, Router, RouterModule, RouterOutlet, UrlSerializer, UrlTree} from '@angular/router';
+import {CommonModule, HashLocationStrategy, Location, LocationStrategy} from '@angular-classic/common';
+import {provideLocationMocks, SpyLocation} from '@angular-classic/common/testing';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Injectable, NgModule, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {ChildrenOutletContexts, DefaultUrlSerializer, Router, RouterModule, RouterOutlet, UrlSerializer, UrlTree} from '@angular-classic/router';
 import {of} from 'rxjs';
 import {delay, mapTo} from 'rxjs/operators';
 
@@ -377,8 +377,8 @@ describe('Integration', () => {
 
     // Show the second outlet. Applications shouldn't really have more than one outlet but there can
     // be timing issues between destroying and recreating a second one in some cases:
-    // https://github.com/angular/angular/issues/36711,
-    // https://github.com/angular/angular/issues/32453
+    // https://github.com/ng-classic/angular/issues/36711,
+    // https://github.com/ng-classic/angular/issues/32453
     fixture.componentInstance.outlet2 = true;
     fixture.detectChanges();
     expect(contexts.getContext('primary')?.outlet).not.toBeNull();

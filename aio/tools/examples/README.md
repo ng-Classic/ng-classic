@@ -3,7 +3,7 @@
 Many of the documentation pages contain snippets of code examples.
 These snippets are extracted from real working example applications, which are stored in sub-folders of the [aio/content/examples/](.) folder.
 Each example can be built and run independently.
-Each example also provides tests (mostly e2e and occasionally unit tests), which are run as part of our CircleCI `test_docs_examples*` jobs, to verify that the examples continue to work as expected, as changes are made to the core Angular libraries.
+Each example also provides tests (mostly e2e and occasionally unit tests), which are run as part of our CircleCI `test_docs_examples*` jobs, to verify that the examples continue to work as expected, as changes are made to the core Angular Classiclibraries.
 
 There are a number of common boilerplate files that are needed to configure each example's project.
 These common boilerplate files are maintained centrally to reduce the amount of effort if one of them needs to change.
@@ -14,7 +14,7 @@ As mentioned above, many of the documentation pages contain snippets extracted f
 To achieve that, all those applications need to contain some basic boilerplate, such as a `package.json` file with scripts and dependencies, etc.
 
 There are also different project types, each with its own boilerplate.
-For example, there are projects based on the Angular CLI, projects that use AngularJS, Custom Elements, i18n, server-side rendering, etc.
+For example, there are projects based on the Angular ClassicCLI, projects that use AngularJS, Custom Elements, i18n, server-side rendering, etc.
 (See the [example configuration section](#example-config) below for more info on how to specify the project type.)
 
 To avoid having to maintain the boilerplate in each example, we use the [example-boilerplate-js](./example-boilerplate.js) script to provide a set of files that works across all the examples of a specific type.
@@ -28,13 +28,13 @@ Inside [shared/boilerplate/](./shared/boilerplate) there is a sub-folder with bo
 
 Currently, the following project types are supported:
 
-- `cli`: For example apps based on the Angular CLI. This is the default type and is used in the majority of the examples.
-- `cli-ajs`: For CLI-based examples that also use AngularJS (but not via `@angular/upgrade`).
-- `elements`: For CLI-based examples that also use `@angular/elements`.
+- `cli`: For example apps based on the Angular ClassicCLI. This is the default type and is used in the majority of the examples.
+- `cli-ajs`: For CLI-based examples that also use AngularJS (but not via `@angular-classic/upgrade`).
+- `elements`: For CLI-based examples that also use `@angular-classic/elements`.
 - `getting-started`: For the "Getting started" tutorial. Essentially the same as `cli` but with custom CSS styles.
 - `i18n`: For CLI-based examples that also use internationalization.
 - `schematics`: For CLI-based examples that include a library with schematics.
-- `service-worker`: For CLI-based examples that also use `@angular/service-worker`.
+- `service-worker`: For CLI-based examples that also use `@angular-classic/service-worker`.
 - `systemjs`: For non-CLI legacy examples using SystemJS. This is deprecated and only used in few examples.
 - `testing`: For CLI-based examples that are related to unit testing.
 - `universal`: For CLI-based examples that also use `@nguniversal/express-engine` for SSR.
@@ -148,9 +148,9 @@ The [create-example-playground.mjs](./create-example-playground.mjs) script comb
 yarn example-playground <exampleName> [--local]
 ```
 
-The `--local` flag links in locally-built angular packages as dependencies.
+The `--local` flag links in locally-built Angular Classicpackages as dependencies.
 
 ### Updating example dependencies
 
-With every major Angular release, we update the examples to be on the latest version.
+With every major Angular Classicrelease, we update the examples to be on the latest version.
 See [UPDATING.md](./UPDATING.md) for instructions.

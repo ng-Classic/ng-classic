@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TestBed} from '@angular/core/testing';
+import {TestBed} from '@angular-classic/core/testing';
 import {EMPTY, of} from 'rxjs';
 import {map, withLatestFrom} from 'rxjs/operators';
 

@@ -61,7 +61,7 @@ function createTestSupportFor(basePath: string) {
       path.resolve(basePath, 'node_modules/typescript/lib/lib.es6.d.ts'),
     ]) as string[],
     // clang-format off
-    'paths': Object.freeze({'@angular/*': ['./node_modules/@angular/*']}) as {[index: string]: string[]}
+    'paths': Object.freeze({'@angular-classic/*': ['./node_modules/@angular-classic/*']}) as {[index: string]: string[]}
     // clang-format on
   };
 
@@ -122,7 +122,7 @@ function createTestSupportFor(basePath: string) {
 
 export function setupBazelTo(tmpDirPath: string) {
   const nodeModulesPath = path.join(tmpDirPath, 'node_modules');
-  const angularDirectory = path.join(nodeModulesPath, '@angular');
+  const angularDirectory = path.join(nodeModulesPath, '@angular-classic');
 
   fs.mkdirSync(nodeModulesPath);
   fs.mkdirSync(angularDirectory);

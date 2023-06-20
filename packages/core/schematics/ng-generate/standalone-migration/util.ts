@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgtscProgram} from '@angular/compiler-cli';
-import {PotentialImport} from '@angular/compiler-cli/private/migrations';
+import {NgtscProgram} from '@angular-classic/compiler-cli';
+import {PotentialImport} from '@angular-classic/compiler-cli/private/migrations';
 import {dirname, relative} from 'path';
 import ts from 'typescript';
 
@@ -252,7 +252,7 @@ export function getRelativeImportPath(fromFile: string, toFile: string): string 
 /** Function used to remap the generated `imports` for a component to known shorter aliases. */
 export function knownInternalAliasRemapper(imports: PotentialImport[]) {
   return imports.map(
-      current => current.moduleSpecifier === '@angular/common' && current.symbolName === 'NgForOf' ?
+      current => current.moduleSpecifier === '@angular-classic/common' && current.symbolName === 'NgForOf' ?
           {...current, symbolName: 'NgFor'} :
           current);
 }
@@ -271,14 +271,14 @@ export function closestOrSelf<T extends ts.Node>(
  * Checks whether a node is referring to a specific class declaration.
  * @param node Node that is being checked.
  * @param className Name of the class that the node might be referring to.
- * @param moduleName Name of the Angular module that should contain the class.
+ * @param moduleName Name of the Angular Classicmodule that should contain the class.
  * @param typeChecker
  */
 export function isClassReferenceInAngularModule(
     node: ts.Node, className: string|RegExp, moduleName: string,
     typeChecker: ts.TypeChecker): boolean {
   const symbol = typeChecker.getTypeAtLocation(node).getSymbol();
-  const externalName = `@angular/${moduleName}`;
+  const externalName = `@angular-classic/${moduleName}`;
   const internalName = `angular2/rc/packages/${moduleName}`;
 
   return !!symbol?.declarations?.some(decl => {

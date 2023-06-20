@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {escapeRegExp} from '@angular/compiler/src/util';
+import {escapeRegExp} from '@angular-classic/compiler/src/util';
 import {serializeNodes} from '../../../src/i18n/digest';
 import * as i18n from '../../../src/i18n/i18n_ast';
 import {Xtb} from '../../../src/i18n/serializers/xtb';
@@ -109,7 +109,7 @@ import {Xtb} from '../../../src/i18n/serializers/xtb';
     });
 
     describe('errors', () => {
-      it('should be able to parse non-angular xtb files without error', () => {
+      it('should be able to parse non-Angular Classicxtb files without error', () => {
         const XTB = `<?xml version="1.0" encoding="UTF-8" ?>
 <translationbundle>
   <translation id="angular">is great</translation>

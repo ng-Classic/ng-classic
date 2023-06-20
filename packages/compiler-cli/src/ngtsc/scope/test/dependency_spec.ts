@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {ExternalExpr, ExternalReference} from '@angular/compiler';
+import {ExternalExpr, ExternalReference} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {UnifiedModulesHost} from '../../core/api';

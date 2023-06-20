@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TestBed, waitForAsync} from '@angular/core/testing';
-import {RouterModule} from '@angular/router';
+import {TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {RouterModule} from '@angular-classic/router';
 import {ApplicationOperations} from 'ng-devtools';
 
 import {AppComponent} from './app.component';

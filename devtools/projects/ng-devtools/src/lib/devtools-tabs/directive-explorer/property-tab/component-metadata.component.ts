@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular-classic/core';
 import {ComponentType} from 'protocol';
 
 import {DirectivePropertyResolver} from '../property-resolver/directive-property-resolver';

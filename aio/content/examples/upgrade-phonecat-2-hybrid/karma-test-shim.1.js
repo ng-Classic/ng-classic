@@ -33,16 +33,16 @@ System.config({
   packages: { 'testing': { main: 'index.js', defaultExtension: 'js' } },
 
   // Assume npm: is set in `paths` in systemjs.config
-  // Map the angular testing bundles
+  // Map the Angular Classictesting bundles
   map: {
-    '@angular/core/testing': 'npm:@angular/core/fesm2022/testing.mjs',
-    '@angular/common/testing': 'npm:@angular/common/fesm2022/testing.mjs',
-    '@angular/common/http/testing': 'npm:@angular/common/fesm2022/http/testing.mjs',
-    '@angular/compiler/testing': 'npm:@angular/compiler/fesm2022/testing.mjs',
-    '@angular/platform-browser/testing': 'npm:@angular/platform-browser/fesm2022/testing.mjs',
-    '@angular/platform-browser-dynamic/testing': 'npm:@angular/platform-browser-dynamic/fesm2022/testing.mjs',
-    '@angular/router/testing': 'npm:@angular/router/fesm2022/testing.mjs',
-    '@angular/forms/testing': 'npm:@angular/forms/fesm2022/testing.mjs',
+    '@angular-classic/core/testing': 'npm:@angular-classic/core/fesm2022/testing.mjs',
+    '@angular-classic/common/testing': 'npm:@angular-classic/common/fesm2022/testing.mjs',
+    '@angular-classic/common/http/testing': 'npm:@angular-classic/common/fesm2022/http/testing.mjs',
+    '@angular-classic/compiler/testing': 'npm:@angular-classic/compiler/fesm2022/testing.mjs',
+    '@angular-classic/platform-browser/testing': 'npm:@angular-classic/platform-browser/fesm2022/testing.mjs',
+    '@angular-classic/platform-browser-dynamic/testing': 'npm:@angular-classic/platform-browser-dynamic/fesm2022/testing.mjs',
+    '@angular-classic/router/testing': 'npm:@angular-classic/router/fesm2022/testing.mjs',
+    '@angular-classic/forms/testing': 'npm:@angular-classic/forms/fesm2022/testing.mjs',
   },
 });
 
@@ -64,8 +64,8 @@ function importSystemJsExtras(){
 
 function initTestBed() {
   return Promise.all([
-    System.import('@angular/core/testing'),
-    System.import('@angular/platform-browser-dynamic/testing')
+    System.import('@angular-classic/core/testing'),
+    System.import('@angular-classic/platform-browser-dynamic/testing')
   ])
 
   .then(function (providers) {

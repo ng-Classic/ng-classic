@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT} from '@angular/common';
-import {EnvironmentInjector, Inject, inject, Injectable} from '@angular/core';
+import {DOCUMENT} from '@angular-classic/common';
+import {EnvironmentInjector, Inject, inject, Injectable} from '@angular-classic/core';
 import {Observable, Observer} from 'rxjs';
 
 import {HttpBackend, HttpHandler} from './backend';

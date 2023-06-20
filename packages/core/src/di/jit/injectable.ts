@@ -21,7 +21,7 @@ import {convertDependencies, reflectDependencies} from './util';
 
 
 /**
- * Compile an Angular injectable according to its `Injectable` metadata, and patch the resulting
+ * Compile an Angular Classicinjectable according to its `Injectable` metadata, and patch the resulting
  * injectable def (`ɵprov`) onto the injectable type.
  */
 export function compileInjectable(type: Type<any>, meta?: Injectable): void {

@@ -1,6 +1,6 @@
 // #docregion
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular-classic/core';
+import { RouterModule, Routes } from '@angular-classic/router';
 import { authGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 import { LoginComponent } from './login/login.component';

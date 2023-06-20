@@ -33,7 +33,7 @@ jasmine_node_test(
         "//packages/compiler-cli/src/ngtsc/testing/fake_core:npm_package",
     ],
     # TODO: This target is flaky on Windows due to the global FS sometimes not being set/reset.
-    # See: https://app.circleci.com/pipelines/github/angular/angular/62261/workflows/6a4e952c-3d0b-44ab-b3db-c0a639af6bdc/jobs/1348755.
+    # See: https://app.circleci.com/pipelines/github/ng-classic/angular/62261/workflows/6a4e952c-3d0b-44ab-b3db-c0a639af6bdc/jobs/1348755.
     flaky = True,
     shard_count = 4,
     deps = [

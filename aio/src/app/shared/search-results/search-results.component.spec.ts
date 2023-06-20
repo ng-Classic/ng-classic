@@ -1,7 +1,7 @@
-/* eslint-disable @angular-eslint/component-selector */
-import { Component, DebugElement } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+/* eslint-disable @angular-classic-eslint/component-selector */
+import { Component, DebugElement } from '@angular-classic/core';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { By } from '@angular-classic/platform-browser';
 import { SearchResult } from 'app/search/interfaces';
 import { SearchResultsComponent } from './search-results.component';
 
@@ -367,7 +367,7 @@ describe('SearchResultsComponent', () => {
         'resources',
         'guide/glossary',
         'guide/cheatsheet',
-        'https://blog.angular.io/',
+        'https://blog.angular-classic.com/',
       ]);
     });
   });

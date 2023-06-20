@@ -29,7 +29,7 @@ runInEachFileSystem(() => {
 
     it('should compile a project with a reference above the current dir', () => {
       env.write('/app/index.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         import {LibModule} from '../lib/module';
 
         @Component({
@@ -45,7 +45,7 @@ runInEachFileSystem(() => {
         export class AppModule {}
       `);
       env.write('/lib/module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {LibCmp} from './cmp';
 
         @NgModule({
@@ -55,7 +55,7 @@ runInEachFileSystem(() => {
         export class LibModule {}
       `);
       env.write('/lib/cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'lib-cmp',
@@ -72,7 +72,7 @@ runInEachFileSystem(() => {
 
     it('should compile a project with a reference into the same dir', () => {
       env.write('/app/index.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         import {TargetModule} from './target';
 
         @Component({
@@ -89,7 +89,7 @@ runInEachFileSystem(() => {
       `);
 
       env.write('/app/target.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'target-cmp',

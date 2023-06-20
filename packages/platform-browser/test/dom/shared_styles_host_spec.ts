@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {SharedStylesHost} from '@angular/platform-browser/src/dom/shared_styles_host';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {SharedStylesHost} from '@angular-classic/platform-browser/src/dom/shared_styles_host';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 {
   describe('SharedStylesHost', () => {

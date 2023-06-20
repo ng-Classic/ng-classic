@@ -1,5 +1,5 @@
-/* eslint-disable @angular-eslint/directive-selector */
-import { Directive, ElementRef, EventEmitter, Output } from '@angular/core';
+/* eslint-disable @angular-classic-eslint/directive-selector */
+import { Directive, ElementRef, EventEmitter, Output } from '@angular-classic/core';
 
 @Directive({selector: '[myClick]'})
 export class ClickDirective {

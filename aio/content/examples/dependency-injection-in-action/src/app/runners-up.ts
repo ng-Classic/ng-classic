@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion
-import { InjectionToken } from '@angular/core';
+import { InjectionToken } from '@angular-classic/core';
 
 import { Hero } from './hero';
 import { HeroService } from './hero.service';

@@ -24,17 +24,17 @@ describe('removeEslintComments', () => {
     const rmv = source => removeEslintComments(source, 'ts');
 
     it('should remove correctly eslint-disable comments', () => {
-      let source = `/* eslint-disable @angular-eslint/no-input-rename,
-      @angular-eslint/no-inputs-metadata-property,
-      @angular-eslint/no-output-rename,
-      @angular-eslint/no-outputs-metadata-property */
-      import { Component, EventEmitter, Input, Output } from '@angular/core';
+      let source = `/* eslint-disable @angular-classic-eslint/no-input-rename,
+      @angular-classic-eslint/no-inputs-metadata-property,
+      @angular-classic-eslint/no-output-rename,
+      @angular-classic-eslint/no-outputs-metadata-property */
+      import { Component, EventEmitter, Input, Output } from '@angular-classic/core';
 
       @Component({
       `;
       expect(rmv(source)).toMatch(
         createRegexForMatching(
-        'import { Component, EventEmitter, Input, Output } from \'@angular/core\';\n\n {6}@Component({\n {6}'
+        'import { Component, EventEmitter, Input, Output } from \'@angular-classic/core\';\n\n {6}@Component({\n {6}'
         )
       );
       source = `/* eslint-disable foo */
@@ -153,13 +153,13 @@ describe('removeEslintComments', () => {
 
     it('should remove html eslint comments', () => {
       const source = `
-        import { Component, OnInit, Input } from '@angular/core';
+        import { Component, OnInit, Input } from '@angular-classic/core';
 
         @Component({
           selector: 'app-test',
           template: \`
-            <!-- eslint-disable @angular-eslint/template/eqeqeq -->
-            <p *ngIf="eslintTest != null" (click)="eslintTest()"> <!-- eslint-disable-line @angular-eslint/template/eqeqeq -->
+            <!-- eslint-disable @angular-classic-eslint/template/eqeqeq -->
+            <p *ngIf="eslintTest != null" (click)="eslintTest()"> <!-- eslint-disable-line @angular-classic-eslint/template/eqeqeq -->
               run eslint test
             </p>
           \`,
@@ -170,7 +170,7 @@ describe('removeEslintComments', () => {
       `;
       expect(rmv(source)).toMatch(
         createRegexForMatching(
-          '\n {8}import { Component, OnInit, Input } from \'@angular/core\';\n\n {8}@Component({\n' +
+          '\n {8}import { Component, OnInit, Input } from \'@angular-classic/core\';\n\n {8}@Component({\n' +
           ' {10}selector: \'app-test\',\n {10}template: `\n' +
           ' {12}<p *ngIf="eslintTest != null" (click)="eslintTest()">\n' +
           ' {14}run eslint test\n {12}</p>\n {10}`,\n {10}styles: []\n {8}})\n' +
@@ -199,21 +199,21 @@ describe('removeEslintComments', () => {
     const rmv = source => removeEslintComments(source, 'html');
 
     it('should remove correctly eslint-disable comments', () => {
-      const source = `<!-- eslint-disable @angular-eslint/template/eqeqeq,
-                              @angular-eslint/template/accessibility-alt-text -->
+      const source = `<!-- eslint-disable @angular-classic-eslint/template/eqeqeq,
+                              @angular-classic-eslint/template/accessibility-alt-text -->
                           <img *ngIf="src == null" scr="test" />`;
       expect(rmv(source)).toEqual('<img *ngIf="src == null" scr="test" />');
     });
 
     it('should remove correctly eslint-enable and eslint-disable comments', () => {
-      const source = `<!-- eslint-disable @angular-eslint/template/accessibility-alt-text -->
+      const source = `<!-- eslint-disable @angular-classic-eslint/template/accessibility-alt-text -->
       <img scr="test1" />
-      <!-- eslint-enable @angular-eslint/template/accessibility-alt-text -->`;
+      <!-- eslint-enable @angular-classic-eslint/template/accessibility-alt-text -->`;
       expect(rmv(source)).toEqual('<img scr="test1" />');
     });
 
     it('should remove correctly eslint-disable-line comments', () => {
-      let source = '<span *ngIf="i == 8">eight</span> <!-- eslint-disable-line @angular-eslint/template/eqeqeq -->';
+      let source = '<span *ngIf="i == 8">eight</span> <!-- eslint-disable-line @angular-classic-eslint/template/eqeqeq -->';
       expect(rmv(source)).toEqual('<span *ngIf="i == 8">eight</span>');
       source = '<span *ngIf="i == 9">nine</span><!-- eslint-disable-line -->';
       expect(rmv(source)).toEqual('<span *ngIf="i == 9">nine</span>');
@@ -224,7 +224,7 @@ describe('removeEslintComments', () => {
     });
 
     it('should remove correctly eslint-disable-next-line comments', () => {
-      const source = `<!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
+      const source = `<!-- eslint-disable-next-line @angular-classic-eslint/template/click-events-have-key-events -->
       <a (click)="onClick()">disable-next-line link</a>`;
       expect(rmv(source)).toEqual('<a (click)="onClick()">disable-next-line link</a>');
     });
@@ -232,7 +232,7 @@ describe('removeEslintComments', () => {
     it('should remove correctly a mix of different types of eslint comments', () => {
       let source = `
       <!-- eslint-disable -->
-      <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
+      <!-- eslint-disable-next-line @angular-classic-eslint/template/click-events-have-key-events -->
       <a (click)="onClick()"> mixed1 </a> <!-- eslint-disable-line -->
       <!-- eslint-enable -->
       `;
@@ -247,7 +247,7 @@ describe('removeEslintComments', () => {
     it('should handle any number of spaces around the eslint directive', () => {
       let source = '<label>label outside a form</label><!--eslint-disable-line-->';
       expect(rmv(source)).toEqual('<label>label outside a form</label>');
-      source = `<!--   eslint-disable-next-line     @angular-eslint/template/click-events-have-key-events -->
+      source = `<!--   eslint-disable-next-line     @angular-classic-eslint/template/click-events-have-key-events -->
       <div (click)="click()" class="not-a-real-btn">click me</div>`;
       expect(rmv(source)).toEqual('<div (click)="click()" class="not-a-real-btn">click me</div>');
       source = `<!--eslint-disable-next-line-->

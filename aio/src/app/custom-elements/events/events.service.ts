@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular-classic/core';
+import {HttpClient} from '@angular-classic/common/http';
 
 import {AsyncSubject, connectable, Observable, of} from 'rxjs';
 import {catchError} from 'rxjs/operators';

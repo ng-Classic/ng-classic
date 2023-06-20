@@ -1,6 +1,6 @@
 // #docregion
-import { Directive } from '@angular/core';
-import { AbstractControl, FormGroup, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn } from '@angular/forms';
+import { Directive } from '@angular-classic/core';
+import { AbstractControl, FormGroup, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn } from '@angular-classic/forms';
 
 // #docregion cross-validation-validator
 /** A hero's name can't match the hero's alter ego */

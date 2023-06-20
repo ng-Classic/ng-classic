@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, Binary, TmplAstNode} from '@angular/compiler';
+import {AST, Binary, TmplAstNode} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {NgCompilerOptions} from '../../../../core/api';

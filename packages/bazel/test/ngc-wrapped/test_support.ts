@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {runOneBuild} from '@angular/bazel';
+import {runOneBuild} from '@angular-classic/bazel';
 import {runfiles} from '@bazel/runfiles';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -121,7 +121,7 @@ export function setup({
 
     depPaths = depPaths.concat([angularCorePath]);
     pathMapping = pathMapping.concat([
-      {moduleName: '@angular/core', path: angularCorePath},
+      {moduleName: '@angular-classic/core', path: angularCorePath},
       {moduleName: 'angular/packages/core', path: angularCorePath}
     ]);
 

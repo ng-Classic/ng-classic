@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: basic_host_directives.js
  ****************************************************************************************************/
-import { Component, Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class DirectiveA {
 }
 DirectiveA.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -35,7 +35,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: basic_host_directives.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class DirectiveA {
     static ɵfac: i0.ɵɵFactoryDeclaration<DirectiveA, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<DirectiveA, never, never, {}, {}, never, never, true, never>;
@@ -52,8 +52,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: chained_host_directives.js
  ****************************************************************************************************/
-import { Component, Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class DirectiveA {
 }
 DirectiveA.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -100,7 +100,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chained_host_directives.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class DirectiveA {
     static ɵfac: i0.ɵɵFactoryDeclaration<DirectiveA, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<DirectiveA, never, never, {}, {}, never, never, true, never>;
@@ -121,8 +121,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: forward_ref_host_directives.js
  ****************************************************************************************************/
-import { Component, Directive, forwardRef, Input } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, forwardRef, Input } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -160,7 +160,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: forward_ref_host_directives.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MyComponent, "my-component", never, {}, {}, never, never, false, [{ directive: typeof DirectiveB; inputs: {}; outputs: {}; }]>;
@@ -178,8 +178,8 @@ export declare class DirectiveA {
 /****************************************************************************************************
  * PARTIAL FILE: host_directives_with_inputs_outputs.js
  ****************************************************************************************************/
-import { Component, Directive, EventEmitter, Input, Output } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, EventEmitter, Input, Output } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostDir {
     constructor() {
         this.opened = new EventEmitter();
@@ -220,8 +220,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_directives_with_inputs_outputs.d.ts
  ****************************************************************************************************/
-import { EventEmitter } from '@angular/core';
-import * as i0 from "@angular/core";
+import { EventEmitter } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class HostDir {
     value: number;
     color: string;
@@ -238,8 +238,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: host_directives_with_host_aliases.js
  ****************************************************************************************************/
-import { Component, Directive, EventEmitter, Input, Output } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, EventEmitter, Input, Output } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostDir {
     constructor() {
         this.opened = new EventEmitter();
@@ -284,8 +284,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_directives_with_host_aliases.d.ts
  ****************************************************************************************************/
-import { EventEmitter } from '@angular/core';
-import * as i0 from "@angular/core";
+import { EventEmitter } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class HostDir {
     value: number;
     color: string;

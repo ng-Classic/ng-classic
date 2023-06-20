@@ -19,7 +19,7 @@ import {PartialObserver, Subject, Subscription} from 'rxjs';
  *
  * Extends
  * [RxJS `Subject`](https://rxjs.dev/api/index/class/Subject)
- * for Angular by adding the `emit()` method.
+ * for Angular Classicby adding the `emit()` method.
  *
  * In the following example, a component defines two output properties
  * that create event emitters. When the title is clicked, the emitter

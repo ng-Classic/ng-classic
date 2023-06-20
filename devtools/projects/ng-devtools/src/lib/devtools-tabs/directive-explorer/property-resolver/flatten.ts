@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {MatTreeFlattener} from '@angular/material/tree';
+import {MatTreeFlattener} from '@angular-classic/material/tree';
 import {Descriptor, PropType} from 'protocol';
 import {Observable} from 'rxjs';
 

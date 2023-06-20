@@ -1,6 +1,6 @@
-import { NgModule, Type } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { NgModule, Type } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
+import { HttpClientModule } from '@angular-classic/common/http';
 import { SharedModule } from '../../shared/shared.module';
 import { ApiListComponent } from './api-list.component';
 import { ApiService } from './api.service';

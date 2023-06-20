@@ -40,7 +40,7 @@ ng_module(
         "//packages/common",
         "//packages/core",
         "//packages/forms",
-        "@npm//@angular/material",
+        "@npm//@angular-classic/material",
         "@npm//rxjs",
     ],
 )

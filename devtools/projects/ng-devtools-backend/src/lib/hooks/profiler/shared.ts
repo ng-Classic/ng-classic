@@ -50,7 +50,7 @@ export interface Hooks {
 }
 
 /**
- *  Class for profiling angular applications. Handles hook subscriptions and emitting change
+ *  Class for profiling Angular Classicapplications. Handles hook subscriptions and emitting change
  * detection events.
  */
 export abstract class Profiler {

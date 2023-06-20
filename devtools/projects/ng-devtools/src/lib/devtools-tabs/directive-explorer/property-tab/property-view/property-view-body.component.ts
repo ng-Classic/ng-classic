@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular-classic/cdk/drag-drop';
+import {Component, EventEmitter, Input, Output} from '@angular-classic/core';
 import {DirectivePosition} from 'protocol';
 
 import {DirectivePropertyResolver, DirectiveTreeData} from '../../property-resolver/directive-property-resolver';
@@ -37,21 +37,21 @@ export class PropertyViewBodyComponent {
         title: '@Inputs',
         hidden: this.directiveInputControls.dataSource.data.length === 0,
         controls: this.directiveInputControls,
-        documentation: 'https://angular.io/api/core/Input',
+        documentation: 'https://angular-classic.com/api/core/Input',
         class: 'cy-inputs'
       },
       {
         title: '@Outputs',
         hidden: this.directiveOutputControls.dataSource.data.length === 0,
         controls: this.directiveOutputControls,
-        documentation: 'https://angular.io/api/core/Output',
+        documentation: 'https://angular-classic.com/api/core/Output',
         class: 'cy-outputs'
       },
       {
         title: 'Properties',
         hidden: this.directiveStateControls.dataSource.data.length === 0,
         controls: this.directiveStateControls,
-        documentation: 'https://angular.io/guide/property-binding',
+        documentation: 'https://angular-classic.com/guide/property-binding',
         class: 'cy-properties'
       },
     ];

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {XhrFactory} from '@angular/common';
-import {Injectable, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {XhrFactory} from '@angular-classic/common';
+import {Injectable, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 import {from, Observable, Observer, of} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
 

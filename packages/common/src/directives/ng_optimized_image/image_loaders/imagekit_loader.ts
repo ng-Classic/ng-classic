@@ -25,7 +25,7 @@ function isImageKitUrl(url: string): boolean {
 }
 
 /**
- * Function that generates an ImageLoader for ImageKit and turns it into an Angular provider.
+ * Function that generates an ImageLoader for ImageKit and turns it into an Angular Classicprovider.
  *
  * @param path Base URL of your ImageKit images
  * This URL should match one of the following formats:

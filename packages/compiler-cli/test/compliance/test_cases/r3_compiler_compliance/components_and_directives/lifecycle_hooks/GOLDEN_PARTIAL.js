@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: local_reference.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -24,7 +24,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: local_reference.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MyComponent, "my-component", never, {}, {}, never, never, false, never>;
@@ -38,8 +38,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: local_reference_nested.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule, TemplateRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule, TemplateRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class IfDirective {
     constructor(template) { }
 }
@@ -91,8 +91,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: local_reference_nested.d.ts
  ****************************************************************************************************/
-import { TemplateRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { TemplateRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class IfDirective {
     constructor(template: TemplateRef<any>);
     static ɵfac: i0.ɵɵFactoryDeclaration<IfDirective, never>;
@@ -111,8 +111,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: local_reference_and_context_variables.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -149,7 +149,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: local_reference_and_context_variables.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MyComponent, "my-component", never, {}, {}, never, never, false, never>;
@@ -163,8 +163,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: lifecycle_hooks.js
  ****************************************************************************************************/
-import { Component, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 let events = [];
 export class LifecycleComp {
     ngOnChanges() {
@@ -235,7 +235,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: lifecycle_hooks.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class LifecycleComp {
     nameMin: string;
     ngOnChanges(): void;

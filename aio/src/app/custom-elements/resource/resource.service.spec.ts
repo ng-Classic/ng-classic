@@ -1,6 +1,6 @@
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Injector } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular-classic/common/http/testing';
+import { Injector } from '@angular-classic/core';
+import { TestBed } from '@angular-classic/core/testing';
 
 import { ResourceService } from './resource.service';
 import { Category } from './resource.model';
@@ -95,12 +95,12 @@ function getTestResources() {
           resources: {
             'Cat3 SubCat1 Res1': {
               desc: 'Meetup in Barcelona, Spain. ',
-              title: 'Angular Beers',
+              title: 'Angular ClassicBeers',
               url: 'http://www.meetup.com/AngularJS-Beers/',
             },
             'Cat3 SubCat1 Res2': {
-              desc: 'Angular Camps in Barcelona, Spain.',
-              title: 'Angular Camp',
+              desc: 'Angular ClassicCamps in Barcelona, Spain.',
+              title: 'Angular ClassicCamp',
               url: 'http://angularcamp.org/',
             },
           },
@@ -110,7 +110,7 @@ function getTestResources() {
           resources: {
             'Cat3 SubCat2 Res1': {
               desc: 'A community index of components and libraries',
-              title: 'Catalog of Angular Components & Libraries',
+              title: 'Catalog of Angular ClassicComponents & Libraries',
               url: 'https://a/b/c',
             },
           },

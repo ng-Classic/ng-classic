@@ -1,4 +1,4 @@
-import {Component, Injectable, NgModule, Pipe, PipeTransform} from '@angular/core';
+import {Component, Injectable, NgModule, Pipe, PipeTransform} from '@angular-classic/core';
 
 @Injectable()
 class Service {

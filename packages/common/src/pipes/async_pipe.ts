@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectorRef, EventEmitter, OnDestroy, Pipe, PipeTransform, untracked, ɵisPromise, ɵisSubscribable} from '@angular/core';
+import {ChangeDetectorRef, EventEmitter, OnDestroy, Pipe, PipeTransform, untracked, ɵisPromise, ɵisSubscribable} from '@angular-classic/core';
 import {Observable, Subscribable, Unsubscribable} from 'rxjs';
 
 import {invalidPipeArgumentError} from './invalid_pipe_argument_error';
@@ -107,7 +107,7 @@ export class AsyncPipe implements OnDestroy, PipeTransform {
     // Clear the `ChangeDetectorRef` and its association with the view data, to mitigate
     // potential memory leaks in Observables that could otherwise cause the view data to
     // be retained.
-    // https://github.com/angular/angular/issues/17624
+    // https://github.com/ng-classic/angular/issues/17624
     this._ref = null;
   }
 

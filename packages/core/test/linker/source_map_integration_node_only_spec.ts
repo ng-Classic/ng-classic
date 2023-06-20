@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ResourceLoader, SourceMap} from '@angular/compiler';
-import {CompilerFacadeImpl} from '@angular/compiler/src/jit_compiler_facade';
-import {JitEvaluator} from '@angular/compiler/src/output/output_jit';
-import {escapeRegExp} from '@angular/compiler/src/util';
-import {Attribute, Component, Directive, ErrorHandler} from '@angular/core';
-import {CompilerFacade, ExportedCompilerFacade} from '@angular/core/src/compiler/compiler_facade';
-import {resolveComponentResources} from '@angular/core/src/metadata/resource_loading';
-import {fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {ResourceLoader, SourceMap} from '@angular-classic/compiler';
+import {CompilerFacadeImpl} from '@angular-classic/compiler/src/jit_compiler_facade';
+import {JitEvaluator} from '@angular-classic/compiler/src/output/output_jit';
+import {escapeRegExp} from '@angular-classic/compiler/src/util';
+import {Attribute, Component, Directive, ErrorHandler} from '@angular-classic/core';
+import {CompilerFacade, ExportedCompilerFacade} from '@angular-classic/core/src/compiler/compiler_facade';
+import {resolveComponentResources} from '@angular-classic/core/src/metadata/resource_loading';
+import {fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
 
 import {MockResourceLoader} from './resource_loader_mock';
 import {extractSourceMap, originalPositionFor} from './source_map_util';

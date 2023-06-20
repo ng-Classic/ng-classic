@@ -1,9 +1,9 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { Component, inject } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
+import { ActivatedRoute } from '@angular-classic/router';
 import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housinglocation';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular-classic/forms';
 
 @Component({
   selector: 'app-details',

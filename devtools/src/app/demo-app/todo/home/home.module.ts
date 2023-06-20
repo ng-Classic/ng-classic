@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {RouterModule} from '@angular-classic/router';
 
 import {TooltipDirective} from './/tooltip.directive';
 import {SamplePipe} from './sample.pipe';

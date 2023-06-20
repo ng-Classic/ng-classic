@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {animate, style, transition, trigger} from '@angular/animations';
-import {Platform} from '@angular/cdk/platform';
-import {DOCUMENT} from '@angular/common';
-import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
+import {animate, style, transition, trigger} from '@angular-classic/animations';
+import {Platform} from '@angular-classic/cdk/platform';
+import {DOCUMENT} from '@angular-classic/common';
+import {Component, Inject, OnDestroy, OnInit} from '@angular-classic/core';
 import {Events, MessageBus} from 'protocol';
 import {interval} from 'rxjs';
 

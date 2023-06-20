@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion imports
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostBinding } from '@angular-classic/core';
 import {
   trigger,
   state,
@@ -8,10 +8,10 @@ import {
   animate,
   transition,
   // ...
-} from '@angular/animations';
+} from '@angular-classic/animations';
 
 // #enddocregion imports
-import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
+import { ChildrenOutletContexts, RouterOutlet } from '@angular-classic/router';
 import { slideInAnimation } from './animations';
 
 // #docregion decorator, toggle-app-animations, define

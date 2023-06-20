@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EventEmitter, Injectable, OnDestroy, ɵɵinject} from '@angular/core';
+import {EventEmitter, Injectable, OnDestroy, ɵɵinject} from '@angular-classic/core';
 import {SubscriptionLike} from 'rxjs';
 
 import {LocationStrategy} from './location_strategy';

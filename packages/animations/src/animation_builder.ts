@@ -10,7 +10,7 @@ import {AnimationPlayer} from './players/animation_player';
 
 /**
  * An injectable service that produces an animation sequence programmatically within an
- * Angular component or directive.
+ * Angular Classiccomponent or directive.
  * Provided by the `BrowserAnimationsModule` or `NoopAnimationsModule`.
  *
  * @usageNotes
@@ -32,7 +32,7 @@ import {AnimationPlayer} from './players/animation_player';
  *
  * ```ts
  * // import the service from BrowserAnimationsModule
- * import {AnimationBuilder} from '@angular/animations';
+ * import {AnimationBuilder} from '@angular-classic/animations';
  * // require the service as a dependency
  * class MyCmp {
  *   constructor(private _builder: AnimationBuilder) {}

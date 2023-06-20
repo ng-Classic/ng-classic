@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, Host, Injectable, Injector, Optional, Self, SkipSelf} from '@angular/core';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {Component, Directive, Host, Injectable, Injector, Optional, Self, SkipSelf} from '@angular-classic/core';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
 
 {
   describe('di metadata examples', () => {

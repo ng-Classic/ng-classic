@@ -10,8 +10,8 @@
  * For more details on each deployment target, see the `deploymentInfoPerTarget` object inside the
  * `computeDeploymentsInfo()` function.
  * For additional information/terminology, see also:
- *   - [Angular Branching and Versioning: A Practical Guide](../../../docs/BRANCHES.md)
- *   - [Angular Development Phases](https://docs.google.com/document/d/197kVillDwx-RZtSVOBtPb4BBIAw0E9RT3q3v6DZkykU)
+ *   - [Angular ClassicBranching and Versioning: A Practical Guide](../../../docs/BRANCHES.md)
+ *   - [Angular ClassicDevelopment Phases](https://docs.google.com/document/d/197kVillDwx-RZtSVOBtPb4BBIAw0E9RT3q3v6DZkykU)
  *
  * |--------------------|-------------------------------------------------------------------|
  * | TABLE:             |                      Is there an active RC?                       |
@@ -36,14 +36,14 @@
  *
  * NOTES:
  *   - The `v<X>-angular-io-site` Firebase site should be created (and connected to the
- *     `v<X>.angular.io` subdomain) before the version in the `main` branch's `package.json` is
+ *     `v<X>.angular-classic.com` subdomain) before the version in the `main` branch's `package.json` is
  *     updated to a new major.
  *   - When a new major version is released, the deploy CI jobs for the new stable branch (prev. RC
  *     or next) and the old stable branch must be run AFTER the new stable version has been
  *     published to NPM, because the NPM info is used to determine what the stable version is.
  *     In the future, we could make the branch version info retrieval more robust, DRY and
  *     future-proof (and independent of NPM releases) by re-using the `ng-dev release info`
- *     [implementation](https://github.com/angular/dev-infra/blob/92778223953e029d1723febf282bb265b4e2a56f/ng-dev/release/info/cli.ts).
+ *     [implementation](https://github.com/ng-classic/dev-infra/blob/92778223953e029d1723febf282bb265b4e2a56f/ng-dev/release/info/cli.ts).
  *     (This would require `ng-dev` to expose an API for requesting the info (instead of printing it
  *     in human-readable format to stdout).)
  */
@@ -155,7 +155,7 @@ function computeDeploymentsInfo(
       deployEnv: 'next',
       projectId: 'angular-io',
       siteId: 'next-angular-io-site',
-      deployedUrl: 'https://next.angular.io/',
+      deployedUrl: 'https://next.angular-classic.com/',
       preDeployActions: [pre.build, pre.checkPayloadSize],
       postDeployActions: [post.testPwaScore],
     },
@@ -165,7 +165,7 @@ function computeDeploymentsInfo(
       deployEnv: 'rc',
       projectId: 'angular-io',
       siteId: 'rc-angular-io-site',
-      deployedUrl: 'https://rc.angular.io/',
+      deployedUrl: 'https://rc.angular-classic.com/',
       preDeployActions: [pre.build, pre.checkPayloadSize],
       postDeployActions: [post.testPwaScore],
     },
@@ -175,7 +175,7 @@ function computeDeploymentsInfo(
       deployEnv: 'stable',
       projectId: 'angular-io',
       siteId: 'stable-angular-io-site',
-      deployedUrl: 'https://angular.io/',
+      deployedUrl: 'https://angular-classic.com/',
       preDeployActions: [pre.build, pre.checkPayloadSize],
       postDeployActions: [post.testPwaScore],
     },
@@ -185,7 +185,7 @@ function computeDeploymentsInfo(
       deployEnv: 'archive',
       projectId: 'angular-io',
       siteId: `v${currentBranchMajorVersion}-angular-io-site`,
-      deployedUrl: `https://v${currentBranchMajorVersion}.angular.io/`,
+      deployedUrl: `https://v${currentBranchMajorVersion}.angular-classic.com/`,
       preDeployActions: [pre.build, pre.checkPayloadSize],
       postDeployActions: [post.testPwaScore],
     },
@@ -207,7 +207,7 @@ function computeDeploymentsInfo(
       deployEnv: 'next',
       projectId: 'angular-io',
       siteId: `v${currentBranchMajorVersion}-angular-io-site`,
-      deployedUrl: `https://v${currentBranchMajorVersion}.angular.io/`,
+      deployedUrl: `https://v${currentBranchMajorVersion}.angular-classic.com/`,
       preDeployActions: [pre.redirectAllToNext],
       postDeployActions: [pre.undo.redirectAllToNext, post.testRedirectToNext],
     },
@@ -217,7 +217,7 @@ function computeDeploymentsInfo(
       deployEnv: 'rc',
       projectId: 'angular-io',
       siteId: `v${currentBranchMajorVersion}-angular-io-site`,
-      deployedUrl: `https://v${currentBranchMajorVersion}.angular.io/`,
+      deployedUrl: `https://v${currentBranchMajorVersion}.angular-classic.com/`,
       preDeployActions: [pre.redirectAllToRc],
       postDeployActions: [pre.undo.redirectAllToRc, post.testRedirectToRc],
     },
@@ -227,12 +227,12 @@ function computeDeploymentsInfo(
       deployEnv: 'stable',
       projectId: 'angular-io',
       siteId: `v${currentBranchMajorVersion}-angular-io-site`,
-      deployedUrl: `https://v${currentBranchMajorVersion}.angular.io/`,
+      deployedUrl: `https://v${currentBranchMajorVersion}.angular-classic.com/`,
       preDeployActions: [pre.redirectAllToStable],
       postDeployActions: [pre.undo.redirectAllToStable, post.testRedirectToStable],
     },
     // Config for deploying the stable build to the RC Firebase site when there is no active RC.
-    // See https://github.com/angular/angular/issues/39760 for more info on the purpose of this
+    // See https://github.com/ng-classic/angular/issues/39760 for more info on the purpose of this
     // special deployment.
     redirectRcToStable: {
       name: 'redirectRcToStable',
@@ -240,7 +240,7 @@ function computeDeploymentsInfo(
       deployEnv: 'stable',
       projectId: 'angular-io',
       siteId: 'rc-angular-io-site',
-      deployedUrl: 'https://rc.angular.io/',
+      deployedUrl: 'https://rc.angular-classic.com/',
       preDeployActions: [pre.disableServiceWorker, pre.redirectNonFilesToStable],
       postDeployActions: [
         pre.undo.redirectNonFilesToStable,
@@ -305,7 +305,7 @@ function computeDeploymentsInfo(
       ] :
       // There is no active RC version. In addition to deploying to the `stable` projects/sites,
       // deploy to `rc` to ensure it redirects to `stable`.
-      // See https://github.com/angular/angular/issues/39760 for more info on the purpose of this
+      // See https://github.com/ng-classic/angular/issues/39760 for more info on the purpose of this
       // special deployment.
       [
         deploymentInfoPerTarget.stable,

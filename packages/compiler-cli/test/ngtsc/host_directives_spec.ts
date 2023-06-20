@@ -30,7 +30,7 @@ runInEachFileSystem(() => {
 
     it('should generate a basic hostDirectives definition', () => {
       env.write('test.ts', `
-        import {Directive, Component} from '@angular/core';
+        import {Directive, Component} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir-a]',
@@ -70,7 +70,7 @@ runInEachFileSystem(() => {
 
     it('should generate a hostDirectives definition that has inputs and outputs', () => {
       env.write('test.ts', `
-        import {Directive, Component, Input, Output, EventEmitter} from '@angular/core';
+        import {Directive, Component, Input, Output, EventEmitter} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir-a]',
@@ -116,7 +116,7 @@ runInEachFileSystem(() => {
 
     it('should generate a hostDirectives definition that has aliased inputs and outputs', () => {
       env.write('test.ts', `
-        import {Directive, Component, Input, Output, EventEmitter} from '@angular/core';
+        import {Directive, Component, Input, Output, EventEmitter} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir-a]',
@@ -162,7 +162,7 @@ runInEachFileSystem(() => {
 
     it('should generate hostDirectives definitions for a chain of host directives', () => {
       env.write('test.ts', `
-        import {Directive, Component} from '@angular/core';
+        import {Directive, Component} from '@angular-classic/core';
 
         @Directive({standalone: true})
         export class DirectiveA {
@@ -233,7 +233,7 @@ runInEachFileSystem(() => {
 
     it('should generate a hostDirectives definition with forward references', () => {
       env.write('test.ts', `
-        import {Component, Directive, forwardRef, Input} from '@angular/core';
+        import {Component, Directive, forwardRef, Input} from '@angular-classic/core';
 
         @Component({
           selector: 'my-component',
@@ -292,7 +292,7 @@ runInEachFileSystem(() => {
 
     it('should generate a definition if the host directives are imported from other files', () => {
       env.write('dir-a.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir-a]',
@@ -302,7 +302,7 @@ runInEachFileSystem(() => {
       `);
 
       env.write('dir-b.ts', `
-        import {Directive, Input, Output, EventEmitter} from '@angular/core';
+        import {Directive, Input, Output, EventEmitter} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir-b]',
@@ -315,7 +315,7 @@ runInEachFileSystem(() => {
       `);
 
       env.write('test.ts', `
-        import {Component, forwardRef} from '@angular/core';
+        import {Component, forwardRef} from '@angular-classic/core';
         import {DirectiveA} from './dir-a';
         import {DirectiveB} from './dir-b';
 
@@ -358,7 +358,7 @@ runInEachFileSystem(() => {
 
     it('should generate a hostDirectives definition referring to external directives', () => {
       env.write('node_modules/external/index.d.ts', `
-        import {ɵɵDirectiveDeclaration} from '@angular/core';
+        import {ɵɵDirectiveDeclaration} from '@angular-classic/core';
 
         export declare class ExternalDir {
           static ɵdir: ɵɵDirectiveDeclaration<ExternalDir, '[test]', never,
@@ -367,7 +367,7 @@ runInEachFileSystem(() => {
       `);
 
       env.write('test.ts', `
-        import {Component, Directive, NgModule} from '@angular/core';
+        import {Component, Directive, NgModule} from '@angular-classic/core';
         import {ExternalDir} from 'external';
 
         @Component({
@@ -408,7 +408,7 @@ runInEachFileSystem(() => {
       `);
 
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import {ExternalDir} from 'external';
 
         @Component({
@@ -435,7 +435,7 @@ runInEachFileSystem(() => {
     it('should produce a template diagnostic if a required input from a host directive is missing',
        () => {
          env.write('test.ts', `
-            import {Directive, Component, Input} from '@angular/core';
+            import {Directive, Component, Input} from '@angular-classic/core';
 
             @Directive({standalone: true})
             export class HostDir {
@@ -467,7 +467,7 @@ runInEachFileSystem(() => {
     it('should not produce a template diagnostic if a required input from a host directive is bound',
        () => {
          env.write('test.ts', `
-            import {Directive, Component, Input} from '@angular/core';
+            import {Directive, Component, Input} from '@angular-classic/core';
 
             @Directive({standalone: true})
             export class HostDir {
@@ -499,7 +499,7 @@ runInEachFileSystem(() => {
     describe('validations', () => {
       it('should produce a diagnostic if a host directive is not standalone', () => {
         env.write('test.ts', `
-          import {Directive, Component, NgModule} from '@angular/core';
+          import {Directive, Component, NgModule} from '@angular-classic/core';
 
           @Directive()
           export class HostDir {}
@@ -516,7 +516,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if a host directive is not a directive', () => {
         env.write('test.ts', `
-          import {Directive, Pipe, Component, NgModule} from '@angular/core';
+          import {Directive, Pipe, Component, NgModule} from '@angular-classic/core';
 
           @Pipe({name: 'hostDir'})
           export class HostDir {}
@@ -534,7 +534,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if a host directive is a component', () => {
         env.write('test.ts', `
-          import {Directive, Component, NgModule} from '@angular/core';
+          import {Directive, Component, NgModule} from '@angular-classic/core';
 
           @Component({
             template: '',
@@ -554,7 +554,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if hostDirectives is not an array', () => {
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             template: '',
@@ -569,7 +569,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if a host directive is not a reference', () => {
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           const hostA = {};
 
@@ -586,7 +586,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if a host directive is not a reference to a class', () => {
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           function hostA() {}
 
@@ -603,7 +603,7 @@ runInEachFileSystem(() => {
 
       it('should only produce a diagnostic once in a chain of directives', () => {
         env.write('test.ts', `
-          import {Directive, Component, NgModule} from '@angular/core';
+          import {Directive, Component, NgModule} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir-b]',
@@ -634,7 +634,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if a host directive output does not exist', () => {
         env.write('test.ts', `
-          import {Directive, Output, EventEmitter} from '@angular/core';
+          import {Directive, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({standalone: true})
           class HostDir {
@@ -658,7 +658,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if a host directive output alias does not exist', () => {
         env.write('test.ts', `
-          import {Directive, Output, EventEmitter} from '@angular/core';
+          import {Directive, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({standalone: true})
           class HostDir {
@@ -682,7 +682,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if a host directive input does not exist', () => {
         env.write('test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({standalone: true})
           class HostDir {
@@ -706,7 +706,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if a host directive input alias does not exist', () => {
         env.write('test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({standalone: true})
           class HostDir {
@@ -728,7 +728,7 @@ runInEachFileSystem(() => {
       it('should produce a diagnostic if a host directive tries to alias to an existing input',
          () => {
            env.write('test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({selector: '[host-dir]', standalone: true})
           class HostDir {
@@ -753,7 +753,7 @@ runInEachFileSystem(() => {
       it('should produce a diagnostic if a host directive tries to alias to an existing input alias',
          () => {
            env.write('test.ts', `
-            import {Directive, Input} from '@angular/core';
+            import {Directive, Input} from '@angular-classic/core';
 
             @Directive({selector: '[host-dir]', standalone: true})
             class HostDir {
@@ -777,7 +777,7 @@ runInEachFileSystem(() => {
       it('should not produce a diagnostic if a host directive input aliases to the same name',
          () => {
            env.write('test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({selector: '[host-dir]', standalone: true})
           class HostDir {
@@ -798,7 +798,7 @@ runInEachFileSystem(() => {
       it('should produce a diagnostic if a host directive tries to alias to an existing output alias',
          () => {
            env.write('test.ts', `
-          import {Directive, Output, EventEmitter} from '@angular/core';
+          import {Directive, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({selector: '[host-dir]', standalone: true})
           class HostDir {
@@ -823,7 +823,7 @@ runInEachFileSystem(() => {
       it('should not produce a diagnostic if a host directive output aliases to the same name',
          () => {
            env.write('test.ts', `
-          import {Directive, Output, EventEmitter} from '@angular/core';
+          import {Directive, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({selector: '[host-dir]', standalone: true})
           class HostDir {
@@ -843,7 +843,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic if a required input is not exposed on the host', () => {
         env.write('test.ts', `
-          import {Directive, Component, Input} from '@angular/core';
+          import {Directive, Component, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir-a]',
@@ -870,7 +870,7 @@ runInEachFileSystem(() => {
       it('should use the public name when producing diagnostics about missing required inputs',
          () => {
            env.write('test.ts', `
-              import {Directive, Component, Input} from '@angular/core';
+              import {Directive, Component, Input} from '@angular-classic/core';
 
               @Directive({
                 selector: '[dir-a]',
@@ -896,7 +896,7 @@ runInEachFileSystem(() => {
 
       it('should not produce required input diagnostic when exposed through alias', () => {
         env.write('test.ts', `
-          import {Directive, Component, Input} from '@angular/core';
+          import {Directive, Component, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir-a]',
@@ -922,7 +922,7 @@ runInEachFileSystem(() => {
       it('should not produce required input diagnostic when exposed through alias to another alias',
          () => {
            env.write('test.ts', `
-              import {Directive, Component, Input} from '@angular/core';
+              import {Directive, Component, Input} from '@angular-classic/core';
 
               @Directive({
                 selector: '[dir-a]',
@@ -947,7 +947,7 @@ runInEachFileSystem(() => {
 
       it('should not produce a diagnostic when exposing an aliased binding', () => {
         env.write('test.ts', `
-          import {Directive, EventEmitter} from '@angular/core';
+          import {Directive, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             outputs: ['opened: triggerOpened'],
@@ -972,7 +972,7 @@ runInEachFileSystem(() => {
 
       it('should not produce a diagnostic when exposing an inherited aliased binding', () => {
         env.write('test.ts', `
-          import {Directive, EventEmitter} from '@angular/core';
+          import {Directive, EventEmitter} from '@angular-classic/core';
 
           @Directive({standalone: true})
           export abstract class Base {

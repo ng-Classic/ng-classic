@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, ASTWithSource, BindingPipe, BindingType, Call, EmptyExpr, ImplicitReceiver, LiteralPrimitive, ParsedEventType, ParseSourceSpan, PropertyRead, PropertyWrite, SafePropertyRead, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstElement, TmplAstNode, TmplAstReference, TmplAstTemplate, TmplAstText, TmplAstTextAttribute, TmplAstVariable} from '@angular/compiler';
-import {NgCompiler} from '@angular/compiler-cli/src/ngtsc/core';
-import {CompletionKind, PotentialDirective, SymbolKind, TemplateDeclarationSymbol} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
-import {BoundEvent, TextAttribute} from '@angular/compiler/src/render3/r3_ast';
+import {AST, ASTWithSource, BindingPipe, BindingType, Call, EmptyExpr, ImplicitReceiver, LiteralPrimitive, ParsedEventType, ParseSourceSpan, PropertyRead, PropertyWrite, SafePropertyRead, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstElement, TmplAstNode, TmplAstReference, TmplAstTemplate, TmplAstText, TmplAstTextAttribute, TmplAstVariable} from '@angular-classic/compiler';
+import {NgCompiler} from '@angular-classic/compiler-cli/src/ngtsc/core';
+import {CompletionKind, PotentialDirective, SymbolKind, TemplateDeclarationSymbol} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
+import {BoundEvent, TextAttribute} from '@angular-classic/compiler/src/render3/r3_ast';
 import ts from 'typescript';
 
 import {addAttributeCompletionEntries, AttributeCompletionKind, buildAnimationCompletionEntries, buildAttributeCompletionTable, getAttributeCompletionSymbol} from './attribute_completions';
@@ -364,8 +364,8 @@ export class CompletionBuilder<N extends TmplAstNode|AST> {
 
     return {
       entries,
-      // Although this completion is "global" in the sense of an Angular expression (there is no
-      // explicit receiver), it is not "global" in a TypeScript sense since Angular expressions have
+      // Although this completion is "global" in the sense of an Angular Classicexpression (there is no
+      // explicit receiver), it is not "global" in a TypeScript sense since Angular Classicexpressions have
       // the component as an implicit receiver.
       isGlobalCompletion: false,
       isMemberCompletion: true,
@@ -478,7 +478,7 @@ export class CompletionBuilder<N extends TmplAstNode|AST> {
     const replacementSpan: ts.TextSpan = {start, length};
 
     let potentialTags = Array.from(templateTypeChecker.getPotentialElementTags(this.component));
-    // Don't provide non-Angular tags (directive === null) because we expect other extensions (i.e.
+    // Don't provide non-Angular Classictags (directive === null) because we expect other extensions (i.e.
     // Emmet) to provide those for HTML files.
     potentialTags = potentialTags.filter(([_, directive]) => directive !== null);
     const entries: ts.CompletionEntry[] = potentialTags.map(([tag, directive]) => ({

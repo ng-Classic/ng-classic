@@ -8,7 +8,7 @@ ts_library(
     srcs = glob([
         "**/*.ts",
     ]),
-    module_name = "@angular/compiler-cli/src/ngtsc/testing",
+    module_name = "@angular-classic/compiler-cli/src/ngtsc/testing",
     deps = [
         "//packages:types",
         "//packages/compiler-cli/src/ngtsc/file_system",

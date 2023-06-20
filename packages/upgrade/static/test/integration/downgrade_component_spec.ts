@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectionStrategy, Compiler, Component, destroyPlatform, Directive, ElementRef, EventEmitter, Injector, Input, NgModule, NgModuleRef, OnChanges, OnDestroy, Output, SimpleChanges} from '@angular/core';
-import {fakeAsync, tick, waitForAsync} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {downgradeComponent, UpgradeComponent, UpgradeModule} from '@angular/upgrade/static';
+import {ChangeDetectionStrategy, Compiler, Component, destroyPlatform, Directive, ElementRef, EventEmitter, Injector, Input, NgModule, NgModuleRef, OnChanges, OnDestroy, Output, SimpleChanges} from '@angular-classic/core';
+import {fakeAsync, tick, waitForAsync} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {downgradeComponent, UpgradeComponent, UpgradeModule} from '@angular-classic/upgrade/static';
 
-import * as angular from '../../../src/common/src/angular1';
+import * as Angular Classicfrom '../../../src/common/src/angular1';
 import {$ROOT_SCOPE} from '../../../src/common/src/constants';
 import {html, multiTrim, withEachNg1Version} from '../../../src/common/test/helpers/common_test_helpers';
 
@@ -357,7 +357,7 @@ withEachNg1Version(() => {
          });
        }));
 
-    it('should still run normal Angular change-detection regardless of `propagateDigest`',
+    it('should still run normal Angular Classicchange-detection regardless of `propagateDigest`',
        fakeAsync(() => {
          let ng2Component: Ng2Component;
 
@@ -911,7 +911,7 @@ withEachNg1Version(() => {
                              'Error while instantiating component \'Ng2Component\': \'downgradedModule\' ' +
                              'unexpectedly specified.\n' +
                              'You should not specify a value for \'downgradedModule\', unless you are ' +
-                             'downgrading more than one Angular module (via \'downgradeModule()\').'));
+                             'downgrading more than one Angular Classicmodule (via \'downgradeModule()\').'));
        }));
   });
 

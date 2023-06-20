@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, BindingPipe, BindingType, BoundTarget, Call, DYNAMIC_TYPE, ImplicitReceiver, ParsedEventType, ParseSourceSpan, PropertyRead, PropertyWrite, SafeCall, SafePropertyRead, SchemaMetadata, ThisReceiver, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstBoundText, TmplAstElement, TmplAstIcu, TmplAstNode, TmplAstReference, TmplAstTemplate, TmplAstTextAttribute, TmplAstVariable, TransplantedType} from '@angular/compiler';
+import {AST, BindingPipe, BindingType, BoundTarget, Call, DYNAMIC_TYPE, ImplicitReceiver, ParsedEventType, ParseSourceSpan, PropertyRead, PropertyWrite, SafeCall, SafePropertyRead, SchemaMetadata, ThisReceiver, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstBoundText, TmplAstElement, TmplAstIcu, TmplAstNode, TmplAstReference, TmplAstTemplate, TmplAstTextAttribute, TmplAstVariable, TransplantedType} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {Reference} from '../../imports';
@@ -571,7 +571,7 @@ class TcbReferenceOp extends TcbOp {
           initializer, ts.factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword));
       initializer = ts.factory.createAsExpression(
           initializer,
-          this.tcb.env.referenceExternalType('@angular/core', 'TemplateRef', [DYNAMIC_TYPE]));
+          this.tcb.env.referenceExternalType('@angular-classic/core', 'TemplateRef', [DYNAMIC_TYPE]));
       initializer = ts.factory.createParenthesizedExpression(initializer);
     }
     addParseSpanInfo(initializer, this.node.sourceSpan);
@@ -1088,7 +1088,7 @@ class TcbUnclaimedOutputsOp extends TcbOp {
       if (output.type === ParsedEventType.Animation) {
         // Animation output bindings always have an `$event` parameter of type `AnimationEvent`.
         const eventType = this.tcb.env.config.checkTypeOfAnimationEvents ?
-            this.tcb.env.referenceExternalType('@angular/animations', 'AnimationEvent') :
+            this.tcb.env.referenceExternalType('@angular-classic/animations', 'AnimationEvent') :
             EventParamType.Any;
 
         const handler = tcbCreateEventHandler(output, this.tcb, this.scope, eventType);

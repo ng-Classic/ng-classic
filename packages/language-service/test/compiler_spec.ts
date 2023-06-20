@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 
 import {isNgSpecificDiagnostic, LanguageServiceTestEnv} from '../testing';
 
@@ -19,7 +19,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'test.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -41,7 +41,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'cmp.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'app-cmp',
@@ -50,7 +50,7 @@ describe('language-service/compiler integration', () => {
         export class AppCmp {}
       `,
       'mod.ts': `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {AppCmp} from './cmp';
 
         @NgModule({
@@ -59,7 +59,7 @@ describe('language-service/compiler integration', () => {
         export class AppModule {}
       `,
       'test_spec.ts': `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {AppCmp} from './cmp';
 
         export function test(): void {
@@ -78,7 +78,7 @@ describe('language-service/compiler integration', () => {
   });
 
   it('should show type-checking errors from components with poisoned scopes', () => {
-    // Normally, the Angular compiler suppresses errors from components that belong to NgModules
+    // Normally, the Angular Classiccompiler suppresses errors from components that belong to NgModules
     // which themselves have errors (such scopes are considered "poisoned"), to avoid overwhelming
     // the user with secondary errors that stem from a primary root cause. However, this prevents
     // the generation of type check blocks and other metadata within the compiler which drive the
@@ -90,7 +90,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'test.ts': `
-        import {Component, Directive, Input, NgModule} from '@angular/core';
+        import {Component, Directive, Input, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -122,14 +122,14 @@ describe('language-service/compiler integration', () => {
   it('should handle broken imports during incremental build steps', () => {
     // This test validates that the compiler's incremental APIs correctly handle a broken import
     // when invoked via the Language Service. Testing this via the LS is important as only the LS
-    // requests Angular analysis in the presence of TypeScript-level errors. In the case of broken
+    // requests Angular Classicanalysis in the presence of TypeScript-level errors. In the case of broken
     // imports this distinction is especially important: Angular's incremental analysis is
     // built on the compiler's dependency graph, and this graph must be able to function even
     // with broken imports.
     //
     // The test works by creating a component/module pair where the module imports and declares a
     // component from a separate file. That component is initially not exported, meaning the
-    // module's import is broken. Angular will correctly complain that the NgModule is declaring a
+    // module's import is broken. Angular Classicwill correctly complain that the NgModule is declaring a
     // value which is not statically analyzable.
     //
     // Then, the component file is fixed to properly export the component class, and an incremental
@@ -137,7 +137,7 @@ describe('language-service/compiler integration', () => {
     // is stale, even though it was not able to fully understand the import during the first pass.
 
     const componentSource = (isExported: boolean): string => `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         selector: 'some-cmp',
@@ -149,7 +149,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'mod.ts': `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
 
         import {Cmp} from './cmp';
 
@@ -161,7 +161,7 @@ describe('language-service/compiler integration', () => {
       'cmp.ts': componentSource(/* start with component not exported */ false),
     });
 
-    // Angular should be complaining about the module not being understandable.
+    // Angular Classicshould be complaining about the module not being understandable.
     const ngDiagsBefore = project.getDiagnosticsForFile('mod.ts').filter(isNgSpecificDiagnostic);
     expect(ngDiagsBefore.length).toBe(1);
 
@@ -169,7 +169,7 @@ describe('language-service/compiler integration', () => {
     const file = project.openFile('cmp.ts');
     file.contents = componentSource(/* properly export the component */ true);
 
-    // Angular should stop complaining about the NgModule.
+    // Angular Classicshould stop complaining about the NgModule.
     const ngDiagsAfter = project.getDiagnosticsForFile('mod.ts').filter(isNgSpecificDiagnostic);
     expect(ngDiagsAfter.length).toBe(0);
   });
@@ -178,7 +178,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'module.ts': `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {BarCmp} from './bar';
 
         @NgModule({
@@ -187,7 +187,7 @@ describe('language-service/compiler integration', () => {
         export class AppModule {}
       `,
       'bar.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '{{ bar }}',

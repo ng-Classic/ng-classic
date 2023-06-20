@@ -1,6 +1,6 @@
 # Standalone migration
 `ng generate` schematic that helps users to convert an application to `standalone` components,
-directives and pipes. The migration can be run with `ng generate @angular/core:standalone` and it
+directives and pipes. The migration can be run with `ng generate @angular-classic/core:standalone` and it
 has the following options:
 
 * `mode` - Configures the mode that migration should run in. The different modes are clarified
@@ -20,13 +20,13 @@ failures. The application should compile, but it's expected that the author will
 formatting and linting failures.
 
 An example migration could look as follows:
-1. `ng generate @angular/core:standalone`.
+1. `ng generate @angular-classic/core:standalone`.
 2. Select the "Convert all components, directives and pipes to standalone" option.
 3. Verify that the app works and commit the changes.
-4. `ng generate @angular/core:standalone`.
+4. `ng generate @angular-classic/core:standalone`.
 5. Select the "Remove unnecessary NgModule classes" option.
 6. Verify that the app works and commit the changes.
-7. `ng generate @angular/core:standalone`.
+7. `ng generate @angular-classic/core:standalone`.
 8. Select the "Bootstrap the application using standalone APIs" option.
 9. Verify that the app works and commit the changes.
 10. Run your linting and formatting checks, and fix any failures. Commit the result.
@@ -204,9 +204,9 @@ will be copied over.
 **Before:**
 ```typescript
 // ./app/app.module.ts
-import {NgModule, InjectionToken} from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule, InjectionToken} from '@angular-classic/core';
+import {RouterModule} from '@angular-classic/router';
+import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 import {AppComponent} from './app.component.ts';
 import {SharedModule} from './shared.module';
 import {ImportedInterface} from './some-interface';
@@ -250,7 +250,7 @@ export class AppComponent {}
 
 ```typescript
 // ./main.ts
-import {platformBrowser} from '@angular/platform-browser';
+import {platformBrowser} from '@angular-classic/platform-browser';
 import {AppModule} from './app/app.module';
 
 platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
@@ -259,9 +259,9 @@ platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
 **After:**
 ```typescript
 // ./app/app.module.ts
-import {NgModule, InjectionToken} from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule, InjectionToken} from '@angular-classic/core';
+import {RouterModule} from '@angular-classic/router';
+import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 import {AppComponent} from './app.component.ts';
 import {SharedModule} from '../shared/shared.module';
 import {ImportedInterface} from './some-interface';
@@ -285,10 +285,10 @@ export class AppComponent {}
 
 ```typescript
 // ./main.ts
-import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-import {InjectionToken, importProvidersFrom} from '@angular/core';
-import {withEnabledBlockingInitialNavigation, provideRouter} from '@angular/router';
-import {provideAnimations} from '@angular/platform-browser/animations';
+import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+import {InjectionToken, importProvidersFrom} from '@angular-classic/core';
+import {withEnabledBlockingInitialNavigation, provideRouter} from '@angular-classic/router';
+import {provideAnimations} from '@angular-classic/platform-browser/animations';
 import {AppModule, ExportedConfigClass} from './app/app.module';
 import {AppComponent} from './app/app.component';
 import {CONFIG} from './app/config';

@@ -90,5 +90,5 @@ export {outputAst};
 // This file only reexports content of the `src` folder. Keep it that way.
 
 // This function call has a global side effects and publishes the compiler into global namespace for
-// the late binding of the Compiler to the @angular/core for jit compilation.
+// the late binding of the Compiler to the @angular-classic/core for jit compilation.
 publishFacade(global);

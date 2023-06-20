@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, isPlatformServer} from '@angular/common';
-import {APP_ID, CSP_NONCE, Inject, Injectable, OnDestroy, Optional, PLATFORM_ID} from '@angular/core';
+import {DOCUMENT, isPlatformServer} from '@angular-classic/common';
+import {APP_ID, CSP_NONCE, Inject, Injectable, OnDestroy, Optional, PLATFORM_ID} from '@angular-classic/core';
 
 /** The style elements attribute name used to set value of `APP_ID` token. */
 const APP_ID_ATTRIBUTE_NAME = 'ng-app-id';

@@ -1,11 +1,11 @@
 // #docplaster
 // #docregion
 // #docregion remove-heroes
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { FormsModule } from '@angular-classic/forms';
 // #enddocregion remove-heroes
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular-classic/platform-browser/animations';
 
 // #docregion remove-heroes
 import { AppComponent } from './app.component';

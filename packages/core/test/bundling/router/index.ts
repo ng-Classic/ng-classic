@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {APP_BASE_HREF} from '@angular/common';
-import {Component, OnInit} from '@angular/core';
-import {bootstrapApplication} from '@angular/platform-browser';
-import {ActivatedRoute, provideRouter, Router, RouterLink, RouterLinkActive, RouterOutlet, Routes} from '@angular/router';
+import {APP_BASE_HREF} from '@angular-classic/common';
+import {Component, OnInit} from '@angular-classic/core';
+import {bootstrapApplication} from '@angular-classic/platform-browser';
+import {ActivatedRoute, provideRouter, Router, RouterLink, RouterLinkActive, RouterOutlet, Routes} from '@angular-classic/router';
 
 @Component({
   selector: 'app-list',

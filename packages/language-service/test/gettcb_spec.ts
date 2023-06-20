@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 
 import {createModuleAndProjectWithDeclarations, LanguageServiceTestEnv} from '../testing';
 
@@ -18,7 +18,7 @@ describe('get typecheck block', () => {
   it('should find the typecheck block for an inline template', () => {
     const files = {
       'app.ts': `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         template: '<div>{{ myProp }}</div>',
@@ -47,7 +47,7 @@ describe('get typecheck block', () => {
   it('should find the typecheck block for an external template', () => {
     const files = {
       'app.ts': `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               templateUrl: './app.html',
@@ -77,7 +77,7 @@ describe('get typecheck block', () => {
   it('should not find typecheck blocks outside a template', () => {
     const files = {
       'app.ts': `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         template: '<div>{{ myProp }}</div>',

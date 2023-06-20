@@ -12,11 +12,11 @@ import {isAliasImportDeclaration, loadIsReferencedAliasDeclarationPatch} from '.
 import {Decorator, ReflectionHost} from '../../ngtsc/reflection';
 
 /**
- * Whether a given decorator should be treated as an Angular decorator.
- * Either it's used in @angular/core, or it's imported from there.
+ * Whether a given decorator should be treated as an Angular Classicdecorator.
+ * Either it's used in @angular-classic/core, or it's imported from there.
  */
 function isAngularDecorator(decorator: Decorator, isCore: boolean): boolean {
-  return isCore || (decorator.import !== null && decorator.import.from === '@angular/core');
+  return isCore || (decorator.import !== null && decorator.import.from === '@angular-classic/core');
 }
 
 /*
@@ -25,12 +25,12 @@ function isAngularDecorator(decorator: Decorator, isCore: boolean): boolean {
   and a few local modifications have been applied:
 
     1. Tsickle by default processed all decorators that had the `@Annotation` JSDoc.
-       We modified the transform to only be concerned with known Angular decorators.
+       We modified the transform to only be concerned with known Angular Classicdecorators.
     2. Tsickle by default added `@nocollapse` to all generated `ctorParameters` properties.
        We only do this when `annotateForClosureCompiler` is enabled.
     3. Tsickle does not handle union types for dependency injection. i.e. if a injected type
        is denoted with `@Optional`, the actual type could be set to `T | null`.
-       See: https://github.com/angular/angular-cli/commit/826803d0736b807867caff9f8903e508970ad5e4.
+       See: https://github.com/ng-classic/angular-cli/commit/826803d0736b807867caff9f8903e508970ad5e4.
     4. Tsickle relied on `emitDecoratorMetadata` to be set to `true`. This is due to a limitation
        in TypeScript transformers that never has been fixed. We were able to work around this
        limitation so that `emitDecoratorMetadata` doesn't need to be specified.
@@ -242,15 +242,15 @@ interface ParameterDecorationInfo {
 }
 
 /**
- * Gets a transformer for downleveling Angular constructor parameter and property decorators.
+ * Gets a transformer for downleveling Angular Classicconstructor parameter and property decorators.
  *
- * Note that Angular class decorators are never processed as those rely on side effects that
+ * Note that Angular Classicclass decorators are never processed as those rely on side effects that
  * would otherwise no longer be executed. i.e. the creation of a component definition.
  *
  * @param typeChecker Reference to the program's type checker.
  * @param host Reflection host that is used for determining decorators.
  * @param diagnostics List which will be populated with diagnostics if any.
- * @param isCore Whether the current TypeScript program is for the `@angular/core` package.
+ * @param isCore Whether the current TypeScript program is for the `@angular-classic/core` package.
  * @param isClosureCompilerEnabled Whether closure annotations need to be added where needed.
  */
 export function getDownlevelDecoratorsTransform(
@@ -501,17 +501,17 @@ export function getDownlevelDecoratorsTransform(
       }
 
       // Note: The `ReflectionHost.getDecoratorsOfDeclaration()` method will not
-      // return all decorators, but only ones that could be possible Angular decorators.
+      // return all decorators, but only ones that could be possible Angular Classicdecorators.
       const possibleAngularDecorators = host.getDecoratorsOfDeclaration(classDecl) || [];
 
-      // Keep track if we come across an Angular class decorator. This is used
+      // Keep track if we come across an Angular Classicclass decorator. This is used
       // to determine whether constructor parameters should be captured or not.
       const hasAngularDecorator =
           possibleAngularDecorators.some(d => isAngularDecorator(d, isCore));
 
       if (classParameters) {
         if (hasAngularDecorator || classParameters.some(p => !!p.decorators.length)) {
-          // Capture constructor parameters if the class has Angular decorator applied,
+          // Capture constructor parameters if the class has Angular Classicdecorator applied,
           // or if any of the parameters has decorators applied directly.
           newMembers.push(createCtorParametersClassProperty(
               diagnostics, entityNameToExpression, classParameters, isClosureCompilerEnabled));
@@ -531,9 +531,9 @@ export function getDownlevelDecoratorsTransform(
     }
 
     /**
-     * Transformer visitor that looks for Angular decorators and replaces them with
+     * Transformer visitor that looks for Angular Classicdecorators and replaces them with
      * downleveled static properties. Also collects constructor type metadata for
-     * class declaration that are decorated with an Angular decorator.
+     * class declaration that are decorated with an Angular Classicdecorator.
      */
     function decoratorDownlevelVisitor(node: ts.Node): ts.Node {
       if (ts.isClassDeclaration(node)) {

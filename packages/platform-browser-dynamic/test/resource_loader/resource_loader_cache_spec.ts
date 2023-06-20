@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component} from '@angular/core';
-import {fakeAsync, TestBed, tick, waitForAsync} from '@angular/core/testing';
-import {CachedResourceLoader} from '@angular/platform-browser-dynamic/src/resource_loader/resource_loader_cache';
-import {setTemplateCache} from '@angular/platform-browser-dynamic/test/resource_loader/resource_loader_cache_setter';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {Component} from '@angular-classic/core';
+import {fakeAsync, TestBed, tick, waitForAsync} from '@angular-classic/core/testing';
+import {CachedResourceLoader} from '@angular-classic/platform-browser-dynamic/src/resource_loader/resource_loader_cache';
+import {setTemplateCache} from '@angular-classic/platform-browser-dynamic/test/resource_loader/resource_loader_cache_setter';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 if (isBrowser) {
   // TODO(alxhub): Resource loading works very differently in Ivy.

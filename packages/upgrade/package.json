@@ -1,7 +1,7 @@
 {
-  "name": "@angular/upgrade",
+  "name": "@angular-classic/upgrade",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - the library for easing update from v1 to v2",
+  "description": "Angular Classic- the library for easing update from v1 to v2",
   "author": "angular",
   "license": "MIT",
   "engines": {
@@ -11,14 +11,14 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/core": "0.0.0-PLACEHOLDER",
-    "@angular/compiler": "0.0.0-PLACEHOLDER",
-    "@angular/platform-browser": "0.0.0-PLACEHOLDER",
-    "@angular/platform-browser-dynamic": "0.0.0-PLACEHOLDER"
+    "@angular-classic/core": "0.0.0-PLACEHOLDER",
+    "@angular-classic/compiler": "0.0.0-PLACEHOLDER",
+    "@angular-classic/platform-browser": "0.0.0-PLACEHOLDER",
+    "@angular-classic/platform-browser-dynamic": "0.0.0-PLACEHOLDER"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular/angular.git",
+    "url": "https://github.com/ng-classic/angular.git",
     "directory": "packages/upgrade"
   },
   "ng-update": {

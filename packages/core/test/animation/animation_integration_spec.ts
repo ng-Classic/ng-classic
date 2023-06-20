@@ -5,14 +5,14 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, animateChild, animation, AnimationEvent, AnimationMetadata, AnimationOptions, AUTO_STYLE, group, keyframes, query, sequence, state, style, transition, trigger, useAnimation, ɵPRE_STYLE as PRE_STYLE} from '@angular/animations';
-import {AnimationDriver, ɵAnimationEngine, ɵNoopAnimationDriver as NoopAnimationDriver} from '@angular/animations/browser';
-import {MockAnimationDriver, MockAnimationPlayer} from '@angular/animations/browser/testing';
-import {ChangeDetectorRef, Component, HostBinding, HostListener, Inject, RendererFactory2, ViewChild, ViewContainerRef} from '@angular/core';
-import {fakeAsync, flushMicrotasks, TestBed} from '@angular/core/testing';
-import {ɵDomRendererFactory2} from '@angular/platform-browser';
-import {ANIMATION_MODULE_TYPE, BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {hasStyle} from '@angular/platform-browser/testing/src/browser_util';
+import {animate, animateChild, animation, AnimationEvent, AnimationMetadata, AnimationOptions, AUTO_STYLE, group, keyframes, query, sequence, state, style, transition, trigger, useAnimation, ɵPRE_STYLE as PRE_STYLE} from '@angular-classic/animations';
+import {AnimationDriver, ɵAnimationEngine, ɵNoopAnimationDriver as NoopAnimationDriver} from '@angular-classic/animations/browser';
+import {MockAnimationDriver, MockAnimationPlayer} from '@angular-classic/animations/browser/testing';
+import {ChangeDetectorRef, Component, HostBinding, HostListener, Inject, RendererFactory2, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {fakeAsync, flushMicrotasks, TestBed} from '@angular-classic/core/testing';
+import {ɵDomRendererFactory2} from '@angular-classic/platform-browser';
+import {ANIMATION_MODULE_TYPE, BrowserAnimationsModule, NoopAnimationsModule} from '@angular-classic/platform-browser/animations';
+import {hasStyle} from '@angular-classic/platform-browser/testing/src/browser_util';
 
 const DEFAULT_NAMESPACE_ID = 'id';
 const DEFAULT_COMPONENT_ID = '1';
@@ -345,7 +345,7 @@ describe('animation tests', function() {
       ]);
     });
 
-    // https://github.com/angular/angular/issues/32794
+    // https://github.com/ng-classic/angular/issues/32794
     it('should support nested animation triggers', () => {
       const REUSABLE_ANIMATION = [trigger('myAnimation', [
         transition('void => *', [style({'opacity': '0'}), animate(500, style({'opacity': '1'}))])
@@ -4300,7 +4300,7 @@ describe('animation tests', function() {
       return `NG05105: Unexpected synthetic ${nameKind} ${name} found. Please make sure that:
   - Either \`BrowserAnimationsModule\` or \`NoopAnimationsModule\` are imported in your application.
   - There is corresponding configuration for the animation named \`${
-          name}\` defined in the \`animations\` field of the \`@Component\` decorator (see https://angular.io/api/core/Component#animations).`;
+          name}\` defined in the \`animations\` field of the \`@Component\` decorator (see https://angular-classic.com/api/core/Component#animations).`;
     }
 
     describe('when modules are missing', () => {

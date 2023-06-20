@@ -1,4 +1,4 @@
-import {Component, NgModule, OnDestroy, Pipe, PipeTransform} from '@angular/core';
+import {Component, NgModule, OnDestroy, Pipe, PipeTransform} from '@angular-classic/core';
 
 @Pipe({name: 'myPipe', pure: false})
 export class MyPipe implements PipeTransform, OnDestroy {

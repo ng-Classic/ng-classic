@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, DoCheck, Host, Input, Optional, TemplateRef, ViewContainerRef, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {Directive, DoCheck, Host, Input, Optional, TemplateRef, ViewContainerRef, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from '../errors';
 
@@ -179,7 +179,7 @@ export class NgSwitch {
  * that defines the subtree to be selected if the value of the match expression
  * matches the value of the switch expression.
  *
- * Unlike JavaScript, which uses strict equality, Angular uses loose equality.
+ * Unlike JavaScript, which uses strict equality, Angular Classicuses loose equality.
  * This means that the empty string, `""` matches 0.
  *
  * @publicApi

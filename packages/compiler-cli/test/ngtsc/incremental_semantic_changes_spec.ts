@@ -47,7 +47,7 @@ runInEachFileSystem(() => {
         // ADep is changed during the test without affecting its public API, and the test asserts
         // that both ACmp and BCmp which consume ADep are not re-emitted.
         env.write('a/dep.ts', `
-          import {Component, Input, Output, EventEmitter} from '@angular/core';
+          import {Component, Input, Output, EventEmitter} from '@angular-classic/core';
 
           @Component({
             selector: 'a-dep',
@@ -62,7 +62,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('a/cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'a-cmp',
@@ -71,7 +71,7 @@ runInEachFileSystem(() => {
           export class ACmp {}
         `);
         env.write('a/mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {ADep} from './dep';
           import {ACmp} from './cmp';
 
@@ -82,7 +82,7 @@ runInEachFileSystem(() => {
           export class AMod {}
         `);
         env.write('b/cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'b-cmp',
@@ -91,7 +91,7 @@ runInEachFileSystem(() => {
           export class BCmp {}
         `);
         env.write('b/mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {BCmp} from './cmp';
           import {AMod} from '../a/mod';
 
@@ -107,7 +107,7 @@ runInEachFileSystem(() => {
 
         // Change ADep without affecting its public API.
         env.write('a/dep.ts', `
-          import {Component, Input, Output, EventEmitter} from '@angular/core';
+          import {Component, Input, Output, EventEmitter} from '@angular-classic/core';
 
           @Component({
             selector: 'a-dep',
@@ -143,7 +143,7 @@ runInEachFileSystem(() => {
         // nor BCmp are re-emitted.
 
         env.write('a/dep.ts', `
-          import {Directive, Input, Output, EventEmitter} from '@angular/core';
+          import {Directive, Input, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             selector: '[a-dep]',
@@ -157,7 +157,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('a/cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'a-cmp',
@@ -166,7 +166,7 @@ runInEachFileSystem(() => {
           export class ACmp {}
         `);
         env.write('a/mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {ADep} from './dep';
           import {ACmp} from './cmp';
 
@@ -177,7 +177,7 @@ runInEachFileSystem(() => {
           export class AMod {}
         `);
         env.write('b/cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'b-cmp',
@@ -186,7 +186,7 @@ runInEachFileSystem(() => {
           export class BCmp {}
         `);
         env.write('b/mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {BCmp} from './cmp';
           import {AMod} from '../a/mod';
 
@@ -202,7 +202,7 @@ runInEachFileSystem(() => {
 
         // Update ADep and change its public API.
         env.write('a/dep.ts', `
-          import {Directive, Input, Output, EventEmitter} from '@angular/core';
+          import {Directive, Input, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             selector: '[a-dep]',
@@ -236,7 +236,7 @@ runInEachFileSystem(() => {
         // During the test, Dep's selector is updated to '[dep]', causing it to begin matching the
         // template of Cmp. The test verifies that Cmp is re-emitted after this change.
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[does-not-match]',
@@ -244,7 +244,7 @@ runInEachFileSystem(() => {
           export class Dep {}
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -253,7 +253,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -267,7 +267,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]', // selector changed to now match inside Cmp's template
@@ -296,7 +296,7 @@ runInEachFileSystem(() => {
         // Cmp. The test verifies that Cmp is re-emitted after this change.
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -304,7 +304,7 @@ runInEachFileSystem(() => {
           export class Dep {}
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -313,7 +313,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -327,7 +327,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[does-not-match]', // selector changed to no longer match Cmp's template
@@ -355,7 +355,7 @@ runInEachFileSystem(() => {
         // During the test, an input is added to Dep, and the test verifies that Cmp is re-emitted.
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -363,7 +363,7 @@ runInEachFileSystem(() => {
           export class Dep {}
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -372,7 +372,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -386,7 +386,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -417,7 +417,7 @@ runInEachFileSystem(() => {
         // re-emitted.
 
         env.write('dep.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -427,7 +427,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -436,7 +436,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -450,7 +450,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -481,7 +481,7 @@ runInEachFileSystem(() => {
         // re-emitted.
 
         env.write('dep.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -491,7 +491,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -500,7 +500,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -514,7 +514,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -544,7 +544,7 @@ runInEachFileSystem(() => {
         // During the test, an output of Dep is added, and the test verifies that Cmp is re-emitted.
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -552,7 +552,7 @@ runInEachFileSystem(() => {
           export class Dep {}
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -561,7 +561,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -575,7 +575,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive, Output, EventEmitter} from '@angular/core';
+          import {Directive, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -607,7 +607,7 @@ runInEachFileSystem(() => {
         // re-emitted.
 
         env.write('dep.ts', `
-          import {Directive, Output, EventEmitter} from '@angular/core';
+          import {Directive, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -617,7 +617,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -626,7 +626,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -640,7 +640,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive, Output, EventEmitter} from '@angular/core';
+          import {Directive, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -671,7 +671,7 @@ runInEachFileSystem(() => {
         // re-emitted.
 
         env.write('dep.ts', `
-          import {Directive, Output, EventEmitter} from '@angular/core';
+          import {Directive, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -681,7 +681,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -690,7 +690,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -704,7 +704,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -735,7 +735,7 @@ runInEachFileSystem(() => {
         // re-emitted.
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -744,7 +744,7 @@ runInEachFileSystem(() => {
           export class Dep {}
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -753,7 +753,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -767,7 +767,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -798,7 +798,7 @@ runInEachFileSystem(() => {
         // usages has changed. The test then verifies that Cmp is re-emitted.
 
         env.write('pipes.ts', `
-          import {Pipe} from '@angular/core';
+          import {Pipe} from '@angular-classic/core';
 
           @Pipe({
             name: 'pipeA',
@@ -815,7 +815,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -826,7 +826,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {PipeA, PipeB} from './pipes';
           import {Cmp} from './cmp';
 
@@ -840,7 +840,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('pipes.ts', `
-          import {Pipe} from '@angular/core';
+          import {Pipe} from '@angular-classic/core';
 
           @Pipe({
             name: 'pipeB', // swapped with PipeB's selector
@@ -879,7 +879,7 @@ runInEachFileSystem(() => {
         // re-emitted.
 
         env.write('dep.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -889,7 +889,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -898,7 +898,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -912,7 +912,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('dep.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -948,7 +948,7 @@ runInEachFileSystem(() => {
            // During the test, MyCmpA is invalidated, and the test verifies that only MyCmpA and not
            // MyCmpB is re-emitted.
            env.write('node_modules/external/index.d.ts', `
-             import * as ng from '@angular/core';
+             import * as ng from '@angular-classic/core';
 
              export declare class ExternalDir {
                static ɵdir: ng.ɵɵDirectiveDefWithMeta<ExternalDir, "[external]", never, {}, {}, never>;
@@ -959,7 +959,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('cmp-a.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                template: '<div external></div>',
@@ -967,7 +967,7 @@ runInEachFileSystem(() => {
              export class MyCmpA {}
            `);
            env.write('cmp-b.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                template: '<div external></div>',
@@ -975,7 +975,7 @@ runInEachFileSystem(() => {
              export class MyCmpB {}
            `);
            env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {ExternalMod} from 'external';
              import {MyCmpA} from './cmp-a';
              import {MyCmpB} from './cmp-b';
@@ -1011,7 +1011,7 @@ runInEachFileSystem(() => {
         // During the test, the external directive is invalidated, and the test verifies that both
         // components are re-emitted as a result.
         env.write('node_modules/external/index.d.ts', `
-          import * as ng from '@angular/core';
+          import * as ng from '@angular-classic/core';
 
           export declare class ExternalDir {
             static ɵdir: ng.ɵɵDirectiveDefWithMeta<ExternalDir, "[external]", never, {}, {}, never>;
@@ -1022,7 +1022,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp-a.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             template: '<div external></div>',
@@ -1030,7 +1030,7 @@ runInEachFileSystem(() => {
           export class MyCmpA {}
         `);
         env.write('cmp-b.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             template: '<div external></div>',
@@ -1038,7 +1038,7 @@ runInEachFileSystem(() => {
           export class MyCmpB {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {ExternalMod} from 'external';
           import {MyCmpA} from './cmp-a';
           import {MyCmpB} from './cmp-b';
@@ -1081,7 +1081,7 @@ runInEachFileSystem(() => {
         // During the test, Dep's name is changed while keeping its public API the same. The test
         // verifies that Cmp is re-emitted.
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -1090,7 +1090,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('dep.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'dep',
@@ -1099,7 +1099,7 @@ runInEachFileSystem(() => {
           export class Dep {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -1112,7 +1112,7 @@ runInEachFileSystem(() => {
         env.driveMain();
 
         env.write('dep.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'dep',
@@ -1121,7 +1121,7 @@ runInEachFileSystem(() => {
           export class ChangedDep {} // Dep renamed to ChangedDep.
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           import {Cmp} from './cmp';
           import {ChangedDep} from './dep';
@@ -1151,7 +1151,7 @@ runInEachFileSystem(() => {
         // that is emitted into `Dir` does not inadvertently cause `cmp.ts` to be emitted even when
         // nothing changed.
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'dep',
@@ -1166,7 +1166,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp, Dep} from './cmp';
 
           @NgModule({
@@ -1194,7 +1194,7 @@ runInEachFileSystem(() => {
         // During the test, Dep's exported name is changed while keeping its declaration name the
         // same. The test verifies that Cmp is re-emitted.
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp',
@@ -1203,7 +1203,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('dep.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'dep',
@@ -1212,7 +1212,7 @@ runInEachFileSystem(() => {
           export class Dep {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dep} from './dep';
 
@@ -1225,7 +1225,7 @@ runInEachFileSystem(() => {
         env.driveMain();
 
         env.write('dep.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'dep',
@@ -1235,7 +1235,7 @@ runInEachFileSystem(() => {
           export {Dep as ChangedDep}; // the export name of Dep is changed.
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           import {Cmp} from './cmp';
           import {ChangedDep} from './dep';
@@ -1267,7 +1267,7 @@ runInEachFileSystem(() => {
         // is re-emitted.
 
         env.write('cmp-user.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp-user',
@@ -1276,7 +1276,7 @@ runInEachFileSystem(() => {
           export class CmpUser {}
         `);
         env.write('cmp-dep.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           export {CmpDep as CmpDepExport};
 
@@ -1287,7 +1287,7 @@ runInEachFileSystem(() => {
           class CmpDep {}
         `);
         env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {CmpUser} from './cmp-user';
           import {CmpDepExport} from './cmp-dep';
 
@@ -1305,7 +1305,7 @@ runInEachFileSystem(() => {
         expect(userCmpJs).toContain('CmpDepExport');
 
         env.write('cmp-dep.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           export {CmpDep as CmpDepExport2};
 
@@ -1316,7 +1316,7 @@ runInEachFileSystem(() => {
           class CmpDep {}
         `);
         env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {CmpUser} from './cmp-user';
           import {CmpDepExport2} from './cmp-dep';
 
@@ -1348,7 +1348,7 @@ runInEachFileSystem(() => {
 
       it('should not recompile components when a directive is changed into a component', () => {
         env.write('cmp-user.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp-user',
@@ -1357,7 +1357,7 @@ runInEachFileSystem(() => {
           export class CmpUser {}
         `);
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -1365,7 +1365,7 @@ runInEachFileSystem(() => {
           export class Dep {}
         `);
         env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {CmpUser} from './cmp-user';
           import {Dep} from './dep';
 
@@ -1377,7 +1377,7 @@ runInEachFileSystem(() => {
 
         env.driveMain();
         env.write('dep.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: '[dep]',
@@ -1409,7 +1409,7 @@ runInEachFileSystem(() => {
         // template is still valid. The test then verifies that CmpUser is re-emitted.
 
         env.write('cmp-user.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp-user',
@@ -1418,7 +1418,7 @@ runInEachFileSystem(() => {
           export class CmpUser {}
         `);
         env.write('dep.ts', `
-          import {Directive, Pipe} from '@angular/core';
+          import {Directive, Pipe} from '@angular-classic/core';
 
           @Directive({
             selector: 'dep',
@@ -1433,7 +1433,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {CmpUser} from './cmp-user';
           import {DepA, DepB} from './dep';
 
@@ -1449,7 +1449,7 @@ runInEachFileSystem(() => {
         // public API of these symbols to the prior program, the prior symbols are of a different
         // type (pipe vs directive) than the new symbols, which should lead to a re-emit.
         env.write('dep.ts', `
-          import {Directive, Pipe} from '@angular/core';
+          import {Directive, Pipe} from '@angular-classic/core';
 
           @Pipe({
             name: 'dep',
@@ -1486,7 +1486,7 @@ runInEachFileSystem(() => {
         // not re-emitted (as the public API of a directive and a component are the same).
 
         env.write('cmp-user.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp-user',
@@ -1495,7 +1495,7 @@ runInEachFileSystem(() => {
           export class CmpUser {}
         `);
         env.write('dep.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: '[dep]',
@@ -1504,7 +1504,7 @@ runInEachFileSystem(() => {
           export class Dep {}
         `);
         env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {CmpUser} from './cmp-user';
           import {Dep} from './dep';
 
@@ -1517,7 +1517,7 @@ runInEachFileSystem(() => {
         env.driveMain();
 
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dep]',
@@ -1553,7 +1553,7 @@ runInEachFileSystem(() => {
 
         env.write('cmp-a-template.html', `<cmp-b><cmp-b>`);
         env.write('cmp-a.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'cmp-a',
@@ -1563,7 +1563,7 @@ runInEachFileSystem(() => {
            `);
         env.write('cmp-b-template.html', `<cmp-a><cmp-a>`);
         env.write('cmp-b.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'cmp-b',
@@ -1572,7 +1572,7 @@ runInEachFileSystem(() => {
              export class MyCmpB {}
            `);
         env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {MyCmpA} from './cmp-a';
              import {MyCmpB} from './cmp-b';
 
@@ -1605,7 +1605,7 @@ runInEachFileSystem(() => {
 
         env.write('cmp-a-template.html', ``);
         env.write('cmp-a.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'cmp-a',
@@ -1615,7 +1615,7 @@ runInEachFileSystem(() => {
            `);
         env.write('cmp-b-template.html', `<cmp-a><cmp-a>`);
         env.write('cmp-b.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'cmp-b',
@@ -1624,7 +1624,7 @@ runInEachFileSystem(() => {
              export class MyCmpB {}
            `);
         env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {MyCmpA} from './cmp-a';
              import {MyCmpB} from './cmp-b';
 
@@ -1667,7 +1667,7 @@ runInEachFileSystem(() => {
 
         env.write('cmp-a-template.html', `<cmp-b><cmp-b>`);
         env.write('cmp-a.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'cmp-a',
@@ -1677,7 +1677,7 @@ runInEachFileSystem(() => {
            `);
         env.write('cmp-b-template.html', `<cmp-a><cmp-a>`);
         env.write('cmp-b.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'cmp-b',
@@ -1686,7 +1686,7 @@ runInEachFileSystem(() => {
              export class MyCmpB {}
            `);
         env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {MyCmpA} from './cmp-a';
              import {MyCmpB} from './cmp-b';
 
@@ -1730,7 +1730,7 @@ runInEachFileSystem(() => {
            // verifies.
 
            env.write('dir.ts', `
-               import {Directive} from '@angular/core';
+               import {Directive} from '@angular-classic/core';
 
                @Directive({
                  selector: '[dir]',
@@ -1739,7 +1739,7 @@ runInEachFileSystem(() => {
            `);
            env.write('cmp-a-template.html', `<cmp-b><cmp-b>`);
            env.write('cmp-a.ts', `
-               import {Component} from '@angular/core';
+               import {Component} from '@angular-classic/core';
 
                @Component({
                  selector: 'cmp-a',
@@ -1749,7 +1749,7 @@ runInEachFileSystem(() => {
              `);
            env.write('cmp-b-template.html', `<cmp-a><cmp-a>`);
            env.write('cmp-b.ts', `
-               import {Component} from '@angular/core';
+               import {Component} from '@angular-classic/core';
 
                @Component({
                  selector: 'cmp-b',
@@ -1758,7 +1758,7 @@ runInEachFileSystem(() => {
                export class MyCmpB {}
              `);
            env.write('mod.ts', `
-               import {NgModule} from '@angular/core';
+               import {NgModule} from '@angular-classic/core';
                import {MyCmpA} from './cmp-a';
                import {MyCmpB} from './cmp-b';
                import {Dir} from './dir';
@@ -1806,7 +1806,7 @@ runInEachFileSystem(() => {
 
         env.write('cmp-a-template.html', `<cmp-b><cmp-b> <cmp-c></cmp-c>`);
         env.write('cmp-a.ts', `
-           import {Component} from '@angular/core';
+           import {Component} from '@angular-classic/core';
 
            @Component({
              selector: 'cmp-a',
@@ -1816,7 +1816,7 @@ runInEachFileSystem(() => {
          `);
         env.write('cmp-b-template.html', `<cmp-a><cmp-a>`);
         env.write('cmp-b.ts', `
-           import {Component} from '@angular/core';
+           import {Component} from '@angular-classic/core';
 
            @Component({
              selector: 'cmp-b',
@@ -1827,7 +1827,7 @@ runInEachFileSystem(() => {
 
         env.write('cmp-c-template.html', ``);
         env.write('cmp-c.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'cmp-c',
@@ -1836,7 +1836,7 @@ runInEachFileSystem(() => {
         export class MyCmpC {}
       `);
         env.write('mod.ts', `
-           import {NgModule} from '@angular/core';
+           import {NgModule} from '@angular-classic/core';
            import {MyCmpA} from './cmp-a';
            import {MyCmpB} from './cmp-b';
            import {MyCmpC} from './cmp-c';
@@ -1889,7 +1889,7 @@ runInEachFileSystem(() => {
            // template. The test verifies that Cmp is re-emitted to account for this.
 
            env.write('dir.ts', `
-             import {Directive} from '@angular/core';
+             import {Directive} from '@angular-classic/core';
 
              @Directive({
                selector: '[dir]',
@@ -1898,7 +1898,7 @@ runInEachFileSystem(() => {
            `);
 
            env.write('cmp.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'test-cmp',
@@ -1908,7 +1908,7 @@ runInEachFileSystem(() => {
            `);
 
            env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {Cmp} from './cmp';
 
              @NgModule({
@@ -1921,7 +1921,7 @@ runInEachFileSystem(() => {
            env.flushWrittenFileTracking();
 
            env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {Cmp} from './cmp';
              import {Dir} from './dir';
 
@@ -1949,7 +1949,7 @@ runInEachFileSystem(() => {
            // in Cmp's template. The test verifies that Cmp is re-emitted as a result.
 
            env.write('dir.ts', `
-            import {Directive} from '@angular/core';
+            import {Directive} from '@angular-classic/core';
 
             @Directive({
               selector: '[dir]',
@@ -1958,7 +1958,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('cmp.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -1968,7 +1968,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('mod.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {Cmp} from './cmp';
             import {Dir} from './dir';
 
@@ -1982,7 +1982,7 @@ runInEachFileSystem(() => {
            env.flushWrittenFileTracking();
 
            env.write('mod.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {Cmp} from './cmp';
 
             @NgModule({
@@ -2011,7 +2011,7 @@ runInEachFileSystem(() => {
            // this.
 
            env.write('dir.ts', `
-            import {Directive} from '@angular/core';
+            import {Directive} from '@angular-classic/core';
 
             @Directive({
               selector: '[dir]',
@@ -2020,7 +2020,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('cmp.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2030,7 +2030,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('deep.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
 
             @NgModule({
               declarations: [],
@@ -2040,7 +2040,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Deep} from './deep';
 
@@ -2056,7 +2056,7 @@ runInEachFileSystem(() => {
 
 
            env.write('deep.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {Dir} from './dir';
 
             @NgModule({
@@ -2088,7 +2088,7 @@ runInEachFileSystem(() => {
            // Cmp's template. The test verifies that Cmp is re-emitted as a result.
 
            env.write('dir.ts', `
-            import {Directive} from '@angular/core';
+            import {Directive} from '@angular-classic/core';
 
             @Directive({
               selector: '[dir]',
@@ -2097,7 +2097,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('cmp.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2107,7 +2107,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('deep.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {Dir} from './dir';
 
             @NgModule({
@@ -2118,7 +2118,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('mod.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {Cmp} from './cmp';
             import {Deep} from './deep';
 
@@ -2133,7 +2133,7 @@ runInEachFileSystem(() => {
            env.flushWrittenFileTracking();
 
            env.write('deep.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
 
             @NgModule({
               declarations: [],
@@ -2164,7 +2164,7 @@ runInEachFileSystem(() => {
         // re-emitted.
 
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -2173,7 +2173,7 @@ runInEachFileSystem(() => {
         `);
 
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -2183,7 +2183,7 @@ runInEachFileSystem(() => {
         `);
 
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
 
           @NgModule({
@@ -2196,7 +2196,7 @@ runInEachFileSystem(() => {
         env.flushWrittenFileTracking();
 
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -2232,7 +2232,7 @@ runInEachFileSystem(() => {
            // Cmp's template. The test verifies that Cmp is re-emitted once the program is correct.
 
            env.write('cmp.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2242,7 +2242,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('mod.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {Cmp} from './cmp';
 
             @NgModule({
@@ -2255,7 +2255,7 @@ runInEachFileSystem(() => {
            env.flushWrittenFileTracking();
 
            env.write('mod.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {Cmp} from './cmp';
             import {Dir} from './dir';
 
@@ -2268,7 +2268,7 @@ runInEachFileSystem(() => {
            expect(env.driveDiagnostics().length).not.toBe(0);
 
            env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -2309,7 +2309,7 @@ runInEachFileSystem(() => {
         export const FOO = true;
       `);
       env.write('dir.ts', `
-        import {Directive, Input} from '@angular/core';
+        import {Directive, Input} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir]',
@@ -2320,7 +2320,7 @@ runInEachFileSystem(() => {
         }
       `);
       env.write('cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import './other';
 
         @Component({
@@ -2331,7 +2331,7 @@ runInEachFileSystem(() => {
       `);
 
       env.write('mod.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {Cmp} from './cmp';
         import {Dir} from './dir';
 
@@ -2345,7 +2345,7 @@ runInEachFileSystem(() => {
 
       env.flushWrittenFileTracking();
       env.write('dir.ts', `
-      import {Directive, Input} from '@angular/core';
+      import {Directive, Input} from '@angular-classic/core';
 
       @Directive({
         selector: '[dir]',

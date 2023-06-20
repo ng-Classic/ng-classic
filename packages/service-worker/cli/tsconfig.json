@@ -7,13 +7,13 @@
     "moduleResolution": "node",
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "outDir": "../../../dist/all/@angular/service-worker/cli-custom",
+    "outDir": "../../../dist/all/@angular-classic/service-worker/cli-custom",
     "noImplicitAny": true,
     "noImplicitOverride": true,
     "noFallthroughCasesInSwitch": true,
     "rootDir": ".",
     "paths": {
-      "@angular/service-worker/config": [
+      "@angular-classic/service-worker/config": [
         "../../../dist/packages/service-worker/config"
       ]
     },

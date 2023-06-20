@@ -6,16 +6,16 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatIconModule} from '@angular/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular/material/legacy-button';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular/material/legacy-tooltip';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatTreeModule} from '@angular/material/tree';
+import {DragDropModule} from '@angular-classic/cdk/drag-drop';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {FormsModule} from '@angular-classic/forms';
+import {MatExpansionModule} from '@angular-classic/material/expansion';
+import {MatIconModule} from '@angular-classic/material/icon';
+import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
+import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
+import {MatToolbarModule} from '@angular-classic/material/toolbar';
+import {MatTreeModule} from '@angular-classic/material/tree';
 
 import {PropertyEditorComponent} from './property-editor.component';
 import {PropertyPreviewComponent} from './property-preview.component';

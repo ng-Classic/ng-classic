@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-export {ɵgetDOM} from '@angular/common';
+export {ɵgetDOM} from '@angular-classic/common';
 export {initDomAdapter as ɵinitDomAdapter, INTERNAL_BROWSER_PLATFORM_PROVIDERS as ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS} from './browser';
 export {BrowserDomAdapter as ɵBrowserDomAdapter} from './browser/browser_adapter';
 export {BrowserGetTestability as ɵBrowserGetTestability} from './browser/testability';

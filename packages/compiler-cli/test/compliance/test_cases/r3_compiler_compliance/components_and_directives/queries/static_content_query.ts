@@ -1,4 +1,4 @@
-import {Component, ContentChild, ElementRef, NgModule} from '@angular/core';
+import {Component, ContentChild, ElementRef, NgModule} from '@angular-classic/core';
 
 import {SomeDirective} from './some.directive';
 

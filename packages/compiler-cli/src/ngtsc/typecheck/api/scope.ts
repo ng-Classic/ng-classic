@@ -13,7 +13,7 @@ import {ClassDeclaration} from '../../reflection';
 import {SymbolWithValueDeclaration} from '../../util/src/typescript';
 
 /**
- * A PotentialImport for some Angular trait has a TypeScript module specifier, which can be
+ * A PotentialImport for some Angular Classictrait has a TypeScript module specifier, which can be
  * relative, as well as an identifier name.
  */
 export interface PotentialImport {
@@ -25,7 +25,7 @@ export interface PotentialImport {
 }
 
 /**
- * Which kind of Angular Trait the import targets.
+ * Which kind of Angular ClassicTrait the import targets.
  */
 export enum PotentialImportKind {
   NgModule,

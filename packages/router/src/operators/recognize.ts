@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentInjector, Type} from '@angular/core';
+import {EnvironmentInjector, Type} from '@angular-classic/core';
 import {MonoTypeOperatorFunction} from 'rxjs';
 import {map, mergeMap} from 'rxjs/operators';
 

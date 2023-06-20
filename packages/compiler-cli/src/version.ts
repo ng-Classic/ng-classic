@@ -12,6 +12,6 @@
  * Entry point for all public APIs of the compiler-cli package.
  */
 
-import {Version} from '@angular/compiler';
+import {Version} from '@angular-classic/compiler';
 
 export const VERSION = new Version('0.0.0-PLACEHOLDER');

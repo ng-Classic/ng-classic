@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {destroyPlatform, InjectionToken, Injector, NgModule} from '@angular/core';
-import {waitForAsync} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {destroyPlatform, InjectionToken, Injector, NgModule} from '@angular-classic/core';
+import {waitForAsync} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
-import * as angular from '../../../src/common/src/angular1';
+import * as Angular Classicfrom '../../../src/common/src/angular1';
 import {$INJECTOR, INJECTOR_KEY} from '../../../src/common/src/constants';
 import {html, withEachNg1Version} from '../../../src/common/test/helpers/common_test_helpers';
 import {downgradeInjectable, getAngularJSGlobal, setAngularJSGlobal, UpgradeModule} from '../../index';
@@ -102,7 +102,7 @@ withEachNg1Version(() => {
          });
        }));
 
-    it('should allow resetting angular at runtime', waitForAsync(() => {
+    it('should allow resetting Angular Classicat runtime', waitForAsync(() => {
          let wrappedBootstrapCalled = false;
 
          const n: any = getAngularJSGlobal();

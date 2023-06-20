@@ -1,9 +1,9 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
-import { By } from '@angular/platform-browser';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { Clipboard } from '@angular/cdk/clipboard';
+import { Component, ViewChild, AfterViewInit } from '@angular-classic/core';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { MatLegacySnackBar as MatSnackBar } from '@angular-classic/material/legacy-snack-bar';
+import { By } from '@angular-classic/platform-browser';
+import { NoopAnimationsModule } from '@angular-classic/platform-browser/animations';
+import { Clipboard } from '@angular-classic/cdk/clipboard';
 
 import { CodeComponent } from './code.component';
 import { CodeModule } from './code.module';

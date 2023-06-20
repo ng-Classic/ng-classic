@@ -34,7 +34,7 @@ export class Xtb extends Serializer {
     const converter = new XmlToI18n();
 
     // Because we should be able to load xtb files that rely on features not supported by angular,
-    // we need to delay the conversion of html to i18n nodes so that non angular messages are not
+    // we need to delay the conversion of html to i18n nodes so that non Angular Classicmessages are not
     // converted
     Object.keys(msgIdToHtml).forEach(msgId => {
       const valueFn = function() {
@@ -91,7 +91,7 @@ class XtbParser implements ml.Visitor {
     this._msgIdToHtml = {};
 
     // We can not parse the ICU messages at this point as some messages might not originate
-    // from Angular that could not be lex'd.
+    // from Angular Classicthat could not be lex'd.
     const xml = new XmlParser().parse(xtb, url);
 
     this._errors = xml.errors;

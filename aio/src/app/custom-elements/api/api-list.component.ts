@@ -1,12 +1,12 @@
 /*
 * API List & Filter Component
 *
-* A page that displays a formatted list of the public Angular API entities.
+* A page that displays a formatted list of the public Angular ClassicAPI entities.
 * Clicking on a list item triggers navigation to the corresponding API entity document.
 * Can add/remove API entity links based on filter settings.
 */
 
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular-classic/core';
 
 import { combineLatest, Observable, ReplaySubject } from 'rxjs';
 

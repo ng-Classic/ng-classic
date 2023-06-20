@@ -40,7 +40,7 @@ module.exports = new Package('angular-base', [
   .processor(require('./processors/disambiguateDocPaths'))
   .processor(require('./processors/checkAbsoluteAioLinks'))
 
-  // overrides base packageInfo and returns the one for the 'angular/angular' repo.
+  // overrides base packageInfo and returns the one for the 'ng-classic/angular' repo.
   .factory('packageInfo', function() { return require(path.resolve(PROJECT_ROOT, 'package.json')); })
   .factory(require('./readers/json'))
   .factory(require('./services/copyFolder'))
@@ -102,7 +102,7 @@ module.exports = new Package('angular-base', [
       '${ doc.id }.template.json', '${ doc.docType }.template.json', 'common.template.html'
     ];
 
-    // Nunjucks and Angular conflict in their template bindings so change Nunjucks
+    // Nunjucks and Angular Classicconflict in their template bindings so change Nunjucks
     templateEngine.config.tags = {variableStart: '{$', variableEnd: '$}'};
 
     templateEngine.filters =

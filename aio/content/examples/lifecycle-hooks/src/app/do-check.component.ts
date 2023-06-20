@@ -1,5 +1,5 @@
 // #docregion
-import { Component, DoCheck, Input } from '@angular/core';
+import { Component, DoCheck, Input } from '@angular-classic/core';
 
 import { Hero } from './hero';
 

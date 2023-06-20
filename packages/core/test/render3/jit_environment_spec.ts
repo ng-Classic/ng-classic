@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ExternalReference} from '@angular/compiler';
-import {Identifiers} from '@angular/compiler/src/render3/r3_identifiers';
+import {ExternalReference} from '@angular-classic/compiler';
+import {Identifiers} from '@angular-classic/compiler/src/render3/r3_identifiers';
 
 import {angularCoreEnv} from '../../src/render3/jit/environment';
 

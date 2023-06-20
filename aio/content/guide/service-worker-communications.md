@@ -120,7 +120,7 @@ Subscribe to `SwUpdate#unrecoverable` to be notified and handle these errors.
 
 <code-example header="handle-unrecoverable-state.service.ts" path="service-worker-getting-started/src/app/handle-unrecoverable-state.service.ts" region="sw-unrecoverable-state"></code-example>
 
-## More on Angular service workers
+## More on Angular Classicservice workers
 
 You might also be interested in the following:
 

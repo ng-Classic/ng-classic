@@ -1,11 +1,11 @@
-load("@aio_npm//@angular-devkit/architect-cli:index.bzl", "architect", "architect_test")
+load("@aio_npm//@angular-classic-devkit/architect-cli:index.bzl", "architect", "architect_test")
 load("@build_bazel_rules_nodejs//:index.bzl", "copy_to_bin", "npm_package_bin")
 load("//tools:defaults.bzl", "nodejs_binary")
 load("@aspect_bazel_lib//lib:copy_to_directory.bzl", "copy_to_directory")
 load(":local_packages_util.bzl", "link_local_packages", "substitute_local_package_deps")
 load("@bazel_skylib//rules:common_settings.bzl", "bool_flag", "string_flag")
 load("//aio/scripts:local_server_test.bzl", "local_server_test")
-load("@aio_npm//@angular/build-tooling/bazel/remote-execution:index.bzl", "ENABLE_NETWORK")
+load("@aio_npm//@angular-classic/build-tooling/bazel/remote-execution:index.bzl", "ENABLE_NETWORK")
 load(":aio_targets.bzl", "aio_test")
 load("@bazel_skylib//lib:collections.bzl", "collections")
 
@@ -16,7 +16,7 @@ exports_files([
     "tsconfig.json",
 ])
 
-# If set will use first party angular deps for aio targets instead of their npm equivalent
+# If set will use first party Angular Classicdeps for aio targets instead of their npm equivalent
 bool_flag(
     name = "flag_aio_local_deps",
     build_setting_default = False,
@@ -72,11 +72,11 @@ config_setting(
 # Run dgeni generation
 npm_package_bin(
     name = "dgeni",
-    # angular.io-package is a js_library target, which copies sources to $(BINDIR)
-    args = ["./$(BINDIR)/aio/tools/transforms/angular.io-package"],
+    # angular-classic.com-package is a js_library target, which copies sources to $(BINDIR)
+    args = ["./$(BINDIR)/aio/tools/transforms/angular-classic.com-package"],
     data = [
-        "//aio/tools/transforms/angular.io-package",
-        # Dgeni typescript package crawls type definitions for Angular dependencies
+        "//aio/tools/transforms/angular-classic.com-package",
+        # Dgeni typescript package crawls type definitions for Angular Classicdependencies
         "@npm//rxjs",
         "@npm//@types/node",
     ],
@@ -93,7 +93,7 @@ npm_package_bin(
     ],
     tool = "@aio_npm//dgeni/bin:dgeni",
     toolchains = [
-        "@npm//@angular/build-tooling/bazel/git-toolchain:current_git_toolchain",
+        "@npm//@angular-classic/build-tooling/bazel/git-toolchain:current_git_toolchain",
     ],
     visibility = ["//aio/tests/deployment:__subpackages__"],
 )
@@ -148,22 +148,22 @@ APPLICATION_DEPS = [
     ":stackblitz",
     ":example-zips",
     "//aio/src/generated:ngsw-config",
-    "@aio_npm//@angular-devkit/build-angular",
-    "@aio_npm//@angular-eslint/builder",
-    "@aio_npm//@angular/animations",
-    "@aio_npm//@angular/cdk",
-    "@aio_npm//@angular/cli",
-    "@aio_npm//@angular/common",
-    "@aio_npm//@angular/compiler",
-    "@aio_npm//@angular/compiler-cli",
-    "@aio_npm//@angular/core",
-    "@aio_npm//@angular/elements",
-    "@aio_npm//@angular/forms",
-    "@aio_npm//@angular/material",
-    "@aio_npm//@angular/platform-browser",
-    "@aio_npm//@angular/platform-browser-dynamic",
-    "@aio_npm//@angular/router",
-    "@aio_npm//@angular/service-worker",
+    "@aio_npm//@angular-classic-devkit/build-angular",
+    "@aio_npm//@angular-classic-eslint/builder",
+    "@aio_npm//@angular-classic/animations",
+    "@aio_npm//@angular-classic/cdk",
+    "@aio_npm//@angular-classic/cli",
+    "@aio_npm//@angular-classic/common",
+    "@aio_npm//@angular-classic/compiler",
+    "@aio_npm//@angular-classic/compiler-cli",
+    "@aio_npm//@angular-classic/core",
+    "@aio_npm//@angular-classic/elements",
+    "@aio_npm//@angular-classic/forms",
+    "@aio_npm//@angular-classic/material",
+    "@aio_npm//@angular-classic/platform-browser",
+    "@aio_npm//@angular-classic/platform-browser-dynamic",
+    "@aio_npm//@angular-classic/router",
+    "@aio_npm//@angular-classic/service-worker",
     "@aio_npm//@types/lunr",
     "@aio_npm//@types/trusted-types",
     "@aio_npm//lunr",
@@ -183,7 +183,7 @@ TEST_FILES = APPLICATION_FILES + [
 
 # Dependencies required to test the docs app
 TEST_DEPS = APPLICATION_DEPS + [
-    "@aio_npm//@angular/build-tooling/bazel/browsers/chromium",
+    "@aio_npm//@angular-classic/build-tooling/bazel/browsers/chromium",
     "@aio_npm//@types/jasmine",
     "@aio_npm//@types/node",
     "@aio_npm//assert",
@@ -202,7 +202,7 @@ E2E_FILES = APPLICATION_FILES + glob(["tests/e2e/**"])
 
 # Dependencies required to run the e2e tests
 E2E_DEPS = APPLICATION_DEPS + [
-    "@aio_npm//@angular/build-tooling/bazel/browsers/chromium",
+    "@aio_npm//@angular-classic/build-tooling/bazel/browsers/chromium",
     "@aio_npm//@types/jasmine",
     "@aio_npm//@types/node",
     "@aio_npm//jasmine-spec-reporter",
@@ -322,7 +322,7 @@ architect_test(
     #       (presumably after AIO migration to Bazel)
     flaky = True,
     toolchains = [
-        "@aio_npm//@angular/build-tooling/bazel/browsers/chromium:toolchain_alias",
+        "@aio_npm//@angular-classic/build-tooling/bazel/browsers/chromium:toolchain_alias",
     ],
 )
 

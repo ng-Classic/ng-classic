@@ -1,4 +1,4 @@
-import {NgZone, Injectable} from '@angular/core';
+import {NgZone, Injectable} from '@angular-classic/core';
 import {connectable, Observable, race, ReplaySubject, timer} from 'rxjs';
 import {concatMap, first} from 'rxjs/operators';
 import {WebWorkerClient} from 'app/shared/web-worker';

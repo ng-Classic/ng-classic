@@ -1,5 +1,5 @@
 // #docregion
-import { CanDeactivateFn } from '@angular/router';
+import { CanDeactivateFn } from '@angular-classic/router';
 import { Observable } from 'rxjs';
 
 export interface CanComponentDeactivate {

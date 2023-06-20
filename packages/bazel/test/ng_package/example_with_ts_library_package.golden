@@ -26,9 +26,9 @@ utils
 Angular
 =======
 
-The sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.
+The sources for this package are in the main [Angular](https://github.com/ng-classic/angular) repo. Please file issues and pull requests against that repo.
 
-Usage information and reference details can be found in [Angular documentation](https://angular.io/docs).
+Usage information and reference details can be found in [Angular Classicdocumentation](https://angular-classic.com/docs).
 
 License: MIT
 
@@ -66,8 +66,8 @@ export * from './portal-module';
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class PortalModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: PortalModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
     static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "0.0.0", ngImport: i0, type: PortalModule }); }
@@ -117,8 +117,8 @@ export function dispatchFakeEvent(el, ev) {
 --- fesm2022/example-with-ts-library.mjs ---
 
 /**
- * @license Angular v0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * @license Angular Classicv0.0.0
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
@@ -131,13 +131,13 @@ export { VERSION };
 --- fesm2022/portal.mjs ---
 
 /**
- * @license Angular v0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * @license Angular Classicv0.0.0
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
-import * as i0 from '@angular/core';
-import { NgModule } from '@angular/core';
+import * as i0 from '@angular-classic/core';
+import { NgModule } from '@angular-classic/core';
 
 class PortalModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: PortalModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
@@ -161,8 +161,8 @@ export { PortalModule, a };
 --- fesm2022/utils.mjs ---
 
 /**
- * @license Angular v0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * @license Angular Classicv0.0.0
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
@@ -177,8 +177,8 @@ export { dispatchFakeEvent };
 --- index.d.ts ---
 
 /**
- * @license Angular v0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * @license Angular Classicv0.0.0
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
@@ -226,13 +226,13 @@ export { }
 --- portal/index.d.ts ---
 
 /**
- * @license Angular v0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * @license Angular Classicv0.0.0
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
 
-import * as i0 from '@angular/core';
+import * as i0 from '@angular-classic/core';
 
 export declare const a = 1;
 
@@ -248,8 +248,8 @@ export { }
 --- utils/index.d.ts ---
 
 /**
- * @license Angular v0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * @license Angular Classicv0.0.0
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 

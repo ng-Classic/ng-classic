@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {getSystemPath, normalize, virtualFs} from '@angular-devkit/core';
-import {TempScopedNodeJsSyncHost} from '@angular-devkit/core/node/testing';
-import {HostTree} from '@angular-devkit/schematics';
-import {SchematicTestRunner, UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getSystemPath, normalize, virtualFs} from '@angular-classic-devkit/core';
+import {TempScopedNodeJsSyncHost} from '@angular-classic-devkit/core/node/testing';
+import {HostTree} from '@angular-classic-devkit/schematics';
+import {SchematicTestRunner, UnitTestTree} from '@angular-classic-devkit/schematics/testing';
 import {runfiles} from '@bazel/runfiles';
 import shx from 'shelljs';
 
@@ -49,8 +49,8 @@ describe('standalone migration', () => {
       projects: {t: {root: '', architect: {build: {options: {tsConfig: './tsconfig.json'}}}}}
     }));
 
-    // We need to declare the Angular symbols we're testing for, otherwise type checking won't work.
-    writeFile('/node_modules/@angular/core/index.d.ts', `
+    // We need to declare the Angular Classicsymbols we're testing for, otherwise type checking won't work.
+    writeFile('/node_modules/@angular-classic/core/index.d.ts', `
       export declare class PlatformRef {
         bootstrapModule(module: any): any;
       }
@@ -58,14 +58,14 @@ describe('standalone migration', () => {
       export declare function forwardRef<T>(fn: () => T): T;
     `);
 
-    writeFile('/node_modules/@angular/platform-browser/index.d.ts', `
-      import {PlatformRef} from '@angular/core';
+    writeFile('/node_modules/@angular-classic/platform-browser/index.d.ts', `
+      import {PlatformRef} from '@angular-classic/core';
 
       export const platformBrowser: () => PlatformRef;
     `);
 
-    writeFile('/node_modules/@angular/platform-browser/animations/index.d.ts', `
-      import {ModuleWithProviders} from '@angular/core';
+    writeFile('/node_modules/@angular-classic/platform-browser/animations/index.d.ts', `
+      import {ModuleWithProviders} from '@angular-classic/core';
 
       export declare class BrowserAnimationsModule {
         static withConfig(config: any): ModuleWithProviders<BrowserAnimationsModule>;
@@ -74,14 +74,14 @@ describe('standalone migration', () => {
       export declare class NoopAnimationsModule {}
     `);
 
-    writeFile('/node_modules/@angular/platform-browser-dynamic/index.d.ts', `
-      import {PlatformRef} from '@angular/core';
+    writeFile('/node_modules/@angular-classic/platform-browser-dynamic/index.d.ts', `
+      import {PlatformRef} from '@angular-classic/core';
 
       export const platformBrowserDynamic: () => PlatformRef;
     `);
 
-    writeFile('/node_modules/@angular/common/index.d.ts', `
-      import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+    writeFile('/node_modules/@angular-classic/common/index.d.ts', `
+      import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
       export declare class NgIf {
         ngIf: any;
@@ -110,8 +110,8 @@ describe('standalone migration', () => {
       export {NgForOf as NgFor};
     `);
 
-    writeFile('/node_modules/@angular/router/index.d.ts', `
-      import {ModuleWithProviders, ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+    writeFile('/node_modules/@angular-classic/router/index.d.ts', `
+      import {ModuleWithProviders, ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
       export declare class RouterLink {
         // Router link is intentionally not standalone.
@@ -124,8 +124,8 @@ describe('standalone migration', () => {
       }
     `);
 
-    writeFile('/node_modules/@angular/common/http/index.d.ts', `
-      import {ModuleWithProviders} from '@angular/core';
+    writeFile('/node_modules/@angular-classic/common/http/index.d.ts', `
+      import {ModuleWithProviders} from '@angular-classic/core';
 
       export declare class HttpClientModule {
           static ɵfac: i0.ɵɵFactoryDeclaration<HttpClientModule, never>;
@@ -134,7 +134,7 @@ describe('standalone migration', () => {
       }
     `);
 
-    writeFile('/node_modules/@angular/core/testing/index.d.ts', `
+    writeFile('/node_modules/@angular-classic/core/testing/index.d.ts', `
       export declare class TestBed {
         static configureTestingModule(config: any): any;
       }
@@ -161,7 +161,7 @@ describe('standalone migration', () => {
     let error: string|null = null;
 
     writeFile('dir.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]'})
       export class MyDir {}
@@ -181,7 +181,7 @@ describe('standalone migration', () => {
     let error: string|null = null;
 
     writeFile('dir.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]'})
       export class MyDir {}
@@ -213,7 +213,7 @@ describe('standalone migration', () => {
 
   it('should create an `imports` array if the module does not have one already', async () => {
     writeFile('module.ts', `
-      import {NgModule, Directive} from '@angular/core';
+      import {NgModule, Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]'})
       export class MyDir {}
@@ -230,8 +230,8 @@ describe('standalone migration', () => {
 
   it('should combine the `declarations` array with a static `imports` array', async () => {
     writeFile('module.ts', `
-      import {NgModule, Directive} from '@angular/core';
-      import {CommonModule} from '@angular/common';
+      import {NgModule, Directive} from '@angular-classic/core';
+      import {CommonModule} from '@angular-classic/common';
 
       @Directive({selector: '[dir]'})
       export class MyDir {}
@@ -249,8 +249,8 @@ describe('standalone migration', () => {
   it('should combine a `declarations` array with a spread expression into the `imports`',
      async () => {
        writeFile('module.ts', `
-        import {NgModule, Directive} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {NgModule, Directive} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Directive({selector: '[dir]'})
         export class MyDir {}
@@ -274,8 +274,8 @@ describe('standalone migration', () => {
   it('should combine a `declarations` array with an `imports` array that has a spread expression',
      async () => {
        writeFile('module.ts', `
-        import {NgModule, Directive} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {NgModule, Directive} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Directive({selector: '[dir]'})
         export class MyDir {}
@@ -299,8 +299,8 @@ describe('standalone migration', () => {
   it('should use a spread expression if the `declarations` is an expression when combining with the `imports`',
      async () => {
        writeFile('module.ts', `
-        import {NgModule, Directive} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {NgModule, Directive} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Directive({selector: '[dir]'})
         export class MyDir {}
@@ -320,8 +320,8 @@ describe('standalone migration', () => {
   it('should use a spread expression if the `imports` is an expression when combining with the `declarations`',
      async () => {
        writeFile('module.ts', `
-        import {NgModule, Directive} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {NgModule, Directive} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Directive({selector: '[dir]'})
         export class MyDir {}
@@ -341,8 +341,8 @@ describe('standalone migration', () => {
   it('should use a spread expression if both the `declarations` and the `imports` are not static arrays',
      async () => {
        writeFile('module.ts', `
-        import {NgModule, Directive} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {NgModule, Directive} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Directive({selector: '[dir]'})
         export class MyDir {}
@@ -362,7 +362,7 @@ describe('standalone migration', () => {
 
   it('should convert a directive in the same file as its module to standalone', async () => {
     writeFile('module.ts', `
-      import {NgModule, Directive} from '@angular/core';
+      import {NgModule, Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]'})
       export class MyDir {}
@@ -383,7 +383,7 @@ describe('standalone migration', () => {
 
   it('should convert a pipe in the same file as its module to standalone', async () => {
     writeFile('module.ts', `
-      import {NgModule, Pipe} from '@angular/core';
+      import {NgModule, Pipe} from '@angular-classic/core';
 
       @Pipe({name: 'myPipe'})
       export class MyPipe {}
@@ -404,7 +404,7 @@ describe('standalone migration', () => {
 
   it('should only migrate declarations under a specific path', async () => {
     const content = `
-      import {NgModule, Directive} from '@angular/core';
+      import {NgModule, Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]'})
       export class MyDir {}
@@ -424,7 +424,7 @@ describe('standalone migration', () => {
 
   it('should convert a directive in a different file from its module to standalone', async () => {
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyDir} from './dir';
 
       @NgModule({declarations: [MyDir], exports: [MyDir]})
@@ -432,7 +432,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('dir.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]'})
       export class MyDir {}
@@ -448,7 +448,7 @@ describe('standalone migration', () => {
 
   it('should convert a component with no template dependencies to standalone', async () => {
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
 
       @NgModule({declarations: [MyComp], exports: [MyComp]})
@@ -456,7 +456,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: '<h1>Hello</h1>'})
       export class MyComp {}
@@ -477,7 +477,7 @@ describe('standalone migration', () => {
 
   it('should add imports to dependencies within the same module', async () => {
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {MyButton} from './button';
       import {MyTooltip} from './tooltip';
@@ -487,21 +487,21 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: '<my-button tooltip="Click me">Hello</my-button>'})
       export class MyComp {}
     `);
 
     writeFile('button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>'})
       export class MyButton {}
     `);
 
     writeFile('tooltip.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[tooltip]'})
       export class MyTooltip {}
@@ -533,7 +533,7 @@ describe('standalone migration', () => {
 
   it('should reuse existing import statements when adding imports to a component', async () => {
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {MyButton} from './button';
 
@@ -542,7 +542,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {helper} from './button';
 
       helper();
@@ -552,7 +552,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>'})
       export class MyButton {}
@@ -578,7 +578,7 @@ describe('standalone migration', () => {
   it('should refer to pre-existing standalone dependencies directly when adding to the `imports`',
      async () => {
        writeFile('module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {MyComp} from './comp';
         import {MyButton} from './button';
 
@@ -587,14 +587,14 @@ describe('standalone migration', () => {
       `);
 
        writeFile('comp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'my-comp', template: '<my-button>Hello</my-button>'})
         export class MyComp {}
       `);
 
        writeFile('button.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import {MyComp} from './comp';
 
         @Component({selector: 'my-button', template: '<ng-content></ng-content>', standalone: true})
@@ -620,7 +620,7 @@ describe('standalone migration', () => {
 
   it('should refer to dependencies being handled in the same migration directly', async () => {
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {ButtonModule} from './button.module';
 
@@ -629,7 +629,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyButton} from './button';
 
       @NgModule({declarations: [MyButton], exports: [MyButton]})
@@ -637,14 +637,14 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: '<my-button>Hello</my-button>'})
       export class MyComp {}
     `);
 
     writeFile('button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>'})
       export class MyButton {}
@@ -681,7 +681,7 @@ describe('standalone migration', () => {
   it('should refer to dependencies by their module if they have been excluded from the migration',
      async () => {
        writeFile('./should-migrate/module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {MyComp} from './comp';
         import {ButtonModule} from '../do-not-migrate/button.module';
 
@@ -690,7 +690,7 @@ describe('standalone migration', () => {
       `);
 
        writeFile('./do-not-migrate/button.module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {MyButton} from './button';
 
         @NgModule({declarations: [MyButton], exports: [MyButton]})
@@ -698,14 +698,14 @@ describe('standalone migration', () => {
       `);
 
        writeFile('./should-migrate/comp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'my-comp', template: '<my-button>Hello</my-button>'})
         export class MyComp {}
       `);
 
        writeFile('./do-not-migrate/button.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'my-button', template: '<ng-content></ng-content>'})
         export class MyButton {}
@@ -736,7 +736,7 @@ describe('standalone migration', () => {
 
   it('should add imports to dependencies within the same module', async () => {
     writeFile('module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {MyComp} from './comp';
         import {MyButton} from './button';
         import {MyTooltip} from './tooltip';
@@ -746,21 +746,21 @@ describe('standalone migration', () => {
       `);
 
     writeFile('comp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'my-comp', template: '<my-button tooltip="Click me">Hello</my-button>'})
         export class MyComp {}
       `);
 
     writeFile('button.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'my-button', template: '<ng-content></ng-content>'})
         export class MyButton {}
       `);
 
     writeFile('tooltip.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({selector: '[tooltip]'})
         export class MyTooltip {}
@@ -792,8 +792,8 @@ describe('standalone migration', () => {
 
   it('should add imports to external dependencies', async () => {
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
-      import {CommonModule} from '@angular/common';
+      import {NgModule} from '@angular-classic/core';
+      import {CommonModule} from '@angular-classic/common';
       import {MyComp, MyOtherComp} from './comp';
 
       @NgModule({imports: [CommonModule], declarations: [MyComp, MyOtherComp], exports: [MyComp]})
@@ -801,7 +801,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         selector: 'my-comp',
@@ -828,7 +828,7 @@ describe('standalone migration', () => {
 
     const myCompContent = tree.readContent('comp.ts');
 
-    expect(myCompContent).toContain(`import { NgFor, NgIf } from '@angular/common';`);
+    expect(myCompContent).toContain(`import { NgFor, NgIf } from '@angular-classic/common';`);
     expect(stripWhitespace(myCompContent)).toContain(stripWhitespace(`
       @Component({
         selector: 'my-comp',
@@ -856,7 +856,7 @@ describe('standalone migration', () => {
 
   it('should add imports to pipes that are used in the template', async () => {
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {MyPipe} from './pipe';
 
@@ -865,14 +865,14 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: '{{"hello" | myPipe}}'})
       export class MyComp {}
     `);
 
     writeFile('pipe.ts', `
-      import {Pipe} from '@angular/core';
+      import {Pipe} from '@angular-classic/core';
 
       @Pipe({name: 'myPipe'})
       export class MyPipe {
@@ -901,8 +901,8 @@ describe('standalone migration', () => {
 
   it('should migrate tests with an inline NgModule', async () => {
     writeFile('app.spec.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {TestBed} from '@angular/core/testing';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {TestBed} from '@angular-classic/core/testing';
 
       describe('bootstrapping an app', () => {
         it('should work', () => {
@@ -944,14 +944,14 @@ describe('standalone migration', () => {
 
   it('should migrate tests where the declaration is already standalone', async () => {
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'comp', template: '', standalone: true})
       export class MyComp {}
     `);
 
     writeFile('app.spec.ts', `
-      import {TestBed} from '@angular/core/testing';
+      import {TestBed} from '@angular-classic/core/testing';
       import {MyComp} from './comp';
 
       describe('bootstrapping an app', () => {
@@ -965,7 +965,7 @@ describe('standalone migration', () => {
     await runMigration('convert-to-standalone');
 
     expect(stripWhitespace(tree.readContent('app.spec.ts'))).toContain(stripWhitespace(`
-      import {TestBed} from '@angular/core/testing';
+      import {TestBed} from '@angular-classic/core/testing';
       import {MyComp} from './comp';
 
       describe('bootstrapping an app', () => {
@@ -979,7 +979,7 @@ describe('standalone migration', () => {
 
   it('should import the module that declares a template dependency', async () => {
     writeFile('./should-migrate/module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {ButtonModule} from '../do-not-migrate/button.module';
 
@@ -988,14 +988,14 @@ describe('standalone migration', () => {
     `);
 
     writeFile('./should-migrate/comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: '<my-button>Hello</my-button>'})
       export class MyComp {}
     `);
 
     writeFile('./do-not-migrate/button.module.ts', `
-      import {NgModule, forwardRef} from '@angular/core';
+      import {NgModule, forwardRef} from '@angular-classic/core';
       import {MyButton} from './button';
 
       @NgModule({
@@ -1009,7 +1009,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('./do-not-migrate/button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>'})
       export class MyButton {}
@@ -1025,7 +1025,7 @@ describe('standalone migration', () => {
 
   it('should not reference internal modules', async () => {
     writeFile('./should-migrate/module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {ɵButtonModule} from '../do-not-migrate/button.module';
 
@@ -1034,14 +1034,14 @@ describe('standalone migration', () => {
     `);
 
     writeFile('./should-migrate/comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: '<my-button>Hello</my-button>'})
       export class MyComp {}
     `);
 
     writeFile('./do-not-migrate/button.module.ts', `
-      import {NgModule, forwardRef} from '@angular/core';
+      import {NgModule, forwardRef} from '@angular-classic/core';
       import {MyButton} from './button';
 
       @NgModule({
@@ -1055,7 +1055,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('./do-not-migrate/button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>'})
       export class MyButton {}
@@ -1071,10 +1071,10 @@ describe('standalone migration', () => {
 
   it('should migrate tests with a component declared through TestBed', async () => {
     writeFile('app.spec.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {TestBed} from '@angular/core/testing';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {TestBed} from '@angular-classic/core/testing';
       import {ButtonModule} from './button.module';
-      import {MatCardModule} from '@angular/material/card';
+      import {MatCardModule} from '@angular-classic/material/card';
 
       describe('bootstrapping an app', () => {
         it('should work', () => {
@@ -1144,9 +1144,9 @@ describe('standalone migration', () => {
 
   it('should not add ModuleWithProviders imports to the `imports` in a test', async () => {
     writeFile('app.spec.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {TestBed} from '@angular/core/testing';
-      import {MatCardModule} from '@angular/material/card';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {TestBed} from '@angular-classic/core/testing';
+      import {MatCardModule} from '@angular-classic/material/card';
 
       describe('bootstrapping an app', () => {
         it('should work', () => {
@@ -1185,10 +1185,10 @@ describe('standalone migration', () => {
 
   it('should not change testing objects with no declarations', async () => {
     const initialContent = `
-      import {NgModule, Component} from '@angular/core';
-      import {TestBed} from '@angular/core/testing';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {TestBed} from '@angular-classic/core/testing';
       import {ButtonModule} from './button.module';
-      import {MatCardModule} from '@angular/material/card';
+      import {MatCardModule} from '@angular-classic/material/card';
 
       describe('bootstrapping an app', () => {
         it('should work', () => {
@@ -1213,10 +1213,10 @@ describe('standalone migration', () => {
 
   it('should migrate tests with a component declared through Catalyst', async () => {
     writeFile('app.spec.ts', `
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
       import {bootstrap, setupModule} from 'some_internal_path/angular/testing/catalyst';
       import {ButtonModule} from './button.module';
-      import {MatCardModule} from '@angular/material/card';
+      import {MatCardModule} from '@angular-classic/material/card';
 
       describe('bootstrapping an app', () => {
         it('should work', () => {
@@ -1287,10 +1287,10 @@ describe('standalone migration', () => {
   it('should not copy over the NoopAnimationsModule into the imports of a test component',
      async () => {
        writeFile('app.spec.ts', `
-          import {NgModule, Component} from '@angular/core';
-          import {TestBed} from '@angular/core/testing';
-          import {MatCardModule} from '@angular/material/card';
-          import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+          import {NgModule, Component} from '@angular-classic/core';
+          import {TestBed} from '@angular-classic/core/testing';
+          import {MatCardModule} from '@angular-classic/material/card';
+          import {NoopAnimationsModule} from '@angular-classic/platform-browser/animations';
 
           describe('bootstrapping an app', () => {
             it('should work', () => {
@@ -1325,10 +1325,10 @@ describe('standalone migration', () => {
   it('should not copy over the BrowserAnimationsModule into the imports of a test component',
      async () => {
        writeFile('app.spec.ts', `
-          import {NgModule, Component} from '@angular/core';
-          import {TestBed} from '@angular/core/testing';
-          import {MatCardModule} from '@angular/material/card';
-          import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+          import {NgModule, Component} from '@angular-classic/core';
+          import {TestBed} from '@angular-classic/core/testing';
+          import {MatCardModule} from '@angular-classic/material/card';
+          import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 
           describe('bootstrapping an app', () => {
             it('should work', () => {
@@ -1363,14 +1363,14 @@ describe('standalone migration', () => {
   it('should not move declarations that are not being migrated out of the declarations array',
      async () => {
        const appComponentContent = `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'app', template: ''})
         export class AppComponent {}
       `;
 
        const appModuleContent = `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {AppComponent} from './app.component';
 
         @NgModule({declarations: [AppComponent], bootstrap: [AppComponent]})
@@ -1381,10 +1381,10 @@ describe('standalone migration', () => {
        writeFile('app.module.ts', appModuleContent);
 
        writeFile('app.spec.ts', `
-        import {Component} from '@angular/core';
-        import {TestBed} from '@angular/core/testing';
+        import {Component} from '@angular-classic/core';
+        import {TestBed} from '@angular-classic/core/testing';
         import {ButtonModule} from './button.module';
-        import {MatCardModule} from '@angular/material/card';
+        import {MatCardModule} from '@angular-classic/material/card';
         import {AppComponent} from './app.component';
 
         describe('bootstrapping an app', () => {
@@ -1430,7 +1430,7 @@ describe('standalone migration', () => {
 
   it('should not migrate modules with a `bootstrap` array', async () => {
     const initialModule = `
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
 
       @Component({selector: 'root-comp', template: 'hello'})
       export class RootComp {}
@@ -1448,7 +1448,7 @@ describe('standalone migration', () => {
 
   it('should migrate a module with an empty `bootstrap` array', async () => {
     writeFile('module.ts', `
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
 
       @Component({selector: 'root-comp', template: 'hello'})
       export class RootComp {}
@@ -1460,7 +1460,7 @@ describe('standalone migration', () => {
     await runMigration('convert-to-standalone');
 
     expect(stripWhitespace(tree.readContent('module.ts'))).toBe(stripWhitespace(`
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
 
       @Component({selector: 'root-comp', template: 'hello', standalone: true})
       export class RootComp {}
@@ -1472,14 +1472,14 @@ describe('standalone migration', () => {
 
   it('should migrate declarations that are not being bootstrapped in a root module', async () => {
     writeFile('dir.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[foo]'})
       export class MyDir {}
     `);
 
     writeFile('module.ts', `
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
       import {MyDir} from './dir';
 
       @Component({selector: 'root-comp', template: 'hello'})
@@ -1492,14 +1492,14 @@ describe('standalone migration', () => {
     await runMigration('convert-to-standalone');
 
     expect(stripWhitespace(tree.readContent('dir.ts'))).toBe(stripWhitespace(`
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[foo]', standalone: true})
       export class MyDir {}
     `));
 
     expect(stripWhitespace(tree.readContent('module.ts'))).toBe(stripWhitespace(`
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
       import {MyDir} from './dir';
 
       @Component({selector: 'root-comp', template: 'hello'})
@@ -1512,7 +1512,7 @@ describe('standalone migration', () => {
 
   it('should generate a forwardRef for forward reference within the same file', async () => {
     writeFile('decls.ts', `
-      import {Component, Directive} from '@angular/core';
+      import {Component, Directive} from '@angular-classic/core';
 
       @Component({
         selector: 'comp',
@@ -1525,7 +1525,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp, MyDir} from './decls';
 
       @NgModule({declarations: [MyComp, MyDir]})
@@ -1535,7 +1535,7 @@ describe('standalone migration', () => {
     await runMigration('convert-to-standalone');
 
     expect(stripWhitespace(tree.readContent('decls.ts'))).toEqual(stripWhitespace(`
-      import {Component, Directive, forwardRef} from '@angular/core';
+      import {Component, Directive, forwardRef} from '@angular-classic/core';
 
       @Component({
         selector: 'comp',
@@ -1552,7 +1552,7 @@ describe('standalone migration', () => {
 
   it('should not generate a forwardRef for a self import', async () => {
     writeFile('decls.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         selector: 'comp',
@@ -1562,7 +1562,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './decls';
 
       @NgModule({declarations: [MyComp]})
@@ -1572,7 +1572,7 @@ describe('standalone migration', () => {
     await runMigration('convert-to-standalone');
 
     expect(stripWhitespace(tree.readContent('decls.ts'))).toEqual(stripWhitespace(`
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         selector: 'comp',
@@ -1585,8 +1585,8 @@ describe('standalone migration', () => {
 
   it('should not generate a forwardRef when adding an imported module dependency', async () => {
     writeFile('./comp.ts', `
-      import {Component, NgModule} from '@angular/core';
-      import {RouterModule} from '@angular/router';
+      import {Component, NgModule} from '@angular-classic/core';
+      import {RouterModule} from '@angular-classic/router';
 
       @Component({
         selector: 'comp',
@@ -1601,8 +1601,8 @@ describe('standalone migration', () => {
     await runMigration('convert-to-standalone');
 
     expect(stripWhitespace(tree.readContent('comp.ts'))).toEqual(stripWhitespace(`
-      import {Component, NgModule} from '@angular/core';
-      import {RouterModule} from '@angular/router';
+      import {Component, NgModule} from '@angular-classic/core';
+      import {RouterModule} from '@angular-classic/router';
 
       @Component({
         selector: 'comp',
@@ -1619,7 +1619,7 @@ describe('standalone migration', () => {
 
   it('should not duplicate doc strings', async () => {
     writeFile('module.ts', `
-      import {NgModule, Directive} from '@angular/core';
+      import {NgModule, Directive} from '@angular-classic/core';
 
       /** Directive used for testing. */
       @Directive({selector: '[dir]'})
@@ -1633,7 +1633,7 @@ describe('standalone migration', () => {
     await runMigration('convert-to-standalone');
 
     expect(stripWhitespace(tree.readContent('module.ts'))).toBe(stripWhitespace(`
-      import {NgModule, Directive} from '@angular/core';
+      import {NgModule, Directive} from '@angular-classic/core';
 
       /** Directive used for testing. */
       @Directive({selector: '[dir]', standalone: true})
@@ -1647,7 +1647,7 @@ describe('standalone migration', () => {
 
   it('should use the generated alias if a conflicting symbol already exists', async () => {
     writeFile('module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {MyButton} from './button';
 
@@ -1656,7 +1656,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {MyButton} from '@external/button';
 
       MyButton.sayHello();
@@ -1666,7 +1666,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>'})
       export class MyButton {}
@@ -1675,7 +1675,7 @@ describe('standalone migration', () => {
     await runMigration('convert-to-standalone');
 
     expect(stripWhitespace(tree.readContent('comp.ts'))).toBe(stripWhitespace(`
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {MyButton} from '@external/button';
       import {MyButton as MyButton_1} from './button';
 
@@ -1692,7 +1692,7 @@ describe('standalone migration', () => {
 
   it('should preserve the trailing comma when adding an `imports` array', async () => {
     writeFile('module.ts', `
-      import {NgModule, Directive} from '@angular/core';
+      import {NgModule, Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]'})
       export class MyDir {}
@@ -1716,9 +1716,9 @@ describe('standalone migration', () => {
 
   it('should preserve the trailing comma when adding to an existing `imports` array', async () => {
     writeFile('module.ts', `
-      import {NgModule, Directive} from '@angular/core';
-      import {CommonModule} from '@angular/common';
-      import {RouterModule} from '@angular/router';
+      import {NgModule, Directive} from '@angular-classic/core';
+      import {CommonModule} from '@angular-classic/common';
+      import {RouterModule} from '@angular-classic/router';
 
       @Directive({selector: '[dir]'})
       export class MyDir {}
@@ -1750,7 +1750,7 @@ describe('standalone migration', () => {
 
   it('should preserve the trailing comma when marking a directive as standalone', async () => {
     writeFile('module.ts', `
-      import {NgModule, Directive} from '@angular/core';
+      import {NgModule, Directive} from '@angular-classic/core';
 
       @Directive({
         selector: '[dir]',
@@ -1775,7 +1775,7 @@ describe('standalone migration', () => {
 
   it('should add a trailing comma when generating an imports array in a component', async () => {
     writeFile('module.ts', `
-      import {NgModule, Directive, Component} from '@angular/core';
+      import {NgModule, Directive, Component} from '@angular-classic/core';
 
       @Directive({selector: '[dir-one]'})
       export class DirOne {}
@@ -1814,7 +1814,7 @@ describe('standalone migration', () => {
 
   it('should remove a module that only has imports and exports', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {ButtonModule} from './button.module';
 
@@ -1823,7 +1823,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyButton} from './button';
 
       @NgModule({imports: [MyButton], exports: [MyButton]})
@@ -1831,14 +1831,14 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: '<my-button>Hello</my-button>'})
       export class MyComp {}
     `);
 
     writeFile('button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>', standalone: true})
       export class MyButton {}
@@ -1858,7 +1858,7 @@ describe('standalone migration', () => {
 
   it('should not remove a module that has declarations', async () => {
     const initialAppModule = `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {ButtonModule} from './button.module';
 
@@ -1868,7 +1868,7 @@ describe('standalone migration', () => {
 
     writeFile('app.module.ts', initialAppModule);
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: 'Hello'})
       export class MyComp {}
@@ -1881,7 +1881,7 @@ describe('standalone migration', () => {
 
   it('should not remove a module that bootstraps a component', async () => {
     const initialAppModule = `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {ButtonModule} from './button.module';
 
@@ -1891,7 +1891,7 @@ describe('standalone migration', () => {
 
     writeFile('app.module.ts', initialAppModule);
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: 'Hello'})
       export class MyComp {}
@@ -1904,7 +1904,7 @@ describe('standalone migration', () => {
 
   it('should not remove a module that has providers', async () => {
     const initialAppModule = `
-      import {NgModule, InjectionToken} from '@angular/core';
+      import {NgModule, InjectionToken} from '@angular-classic/core';
 
       const token = new InjectionToken('token');
 
@@ -1921,8 +1921,8 @@ describe('standalone migration', () => {
 
   it('should not remove a module that imports a ModuleWithProviders', async () => {
     const initialAppModule = `
-      import {NgModule} from '@angular/core';
-      import {RouterModule} from '@angular/router';
+      import {NgModule} from '@angular-classic/core';
+      import {RouterModule} from '@angular-classic/router';
 
       @NgModule({imports: [RouterModule.forRoot([])]})
       export class RoutingModule {}
@@ -1937,7 +1937,7 @@ describe('standalone migration', () => {
 
   it('should not remove a module that has class members', async () => {
     const initialAppModule = `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {ButtonModule} from './button.module';
 
       @NgModule()
@@ -1956,7 +1956,7 @@ describe('standalone migration', () => {
 
   it('should remove a module that only has an empty constructor', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {ButtonModule} from './button.module';
 
       @NgModule()
@@ -1972,7 +1972,7 @@ describe('standalone migration', () => {
 
   it('should remove a module with no arguments passed into NgModule', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
 
       @NgModule()
       export class AppModule {}
@@ -1984,7 +1984,7 @@ describe('standalone migration', () => {
 
   it('should remove a module file where there is unexported code', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
 
       const ONE = 1;
       const TWO = 2;
@@ -2002,7 +2002,7 @@ describe('standalone migration', () => {
   it('should remove a module that passes empty arrays into `declarations`, `providers` and `bootstrap`',
      async () => {
        writeFile('app.module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {ButtonModule} from './button.module';
 
           @NgModule({declarations: [], providers: [], bootstrap: []})
@@ -2015,14 +2015,14 @@ describe('standalone migration', () => {
 
   it('should remove a chain of modules that all depend on each other', async () => {
     writeFile('a.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
 
       @NgModule({})
       export class ModuleA {}
     `);
 
     writeFile('b.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {ModuleA} from './a.module';
 
       @NgModule({imports: [ModuleA]})
@@ -2030,7 +2030,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('c.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {ModuleB} from './b.module';
 
       @NgModule({imports: [ModuleB]})
@@ -2038,7 +2038,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyDir} from './dir';
       import {ModuleC} from './c.module';
 
@@ -2047,7 +2047,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('dir.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[myDir]'})
       export class MyDir {}
@@ -2070,7 +2070,7 @@ describe('standalone migration', () => {
   it('should not remove a chain of modules if a module in the chain cannot be removed because it has providers',
      async () => {
        const moduleAContent = `
-          import {NgModule, InjectionToken} from '@angular/core';
+          import {NgModule, InjectionToken} from '@angular-classic/core';
 
           export const token = new InjectionToken<any>('token');
 
@@ -2079,7 +2079,7 @@ describe('standalone migration', () => {
         `;
 
        const moduleBContent = `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {ModuleA} from './a.module';
 
           @NgModule({imports: [ModuleA]})
@@ -2087,7 +2087,7 @@ describe('standalone migration', () => {
         `;
 
        const moduleCContent = `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {ModuleB} from './b.module';
 
           @NgModule({imports: [ModuleB]})
@@ -2095,7 +2095,7 @@ describe('standalone migration', () => {
         `;
 
        const appModuleContent = `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {MyDir} from './dir';
           import {ModuleC} from './c.module';
 
@@ -2108,7 +2108,7 @@ describe('standalone migration', () => {
        writeFile('c.module.ts', moduleCContent);
        writeFile('app.module.ts', appModuleContent);
        writeFile('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({selector: '[myDir]'})
           export class MyDir {}
@@ -2125,14 +2125,14 @@ describe('standalone migration', () => {
   it('should not remove a chain of modules if a module in the chain cannot be removed because it is importing a ModuleWithProviders',
      async () => {
        const moduleAContent = `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           @NgModule({imports: [RouterModule.forRoot([{path: '/foo'}])]})
           export class ModuleA {}
         `;
 
        const moduleBContent = `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {ModuleA} from './a.module';
 
           @NgModule({imports: [ModuleA]})
@@ -2140,7 +2140,7 @@ describe('standalone migration', () => {
         `;
 
        const moduleCContent = `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {ModuleB} from './b.module';
 
           @NgModule({imports: [ModuleB]})
@@ -2148,7 +2148,7 @@ describe('standalone migration', () => {
         `;
 
        const appModuleContent = `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {MyDir} from './dir';
           import {ModuleC} from './c.module';
 
@@ -2161,7 +2161,7 @@ describe('standalone migration', () => {
        writeFile('c.module.ts', moduleCContent);
        writeFile('app.module.ts', appModuleContent);
        writeFile('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({selector: '[myDir]'})
           export class MyDir {}
@@ -2177,7 +2177,7 @@ describe('standalone migration', () => {
 
   it('should not remove the module file if it contains other exported code', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {sum, ButtonModule, multiply} from './button.module';
 
@@ -2188,7 +2188,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyButton} from './button';
 
       export function sum(a: number, b: number) {
@@ -2204,14 +2204,14 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: '<my-button>Hello</my-button>'})
       export class MyComp {}
     `);
 
     writeFile('button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>', standalone: true})
       export class MyButton {}
@@ -2220,7 +2220,7 @@ describe('standalone migration', () => {
     await runMigration('prune-ng-modules');
 
     expect(stripWhitespace(tree.readContent('button.module.ts'))).toBe(stripWhitespace(`
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyButton} from './button';
 
       export function sum(a: number, b: number) {
@@ -2232,7 +2232,7 @@ describe('standalone migration', () => {
       }
     `));
     expect(stripWhitespace(tree.readContent('app.module.ts'))).toBe(stripWhitespace(`
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {sum, multiply} from './button.module';
 
@@ -2245,7 +2245,7 @@ describe('standalone migration', () => {
 
   it('should delete a file that contains multiple modules that are being deleted', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {ButtonModule, TooltipModule} from './shared-modules';
 
@@ -2258,14 +2258,14 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: ''})
       export class MyComp {}
     `);
 
     writeFile('shared-modules.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyButton} from './button';
       import {MyTooltip} from './tooltip';
 
@@ -2277,14 +2277,14 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[my-button]' standalone: true})
       export class MyButton {}
     `);
 
     writeFile('tooltip.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[my-tooltip]' standalone: true})
       export class MyTooltip {}
@@ -2310,7 +2310,7 @@ describe('standalone migration', () => {
   it('should preserve an import that has one NgModule that is being deleted, in addition to a named import',
      async () => {
        writeFile('app.module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {MyComp} from './comp';
           import Foo, {ButtonModule} from './button.module';
 
@@ -2319,7 +2319,7 @@ describe('standalone migration', () => {
         `);
 
        writeFile('button.module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {MyButton} from './button';
 
           @NgModule({imports: [MyButton], exports: [MyButton]})
@@ -2327,14 +2327,14 @@ describe('standalone migration', () => {
         `);
 
        writeFile('comp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({selector: 'my-comp', template: '<my-button>Hello</my-button>'})
           export class MyComp {}
         `);
 
        writeFile('button.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({selector: 'my-button', template: '<ng-content></ng-content>', standalone: true})
           export class MyButton {}
@@ -2348,7 +2348,7 @@ describe('standalone migration', () => {
 
   it('should remove module references from export expressions', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
 
       @NgModule({imports: [MyComp]})
@@ -2356,7 +2356,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyButton} from './button';
 
       @NgModule({imports: [MyButton], exports: [MyButton]})
@@ -2364,7 +2364,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {MyButton} from './button';
 
       @Component({
@@ -2377,7 +2377,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>', standalone: true})
       export class MyButton {}
@@ -2402,7 +2402,7 @@ describe('standalone migration', () => {
 
   it('should remove barrel export if the corresponding file is deleted', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
 
       @NgModule({imports: [MyComp]})
@@ -2410,7 +2410,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyButton} from './button';
 
       @NgModule({imports: [MyButton], exports: [MyButton]})
@@ -2418,7 +2418,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {MyButton} from './button';
 
       @Component({
@@ -2431,7 +2431,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-button', template: '<ng-content></ng-content>', standalone: true})
       export class MyButton {}
@@ -2454,7 +2454,7 @@ describe('standalone migration', () => {
 
   it('should remove barrel files referring to other barrel files that were deleted', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyDir} from './dir';
 
       @NgModule({imports: [MyDir]})
@@ -2462,7 +2462,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('dir.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]', standalone: true})
       export class MyDir {}
@@ -2482,7 +2482,7 @@ describe('standalone migration', () => {
   it('should not delete dependent barrel files if they have some barrel exports that will not be removed',
      async () => {
        writeFile('app.module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {MyDir} from './dir';
 
         @NgModule({imports: [MyDir]})
@@ -2490,7 +2490,7 @@ describe('standalone migration', () => {
       `);
 
        writeFile('dir.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({selector: '[dir]', standalone: true})
         export class MyDir {}
@@ -2518,7 +2518,7 @@ describe('standalone migration', () => {
 
   it('should add a comment to locations that cannot be removed automatically', async () => {
     writeFile('app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
       import {ButtonModule} from './button.module';
 
@@ -2535,14 +2535,14 @@ describe('standalone migration', () => {
     `);
 
     writeFile('button.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
 
       @NgModule()
       export class ButtonModule {}
     `);
 
     writeFile('comp.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'my-comp', template: 'Hello'})
       export class MyComp {}
@@ -2552,7 +2552,7 @@ describe('standalone migration', () => {
 
     expect(tree.exists('button.module.ts')).toBe(false);
     expect(stripWhitespace(tree.readContent('app.module.ts'))).toBe(stripWhitespace(`
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {MyComp} from './comp';
 
       console.log( /* TODO(standalone-migration): clean up removed NgModule reference manually. */ ButtonModule);
@@ -2570,9 +2570,9 @@ describe('standalone migration', () => {
 
   it('should preserve the trailing comma when deleting a module', async () => {
     const initialAppModule = `
-      import {NgModule, InjectionToken} from '@angular/core';
-      import {CommonModule} from '@angular/common';
-      import {RouterModule} from '@angular/router';
+      import {NgModule, InjectionToken} from '@angular-classic/core';
+      import {CommonModule} from '@angular-classic/common';
+      import {RouterModule} from '@angular-classic/router';
 
       const token = new InjectionToken('token');
 
@@ -2608,13 +2608,13 @@ describe('standalone migration', () => {
   it('should switch a platformBrowser().bootstrapModule call to bootstrapApplication', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -2627,13 +2627,13 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
 
       bootstrapApplication(AppComponent).catch(e => console.error(e));
     `));
 
     expect(stripWhitespace(tree.readContent('./app/app.module.ts'))).toBe(stripWhitespace(`
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
 
       @Component({template: 'hello', standalone: true})
       export class AppComponent {}
@@ -2644,13 +2644,13 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
           import {AppModule} from './app/app.module';
-          import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+          import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
           platformBrowserDynamic().bootstrapModule(AppModule).catch(e => console.error(e));
         `);
 
        writeFile('./app/app.module.ts', `
-          import {NgModule, Component} from '@angular/core';
+          import {NgModule, Component} from '@angular-classic/core';
 
           @Component({template: 'hello'})
           export class AppComponent {}
@@ -2663,14 +2663,14 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
           import {AppComponent} from './app/app.module';
-          import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-          import {bootstrapApplication} from '@angular/platform-browser';
+          import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+          import {bootstrapApplication} from '@angular-classic/platform-browser';
 
           bootstrapApplication(AppComponent).catch(e => console.error(e));
         `));
 
        expect(stripWhitespace(tree.readContent('./app/app.module.ts'))).toBe(stripWhitespace(`
-          import {NgModule, Component} from '@angular/core';
+          import {NgModule, Component} from '@angular-classic/core';
 
           @Component({template: 'hello', standalone: true})
           export class AppComponent {}
@@ -2680,7 +2680,7 @@ describe('standalone migration', () => {
   it('should switch a PlatformRef.bootstrapModule call to bootstrapApplication', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {PlatformRef} from '@angular/core';
+      import {PlatformRef} from '@angular-classic/core';
 
       const foo: PlatformRef = null!;
 
@@ -2688,7 +2688,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -2701,8 +2701,8 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {PlatformRef} from '@angular/core';
-      import {bootstrapApplication} from '@angular/platform-browser';
+      import {PlatformRef} from '@angular-classic/core';
+      import {bootstrapApplication} from '@angular-classic/platform-browser';
 
       const foo: PlatformRef = null!;
 
@@ -2710,7 +2710,7 @@ describe('standalone migration', () => {
     `));
 
     expect(stripWhitespace(tree.readContent('./app/app.module.ts'))).toBe(stripWhitespace(`
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
 
       @Component({template: 'hello', standalone: true})
       export class AppComponent {}
@@ -2720,13 +2720,13 @@ describe('standalone migration', () => {
   it('should convert the root module declarations to standalone', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.component.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({template: '<div *ngIf="show" dir>hello</div>'})
       export class AppComponent {
@@ -2735,15 +2735,15 @@ describe('standalone migration', () => {
     `);
 
     writeFile('./app/dir.ts', `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]'})
       export class Dir {}
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule} from '@angular/core';
-      import {CommonModule} from '@angular/common';
+      import {NgModule} from '@angular-classic/core';
+      import {CommonModule} from '@angular-classic/common';
       import {AppComponent} from './app.component';
       import {Dir} from './dir';
 
@@ -2759,10 +2759,10 @@ describe('standalone migration', () => {
 
     expect(tree.exists('./app/app.module.ts')).toBe(false);
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {importProvidersFrom} from '@angular/core';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {importProvidersFrom} from '@angular-classic/core';
       import {AppComponent} from './app/app.component';
-      import {CommonModule} from '@angular/common';
+      import {CommonModule} from '@angular-classic/common';
 
       bootstrapApplication(AppComponent, {
         providers: [importProvidersFrom(CommonModule)]
@@ -2770,9 +2770,9 @@ describe('standalone migration', () => {
     `));
 
     expect(stripWhitespace(tree.readContent('./app/app.component.ts'))).toBe(stripWhitespace(`
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {Dir} from './dir';
-      import {NgIf} from '@angular/common';
+      import {NgIf} from '@angular-classic/common';
 
       @Component({
         template: '<div *ngIf="show" dir>hello</div>',
@@ -2785,7 +2785,7 @@ describe('standalone migration', () => {
     `));
 
     expect(stripWhitespace(tree.readContent('./app/dir.ts'))).toBe(stripWhitespace(`
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: '[dir]', standalone: true})
       export class Dir {}
@@ -2795,20 +2795,20 @@ describe('standalone migration', () => {
   it('should migrate the root component tests when converting to standalone', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.component.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({template: 'hello'})
       export class AppComponent {}
     `);
 
     writeFile('./app/app.component.spec.ts', `
-      import {TestBed} from '@angular/core/testing';
+      import {TestBed} from '@angular-classic/core/testing';
       import {AppComponent} from './app.component';
 
       describe('bootstrapping an app', () => {
@@ -2821,7 +2821,7 @@ describe('standalone migration', () => {
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {AppComponent} from './app.component';
 
       @NgModule({declarations: [AppComponent], bootstrap: [AppComponent]})
@@ -2831,14 +2831,14 @@ describe('standalone migration', () => {
     await runMigration('standalone-bootstrap');
 
     expect(stripWhitespace(tree.readContent('./app/app.component.ts'))).toBe(stripWhitespace(`
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({template: 'hello', standalone: true})
       export class AppComponent {}
     `));
 
     expect(stripWhitespace(tree.readContent('./app/app.component.spec.ts'))).toBe(stripWhitespace(`
-      import {TestBed} from '@angular/core/testing';
+      import {TestBed} from '@angular-classic/core/testing';
       import {AppComponent} from './app.component';
 
       describe('bootstrapping an app', () => {
@@ -2854,13 +2854,13 @@ describe('standalone migration', () => {
   it('should copy providers and the symbols they depend on to the main file', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component, InjectionToken} from '@angular/core';
+      import {NgModule, Component, InjectionToken} from '@angular-classic/core';
       import {externalToken} from './externals/token';
       import {externalToken as aliasedExternalToken} from './externals/other-token';
       import {ExternalInterface} from '@external/interfaces';
@@ -2906,12 +2906,12 @@ describe('standalone migration', () => {
     // The schematic optimizes for safety, rather than avoiding unused imports.
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {exportedToken, exportedExtraProviders, ExportedClass, exportedFactory, AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
       import {ExternalInterface} from '@external/interfaces';
       import {externalToken as aliasedExternalToken} from './app/externals/other-token';
       import {externalToken} from './app/externals/token';
       import {InternalInterface} from './app/interfaces/internal-interface';
-      import {InjectionToken} from '@angular/core';
+      import {InjectionToken} from '@angular-classic/core';
 
       const internalToken = new InjectionToken<string>('internalToken');
       const unexportedExtraProviders = [
@@ -2930,7 +2930,7 @@ describe('standalone migration', () => {
     `));
 
     expect(stripWhitespace(tree.readContent('./app/app.module.ts'))).toBe(stripWhitespace(`
-      import {NgModule, Component, InjectionToken} from '@angular/core';
+      import {NgModule, Component, InjectionToken} from '@angular-classic/core';
       import {externalToken} from './externals/token';
       import {externalToken as aliasedExternalToken} from './externals/other-token';
       import {ExternalInterface} from '@external/interfaces';
@@ -2961,13 +2961,13 @@ describe('standalone migration', () => {
   it('should not copy over non-declaration references to the main file', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component, InjectionToken} from '@angular/core';
+      import {NgModule, Component, InjectionToken} from '@angular-classic/core';
 
       export const token = new InjectionToken<string>('token');
 
@@ -2988,8 +2988,8 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {token, AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {InjectionToken} from '@angular/core';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {InjectionToken} from '@angular-classic/core';
 
       bootstrapApplication(AppComponent, {
         providers: [{ provide: token, useValue: 'hello' }]
@@ -2997,7 +2997,7 @@ describe('standalone migration', () => {
     `));
 
     expect(stripWhitespace(tree.readContent('./app/app.module.ts'))).toBe(stripWhitespace(`
-      import {NgModule, Component, InjectionToken} from '@angular/core';
+      import {NgModule, Component, InjectionToken} from '@angular-classic/core';
 
       export const token = new InjectionToken<string>('token');
 
@@ -3012,14 +3012,14 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
           import {AppModule} from './app/app.module';
-          import {platformBrowser} from '@angular/platform-browser';
+          import {platformBrowser} from '@angular-classic/platform-browser';
 
           platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
         `);
 
        writeFile('./app/app.module.ts', `
-          import {NgModule, Component} from '@angular/core';
-          import {ROUTES} from '@angular/router';
+          import {NgModule, Component} from '@angular-classic/core';
+          import {ROUTES} from '@angular-classic/router';
 
           @Component({template: 'hello'})
           export class AppComponent {}
@@ -3042,8 +3042,8 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
           import {AppComponent} from './app/app.module';
-          import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-          import {ROUTES} from '@angular/router';
+          import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+          import {ROUTES} from '@angular-classic/router';
 
           bootstrapApplication(AppComponent, {
             providers: [{
@@ -3061,18 +3061,18 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
         import {AppModule} from './app/app.module';
-        import {platformBrowser} from '@angular/platform-browser';
+        import {platformBrowser} from '@angular-classic/platform-browser';
 
         platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
       `);
 
        writeFile('token.ts', `
-        import {InjectionToken} from '@angular/core';
+        import {InjectionToken} from '@angular-classic/core';
         export const token = new InjectionToken<string>('token');
       `);
 
        writeFile('./modules/internal.module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {token} from '../token';
 
         @NgModule({providers: [{provide: token, useValue: 'InternalModule'}]})
@@ -3080,8 +3080,8 @@ describe('standalone migration', () => {
       `);
 
        writeFile('./app/app.module.ts', `
-        import {NgModule, Component} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {NgModule, Component} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
         import {InternalModule} from '../modules/internal.module';
         import {token} from '../token';
 
@@ -3103,11 +3103,11 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
         import {SameFileModule, AppComponent} from './app/app.module';
-        import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
+        import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
         import {token} from './token';
-        import {NgModule, importProvidersFrom} from '@angular/core';
+        import {NgModule, importProvidersFrom} from '@angular-classic/core';
         import {InternalModule} from './modules/internal.module';
-        import {CommonModule} from '@angular/common';
+        import {CommonModule} from '@angular-classic/common';
 
         bootstrapApplication(AppComponent, {
           providers: [importProvidersFrom(CommonModule, InternalModule, SameFileModule)]
@@ -3118,14 +3118,14 @@ describe('standalone migration', () => {
   it('should switch RouterModule.forRoot calls with one argument to provideRouter', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {RouterModule} from '@angular/router';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {RouterModule} from '@angular-classic/router';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -3147,8 +3147,8 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {provideRouter} from '@angular/router';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {provideRouter} from '@angular-classic/router';
 
       bootstrapApplication(AppComponent, {
         providers: [provideRouter([
@@ -3162,14 +3162,14 @@ describe('standalone migration', () => {
   it('should migrate a RouterModule.forRoot call with an empty config', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {RouterModule} from '@angular/router';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {RouterModule} from '@angular-classic/router';
       import {APP_ROUTES} from './routes';
 
       @Component({template: 'hello'})
@@ -3187,9 +3187,9 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
       import {APP_ROUTES} from './app/routes';
-      import {provideRouter} from '@angular/router';
+      import {provideRouter} from '@angular-classic/router';
 
       bootstrapApplication(AppComponent, {
         providers: [provideRouter(APP_ROUTES)]
@@ -3200,14 +3200,14 @@ describe('standalone migration', () => {
   it('should migrate a router config with a preloadingStrategy to withPreloading', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {RouterModule} from '@angular/router';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {RouterModule} from '@angular-classic/router';
       import {of} from 'rxjs';
 
       @Component({template: 'hello'})
@@ -3227,9 +3227,9 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
       import {of} from 'rxjs';
-      import {withPreloading, provideRouter} from '@angular/router';
+      import {withPreloading, provideRouter} from '@angular-classic/router';
 
       bootstrapApplication(AppComponent, {
         providers: [provideRouter([], withPreloading(() => of(true)))]
@@ -3240,14 +3240,14 @@ describe('standalone migration', () => {
   it('should migrate a router config with enableTracing to withDebugTracing', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {RouterModule} from '@angular/router';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {RouterModule} from '@angular-classic/router';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -3266,8 +3266,8 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {withDebugTracing, provideRouter} from '@angular/router';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {withDebugTracing, provideRouter} from '@angular-classic/router';
 
       bootstrapApplication(AppComponent, {
         providers: [provideRouter([], withDebugTracing())]
@@ -3279,14 +3279,14 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
           import {AppModule} from './app/app.module';
-          import {platformBrowser} from '@angular/platform-browser';
+          import {platformBrowser} from '@angular-classic/platform-browser';
 
           platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
         `);
 
        writeFile('./app/app.module.ts', `
-          import {NgModule, Component} from '@angular/core';
-          import {RouterModule} from '@angular/router';
+          import {NgModule, Component} from '@angular-classic/core';
+          import {RouterModule} from '@angular-classic/router';
 
           @Component({template: 'hello'})
           export class AppComponent {}
@@ -3305,8 +3305,8 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
           import {AppComponent} from './app/app.module';
-          import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-          import {withEnabledBlockingInitialNavigation, provideRouter} from '@angular/router';
+          import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+          import {withEnabledBlockingInitialNavigation, provideRouter} from '@angular-classic/router';
 
           bootstrapApplication(AppComponent, {
             providers: [provideRouter([], withEnabledBlockingInitialNavigation())]
@@ -3318,14 +3318,14 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
           import {AppModule} from './app/app.module';
-          import {platformBrowser} from '@angular/platform-browser';
+          import {platformBrowser} from '@angular-classic/platform-browser';
 
           platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
         `);
 
        writeFile('./app/app.module.ts', `
-          import {NgModule, Component} from '@angular/core';
-          import {RouterModule} from '@angular/router';
+          import {NgModule, Component} from '@angular-classic/core';
+          import {RouterModule} from '@angular-classic/router';
 
           @Component({template: 'hello'})
           export class AppComponent {}
@@ -3344,8 +3344,8 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
           import {AppComponent} from './app/app.module';
-          import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-          import {withEnabledBlockingInitialNavigation, provideRouter} from '@angular/router';
+          import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+          import {withEnabledBlockingInitialNavigation, provideRouter} from '@angular-classic/router';
 
           bootstrapApplication(AppComponent, {
             providers: [provideRouter([], withEnabledBlockingInitialNavigation())]
@@ -3357,14 +3357,14 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
           import {AppModule} from './app/app.module';
-          import {platformBrowser} from '@angular/platform-browser';
+          import {platformBrowser} from '@angular-classic/platform-browser';
 
           platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
         `);
 
        writeFile('./app/app.module.ts', `
-          import {NgModule, Component} from '@angular/core';
-          import {RouterModule} from '@angular/router';
+          import {NgModule, Component} from '@angular-classic/core';
+          import {RouterModule} from '@angular-classic/router';
 
           @Component({template: 'hello'})
           export class AppComponent {}
@@ -3383,8 +3383,8 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
           import {AppComponent} from './app/app.module';
-          import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-          import {withDisabledInitialNavigation, provideRouter} from '@angular/router';
+          import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+          import {withDisabledInitialNavigation, provideRouter} from '@angular-classic/router';
 
           bootstrapApplication(AppComponent, {
             providers: [provideRouter([], withDisabledInitialNavigation())]
@@ -3395,14 +3395,14 @@ describe('standalone migration', () => {
   it('should migrate a router config with useHash to withHashLocation', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {RouterModule} from '@angular/router';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {RouterModule} from '@angular-classic/router';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -3421,8 +3421,8 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {withHashLocation, provideRouter} from '@angular/router';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {withHashLocation, provideRouter} from '@angular-classic/router';
 
       bootstrapApplication(AppComponent, {
         providers: [provideRouter([], withHashLocation())]
@@ -3433,14 +3433,14 @@ describe('standalone migration', () => {
   it('should migrate a router config with errorHandler to withNavigationErrorHandler', async () => {
     writeFile('main.ts', `
           import {AppModule} from './app/app.module';
-          import {platformBrowser} from '@angular/platform-browser';
+          import {platformBrowser} from '@angular-classic/platform-browser';
 
           platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
         `);
 
     writeFile('./app/app.module.ts', `
-          import {NgModule, Component} from '@angular/core';
-          import {RouterModule} from '@angular/router';
+          import {NgModule, Component} from '@angular-classic/core';
+          import {RouterModule} from '@angular-classic/router';
 
           @Component({template: 'hello'})
           export class AppComponent {}
@@ -3459,8 +3459,8 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
           import {AppComponent} from './app/app.module';
-          import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-          import {withNavigationErrorHandler, provideRouter} from '@angular/router';
+          import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+          import {withNavigationErrorHandler, provideRouter} from '@angular-classic/router';
 
           bootstrapApplication(AppComponent, {
             providers: [provideRouter([], withNavigationErrorHandler(() => {}))]
@@ -3472,14 +3472,14 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
           import {AppModule} from './app/app.module';
-          import {platformBrowser} from '@angular/platform-browser';
+          import {platformBrowser} from '@angular-classic/platform-browser';
 
           platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
         `);
 
        writeFile('./app/app.module.ts', `
-          import {NgModule, Component} from '@angular/core';
-          import {RouterModule} from '@angular/router';
+          import {NgModule, Component} from '@angular-classic/core';
+          import {RouterModule} from '@angular-classic/router';
 
           @Component({template: 'hello'})
           export class AppComponent {}
@@ -3499,8 +3499,8 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
           import {AppComponent} from './app/app.module';
-          import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-          import {withInMemoryScrolling, provideRouter} from '@angular/router';
+          import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+          import {withInMemoryScrolling, provideRouter} from '@angular-classic/router';
 
           bootstrapApplication(AppComponent, {
             providers: [provideRouter([], withInMemoryScrolling({
@@ -3514,14 +3514,14 @@ describe('standalone migration', () => {
   it('should copy properties that do not map to a feature into withRouterConfig', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {RouterModule} from '@angular/router';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {RouterModule} from '@angular-classic/router';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -3542,8 +3542,8 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {withHashLocation, withRouterConfig, provideRouter} from '@angular/router';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {withHashLocation, withRouterConfig, provideRouter} from '@angular-classic/router';
 
       bootstrapApplication(AppComponent, {
         providers: [provideRouter([], withHashLocation(), withRouterConfig({
@@ -3558,14 +3558,14 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
         import {AppModule} from './app/app.module';
-        import {platformBrowser} from '@angular/platform-browser';
+        import {platformBrowser} from '@angular-classic/platform-browser';
 
         platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
       `);
 
        writeFile('./app/app.module.ts', `
-        import {NgModule, Component} from '@angular/core';
-        import {RouterModule} from '@angular/router';
+        import {NgModule, Component} from '@angular-classic/core';
+        import {RouterModule} from '@angular-classic/router';
 
         @Component({template: 'hello'})
         export class AppComponent {}
@@ -3587,9 +3587,9 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
         import {AppComponent} from './app/app.module';
-        import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-        import {importProvidersFrom} from '@angular/core';
-        import {RouterModule} from '@angular/router';
+        import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+        import {importProvidersFrom} from '@angular-classic/core';
+        import {RouterModule} from '@angular-classic/router';
 
         const extraOptions = {useHash: true};
 
@@ -3605,14 +3605,14 @@ describe('standalone migration', () => {
   it('should convert BrowserAnimationsModule references to provideAnimations', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -3629,8 +3629,8 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {provideAnimations} from '@angular/platform-browser/animations';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {provideAnimations} from '@angular-classic/platform-browser/animations';
 
       bootstrapApplication(AppComponent, {
         providers: [provideAnimations()]
@@ -3641,14 +3641,14 @@ describe('standalone migration', () => {
   it('should preserve BrowserAnimationsModule.withConfig calls', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -3665,9 +3665,9 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {importProvidersFrom} from '@angular/core';
-      import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {importProvidersFrom} from '@angular-classic/core';
+      import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 
       bootstrapApplication(AppComponent, {
         providers: [importProvidersFrom(BrowserAnimationsModule.withConfig({disableAnimations: true}))]
@@ -3678,14 +3678,14 @@ describe('standalone migration', () => {
   it('should convert NoopAnimationsModule references to provideNoopAnimations', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {NoopAnimationsModule} from '@angular-classic/platform-browser/animations';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -3702,8 +3702,8 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {provideNoopAnimations} from '@angular/platform-browser/animations';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {provideNoopAnimations} from '@angular-classic/platform-browser/animations';
 
       bootstrapApplication(AppComponent, {
         providers: [provideNoopAnimations()]
@@ -3715,14 +3715,14 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
        writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
-      import {HttpClientModule} from '@angular/common/http';
+      import {NgModule, Component} from '@angular-classic/core';
+      import {HttpClientModule} from '@angular-classic/common/http';
 
       @Component({template: 'hello'})
       export class AppComponent {}
@@ -3739,8 +3739,8 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-      import {withInterceptorsFromDi, provideHttpClient} from '@angular/common/http';
+      import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+      import {withInterceptorsFromDi, provideHttpClient} from '@angular-classic/common/http';
 
       bootstrapApplication(AppComponent, {
         providers: [provideHttpClient(withInterceptorsFromDi())]
@@ -3752,14 +3752,14 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
         import {AppModule} from './app/app.module';
-        import {platformBrowser} from '@angular/platform-browser';
+        import {platformBrowser} from '@angular-classic/platform-browser';
 
         platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
       `);
 
        writeFile('./app/app.module.ts', `
-        import {NgModule, Component, Directive} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {NgModule, Component, Directive} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Directive({selector: '[dir]', standalone: true})
         export class Dir {}
@@ -3775,9 +3775,9 @@ describe('standalone migration', () => {
 
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
         import {AppComponent} from './app/app.module';
-        import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-        import {importProvidersFrom} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+        import {importProvidersFrom} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         bootstrapApplication(AppComponent, {
           providers: [importProvidersFrom(CommonModule)]
@@ -3794,13 +3794,13 @@ describe('standalone migration', () => {
      async () => {
        writeFile('main.ts', `
           import {AppModule} from './app/app.module';
-          import {platformBrowser} from '@angular/platform-browser';
+          import {platformBrowser} from '@angular-classic/platform-browser';
 
           platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
         `);
 
        writeFile('./app/root.module.ts', `
-          import {NgModule, Component, InjectionToken} from '@angular/core';
+          import {NgModule, Component, InjectionToken} from '@angular-classic/core';
 
           const token = new InjectionToken<string>('token');
 
@@ -3816,7 +3816,7 @@ describe('standalone migration', () => {
         `);
 
        writeFile('./app/app.module.ts', `
-          import {NgModule, Component} from '@angular/core';
+          import {NgModule, Component} from '@angular-classic/core';
           import {RootModule, Root} from './root.module';
 
           @NgModule({
@@ -3830,8 +3830,8 @@ describe('standalone migration', () => {
 
        expect(tree.exists('./app/app.module.ts')).toBe(false);
        expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
-          import {platformBrowser, bootstrapApplication} from '@angular/platform-browser';
-          import {importProvidersFrom} from '@angular/core';
+          import {platformBrowser, bootstrapApplication} from '@angular-classic/platform-browser';
+          import {importProvidersFrom} from '@angular-classic/core';
           import {RootModule, Root} from './app/root.module';
 
           bootstrapApplication(Root, {
@@ -3843,13 +3843,13 @@ describe('standalone migration', () => {
   it('should add Protractor support if any tests are detected', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
 
       @Component({selector: 'app', template: 'hello'})
       export class AppComponent {}
@@ -3877,7 +3877,7 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, provideProtractorTestingSupport, bootstrapApplication} from '@angular/platform-browser';
+      import {platformBrowser, provideProtractorTestingSupport, bootstrapApplication} from '@angular-classic/platform-browser';
 
       bootstrapApplication(AppComponent, {
         providers: [provideProtractorTestingSupport()]
@@ -3888,13 +3888,13 @@ describe('standalone migration', () => {
   it('should add Protractor support if any tests with deep imports are detected', async () => {
     writeFile('main.ts', `
       import {AppModule} from './app/app.module';
-      import {platformBrowser} from '@angular/platform-browser';
+      import {platformBrowser} from '@angular-classic/platform-browser';
 
       platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
     `);
 
     writeFile('./app/app.module.ts', `
-      import {NgModule, Component} from '@angular/core';
+      import {NgModule, Component} from '@angular-classic/core';
 
       @Component({selector: 'app', template: 'hello'})
       export class AppComponent {}
@@ -3922,7 +3922,7 @@ describe('standalone migration', () => {
 
     expect(stripWhitespace(tree.readContent('main.ts'))).toBe(stripWhitespace(`
       import {AppComponent} from './app/app.module';
-      import {platformBrowser, provideProtractorTestingSupport, bootstrapApplication} from '@angular/platform-browser';
+      import {platformBrowser, provideProtractorTestingSupport, bootstrapApplication} from '@angular-classic/platform-browser';
 
       bootstrapApplication(AppComponent, {
         providers: [provideProtractorTestingSupport()]

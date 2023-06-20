@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgtscProgram} from '@angular/compiler-cli';
-import {PotentialImport, PotentialImportKind, PotentialImportMode, Reference, TemplateTypeChecker} from '@angular/compiler-cli/private/migrations';
+import {NgtscProgram} from '@angular-classic/compiler-cli';
+import {PotentialImport, PotentialImportKind, PotentialImportMode, Reference, TemplateTypeChecker} from '@angular-classic/compiler-cli/private/migrations';
 import ts from 'typescript';
 
 import {ChangesByFile, ChangeTracker, ImportRemapper} from '../../utils/change_tracker';
@@ -165,7 +165,7 @@ function getComponentImportExpressions(
 
       if (importLocation.isForwardReference) {
         const forwardRefExpression =
-            tracker.addImport(decl.getSourceFile(), 'forwardRef', '@angular/core');
+            tracker.addImport(decl.getSourceFile(), 'forwardRef', '@angular-classic/core');
         const arrowFunction = ts.factory.createArrowFunction(
             undefined, undefined, [], undefined, undefined, identifier);
         imports.push(
@@ -324,7 +324,7 @@ function addStandaloneToDecorator(node: ts.Decorator): ts.Decorator {
 }
 
 /**
- * Adds a property to an Angular decorator node.
+ * Adds a property to an Angular Classicdecorator node.
  * @param node Decorator to which to add the property.
  * @param property Property to add.
  */
@@ -387,7 +387,7 @@ function findImportLocation(
       firstSameFileImport = location;
     }
     if (location.kind === PotentialImportKind.NgModule && !firstModuleImport &&
-        // ɵ is used for some internal Angular modules that we want to skip over.
+        // ɵ is used for some internal Angular Classicmodules that we want to skip over.
         !location.symbolName.startsWith('ɵ')) {
       firstModuleImport = location;
     }
@@ -411,7 +411,7 @@ function hasNgModuleMetadataElements(node: ts.Node): node is ts.PropertyAssignme
 function findNgModuleClassesToMigrate(sourceFile: ts.SourceFile, typeChecker: ts.TypeChecker) {
   const modules: ts.ClassDeclaration[] = [];
 
-  if (getImportSpecifier(sourceFile, '@angular/core', 'NgModule')) {
+  if (getImportSpecifier(sourceFile, '@angular-classic/core', 'NgModule')) {
     sourceFile.forEachChild(function walk(node) {
       if (ts.isClassDeclaration(node)) {
         const decorator = getAngularDecorators(typeChecker, ts.getDecorators(node) || [])
@@ -437,7 +437,7 @@ function findNgModuleClassesToMigrate(sourceFile: ts.SourceFile, typeChecker: ts
 /** Finds all testing object literals that need to be migrated. */
 export function findTestObjectsToMigrate(sourceFile: ts.SourceFile, typeChecker: ts.TypeChecker) {
   const testObjects: ts.ObjectLiteralExpression[] = [];
-  const testBedImport = getImportSpecifier(sourceFile, '@angular/core/testing', 'TestBed');
+  const testBedImport = getImportSpecifier(sourceFile, '@angular-classic/core/testing', 'TestBed');
   const catalystImport = getImportSpecifier(sourceFile, /testing\/catalyst$/, 'setupModule');
 
   if (testBedImport || catalystImport) {
@@ -695,7 +695,7 @@ function extractDeclarationsFromTestObject(
   return results;
 }
 
-/** Extracts the metadata object literal from an Angular decorator. */
+/** Extracts the metadata object literal from an Angular Classicdecorator. */
 function extractMetadataLiteral(decorator: ts.Decorator): ts.ObjectLiteralExpression|null {
   // `arguments[0]` is the metadata object literal.
   return ts.isCallExpression(decorator.expression) && decorator.expression.arguments.length === 1 &&

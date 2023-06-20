@@ -12,11 +12,11 @@ import './zone_base_setup';
 (global as any).isNode = true;
 (global as any).isBrowser = false;
 
-import '@angular/compiler'; // For JIT mode. Must be in front of any other @angular/* imports.
+import '@angular-classic/compiler'; // For JIT mode. Must be in front of any other @angular-classic/* imports.
 // Init TestBed
-import {TestBed} from '@angular/core/testing';
-import {ServerTestingModule, platformServerTesting} from '@angular/platform-server/testing/src/server';
-import {DominoAdapter} from '@angular/platform-server/src/domino_adapter';
+import {TestBed} from '@angular-classic/core/testing';
+import {ServerTestingModule, platformServerTesting} from '@angular-classic/platform-server/testing/src/server';
+import {DominoAdapter} from '@angular-classic/platform-server/src/domino_adapter';
 import domino from '../../packages/platform-server/src/bundled-domino';
 
 TestBed.initTestEnvironment(ServerTestingModule, platformServerTesting());

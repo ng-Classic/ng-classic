@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Type} from '@angular/core';
+import {Type} from '@angular-classic/core';
 
 import {Data, ResolveData, Route} from '../src/models';
 import {ActivatedRouteSnapshot} from '../src/router_state';

@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular-classic/core/testing';
 import { TitleComponent } from './title.component';
 
 describe('TitleComponent', () => {

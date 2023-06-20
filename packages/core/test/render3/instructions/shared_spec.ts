@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {createLView, createTNode, createTView} from '@angular/core/src/render3/instructions/shared';
-import {TNodeType} from '@angular/core/src/render3/interfaces/node';
-import {HEADER_OFFSET, LViewFlags, TVIEW, TViewType} from '@angular/core/src/render3/interfaces/view';
-import {enterView, getBindingRoot, getLView, setBindingIndex, setSelectedIndex} from '@angular/core/src/render3/state';
+import {createLView, createTNode, createTView} from '@angular-classic/core/src/render3/instructions/shared';
+import {TNodeType} from '@angular-classic/core/src/render3/interfaces/node';
+import {HEADER_OFFSET, LViewFlags, TVIEW, TViewType} from '@angular-classic/core/src/render3/interfaces/view';
+import {enterView, getBindingRoot, getLView, setBindingIndex, setSelectedIndex} from '@angular-classic/core/src/render3/state';
 
 import {MockRendererFactory} from './mock_renderer_factory';
 

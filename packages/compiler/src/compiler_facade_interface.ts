@@ -7,8 +7,8 @@
  */
 
 /**
- * A set of interfaces which are shared between `@angular/core` and `@angular/compiler` to allow
- * for late binding of `@angular/compiler` for JIT purposes.
+ * A set of interfaces which are shared between `@angular-classic/core` and `@angular-classic/compiler` to allow
+ * for late binding of `@angular-classic/compiler` for JIT purposes.
  *
  * This file has two copies. Please ensure that they are in sync:
  *  - packages/compiler/src/compiler_facade_interface.ts          (main)

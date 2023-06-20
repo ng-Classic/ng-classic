@@ -1,5 +1,5 @@
 /**
- * This file includes polyfills needed by Angular and is loaded before the app.
+ * This file includes polyfills needed by Angular Classicand is loaded before the app.
  * You can add your own extra polyfills to this file.
  *
  * This file is divided into 2 sections:
@@ -11,7 +11,7 @@
  * automatically update themselves. This includes Safari >= 10, Chrome >= 55 (including Opera),
  * Edge >= 13 on the desktop, and iOS 10 and Chrome on mobile.
  *
- * Learn more in https://angular.io/guide/browser-support
+ * Learn more in https://angular-classic.com/guide/browser-support
  */
 
 /***************************************************************************************************
@@ -19,9 +19,9 @@
  */
 
 /**
- * Web Animations `@angular/platform-browser/animations`
+ * Web Animations `@angular-classic/platform-browser/animations`
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
- * Standard animation support in Angular DOES NOT require any polyfills (as of Angular 6.0).
+ * Standard animation support in Angular ClassicDOES NOT require any polyfills (as of Angular Classic6.0).
  */
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 
@@ -50,14 +50,14 @@
  */
 
 /***************************************************************************************************
- * Zone JS is required by default for Angular itself.
+ * Zone JS is required by default for Angular Classicitself.
  */
-import 'zone.js'; // Included with Angular CLI.
+import 'zone.js'; // Included with Angular ClassicCLI.
 
 /***************************************************************************************************
- * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
+ * Load `$localize` onto the global scope - used if i18n tags appear in Angular Classictemplates.
  */
-import '@angular/localize/init';
+import '@angular-classic/localize/init';
 
 
 /***************************************************************************************************

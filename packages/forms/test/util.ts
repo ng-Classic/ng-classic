@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EventEmitter} from '@angular/core';
-import {AbstractControl, AsyncValidatorFn, ValidationErrors} from '@angular/forms';
+import {EventEmitter} from '@angular-classic/core';
+import {AbstractControl, AsyncValidatorFn, ValidationErrors} from '@angular-classic/forms';
 import {of} from 'rxjs';
 
 function createValidationPromise(

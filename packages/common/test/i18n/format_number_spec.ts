@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {formatCurrency, formatNumber, formatPercent} from '@angular/common';
-import localeAr from '@angular/common/locales/ar';
-import localeEn from '@angular/common/locales/en';
-import localeEsUS from '@angular/common/locales/es-US';
-import localeFr from '@angular/common/locales/fr';
-import {ɵDEFAULT_LOCALE_ID, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular/core';
+import {formatCurrency, formatNumber, formatPercent} from '@angular-classic/common';
+import localeAr from '@angular-classic/common/locales/ar';
+import localeEn from '@angular-classic/common/locales/en';
+import localeEsUS from '@angular-classic/common/locales/es-US';
+import localeFr from '@angular-classic/common/locales/fr';
+import {ɵDEFAULT_LOCALE_ID, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular-classic/core';
 
 describe('Format number', () => {
   beforeAll(() => {

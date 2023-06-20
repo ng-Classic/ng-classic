@@ -7,7 +7,7 @@ button {
   font-family: inherit;
 }
 
-// This rule overrides some Angular Material styles defined for `.mat-button`
+// This rule overrides some Angular ClassicMaterial styles defined for `.mat-button`
 // (hence we include `.mat-button` in the selector).
 a.button.mat-button,
 .button {
@@ -60,7 +60,7 @@ a.button.mat-button,
 .group-buttons {
   margin: 16px auto 32px;
 
-  // This rule overrides some Angular Material styles defined for `.mat-button`
+  // This rule overrides some Angular ClassicMaterial styles defined for `.mat-button`
   // (hence we include `.mat-button` in the selector).
   button.button.mat-button.filter-button {
     border-radius: 4px;

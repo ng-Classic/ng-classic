@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentInjector, Type, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {EnvironmentInjector, Type, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 import {from, Observable, of} from 'rxjs';
 import {catchError, concatMap, defaultIfEmpty, first, last as rxjsLast, map, mergeMap, scan, switchMap, tap} from 'rxjs/operators';
 
@@ -86,7 +86,7 @@ export class Recognizer {
               const routeState = new RouterStateSnapshot('', rootNode);
               const tree = createUrlTreeFromSnapshot(
                   root, [], this.urlTree.queryParams, this.urlTree.fragment);
-              // https://github.com/angular/angular/issues/47307
+              // https://github.com/ng-classic/angular/issues/47307
               // Creating the tree stringifies the query params
               // We don't want to do this here so reassign them to the original.
               tree.queryParams = this.urlTree.queryParams;
@@ -300,7 +300,7 @@ export class Recognizer {
       // Prior versions of the route matching algorithm would stop matching at the wildcard route.
       // We should investigate a better strategy for any existing children. Otherwise, these
       // child segments are silently dropped from the navigation.
-      // https://github.com/angular/angular/issues/40089
+      // https://github.com/ng-classic/angular/issues/40089
       rawSegment.children = {};
     } else {
       matchResult =

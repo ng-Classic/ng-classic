@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵɵngDeclarePipe} from '@angular/core';
+import {ɵɵngDeclarePipe} from '@angular-classic/core';
 import {PipeDef} from '../../../src/render3';
 
 describe('Pipe declaration jit compilation', () => {

@@ -1,8 +1,8 @@
-/* eslint-disable @angular-eslint/directive-class-suffix,
-                  @angular-eslint/directive-selector,
-                  @angular-eslint/no-output-rename,
-                  @angular-eslint/no-outputs-metadata-property */
-import { Directive, ElementRef, EventEmitter, Output } from '@angular/core';
+/* eslint-disable @angular-classic-eslint/directive-class-suffix,
+                  @angular-classic-eslint/directive-selector,
+                  @angular-classic-eslint/no-output-rename,
+                  @angular-classic-eslint/no-outputs-metadata-property */
+import { Directive, ElementRef, EventEmitter, Output } from '@angular-classic/core';
 
 @Directive({selector: '[myClick]'})
 export class ClickDirective {

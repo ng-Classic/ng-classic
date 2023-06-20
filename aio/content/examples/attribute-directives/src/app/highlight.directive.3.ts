@@ -1,5 +1,5 @@
 // #docregion, imports
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular-classic/core';
 // #enddocregion imports
 
 @Directive({

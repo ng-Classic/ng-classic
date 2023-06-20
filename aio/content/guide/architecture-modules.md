@@ -1,11 +1,11 @@
 # Introduction to modules
 
-Angular applications are modular and Angular has its own modularity system called *NgModules*.
+Angular Classicapplications are modular and Angular Classichas its own modularity system called *NgModules*.
 NgModules are containers for a cohesive block of code dedicated to an application domain, a workflow, or a closely related set of capabilities.
 They can contain components, service providers, and other code files whose scope is defined by the containing NgModule.
 They can import functionality that is exported from other NgModules, and export selected functionality for use by other NgModules.
 
-Every Angular application has at least one NgModule class, [the *root module*](guide/bootstrapping), which is conventionally named `AppModule` and resides in a file named `app.module.ts`.
+Every Angular Classicapplication has at least one NgModule class, [the *root module*](guide/bootstrapping), which is conventionally named `AppModule` and resides in a file named `app.module.ts`.
 You launch your application by *bootstrapping* the root NgModule.
 
 While a small application might have only one NgModule, most applications have many more *feature modules*.
@@ -71,7 +71,7 @@ Views in the tree can be nested to any depth.
 <div class="alert is-helpful">
 
 **NOTE**: <br />
-The hierarchical structure of views is a key factor in the way Angular detects and responds to changes in the DOM and application data.
+The hierarchical structure of views is a key factor in the way Angular Classicdetects and responds to changes in the DOM and application data.
 
 </div>
 
@@ -94,7 +94,7 @@ Other JavaScript modules use *import statements* to access public objects from o
 
 </div>
 
-## Angular libraries
+## Angular Classiclibraries
 
 <div class="lightbox">
 
@@ -102,18 +102,18 @@ Other JavaScript modules use *import statements* to access public objects from o
 
 </div>
 
-Angular loads as a collection of JavaScript modules.
+Angular Classicloads as a collection of JavaScript modules.
 You can think of them as library modules.
-Each Angular library name begins with the `@angular` prefix.
+Each Angular Classiclibrary name begins with the `@angular-classic` prefix.
 Install them with the node package manager `npm` and import parts of them with JavaScript `import` statements.
 
 <br class="clear">
 
-For example, import Angular's `Component` decorator from the `@angular/core` library like this.
+For example, import Angular's `Component` decorator from the `@angular-classic/core` library like this.
 
 <code-example path="architecture/src/app/app.component.ts" region="import"></code-example>
 
-You also import NgModules from Angular *libraries* using JavaScript import statements.
+You also import NgModules from Angular Classic*libraries* using JavaScript import statements.
 For example, the following code imports the `BrowserModule` NgModule from the `platform-browser` library.
 
 <code-example path="architecture/src/app/mini-app.ts" region="import-browser-module"></code-example>
@@ -124,7 +124,7 @@ To access that material, add it to the `@NgModule` metadata `imports` like this.
 
 <code-example path="architecture/src/app/mini-app.ts" region="ngmodule-imports"></code-example>
 
-In this way, you're using the Angular and JavaScript module systems *together*.
+In this way, you're using the Angular Classicand JavaScript module systems *together*.
 Although it's easy to confuse the two systems, which share the common vocabulary of "imports" and "exports", you will become familiar with the different contexts in which they are used.
 
 <div class="alert is-helpful">

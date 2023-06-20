@@ -7,7 +7,7 @@ It's ready for you to try, but it might change before it is stable and is not ye
 
 </div>
 
-In v16 and higher, the new build system provides a way to build Angular applications. This new build system includes:
+In v16 and higher, the new build system provides a way to build Angular Classicapplications. This new build system includes:
 
 - A modern output format using ESM, with dynamic import expressions to support lazy module loading.
 - Faster build-time performance for both initial builds and incremental rebuilds.
@@ -15,9 +15,9 @@ In v16 and higher, the new build system provides a way to build Angular applicat
 
 You can opt-in to use the new builder on a per application basis with minimal configuration updates required.
 
-## Trying the ESM build system in an Angular CLI application
+## Trying the ESM build system in an Angular ClassicCLI application
 
-A new builder named `browser-esbuild` is available within the `@angular-devkit/build-angular` package that is present in an Angular CLI generated application. The build is a drop-in replacement for the existing `browser` builder that provides the current stable browser application build system.
+A new builder named `browser-esbuild` is available within the `@angular-classic-devkit/build-angular` package that is present in an Angular ClassicCLI generated application. The build is a drop-in replacement for the existing `browser` builder that provides the current stable browser application build system.
 You can try out the new build system for applications that use the `browser` builder.
 
 ### Updating the application configuration
@@ -30,7 +30,7 @@ The following is what you would typically find in `angular.json` for an applicat
 ...
 "architect": {
   "build": {
-    "builder": "@angular-devkit/build-angular:browser",
+    "builder": "@angular-classic-devkit/build-angular:browser",
 ...
 </code-example>
 
@@ -40,7 +40,7 @@ Changing the `builder` field is the only change you will need to make.
 ...
 "architect": {
   "build": {
-    "builder": "@angular-devkit/build-angular:browser-esbuild",
+    "builder": "@angular-classic-devkit/build-angular:browser-esbuild",
 ...
 </code-example>
 
@@ -68,7 +68,7 @@ You can continue to use the [command line options](/cli/serve) you have used in 
 
 <div class="alert is-important">
 
-The developer preview currently does not provide HMR support and the HMR related options will be ignored if used. Angular focused HMR capabilities are currently planned and will be introduced in a future version.
+The developer preview currently does not provide HMR support and the HMR related options will be ignored if used. Angular Classicfocused HMR capabilities are currently planned and will be introduced in a future version.
 
 </div>
 
@@ -76,10 +76,10 @@ The developer preview currently does not provide HMR support and the HMR related
 
 Several build options are not yet implemented but will be added in the future as the build system moves towards a stable status. If your application uses these options, you can still try out the build system without removing them. Warnings will be issued for any unimplemented options but they will otherwise be ignored. However, if your application relies on any of these options to function, you may want to wait to try.
 
-- [Bundle budgets](https://github.com/angular/angular-cli/issues/25100) (`budgets`)
-- [Localization](https://github.com/angular/angular-cli/issues/25099) (`localize`/`i18nDuplicateTranslation`/`i18nMissingTranslation`)
-- [Web workers](https://github.com/angular/angular-cli/issues/25101) (`webWorkerTsConfig`)
-- [WASM imports](https://github.com/angular/angular-cli/issues/25102) -- WASM can still be loaded manually via [standard web APIs](https://developer.mozilla.org/en-US/docs/WebAssembly/Loading_and_running).
+- [Bundle budgets](https://github.com/ng-classic/angular-cli/issues/25100) (`budgets`)
+- [Localization](https://github.com/ng-classic/angular-cli/issues/25099) (`localize`/`i18nDuplicateTranslation`/`i18nMissingTranslation`)
+- [Web workers](https://github.com/ng-classic/angular-cli/issues/25101) (`webWorkerTsConfig`)
+- [WASM imports](https://github.com/ng-classic/angular-cli/issues/25102) -- WASM can still be loaded manually via [standard web APIs](https://developer.mozilla.org/en-US/docs/WebAssembly/Loading_and_running).
 
 Building libraries with the new build system via `ng-packagr` is also not yet possible but library build support will be available in a future release.
 
@@ -123,7 +123,7 @@ console.log(moment().format());
 
 ## Vite as a development server
 
-The usage of Vite in the Angular CLI is currently only within a _development server capacity only_. Even without using the underlying Vite build system, Vite provides a full-featured development server with client side support that has been bundled into a low dependency npm package. This makes it an ideal candidate to provide comprehensive development server functionality. The current development server process uses the new build system to generate a development build of the application in memory and passes the results to Vite to serve the application. The usage of Vite, much like the Webpack-based development server, is encapsulated within the Angular CLI `dev-server` builder and currently cannot be directly configured.
+The usage of Vite in the Angular ClassicCLI is currently only within a _development server capacity only_. Even without using the underlying Vite build system, Vite provides a full-featured development server with client side support that has been bundled into a low dependency npm package. This makes it an ideal candidate to provide comprehensive development server functionality. The current development server process uses the new build system to generate a development build of the application in memory and passes the results to Vite to serve the application. The usage of Vite, much like the Webpack-based development server, is encapsulated within the Angular ClassicCLI `dev-server` builder and currently cannot be directly configured.
 
 ## Known Issues
 
@@ -166,10 +166,10 @@ Avoiding the use of modules with non-local side effects (outside of polyfills) i
 
 ### Hashed filenames for non-injected global styles/scripts
 
-If your application currently uses the [`inject`](guide/workspace-config#styles-and-scripts-configuration) sub-option for any global styles and scripts via the `styles` or `scripts` build options, the output file names for those styles/scripts will incorrectly contain a hash. Depending on the usage of the output files, this may cause runtime failures for your application. See the related [issue](https://github.com/angular/angular-cli/issues/25098) for more information.
+If your application currently uses the [`inject`](guide/workspace-config#styles-and-scripts-configuration) sub-option for any global styles and scripts via the `styles` or `scripts` build options, the output file names for those styles/scripts will incorrectly contain a hash. Depending on the usage of the output files, this may cause runtime failures for your application. See the related [issue](https://github.com/ng-classic/angular-cli/issues/25098) for more information.
 
 ## Bug reports
 
-Report issues and feature requests on [GitHub](https://github.com/angular/angular-cli/issues).
+Report issues and feature requests on [GitHub](https://github.com/ng-classic/angular-cli/issues).
 
 Please provide a minimal reproduction where possible to aid the team in addressing issues.

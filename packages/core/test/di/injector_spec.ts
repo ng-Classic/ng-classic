@@ -7,7 +7,7 @@
  */
 
 
-import {Injector} from '@angular/core';
+import {Injector} from '@angular-classic/core';
 
 {
   describe('Injector.NULL', () => {

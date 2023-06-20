@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {ɵcomputeMsgId, ɵmakeParsedTranslation} from '@angular/localize';
+import {ɵcomputeMsgId, ɵmakeParsedTranslation} from '@angular-classic/localize';
 
 import {ParseAnalysis, ParsedTranslationBundle,} from '../../../../src/translate/translation_files/translation_parsers/translation_parser';
 import {XtbTranslationParser} from '../../../../src/translate/translation_files/translation_parsers/xtb_translation_parser';
@@ -290,7 +290,7 @@ describe('XtbTranslationParser', () => {
     });
 
     it('should warn on unrecognised ICU messages', () => {
-      // See https://github.com/angular/angular/issues/14046
+      // See https://github.com/ng-classic/angular/issues/14046
 
       const XTB = [
         `<translationbundle>`,

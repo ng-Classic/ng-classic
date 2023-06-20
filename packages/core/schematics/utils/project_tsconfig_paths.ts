@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {json, normalize, virtualFs, workspaces} from '@angular-devkit/core';
-import {Tree} from '@angular-devkit/schematics';
+import {json, normalize, virtualFs, workspaces} from '@angular-classic-devkit/core';
+import {Tree} from '@angular-classic-devkit/schematics';
 
 /**
  * Gets all tsconfig paths from a CLI project by reading the workspace configuration
@@ -85,7 +85,7 @@ function createHost(tree: Tree): workspaces.WorkspaceHost {
       // Approximate a directory check.
       // We don't need to consider empty directories and hence this is a good enough approach.
       // This is also per documentation, see:
-      // https://angular.io/guide/schematics-for-libraries#get-the-project-configuration
+      // https://angular-classic.com/guide/schematics-for-libraries#get-the-project-configuration
       return !tree.exists(path) && tree.getDir(path).subfiles.length > 0;
     },
     async isFile(path: string): Promise<boolean> {

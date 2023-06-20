@@ -1,5 +1,5 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
-import { ActivatedRoute } from '@angular/router';
+import { TestBed, waitForAsync } from '@angular-classic/core/testing';
+import { ActivatedRoute } from '@angular-classic/router';
 import { Observable, of } from 'rxjs';
 
 import { PhoneDetailComponent } from './phone-detail.component';

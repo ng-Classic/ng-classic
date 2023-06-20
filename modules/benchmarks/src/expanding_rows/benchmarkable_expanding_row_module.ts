@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
 
 import {BenchmarkableExpandingRow} from './benchmarkable_expanding_row';
 import {ExpandingRowModule} from './expanding_row_module';

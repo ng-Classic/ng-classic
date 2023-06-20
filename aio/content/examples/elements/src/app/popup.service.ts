@@ -1,6 +1,6 @@
 
-import { ApplicationRef, createComponent, EnvironmentInjector, Injectable } from '@angular/core';
-import { NgElement, WithProperties } from '@angular/elements';
+import { ApplicationRef, createComponent, EnvironmentInjector, Injectable } from '@angular-classic/core';
+import { NgElement, WithProperties } from '@angular-classic/elements';
 import { PopupComponent } from './popup.component';
 
 

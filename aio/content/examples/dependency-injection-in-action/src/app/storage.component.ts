@@ -1,5 +1,5 @@
 // #docregion
-import { Component, OnInit, Self, SkipSelf } from '@angular/core';
+import { Component, OnInit, Self, SkipSelf } from '@angular-classic/core';
 import { BROWSER_STORAGE, BrowserStorageService } from './storage.service';
 
 @Component({

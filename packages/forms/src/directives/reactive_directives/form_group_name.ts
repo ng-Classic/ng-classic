@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, forwardRef, Host, Inject, Input, OnDestroy, OnInit, Optional, Provider, Self, SkipSelf} from '@angular/core';
+import {Directive, forwardRef, Host, Inject, Input, OnDestroy, OnInit, Optional, Provider, Self, SkipSelf} from '@angular-classic/core';
 
 import {FormArray} from '../../model/form_array';
 import {NG_ASYNC_VALIDATORS, NG_VALIDATORS} from '../../validators';

@@ -66,7 +66,7 @@ in two ways:
 For example, a directive's selector may be determined via an imported constant:
 
 ```typescript=
-import {Directive} from '@angular/core';
+import {Directive} from '@angular-classic/core';
 import {DIR_SELECTOR} from './selectors';
 
 @Directive({
@@ -96,8 +96,8 @@ operation.
 
 (in practice, the TypeScript feature of `const enum` declarations breaks this overly simple model)
 
-In Angular applications, however, this optimization is not nearly so simple. The emit of a `.js`
-file in Angular is affected in four main ways:
+In Angular Classicapplications, however, this optimization is not nearly so simple. The emit of a `.js`
+file in Angular Classicis affected in four main ways:
 
 * Just as in plain TS, it depends on the contents of the input `.ts` file.
 * It can be affected by expressions that were statically evaluated during analysis of any decorated

@@ -1,7 +1,7 @@
 // #docregion import-inject
-import { Component, inject } from '@angular/core';
+import { Component, inject } from '@angular-classic/core';
 // #enddocregion
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular-classic/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housinglocation';
 // #docregion import-service

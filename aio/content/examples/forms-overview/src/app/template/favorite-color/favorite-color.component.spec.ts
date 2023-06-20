@@ -1,5 +1,5 @@
-import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular-classic/core/testing';
+import { FormsModule } from '@angular-classic/forms';
 
 import { createNewEvent } from '../../shared/utils';
 import { FavoriteColorComponent } from './favorite-color.component';

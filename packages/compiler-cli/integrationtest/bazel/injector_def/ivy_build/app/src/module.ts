@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injectable, InjectionToken, NgModule} from '@angular/core';
+import {Injectable, InjectionToken, NgModule} from '@angular-classic/core';
 
 export const AOT_TOKEN = new InjectionToken<string>('TOKEN');
 

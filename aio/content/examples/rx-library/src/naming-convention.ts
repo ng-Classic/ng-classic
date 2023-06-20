@@ -1,6 +1,6 @@
 
 
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 import { Observable } from 'rxjs';
 
 @Component({

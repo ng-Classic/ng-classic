@@ -1,12 +1,12 @@
 // #docplaster
 // #docregion injection-token
-import { InjectionToken } from '@angular/core';
+import { InjectionToken } from '@angular-classic/core';
 
 export const TITLE = new InjectionToken<string>('title');
 // #enddocregion injection-token
 
 // #docregion hero-of-the-month
-import { Component, Inject } from '@angular/core';
+import { Component, Inject } from '@angular-classic/core';
 
 import { DateLoggerService } from './date-logger.service';
 import { Hero } from './hero';

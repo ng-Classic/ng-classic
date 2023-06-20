@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {IMAGE_LOADER, ImageLoader} from '@angular/common/src/directives/ng_optimized_image';
-import {provideCloudflareLoader} from '@angular/common/src/directives/ng_optimized_image/image_loaders/cloudflare_loader';
-import {provideCloudinaryLoader} from '@angular/common/src/directives/ng_optimized_image/image_loaders/cloudinary_loader';
-import {provideImageKitLoader} from '@angular/common/src/directives/ng_optimized_image/image_loaders/imagekit_loader';
-import {provideImgixLoader} from '@angular/common/src/directives/ng_optimized_image/image_loaders/imgix_loader';
-import {isValidPath} from '@angular/common/src/directives/ng_optimized_image/url';
-import {createEnvironmentInjector, EnvironmentInjector} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {IMAGE_LOADER, ImageLoader} from '@angular-classic/common/src/directives/ng_optimized_image';
+import {provideCloudflareLoader} from '@angular-classic/common/src/directives/ng_optimized_image/image_loaders/cloudflare_loader';
+import {provideCloudinaryLoader} from '@angular-classic/common/src/directives/ng_optimized_image/image_loaders/cloudinary_loader';
+import {provideImageKitLoader} from '@angular-classic/common/src/directives/ng_optimized_image/image_loaders/imagekit_loader';
+import {provideImgixLoader} from '@angular-classic/common/src/directives/ng_optimized_image/image_loaders/imgix_loader';
+import {isValidPath} from '@angular-classic/common/src/directives/ng_optimized_image/url';
+import {createEnvironmentInjector, EnvironmentInjector} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 const absoluteUrlError = (src: string, path: string) =>
     `NG02959: Image loader has detected a \`<img>\` tag with an invalid ` +
@@ -64,7 +64,7 @@ describe('Built-in image directive loaders', () => {
 
     it('should throw if an absolute URL is provided as a loader input', () => {
       const path = 'https://somesite.imgix.net';
-      const src = 'https://angular.io/img.png';
+      const src = 'https://angular-classic.com/img.png';
       const loader = createImgixLoader(path);
       expect(() => loader({src})).toThrowError(absoluteUrlError(src, path));
     });
@@ -89,7 +89,7 @@ describe('Built-in image directive loaders', () => {
     describe('input validation', () => {
       it('should throw if an absolute URL is provided as a loader input', () => {
         const path = 'https://res.cloudinary.com/mysite';
-        const src = 'https://angular.io/img.png';
+        const src = 'https://angular-classic.com/img.png';
         const loader = createCloudinaryLoader(path);
         expect(() => loader({src})).toThrowError(absoluteUrlError(src, path));
       });
@@ -141,7 +141,7 @@ describe('Built-in image directive loaders', () => {
     describe('input validation', () => {
       it('should throw if an absolute URL is provided as a loader input', () => {
         const path = 'https://ik.imageengine.io/imagetest';
-        const src = 'https://angular.io/img.png';
+        const src = 'https://angular-classic.com/img.png';
         const loader = createImageKitLoader(path);
         expect(() => loader({src})).toThrowError(absoluteUrlError(src, path));
       });
@@ -186,7 +186,7 @@ describe('Built-in image directive loaders', () => {
 
     it('should throw if an absolute URL is provided as a loader input', () => {
       const path = 'https://mysite.com';
-      const src = 'https://angular.io/img.png';
+      const src = 'https://angular-classic.com/img.png';
       const loader = createCloudflareLoader(path);
       expect(() => loader({src})).toThrowError(absoluteUrlError(src, path));
     });

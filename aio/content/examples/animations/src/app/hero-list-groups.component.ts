@@ -3,7 +3,7 @@ import {
   Input,
   Output,
   EventEmitter
-} from '@angular/core';
+} from '@angular-classic/core';
 import {
   trigger,
   state,
@@ -11,7 +11,7 @@ import {
   animate,
   transition,
   group
-} from '@angular/animations';
+} from '@angular-classic/animations';
 
 import { Hero } from './hero';
 

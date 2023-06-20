@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, NgModule, Pipe, Type, ɵReflectionCapabilities as ReflectionCapabilities} from '@angular/core';
+import {Component, Directive, NgModule, Pipe, Type, ɵReflectionCapabilities as ReflectionCapabilities} from '@angular-classic/core';
 
 import {MetadataOverride} from './metadata_override';
 import {MetadataOverrider} from './metadata_overrider';

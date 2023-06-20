@@ -7,11 +7,11 @@
  */
 // Make the `$localize()` global function available to the compiled templates, and the direct calls
 // below. This would normally be done inside the application `polyfills.ts` file.
-import '@angular/localize/init';
+import '@angular-classic/localize/init';
 
-import {AfterContentInit, AfterViewInit, Component, ContentChildren, Directive, Input, QueryList, ViewChildren} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {AfterContentInit, AfterViewInit, Component, ContentChildren, Directive, Input, QueryList, ViewChildren} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('<ng-container>', function() {
   beforeEach(() => {

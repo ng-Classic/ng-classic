@@ -199,7 +199,7 @@ describe('deploy-to-firebase/pre-deploy-actions:', () => {
           expect(writeFileSpy).toHaveBeenCalledOnceWith('firebase.json', 'Test file content.');
         });
 
-        it('should remove a redirect rule to `angular.io`', () => {
+        it('should remove a redirect rule to `angular-classic.com`', () => {
           const re = allRequests ? '^(.*)$' : '^(.*/[^./]*)$';
           readFileSpy.and.returnValue(`
             {

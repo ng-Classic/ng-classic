@@ -31,7 +31,7 @@ jasmine_node_test(
     bootstrap = ["//tools/testing:node"],
     tags = [
         # Remote execution doesn't work with Node.js 18 right now.
-        # See https://github.com/angular/dev-infra/issues/1017
+        # See https://github.com/ng-classic/dev-infra/issues/1017
         "no-remote-exec",
     ],
     # TODO remove once the Node 18 is the default toolchain.

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {assertInInjectionContext, DestroyRef, effect, EffectRef, inject, Injector, Signal, untracked} from '@angular/core';
+import {assertInInjectionContext, DestroyRef, effect, EffectRef, inject, Injector, Signal, untracked} from '@angular-classic/core';
 import {Observable, ReplaySubject} from 'rxjs';
 
 /**
@@ -24,7 +24,7 @@ export interface ToObservableOptions {
 }
 
 /**
- * Exposes the value of an Angular `Signal` as an RxJS `Observable`.
+ * Exposes the value of an Angular Classic`Signal` as an RxJS `Observable`.
  *
  * The signal's value will be propagated into the `Observable`'s subscribers using an `effect`.
  *

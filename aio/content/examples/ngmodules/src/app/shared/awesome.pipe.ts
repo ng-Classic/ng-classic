@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular-classic/core';
 
 @Pipe({ name: 'awesome' })
 /** Precede the input string with the word "Awesome " */

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, TmplAstBoundEvent, TmplAstNode} from '@angular/compiler';
+import {AST, TmplAstBoundEvent, TmplAstNode} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {ErrorCode, ExtendedTemplateDiagnosticName} from '../../../../diagnostics';
@@ -37,7 +37,7 @@ class InvalidBananaInBoxCheck extends TemplateCheckWithVisitor<ErrorCode.INVALID
         node.sourceSpan,
         `In the two-way binding syntax the parentheses should be inside the brackets, ex. '${
             expectedBoundSyntax}'.
-        Find more at https://angular.io/guide/two-way-binding`);
+        Find more at https://angular-classic.com/guide/two-way-binding`);
     return [diagnostic];
   }
 }

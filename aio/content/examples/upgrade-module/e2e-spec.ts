@@ -22,7 +22,7 @@ describe('Upgrade Tests', () => {
 
   });
 
-  describe('AngularJS-Angular Hybrid Bootstrap', () => {
+  describe('AngularJS-Angular ClassicHybrid Bootstrap', () => {
 
     beforeAll(() => browser.get('/index-ajs-a-hybrid-bootstrap.html'));
 
@@ -122,7 +122,7 @@ describe('Upgrade Tests', () => {
   });
 
 
-  describe('Downgrading Angular Providers', () => {
+  describe('Downgrading Angular ClassicProviders', () => {
 
     beforeAll(() => browser.get('/index-a-to-ajs-providers.html'));
 

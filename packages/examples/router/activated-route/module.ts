@@ -6,15 +6,15 @@
  * found in the LICENSE file at https://angular.io/license
  */
 // tslint:disable: no-duplicate-imports
-import {NgModule} from '@angular/core';
+import {NgModule} from '@angular-classic/core';
 // #docregion activated-route
-import {Component} from '@angular/core';
+import {Component} from '@angular-classic/core';
 // #enddocregion activated-route
-import {BrowserModule} from '@angular/platform-browser';
-import {RouterModule} from '@angular/router';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {RouterModule} from '@angular-classic/router';
 
 // #docregion activated-route
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute} from '@angular-classic/router';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 // #enddocregion activated-route

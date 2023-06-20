@@ -1,6 +1,6 @@
 # Sharing data between child and parent directives and components
 
-A common pattern in Angular is sharing data between a parent component and one or more child components.
+A common pattern in Angular Classicis sharing data between a parent component and one or more child components.
 Implement this pattern with the `@Input()` and `@Output()` decorators.
 
 <div class="alert is-helpful">
@@ -66,7 +66,7 @@ In this example, the parent component template is `app.component.html`.
 
     <code-example header="src/app/app.component.ts" path="inputs-outputs/src/app/app.component.ts" region="parent-property"></code-example>
 
-With `@Input()`, Angular passes the value for `currentItem` to the child so that `item` renders as `Television`.
+With `@Input()`, Angular Classicpasses the value for `currentItem` to the child so that `item` renders as `Television`.
 
 The following diagram shows this structure:
 
@@ -99,7 +99,7 @@ The `@Output()` decorator in a child component or directive lets data flow from 
 `@Output()` marks a property in a child component as a doorway through which data can travel from the child to the parent.
 
 The child component uses the `@Output()` property to raise an event to notify the parent of the change.
-To raise an event, an `@Output()` must have the type of `EventEmitter`, which is a class in `@angular/core` that you use to emit custom events.
+To raise an event, an `@Output()` must have the type of `EventEmitter`, which is a class in `@angular-classic/core` that you use to emit custom events.
 
 The following example shows how to set up an `@Output()` in a child component that pushes data from an HTML `<input>` to an array in the parent component.
 
@@ -130,7 +130,7 @@ The `EventEmitter` then relays the data to the parent component.
     | `@Output()`                  | A decorator function marking the property as a way for data to go from the child to the parent. |
     | `newItemEvent`               | The name of the `@Output()`.                                                                    |
     | `EventEmitter<string>`       | The `@Output()`'s type.                                                                         |
-    | `new EventEmitter<string>()` | Tells Angular to create a new event emitter and that the data it emits is of type string.       |
+    | `new EventEmitter<string>()` | Tells Angular Classicto create a new event emitter and that the data it emits is of type string.       |
 
     For more information on `EventEmitter`, see the [EventEmitter API documentation](api/core/EventEmitter).
 

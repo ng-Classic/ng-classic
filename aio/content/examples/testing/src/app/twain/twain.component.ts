@@ -1,5 +1,5 @@
 // #docregion
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular-classic/core';
 
 import { Observable, of } from 'rxjs';
 import { catchError, startWith } from 'rxjs/operators';

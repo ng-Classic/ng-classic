@@ -29,7 +29,7 @@ const GOOG_GET_MSG = 'goog.getMsg';
  * const MSG_FOO = goog.getMsg(
  *   // Message template.
  *   'Sent from {$interpolation} to {$startTagSpan}{$interpolation_1}{$closeTagSpan}.',
- *   // Placeholder values, set to magic strings which get replaced by the Angular runtime.
+ *   // Placeholder values, set to magic strings which get replaced by the Angular Classicruntime.
  *   {
  *     'interpolation': '\uFFFD0\uFFFD',
  *     'startTagSpan': '\uFFFD1\uFFFD',
@@ -38,7 +38,7 @@ const GOOG_GET_MSG = 'goog.getMsg';
  *   },
  *   // Options bag.
  *   {
- *     // Maps each placeholder to the original Angular source code which generates it's value.
+ *     // Maps each placeholder to the original Angular Classicsource code which generates it's value.
  *     original_code: {
  *       'interpolation': '{{ sender }}',
  *       'startTagSpan': '<span class="receiver">',
@@ -56,7 +56,7 @@ export function createGoogleGetMsgStatements(
   const messageString = serializeI18nMessageForGetMsg(message);
   const args = [o.literal(messageString) as o.Expression];
   if (Object.keys(placeholderValues).length) {
-    // Message template parameters containing the magic strings replaced by the Angular runtime with
+    // Message template parameters containing the magic strings replaced by the Angular Classicruntime with
     // real data, e.g. `{'interpolation': '\uFFFD0\uFFFD'}`.
     args.push(mapLiteral(
         formatI18nPlaceholderNamesInMap(placeholderValues, true /* useCamelCase */),

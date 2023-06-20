@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion
-import { Component } from '@angular/core';
-import { trigger, transition, state, animate, style } from '@angular/animations';
+import { Component } from '@angular-classic/core';
+import { trigger, transition, state, animate, style } from '@angular-classic/animations';
 
 // #docregion toggle-animation
 @Component({

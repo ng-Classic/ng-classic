@@ -2,7 +2,7 @@
 
 Zone.js patched most standard APIs such as DOM event listeners, XMLHttpRequest in Browser, EventEmitter and fs API in Node.js so they can be in zone.
 
-But there are still a lot of non-standard APIs that are not patched by default, such as MediaQuery, Notification, WebAudio and so on. This page provides updates on the current state of zone support for Angular APIs.
+But there are still a lot of non-standard APIs that are not patched by default, such as MediaQuery, Notification, WebAudio and so on. This page provides updates on the current state of zone support for Angular ClassicAPIs.
 
 ## Currently supported non-standard Web APIs
 
@@ -39,12 +39,12 @@ Browser Usage:
 
 After those steps, window.Promise becomes Bluebird Promise and will also be zone awareness.
 
-Angular Usage:
+Angular ClassicUsage:
 
 in polyfills.ts, import the `zone-bluebird` package.
 
 ```
-import 'zone.js'; // Included with Angular CLI.
+import 'zone.js'; // Included with Angular ClassicCLI.
 import 'zone.js/plugins/zone-bluebird';
 ```
 
@@ -59,7 +59,7 @@ import('bluebird').then(Bluebird => {const Zone = (window as any)['Zone']; Zone[
     .catch(err => console.error(err));
 ```
 
-After this step, the `window.Promise` will be the Bluebird `Promise`, and the callback of `Bluebird.then` will be executed in the Angular zone.
+After this step, the `window.Promise` will be the Bluebird `Promise`, and the callback of `Bluebird.then` will be executed in the Angular Classiczone.
 
 Node Sample Usage:
 
@@ -174,7 +174,7 @@ is patched, so each asynchronous call will run in the correct zone.
 
 ## Usage.
 
-For example, in an Angular application, you can load this patch in your `app.module.ts`.
+For example, in an Angular Classicapplication, you can load this patch in your `app.module.ts`.
 
 ```
 import 'zone.js/plugins/zone-patch-rxjs';

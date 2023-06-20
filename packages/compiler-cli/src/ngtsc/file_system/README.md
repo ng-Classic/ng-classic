@@ -49,7 +49,7 @@ for each OS to emulate.
 to the mock file system for testing.
 * `loadStandardTestFiles()` - use this to load a mirror image of files on
 disk into the in-memory mock file-system.
-* `loadFakeCore()` - use this to load a fake version of `@angular/core`
+* `loadFakeCore()` - use this to load a fake version of `@angular-classic/core`
 into the mock file-system.
 
 All ngtsc source and tests now use this virtual file-system setup.

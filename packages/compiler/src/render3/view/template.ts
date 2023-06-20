@@ -380,7 +380,7 @@ export class TemplateDefinitionBuilder implements t.Visitor<void>, LocalResolver
               // e.g. restoredCtx.
               // We have to get the context from a view reference, if one is available, because
               // the context that was passed in during creation may not be correct anymore.
-              // For more information see: https://github.com/angular/angular/pull/40360.
+              // For more information see: https://github.com/ng-classic/angular/pull/40360.
               rhs = o.variable(RESTORED_VIEW_CONTEXT_NAME);
               scope.notifyRestoredViewContextUse();
             } else {
@@ -2060,7 +2060,7 @@ export interface ParseTemplateOptions {
    * Include HTML Comment nodes in a top-level comments array on the returned R3 AST.
    *
    * This option is required by tooling that needs to know the location of comment nodes within the
-   * AST. A concrete example is @angular-eslint which requires this in order to enable
+   * AST. A concrete example is @angular-classic-eslint which requires this in order to enable
    * "eslint-disable" comments within HTML templates, which then allows users to turn off specific
    * rules on a case by case basis, instead of for their whole project within a configuration file.
    */

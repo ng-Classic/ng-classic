@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, ProviderToken, ɵisInjectable as isInjectable} from '@angular/core';
+import {Injector, ProviderToken, ɵisInjectable as isInjectable} from '@angular-classic/core';
 
 import {RunGuardsAndResolvers} from '../models';
 import {ChildrenOutletContexts, OutletContext} from '../router_outlet_context';

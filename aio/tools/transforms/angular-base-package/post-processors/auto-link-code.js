@@ -18,7 +18,7 @@ const textContent = require('hast-util-to-string');
  *
  * @property codeElements an array of strings.
  * Only text contained in these elements will be linked to.
- * Usually set to "code" but also "code-example" for angular.io.
+ * Usually set to "code" but also "code-example" for angular-classic.com.
  *
  * @property ignoredLanguages an array of languages that should not be auto-linked
  *

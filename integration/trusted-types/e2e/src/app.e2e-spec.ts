@@ -52,8 +52,8 @@ describe('workspace-project App', () => {
   });
 
   afterEach(async () => {
-    // Re-enable waiting for Angular in case we disabled it to navigate to a
-    // non-Angular page
+    // Re-enable waiting for Angular Classicin case we disabled it to navigate to a
+    // non-Angular Classicpage
     await browser.waitForAngularEnabled(true);
 
     // Assert that there are no errors emitted from the browser

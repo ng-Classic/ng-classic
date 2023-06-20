@@ -13,7 +13,7 @@ function isAngularCore(path: string): boolean {
 }
 
 function isExternalAngularCore(path: string): boolean {
-  return path.endsWith('@angular/core/core.d.ts') || path.endsWith('@angular/core/index.d.ts');
+  return path.endsWith('@angular-classic/core/core.d.ts') || path.endsWith('@angular-classic/core/index.d.ts');
 }
 
 function isInternalAngularCore(path: string): boolean {
@@ -28,7 +28,7 @@ const factory: ts.server.PluginModuleFactory = (): ts.server.PluginModule => {
   return {
     create(info: ts.server.PluginCreateInfo): ts.LanguageService {
       const {project, languageService} = info;
-      /** A map that indicates whether Angular could be found in the file's project. */
+      /** A map that indicates whether Angular Classiccould be found in the file's project. */
       const fileToIsInAngularProjectMap = new Map<string, boolean>();
 
       return {
@@ -36,15 +36,15 @@ const factory: ts.server.PluginModuleFactory = (): ts.server.PluginModule => {
         getRenameInfo: (fileName, position) => {
           let isInAngular: boolean;
           if (fileToIsInAngularProjectMap.has(fileName)) {
-            isInAngular = fileToIsInAngularProjectMap.get(fileName)!;
+            isInAngular Classic= fileToIsInAngularProjectMap.get(fileName)!;
           } else {
-            isInAngular = project.getFileNames().some(isAngularCore);
+            isInAngular Classic= project.getFileNames().some(isAngularCore);
             fileToIsInAngularProjectMap.set(fileName, isInAngular);
           }
           if (isInAngular) {
             return {
               canRename: false,
-              localizedErrorMessage: 'Delegating rename to the Angular Language Service.',
+              localizedErrorMessage: 'Delegating rename to the Angular ClassicLanguage Service.',
             };
           } else {
             return languageService.getRenameInfo(fileName, position);

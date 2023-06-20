@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {compileClassMetadata} from '@angular/compiler';
+import {compileClassMetadata} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {absoluteFrom, getSourceFileOrError} from '../../../file_system';
@@ -20,7 +20,7 @@ runInEachFileSystem(() => {
   describe('ngtsc setClassMetadata converter', () => {
     it('should convert decorated class metadata', () => {
       const res = compileAndPrint(`
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component('metadata') class Target {}
     `);
@@ -30,7 +30,7 @@ runInEachFileSystem(() => {
 
     it('should convert namespaced decorated class metadata', () => {
       const res = compileAndPrint(`
-    import * as core from '@angular/core';
+    import * as core from '@angular-classic/core';
 
     @core.Component('metadata') class Target {}
     `);
@@ -40,7 +40,7 @@ runInEachFileSystem(() => {
 
     it('should convert decorated class constructor parameter metadata', () => {
       const res = compileAndPrint(`
-    import {Component, Inject, Injector} from '@angular/core';
+    import {Component, Inject, Injector} from '@angular-classic/core';
     const FOO = 'foo';
 
     @Component('metadata') class Target {
@@ -53,7 +53,7 @@ runInEachFileSystem(() => {
 
     it('should convert decorated field metadata', () => {
       const res = compileAndPrint(`
-    import {Component, Input} from '@angular/core';
+    import {Component, Input} from '@angular-classic/core';
 
     @Component('metadata') class Target {
       @Input() foo: string;
@@ -68,7 +68,7 @@ runInEachFileSystem(() => {
 
     it('should convert decorated field getter/setter metadata', () => {
       const res = compileAndPrint(`
-    import {Component, Input} from '@angular/core';
+    import {Component, Input} from '@angular-classic/core';
 
     @Component('metadata') class Target {
       @Input() get foo() { return this._foo; }
@@ -83,7 +83,7 @@ runInEachFileSystem(() => {
       expect(res).toContain(`{ foo: [{ type: Input }], bar: [{ type: Input, args: ['value'] }] })`);
     });
 
-    it('should not convert non-angular decorators to metadata', () => {
+    it('should not convert non-Angular Classicdecorators to metadata', () => {
       const res = compileAndPrint(`
     declare function NotAComponent(...args: any[]): any;
 
@@ -94,7 +94,7 @@ runInEachFileSystem(() => {
 
     it('should preserve quotes around class member names', () => {
       const res = compileAndPrint(`
-        import {Component, Input} from '@angular/core';
+        import {Component, Input} from '@angular-classic/core';
 
         @Component('metadata') class Target {
           @Input() 'has-dashes-in-name' = 123;
@@ -109,7 +109,7 @@ runInEachFileSystem(() => {
   function compileAndPrint(contents: string): string {
     const _ = absoluteFrom;
     const CORE: TestFile = {
-      name: _('/node_modules/@angular/core/index.d.ts'),
+      name: _('/node_modules/@angular-classic/core/index.d.ts'),
       contents: `
       export declare function Input(...args: any[]): any;
       export declare function Inject(...args: any[]): any;

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injectable, InjectionToken, Injector, Optional} from '@angular/core';
+import {Injectable, InjectionToken, Injector, Optional} from '@angular-classic/core';
 
 {
   describe('Provider examples', () => {
@@ -189,7 +189,7 @@ import {Injectable, InjectionToken, Injector, Optional} from '@angular/core';
 
         const injector = Injector.create({
           providers: [
-            {provide: Location, useValue: 'https://angular.io/#someLocation'}, {
+            {provide: Location, useValue: 'https://angular-classic.com/#someLocation'}, {
               provide: Hash,
               useFactory: (location: string) => location.split('#')[1],
               deps: [Location]

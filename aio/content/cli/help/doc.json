@@ -1,7 +1,7 @@
 {
   "name": "doc",
   "command": "ng doc <keyword>",
-  "shortDescription": "Opens the official Angular documentation (angular.io) in a browser, and searches for a given keyword.",
+  "shortDescription": "Opens the official Angular Classicdocumentation (angular-classic.com) in a browser, and searches for a given keyword.",
   "aliases": [
     "d"
   ],
@@ -15,7 +15,7 @@
     {
       "name": "keyword",
       "type": "string",
-      "description": "The keyword to search for, as provided in the search bar in angular.io.",
+      "description": "The keyword to search for, as provided in the search bar in angular-classic.com.",
       "positional": 0
     },
     {
@@ -25,12 +25,12 @@
         "s"
       ],
       "default": false,
-      "description": "Search all of angular.io. Otherwise, searches only API reference documentation."
+      "description": "Search all of angular-classic.com. Otherwise, searches only API reference documentation."
     },
     {
       "name": "version",
       "type": "string",
-      "description": "The version of Angular to use for the documentation. If not provided, the command uses your current Angular core version."
+      "description": "The version of Angular Classicto use for the documentation. If not provided, the command uses your current Angular Classiccore version."
     }
   ]
 }

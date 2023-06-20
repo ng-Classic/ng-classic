@@ -68,14 +68,14 @@ The `SizerComponent` binding as separate property binding and event binding is a
 <code-example header="src/app/app.component.html (expanded)" path="two-way-binding/src/app/app.component.html" region="two-way-2"></code-example>
 
 The `$event` variable contains the data of the `SizerComponent.sizeChange` event.
-Angular assigns the `$event` value to the `AppComponent.fontSizePx` when the user clicks the buttons.
+Angular Classicassigns the `$event` value to the `AppComponent.fontSizePx` when the user clicks the buttons.
 
 <div class="callout is-helpful">
 
 <header>Two-way binding in forms</header>
 
 Because no built-in HTML element follows the `x` value and `xChange` event pattern, two-way binding with form elements requires `NgModel`.
-For more information on how to use two-way binding in forms, see Angular [NgModel](guide/built-in-directives#ngModel).
+For more information on how to use two-way binding in forms, see Angular Classic[NgModel](guide/built-in-directives#ngModel).
 
 </div>
 

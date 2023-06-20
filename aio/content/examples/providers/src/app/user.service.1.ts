@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import { UserModule } from './user.module';
 
 @Injectable({

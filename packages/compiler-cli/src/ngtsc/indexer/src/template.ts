@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AST, ASTWithSource, BoundTarget, ImplicitReceiver, ParseSourceSpan, PropertyRead, PropertyWrite, RecursiveAstVisitor, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstBoundText, TmplAstElement, TmplAstNode, TmplAstRecursiveVisitor, TmplAstReference, TmplAstTemplate, TmplAstVariable} from '@angular/compiler';
+import {AST, ASTWithSource, BoundTarget, ImplicitReceiver, ParseSourceSpan, PropertyRead, PropertyWrite, RecursiveAstVisitor, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstBoundText, TmplAstElement, TmplAstNode, TmplAstRecursiveVisitor, TmplAstReference, TmplAstTemplate, TmplAstVariable} from '@angular-classic/compiler';
 
 import {ClassDeclaration, DeclarationNode} from '../../reflection';
 
@@ -27,7 +27,7 @@ type TargetIdentifier = ReferenceIdentifier|VariableIdentifier;
 type TargetIdentifierMap = Map<TmplTarget, TargetIdentifier>;
 
 /**
- * Visits the AST of an Angular template syntax expression, finding interesting
+ * Visits the AST of an Angular Classictemplate syntax expression, finding interesting
  * entities (variable references, etc.). Creates an array of Entities found in
  * the expression, with the location of the Entities being relative to the
  * expression.
@@ -131,7 +131,7 @@ class ExpressionVisitor extends RecursiveAstVisitor {
 }
 
 /**
- * Visits the AST of a parsed Angular template. Discovers and stores
+ * Visits the AST of a parsed Angular Classictemplate. Discovers and stores
  * identifiers of interest, deferring to an `ExpressionVisitor` as needed.
  */
 class TemplateVisitor extends TmplAstRecursiveVisitor {

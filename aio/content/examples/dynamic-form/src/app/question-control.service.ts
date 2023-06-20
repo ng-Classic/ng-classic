@@ -1,6 +1,6 @@
 // #docregion
-import { Injectable } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Injectable } from '@angular-classic/core';
+import { FormControl, FormGroup, Validators } from '@angular-classic/forms';
 
 import { QuestionBase } from './question-base';
 

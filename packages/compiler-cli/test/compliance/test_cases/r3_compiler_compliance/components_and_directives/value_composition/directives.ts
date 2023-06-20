@@ -1,4 +1,4 @@
-import {Component, Directive, NgModule} from '@angular/core';
+import {Component, Directive, NgModule} from '@angular-classic/core';
 
 @Component({selector: 'child', template: 'child-view'})
 export class ChildComponent {

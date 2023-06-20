@@ -22,11 +22,11 @@ describe('getCompilerFacade', () => {
       } catch (e) {
         expect((e as Error).message)
             .toEqual(
-                `The directive 'TestClass' needs to be compiled using the JIT compiler, but '@angular/compiler' is not available.
+                `The directive 'TestClass' needs to be compiled using the JIT compiler, but '@angular-classic/compiler' is not available.
 
 JIT compilation is discouraged for production use-cases! Consider using AOT mode instead.
-Alternatively, the JIT compiler should be loaded by bootstrapping using '@angular/platform-browser-dynamic' or '@angular/platform-server',
-or manually provide the compiler with 'import "@angular/compiler";' before bootstrapping.`);
+Alternatively, the JIT compiler should be loaded by bootstrapping using '@angular-classic/platform-browser-dynamic' or '@angular-classic/platform-server',
+or manually provide the compiler with 'import "@angular-classic/compiler";' before bootstrapping.`);
       }
     });
 
@@ -38,14 +38,14 @@ or manually provide the compiler with 'import "@angular/compiler";' before boots
       } catch (e) {
         expect((e as Error).message)
             .toEqual(
-                `The directive 'TestClass' needs to be compiled using the JIT compiler, but '@angular/compiler' is not available.
+                `The directive 'TestClass' needs to be compiled using the JIT compiler, but '@angular-classic/compiler' is not available.
 
 The directive is part of a library that has been partially compiled.
-However, the Angular Linker has not processed the library such that JIT compilation is used as fallback.
+However, the Angular ClassicLinker has not processed the library such that JIT compilation is used as fallback.
 
-Ideally, the library is processed using the Angular Linker to become fully AOT compiled.
-Alternatively, the JIT compiler should be loaded by bootstrapping using '@angular/platform-browser-dynamic' or '@angular/platform-server',
-or manually provide the compiler with 'import "@angular/compiler";' before bootstrapping.`);
+Ideally, the library is processed using the Angular ClassicLinker to become fully AOT compiled.
+Alternatively, the JIT compiler should be loaded by bootstrapping using '@angular-classic/platform-browser-dynamic' or '@angular-classic/platform-server',
+or manually provide the compiler with 'import "@angular-classic/compiler";' before bootstrapping.`);
       }
     });
   });

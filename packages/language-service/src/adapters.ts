@@ -8,11 +8,11 @@
 
 /** @fileoverview provides adapters for communicating with the ng compiler */
 
-import {ConfigurationHost} from '@angular/compiler-cli';
-import {NgCompilerAdapter} from '@angular/compiler-cli/src/ngtsc/core/api';
-import {AbsoluteFsPath, FileStats, PathSegment, PathString} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {isShim} from '@angular/compiler-cli/src/ngtsc/shims';
-import {getRootDirs} from '@angular/compiler-cli/src/ngtsc/util/src/typescript';
+import {ConfigurationHost} from '@angular-classic/compiler-cli';
+import {NgCompilerAdapter} from '@angular-classic/compiler-cli/src/ngtsc/core/api';
+import {AbsoluteFsPath, FileStats, PathSegment, PathString} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {isShim} from '@angular-classic/compiler-cli/src/ngtsc/shims';
+import {getRootDirs} from '@angular-classic/compiler-cli/src/ngtsc/util/src/typescript';
 import * as p from 'path';
 import ts from 'typescript/lib/tsserverlibrary';
 

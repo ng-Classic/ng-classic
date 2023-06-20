@@ -7,8 +7,8 @@
  */
 import './translations';
 
-import {Component, NgModule} from '@angular/core';
-import {BrowserModule, platformBrowser} from '@angular/platform-browser';
+import {Component, NgModule} from '@angular-classic/core';
+import {BrowserModule, platformBrowser} from '@angular-classic/platform-browser';
 
 @Component({
   selector: 'hello-world',

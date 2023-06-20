@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ApplicationRef, ChangeDetectorRef, ComponentFactory, ComponentRef, EventEmitter, Injector, OnChanges, SimpleChange, SimpleChanges, StaticProvider, Testability, TestabilityRegistry, Type} from '@angular/core';
+import {ApplicationRef, ChangeDetectorRef, ComponentFactory, ComponentRef, EventEmitter, Injector, OnChanges, SimpleChange, SimpleChanges, StaticProvider, Testability, TestabilityRegistry, Type} from '@angular-classic/core';
 
 import {IAttributes, IAugmentedJQuery, ICompileService, INgModelController, IParseService, IScope} from './angular1';
 import {PropertyBinding} from './component_info';
@@ -240,7 +240,7 @@ export class DowngradeComponentAdapter {
         // The `componentScope` might be getting destroyed, because an ancestor element is being
         // removed/destroyed. If that is the case, jqLite/jQuery would normally invoke `cleanData()`
         // on the removed element and all descendants.
-        //   https://github.com/angular/angular.js/blob/2e72ea13fa98bebf6ed4b5e3c45eaf5f990ed16f/src/jqLite.js#L349-L355
+        //   https://github.com/ng-classic/angular.js/blob/2e72ea13fa98bebf6ed4b5e3c45eaf5f990ed16f/src/jqLite.js#L349-L355
         //   https://github.com/jquery/jquery/blob/6984d1747623dbc5e87fd6c261a5b6b1628c107c/src/manipulation.js#L182
         //
         // Here, however, `destroyComponentRef()` may under some circumstances remove the element

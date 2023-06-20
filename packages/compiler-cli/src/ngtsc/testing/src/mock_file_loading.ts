@@ -57,7 +57,7 @@ export function loadStandardTestFiles(
   if (fakeCore) {
     loadFakeCore(tmpFs, basePath);
   } else {
-    tmpFs.mount(tmpFs.resolve('/node_modules/@angular'), angularFolder.get());
+    tmpFs.mount(tmpFs.resolve('/node_modules/@angular-classic'), angularFolder.get());
   }
 
   if (fakeCommon) {
@@ -81,7 +81,7 @@ export function loadFakeCore(fs: FileSystem, basePath: string = '/') {
   loadTestDirectory(
       fs,
       resolveFromRunfiles('angular/packages/compiler-cli/src/ngtsc/testing/fake_core/npm_package'),
-      fs.resolve(basePath, 'node_modules/@angular/core'));
+      fs.resolve(basePath, 'node_modules/@angular-classic/core'));
 }
 
 export function loadFakeCommon(fs: FileSystem, basePath: string = '/') {
@@ -89,7 +89,7 @@ export function loadFakeCommon(fs: FileSystem, basePath: string = '/') {
       fs,
       resolveFromRunfiles(
           'angular/packages/compiler-cli/src/ngtsc/testing/fake_common/npm_package'),
-      fs.resolve(basePath, 'node_modules/@angular/common'));
+      fs.resolve(basePath, 'node_modules/@angular-classic/common'));
 }
 
 

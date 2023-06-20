@@ -1,4 +1,4 @@
-import {CaretakerConfig} from '@angular/ng-dev';
+import {CaretakerConfig} from '@angular-classic/ng-dev';
 
 /** The configuration for `ng-dev caretaker` commands. */
 export const caretaker: CaretakerConfig = {

@@ -1,17 +1,17 @@
-# Migrate an existing Angular project to standalone
+# Migrate an existing Angular Classicproject to standalone
 
-As of version 15.2.0, Angular offers a [schematic](guide/schematics) to help project authors convert existing projects to [the new standalone APIs](guide/standalone-components). The schematic aims to transform as much code as possible automatically, but it may require some manual fixes by the project author. Run the schematic with the following command:
+As of version 15.2.0, Angular Classicoffers a [schematic](guide/schematics) to help project authors convert existing projects to [the new standalone APIs](guide/standalone-components). The schematic aims to transform as much code as possible automatically, but it may require some manual fixes by the project author. Run the schematic with the following command:
 
 <code-example format="shell" language="shell">
 
-ng generate @angular/core:standalone
+ng generate @angular-classic/core:standalone
 
 </code-example>
 
 ## Prerequisites
 
 Before using the schematic, please ensure that the project:
-1. Is using Angular 15.2.0 or later.
+1. Is using Angular Classic15.2.0 or later.
 2. Builds without any compilation errors.
 3. Is on a clean Git branch and all work is saved.
 
@@ -36,9 +36,9 @@ You should plan to apply manual fixes after each step of the migration. Addition
 </div>
 
 Run the migration in the order listed below, verifying that your code builds and runs between each step:
-1. Run `ng g @angular/core:standalone` and select "Convert all components, directives and pipes to standalone"
-2. Run `ng g @angular/core:standalone` and select "Remove unnecessary NgModule classes"
-3. Run `ng g @angular/core:standalone` and select "Bootstrap the project using standalone APIs"
+1. Run `ng g @angular-classic/core:standalone` and select "Convert all components, directives and pipes to standalone"
+2. Run `ng g @angular-classic/core:standalone` and select "Remove unnecessary NgModule classes"
+3. Run `ng g @angular-classic/core:standalone` and select "Bootstrap the project using standalone APIs"
 4. Run any linting and formatting checks, fix any failures, and commit the result
 
 ## After the migration
@@ -146,7 +146,7 @@ This step converts any usages of  `bootstrapModule` to the new, standalone-based
 **Before:**
 ```typescript
 // ./app/app.module.ts
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular-classic/core';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -164,7 +164,7 @@ export class AppComponent {}
 
 ```typescript
 // ./main.ts
-import { platformBrowser } from '@angular/platform-browser';
+import { platformBrowser } from '@angular-classic/platform-browser';
 import { AppModule } from './app/app.module';
 
 platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
@@ -184,7 +184,7 @@ export class AppComponent {}
 
 ```typescript
 // ./main.ts
-import { bootstrapApplication } from '@angular/platform-browser';
+import { bootstrapApplication } from '@angular-classic/platform-browser';
 import { AppComponent } from './app/app.component';
 
 bootstrapApplication(AppComponent).catch(e => console.error(e));
@@ -192,13 +192,13 @@ bootstrapApplication(AppComponent).catch(e => console.error(e));
 
 ## Common problems
 Some common problems that may prevent the schematic from working correctly include:
-* Compilation errors - if the project has compilation errors, Angular cannot analyze and migrate it correctly.
+* Compilation errors - if the project has compilation errors, Angular Classiccannot analyze and migrate it correctly.
 * Files not included in a tsconfig - the schematic determines which files to migrate by analyzing your project's `tsconfig.json` files. The schematic excludes any files not captured by a tsconfig.
 * Code that cannot be statically analyzed - the schematic uses static analysis to understand your code and determine where to make changes. The migration may skip any classes with metadata that cannot be statically analyzed at build time.
 
 ## Limitations
 Due to the size and complexity of the migration, there are some cases that the schematic cannot handle:
 * Because unit tests are not ahead-of-time (AoT) compiled, `imports` added to components in unit tests might not be entirely correct.
-* The schematic relies on direct calls to Angular APIs. The schematic cannot recognize custom wrappers around Angular APIs. For example, if there you define a custom `customConfigureTestModule` function that wraps `TestBed.configureTestingModule`, components it declares may not be recognized.
+* The schematic relies on direct calls to Angular ClassicAPIs. The schematic cannot recognize custom wrappers around Angular ClassicAPIs. For example, if there you define a custom `customConfigureTestModule` function that wraps `TestBed.configureTestingModule`, components it declares may not be recognized.
 
 @reviewed 2023-02-15

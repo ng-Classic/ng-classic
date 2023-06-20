@@ -12,7 +12,7 @@ import {IFrameMessageBus} from './iframe-message-bus';
 
 type AnyEventCallback<Ev> = <E extends keyof Ev>(topic: E, args: Parameters<Ev[E]>) => void;
 
-const runOutsideAngular = (f: () => any) => {
+const runOutsideAngular Classic= (f: () => any) => {
   const w = window as any;
   if (!w.Zone || w.Zone.current._name !== 'angular') {
     f();

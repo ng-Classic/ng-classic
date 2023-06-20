@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Injectable, NgModule, Optional, Self} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {ServerModule} from '@angular/platform-server';
+import {Component, Injectable, NgModule, Optional, Self} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {ServerModule} from '@angular-classic/platform-server';
 
 @Injectable()
 export class NormalService {

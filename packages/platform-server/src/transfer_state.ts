@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT} from '@angular/common';
-import {APP_ID, NgModule, Provider, TransferState} from '@angular/core';
+import {DOCUMENT} from '@angular-classic/common';
+import {APP_ID, NgModule, Provider, TransferState} from '@angular-classic/core';
 
 import {BEFORE_APP_SERIALIZED} from './tokens';
 
@@ -35,7 +35,7 @@ function serializeTransferStateFactory(doc: Document, appId: string, transferSto
     script.setAttribute('type', 'application/json');
     script.textContent = content;
 
-    // It is intentional that we add the script at the very bottom. Angular CLI script tags for
+    // It is intentional that we add the script at the very bottom. Angular ClassicCLI script tags for
     // bundles are always `type="module"`. These are deferred by default and cause the transfer
     // transfer data to be queried only after the browser has finished parsing the DOM.
     doc.body.appendChild(script);

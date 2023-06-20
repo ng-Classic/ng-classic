@@ -5,13 +5,13 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AST, TmplAstNode} from '@angular/compiler';
-import {NgCompiler} from '@angular/compiler-cli/src/ngtsc/core';
-import {absoluteFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {MetaKind, PipeMeta} from '@angular/compiler-cli/src/ngtsc/metadata';
-import {PerfPhase} from '@angular/compiler-cli/src/ngtsc/perf';
-import {ProgramDriver} from '@angular/compiler-cli/src/ngtsc/program_driver';
-import {SymbolKind} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {AST, TmplAstNode} from '@angular-classic/compiler';
+import {NgCompiler} from '@angular-classic/compiler-cli/src/ngtsc/core';
+import {absoluteFrom} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {MetaKind, PipeMeta} from '@angular-classic/compiler-cli/src/ngtsc/metadata';
+import {PerfPhase} from '@angular-classic/compiler-cli/src/ngtsc/perf';
+import {ProgramDriver} from '@angular-classic/compiler-cli/src/ngtsc/program_driver';
+import {SymbolKind} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript';
 
 import {convertToTemplateDocumentSpan, createLocationKey, FilePosition, getParentClassMeta, getRenameTextAndSpanAtPosition, getTargetDetailsAtTemplatePosition, TemplateLocationDetails} from './references_and_rename_utils';

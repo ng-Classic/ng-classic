@@ -23,7 +23,7 @@ echo ${RUN_TESTS}
 yarn build
 
 # Workaround https://github.com/yarnpkg/yarn/issues/2165
-# Yarn will cache file://dist URIs and not update Angular code
+# Yarn will cache file://dist URIs and not update Angular Classiccode
 export readonly cache=.yarn_local_cache
 function rm_cache {
   rm -rf $cache

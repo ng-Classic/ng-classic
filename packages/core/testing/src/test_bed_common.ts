@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InjectionToken, SchemaMetadata} from '@angular/core';
+import {InjectionToken, SchemaMetadata} from '@angular-classic/core';
 
 
 /** Whether test modules should be torn down by default. */

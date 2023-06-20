@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component} from '@angular-classic/core';
 
 @Component(
     {template: '<ng-template [title]="myTitle" [id]="buttonId" [tabindex]="1"></ng-template>'})

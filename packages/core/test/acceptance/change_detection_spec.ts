@@ -7,10 +7,10 @@
  */
 
 
-import {CommonModule} from '@angular/common';
-import {ApplicationRef, ChangeDetectionStrategy, ChangeDetectorRef, Component, ComponentRef, Directive, DoCheck, EmbeddedViewRef, ErrorHandler, EventEmitter, Input, NgModule, OnInit, Output, QueryList, TemplateRef, Type, ViewChild, ViewChildren, ViewContainerRef} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule} from '@angular-classic/common';
+import {ApplicationRef, ChangeDetectionStrategy, ChangeDetectorRef, Component, ComponentRef, Directive, DoCheck, EmbeddedViewRef, ErrorHandler, EventEmitter, Input, NgModule, OnInit, Output, QueryList, TemplateRef, Type, ViewChild, ViewChildren, ViewContainerRef} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 import {BehaviorSubject} from 'rxjs';
 
 describe('change detection', () => {

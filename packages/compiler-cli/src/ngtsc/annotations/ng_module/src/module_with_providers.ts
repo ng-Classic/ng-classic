@@ -19,7 +19,7 @@ import {ClassDeclaration, isNamedClassDeclaration, ReflectionHost, typeNodeToVal
  * type is recognized.
  *
  * @param reflector The reflection host to use for analyzing the syntax.
- * @param isCore Whether the @angular/core package is being compiled.
+ * @param isCore Whether the @angular-classic/core package is being compiled.
  */
 export function createModuleWithProvidersResolver(
     reflector: ReflectionHost, isCore: boolean): ForeignFunctionResolver {
@@ -53,8 +53,8 @@ export function createModuleWithProvidersResolver(
       return null;
     }
 
-    // If it's not from @angular/core, bail.
-    if (!isCore && id.from !== '@angular/core') {
+    // If it's not from @angular-classic/core, bail.
+    if (!isCore && id.from !== '@angular-classic/core') {
       return null;
     }
 

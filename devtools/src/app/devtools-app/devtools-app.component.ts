@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular-classic/core';
 import {Events, MessageBus, PriorityAwareMessageBus} from 'protocol';
 
 import {IFrameMessageBus} from '../../iframe-message-bus';

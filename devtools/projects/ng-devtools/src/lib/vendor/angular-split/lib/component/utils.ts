@@ -1,5 +1,5 @@
 // tslint:disable
-import {ElementRef} from '@angular/core';
+import {ElementRef} from '@angular-classic/core';
 
 import {IArea, IAreaAbsorptionCapacity, IAreaSnapshot, IPoint, ISplitSideAbsorptionCapacity} from './interface';
 

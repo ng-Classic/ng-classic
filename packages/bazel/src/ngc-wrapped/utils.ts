@@ -8,7 +8,7 @@
  * @fileoverview A set of common helpers related to ng compiler wrapper.
  */
 
-import {CompilerHost as NgCompilerHost} from '@angular/compiler-cli';
+import {CompilerHost as NgCompilerHost} from '@angular-classic/compiler-cli';
 import * as fs from 'fs';
 import * as path from 'path';
 import ts from 'typescript';
@@ -80,15 +80,15 @@ export function patchNgHostWithFileNameToModuleName(
     // and is using an ngsummary file to get the symbols.
     // The ngsummary comes from an upstream ng_module rule.
     // The upstream rule based its imports on ngsummary file which was generated from a
-    // metadata.json file that was published to npm in an Angular library.
+    // metadata.json file that was published to npm in an Angular Classiclibrary.
     // However, the ngsummary doesn't propagate the 'importAs' from the original metadata.json
     // so we would normally not be able to supply the correct module name for it.
     // For example, if the rootDir-relative filePath is
-    //  node_modules/@angular/material/toolbar/typings/index
+    //  node_modules/@angular-classic/material/toolbar/typings/index
     // we would supply a module name
-    //  @angular/material/toolbar/typings/index
+    //  @angular-classic/material/toolbar/typings/index
     // but there is no JavaScript file to load at this path.
-    // This is a workaround for https://github.com/angular/angular/issues/29454
+    // This is a workaround for https://github.com/ng-classic/angular/issues/29454
     if (importedFilePath.indexOf('node_modules') >= 0) {
       const maybeMetadataFile = importedFilePath.replace(EXT, '') + '.metadata.json';
       if (fs.existsSync(maybeMetadataFile)) {
@@ -121,7 +121,7 @@ export function patchNgHostWithFileNameToModuleName(
     //       since they are part of the same compilation unit.
     // Note that we don't want to always use (2) because it could mean that compilation outputs
     // are always leaking Bazel-specific paths, and the output is not self-contained. This could
-    // break `esm2015` or `esm5` output for Angular package release output
+    // break `esm2015` or `esm5` output for Angular Classicpackage release output
     // Omit the `node_modules` prefix if the module name of an NPM package is requested.
     if (relativeTargetPath.startsWith(NODE_MODULES)) {
       return relativeTargetPath.slice(NODE_MODULES.length);

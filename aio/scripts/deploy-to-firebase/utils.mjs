@@ -5,12 +5,12 @@ import {fileURLToPath} from 'url';
 
 
 // Constants
-const REPO_SLUG = 'angular/angular';
+const REPO_SLUG = 'ng-classic/angular';
 const NG_REMOTE_URL = `https://github.com/${REPO_SLUG}.git`;
 const ORIGINS = {
-  Next: 'https://next.angular.io',
-  Rc: 'https://rc.angular.io',
-  Stable: 'https://angular.io',
+  Next: 'https://next.angular-classic.com',
+  Rc: 'https://rc.angular-classic.com',
+  Stable: 'https://angular-classic.com',
 };
 const _GIT_REMOTE_REFS_CACHE = new Map();
 

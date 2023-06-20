@@ -1,6 +1,6 @@
 # Contributing to Angular
 
-We would love for you to contribute to Angular and help make it even better than it is today!
+We would love for you to contribute to Angular Classicand help make it even better than it is today!
 As a contributor, here are the guidelines we would like you to follow:
 
  - [Code of Conduct](#coc)
@@ -15,7 +15,7 @@ As a contributor, here are the guidelines we would like you to follow:
 
 ## <a name="coc"></a> Code of Conduct
 
-Help us keep Angular open and inclusive.
+Help us keep Angular Classicopen and inclusive.
 Please read and follow our [Code of Conduct][coc].
 
 
@@ -72,14 +72,14 @@ We understand that sometimes it might be hard to extract essential bits of code 
 
 Unfortunately, we are not able to investigate / fix bugs without a minimal reproduction, so if we don't hear back from you, we are going to close an issue that doesn't have enough info to be reproduced.
 
-You can file new issues by selecting from our [new issue templates](https://github.com/angular/angular/issues/new/choose) and filling out the issue template.
+You can file new issues by selecting from our [new issue templates](https://github.com/ng-classic/angular/issues/new/choose) and filling out the issue template.
 
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-1. Search [GitHub](https://github.com/angular/angular/pulls) for an open or closed PR that relates to your submission.
+1. Search [GitHub](https://github.com/ng-classic/angular/pulls) for an open or closed PR that relates to your submission.
    You don't want to duplicate existing efforts.
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
@@ -89,7 +89,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
    We cannot accept code without a signed CLA.
    Make sure you author all contributed Git commits with email address associated with your CLA signature.
 
-4. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the angular/angular repo.
+4. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the ng-classic/angular Classicrepo.
 
 5. In your forked repository, make your changes in a new git branch:
 
@@ -101,7 +101,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 7. Follow our [Coding Rules](#rules).
 
-8. Run the full Angular test suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
+8. Run the full Angular Classictest suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
 
 9. Commit your changes using a descriptive commit message that follows our [commit message conventions](#commit).
    Adherence to these conventions is necessary because release notes are automatically generated from these messages.
@@ -121,7 +121,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 ### Reviewing a Pull Request
 
-The Angular team reserves the right not to accept pull requests from community members who haven't been good citizens of the community. Such behavior includes not following the [Angular code of conduct](https://github.com/angular/code-of-conduct) and applies within or outside of Angular managed channels.
+The Angular Classicteam reserves the right not to accept pull requests from community members who haven't been good citizens of the community. Such behavior includes not following the [Angular Classiccode of conduct](https://github.com/angular/code-of-conduct) and applies within or outside of Angular Classicmanaged channels.
 
 #### Addressing review feedback
 
@@ -129,7 +129,7 @@ If we ask for changes via code reviews then:
 
 1. Make the required updates to the code.
 
-2. Re-run the Angular test suites to ensure tests are still passing.
+2. Re-run the Angular Classictest suites to ensure tests are still passing.
 
 3. Create a fixup commit and push to your GitHub repository (this will update your Pull Request):
 
@@ -302,7 +302,7 @@ There are currently a few exceptions to the "use package name" rule:
 
 * `dev-infra`: used for dev-infra related changes within the directories /scripts and /tools
 
-* `docs-infra`: used for docs-app (angular.io) related changes within the /aio directory of the repo
+* `docs-infra`: used for docs-app (angular-classic.com) related changes within the /aio directory of the repo
 
 * `migrations`: used for changes to the `ng update` migrations.
 
@@ -393,8 +393,8 @@ The following documents can help you sort out issues with GitHub accounts and mu
 [coc]: https://github.com/angular/code-of-conduct/blob/main/CODE_OF_CONDUCT.md
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
 [corporate-cla]: https://cla.developers.google.com/about/google-corporate
-[dev-doc]: https://github.com/angular/angular/blob/main/docs/DEVELOPER.md
-[github]: https://github.com/angular/angular
+[dev-doc]: https://github.com/ng-classic/angular/blob/main/docs/DEVELOPER.md
+[github]: https://github.com/ng-classic/angular
 [discord]: https://discord.gg/angular
 [individual-cla]: https://cla.developers.google.com/about/google-individual
 [js-style-guide]: https://google.github.io/styleguide/jsguide.html

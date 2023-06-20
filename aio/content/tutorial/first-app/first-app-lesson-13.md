@@ -1,6 +1,6 @@
 # Lesson 13 - Add the search feature to your app
 
-This tutorial lesson demonstrates how to add a search functionality to your Angular app.
+This tutorial lesson demonstrates how to add a search functionality to your Angular Classicapp.
 
 The app will enable users to search through the data provided by your app and display only the results that match the entered term.
 
@@ -15,7 +15,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 

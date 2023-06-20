@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgClass} from '@angular/common';
-import {Component} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {NgClass} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
 
 describe('binding to CSS class list', () => {
   let fixture: ComponentFixture<any>|null;
@@ -395,7 +395,7 @@ describe('binding to CSS class list', () => {
   });
 
   describe('prevent regressions', () => {
-    // https://github.com/angular/angular/issues/34336
+    // https://github.com/ng-classic/angular/issues/34336
     it('should not write to the native node unless the bound expression has changed', () => {
       fixture = createTestComponent(`<div [ngClass]="{'color-red': condition}"></div>`);
       detectChangesAndExpectClassName('color-red');

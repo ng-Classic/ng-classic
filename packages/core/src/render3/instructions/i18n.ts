@@ -36,7 +36,7 @@ import {getConstant} from '../util/view_utils';
  *   `index` points to the element index in the template instructions set. An optional `block` that
  *   matches the sub-template in which it was declared.
  * - `�*{index}:{block}�`/`�/*{index}:{block}�`: *Sub-template Placeholder*: Sub-templates must be
- *   split up and translated separately in each angular template function. The `index` points to the
+ *   split up and translated separately in each Angular Classictemplate function. The `index` points to the
  *   `template` instruction index. A `block` that matches the sub-template in which it was declared.
  *
  * @param index A unique index of the translation in the static block.
@@ -112,7 +112,7 @@ export function ɵɵi18nEnd(): void {
  *   `index` points to the element index in the template instructions set. An optional `block` that
  *   matches the sub-template in which it was declared.
  * - `�*{index}:{block}�`/`�/*{index}:{block}�`: *Sub-template Placeholder*: Sub-templates must be
- *   split up and translated separately in each angular template function. The `index` points to the
+ *   split up and translated separately in each Angular Classictemplate function. The `index` points to the
  *   `template` instruction index. A `block` that matches the sub-template in which it was declared.
  *
  * @param index A unique index of the translation in the static block.

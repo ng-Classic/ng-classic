@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myTitle = 'hello';
@@ -25,7 +25,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myTitle: string;
     buttonId: string;
@@ -36,8 +36,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_single_interpolation.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myTitle = 'hello';
@@ -60,7 +60,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_single_interpolation.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myTitle: string;
     buttonId: string;
@@ -71,8 +71,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_mixed.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -93,7 +93,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_mixed.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MyComponent, "ng-component", never, {}, {}, never, never, false, never>;
@@ -102,8 +102,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: chain_bindings_with_interpolations.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -128,7 +128,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_bindings_with_interpolations.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MyComponent, "ng-component", never, {}, {}, never, never, false, never>;
@@ -137,8 +137,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_for_multiple_elements.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class CustomEl {
 }
 CustomEl.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: CustomEl, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -182,7 +182,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_for_multiple_elements.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class CustomEl {
     static ɵfac: i0.ɵɵFactoryDeclaration<CustomEl, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CustomEl, "custom-element", never, {}, {}, never, never, false, never>;
@@ -202,8 +202,8 @@ export declare class MyMod {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_with_child_elements.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myTitle = 'hello';
@@ -228,7 +228,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_with_child_elements.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myTitle: string;
     buttonId: string;
@@ -239,8 +239,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: exclude_bindings_from_consts.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     doThings() { }
 }
@@ -282,7 +282,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: exclude_bindings_from_consts.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     doThings(): void;
     three: any;
@@ -298,8 +298,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: interpolated_attributes.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.name = 'John Doe';
@@ -349,7 +349,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: interpolated_attributes.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     name: string;
     one: any;

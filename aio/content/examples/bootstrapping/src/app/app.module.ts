@@ -1,9 +1,9 @@
 // #docplaster
 // imports
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { NgModule } from '@angular-classic/core';
+import { FormsModule } from '@angular-classic/forms';
+import { HttpClientModule } from '@angular-classic/common/http';
 
 import { AppComponent } from './app.component';
 // #docregion directive-import

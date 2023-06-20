@@ -5,15 +5,15 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, AnimationPlayer, AnimationTriggerMetadata, state, style, transition, trigger} from '@angular/animations';
-import {ɵAnimationEngine as AnimationEngine} from '@angular/animations/browser';
-import {APP_INITIALIZER, Component, destroyPlatform, importProvidersFrom, Injectable, NgModule, NgZone, RendererFactory2, RendererType2, ViewChild} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {bootstrapApplication} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule, ɵAnimationRendererFactory as AnimationRendererFactory, ɵInjectableAnimationEngine as InjectableAnimationEngine} from '@angular/platform-browser/animations';
-import {DomRendererFactory2} from '@angular/platform-browser/src/dom/dom_renderer';
-import {withBody} from '@angular/private/testing';
+import {animate, AnimationPlayer, AnimationTriggerMetadata, state, style, transition, trigger} from '@angular-classic/animations';
+import {ɵAnimationEngine as AnimationEngine} from '@angular-classic/animations/browser';
+import {APP_INITIALIZER, Component, destroyPlatform, importProvidersFrom, Injectable, NgModule, NgZone, RendererFactory2, RendererType2, ViewChild} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {bootstrapApplication} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {BrowserAnimationsModule, ɵAnimationRendererFactory as AnimationRendererFactory, ɵInjectableAnimationEngine as InjectableAnimationEngine} from '@angular-classic/platform-browser/animations';
+import {DomRendererFactory2} from '@angular-classic/platform-browser/src/dom/dom_renderer';
+import {withBody} from '@angular-classic/private/testing';
 
 import {el} from '../../testing/src/browser_util';
 
@@ -82,7 +82,7 @@ describe('AnimationRenderer', () => {
     expect(engine.captures['setProperty'].pop()).toEqual([element, 'prop', 'value']);
   });
 
-  // https://github.com/angular/angular/issues/32794
+  // https://github.com/ng-classic/angular/issues/32794
   it('should support nested animation triggers', () => {
     makeRenderer([[trigger('myAnimation', [])]]);
 
@@ -331,7 +331,7 @@ describe('destroy', () => {
   beforeEach(destroyPlatform);
   afterEach(destroyPlatform);
 
-  // See https://github.com/angular/angular/issues/39955
+  // See https://github.com/ng-classic/angular/issues/39955
   it('should clear bootstrapped component contents when the `BrowserAnimationsModule` is imported',
      withBody('<div>before</div><app-root></app-root><div>after</div>', async () => {
        @Component({selector: 'app-root', template: 'app-root content'})
@@ -358,7 +358,7 @@ describe('destroy', () => {
        expect(document.body.childNodes.length).toEqual(2);           // other elements are preserved
      }));
 
-  // See https://github.com/angular/angular/issues/45108
+  // See https://github.com/ng-classic/angular/issues/45108
   it('should clear bootstrapped component contents when the animation engine is requested during initialization',
      withBody('<div>before</div><app-root></app-root><div>after</div>', async () => {
        @Injectable({providedIn: 'root'})
@@ -407,7 +407,7 @@ describe('destroy', () => {
        expect(document.body.childNodes.length).toEqual(2);           // other elements are preserved
      }));
 
-  // See https://github.com/angular/angular/issues/45108
+  // See https://github.com/ng-classic/angular/issues/45108
   it('should clear standalone bootstrapped component contents when the animation engine is requested during initialization',
      withBody('<div>before</div><app-root></app-root><div>after</div>', async () => {
        @Injectable({providedIn: 'root'})

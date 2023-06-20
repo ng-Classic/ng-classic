@@ -7,8 +7,8 @@
  */
 
 // #docregion disabled-control
-import {Component, Inject} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {Component, Inject} from '@angular-classic/core';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular-classic/forms';
 // #enddocregion disabled-control
 
 @Component({

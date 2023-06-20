@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DirectiveMeta as T2DirectiveMeta, SchemaMetadata} from '@angular/compiler';
+import {DirectiveMeta as T2DirectiveMeta, SchemaMetadata} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {Reference} from '../../imports';
@@ -83,7 +83,7 @@ export interface DirectiveTypeCheckMeta {
   /**
    * The set of input fields which have a corresponding static `ngAcceptInputType_` on the
    * Directive's class. This allows inputs to accept a wider range of types and coerce the input to
-   * a narrower type with a getter/setter. See https://angular.io/guide/template-typecheck.
+   * a narrower type with a getter/setter. See https://angular-classic.com/guide/template-typecheck.
    */
   coercedInputFields: Set<ClassPropertyName>;
 

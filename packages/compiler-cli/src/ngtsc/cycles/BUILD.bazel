@@ -7,7 +7,7 @@ ts_library(
     srcs = ["index.ts"] + glob([
         "src/**/*.ts",
     ]),
-    module_name = "@angular/compiler-cli/src/ngtsc/cycles",
+    module_name = "@angular-classic/compiler-cli/src/ngtsc/cycles",
     deps = [
         "//packages/compiler-cli/src/ngtsc/perf",
         "@npm//typescript",

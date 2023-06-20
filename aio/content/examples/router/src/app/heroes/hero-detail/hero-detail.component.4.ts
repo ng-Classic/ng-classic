@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion
-import {Component, Input, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {Component, Input, OnInit} from '@angular-classic/core';
+import {Router} from '@angular-classic/router';
 import {Observable} from 'rxjs';
 
 import {Hero} from '../hero';

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ApplicationRef, NgModuleRef} from '@angular/core';
+import {ApplicationRef, NgModuleRef} from '@angular-classic/core';
 
 import {bindAction, getIntParameter, profile} from '../../util';
 

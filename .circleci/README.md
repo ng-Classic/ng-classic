@@ -3,10 +3,10 @@
 Based on https://github.com/circleci/encrypted-files
 
 In the CircleCI web UI, we have a secret variable called `KEY`
-https://circleci.com/gh/angular/angular/edit#env-vars
+https://circleci.com/gh/ng-classic/angular/edit#env-vars
 which is only exposed to non-fork builds
 (see "Pass secrets to builds from forked pull requests" under
-https://circleci.com/gh/angular/angular/edit#advanced-settings)
+https://circleci.com/gh/ng-classic/angular/edit#advanced-settings)
 
 We use this as a symmetric AES encryption key to encrypt tokens like
 a GitHub token that enables publishing snapshots.

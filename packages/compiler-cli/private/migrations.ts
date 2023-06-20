@@ -7,7 +7,7 @@
  */
 
 /**
- * @fileoverview The API from compiler-cli that the `@angular/core`
+ * @fileoverview The API from compiler-cli that the `@angular-classic/core`
  * package requires for migration schematics.
  */
 

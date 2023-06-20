@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: i18n_attribute_directive.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class I18nDirective {
 }
 I18nDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: I18nDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -32,7 +32,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: i18n_attribute_directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class I18nDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<I18nDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<I18nDirective, "[i18n]", never, {}, {}, never, never, false, never>;
@@ -50,8 +50,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: i18n_prefix_attribute_directive.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class I18nDirective {
 }
 I18nDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: I18nDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -97,7 +97,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: i18n_prefix_attribute_directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class I18nDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<I18nDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<I18nDirective, "[i18n]", never, {}, {}, never, never, false, never>;
@@ -123,8 +123,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: property_binding_directive.js
  ****************************************************************************************************/
-import { Component, Directive, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -156,7 +156,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: property_binding_directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     someDirective: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
@@ -175,8 +175,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: ng_template_directive.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class DirectiveA {
 }
 DirectiveA.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -213,7 +213,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: ng_template_directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class DirectiveA {
     static ɵfac: i0.ɵɵFactoryDeclaration<DirectiveA, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<DirectiveA, "ng-template[directiveA]", never, {}, {}, never, never, false, never>;
@@ -231,8 +231,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: ng_container_directive.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class DirectiveA {
 }
 DirectiveA.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -269,7 +269,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: ng_container_directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class DirectiveA {
     static ɵfac: i0.ɵɵFactoryDeclaration<DirectiveA, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<DirectiveA, "ng-container[directiveA]", never, {}, {}, never, never, false, never>;
@@ -287,8 +287,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: ng_template_binding_directive.js
  ****************************************************************************************************/
-import { Component, Directive, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -323,7 +323,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: ng_template_binding_directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     someDirective: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
@@ -342,8 +342,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: structural_directive.js
  ****************************************************************************************************/
-import { Component, Directive, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -375,7 +375,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: structural_directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     someDirective: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
@@ -394,8 +394,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: output_directive.js
  ****************************************************************************************************/
-import { Component, Directive, EventEmitter, NgModule, Output } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, EventEmitter, NgModule, Output } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
     constructor() {
         this.someDirective = new EventEmitter();
@@ -431,8 +431,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: output_directive.d.ts
  ****************************************************************************************************/
-import { EventEmitter } from '@angular/core';
-import * as i0 from "@angular/core";
+import { EventEmitter } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     someDirective: EventEmitter<unknown>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;

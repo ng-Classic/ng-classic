@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Injectable} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
+import {Component, Injectable} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
 
 import {createUrlTreeFromSnapshot} from '../src/create_url_tree';
 import {Routes} from '../src/models';
@@ -457,7 +457,7 @@ describe('createUrlTree', async () => {
       // outlets as long as they do not have a primary outlet sibling. Having a primary outlet
       // sibling isn't possible because the wildcard should consume all the primary outlet segments
       // so there cannot be any remaining in the children.
-      // https://github.com/angular/angular/issues/40089
+      // https://github.com/ng-classic/angular/issues/40089
       expect(router.url).toEqual('/q(left:ap)');
 
       const t = create(router.routerState.root.children[0].children[0], ['../../q2']);

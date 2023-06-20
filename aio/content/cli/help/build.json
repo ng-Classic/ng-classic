@@ -1,8 +1,8 @@
 {
   "name": "build",
   "command": "ng build [project]",
-  "shortDescription": "Compiles an Angular application or library into an output directory named dist/ at the given output path.",
-  "longDescriptionRelativePath": "@angular/cli/src/commands/build/long-description.md",
+  "shortDescription": "Compiles an Angular Classicapplication or library into an output directory named dist/ at the given output path.",
+  "longDescriptionRelativePath": "@angular-classic/cli/src/commands/build/long-description.md",
   "longDescription": "The command can be used to build a project of type \"application\" or \"library\".\nWhen used to build a library, a different builder is invoked, and only the `ts-config`, `configuration`, and `watch` options are applied.\nAll other options apply only to building applications.\n\nThe application builder uses the [webpack](https://webpack.js.org/) build tool, with default configuration options specified in the workspace configuration file (`angular.json`) or with a named alternative configuration.\nA \"development\" configuration is created by default when you use the CLI to create the project, and you can use that configuration by specifying the `--configuration development`.\n\nThe configuration options generally correspond to the command options.\nYou can override individual configuration defaults by specifying the corresponding options on the command line.\nThe command can accept option names given in either dash-case or camelCase.\nNote that in the configuration file, you must specify names in camelCase.\n\nSome additional options can only be set through the configuration file,\neither by direct editing or with the `ng config` command.\nThese include `assets`, `styles`, and `scripts` objects that provide runtime-global resources to include in the project.\nResources in CSS, such as images and fonts, are automatically written and fingerprinted at the root of the output folder.\n\nFor further details, see [Workspace Configuration](guide/workspace-config).\n",
   "aliases": [
     "b"
@@ -43,7 +43,7 @@
       "aliases": [
         "c"
       ],
-      "description": "One or more named builder configurations as a comma-separated list as specified in the \"configurations\" section in angular.json.\nThe builder uses the named configurations to run the given target.\nFor more information, see https://angular.io/guide/workspace-config#alternate-build-configurations."
+      "description": "One or more named builder configurations as a comma-separated list as specified in the \"configurations\" section in angular.json.\nThe builder uses the named configurations to run the given target.\nFor more information, see https://angular-classic.com/guide/workspace-config#alternate-build-configurations."
     },
     {
       "name": "cross-origin",
@@ -65,7 +65,7 @@
     {
       "name": "deploy-url",
       "type": "string",
-      "deprecated": "Use \"baseHref\" option, \"APP_BASE_HREF\" DI token or a combination of both instead. For more information, see https://angular.io/guide/deployment#the-deploy-url.",
+      "deprecated": "Use \"baseHref\" option, \"APP_BASE_HREF\" DI token or a combination of both instead. For more information, see https://angular-classic.com/guide/deployment#the-deploy-url.",
       "description": "URL where files will be deployed."
     },
     {
@@ -143,7 +143,7 @@
       "name": "optimization",
       "type": "boolean",
       "default": true,
-      "description": "Enables optimization of the build output. Including minification of scripts and styles, tree-shaking, dead-code elimination, inlining of critical CSS and fonts inlining. For more information, see https://angular.io/guide/workspace-config#optimization-configuration."
+      "description": "Enables optimization of the build output. Including minification of scripts and styles, tree-shaking, dead-code elimination, inlining of critical CSS and fonts inlining. For more information, see https://angular-classic.com/guide/workspace-config#optimization-configuration."
     },
     {
       "name": "output-hashing",
@@ -204,7 +204,7 @@
       "name": "source-map",
       "type": "boolean",
       "default": false,
-      "description": "Output source maps for scripts and styles. For more information, see https://angular.io/guide/workspace-config#source-map-configuration."
+      "description": "Output source maps for scripts and styles. For more information, see https://angular-classic.com/guide/workspace-config#source-map-configuration."
     },
     {
       "name": "stats-json",

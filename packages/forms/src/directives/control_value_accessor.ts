@@ -6,15 +6,15 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, ElementRef, InjectionToken, Renderer2} from '@angular/core';
+import {Directive, ElementRef, InjectionToken, Renderer2} from '@angular-classic/core';
 
 /**
  * @description
- * Defines an interface that acts as a bridge between the Angular forms API and a
+ * Defines an interface that acts as a bridge between the Angular Classicforms API and a
  * native element in the DOM.
  *
  * Implement this interface to create a custom form control directive
- * that integrates with Angular forms.
+ * that integrates with Angular Classicforms.
  *
  * @see DefaultValueAccessor
  *

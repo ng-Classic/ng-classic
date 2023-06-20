@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {inject, Injectable, OnDestroy, ɵformatRuntimeError as formatRuntimeError} from '@angular/core';
+import {inject, Injectable, OnDestroy, ɵformatRuntimeError as formatRuntimeError} from '@angular-classic/core';
 
 import {DOCUMENT} from '../../dom_tokens';
 import {RuntimeErrorCode} from '../../errors';

@@ -1,8 +1,8 @@
 // #docplaster
-import {Component, DebugElement, NO_ERRORS_SCHEMA} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {provideRouter, Router, RouterLink} from '@angular/router';
+import {Component, DebugElement, NO_ERRORS_SCHEMA} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {provideRouter, Router, RouterLink} from '@angular-classic/router';
 
 import {AppComponent} from './app.component';
 

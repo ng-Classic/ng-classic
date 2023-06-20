@@ -1,6 +1,6 @@
 # Attribute directives
 
-Change the appearance or behavior of DOM elements and Angular components with attribute directives.
+Change the appearance or behavior of DOM elements and Angular Classiccomponents with attribute directives.
 
 <div class="alert is-helpful">
 
@@ -28,7 +28,7 @@ This section walks you through creating a highlight directive that sets the back
 
     The `@Directive()` decorator's configuration property specifies the directive's CSS attribute selector, `[appHighlight]`.
 
-1.  Import `ElementRef` from `@angular/core`.
+1.  Import `ElementRef` from `@angular-classic/core`.
     `ElementRef` grants direct access to the host DOM element through its `nativeElement` property.
 
 1.  Add `ElementRef` in the directive's `constructor()` to [inject](guide/dependency-injection) a reference to the host DOM element, the element to which you apply `appHighlight`.
@@ -53,7 +53,7 @@ Directives *do not* support namespaces.
 
     <code-example header="src/app/app.component.html" path="attribute-directives/src/app/app.component.1.html" region="applied"></code-example>
 
-Angular creates an instance of the `HighlightDirective` class and injects a reference to the `<p>` element into the directive's constructor, which sets the `<p>` element's background style to yellow.
+Angular Classiccreates an instance of the `HighlightDirective` class and injects a reference to the `<p>` element into the directive's constructor, which sets the `<p>` element's background style to yellow.
 
 <a id="respond-to-user"></a>
 
@@ -61,7 +61,7 @@ Angular creates an instance of the `HighlightDirective` class and injects a refe
 
 This section shows you how to detect when a user mouses into or out of the element and to respond by setting or clearing the highlight color.
 
-1.  Import `HostListener` from '@angular/core'.
+1.  Import `HostListener` from '@angular-classic/core'.
 
     <code-example header="src/app/highlight.directive.ts (imports)" path="attribute-directives/src/app/highlight.directive.2.ts" region="imports"></code-example>
 
@@ -95,7 +95,7 @@ The background color appears when the pointer hovers over the paragraph element 
 
 This section walks you through setting the highlight color while applying the `HighlightDirective`.
 
-1.  In `highlight.directive.ts`, import `Input` from `@angular/core`.
+1.  In `highlight.directive.ts`, import `Input` from `@angular-classic/core`.
 
     <code-example header="src/app/highlight.directive.ts (imports)" path="attribute-directives/src/app/highlight.directive.3.ts" region="imports"></code-example>
 
@@ -174,7 +174,7 @@ When the user chooses a color the selected color becomes the active highlight co
 
 <a id="ngNonBindable"></a>
 
-## Deactivating Angular processing with `NgNonBindable`
+## Deactivating Angular Classicprocessing with `NgNonBindable`
 
 To prevent expression evaluation in the browser, add `ngNonBindable` to the host element.
 `ngNonBindable` deactivates interpolation, directives, and binding in templates.
@@ -185,11 +185,11 @@ In the following example, the expression `{{ 1 + 1 }}` renders just as it does i
 
 Applying `ngNonBindable` to an element stops binding for that element's child elements.
 However, `ngNonBindable` still lets directives work on the element where you apply `ngNonBindable`.
-In the following example, the `appHighlight` directive is still active but Angular does not evaluate the expression `{{ 1 + 1 }}`.
+In the following example, the `appHighlight` directive is still active but Angular Classicdoes not evaluate the expression `{{ 1 + 1 }}`.
 
 <code-example header="src/app/app.component.html" linenums="false" path="attribute-directives/src/app/app.component.html" region="ngNonBindable-with-directive"></code-example>
 
-If you apply `ngNonBindable` to a parent element, Angular disables interpolation and binding of any sort, such as property binding or event binding, for the element's children.
+If you apply `ngNonBindable` to a parent element, Angular Classicdisables interpolation and binding of any sort, such as property binding or event binding, for the element's children.
 
 <!-- links -->
 

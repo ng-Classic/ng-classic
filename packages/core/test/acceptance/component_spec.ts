@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, NgIf} from '@angular/common';
-import {ApplicationRef, Component, ComponentRef, createComponent, createEnvironmentInjector, Directive, ElementRef, EmbeddedViewRef, EnvironmentInjector, forwardRef, inject, Injectable, InjectionToken, Injector, Input, NgModule, OnDestroy, reflectComponentType, Renderer2, Type, ViewChild, ViewContainerRef, ViewEncapsulation, ɵsetDocument} from '@angular/core';
-import {stringifyForError} from '@angular/core/src/render3/util/stringify_utils';
-import {TestBed} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {DOCUMENT, NgIf} from '@angular-classic/common';
+import {ApplicationRef, Component, ComponentRef, createComponent, createEnvironmentInjector, Directive, ElementRef, EmbeddedViewRef, EnvironmentInjector, forwardRef, inject, Injectable, InjectionToken, Injector, Input, NgModule, OnDestroy, reflectComponentType, Renderer2, Type, ViewChild, ViewContainerRef, ViewEncapsulation, ɵsetDocument} from '@angular-classic/core';
+import {stringifyForError} from '@angular-classic/core/src/render3/util/stringify_utils';
+import {TestBed} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 import {global} from '../../src/util/global';
 
@@ -279,7 +279,7 @@ describe('component', () => {
     // In dev mode we have some additional logic to freeze `TView.cleanup` array
     // (see `storeCleanupWithContext` function).
     // The tests below verify that this action doesn't trigger any change in behaviour
-    // for prod mode. See https://github.com/angular/angular/issues/40105.
+    // for prod mode. See https://github.com/ng-classic/angular/issues/40105.
     ['ngDevMode off', 'ngDevMode on'].forEach((mode) => {
       it('should invoke `onDestroy` callbacks of dynamically created component with ' + mode,
          () => {
@@ -905,7 +905,7 @@ describe('component', () => {
         }
 
         const errorFor = (type: Type<unknown>): string =>
-            `NG0906: The ${stringifyForError(type)} is not an Angular component, ` +
+            `NG0906: The ${stringifyForError(type)} is not an Angular Classiccomponent, ` +
             `make sure it has the \`@Component\` decorator.`;
         const hostElement = document.createElement('div');
         const environmentInjector = TestBed.inject(EnvironmentInjector);

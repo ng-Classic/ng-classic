@@ -1,5 +1,5 @@
 // #docregion
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular-classic/core';
 
 import { Hero } from './hero';
 
@@ -12,6 +12,6 @@ import { Hero } from './hero';
 })
 export class HeroChildComponent {
   @Input() hero!: Hero;
-  @Input('master') masterName = ''; // eslint-disable-line @angular-eslint/no-input-rename
+  @Input('master') masterName = ''; // eslint-disable-line @angular-classic-eslint/no-input-rename
 }
 // #enddocregion

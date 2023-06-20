@@ -3,7 +3,7 @@
 
 # Router tutorial: tour of heroes
 
-This tutorial provides an extensive overview of the Angular router.
+This tutorial provides an extensive overview of the Angular Classicrouter.
 In this tutorial, you build upon a basic router configuration to explore features such as child routes, route parameters, lazy load NgModules, guard routes, and preloading data to improve the user experience.
 
 For a working example of the final version of the app, see the <live-example name="router"></live-example>.
@@ -26,7 +26,7 @@ Along the way, it highlights key features of the router such as:
 *   Lazy loading an `NgModule`
 *   The `canMatch` guard \(check before loading feature module assets\)
 
-This guide proceeds as a sequence of milestones as if you were building the application step-by-step, but assumes you are familiar with basic [Angular concepts](guide/architecture).
+This guide proceeds as a sequence of milestones as if you were building the application step-by-step, but assumes you are familiar with basic [Angular Classicconcepts](guide/architecture).
 For a general introduction to angular, see the [Getting Started](start).
 For a more in-depth overview, see the [Tour of Heroes](tutorial/tour-of-heroes) tutorial.
 
@@ -37,7 +37,7 @@ To complete this tutorial, you should have a basic understanding of the followin
 *   JavaScript
 *   HTML
 *   CSS
-*   [Angular CLI](cli)
+*   [Angular ClassicCLI](cli)
 
 You might find the [Tour of Heroes tutorial](tutorial/tour-of-heroes) helpful, but it is not required.
 
@@ -74,7 +74,7 @@ Click the "Back" button and the application returns to the heroes list which dis
 Notice that the name change took effect immediately.
 
 Had you clicked the browser's back button instead of the application's "Back" button, the application would have returned you to the heroes list as well.
-Angular application navigation updates the browser history as normal web navigation does.
+Angular Classicapplication navigation updates the browser history as normal web navigation does.
 
 Now click the *Crisis Center* link for a list of ongoing crises.
 
@@ -130,13 +130,13 @@ Begin with a basic version of the application that navigates between two empty v
 
 ### Create a sample application
 
-1. Create a new Angular project, _angular-router-tour-of-heroes_.
+1. Create a new Angular Classicproject, _angular-router-tour-of-heroes_.
 
    <code-example format="shell" language="shell">
     ng new angular-router-tour-of-heroes
    </code-example>
 
-   When prompted with `Would you like to add Angular routing?`, select `N`.
+   When prompted with `Would you like to add Angular Classicrouting?`, select `N`.
 
    When prompted with `Which stylesheet format would you like to use?`, select `CSS`.
 
@@ -192,7 +192,7 @@ Replace the contents of each component with the following sample HTML.
 
 ### Register `Router` and `Routes`
 
-To use the `Router`, you must first register the `RouterModule` from the `@angular/router` package.
+To use the `Router`, you must first register the `RouterModule` from the `@angular-classic/router` package.
 Define an array of routes, `appRoutes`, and pass them to the `RouterModule.forRoot()` method.
 The `RouterModule.forRoot()` method returns a module that contains the configured `Router` service provider, plus other providers that the routing library requires.
 Once the application is bootstrapped, the `Router` performs the initial navigation based on the current browser URL.
@@ -471,9 +471,9 @@ The Routing Module has several characteristics:
 ### Integrate routing with your app
 
 The sample routing application does not include routing by default.
-When you use the [Angular CLI](cli) to create a project that does use routing, set the `--routing` option for the project or application, and for each NgModule.
+When you use the [Angular ClassicCLI](cli) to create a project that does use routing, set the `--routing` option for the project or application, and for each NgModule.
 When you create or initialize a new project \(using the CLI [`ng new`](cli/new) command\) or a new application \(using the [`ng generate app`](cli/generate) command\), specify the `--routing` option.
-This tells the CLI to include the `@angular/router` npm package and create a file named `app-routing.module.ts`.
+This tells the CLI to include the `@angular-classic/router` npm package and create a file named `app-routing.module.ts`.
 You can then use routing in any NgModule that you add to the project or application.
 
 For example, the following command generates an NgModule that can use routing.
@@ -502,7 +502,7 @@ ng generate module app-routing --module app --flat
 Import the `CrisisListComponent`, `HeroListComponent`, and `PageNotFoundComponent` symbols like you did in the `app.module.ts`.
 Then move the `Router` imports and routing configuration, including `RouterModule.forRoot()`, into this routing module.
 
-Re-export the Angular `RouterModule` by adding it to the module `exports` array.
+Re-export the Angular Classic`RouterModule` by adding it to the module `exports` array.
 By re-exporting the `RouterModule` here, the components declared in `AppModule` have access to router directives such as `RouterLink` and `RouterOutlet`.
 
 After these steps, the file should look like this.
@@ -798,7 +798,7 @@ Import the `switchMap` operator because you need it later to process the `Observ
 
 <a id="hero-detail-ctor"></a>
 
-Add the services as private variables to the constructor so that Angular injects them \(makes them visible to the component\).
+Add the services as private variables to the constructor so that Angular Classicinjects them \(makes them visible to the component\).
 
 <code-example header="src/app/heroes/hero-detail/hero-detail.component.ts (constructor)" path="router/src/app/heroes/hero-detail/hero-detail.component.3.ts" region="ctor"></code-example>
 
@@ -1063,7 +1063,7 @@ This file does the following:
 *   Exports a constant named `slideInAnimation` set to an animation trigger named `routeAnimation`
 *   Defines one transition when switching back and forth from the `heroes` and `hero` routes to ease the component in from the left of the screen as it enters the application view \(`:enter`\), the other to animate the component to the right as it leaves the application view \(`:leave`\)
 
-Back in the `AppComponent`, import the `RouterOutlet` token from the `@angular/router` package and the `slideInAnimation` from `'./animations.ts`.
+Back in the `AppComponent`, import the `RouterOutlet` token from the `@angular-classic/router` package and the `slideInAnimation` from `'./animations.ts`.
 
 Add an `animations` array to the `@Component` metadata that contains the `slideInAnimation`.
 
@@ -1280,10 +1280,10 @@ In keeping with the [Separation of Concerns principle](https://blog.8thlight.com
 
 ### A crisis center with child routes
 
-This section shows you how to organize the crisis center to conform to the following recommended pattern for Angular applications:
+This section shows you how to organize the crisis center to conform to the following recommended pattern for Angular Classicapplications:
 
 *   Each feature area resides in its own folder
-*   Each feature has its own Angular feature module
+*   Each feature has its own Angular Classicfeature module
 *   Each area has its own area root component
 *   Each area root component has its own router outlet and child routes
 *   Feature area routes rarely \(if ever\) cross with routes of other features
@@ -2327,7 +2327,7 @@ Here are the updated modules *before enabling preload*:
 
 You could try this now and confirm that the  `CrisisCenterModule` loads after you click the "Crisis Center" button.
 
-To enable preloading of all lazy loaded modules, import the `PreloadAllModules` token from the Angular router package.
+To enable preloading of all lazy loaded modules, import the `PreloadAllModules` token from the Angular Classicrouter package.
 
 The second argument in the `RouterModule.forRoot()` method takes an object for additional configuration options.
 The `preloadingStrategy` is one of those options.

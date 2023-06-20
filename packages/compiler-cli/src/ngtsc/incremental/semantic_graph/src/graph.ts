@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Expression, ExternalExpr} from '@angular/compiler';
+import {Expression, ExternalExpr} from '@angular-classic/compiler';
 
 import {AbsoluteFsPath} from '../../../file_system';
 import {ClassDeclaration} from '../../../reflection';

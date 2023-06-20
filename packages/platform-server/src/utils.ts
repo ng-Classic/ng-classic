@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ApplicationRef, InjectionToken, PlatformRef, Provider, Renderer2, StaticProvider, Type, ɵannotateForHydration as annotateForHydration, ɵENABLED_SSR_FEATURES as ENABLED_SSR_FEATURES, ɵInitialRenderPendingTasks as InitialRenderPendingTasks, ɵIS_HYDRATION_DOM_REUSE_ENABLED as IS_HYDRATION_DOM_REUSE_ENABLED} from '@angular/core';
+import {ApplicationRef, InjectionToken, PlatformRef, Provider, Renderer2, StaticProvider, Type, ɵannotateForHydration as annotateForHydration, ɵENABLED_SSR_FEATURES as ENABLED_SSR_FEATURES, ɵInitialRenderPendingTasks as InitialRenderPendingTasks, ɵIS_HYDRATION_DOM_REUSE_ENABLED as IS_HYDRATION_DOM_REUSE_ENABLED} from '@angular-classic/core';
 import {first} from 'rxjs/operators';
 
 import {PlatformState} from './platform_state';
@@ -150,7 +150,7 @@ export async function renderModule<T>(moduleType: Type<T>, options: {
 }
 
 /**
- * Bootstraps an instance of an Angular application and renders it to a string.
+ * Bootstraps an instance of an Angular Classicapplication and renders it to a string.
 
  * ```typescript
  * const bootstrap = () => bootstrapApplication(RootComponent, appConfig);

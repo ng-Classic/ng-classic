@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: pipes.js
  ****************************************************************************************************/
-import { Component, NgModule, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyPipe {
     transform(value, ...args) {
         return value;
@@ -57,8 +57,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: pipes.d.ts
  ****************************************************************************************************/
-import { OnDestroy, PipeTransform } from '@angular/core';
-import * as i0 from "@angular/core";
+import { OnDestroy, PipeTransform } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class MyPipe implements PipeTransform, OnDestroy {
     transform(value: any, ...args: any[]): any;
     ngOnDestroy(): void;
@@ -85,8 +85,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: pipe_invocation.js
  ****************************************************************************************************/
-import { Component, NgModule, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyPipe {
     transform(value, ...args) {
         return value;
@@ -126,8 +126,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: pipe_invocation.d.ts
  ****************************************************************************************************/
-import { OnDestroy, PipeTransform } from '@angular/core';
-import * as i0 from "@angular/core";
+import { OnDestroy, PipeTransform } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class MyPipe implements PipeTransform, OnDestroy {
     transform(value: any, ...args: any[]): any;
     ngOnDestroy(): void;
@@ -148,8 +148,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: pipe_di_change_detector_ref.js
  ****************************************************************************************************/
-import { ChangeDetectorRef, Component, NgModule, Optional, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { ChangeDetectorRef, Component, NgModule, Optional, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyPipe {
     constructor(changeDetectorRef) { }
     transform(value, ...args) {
@@ -200,8 +200,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: pipe_di_change_detector_ref.d.ts
  ****************************************************************************************************/
-import { ChangeDetectorRef, PipeTransform } from '@angular/core';
-import * as i0 from "@angular/core";
+import { ChangeDetectorRef, PipeTransform } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class MyPipe implements PipeTransform {
     constructor(changeDetectorRef: ChangeDetectorRef);
     transform(value: any, ...args: any[]): any;

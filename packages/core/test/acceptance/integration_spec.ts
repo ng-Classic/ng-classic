@@ -5,23 +5,23 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, AnimationEvent, state, style, transition, trigger} from '@angular/animations';
-import {AnimationDriver} from '@angular/animations/browser';
-import {MockAnimationDriver, MockAnimationPlayer} from '@angular/animations/browser/testing';
-import {CommonModule} from '@angular/common';
-import {Component, ContentChild, Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, NgModule, OnInit, Output, Pipe, QueryList, TemplateRef, ViewChild, ViewChildren, ViewContainerRef} from '@angular/core';
-import {Inject} from '@angular/core/src/di';
-import {readPatchedLView} from '@angular/core/src/render3/context_discovery';
-import {LContainer} from '@angular/core/src/render3/interfaces/container';
-import {getLViewById} from '@angular/core/src/render3/interfaces/lview_tracking';
-import {isLView} from '@angular/core/src/render3/interfaces/type_checks';
-import {ID, LView, PARENT, TVIEW} from '@angular/core/src/render3/interfaces/view';
-import {getLView} from '@angular/core/src/render3/state';
-import {ngDevModeResetPerfCounters} from '@angular/core/src/util/ng_dev_mode';
-import {fakeAsync, flushMicrotasks, TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
-import {expectPerfCounters} from '@angular/private/testing';
+import {animate, AnimationEvent, state, style, transition, trigger} from '@angular-classic/animations';
+import {AnimationDriver} from '@angular-classic/animations/browser';
+import {MockAnimationDriver, MockAnimationPlayer} from '@angular-classic/animations/browser/testing';
+import {CommonModule} from '@angular-classic/common';
+import {Component, ContentChild, Directive, ElementRef, EventEmitter, HostBinding, HostListener, Input, NgModule, OnInit, Output, Pipe, QueryList, TemplateRef, ViewChild, ViewChildren, ViewContainerRef} from '@angular-classic/core';
+import {Inject} from '@angular-classic/core/src/di';
+import {readPatchedLView} from '@angular-classic/core/src/render3/context_discovery';
+import {LContainer} from '@angular-classic/core/src/render3/interfaces/container';
+import {getLViewById} from '@angular-classic/core/src/render3/interfaces/lview_tracking';
+import {isLView} from '@angular-classic/core/src/render3/interfaces/type_checks';
+import {ID, LView, PARENT, TVIEW} from '@angular-classic/core/src/render3/interfaces/view';
+import {getLView} from '@angular-classic/core/src/render3/state';
+import {ngDevModeResetPerfCounters} from '@angular-classic/core/src/util/ng_dev_mode';
+import {fakeAsync, flushMicrotasks, TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
+import {expectPerfCounters} from '@angular-classic/private/testing';
 
 describe('acceptance integration tests', () => {
   function stripHtmlComments(str: string) {

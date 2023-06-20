@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, HostListener, Input, Output, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, Output, OnInit, ViewChild } from '@angular-classic/core';
 
 export interface Option {
   title: string;
@@ -16,7 +16,7 @@ export class SelectComponent implements OnInit {
 
   @Input() options: Option[];
 
-  // eslint-disable-next-line @angular-eslint/no-output-native
+  // eslint-disable-next-line @angular-classic-eslint/no-output-native
   @Output() change = new EventEmitter<{option: Option, index: number}>();
 
   @Output() optionsToggled = new EventEmitter<boolean>();

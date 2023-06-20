@@ -1,6 +1,6 @@
 # Schematics for libraries
 
-When you create an Angular library, you can provide and package it with schematics that integrate it with the Angular CLI.
+When you create an Angular Classiclibrary, you can provide and package it with schematics that integrate it with the Angular ClassicCLI.
 With your schematics, your users can use `ng add` to install an initial version of your library,
 `ng generate` to create artifacts defined in your library, and `ng update` to adjust their project for a new version of your library that introduces breaking changes.
 
@@ -20,13 +20,13 @@ The following steps show you how to add initial support without modifying any pr
 
     <code-example header="projects/my-lib/schematics/collection.json (Schematics Collection)" path="schematics-for-libraries/projects/my-lib/schematics/collection.1.json"></code-example>
 
-    *   The `$schema` path is relative to the Angular Devkit collection schema.
+    *   The `$schema` path is relative to the Angular ClassicDevkit collection schema.
     *   The `schematics` object describes the named schematics that are part of this collection.
     *   The first entry is for a schematic named `ng-add`.
         It contains the description, and points to the factory function that is called when your schematic is executed.
 
 1.  In your library project's `package.json` file, add a "schematics" entry with the path to your schema file.
-    The Angular CLI uses this entry to find named schematics in your collection when it runs commands.
+    The Angular ClassicCLI uses this entry to find named schematics in your collection when it runs commands.
 
     <code-example header="projects/my-lib/package.json (Schematics Collection Reference)" path="schematics-for-libraries/projects/my-lib/package.json" region="collection"></code-example>
 
@@ -44,7 +44,7 @@ The following steps define this type of schematic.
 
     <code-example header="projects/my-lib/schematics/ng-add/index.ts (ng-add Rule Factory)" path="schematics-for-libraries/projects/my-lib/schematics/ng-add/index.ts"></code-example>
 
-The Angular CLI will install the latest version of the library automatically, and this example is taking it a step further by adding the `MyLibModule` to the root of the application. The `addRootImport` function accepts a callback that needs to return a code block. You can write any code inside of the string tagged with the `code` function and any external symbol have to be wrapped with the `external` function to ensure that the appropriate import statements are generated.
+The Angular ClassicCLI will install the latest version of the library automatically, and this example is taking it a step further by adding the `MyLibModule` to the root of the application. The `addRootImport` function accepts a callback that needs to return a code block. You can write any code inside of the string tagged with the `code` function and any external symbol have to be wrapped with the `external` function to ensure that the appropriate import statements are generated.
 
 ### Define dependency type
 
@@ -69,7 +69,7 @@ You must build your schematics *after* you build your library, so they are place
 *   Your library needs a custom Typescript configuration file with instructions on how to compile your schematics into your distributed library
 *   To add the schematics to the library bundle, add scripts to the library's `package.json` file
 
-Assume you have a library project `my-lib` in your Angular workspace.
+Assume you have a library project `my-lib` in your Angular Classicworkspace.
 To tell the library how to build the schematics, add a `tsconfig.schematics.json` file next to the generated `tsconfig.lib.json` file that configures the library build.
 
 1.  Edit the `tsconfig.schematics.json` file to add the following content.
@@ -174,7 +174,7 @@ The Schematics framework provides a file templating system, which supports both 
 The system operates on placeholders defined inside files or paths that loaded in the input `Tree`.
 It fills these in using values passed into the `Rule`.
 
-For details of these data structures and syntax, see the [Schematics README](https://github.com/angular/angular-cli/blob/main/packages/angular_devkit/schematics/README.md).
+For details of these data structures and syntax, see the [Schematics README](https://github.com/ng-classic/angular-cli/blob/main/packages/angular_devkit/schematics/README.md).
 
 1.  Create the main file `index.ts` and add the source code for your schematic factory function.
 1.  First, import the schematics definitions you will need.
@@ -197,7 +197,7 @@ The options are the option values passed through from the `ng generate` command.
 
 You now have the framework in place for creating the code that actually modifies the user's application to set it up for the service defined in your library.
 
-The Angular workspace where the user installed your library contains multiple projects \(applications and libraries\).
+The Angular Classicworkspace where the user installed your library contains multiple projects \(applications and libraries\).
 The user can specify the project on the command line, or let it default.
 In either case, your code needs to identify the specific project to which this schematic is being applied, so that you can retrieve information from the project configuration.
 
@@ -256,7 +256,7 @@ See a complete example of the following schematic rule function.
 
 <code-example header="projects/my-lib/schematics/my-service/index.ts" path="schematics-for-libraries/projects/my-lib/schematics/my-service/index.ts"></code-example>
 
-For more information about rules and utility methods, see [Provided Rules](https://github.com/angular/angular-cli/tree/main/packages/angular_devkit/schematics#provided-rules).
+For more information about rules and utility methods, see [Provided Rules](https://github.com/ng-classic/angular-cli/tree/main/packages/angular_devkit/schematics#provided-rules).
 
 ## Running your library schematic
 

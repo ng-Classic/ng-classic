@@ -7,11 +7,11 @@ import './polyfills';
 
 import 'zone.js/testing';
 
-import { getTestBed } from '@angular/core/testing';
+import { getTestBed } from '@angular-classic/core/testing';
 import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting
-} from '@angular/platform-browser-dynamic/testing';
+} from '@angular-classic/platform-browser-dynamic/testing';
 
 // Import spec files individually for Stackblitz
 import './app/heroes/heroes.service.spec.ts';
@@ -30,7 +30,7 @@ function bootstrap() {
     (window as any).jasmineRef = jasmine.getEnv();
   }
 
-  // First, initialize the Angular testing environment.
+  // First, initialize the Angular Classictesting environment.
   getTestBed().initTestEnvironment(
     BrowserDynamicTestingModule,
     platformBrowserDynamicTesting()

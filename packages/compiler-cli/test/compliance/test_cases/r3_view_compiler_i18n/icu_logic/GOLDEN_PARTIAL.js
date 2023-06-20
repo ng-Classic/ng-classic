@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: single_icu.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'male';
@@ -34,7 +34,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: single_icu.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -49,8 +49,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: escape_quotes.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'male';
@@ -82,7 +82,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: escape_quotes.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -97,8 +97,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: icu_only.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.age = 20;
@@ -130,7 +130,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: icu_only.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     age: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -145,8 +145,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: bare_icu.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'female';
@@ -190,7 +190,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: bare_icu.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -205,8 +205,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: custom_interpolation.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.age = 1;
@@ -240,7 +240,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: custom_interpolation.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     age: number;
     other: string;
@@ -256,8 +256,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: html_content.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'female';
@@ -297,7 +297,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: html_content.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -312,8 +312,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: expressions.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'female';
@@ -348,7 +348,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: expressions.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     ageA: number;
@@ -366,8 +366,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: multiple_icus.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'male';
@@ -406,7 +406,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: multiple_icus.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     age: number;
@@ -422,8 +422,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: shared_placeholder.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'male';
@@ -471,7 +471,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: shared_placeholder.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -486,8 +486,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: nested_icus.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.age = 1;
@@ -532,7 +532,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: nested_icus.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     age: number;
     gender: string;
@@ -548,8 +548,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: nested_icu_in_other_block.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.count = 0;
@@ -596,7 +596,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: nested_icu_in_other_block.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     count: number;
     name: string;
@@ -612,8 +612,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: different_contexts.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'female';
@@ -655,7 +655,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: different_contexts.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -670,8 +670,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: icu_with_interpolations.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'male';
@@ -715,7 +715,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: icu_with_interpolations.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     weight: number;
@@ -732,8 +732,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: named_interpolations.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.gender = 'male';
@@ -780,7 +780,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: named_interpolations.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     gender: string;
     weight: number;
@@ -798,8 +798,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: metadata.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.count = 1;
@@ -831,7 +831,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: metadata.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     count: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -846,8 +846,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: keyword_spaces.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.count = 0;
@@ -885,7 +885,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: keyword_spaces.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     count: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;

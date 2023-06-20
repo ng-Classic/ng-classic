@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {inject, Type} from '@angular/core';
+import {inject, Type} from '@angular-classic/core';
 
 import {CanActivateChildFn, CanActivateFn, CanDeactivateFn, CanMatchFn, ResolveFn} from '../models';
 

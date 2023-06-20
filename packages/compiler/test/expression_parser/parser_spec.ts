@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AbsoluteSourceSpan, ASTWithSource, BindingPipe, Call, EmptyExpr, Interpolation, ParserError, TemplateBinding, VariableBinding} from '@angular/compiler/src/expression_parser/ast';
-import {Lexer} from '@angular/compiler/src/expression_parser/lexer';
-import {Parser, SplitInterpolation} from '@angular/compiler/src/expression_parser/parser';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {AbsoluteSourceSpan, ASTWithSource, BindingPipe, Call, EmptyExpr, Interpolation, ParserError, TemplateBinding, VariableBinding} from '@angular-classic/compiler/src/expression_parser/ast';
+import {Lexer} from '@angular-classic/compiler/src/expression_parser/lexer';
+import {Parser, SplitInterpolation} from '@angular-classic/compiler/src/expression_parser/parser';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 import {unparse, unparseWithSpan} from './utils/unparser';
 import {validate} from './utils/validator';
@@ -438,7 +438,7 @@ describe('parser', () => {
       // When a LHS expression is parenthesized, the parenthesis on the left used to be
       // excluded from the span. This test verifies that the parenthesis are properly included
       // in the span for both LHS and RHS expressions.
-      // https://github.com/angular/angular/issues/40721
+      // https://github.com/ng-classic/angular/issues/40721
       expectSpan('(foo) && (bar)');
       expectSpan('(foo) || (bar)');
       expectSpan('(foo) == (bar)');

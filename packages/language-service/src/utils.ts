@@ -5,14 +5,14 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AbsoluteSourceSpan, CssSelector, ParseSourceSpan, SelectorMatcher, TmplAstBoundEvent} from '@angular/compiler';
-import {NgCompiler} from '@angular/compiler-cli/src/ngtsc/core';
-import {absoluteFrom, absoluteFromSourceFile, AbsoluteFsPath} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {isExternalResource} from '@angular/compiler-cli/src/ngtsc/metadata';
-import {DeclarationNode} from '@angular/compiler-cli/src/ngtsc/reflection';
-import {DirectiveSymbol, TemplateTypeChecker} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
-import * as e from '@angular/compiler/src/expression_parser/ast';  // e for expression AST
-import * as t from '@angular/compiler/src/render3/r3_ast';         // t for template AST
+import {AbsoluteSourceSpan, CssSelector, ParseSourceSpan, SelectorMatcher, TmplAstBoundEvent} from '@angular-classic/compiler';
+import {NgCompiler} from '@angular-classic/compiler-cli/src/ngtsc/core';
+import {absoluteFrom, absoluteFromSourceFile, AbsoluteFsPath} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {isExternalResource} from '@angular-classic/compiler-cli/src/ngtsc/metadata';
+import {DeclarationNode} from '@angular-classic/compiler-cli/src/ngtsc/reflection';
+import {DirectiveSymbol, TemplateTypeChecker} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
+import * as e from '@angular-classic/compiler/src/expression_parser/ast';  // e for expression AST
+import * as t from '@angular-classic/compiler/src/render3/r3_ast';         // t for template AST
 import ts from 'typescript';
 
 import {ALIAS_NAME, SYMBOL_PUNC} from './display_parts';

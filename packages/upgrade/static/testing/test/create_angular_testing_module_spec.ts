@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Injector} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 import {$INJECTOR} from '../../../src/common/src/constants';
 import {withEachNg1Version} from '../../../src/common/test/helpers/common_test_helpers';
@@ -16,10 +16,10 @@ import {createAngularTestingModule} from '../src/create_angular_testing_module';
 import {AppModule, defineAppModule, Inventory, serverRequestInstance} from './mocks';
 
 withEachNg1Version(() => {
-  describe('Angular entry point', () => {
-    it('should allow us to get an upgraded AngularJS service from an Angular service', () => {
+  describe('Angular Classicentry point', () => {
+    it('should allow us to get an upgraded AngularJS service from an Angular Classicservice', () => {
       defineAppModule();
-      // Configure an NgModule that has the Angular and AngularJS injectors wired up
+      // Configure an NgModule that has the Angular Classicand AngularJS injectors wired up
       TestBed.configureTestingModule({imports: [createAngularTestingModule(['app']), AppModule]});
       const inventory = TestBed.inject(Inventory);
       expect(inventory.serverRequest).toBe(serverRequestInstance);

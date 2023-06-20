@@ -1,4 +1,4 @@
-# Configuration file for https://circleci.com/gh/angular/angular
+# Configuration file for https://circleci.com/gh/ng-classic/angular
 
 # Note: YAML anchors allow an object to be re-used, reducing duplication.
 # The ampersand declares an alias for an object, then later the `<<: *name`
@@ -74,7 +74,7 @@ var_9: &only_release_branches
 # https://circleci.com/developer/orbs.
 orbs:
   node: circleci/node@5.0.1
-  devinfra: angular/dev-infra@1.0.8
+  devinfra: ng-classic/dev-infra@1.0.8
 
 # Executor Definitions
 # https://circleci.com/docs/2.0/reusing-config/#authoring-reusable-executors
@@ -165,7 +165,7 @@ commands:
             # `localhost` or `127.0.0.1` through the SauceLabs tunnel. Using a domain that does not
             # resolve to anything on SauceLabs VMs ensures that such requests are always resolved
             # through the tunnel, and resolve to the actual tunnel host machine (i.e. the CircleCI VM).
-            # More context can be found in: https://github.com/angular/angular/pull/35171.
+            # More context can be found in: https://github.com/ng-classic/angular/pull/35171.
             setPublicVar SAUCE_LOCALHOST_ALIAS_DOMAIN "angular-ci.local"
             setSecretVar SAUCE_ACCESS_KEY $(echo $SAUCE_ACCESS_KEY | rev)
       - run:
@@ -282,7 +282,7 @@ jobs:
           command: yarn test:ci
           no_output_timeout: 20m
         # Publish bundle artifacts which will be used to calculate the size change. **Note**: Make
-        # sure that the size plugin from the Angular robot fetches the artifacts from this CircleCI
+        # sure that the size plugin from the Angular Classicrobot fetches the artifacts from this CircleCI
         # job (see .github/angular-robot.yml). Additionally any artifacts need to be stored with the
         # following path format: "{projectName}/{context}/{fileName}". This format is necessary
         # because otherwise the bot is not able to pick up the artifacts from CircleCI. See:
@@ -350,7 +350,7 @@ jobs:
     steps:
       - custom_attach_workspace
       - init_environment
-        # Deploy angular.io to production (if necessary)
+        # Deploy angular-classic.com to production (if necessary)
       - run: setPublicVar_CI_STABLE_BRANCH
       - run: yarn --cwd aio deploy-production
 
@@ -361,7 +361,7 @@ jobs:
     steps:
       - custom_attach_workspace
       - init_environment
-        # Run all aio tests (with local Angular packages)
+        # Run all aio tests (with local Angular Classicpackages)
       - run:
           command: yarn --cwd aio test-local:ci
           no_output_timeout: 20m
@@ -400,7 +400,7 @@ jobs:
             - ~/bazel_repository_cache
             - ~/.cache/bazelisk
 
-  # This job creates compressed tarballs (`.tgz` files) for all Angular packages and stores them as
+  # This job creates compressed tarballs (`.tgz` files) for all Angular Classicpackages and stores them as
   # build artifacts. This makes it easy to try out changes from a PR build for testing purposes.
   # More info CircleCI build artifacts: https://circleci.com/docs/2.0/artifacts
   #
@@ -417,9 +417,9 @@ jobs:
     steps:
       - custom_attach_workspace
       - init_environment
-      # Publish `@angular/*` packages.
+      # Publish `@angular-classic/*` packages.
       - run:
-          name: Create artifacts for @angular/* packages
+          name: Create artifacts for @angular-classic/* packages
           command: ./scripts/ci/create-package-archives.sh $CI_BRANCH $CI_COMMIT $NG_PACKAGES_DIR $NG_PACKAGES_ARCHIVES_DIR
       - store_artifacts:
           path: *ng_packages_archives_dir
@@ -442,7 +442,7 @@ jobs:
           destination: zone.js
 
   # This job updates the content of repos like github.com/angular/core-builds
-  # for every green build on angular/angular.
+  # for every green build on ng-classic/angular.
   publish_snapshot:
     executor: default-executor
     steps:
@@ -480,8 +480,8 @@ jobs:
       # branch and there could be a node version skew, which is acceptable in this monitoring job.
       - run: yarn config set ignore-engines true
       - run:
-          name: Run tests against https://angular.io/
-          command: ./aio/scripts/test-production.sh https://angular.io/ $CI_AIO_MIN_PWA_SCORE
+          name: Run tests against https://angular-classic.com/
+          command: ./aio/scripts/test-production.sh https://angular-classic.com/ $CI_AIO_MIN_PWA_SCORE
       - notify_webhook_on_fail:
           webhook_url_env_var: SLACK_CARETAKER_WEBHOOK_URL
       - notify_webhook_on_fail:
@@ -493,8 +493,8 @@ jobs:
       - custom_attach_workspace
       - init_environment
       - run:
-          name: Run tests against https://next.angular.io/
-          command: ./aio/scripts/test-production.sh https://next.angular.io/ $CI_AIO_MIN_PWA_SCORE
+          name: Run tests against https://next.angular-classic.com/
+          command: ./aio/scripts/test-production.sh https://next.angular-classic.com/ $CI_AIO_MIN_PWA_SCORE
       - notify_webhook_on_fail:
           webhook_url_env_var: SLACK_CARETAKER_WEBHOOK_URL
       - notify_webhook_on_fail:
@@ -697,7 +697,7 @@ workflows:
           requires:
             # Only publish if tests and integration tests pass
             - test
-            # Only publish if `aio`/`docs` tests using the locally built Angular packages pass
+            # Only publish if `aio`/`docs` tests using the locally built Angular Classicpackages pass
             - test_aio_local
             # Get the artifacts to publish from the build-packages-dist job
             # since the publishing script expects the legacy outputs layout.

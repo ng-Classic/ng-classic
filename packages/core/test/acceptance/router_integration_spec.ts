@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {APP_BASE_HREF} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {Router, RouterModule} from '@angular/router';
+import {APP_BASE_HREF} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {Router, RouterModule} from '@angular-classic/router';
 
 describe('router integration acceptance', () => {
   // Test case that ensures that we don't regress in multi-provider ordering

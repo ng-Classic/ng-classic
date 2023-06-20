@@ -1,37 +1,37 @@
-# Angular documentation style guide
+# Angular Classicdocumentation style guide
 
-This style guide covers the standards for writing [Angular documentation on angular.io](docs).
+This style guide covers the standards for writing [Angular Classicdocumentation on angular-classic.com](docs).
 These standards ensure consistency in writing style, Markdown conventions, and code snippets.
 
 ## Prerequisites
 
-Before contributing to the Angular documentation, it is helpful if you are familiar with the following:
+Before contributing to the Angular Classicdocumentation, it is helpful if you are familiar with the following:
 
 | Subjects             | Details |
 |:---                  |:---     |
 | `git`                | For an introduction, see GitHub's [Git Handbook](https://guides.github.com/introduction/git-handbook)                                                                     |
 | GitHub               | For an introduction, see GitHub's [Hello World](https://guides.github.com/activities/hello-world)                                                                         |
 | Markdown             | See GitHub's [Mastering Markdown](https://guides.github.com/features/mastering-markdown)                                                                                  |
-| Angular coding style | See the [Angular Style Guide](guide/styleguide "Angular Application Code Style Guide")                                                                                    |
-| Google writing style | The [Google Developer Documentation Style Guide](https://developers.google.com/style) is a comprehensive resource that this Angular documentation style guide builds upon |
+| Angular Classiccoding style | See the [Angular ClassicStyle Guide](guide/styleguide "Angular ClassicApplication Code Style Guide")                                                                                    |
+| Google writing style | The [Google Developer Documentation Style Guide](https://developers.google.com/style) is a comprehensive resource that this Angular Classicdocumentation style guide builds upon |
 
-## Kinds of Angular documentation
+## Kinds of Angular Classicdocumentation
 
-The categories of Angular documentation include:
+The categories of Angular Classicdocumentation include:
 
-| Angular documentation categories | Details |
+| Angular Classicdocumentation categories | Details |
 |:---                              |:---     |
-| [Guides](docs)                   | Much of what's in the [documentation section of angular.io](docs). Guides walk the reader step-by-step through tasks to demonstrate concepts and are often accompanied by a working example. These include [Getting Started](start), [Tour of Heroes](tutorial/tour-of-heroes), and pages about [Forms](guide/forms-overview), [Dependency Injection](guide/dependency-injection), and [HttpClient](guide/http). Contributing members of the community and Angular team members maintain this documentation in [Markdown](https://daringfireball.net/projects/markdown/syntax "Markdown"). |
-| [API documentation](api)         | Reference documents for the [Angular Application Programming Interface, or API](api). These are more succinct than guides and serve as a reference for Angular features. They are especially helpful for people already acquainted with Angular concepts. The [angular.io](https://angular.io) infrastructure generates these documents from source code and comments that contributors edit.                                                                                                                                                                               |
-| [CLI documentation](cli)         | The [angular.io](https://angular.io) infrastructure generates these documents from CLI source code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [Guides](docs)                   | Much of what's in the [documentation section of angular-classic.com](docs). Guides walk the reader step-by-step through tasks to demonstrate concepts and are often accompanied by a working example. These include [Getting Started](start), [Tour of Heroes](tutorial/tour-of-heroes), and pages about [Forms](guide/forms-overview), [Dependency Injection](guide/dependency-injection), and [HttpClient](guide/http). Contributing members of the community and Angular Classicteam members maintain this documentation in [Markdown](https://daringfireball.net/projects/markdown/syntax "Markdown"). |
+| [API documentation](api)         | Reference documents for the [Angular ClassicApplication Programming Interface, or API](api). These are more succinct than guides and serve as a reference for Angular Classicfeatures. They are especially helpful for people already acquainted with Angular Classicconcepts. The [angular-classic.com](https://angular-classic.com) infrastructure generates these documents from source code and comments that contributors edit.                                                                                                                                                                               |
+| [CLI documentation](cli)         | The [angular-classic.com](https://angular-classic.com) infrastructure generates these documents from CLI source code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ## Markdown and HTML
 
-While the Angular guides are [Markdown](https://daringfireball.net/projects/markdown/syntax "Markdown") files, there are some sections within the guides that use HTML.
+While the Angular Classicguides are [Markdown](https://daringfireball.net/projects/markdown/syntax "Markdown") files, there are some sections within the guides that use HTML.
 
 <div class="alert is-helpful">
 
-To enable HTML in an Angular guide, **always** follow every opening and closing HTML tag with a blank line.
+To enable HTML in an Angular Classicguide, **always** follow every opening and closing HTML tag with a blank line.
 
 </div>
 
@@ -57,13 +57,13 @@ Begin the title with the Markdown hash \(`#`\) character, which renders as an `<
 
 <code-example format="html" language="html">
 
-&num; Angular documentation style guide
+&num; Angular Classicdocumentation style guide
 
 </code-example>
 
 | Title guidance                                       | Details |
 |:---                                                  |:---     |
-| A document can have only one `<h1>`                  | Title text should be in *Sentence case*, which means the first word is capitalized and all other words are lower case. Technical terms that are always capitalized, like "Angular", are the exception. <code-example format="html" language="html"> &num; Deprecation policy in Angular </code-example> |
+| A document can have only one `<h1>`                  | Title text should be in *Sentence case*, which means the first word is capitalized and all other words are lower case. Technical terms that are always capitalized, like "Angular", are the exception. <code-example format="html" language="html"> &num; Deprecation policy in Angular Classic</code-example> |
 | Always follow the title with at least one blank line | The corresponding text in the left nav is in *Title Case*, which means that you use capital letters to start the first words and all principal words. Use lower case letters for secondary words such as "in", "of", and "the". You can also shorten the nav title to fit in the column.                |
 
 ## Sections
@@ -156,7 +156,7 @@ To generate the navigation links at the top, left, and bottom of the screen, use
 
 <div class="alert is-helpful">
 
-If you have an idea that would result in navigation changes, [file an issue](https://github.com/angular/angular/issues/new/choose) first so that the Angular team and community can discuss the change.
+If you have an idea that would result in navigation changes, [file an issue](https://github.com/ng-classic/angular/issues/new/choose) first so that the Angular Classicteam and community can discuss the change.
 
 </div>
 
@@ -165,7 +165,7 @@ The `SideNav` node is an array of navigation nodes.
 Each node is either an item node for a single document or a header node with child nodes.
 
 Find the header for your page.
-For example, a guide page that describes an Angular feature is probably a child of the `Fundamentals` header.
+For example, a guide page that describes an Angular Classicfeature is probably a child of the `Fundamentals` header.
 
 <code-example format="json" language="json">
 
@@ -210,7 +210,7 @@ Do not create a node that is both a header and an item node by specifying the `u
 
 ## Code snippets
 
-[Angular.io](docs) has a custom framework that enables authors to include code snippets directly from working example applications that are automatically tested as part of documentation builds.
+[angular-classic.com](docs) has a custom framework that enables authors to include code snippets directly from working example applications that are automatically tested as part of documentation builds.
 
 In addition to working code snippets, example code can include terminal commands, a fragment of TypeScript or HTML, or an entire code file.
 
@@ -282,11 +282,11 @@ For hypothetical examples such as illustrations of configuration options in a JS
 
 ### Compilable example apps
 
-One of the Angular documentation design goals is that guide page code snippets be examples of working code.
+One of the Angular Classicdocumentation design goals is that guide page code snippets be examples of working code.
 
 Authors meet this goal by displaying code snippets directly from working sample applications, written specifically for these guide pages.
 
-Find sample applications in sub-folders of the `content/examples` directory of the `angular/angular` repository.
+Find sample applications in sub-folders of the `content/examples` directory of the `ng-classic/angular` repository.
 An example folder name is often the same as the guide page it supports.
 
 <div class="alert is-helpful">
@@ -296,17 +296,17 @@ It might refer instead to a sample belonging to another page.
 
 </div>
 
-The Angular CI process runs all end-to-end tests for every Angular PR.
-Angular re-tests the samples after every new version of a sample and every new version of Angular.
+The Angular ClassicCI process runs all end-to-end tests for every Angular ClassicPR.
+Angular Classicre-tests the samples after every new version of a sample and every new version of Angular.
 
 When possible, every snippet of code on a guide page should be derived from a code sample file.
-You tell the Angular documentation engine which code file &mdash;or fragment of a code file&mdash; to display by configuring `<code-example>` attributes.
+You tell the Angular Classicdocumentation engine which code file &mdash;or fragment of a code file&mdash; to display by configuring `<code-example>` attributes.
 
 <a id="display-whole-file"></a>
 
 ### Displaying an entire code file
 
-This Angular documentation style guide that you are currently reading has its own example application, located in the `content/examples/docs-style-guide` folder.
+This Angular Classicdocumentation style guide that you are currently reading has its own example application, located in the `content/examples/docs-style-guide` folder.
 
 The following `<code-example>` displays the sample's `app.module.ts`:
 
@@ -397,7 +397,7 @@ Specify the `<code-example>` output with the following attributes:
 
 ### Displaying bad code
 
-Occasionally, you want to display an example of less than ideal code or design, such as with **avoid** examples in the [Angular Style Guide](guide/styleguide).
+Occasionally, you want to display an example of less than ideal code or design, such as with **avoid** examples in the [Angular ClassicStyle Guide](guide/styleguide).
 Because it is possible for readers to copy and paste examples of inferior code in their own applications, try to minimize use of such code.
 
 In cases where you need unacceptable examples, you can set the `class` to `avoid` or have the word `avoid` in the filename of the source file.
@@ -405,7 +405,7 @@ By putting the word `avoid` in the filename or path, the documentation generator
 Either of these options frames the code snippet in bright red to grab the reader's attention.
 
 Here's the markup for an "avoid" example in the
-[Angular Style Guide](guide/styleguide#style-05-03 "Style 05-03: components as elements") that uses the word `avoid` in the path name:
+[Angular ClassicStyle Guide](guide/styleguide#style-05-03 "Style 05-03: components as elements") that uses the word `avoid` in the path name:
 
 <code-example format="html" language="html">
 
@@ -1178,9 +1178,9 @@ Here is the markup for this file tree.
 ## Images
 
 Store images in the `content/images/guide` directory in a folder with the **same name** as the guide page.
-Because Angular documentation generation copies these images to `generated/images/guide/your-guide-directory`, set the image `src` attribute to the runtime location of `generated/images/guide/your-guide-directory`.
+Because Angular Classicdocumentation generation copies these images to `generated/images/guide/your-guide-directory`, set the image `src` attribute to the runtime location of `generated/images/guide/your-guide-directory`.
 
-For example, images for this "Angular documentation style guide" are in the `content/images/guide/docs-style-guide` folder, but the `src` attribute specifies the `generated` location.
+For example, images for this "Angular Classicdocumentation style guide" are in the `content/images/guide/docs-style-guide` folder, but the `src` attribute specifies the `generated` location.
 
 The following is the `src` attribute for the "flying hero" image belonging to this guide:
 
@@ -1245,7 +1245,7 @@ Here's the "flying hero" markup with a 200px width:
 
 &lt;div class="lightbox"&gt;
 
-&lt;img alt="flying Angular hero"
+&lt;img alt="flying Angular Classichero"
      src="generated/images/guide/docs-style-guide/flying-hero.png"
      width="200"&gt;
 
@@ -1257,7 +1257,7 @@ The browser renders the following:
 
 <div class="lightbox">
 
-<img alt="flying Angular hero"
+<img alt="flying Angular Classichero"
      src="generated/images/guide/docs-style-guide/flying-hero.png"
      width="200">
 
@@ -1306,7 +1306,7 @@ For example:
 
 <code-example format="html" language="html">
 
-&lt;img alt="flying Angular hero"
+&lt;img alt="flying Angular Classichero"
      class="left"
      src="generated/images/guide/docs-style-guide/flying-hero.png"
      width="200"&gt;
@@ -1322,7 +1322,7 @@ If you need to force a piece of text to clear a floating image, add &grave;&lt;b
 
 The browser renders the following:
 
-<img alt="flying Angular hero"
+<img alt="flying Angular Classichero"
      class="left"
      src="generated/images/guide/docs-style-guide/flying-hero.png"
      width="200">
@@ -1345,7 +1345,7 @@ For example:
 
 &lt;div class="alert is-helpful clear-fix"&gt;
 
-&lt;img alt="flying Angular hero"
+&lt;img alt="flying Angular Classichero"
      src="generated/images/guide/docs-style-guide/flying-hero.png"
      class="right"
      width="100"&gt;
@@ -1360,7 +1360,7 @@ The browser renders the following:
 
 <div class="alert is-helpful clear-fix">
 
-<img alt="flying Angular hero"
+<img alt="flying Angular Classichero"
      class="right"
      src="generated/images/guide/docs-style-guide/flying-hero.png"
      width="100">
@@ -1373,7 +1373,7 @@ A subsection with **Markdown** formatted text.
 
 For specific language and grammar usage, a word list, style, tone, and formatting recommendations, see the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 
-If you have any questions that this style guide doesn't answer or you would like to discuss documentation styles, see the [Angular repo](https://github.com/angular/angular) and [file a documentation issue](https://github.com/angular/angular/issues/new/choose).
+If you have any questions that this style guide doesn't answer or you would like to discuss documentation styles, see the [Angular Classicrepo](https://github.com/ng-classic/angular) and [file a documentation issue](https://github.com/ng-classic/angular/issues/new/choose).
 
 <!-- links -->
 

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, SchemaMetadata} from '@angular/compiler';
+import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, SchemaMetadata} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {Reference} from '../../../imports';
@@ -28,7 +28,7 @@ export function extractSchemas(
           rawExpr, result, `${context}.schemas must be an array of schemas`);
     }
     const id = schemaRef.getIdentityIn(schemaRef.node.getSourceFile());
-    if (id === null || schemaRef.ownedByModuleGuess !== '@angular/core') {
+    if (id === null || schemaRef.ownedByModuleGuess !== '@angular-classic/core') {
       throw createValueHasWrongTypeError(
           rawExpr, result, `${context}.schemas must be an array of schemas`);
     }

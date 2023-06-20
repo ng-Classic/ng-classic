@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ParseSourceSpan, ParseSpan, TmplAstBoundEvent} from '@angular/compiler';
-import {NgCompiler} from '@angular/compiler-cli/src/ngtsc/core';
-import {findFirstMatchingNode} from '@angular/compiler-cli/src/ngtsc/typecheck/src/comments';
-import * as e from '@angular/compiler/src/expression_parser/ast';  // e for expression AST
-import * as t from '@angular/compiler/src/render3/r3_ast';         // t for template AST
+import {ParseSourceSpan, ParseSpan, TmplAstBoundEvent} from '@angular-classic/compiler';
+import {NgCompiler} from '@angular-classic/compiler-cli/src/ngtsc/core';
+import {findFirstMatchingNode} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/src/comments';
+import * as e from '@angular-classic/compiler/src/expression_parser/ast';  // e for expression AST
+import * as t from '@angular-classic/compiler/src/render3/r3_ast';         // t for template AST
 import tss from 'typescript/lib/tsserverlibrary';
 
 import {isBoundEventWithSyntheticHandler, isTemplateNodeWithKeyAndValue, isWithin, isWithinKeyValue, TemplateInfo} from './utils';

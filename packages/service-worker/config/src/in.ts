@@ -17,7 +17,7 @@ export type Glob = string;
 export type Duration = string;
 
 /**
- * A top-level Angular Service Worker configuration object.
+ * A top-level Angular ClassicService Worker configuration object.
  *
  * @publicApi
  */

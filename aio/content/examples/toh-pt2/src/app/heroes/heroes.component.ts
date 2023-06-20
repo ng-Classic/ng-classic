@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 import { Hero } from '../hero';
 // #docregion import-heroes
 import { HEROES } from '../mock-heroes';

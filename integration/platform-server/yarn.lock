@@ -10,21 +10,21 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@angular-devkit/architect@0.1600.0-rc.0":
+"@angular-classic-devkit/architect@0.1600.0-rc.0":
   version "0.1600.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1600.0-rc.0.tgz#169de99321957460c460a3e0a3d7514adcb6a0bc"
+  resolved "https://registry.yarnpkg.com/@angular-classic-devkit/architect/-/architect-0.1600.0-rc.0.tgz#169de99321957460c460a3e0a3d7514adcb6a0bc"
   integrity sha512-5ZTC+I0t1E1MreDXaTdrEKoRbKD6dAx7946CGYp2++2TyI3hNaBP5Mv0/AckQ0RUfiebX72OSrcboHyzoMniVw==
   dependencies:
-    "@angular-devkit/core" "16.0.0-rc.0"
+    "@angular-classic-devkit/core" "16.0.0-rc.0"
     rxjs "7.8.0"
 
-"@angular-devkit/build-angular@file:../../node_modules/@angular-devkit/build-angular":
+"@angular-classic-devkit/build-angular@file:../../node_modules/@angular-classic-devkit/build-angular":
   version "16.0.0-rc.0"
   dependencies:
     "@ampproject/remapping" "2.2.1"
-    "@angular-devkit/architect" "0.1600.0-rc.0"
-    "@angular-devkit/build-webpack" "0.1600.0-rc.0"
-    "@angular-devkit/core" "16.0.0-rc.0"
+    "@angular-classic-devkit/architect" "0.1600.0-rc.0"
+    "@angular-classic-devkit/build-webpack" "0.1600.0-rc.0"
+    "@angular-classic-devkit/core" "16.0.0-rc.0"
     "@babel/core" "7.21.4"
     "@babel/generator" "7.21.4"
     "@babel/helper-annotate-as-pure" "7.18.6"
@@ -87,17 +87,17 @@
   optionalDependencies:
     esbuild "0.17.16"
 
-"@angular-devkit/build-webpack@0.1600.0-rc.0":
+"@angular-classic-devkit/build-webpack@0.1600.0-rc.0":
   version "0.1600.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.1600.0-rc.0.tgz#383c4aa9ae3d48851fa28029c7c7c97b4454b008"
+  resolved "https://registry.yarnpkg.com/@angular-classic-devkit/build-webpack/-/build-webpack-0.1600.0-rc.0.tgz#383c4aa9ae3d48851fa28029c7c7c97b4454b008"
   integrity sha512-rjbu7IOX9x0sUWaeby2UachuwloBGqCMJJAwCdPdD5Ce615NYG5rqkYaVSO4YYGPJ4zRbLb+2iTk/eNkeS+WaA==
   dependencies:
-    "@angular-devkit/architect" "0.1600.0-rc.0"
+    "@angular-classic-devkit/architect" "0.1600.0-rc.0"
     rxjs "7.8.0"
 
-"@angular-devkit/core@16.0.0-rc.0":
+"@angular-classic-devkit/core@16.0.0-rc.0":
   version "16.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-16.0.0-rc.0.tgz#8ec36777d2fc33cfe4b7e401f09adbe9e956cf3b"
+  resolved "https://registry.yarnpkg.com/@angular-classic-devkit/core/-/core-16.0.0-rc.0.tgz#8ec36777d2fc33cfe4b7e401f09adbe9e956cf3b"
   integrity sha512-9VssCo5X9OH3Lg1IqiFpueYtiIzsDS8BQ/QfNCZSOHya2RvvQKjcnIQbCpAawl2sF+GjnA1cp8RLvZ6jSiizHw==
   dependencies:
     ajv "8.12.0"
@@ -106,28 +106,28 @@
     rxjs "7.8.0"
     source-map "0.7.4"
 
-"@angular-devkit/schematics@16.0.0-rc.0":
+"@angular-classic-devkit/schematics@16.0.0-rc.0":
   version "16.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-16.0.0-rc.0.tgz#d6de5a14d71ede158d580c3feb0cb9dbb2e53eff"
+  resolved "https://registry.yarnpkg.com/@angular-classic-devkit/schematics/-/schematics-16.0.0-rc.0.tgz#d6de5a14d71ede158d580c3feb0cb9dbb2e53eff"
   integrity sha512-X1CLukDZozhxq0EryRQ5ZavIZbVYBPEVvtA22fqKwmCmej/b1PpHE3eTB/zom85AQwhoIO+MsWcq+1aAJLXaGw==
   dependencies:
-    "@angular-devkit/core" "16.0.0-rc.0"
+    "@angular-classic-devkit/core" "16.0.0-rc.0"
     jsonc-parser "3.2.0"
     magic-string "0.30.0"
     ora "5.4.1"
     rxjs "7.8.0"
 
-"@angular/animations@file:../../dist/packages-dist/animations":
+"@angular-classic/animations@file:../../dist/packages-dist/animations":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/cli@file:../../node_modules/@angular/cli":
+"@angular-classic/cli@file:../../node_modules/@angular-classic/cli":
   version "16.0.0-rc.0"
   dependencies:
-    "@angular-devkit/architect" "0.1600.0-rc.0"
-    "@angular-devkit/core" "16.0.0-rc.0"
-    "@angular-devkit/schematics" "16.0.0-rc.0"
+    "@angular-classic-devkit/architect" "0.1600.0-rc.0"
+    "@angular-classic-devkit/core" "16.0.0-rc.0"
+    "@angular-classic-devkit/schematics" "16.0.0-rc.0"
     "@schematics/angular" "16.0.0-rc.0"
     "@yarnpkg/lockfile" "1.1.0"
     ansi-colors "4.1.3"
@@ -144,12 +144,12 @@
     symbol-observable "4.0.0"
     yargs "17.7.1"
 
-"@angular/common@file:../../dist/packages-dist/common":
+"@angular-classic/common@file:../../dist/packages-dist/common":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/compiler-cli@file:../../dist/packages-dist/compiler-cli":
+"@angular-classic/compiler-cli@file:../../dist/packages-dist/compiler-cli":
   version "16.1.0-next.0"
   dependencies:
     "@babel/core" "7.19.3"
@@ -161,41 +161,41 @@
     tslib "^2.3.0"
     yargs "^17.2.1"
 
-"@angular/compiler@file:../../dist/packages-dist/compiler":
+"@angular-classic/compiler@file:../../dist/packages-dist/compiler":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/core@file:../../dist/packages-dist/core":
+"@angular-classic/core@file:../../dist/packages-dist/core":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/forms@file:../../dist/packages-dist/forms":
+"@angular-classic/forms@file:../../dist/packages-dist/forms":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/language-service@file:../../dist/packages-dist/language-service":
+"@angular-classic/language-service@file:../../dist/packages-dist/language-service":
   version "16.1.0-next.0"
 
-"@angular/platform-browser-dynamic@file:../../dist/packages-dist/platform-browser-dynamic":
-  version "16.1.0-next.0"
-  dependencies:
-    tslib "^2.3.0"
-
-"@angular/platform-browser@file:../../dist/packages-dist/platform-browser":
+"@angular-classic/platform-browser-dynamic@file:../../dist/packages-dist/platform-browser-dynamic":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-server@file:../../dist/packages-dist/platform-server":
+"@angular-classic/platform-browser@file:../../dist/packages-dist/platform-browser":
+  version "16.1.0-next.0"
+  dependencies:
+    tslib "^2.3.0"
+
+"@angular-classic/platform-server@file:../../dist/packages-dist/platform-server":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
     xhr2 "^0.2.0"
 
-"@angular/router@file:../../dist/packages-dist/router":
+"@angular-classic/router@file:../../dist/packages-dist/router":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
@@ -1533,8 +1533,8 @@
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-16.0.0-rc.0.tgz#279708795f551517943f46b7b5971ad9ec1987f5"
   integrity sha512-MA3Qg/0nK1YIXDC6q+4x2VIaM+BPhdNYgOLgcUurYZqYfUlf6dK0mzCZzc69/o/g3tGWSaBmaZgSTUMCjCpxgw==
   dependencies:
-    "@angular-devkit/core" "16.0.0-rc.0"
-    "@angular-devkit/schematics" "16.0.0-rc.0"
+    "@angular-classic-devkit/core" "16.0.0-rc.0"
+    "@angular-classic-devkit/schematics" "16.0.0-rc.0"
     jsonc-parser "3.2.0"
 
 "@sigstore/protobuf-specs@^0.1.0":

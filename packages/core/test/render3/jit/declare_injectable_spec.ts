@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {forwardRef, InjectionToken, Injector, ɵcreateInjector, ɵsetCurrentInjector, ɵɵdefineInjector, ɵɵInjectableDeclaration, ɵɵngDeclareInjectable, ɵɵngDeclareInjector, ɵɵngDeclareNgModule} from '@angular/core';
+import {forwardRef, InjectionToken, Injector, ɵcreateInjector, ɵsetCurrentInjector, ɵɵdefineInjector, ɵɵInjectableDeclaration, ɵɵngDeclareInjectable, ɵɵngDeclareInjector, ɵɵngDeclareNgModule} from '@angular-classic/core';
 
 describe('Injectable declaration jit compilation', () => {
   let previousInjector: Injector|null|undefined;

@@ -1,5 +1,5 @@
 // #docplaster
-import { fakeAsync, ComponentFixture, TestBed, tick } from '@angular/core/testing';
+import { fakeAsync, ComponentFixture, TestBed, tick } from '@angular-classic/core/testing';
 
 // #docregion import-marbles
 import { cold, getTestScheduler } from 'jasmine-marbles';

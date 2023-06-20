@@ -17,6 +17,6 @@ export interface Resource {
   subCategory: string; // "Books"
   id: string;          // "-KLI8vJ0ZkvWhqPembZ7"
   desc: string;        // "This books shows all the steps necessary for the development of SPA"
-  title: string;       // "Practical Angular 2",
+  title: string;       // "Practical Angular Classic2",
   url: string;         // "https://leanpub.com/practical-angular-2"
 }

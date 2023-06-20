@@ -1,6 +1,6 @@
 // #docplaster
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 // #docregion customer-dashboard-component
 // import the new component
 import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';

@@ -1,9 +1,9 @@
 // #docplaster
-import { inject } from '@angular/core';
+import { inject } from '@angular-classic/core';
 import {
   Router,
   NavigationExtras,
-} from '@angular/router';
+} from '@angular-classic/router';
 import { AuthService } from './auth.service';
 
 export const authGuard = () => {

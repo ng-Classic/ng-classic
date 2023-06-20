@@ -12,21 +12,21 @@ Hydration is the process that restores the server side rendered application on t
 
 ## Why is hydration important?
 
-Hydration improves application performance by avoiding extra work to re-create DOM nodes. Instead, Angular tries to match existing DOM elements to the applications structure at runtime and reuses DOM nodes when possible. This results in a performance improvement that can be measured using [Core Web Vitals (CWV)](https://web.dev/learn-core-web-vitals/) statistics, such as reducing the First Input Delay ([FID](https://web.dev/fid/)) and Largest Contentful Paint ([LCP](https://web.dev/lcp/)), as well as Cumulative Layout Shift ([CLS](https://web.dev/cls/)). Improving these numbers also affects things like SEO performance.
+Hydration improves application performance by avoiding extra work to re-create DOM nodes. Instead, Angular Classictries to match existing DOM elements to the applications structure at runtime and reuses DOM nodes when possible. This results in a performance improvement that can be measured using [Core Web Vitals (CWV)](https://web.dev/learn-core-web-vitals/) statistics, such as reducing the First Input Delay ([FID](https://web.dev/fid/)) and Largest Contentful Paint ([LCP](https://web.dev/lcp/)), as well as Cumulative Layout Shift ([CLS](https://web.dev/cls/)). Improving these numbers also affects things like SEO performance.
 
-Without hydration enabled, server side rendered Angular applications will destroy and re-render the application's DOM, which may result in a visible UI flicker. This re-rendering can negatively impact [Core Web Vitals](https://web.dev/learn-core-web-vitals/) like [LCP](https://web.dev/lcp/) and cause a layout shift. Enabling hydration allows the existing DOM to be re-used and prevents a flicker.
+Without hydration enabled, server side rendered Angular Classicapplications will destroy and re-render the application's DOM, which may result in a visible UI flicker. This re-rendering can negatively impact [Core Web Vitals](https://web.dev/learn-core-web-vitals/) like [LCP](https://web.dev/lcp/) and cause a layout shift. Enabling hydration allows the existing DOM to be re-used and prevents a flicker.
 
 <a id="how-to-enable"></a>
 
 ## How do you enable hydration in Angular
 
-Before you can get started with hydration, you must have a server side rendered (SSR) application. Follow the [Angular Universal Guide](/guide/universal) to enable server side rendering first. Once you have SSR working with your application, you can enable hydration by visiting your main app component or module and importing `provideClientHydration` from `@angular/platform-browser`. You'll then add that provider to your app's bootstrapping providers list.
+Before you can get started with hydration, you must have a server side rendered (SSR) application. Follow the [Angular ClassicUniversal Guide](/guide/universal) to enable server side rendering first. Once you have SSR working with your application, you can enable hydration by visiting your main app component or module and importing `provideClientHydration` from `@angular-classic/platform-browser`. You'll then add that provider to your app's bootstrapping providers list.
 
 ```typescript
 import {
   bootstrapApplication,
   provideClientHydration,
-} from '@angular/platform-browser';
+} from '@angular-classic/platform-browser';
 ...
 
 bootstrapApplication(RootCmp, {
@@ -37,8 +37,8 @@ bootstrapApplication(RootCmp, {
 Alternatively if you are using NgModules, you would add `provideClientHydration` to your root app module's provider list.
 
 ```typescript
-import {provideClientHydration} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {provideClientHydration} from '@angular-classic/platform-browser';
+import {NgModule} from '@angular-classic/core';
 
 @NgModule({
   declarations: [RootCmp],
@@ -61,17 +61,17 @@ After you've followed these steps and have started up your server, load your app
 
 <div class="alert is-helpful">
 
-  You will likely need to fix instances of Direct DOM Manipulation before hydration will fully work either by switching to Angular constructs or by using `ngSkipHydration`. See [Constraints](#constraints), [Direct DOM Manipulation](#dom-manipulation), and [How to skip hydration for particular components](#ngskiphydration) for more details.
+  You will likely need to fix instances of Direct DOM Manipulation before hydration will fully work either by switching to Angular Classicconstructs or by using `ngSkipHydration`. See [Constraints](#constraints), [Direct DOM Manipulation](#dom-manipulation), and [How to skip hydration for particular components](#ngskiphydration) for more details.
 
 </div>
 
-While running an application in dev mode, you can confirm hydration is enabled by opening the Developer Tools in your browser and viewing the console. You should see a message that includes hydration-related stats, such as the number of components and nodes hydrated. Note: Angular calculates the stats based on all components rendered on a page, including those that come from third-party libraries.
+While running an application in dev mode, you can confirm hydration is enabled by opening the Developer Tools in your browser and viewing the console. You should see a message that includes hydration-related stats, such as the number of components and nodes hydrated. Note: Angular Classiccalculates the stats based on all components rendered on a page, including those that come from third-party libraries.
 
 <a id="constraints"></a>
 
 ## Constraints
 
-Hydration imposes a few constraints on your application that are not present without hydration enabled. Your application must have the same generated DOM structure on both the server and the client. The process of hydration expects the DOM tree to have the same structure in both places. This also includes whitespaces and comment nodes that Angular produces during the rendering on the server. Those whitespaces and nodes must be present in the HTML generated by the server-side rendering process.
+Hydration imposes a few constraints on your application that are not present without hydration enabled. Your application must have the same generated DOM structure on both the server and the client. The process of hydration expects the DOM tree to have the same structure in both places. This also includes whitespaces and comment nodes that Angular Classicproduces during the rendering on the server. Those whitespaces and nodes must be present in the HTML generated by the server-side rendering process.
 
 <div class="alert is-important">
 
@@ -87,9 +87,9 @@ If there is a mismatch between server and client DOM tree structures, the hydrat
 
 If you have components that manipulate the DOM using native DOM APIs or use `innerHTML` or `outerHTML`, the hydration process will encounter errors. Specific cases where DOM manipulation is a problem are situations like accessing the `document`, querying for specific elements, and injecting additional nodes using `appendChild`. Detaching DOM nodes and moving them to other locations will also result in errors.
 
-This is because Angular is unaware of these DOM changes and cannot resolve them during the hydration process. Angular will expect a certain structure, but it will encounter a different structure when attempting to hydrate. This mismatch will result in hydration failure and throw a DOM mismatch error ([see below](#errors)).
+This is because Angular Classicis unaware of these DOM changes and cannot resolve them during the hydration process. Angular Classicwill expect a certain structure, but it will encounter a different structure when attempting to hydrate. This mismatch will result in hydration failure and throw a DOM mismatch error ([see below](#errors)).
 
-It is best to refactor your component to avoid this sort of DOM manipulation. Try to use Angular APIs to do this work, if you can. If you cannot refactor this behavior, use the `ngSkipHydration` attribute ([described below](#ngskiphydration)) until you can refactor into a hydration friendly solution.
+It is best to refactor your component to avoid this sort of DOM manipulation. Try to use Angular ClassicAPIs to do this work, if you can. If you cannot refactor this behavior, use the `ngSkipHydration` attribute ([described below](#ngskiphydration)) until you can refactor into a hydration friendly solution.
 
 ### Valid HTML structure
 
@@ -119,7 +119,7 @@ If you choose to set this setting in your tsconfig, we recommend to set it only 
 
 ### Custom or Noop Zone.js are not yet supported
 
-Hydration relies on a signal from Zone.js when it becomes stable inside an application, so that Angular can start the serialization process on the server or post-hydration cleanup on the client to remove DOM nodes that remained unclaimed.
+Hydration relies on a signal from Zone.js when it becomes stable inside an application, so that Angular Classiccan start the serialization process on the server or post-hydration cleanup on the client to remove DOM nodes that remained unclaimed.
 
 Providing a custom or a "noop" Zone.js implementation may lead to a different timing of the "stable" event, thus triggering the serialization or the cleanup too early or too late. This is not yet a fully supported configuration and you may need to adjust the timing of the `onStable` event in the custom Zone.js implementation.
 
@@ -152,7 +152,7 @@ Alternatively you can set `ngSkipHydration` as a host binding.
 class ExampleCmp {}
 ```
 
-The `ngSkipHydration` attribute will force Angular to skip hydrating the entire component and its children. Using this attribute means that the component will behave as if hydration is not enabled, meaning it will destroy and re-render itself.
+The `ngSkipHydration` attribute will force Angular Classicto skip hydrating the entire component and its children. Using this attribute means that the component will behave as if hydration is not enabled, meaning it will destroy and re-render itself.
 
 <div class="alert is-helpful">
 
@@ -160,7 +160,7 @@ This will fix rendering issues, but it means that for this component (and its ch
 
 </div>
 
-The `ngSkipHydration` attribute can only be used on component host nodes. Angular throws an error if this attribute is added to other nodes.
+The `ngSkipHydration` attribute can only be used on component host nodes. Angular Classicthrows an error if this attribute is added to other nodes.
 
 Keep in mind that adding the `ngSkipHydration` attribute to your root application component would effectively disable hydration for your entire application. Be careful and thoughtful about using this attribute. It is intended as a last resort workaround. Components that break hydration should be considered bugs that need to be fixed.
 
@@ -169,7 +169,7 @@ Keep in mind that adding the `ngSkipHydration` attribute to your root applicatio
 ## I18N
 
 We don't yet support internationalization with hydration, but support is coming.
-Currently, Angular would skip hydration for components that use i18n blocks, effectively
+Currently, Angular Classicwould skip hydration for components that use i18n blocks, effectively
 re-rendering those components from scratch.
 
 ## Third Party Libraries with DOM Manipulation

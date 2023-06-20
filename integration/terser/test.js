@@ -6,10 +6,10 @@ const Terser = require('terser');
 
 async function test() {
   const outputPath = resolve(__dirname, './core.min.js');
-  const pathToCoreFesm2020 = resolve(__dirname, './node_modules/@angular/core/fesm2022/core.mjs');
+  const pathToCoreFesm2020 = resolve(__dirname, './node_modules/@angular-classic/core/fesm2022/core.mjs');
   const coreFesm2022Content = readFileSync(pathToCoreFesm2020, 'utf8');
 
-  const GLOBAL_DEFS_FOR_TERSER = (await import('@angular/compiler-cli')).GLOBAL_DEFS_FOR_TERSER;
+  const GLOBAL_DEFS_FOR_TERSER = (await import('@angular-classic/compiler-cli')).GLOBAL_DEFS_FOR_TERSER;
 
   // Ensure that Terser global_defs exported by compiler-cli work.
   const terserOpts = {

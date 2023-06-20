@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: directives.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ChildComponent {
 }
 ChildComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ChildComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -40,7 +40,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: directives.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class ChildComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<ChildComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChildComponent, "child", never, {}, {}, never, never, false, never>;
@@ -62,8 +62,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: complex_selectors.js
  ****************************************************************************************************/
-import { Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -93,7 +93,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: complex_selectors.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<SomeDirective, "div.foo[some-directive]:not([title]):not(.baz)", never, {}, {}, never, never, false, never>;
@@ -111,8 +111,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: id_selector.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeComponent {
 }
 SomeComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -134,7 +134,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: id_selector.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SomeComponent, "#my-app", never, {}, {}, never, never, false, never>;
@@ -148,8 +148,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: no_selector.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class RouterOutlet {
 }
 RouterOutlet.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: RouterOutlet, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -179,7 +179,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: no_selector.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class RouterOutlet {
     static ɵfac: i0.ɵɵFactoryDeclaration<RouterOutlet, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<RouterOutlet, "router-outlet", never, {}, {}, never, never, false, never>;
@@ -197,8 +197,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: view_tokens_di.js
  ****************************************************************************************************/
-import { ChangeDetectorRef, Component, ElementRef, NgModule, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { ChangeDetectorRef, Component, ElementRef, NgModule, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor(el, vcr, cdr) {
         this.el = el;
@@ -225,8 +225,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: view_tokens_di.d.ts
  ****************************************************************************************************/
-import { ChangeDetectorRef, ElementRef, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { ChangeDetectorRef, ElementRef, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     el: ElementRef;
     vcr: ViewContainerRef;
@@ -244,8 +244,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: structural_directives.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule, TemplateRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule, TemplateRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class IfDirective {
     constructor(template) { }
 }
@@ -279,8 +279,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: structural_directives.d.ts
  ****************************************************************************************************/
-import { TemplateRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { TemplateRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class IfDirective {
     constructor(template: TemplateRef<any>);
     static ɵfac: i0.ɵɵFactoryDeclaration<IfDirective, never>;
@@ -300,8 +300,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: array_literals.js
  ****************************************************************************************************/
-import { Component, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComp {
 }
 MyComp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -352,7 +352,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: array_literals.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComp {
     names: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComp, never>;
@@ -372,8 +372,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: array_literals_many.js
  ****************************************************************************************************/
-import { Component, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComp {
 }
 MyComp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -452,7 +452,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: array_literals_many.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComp {
     names: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComp, never>;
@@ -480,8 +480,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: object_literals.js
  ****************************************************************************************************/
-import { Component, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ObjectComp {
 }
 ObjectComp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ObjectComp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -532,7 +532,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: object_literals.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class ObjectComp {
     config: {
         [key: string]: any;
@@ -554,8 +554,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: literal_nested_expression.js
  ****************************************************************************************************/
-import { Component, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class NestedComp {
 }
 NestedComp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: NestedComp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -611,7 +611,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: literal_nested_expression.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class NestedComp {
     config: {
         [key: string]: any;
@@ -634,8 +634,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: number_separator.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyApp {
     constructor() {
         this.multiplier = 5;
@@ -669,7 +669,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: number_separator.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyApp {
     multiplier: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyApp, never>;

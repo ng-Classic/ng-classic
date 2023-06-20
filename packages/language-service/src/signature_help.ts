@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Call, SafeCall} from '@angular/compiler';
-import {NgCompiler} from '@angular/compiler-cli/src/ngtsc/core';
-import {getSourceFileOrError} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {SymbolKind} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {Call, SafeCall} from '@angular-classic/compiler';
+import {NgCompiler} from '@angular-classic/compiler-cli/src/ngtsc/core';
+import {getSourceFileOrError} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {SymbolKind} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript/lib/tsserverlibrary';
 
 import {getTargetAtPosition, TargetNodeKind} from './template_target';

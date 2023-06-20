@@ -17,7 +17,7 @@
  * Add the following line to `AppModule.imports`
  *   InMemoryWebApiModule.forRoot(HeroInMemDataService) // or HeroInMemDataOverrideService
  */
-import {Injectable} from '@angular/core';
+import {Injectable} from '@angular-classic/core';
 import {InMemoryDbService, RequestInfo} from 'angular-in-memory-web-api';
 import {Observable, of} from 'rxjs';
 import {delay} from 'rxjs/operators';

@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Input, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular/core';
-import {AfterViewChecked} from '@angular/core/src/core';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule} from '@angular-classic/common';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Input, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {AfterViewChecked} from '@angular-classic/core/src/core';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('change detection for transplanted views', () => {
   describe('when declaration appears before insertion', () => {
@@ -286,7 +286,7 @@ describe('change detection for transplanted views', () => {
             .toEqual('OnPushDeclareComp(Angular) InsertComp(Hello) Hello world!');
       });
 
-      // TODO(FW-1774): blocked by https://github.com/angular/angular/pull/34443
+      // TODO(FW-1774): blocked by https://github.com/ng-classic/angular/pull/34443
       xit('is checked as part of CheckNoChanges pass', () => {
         // mark declaration point dirty
         onPushDeclareComp.changeDetector.markForCheck();

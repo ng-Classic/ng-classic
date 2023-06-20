@@ -6,18 +6,18 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, DOCUMENT} from '@angular/common';
-import {computeMsgId} from '@angular/compiler';
-import {ChangeDetectorRef, Compiler, Component, createComponent, createEnvironmentInjector, Directive, DoCheck, ElementRef, EmbeddedViewRef, EnvironmentInjector, ErrorHandler, InjectionToken, Injector, Input, NgModule, NgModuleRef, NO_ERRORS_SCHEMA, OnDestroy, OnInit, Pipe, PipeTransform, QueryList, Renderer2, RendererFactory2, RendererType2, Sanitizer, TemplateRef, ViewChild, ViewChildren, ViewContainerRef, ɵsetDocument} from '@angular/core';
-import {ngDevModeResetPerfCounters} from '@angular/core/src/util/ng_dev_mode';
-import {ComponentFixture, TestBed, TestComponentRenderer} from '@angular/core/testing';
-import {clearTranslations, loadTranslations} from '@angular/localize';
-import {By, DomSanitizer} from '@angular/platform-browser';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule, DOCUMENT} from '@angular-classic/common';
+import {computeMsgId} from '@angular-classic/compiler';
+import {ChangeDetectorRef, Compiler, Component, createComponent, createEnvironmentInjector, Directive, DoCheck, ElementRef, EmbeddedViewRef, EnvironmentInjector, ErrorHandler, InjectionToken, Injector, Input, NgModule, NgModuleRef, NO_ERRORS_SCHEMA, OnDestroy, OnInit, Pipe, PipeTransform, QueryList, Renderer2, RendererFactory2, RendererType2, Sanitizer, TemplateRef, ViewChild, ViewChildren, ViewContainerRef, ɵsetDocument} from '@angular-classic/core';
+import {ngDevModeResetPerfCounters} from '@angular-classic/core/src/util/ng_dev_mode';
+import {ComponentFixture, TestBed, TestComponentRenderer} from '@angular-classic/core/testing';
+import {clearTranslations, loadTranslations} from '@angular-classic/localize';
+import {By, DomSanitizer} from '@angular-classic/platform-browser';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('ViewContainerRef', () => {
   /**
-   * Gets the inner HTML of the given element with all HTML comments and Angular internal
+   * Gets the inner HTML of the given element with all HTML comments and Angular Classicinternal
    * reflect attributes omitted. This makes HTML comparisons easier and less verbose.
    */
   function getElementHtml(element: Element) {
@@ -1953,7 +1953,7 @@ describe('ViewContainerRef', () => {
   });
 
   describe('lifecycle hooks', () => {
-    // Angular 5 reference: https://stackblitz.com/edit/lifecycle-hooks-vcref
+    // Angular Classic5 reference: https://stackblitz.com/edit/lifecycle-hooks-vcref
     const log: string[] = [];
 
     @Component({selector: 'hooks', template: `{{name}}`})

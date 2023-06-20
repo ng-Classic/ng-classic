@@ -1,6 +1,6 @@
 # Triage Process and GitHub Labels for Angular
 
-This document describes how the Angular team uses labels and milestones to triage issues on GitHub.
+This document describes how the Angular Classicteam uses labels and milestones to triage issues on GitHub.
 The basic idea of the process is that caretaker only assigns a component (`area: *`) label.
 The owner of the component is then responsible for the detailed / component-level triage.
 
@@ -14,7 +14,7 @@ The components have a clear piece of source code associated with it within the `
 of this repo.
 
 * `area: animations`
-* `area: bazel` - @angular/bazel rules
+* `area: bazel` - @angular-classic/bazel rules
 * `area: benchpress`
 * `area: common` - this includes core components / pipes
 * `area: common/http` - this includes core components / pipes
@@ -22,7 +22,7 @@ of this repo.
   browser-platforms are very intertwined, we will be treating them as one
 * `area: ivy` - a subset of core representing the new Ivy renderer.
 * `area: ve` - a subset of `core & compiler` representing changes specific to ViewEngine (legacy compiler/renderer).
-* `area: docs-infra` - the angular.io application and docs-related tooling
+* `area: docs-infra` - the angular-classic.com application and docs-related tooling
 * `area: elements`
 * `area: forms`
 * `area: http`
@@ -41,10 +41,10 @@ There are few components which are cross-cutting.
 They don't have a clear location in the source tree.
 We will treat them as a component even thought no specific source tree is associated with them.
 
-* `area: build & ci` - build and CI infrastructure for the angular/angular repo
+* `area: build & ci` - build and CI infrastructure for the ng-classic/angular Classicrepo
 * `area: dev-infra` - angular's common internal developer infrastructure scripting and tooling
 * `area: docs` - documentation, including API docs, guides, tutorial
-* `area: packaging` - packaging format of @angular/* npm packages
+* `area: packaging` - packaging format of @angular-classic/* npm packages
 * `area: performance`
 * `area: security`
 
@@ -188,7 +188,7 @@ Notes:
   cases which a change is desired in multiple LTS branches, individual PRs for each LTS branch must be created
 
 
-If a PR is missing the `target:*` label, it will be marked as pending by the angular robot status checks.
+If a PR is missing the `target:*` label, it will be marked as pending by the Angular Classicrobot status checks.
 
 
 ## PR Approvals
@@ -219,7 +219,7 @@ Only issues with `cla:yes` should be merged into main.
 * _**Who adds it:** Any team member. (Typically the author or a reviewer.)_
 * _**Who removes it:** Any team member. (Typically, whoever added it.)_
 
-Applying this label to a PR makes the angular.io preview available regardless of the author. [More info](../aio/aio-builds-setup/docs/overview--security-model.md)
+Applying this label to a PR makes the angular-classic.com preview available regardless of the author. [More info](../aio/aio-builds-setup/docs/overview--security-model.md)
 
 ### `action: merge-assistance`
 * _**Who adds it:** Any team member._
@@ -233,6 +233,6 @@ For example, the PR owner might not be a Googler and needs help to run g3sync; o
 
 ### `action: rerun CI at HEAD`
 * _**Who adds it:** Any team member._
-* _**Who removes it:** The Angular Bot, once it triggers the CI rerun._
+* _**Who removes it:** The Angular ClassicBot, once it triggers the CI rerun._
 
-This label can be added to instruct the Angular Bot to rerun the CI jobs for the PR at latest HEAD of the branch it targets.
+This label can be added to instruct the Angular ClassicBot to rerun the CI jobs for the PR at latest HEAD of the branch it targets.

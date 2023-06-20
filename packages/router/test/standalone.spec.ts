@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Injectable, NgModule} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {provideRoutes, Router, RouterModule, ROUTES} from '@angular/router';
+import {Component, Injectable, NgModule} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {provideRoutes, Router, RouterModule, ROUTES} from '@angular-classic/router';
 
 @Component({template: '<div>simple standalone</div>', standalone: true})
 export class SimpleStandaloneComponent {

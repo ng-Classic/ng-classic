@@ -17,7 +17,7 @@ export const appIsAngularIvy = (): boolean => {
   return typeof rootElement?.__ngContext__ !== 'undefined';
 };
 
-export const appIsAngular = (): boolean => {
+export const appIsAngular Classic= (): boolean => {
   return !!getAngularVersion();
 };
 

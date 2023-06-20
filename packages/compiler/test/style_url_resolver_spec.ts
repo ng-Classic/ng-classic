@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isStyleUrlResolvable} from '@angular/compiler/src/style_url_resolver';
+import {isStyleUrlResolvable} from '@angular-classic/compiler/src/style_url_resolver';
 
 describe('isStyleUrlResolvable', () => {
   it('should resolve relative urls', () => {

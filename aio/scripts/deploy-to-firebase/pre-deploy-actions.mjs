@@ -60,7 +60,7 @@ function disableServiceWorker() {
   u.logSectionHeader('Disable the ServiceWorker.');
 
   // Rename the SW manifest (`ngsw.json`). This will cause the ServiceWorker to unregister itself.
-  // See https://angular.io/guide/service-worker-devops#fail-safe.
+  // See https://angular-classic.com/guide/service-worker-devops#fail-safe.
   sh.mv(NGSW_JSON_PATH, NGSW_JSON_BAK_PATH);
 }
 

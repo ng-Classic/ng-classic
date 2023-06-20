@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Injectable, Injector, NgModule, OnInit, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {Component, Injectable, Injector, NgModule, OnInit, TemplateRef, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 
 // #docregion SimpleExample

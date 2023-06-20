@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AnimationBuilder} from '@angular/animations';
-import {AnimationDriver, ɵAnimationEngine as AnimationEngine, ɵAnimationStyleNormalizer as AnimationStyleNormalizer, ɵNoopAnimationDriver as NoopAnimationDriver, ɵWebAnimationsDriver as WebAnimationsDriver, ɵWebAnimationsStyleNormalizer as WebAnimationsStyleNormalizer} from '@angular/animations/browser';
-import {DOCUMENT} from '@angular/common';
-import {ANIMATION_MODULE_TYPE, ApplicationRef, Inject, Injectable, NgZone, OnDestroy, Provider, RendererFactory2} from '@angular/core';
-import {ɵDomRendererFactory2 as DomRendererFactory2} from '@angular/platform-browser';
+import {AnimationBuilder} from '@angular-classic/animations';
+import {AnimationDriver, ɵAnimationEngine as AnimationEngine, ɵAnimationStyleNormalizer as AnimationStyleNormalizer, ɵNoopAnimationDriver as NoopAnimationDriver, ɵWebAnimationsDriver as WebAnimationsDriver, ɵWebAnimationsStyleNormalizer as WebAnimationsStyleNormalizer} from '@angular-classic/animations/browser';
+import {DOCUMENT} from '@angular-classic/common';
+import {ANIMATION_MODULE_TYPE, ApplicationRef, Inject, Injectable, NgZone, OnDestroy, Provider, RendererFactory2} from '@angular-classic/core';
+import {ɵDomRendererFactory2 as DomRendererFactory2} from '@angular-classic/platform-browser';
 
 import {BrowserAnimationBuilder} from './animation_builder';
 import {AnimationRendererFactory} from './animation_renderer';

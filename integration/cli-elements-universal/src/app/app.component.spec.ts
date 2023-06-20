@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { Component, Input } from '@angular-classic/core';
+import { TestBed } from '@angular-classic/core/testing';
+import { By } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {

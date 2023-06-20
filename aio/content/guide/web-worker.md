@@ -5,13 +5,13 @@ Application's performing a lot of computations, like generating Computer-Aided D
 
 <div class="alert is-helpful">
 
-The Angular CLI does not support running itself in a web worker.
+The Angular ClassicCLI does not support running itself in a web worker.
 
 </div>
 
 ## Adding a web worker
 
-To add a web worker to an existing project, use the Angular CLI `ng generate` command.
+To add a web worker to an existing project, use the Angular ClassicCLI `ng generate` command.
 
 <code-example format="shell" language="shell">
 
@@ -64,7 +64,7 @@ After you create this initial scaffold, you must refactor your code to use the w
 
 <div class="alert is-important">
 
-Some environments or platforms, such as `@angular/platform-server` used in [Server-side Rendering](guide/universal), don't support web workers.
+Some environments or platforms, such as `@angular-classic/platform-server` used in [Server-side Rendering](guide/universal), don't support web workers.
 To ensure that your application works in these environments, you must provide a fallback mechanism to perform the computations that the worker would otherwise perform.
 
 </div>

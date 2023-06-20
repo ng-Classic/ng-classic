@@ -11,7 +11,7 @@
     "baseUrl": ".",
     "rootDir": ".",
     "paths": {
-      "@angular/compiler": ["../../dist/packages/compiler"]
+      "@angular-classic/compiler": ["../../dist/packages/compiler"]
     },
     "strict": true,
     "types": [

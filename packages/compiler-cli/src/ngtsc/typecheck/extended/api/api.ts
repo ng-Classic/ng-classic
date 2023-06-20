@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, ASTWithSource, ParseSourceSpan, RecursiveAstVisitor, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstBoundText, TmplAstContent, TmplAstElement, TmplAstIcu, TmplAstNode, TmplAstRecursiveVisitor, TmplAstReference, TmplAstTemplate, TmplAstText, TmplAstTextAttribute, TmplAstVariable} from '@angular/compiler';
+import {AST, ASTWithSource, ParseSourceSpan, RecursiveAstVisitor, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstBoundText, TmplAstContent, TmplAstElement, TmplAstIcu, TmplAstNode, TmplAstRecursiveVisitor, TmplAstReference, TmplAstTemplate, TmplAstText, TmplAstTextAttribute, TmplAstVariable} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {NgCompilerOptions} from '../../../core/api';
@@ -35,7 +35,7 @@ export interface TemplateContext<Code extends ErrorCode> {
 
   /**
    * TypeScript interface that provides type information about symbols that appear
-   * in the template (it is not to query types outside the Angular component).
+   * in the template (it is not to query types outside the Angular Classiccomponent).
    */
   typeChecker: ts.TypeChecker;
 

@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -17,7 +17,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<SomeDirective, "[someDir]", never, {}, {}, never, never, false, never>;
@@ -26,9 +26,9 @@ export declare class SomeDirective {
 /****************************************************************************************************
  * PARTIAL FILE: view_query_for_directive.js
  ****************************************************************************************************/
-import { Component, NgModule, ViewChild, ViewChildren } from '@angular/core';
+import { Component, NgModule, ViewChild, ViewChildren } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class ViewQueryComponent {
 }
 ViewQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ViewQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -63,9 +63,9 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: view_query_for_directive.d.ts
  ****************************************************************************************************/
-import { QueryList } from '@angular/core';
+import { QueryList } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 import * as i1 from "./some.directive";
 export declare class ViewQueryComponent {
     someDir: SomeDirective;
@@ -82,8 +82,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: view_query_forward_ref.js
  ****************************************************************************************************/
-import { Component, Directive, forwardRef, NgModule, ViewChild, ViewChildren } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, forwardRef, NgModule, ViewChild, ViewChildren } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ViewQueryComponent {
 }
 ViewQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ViewQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -143,8 +143,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: view_query_forward_ref.d.ts
  ****************************************************************************************************/
-import { QueryList } from '@angular/core';
-import * as i0 from "@angular/core";
+import { QueryList } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class ViewQueryComponent {
     someDir: SomeDirective;
     someDirList: QueryList<SomeDirective>;
@@ -168,8 +168,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: view_query_for_local_ref.js
  ****************************************************************************************************/
-import { Component, NgModule, ViewChild, ViewChildren } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule, ViewChild, ViewChildren } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ViewQueryComponent {
 }
 ViewQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ViewQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -206,8 +206,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: view_query_for_local_ref.d.ts
  ****************************************************************************************************/
-import { QueryList } from '@angular/core';
-import * as i0 from "@angular/core";
+import { QueryList } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class ViewQueryComponent {
     myRef: any;
     myRefs: QueryList<any>;
@@ -223,8 +223,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -239,7 +239,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<SomeDirective, "[someDir]", never, {}, {}, never, never, false, never>;
@@ -248,9 +248,9 @@ export declare class SomeDirective {
 /****************************************************************************************************
  * PARTIAL FILE: static_view_query.js
  ****************************************************************************************************/
-import { Component, ElementRef, NgModule, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgModule, ViewChild } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class ViewQueryComponent {
 }
 ViewQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ViewQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -285,9 +285,9 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: static_view_query.d.ts
  ****************************************************************************************************/
-import { ElementRef } from '@angular/core';
+import { ElementRef } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 import * as i1 from "./some.directive";
 export declare class ViewQueryComponent {
     someDir: SomeDirective;
@@ -304,8 +304,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -320,7 +320,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<SomeDirective, "[someDir]", never, {}, {}, never, never, false, never>;
@@ -329,9 +329,9 @@ export declare class SomeDirective {
 /****************************************************************************************************
  * PARTIAL FILE: view_query_read_token.js
  ****************************************************************************************************/
-import { Component, ElementRef, NgModule, TemplateRef, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, NgModule, TemplateRef, ViewChild, ViewChildren } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class ViewQueryComponent {
 }
 ViewQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ViewQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -376,8 +376,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: view_query_read_token.d.ts
  ****************************************************************************************************/
-import { ElementRef, QueryList, TemplateRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { ElementRef, QueryList, TemplateRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class ViewQueryComponent {
     myRef: TemplateRef<unknown>;
     myRefs: QueryList<ElementRef>;
@@ -395,8 +395,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -411,7 +411,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<SomeDirective, "[someDir]", never, {}, {}, never, never, false, never>;
@@ -420,9 +420,9 @@ export declare class SomeDirective {
 /****************************************************************************************************
  * PARTIAL FILE: content_query_for_directive.js
  ****************************************************************************************************/
-import { Component, ContentChild, ContentChildren, NgModule } from '@angular/core';
+import { Component, ContentChild, ContentChildren, NgModule } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class ContentQueryComponent {
 }
 ContentQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ContentQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -476,9 +476,9 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: content_query_for_directive.d.ts
  ****************************************************************************************************/
-import { QueryList } from '@angular/core';
+import { QueryList } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 import * as i1 from "./some.directive";
 export declare class ContentQueryComponent {
     someDir: SomeDirective;
@@ -499,8 +499,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: content_query_forward_ref.js
  ****************************************************************************************************/
-import { Component, ContentChild, ContentChildren, Directive, forwardRef, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, ContentChild, ContentChildren, Directive, forwardRef, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ContentQueryComponent {
 }
 ContentQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ContentQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -564,8 +564,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: content_query_forward_ref.d.ts
  ****************************************************************************************************/
-import { QueryList } from '@angular/core';
-import * as i0 from "@angular/core";
+import { QueryList } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class ContentQueryComponent {
     someDir: SomeDirective;
     someDirList: QueryList<SomeDirective>;
@@ -589,8 +589,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: content_query_for_local_ref.js
  ****************************************************************************************************/
-import { Component, ContentChild, ContentChildren, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, ContentChild, ContentChildren, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ContentQueryComponent {
 }
 ContentQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ContentQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -627,8 +627,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: content_query_for_local_ref.d.ts
  ****************************************************************************************************/
-import { QueryList } from '@angular/core';
-import * as i0 from "@angular/core";
+import { QueryList } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class ContentQueryComponent {
     myRef: any;
     myRefs: QueryList<any>;
@@ -644,8 +644,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -660,7 +660,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<SomeDirective, "[someDir]", never, {}, {}, never, never, false, never>;
@@ -669,9 +669,9 @@ export declare class SomeDirective {
 /****************************************************************************************************
  * PARTIAL FILE: static_content_query.js
  ****************************************************************************************************/
-import { Component, ContentChild, ElementRef, NgModule } from '@angular/core';
+import { Component, ContentChild, ElementRef, NgModule } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class ContentQueryComponent {
 }
 ContentQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ContentQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -725,9 +725,9 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: static_content_query.d.ts
  ****************************************************************************************************/
-import { ElementRef } from '@angular/core';
+import { ElementRef } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 import * as i1 from "./some.directive";
 export declare class ContentQueryComponent {
     someDir: SomeDirective;
@@ -748,8 +748,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -764,7 +764,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<SomeDirective, "[someDir]", never, {}, {}, never, never, false, never>;
@@ -773,9 +773,9 @@ export declare class SomeDirective {
 /****************************************************************************************************
  * PARTIAL FILE: content_query_read_token.js
  ****************************************************************************************************/
-import { Component, ContentChild, ContentChildren, ElementRef, NgModule, TemplateRef } from '@angular/core';
+import { Component, ContentChild, ContentChildren, ElementRef, NgModule, TemplateRef } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class ContentQueryComponent {
 }
 ContentQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ContentQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -820,8 +820,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: content_query_read_token.d.ts
  ****************************************************************************************************/
-import { ElementRef, QueryList, TemplateRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { ElementRef, QueryList, TemplateRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class ContentQueryComponent {
     myRef: TemplateRef<unknown>;
     myRefs: QueryList<ElementRef>;
@@ -839,8 +839,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeDirective {
 }
 SomeDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -855,7 +855,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: some.directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SomeDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<SomeDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<SomeDirective, "[someDir]", never, {}, {}, never, never, false, never>;
@@ -864,9 +864,9 @@ export declare class SomeDirective {
 /****************************************************************************************************
  * PARTIAL FILE: query_with_emit_distinct_changes_only.js
  ****************************************************************************************************/
-import { Component, ContentChildren, NgModule, ViewChildren } from '@angular/core';
+import { Component, ContentChildren, NgModule, ViewChildren } from '@angular-classic/core';
 import { SomeDirective } from './some.directive';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class ContentQueryComponent {
 }
 ContentQueryComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ContentQueryComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -909,8 +909,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: query_with_emit_distinct_changes_only.d.ts
  ****************************************************************************************************/
-import { ElementRef, QueryList } from '@angular/core';
-import * as i0 from "@angular/core";
+import { ElementRef, QueryList } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class ContentQueryComponent {
     myRefs: QueryList<ElementRef>;
     oldMyRefs: QueryList<ElementRef>;

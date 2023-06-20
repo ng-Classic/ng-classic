@@ -1,11 +1,11 @@
 name: 'Feature Request'
-description: Suggest a feature for Angular Framework
+description: Suggest a feature for Angular ClassicFramework
 
 body:
   - type: dropdown
     id: affected-packages
     attributes:
-      label: Which @angular/* package(s) are relevant/related to the feature request?
+      label: Which @angular-classic/* package(s) are relevant/related to the feature request?
       options:
         - animations
         - bazel

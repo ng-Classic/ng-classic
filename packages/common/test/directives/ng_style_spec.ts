@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, NgStyle} from '@angular/common';
-import {Component} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {CommonModule, NgStyle} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
 
 {
   describe('NgStyle', () => {
@@ -95,7 +95,7 @@ import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
          expectNativeEl(fixture).not.toHaveCssStyle('max-width');
        }));
 
-    // https://github.com/angular/angular/issues/21064
+    // https://github.com/ng-classic/angular/issues/21064
     it('should add and remove styles which names are not dash-cased', waitForAsync(() => {
          fixture = createTestComponent(`<div [ngStyle]="{'color': expr}"></div>`);
 

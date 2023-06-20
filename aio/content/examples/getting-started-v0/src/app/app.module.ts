@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
+import { ReactiveFormsModule } from '@angular-classic/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';

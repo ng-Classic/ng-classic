@@ -3106,7 +3106,7 @@ describe('Zone', function() {
           });
     });
 
-    // TODO: Re-enable via https://github.com/angular/angular/pull/41526
+    // TODO: Re-enable via https://github.com/ng-classic/angular/pull/41526
     xdescribe('unhandled promise rejection', () => {
       const AsyncTestZoneSpec = (Zone as any)['AsyncTestZoneSpec'];
       const asyncTest = function(testFn: Function) {

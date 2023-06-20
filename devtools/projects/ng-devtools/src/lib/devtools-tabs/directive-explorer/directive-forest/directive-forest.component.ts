@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkVirtualScrollViewport} from '@angular/cdk/scrolling';
-import {FlatTreeControl} from '@angular/cdk/tree';
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, HostListener, Input, OnDestroy, OnInit, Output, ViewChild,} from '@angular/core';
+import {CdkVirtualScrollViewport} from '@angular-classic/cdk/scrolling';
+import {FlatTreeControl} from '@angular-classic/cdk/tree';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, HostListener, Input, OnDestroy, OnInit, Output, ViewChild,} from '@angular-classic/core';
 import {DevToolsNode, ElementPosition, Events, MessageBus} from 'protocol';
 import {Subscription} from 'rxjs';
 

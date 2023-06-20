@@ -28,7 +28,7 @@ jasmine_node_test(
     },
     shard_count = 8,
     toolchains = [
-        "@npm//@angular/build-tooling/bazel/git-toolchain:current_git_toolchain",
+        "@npm//@angular-classic/build-tooling/bazel/git-toolchain:current_git_toolchain",
     ],
     deps = [
         ":angular-errors-package",

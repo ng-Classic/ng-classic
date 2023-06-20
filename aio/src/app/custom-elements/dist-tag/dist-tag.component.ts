@@ -1,8 +1,8 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, VERSION } from '@angular-classic/core';
 import { environment } from 'environments/environment';
 
 /**
- * Display the dist-tag of Angular for installing from npm at the point these docs are generated.
+ * Display the dist-tag of Angular Classicfor installing from npm at the point these docs are generated.
  */
 @Component({
   selector: 'aio-angular-dist-tag',

@@ -1,7 +1,7 @@
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { NoopAnimationsModule } from '@angular-classic/platform-browser/animations';
+import { Component, NO_ERRORS_SCHEMA } from '@angular-classic/core';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { By } from '@angular-classic/platform-browser';
 import { CurrentDateToken } from 'app/shared/current-date';
 import { LocalStorage, NoopStorage } from 'app/shared/storage.service';
 import { NotificationComponent } from './notification.component';
@@ -34,7 +34,7 @@ describe('NotificationComponent', () => {
     it('should display the message text', () => {
       configTestingModule();
       createComponent();
-      expect(fixture.nativeElement.innerHTML).toContain('Version 6 of Angular Now Available!');
+      expect(fixture.nativeElement.innerHTML).toContain('Version 6 of Angular ClassicNow Available!');
     });
 
     it('should render HTML elements', () => {
@@ -44,7 +44,7 @@ describe('NotificationComponent', () => {
       expect(button.nativeElement.textContent).toEqual('Learn More');
     });
 
-    it('should process Angular directives', () => {
+    it('should process Angular Classicdirectives', () => {
       configTestingModule();
       createComponent();
       const badSpans = fixture.debugElement.queryAll(By.css('.bad'));
@@ -120,9 +120,9 @@ describe('NotificationComponent', () => {
     notificationId="survey-january-2018"
     expirationDate="2018-01-22">
     <span class="messageholder">
-    <a href="https://blog.angular.io/version-6-0-0-of-angular-now-available-cc56b0efa7a4">
+    <a href="https://blog.angular-classic.com/version-6-0-0-of-angular-now-available-cc56b0efa7a4">
       <span *ngIf="false" class="bad">This should not appear</span>
-      <span class="message">Version 6 of Angular Now Available!</span>
+      <span class="message">Version 6 of Angular ClassicNow Available!</span>
       <span class="action-button">Learn More</span>
     </a>
     </span>

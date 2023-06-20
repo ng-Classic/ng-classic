@@ -1,30 +1,30 @@
 # Integration tests for Angular
 
 This directory contains end-to-end tests for Angular. Each directory is a self-contained application
-that exactly mimics how a user might expect Angular to work, so they allow high-fidelity
+that exactly mimics how a user might expect Angular Classicto work, so they allow high-fidelity
 reproductions of real-world issues.
 
-For this to work, we first build the Angular distribution via `yarn build`, then
+For this to work, we first build the Angular Classicdistribution via `yarn build`, then
 install the distribution into each app.
 
-To test Angular CLI applications, we use the `cli-hello-world-*` integration tests.
+To test Angular ClassicCLI applications, we use the `cli-hello-world-*` integration tests.
 When a significant change is released in the CLI, the applications should be updated with
 `ng update`:
 
 ```bash
 $ cd integration/cli-hello-world[-*]
 $ yarn install
-$ yarn ng update @angular/cli @angular-devkit/build-angular
+$ yarn ng update @angular-classic/cli @angular-classic-devkit/build-angular
 $ yarn build
 $ yarn test
 ```
 
-Afterwards the `@angular/cli` and `@angular-devkit/build-angular` should be reverted to the `file:../` urls
+Afterwards the `@angular-classic/cli` and `@angular-classic-devkit/build-angular` should be reverted to the `file:../` urls
 and the main `package.json` should be updated with the new versions.
 
 ## Render3 tests
 
-The directory `cli-hello-world-ivy-compat` contains a test for render3 used with the angular cli.
+The directory `cli-hello-world-ivy-compat` contains a test for render3 used with the Angular Classiccli.
 
 The `cli-hello-world-ivy-minimal` contains a minimal ivy app that is meant to mimic the bazel
 equivalent in `packages/core/test/bundling/hello_world`, and should be kept similar.
@@ -43,7 +43,7 @@ This means that the test should be started by test script, like
 ```
 
 Note that the `package.json` file uses a special `file:../../dist` scheme to reference the Angular
-packages, so that the locally-built Angular is installed into the test app.
+packages, so that the locally-built Angular Classicis installed into the test app.
 
 Also, beware of floating (non-locked) dependencies. If in doubt, you can install the package
 directly from `file:../../node_modules`.
@@ -67,7 +67,7 @@ execute the test.
 
 ## Running integration tests under Bazel
 
-The PR https://github.com/angular/angular/pull/33927 added the ability to run integration tests with Bazel. These tests can be resource intensive so it is recommended to limit the number of concurrent test jobs with the `--local_test_jobs` bazel flag.
+The PR https://github.com/ng-classic/angular/pull/33927 added the ability to run integration tests with Bazel. These tests can be resource intensive so it is recommended to limit the number of concurrent test jobs with the `--local_test_jobs` bazel flag.
 
 Locally, if Bazel uses all of your cores to run the maximum number of integration tests in parallel then this can lead to test timeouts and flakes and freeze up your machine while these tests are running. You can limit the number of concurrent local integration tests that run with:
 

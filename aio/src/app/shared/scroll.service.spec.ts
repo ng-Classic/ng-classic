@@ -1,8 +1,8 @@
-import {Location, LocationStrategy, PlatformLocation, ViewportScroller} from '@angular/common';
-import {DOCUMENT} from '@angular/common';
-import {MockLocationStrategy, SpyLocation} from '@angular/common/testing';
-import {Injector} from '@angular/core';
-import {fakeAsync, tick} from '@angular/core/testing';
+import {Location, LocationStrategy, PlatformLocation, ViewportScroller} from '@angular-classic/common';
+import {DOCUMENT} from '@angular-classic/common';
+import {MockLocationStrategy, SpyLocation} from '@angular-classic/common/testing';
+import {Injector} from '@angular-classic/core';
+import {fakeAsync, tick} from '@angular-classic/core/testing';
 
 import {ScrollService, topMargin} from './scroll.service';
 import {SessionStorage, NoopStorage} from './storage.service';

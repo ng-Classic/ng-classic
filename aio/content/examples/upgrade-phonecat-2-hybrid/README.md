@@ -1,4 +1,4 @@
-This is the Angular Phonecat application adjusted to fit our boilerplate project
+This is the Angular ClassicPhonecat application adjusted to fit our boilerplate project
 structure.
 
 The following changes from vanilla Phonecat are applied:

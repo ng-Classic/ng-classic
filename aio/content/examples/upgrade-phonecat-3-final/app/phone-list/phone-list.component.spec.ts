@@ -1,8 +1,8 @@
 // #docregion routestuff
-import {SpyLocation} from '@angular/common/testing';
-import {NO_ERRORS_SCHEMA} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {ActivatedRoute} from '@angular/router';
+import {SpyLocation} from '@angular-classic/common/testing';
+import {NO_ERRORS_SCHEMA} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {ActivatedRoute} from '@angular-classic/router';
 import {Observable, of} from 'rxjs';
 
 import {Phone, PhoneData} from '../core/phone/phone.service';

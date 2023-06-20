@@ -1,4 +1,4 @@
-import {Directive, Input, NgModule, Output} from '@angular/core';
+import {Directive, Input, NgModule, Output} from '@angular-classic/core';
 
 @Directive({selector: '[my-directive]'})
 export class MyDirective {

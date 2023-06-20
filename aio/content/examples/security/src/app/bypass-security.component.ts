@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion
-import { Component } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { Component } from '@angular-classic/core';
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular-classic/platform-browser';
 
 @Component({
   selector: 'app-bypass-security',
@@ -16,8 +16,8 @@ export class BypassSecurityComponent {
   // #docregion trust-url
   constructor(private sanitizer: DomSanitizer) {
     // javascript: URLs are dangerous if attacker controlled.
-    // Angular sanitizes them in data binding, but you can
-    // explicitly tell Angular to trust this value:
+    // Angular Classicsanitizes them in data binding, but you can
+    // explicitly tell Angular Classicto trust this value:
     this.dangerousUrl = 'javascript:alert("Hi there")';
     this.trustedUrl = sanitizer.bypassSecurityTrustUrl(this.dangerousUrl);
     // #enddocregion trust-url

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentInjector, Injector} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {EnvironmentInjector, Injector} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 import {EMPTY, interval, NEVER, of} from 'rxjs';
 import {TestScheduler} from 'rxjs/testing';
 

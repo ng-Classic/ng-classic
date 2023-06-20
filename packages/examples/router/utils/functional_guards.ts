@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injectable} from '@angular/core';
-import {mapToCanActivate, mapToResolve, Route} from '@angular/router';
+import {Injectable} from '@angular-classic/core';
+import {mapToCanActivate, mapToResolve, Route} from '@angular-classic/router';
 
 // #docregion CanActivate
 @Injectable({providedIn: 'root'})

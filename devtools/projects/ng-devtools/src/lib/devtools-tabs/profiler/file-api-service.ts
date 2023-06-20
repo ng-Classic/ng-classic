@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injectable} from '@angular/core';
+import {Injectable} from '@angular-classic/core';
 import {Subject} from 'rxjs';
 
 import {toISO8601Compact} from '../../vendor/chromium/date-utilities';

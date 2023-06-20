@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TmplAstReference, TmplAstVariable} from '@angular/compiler';
+import {TmplAstReference, TmplAstVariable} from '@angular-classic/compiler';
 
 import {TcbLocation} from './symbols';
 

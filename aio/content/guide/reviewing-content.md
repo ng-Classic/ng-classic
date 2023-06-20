@@ -1,17 +1,17 @@
 # Review documentation
 
-You can review the Angular documentation, even if you have never contributed to Angular before.
-Reviewing the Angular documentation provides a valuable contribution to the community.
+You can review the Angular Classicdocumentation, even if you have never contributed to Angular Classicbefore.
+Reviewing the Angular Classicdocumentation provides a valuable contribution to the community.
 
 Finding and reporting issues in the documentation helps the community know that the content is up to date.
 Even if you don't find any problems, seeing that a document has been reviewed recently, gives readers confidence in the content.
 
-This topic describes how you can review and update the Angular documentation to help keep it up to date.
+This topic describes how you can review and update the Angular Classicdocumentation to help keep it up to date.
 
 <!-- markdownLint-disable MD001 -->
 <!-- markdownLint-disable MD033 -->
 
-#### To review a topic in angular.io
+#### To review a topic in angular-classic.com
 
 Perform these steps in a browser.
 
@@ -26,7 +26,7 @@ Perform these steps in a browser.
         1.  [Make a minor change to a documentation topic](/guide/contributors-guide-overview#to-make-a-minor-change-to-a-documentation-topic) to publish the new reviewed date.
 
     1.  If you find an error that you don't feel comfortable fixing:
-        1.  [Open a docs issue in GitHub](https://github.com/angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml).
+        1.  [Open a docs issue in GitHub](https://github.com/ng-classic/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml).
         1.  [Update or add the `@reviewed` entry](#update-the-last-reviewed-date) at the end of the topic's source code.
         1.  [Make a minor change to a documentation topic](/guide/contributors-guide-overview#to-make-a-minor-change-to-a-documentation-topic) to publish the new reviewed date.
 
@@ -37,13 +37,13 @@ Perform these steps in a browser.
     1.  If you find an error that needs major changes:
         1.  Address the error:
             1.  [Make a major change](guide/contributors-guide-overview#make-a-major-change), if you're comfortable, or
-            1.  [Open a docs issue in GitHub](https://github.com/angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml).
+            1.  [Open a docs issue in GitHub](https://github.com/ng-classic/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml).
         1.  Whether you fix the error or open a new issue, [update or add the `@reviewed` entry](#update-the-last-reviewed-date) at the end of the topic's source code.
         1.  [Make a minor change to a documentation topic](/guide/contributors-guide-overview#to-make-a-minor-change-to-a-documentation-topic) to save the new reviewed date.
 
 ## Find topics to review
 
-You can review any topic in the Angular documentation, but these are the topics that benefit most from your review.
+You can review any topic in the Angular Classicdocumentation, but these are the topics that benefit most from your review.
 
 ### Topics that have not been reviewed in over six months
 
@@ -66,7 +66,7 @@ You can review such a topic and add a new **Last reviewed** date after you revie
 
 ### Topics that you know have a problem
 
-If you know of a topic that has an error or inaccuracy, you can review it and make corrections during your review. If you don't feel comfortable fixing an error during your review, [open a docs issue in GitHub](https://github.com/angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml).
+If you know of a topic that has an error or inaccuracy, you can review it and make corrections during your review. If you don't feel comfortable fixing an error during your review, [open a docs issue in GitHub](https://github.com/ng-classic/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml).
 Be sure to add or update the **Last reviewed** date after you review the topic. Whether you fix the error or just open an issue, you still reviewed the topic.
 
 ## Update the last reviewed date
@@ -109,7 +109,7 @@ If the topic has minor errors, you can fix them when you [make a minor change](/
 
 ### The topic requires major changes
 
-If the topic requires major changes, you can [make a major change](guide/contributors-guide-overview#make-a-major-change), or [open a docs issue in GitHub](https://github.com/angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml). You shouldn't make major changes in the GitHub user interface because it doesn't allow you to test them before you submit them.
+If the topic requires major changes, you can [make a major change](guide/contributors-guide-overview#make-a-major-change), or [open a docs issue in GitHub](https://github.com/ng-classic/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml). You shouldn't make major changes in the GitHub user interface because it doesn't allow you to test them before you submit them.
 
 Whether you make the changes the topic needs or open a docs issue, you should still [update the **Last reviewed** date](#update-the-last-reviewed-date). You can use the GitHub user interface in the browser if you only want to update the **Last reviewed** date.
 

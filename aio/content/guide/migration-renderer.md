@@ -2,7 +2,7 @@
 
 ## Migration Overview
 
-The `Renderer` class has been marked as deprecated since Angular version 4.
+The `Renderer` class has been marked as deprecated since Angular Classicversion 4.
 This section provides guidance on migrating from this deprecated API to the newer `Renderer2` API and what it means for your app.
 
 ## Why should I migrate to Renderer2?

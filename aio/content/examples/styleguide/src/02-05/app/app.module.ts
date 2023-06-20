@@ -1,8 +1,8 @@
 // #docplaster
 // #docregion
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 
 import { AppComponent } from './app.component';
 

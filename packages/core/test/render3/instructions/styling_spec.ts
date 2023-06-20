@@ -6,17 +6,17 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DirectiveDef} from '@angular/core/src/render3';
-import {ɵɵdefineDirective} from '@angular/core/src/render3/definition';
-import {classStringParser, styleStringParser, toStylingKeyValueArray, ɵɵclassProp, ɵɵstyleMap, ɵɵstyleProp} from '@angular/core/src/render3/instructions/styling';
-import {AttributeMarker, TAttributes} from '@angular/core/src/render3/interfaces/node';
-import {getTStylingRangeNext, getTStylingRangeNextDuplicate, getTStylingRangePrev, getTStylingRangePrevDuplicate, setTStylingRangeNext, setTStylingRangePrev, StylingRange, toTStylingRange, TStylingKey, TStylingRange} from '@angular/core/src/render3/interfaces/styling';
-import {HEADER_OFFSET, TVIEW} from '@angular/core/src/render3/interfaces/view';
-import {getLView, leaveView, setBindingRootForHostBindings} from '@angular/core/src/render3/state';
-import {getNativeByIndex} from '@angular/core/src/render3/util/view_utils';
-import {keyValueArraySet} from '@angular/core/src/util/array_utils';
-import {ngDevModeResetPerfCounters} from '@angular/core/src/util/ng_dev_mode';
-import {getElementClasses, getElementStyles} from '@angular/core/testing/src/styling';
+import {DirectiveDef} from '@angular-classic/core/src/render3';
+import {ɵɵdefineDirective} from '@angular-classic/core/src/render3/definition';
+import {classStringParser, styleStringParser, toStylingKeyValueArray, ɵɵclassProp, ɵɵstyleMap, ɵɵstyleProp} from '@angular-classic/core/src/render3/instructions/styling';
+import {AttributeMarker, TAttributes} from '@angular-classic/core/src/render3/interfaces/node';
+import {getTStylingRangeNext, getTStylingRangeNextDuplicate, getTStylingRangePrev, getTStylingRangePrevDuplicate, setTStylingRangeNext, setTStylingRangePrev, StylingRange, toTStylingRange, TStylingKey, TStylingRange} from '@angular-classic/core/src/render3/interfaces/styling';
+import {HEADER_OFFSET, TVIEW} from '@angular-classic/core/src/render3/interfaces/view';
+import {getLView, leaveView, setBindingRootForHostBindings} from '@angular-classic/core/src/render3/state';
+import {getNativeByIndex} from '@angular-classic/core/src/render3/util/view_utils';
+import {keyValueArraySet} from '@angular-classic/core/src/util/array_utils';
+import {ngDevModeResetPerfCounters} from '@angular-classic/core/src/util/ng_dev_mode';
+import {getElementClasses, getElementStyles} from '@angular-classic/core/testing/src/styling';
 
 import {clearFirstUpdatePass, enterViewWithOneDiv, rewindBindingIndex} from './shared_spec';
 

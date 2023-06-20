@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Inject, Injectable, InjectionToken} from '@angular/core';
+import {Inject, Injectable, InjectionToken} from '@angular-classic/core';
 
 import {Options} from '../common_options';
 import {Metric} from '../metric';

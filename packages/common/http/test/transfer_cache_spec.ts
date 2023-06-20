@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT} from '@angular/common';
-import {ApplicationRef, Component, Injectable} from '@angular/core';
-import {makeStateKey, TransferState} from '@angular/core/src/transfer_state';
-import {fakeAsync, flush, TestBed} from '@angular/core/testing';
-import {withBody} from '@angular/private/testing';
+import {DOCUMENT} from '@angular-classic/common';
+import {ApplicationRef, Component, Injectable} from '@angular-classic/core';
+import {makeStateKey, TransferState} from '@angular-classic/core/src/transfer_state';
+import {fakeAsync, flush, TestBed} from '@angular-classic/core/testing';
+import {withBody} from '@angular-classic/private/testing';
 import {BehaviorSubject} from 'rxjs';
 
 import {HttpClient, provideHttpClient} from '../public_api';

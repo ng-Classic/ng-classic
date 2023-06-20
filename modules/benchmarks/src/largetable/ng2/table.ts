@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Input, NgModule} from '@angular/core';
-import {BrowserModule, DomSanitizer, SafeStyle} from '@angular/platform-browser';
+import {Component, Input, NgModule} from '@angular-classic/core';
+import {BrowserModule, DomSanitizer, SafeStyle} from '@angular-classic/platform-browser';
 
 import {emptyTable, TableCell} from '../util';
 

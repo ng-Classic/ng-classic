@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: component.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class OtherCmp {
 }
 OtherCmp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: OtherCmp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -33,7 +33,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: component.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class OtherCmp {
     static ɵfac: i0.ɵɵFactoryDeclaration<OtherCmp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<OtherCmp, "other-cmp", never, {}, {}, never, never, true, never, true>;
@@ -46,8 +46,8 @@ export declare class SignalCmp {
 /****************************************************************************************************
  * PARTIAL FILE: directive.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SignalDir {
 }
 SignalDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SignalDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -62,7 +62,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SignalDir {
     static ɵfac: i0.ɵɵFactoryDeclaration<SignalDir, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<SignalDir, never, never, {}, {}, never, never, false, never, true>;

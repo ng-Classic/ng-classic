@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {NgComponentOutlet} from '@angular/common/src/directives/ng_component_outlet';
-import {Compiler, Component, ComponentRef, Inject, InjectionToken, Injector, NgModule, NgModuleFactory, NO_ERRORS_SCHEMA, Optional, QueryList, TemplateRef, Type, ViewChild, ViewChildren, ViewContainerRef} from '@angular/core';
-import {TestBed, waitForAsync} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule} from '@angular-classic/common';
+import {NgComponentOutlet} from '@angular-classic/common/src/directives/ng_component_outlet';
+import {Compiler, Component, ComponentRef, Inject, InjectionToken, Injector, NgModule, NgModuleFactory, NO_ERRORS_SCHEMA, Optional, QueryList, TemplateRef, Type, ViewChild, ViewChildren, ViewContainerRef} from '@angular-classic/core';
+import {TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('insert/remove', () => {
   beforeEach(() => {

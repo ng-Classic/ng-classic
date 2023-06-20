@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {ComponentFactoryResolver, Injector, Type} from '@angular/core';
+import {ComponentFactoryResolver, Injector, Type} from '@angular-classic/core';
 
 /**
  * Provide methods for scheduling the execution of a callback.
@@ -77,7 +77,7 @@ let _matches: (this: any, selector: string) => boolean;
 
 /**
  * Check whether an `Element` matches a CSS selector.
- * NOTE: this is duplicated from @angular/upgrade, and can
+ * NOTE: this is duplicated from @angular-classic/upgrade, and can
  * be consolidated in the future
  */
 export function matchesSelector(el: any, selector: string): boolean {

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AfterContentInit, ChangeDetectorRef, ContentChildren, Directive, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, Optional, Output, QueryList, Renderer2, SimpleChanges} from '@angular/core';
+import {AfterContentInit, ChangeDetectorRef, ContentChildren, Directive, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, Optional, Output, QueryList, Renderer2, SimpleChanges} from '@angular-classic/core';
 import {from, of, Subscription} from 'rxjs';
 import {mergeAll} from 'rxjs/operators';
 

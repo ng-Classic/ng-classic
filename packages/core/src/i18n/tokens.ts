@@ -23,8 +23,8 @@ declare const $localize: {locale?: string};
 export function getGlobalLocale(): string {
   if (typeof ngI18nClosureMode !== 'undefined' && ngI18nClosureMode &&
       typeof goog !== 'undefined' && goog.LOCALE !== 'en') {
-    // * The default `goog.LOCALE` value is `en`, while Angular used `en-US`.
-    // * In order to preserve backwards compatibility, we use Angular default value over
+    // * The default `goog.LOCALE` value is `en`, while Angular Classicused `en-US`.
+    // * In order to preserve backwards compatibility, we use Angular Classicdefault value over
     //   Closure Compiler's one.
     return goog.LOCALE;
   } else {
@@ -52,8 +52,8 @@ export function getGlobalLocale(): string {
  * ### Example
  *
  * ```typescript
- * import { LOCALE_ID } from '@angular/core';
- * import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+ * import { LOCALE_ID } from '@angular-classic/core';
+ * import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
  * import { AppModule } from './app/app.module';
  *
  * platformBrowserDynamic().bootstrapModule(AppModule, {
@@ -97,7 +97,7 @@ export const LOCALE_ID: InjectionToken<string> = new InjectionToken('LocaleId', 
  * ### Example
  *
  * ```typescript
- * import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+ * import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
  * import { AppModule } from './app/app.module';
  *
  * platformBrowserDynamic().bootstrapModule(AppModule, {
@@ -122,8 +122,8 @@ export const DEFAULT_CURRENCY_CODE = new InjectionToken<string>('DefaultCurrency
  * ### Example
  *
  * ```typescript
- * import { TRANSLATIONS } from '@angular/core';
- * import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+ * import { TRANSLATIONS } from '@angular-classic/core';
+ * import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
  * import { AppModule } from './app/app.module';
  *
  * // content of your translation file
@@ -148,8 +148,8 @@ export const TRANSLATIONS = new InjectionToken<string>('Translations');
  * ### Example
  *
  * ```typescript
- * import { TRANSLATIONS_FORMAT } from '@angular/core';
- * import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+ * import { TRANSLATIONS_FORMAT } from '@angular-classic/core';
+ * import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
  * import { AppModule } from './app/app.module';
  *
  * platformBrowserDynamic().bootstrapModule(AppModule, {
@@ -173,8 +173,8 @@ export const TRANSLATIONS_FORMAT = new InjectionToken<string>('TranslationsForma
  * @usageNotes
  * ### Example
  * ```typescript
- * import { MissingTranslationStrategy } from '@angular/core';
- * import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+ * import { MissingTranslationStrategy } from '@angular-classic/core';
+ * import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
  * import { AppModule } from './app/app.module';
  *
  * platformBrowserDynamic().bootstrapModule(AppModule, {

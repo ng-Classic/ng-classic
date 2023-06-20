@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgIterable, TemplateRef, TrackByFunction, ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration, ɵɵPipeDeclaration} from '@angular/core';
+import {NgIterable, TemplateRef, TrackByFunction, ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration, ɵɵPipeDeclaration} from '@angular-classic/core';
 
 export interface NgForOfContext<T, U extends NgIterable<T>> {
   $implicit: T;

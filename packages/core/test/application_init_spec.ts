@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {APP_INITIALIZER, ApplicationInitStatus} from '@angular/core/src/application_init';
+import {APP_INITIALIZER, ApplicationInitStatus} from '@angular-classic/core/src/application_init';
 import {EMPTY, Observable, Subscriber} from 'rxjs';
 
 import {TestBed} from '../testing';
@@ -181,7 +181,7 @@ describe('ApplicationInitStatus', () => {
             'NG0209: Unexpected type of the `APP_INITIALIZER` token value ' +
             `(expected an array, but got string). ` +
             'Please check that the `APP_INITIALIZER` token is configured as a ' +
-            '`multi: true` provider. Find more at https://angular.io/errors/NG0209');
+            '`multi: true` provider. Find more at https://angular-classic.com/errors/NG0209');
       }
     });
   });

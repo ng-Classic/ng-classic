@@ -92,7 +92,7 @@ export class DtsMetadataReader implements MetadataReader {
     // 2) it injects `TemplateRef`
     const isStructural = !isComponent && ctorParams !== null && ctorParams.some(param => {
       return param.typeValueReference.kind === TypeValueReferenceKind.IMPORTED &&
-          param.typeValueReference.moduleName === '@angular/core' &&
+          param.typeValueReference.moduleName === '@angular-classic/core' &&
           param.typeValueReference.importedName === 'TemplateRef';
     });
 

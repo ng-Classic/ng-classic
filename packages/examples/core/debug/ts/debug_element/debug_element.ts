@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DebugElement} from '@angular/core';
+import {DebugElement} from '@angular-classic/core';
 
 let debugElement: DebugElement = undefined!;
 let predicate: any;

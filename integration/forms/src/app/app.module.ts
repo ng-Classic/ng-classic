@@ -1,7 +1,7 @@
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {FormsModule, ReactiveFormsModule} from '@angular-classic/forms';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 import {AppComponent, ReactiveFormsComponent, TemplateFormsComponent} from './app.component';
 

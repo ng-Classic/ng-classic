@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: test.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyApp {
     constructor() {
         this.list = [];
@@ -30,7 +30,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: test.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyApp {
     list: any[];
     static ɵfac: i0.ɵɵFactoryDeclaration<MyApp, never>;

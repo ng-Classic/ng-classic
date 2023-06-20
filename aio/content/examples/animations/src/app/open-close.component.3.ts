@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion reusable
-import { Component } from '@angular/core';
-import { transition, trigger, useAnimation } from '@angular/animations';
+import { Component } from '@angular-classic/core';
+import { transition, trigger, useAnimation } from '@angular-classic/animations';
 import { transitionAnimation } from './animations';
 
 @Component({

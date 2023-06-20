@@ -34,7 +34,7 @@ runInEachFileSystem(() => {
 
     it('should report an error when using a directive outside of rootDirs', () => {
       env.write('/app/module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {ExternalDir} from '../lib/dir';
         import {MyComponent} from './comp';
 
@@ -44,7 +44,7 @@ runInEachFileSystem(() => {
         export class MyModule {}
       `);
       env.write('/app/comp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '<div external></div>',
@@ -52,7 +52,7 @@ runInEachFileSystem(() => {
         export class MyComponent {}
       `);
       env.write('/lib/dir.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({selector: '[external]'})
         export class ExternalDir {}
@@ -69,7 +69,7 @@ runInEachFileSystem(() => {
 
     it('should report an error when a library entry-point does not export the symbol', () => {
       env.write('/app/module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {ExternalModule} from 'lib';
         import {MyComponent} from './comp';
 
@@ -80,7 +80,7 @@ runInEachFileSystem(() => {
         export class MyModule {}
       `);
       env.write('/app/comp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '<div external></div>',
@@ -88,7 +88,7 @@ runInEachFileSystem(() => {
         export class MyComponent {}
       `);
       env.write('/node_modules/lib/index.d.ts', `
-        import {ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵNgModuleDeclaration} from '@angular-classic/core';
         import {ExternalDir} from './dir';
 
         export class ExternalModule {
@@ -96,7 +96,7 @@ runInEachFileSystem(() => {
         }
       `);
       env.write('/node_modules/lib/dir.d.ts', `
-        import {ɵɵDirectiveDeclaration} from '@angular/core';
+        import {ɵɵDirectiveDeclaration} from '@angular-classic/core';
 
         export class ExternalDir {
           static ɵdir: ɵɵDirectiveDeclaration<ExternalDir, '[external]', never, never, never, never>;

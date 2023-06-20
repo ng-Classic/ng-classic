@@ -1,7 +1,7 @@
 # HTTP client - Test requests
 
 As for any external dependency, you must mock the HTTP backend so your tests can simulate interaction with a remote server.
-The `@angular/common/http/testing` library makes it straightforward to set up such mocking.
+The `@angular-classic/common/http/testing` library makes it straightforward to set up such mocking.
 
 ## HTTP testing library
 

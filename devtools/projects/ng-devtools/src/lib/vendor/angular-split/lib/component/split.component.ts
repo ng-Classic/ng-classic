@@ -1,5 +1,5 @@
 // tslint:disable
-import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, NgZone, OnDestroy, Output, QueryList, Renderer2, ViewChildren,} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, NgZone, OnDestroy, Output, QueryList, Renderer2, ViewChildren,} from '@angular-classic/core';
 import {Observable, Subject, Subscriber} from 'rxjs';
 import {debounceTime} from 'rxjs/operators';
 

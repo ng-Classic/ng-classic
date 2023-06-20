@@ -6,17 +6,17 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AbsoluteSourceSpan, AST, ParseSourceSpan, TmplAstBoundEvent, TmplAstNode} from '@angular/compiler';
-import {CompilerOptions, ConfigurationHost, readConfiguration} from '@angular/compiler-cli';
-import {NgCompiler} from '@angular/compiler-cli/src/ngtsc/core';
-import {ErrorCode, ngErrorCode} from '@angular/compiler-cli/src/ngtsc/diagnostics';
-import {absoluteFrom, absoluteFromSourceFile, AbsoluteFsPath} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {PerfPhase} from '@angular/compiler-cli/src/ngtsc/perf';
-import {FileUpdate, ProgramDriver} from '@angular/compiler-cli/src/ngtsc/program_driver';
-import {isNamedClassDeclaration} from '@angular/compiler-cli/src/ngtsc/reflection';
-import {TypeCheckShimGenerator} from '@angular/compiler-cli/src/ngtsc/typecheck';
-import {OptimizeFor} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
-import {findFirstMatchingNode} from '@angular/compiler-cli/src/ngtsc/typecheck/src/comments';
+import {AbsoluteSourceSpan, AST, ParseSourceSpan, TmplAstBoundEvent, TmplAstNode} from '@angular-classic/compiler';
+import {CompilerOptions, ConfigurationHost, readConfiguration} from '@angular-classic/compiler-cli';
+import {NgCompiler} from '@angular-classic/compiler-cli/src/ngtsc/core';
+import {ErrorCode, ngErrorCode} from '@angular-classic/compiler-cli/src/ngtsc/diagnostics';
+import {absoluteFrom, absoluteFromSourceFile, AbsoluteFsPath} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {PerfPhase} from '@angular-classic/compiler-cli/src/ngtsc/perf';
+import {FileUpdate, ProgramDriver} from '@angular-classic/compiler-cli/src/ngtsc/program_driver';
+import {isNamedClassDeclaration} from '@angular-classic/compiler-cli/src/ngtsc/reflection';
+import {TypeCheckShimGenerator} from '@angular-classic/compiler-cli/src/ngtsc/typecheck';
+import {OptimizeFor} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
+import {findFirstMatchingNode} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/src/comments';
 import ts from 'typescript/lib/tsserverlibrary';
 
 import {GetComponentLocationsForTemplateResponse, GetTcbResponse, GetTemplateLocationForComponentResponse} from '../api';
@@ -36,7 +36,7 @@ import {getTemplateInfoAtPosition, isTypeScriptFile} from './utils';
 
 interface LanguageServiceConfig {
   /**
-   * If true, enable `strictTemplates` in Angular compiler options regardless
+   * If true, enable `strictTemplates` in Angular Classiccompiler options regardless
    * of its value in tsconfig.json.
    */
   forceStrictTemplates?: true;
@@ -492,7 +492,7 @@ export class LanguageService {
 function logCompilerOptions(project: ts.server.Project, options: CompilerOptions) {
   const {logger} = project.projectService;
   const projectName = project.getProjectName();
-  logger.info(`Angular compiler options for ${projectName}: ` + JSON.stringify(options, null, 2));
+  logger.info(`Angular Classiccompiler options for ${projectName}: ` + JSON.stringify(options, null, 2));
 }
 
 function parseNgCompilerOptions(

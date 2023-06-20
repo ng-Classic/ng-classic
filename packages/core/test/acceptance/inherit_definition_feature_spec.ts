@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {state, style, trigger} from '@angular/animations';
-import {Component, ContentChildren, Directive, EventEmitter, HostBinding, HostListener, Input, OnChanges, Output, QueryList, ViewChildren} from '@angular/core';
-import {getDirectiveDef} from '@angular/core/src/render3/definition';
-import {TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {state, style, trigger} from '@angular-classic/animations';
+import {Component, ContentChildren, Directive, EventEmitter, HostBinding, HostListener, Input, OnChanges, Output, QueryList, ViewChildren} from '@angular-classic/core';
+import {getDirectiveDef} from '@angular-classic/core/src/render3/definition';
+import {TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {NoopAnimationsModule} from '@angular-classic/platform-browser/animations';
 
 describe('inheritance', () => {
   it('should throw when trying to inherit a component from a directive', () => {
@@ -312,7 +312,7 @@ describe('inheritance', () => {
       let changes = 0;
 
       abstract class Base {
-        // Add an Input so that we have at least one Angular decorator on a class field.
+        // Add an Input so that we have at least one Angular Classicdecorator on a class field.
         @Input() inputBase: any;
         abstract input: any;
       }

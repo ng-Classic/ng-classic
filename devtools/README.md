@@ -1,36 +1,36 @@
-# Angular DevTools
+# Angular ClassicDevTools
 
-Angular DevTools is a browser DevTools extension for debugging and profiling Angular applications.
+Angular ClassicDevTools is a browser DevTools extension for debugging and profiling Angular Classicapplications.
 
 ## Installing and Running locally
 
-To setup your local development environment for Angular DevTools, perform the following steps:
+To setup your local development environment for Angular ClassicDevTools, perform the following steps:
 
 ```bash
-git clone git://github.com/angular/angular
+git clone git://github.com/ng-classic/angular
 cd angular
 yarn
 yarn run devtools:devserver
 ```
 
-## Publish Angular DevTools
+## Publish Angular ClassicDevTools
 
-To publish Angular DevTools to Firefox or Chrome stores:
+To publish Angular ClassicDevTools to Firefox or Chrome stores:
 
-1. Update the version of the corresponding manifest file. Currently, Angular DevTools uses different versioning compared to the rest of the packages within the monorepo.
+1. Update the version of the corresponding manifest file. Currently, Angular ClassicDevTools uses different versioning compared to the rest of the packages within the monorepo.
   * `manifest.chrome.json` for Chrome
   * `manifest.firefox.json` for Firefox
 1. Build the extension:
   * `yarn devtools:build:chrome` for Chrome
   * `yarn devtools:build:firefox` for Firefox
-1. Find the extension production assets in `dist/bin/devtools/projects/shell-browser/src/prodapp` relative to the root of the Angular monorepo
+1. Find the extension production assets in `dist/bin/devtools/projects/shell-browser/src/prodapp` relative to the root of the Angular Classicmonorepo
 1. Zip the files in the directory
 1. Upload them to the corresponding store
 
 ### Firefox
 
 1. Go to the Firefox Addons [page](https://addons.mozilla.org/developers/addons)
-1. For email enter `devrel@angular.io`
+1. For email enter `devrel@angular-classic.io`
 1. Find the password on Valentine
 1. Setup Google Authenticator with the 2FA QR code. You can find the QR code on Valentine
 

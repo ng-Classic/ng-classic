@@ -10,17 +10,17 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@angular/animations@file:../../dist/packages-dist/animations":
+"@angular-classic/animations@file:../../dist/packages-dist/animations":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/common@file:../../dist/packages-dist/common":
+"@angular-classic/common@file:../../dist/packages-dist/common":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/compiler-cli@file:../../dist/packages-dist/compiler-cli":
+"@angular-classic/compiler-cli@file:../../dist/packages-dist/compiler-cli":
   version "16.0.0-next.1"
   dependencies:
     "@babel/core" "7.19.3"
@@ -32,60 +32,60 @@
     tslib "^2.3.0"
     yargs "^17.2.1"
 
-"@angular/compiler@file:../../dist/packages-dist/compiler":
+"@angular-classic/compiler@file:../../dist/packages-dist/compiler":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/core@file:../../dist/packages-dist/core":
+"@angular-classic/core@file:../../dist/packages-dist/core":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/elements@file:../../dist/packages-dist/elements":
+"@angular-classic/elements@file:../../dist/packages-dist/elements":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/forms@file:../../dist/packages-dist/forms":
+"@angular-classic/forms@file:../../dist/packages-dist/forms":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/localize@file:../../dist/packages-dist/localize":
+"@angular-classic/localize@file:../../dist/packages-dist/localize":
   version "16.0.0-next.1"
   dependencies:
     "@babel/core" "7.19.3"
     glob "8.1.0"
     yargs "^17.2.1"
 
-"@angular/platform-browser-dynamic@file:../../dist/packages-dist/platform-browser-dynamic":
+"@angular-classic/platform-browser-dynamic@file:../../dist/packages-dist/platform-browser-dynamic":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-browser@file:../../dist/packages-dist/platform-browser":
+"@angular-classic/platform-browser@file:../../dist/packages-dist/platform-browser":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-server@file:../../dist/packages-dist/platform-server":
+"@angular-classic/platform-server@file:../../dist/packages-dist/platform-server":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
     xhr2 "^0.2.0"
 
-"@angular/router@file:../../dist/packages-dist/router":
+"@angular-classic/router@file:../../dist/packages-dist/router":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/service-worker@file:../../dist/packages-dist/service-worker":
+"@angular-classic/service-worker@file:../../dist/packages-dist/service-worker":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/upgrade@file:../../dist/packages-dist/upgrade":
+"@angular-classic/upgrade@file:../../dist/packages-dist/upgrade":
   version "16.0.0-next.1"
   dependencies:
     tslib "^2.3.0"

@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: element_listener.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     onClick(event) { }
 }
@@ -25,7 +25,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: element_listener.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     onClick(event: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -40,8 +40,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: component_listener.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyApp {
 }
 MyApp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyApp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -72,7 +72,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: component_listener.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyApp {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyApp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MyApp, "my-app", never, {}, {}, never, never, false, never>;
@@ -91,8 +91,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: shared_snapshot_listeners.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     onClick(name) { }
     onClick2(name) { }
@@ -129,7 +129,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: shared_snapshot_listeners.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     onClick(name: any): void;
     onClick2(name: any): void;
@@ -145,8 +145,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: local_ref_before_listener.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     onClick(v) { }
 }
@@ -178,7 +178,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: local_ref_before_listener.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     onClick(v: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -193,8 +193,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: same_element_chained_listeners.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     click() { }
     change() { }
@@ -221,7 +221,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: same_element_chained_listeners.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     click(): void;
     change(): void;
@@ -237,8 +237,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: cross_element_chained_listeners.js
  ****************************************************************************************************/
-import { Component, EventEmitter, NgModule, Output } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, EventEmitter, NgModule, Output } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SomeComp {
     constructor() {
         this.update = new EventEmitter();
@@ -292,8 +292,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: cross_element_chained_listeners.d.ts
  ****************************************************************************************************/
-import { EventEmitter } from '@angular/core';
-import * as i0 from "@angular/core";
+import { EventEmitter } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare class SomeComp {
     update: EventEmitter<any>;
     delete: EventEmitter<any>;
@@ -317,8 +317,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: template_chained_listeners.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -343,7 +343,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: template_chained_listeners.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MyComponent, "my-component", never, {}, {}, never, never, false, never>;
@@ -357,8 +357,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: no_event_arg_listener.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     onClick() { }
 }
@@ -372,7 +372,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: no_event_arg_listener.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     onClick(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -382,8 +382,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: no_event_arg_host_listener.js
  ****************************************************************************************************/
-import { Component, HostListener } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, HostListener } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     mousedown() { }
     click() {
@@ -407,7 +407,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: no_event_arg_host_listener.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     mousedown(): void;
     click(): void;
@@ -418,8 +418,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: has_event_arg_host_listener.js
  ****************************************************************************************************/
-import { Directive, HostListener } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, HostListener } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     click(target) {
     }
@@ -436,7 +436,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: has_event_arg_host_listener.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     click(target: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -446,8 +446,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: event_arg_listener_implicit_meaning.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class Comp {
     c(event) { }
 }
@@ -466,8 +466,8 @@ export {};
 /****************************************************************************************************
  * PARTIAL FILE: event_explicit_access.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class Comp {
     constructor() {
         this.$event = {};
@@ -489,8 +489,8 @@ export {};
 /****************************************************************************************************
  * PARTIAL FILE: event_in_property_binding.js
  ****************************************************************************************************/
-import { Component, Directive, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class DivDir {
 }
 DivDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DivDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -525,7 +525,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: event_in_property_binding.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class DivDir {
     event: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<DivDir, never>;
@@ -540,8 +540,8 @@ export declare class MyMod {
 /****************************************************************************************************
  * PARTIAL FILE: event_arg_host_listener_implicit_meaning.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class Dir {
     c(event) { }
 }
@@ -560,8 +560,8 @@ export {};
 /****************************************************************************************************
  * PARTIAL FILE: event_host_explicit_access.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class Dir {
     constructor() {
         this.$event = {};
@@ -587,8 +587,8 @@ export {};
 /****************************************************************************************************
  * PARTIAL FILE: implicit_receiver_keyed_write_inside_template.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.message = '';
@@ -624,7 +624,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: implicit_receiver_keyed_write_inside_template.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     message: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -639,8 +639,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: embedded_view_listener_context.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -673,7 +673,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: embedded_view_listener_context.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MyComponent, "my-component", never, {}, {}, never, never, false, never>;

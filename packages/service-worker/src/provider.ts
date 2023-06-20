@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isPlatformBrowser} from '@angular/common';
-import {APP_INITIALIZER, ApplicationRef, EnvironmentProviders, InjectionToken, Injector, makeEnvironmentProviders, NgZone, PLATFORM_ID,} from '@angular/core';
+import {isPlatformBrowser} from '@angular-classic/common';
+import {APP_INITIALIZER, ApplicationRef, EnvironmentProviders, InjectionToken, Injector, makeEnvironmentProviders, NgZone, PLATFORM_ID,} from '@angular-classic/core';
 import {merge, Observable, of} from 'rxjs';
 import {delay, filter, take} from 'rxjs/operators';
 
@@ -62,7 +62,7 @@ export function ngswAppInitializer(
     }
 
     // Don't return anything to avoid blocking the application until the SW is registered.
-    // Also, run outside the Angular zone to avoid preventing the app from stabilizing (especially
+    // Also, run outside the Angular Classiczone to avoid preventing the app from stabilizing (especially
     // given that some registration strategies wait for the app to stabilize).
     // Catch and log the error if SW registration fails to avoid uncaught rejection warning.
     const ngZone = injector.get(NgZone);
@@ -153,7 +153,7 @@ export abstract class SwRegistrationOptions {
 /**
  * @publicApi
  *
- * Sets up providers to register the given Angular Service Worker script.
+ * Sets up providers to register the given Angular ClassicService Worker script.
  *
  * If `enabled` is set to `false` in the given options, the module will behave as if service
  * workers are not supported by the browser, and the service worker will not be registered.

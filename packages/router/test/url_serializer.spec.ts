@@ -299,7 +299,7 @@ describe('url serializer', () => {
   });
 
   describe('special character encoding/decoding', () => {
-    // Tests specific to https://github.com/angular/angular/issues/10280
+    // Tests specific to https://github.com/ng-classic/angular/issues/10280
     it('should parse encoded parens in matrix params', () => {
       const auxRoutesUrl = '/abc;foo=(other:val)';
       const fooValueUrl = '/abc;foo=%28other:val%29';

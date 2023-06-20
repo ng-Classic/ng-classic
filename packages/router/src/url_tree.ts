@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injectable, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {Injectable, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from './errors';
 import {convertToParamMap, ParamMap, Params, PRIMARY_OUTLET} from './shared';

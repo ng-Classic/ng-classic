@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgModule} from '@angular/core';
+import {NgModule} from '@angular-classic/core';
 import {TruncatePipe as SimpleTruncatePipe} from './simple_truncate';
 import {TruncatePipe} from './truncate';
 

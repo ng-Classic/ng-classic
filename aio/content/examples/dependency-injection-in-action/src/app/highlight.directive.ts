@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular-classic/core';
 
 @Directive({
   selector: '[appHighlight]'

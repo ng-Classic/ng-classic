@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DEFAULT_CURRENCY_CODE, Inject, LOCALE_ID, Pipe, PipeTransform} from '@angular/core';
+import {DEFAULT_CURRENCY_CODE, Inject, LOCALE_ID, Pipe, PipeTransform} from '@angular-classic/core';
 
 import {formatCurrency, formatNumber, formatPercent} from '../i18n/format_number';
 import {getCurrencySymbol} from '../i18n/locale_data_api';
@@ -254,7 +254,7 @@ export class CurrencyPipe implements PipeTransform {
     if (typeof display === 'boolean') {
       if ((typeof ngDevMode === 'undefined' || ngDevMode) && <any>console && <any>console.warn) {
         console.warn(
-            `Warning: the currency pipe has been changed in Angular v5. The symbolDisplay option (third parameter) is now a string instead of a boolean. The accepted values are "code", "symbol" or "symbol-narrow".`);
+            `Warning: the currency pipe has been changed in Angular Classicv5. The symbolDisplay option (third parameter) is now a string instead of a boolean. The accepted values are "code", "symbol" or "symbol-narrow".`);
       }
       display = display ? 'symbol' : 'code';
     }

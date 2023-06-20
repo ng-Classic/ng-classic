@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import * as angular from 'angular';
+import { Injectable } from '@angular-classic/core';
+import * as Angular Classicfrom 'angular';
 
 @Injectable({
   providedIn: 'root'

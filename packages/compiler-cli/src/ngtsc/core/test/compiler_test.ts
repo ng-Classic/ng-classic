@@ -36,8 +36,8 @@ runInEachFileSystem(() => {
 
     beforeEach(() => {
       fs = getFileSystem();
-      fs.ensureDir(_('/node_modules/@angular/core'));
-      fs.writeFile(_('/node_modules/@angular/core/index.d.ts'), `
+      fs.ensureDir(_('/node_modules/@angular-classic/core'));
+      fs.writeFile(_('/node_modules/@angular-classic/core/index.d.ts'), `
         export declare const Component: any;
       `);
     });
@@ -45,7 +45,7 @@ runInEachFileSystem(() => {
     it('should also return template diagnostics when asked for component diagnostics', () => {
       const COMPONENT = _('/cmp.ts');
       fs.writeFile(COMPONENT, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         @Component({
           selector: 'test-cmp',
           templateUrl: './template.html',
@@ -77,7 +77,7 @@ runInEachFileSystem(() => {
         fs.writeFile(templateFile, `This is the template, used by components CmpA and CmpC`);
         const cmpAFile = _('/cmp-a.ts');
         fs.writeFile(cmpAFile, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'cmp-a',
               templateUrl: './template.html',
@@ -86,7 +86,7 @@ runInEachFileSystem(() => {
           `);
         const cmpBFile = _('/cmp-b.ts');
         fs.writeFile(cmpBFile, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'cmp-b',
               template: 'CmpB does not use an external template',
@@ -95,7 +95,7 @@ runInEachFileSystem(() => {
           `);
         const cmpCFile = _('/cmp-c.ts');
         fs.writeFile(cmpCFile, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'cmp-c',
               templateUrl: './template.html',
@@ -127,7 +127,7 @@ runInEachFileSystem(() => {
         fs.writeFile(styleFile, `/* This is the style, used by components CmpA and CmpC */`);
         const cmpAFile = _('/cmp-a.ts');
         fs.writeFile(cmpAFile, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'cmp-a',
               template: '',
@@ -137,7 +137,7 @@ runInEachFileSystem(() => {
           `);
         const cmpBFile = _('/cmp-b.ts');
         fs.writeFile(cmpBFile, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'cmp-b',
               template: '',
@@ -147,7 +147,7 @@ runInEachFileSystem(() => {
           `);
         const cmpCFile = _('/cmp-c.ts');
         fs.writeFile(cmpCFile, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'cmp-c',
               template: '',
@@ -183,7 +183,7 @@ runInEachFileSystem(() => {
         fs.writeFile(templateFile, `This is the template, used by components CmpA`);
         const cmpAFile = _('/cmp-a.ts');
         fs.writeFile(cmpAFile, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'cmp-a',
               templateUrl: './template.ng.html',
@@ -218,7 +218,7 @@ runInEachFileSystem(() => {
         fs.writeFile(styleFile2, `/* This is the template, used by components CmpA */`);
         const cmpAFile = _('/cmp-a.ts');
         fs.writeFile(cmpAFile, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             const STYLES = ['./style.css', '../../style2.css'];
             @Component({
               selector: 'cmp-a',
@@ -249,7 +249,7 @@ runInEachFileSystem(() => {
       it('should return resource dependencies of a component source file', () => {
         const COMPONENT = _('/cmp.ts');
         fs.writeFile(COMPONENT, `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           @Component({
             selector: 'test-cmp',
             templateUrl: './template.html',
@@ -285,7 +285,7 @@ runInEachFileSystem(() => {
         const COMPONENT = _('/cmp.ts');
         const TEMPLATE = _('/template.html');
         fs.writeFile(COMPONENT, `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           @Component({
             selector: 'test-cmp',
             templateUrl: './template.html',

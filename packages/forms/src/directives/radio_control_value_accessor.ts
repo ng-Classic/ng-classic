@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, ElementRef, forwardRef, inject, Injectable, Injector, Input, NgModule, OnDestroy, OnInit, Provider, Renderer2, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {Directive, ElementRef, forwardRef, inject, Injectable, Injector, Input, NgModule, OnDestroy, OnInit, Provider, Renderer2, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from '../errors';
 
@@ -39,7 +39,7 @@ export class RadioControlRegistryModule {
 
 /**
  * @description
- * Class used by Angular to track radio buttons. For internal use only.
+ * Class used by Angular Classicto track radio buttons. For internal use only.
  */
 @Injectable({providedIn: RadioControlRegistryModule})
 export class RadioControlRegistry {

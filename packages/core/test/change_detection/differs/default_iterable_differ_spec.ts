@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DefaultIterableDiffer, DefaultIterableDifferFactory} from '@angular/core/src/change_detection/differs/default_iterable_differ';
+import {DefaultIterableDiffer, DefaultIterableDifferFactory} from '@angular-classic/core/src/change_detection/differs/default_iterable_differ';
 
 import {TestIterable} from '../../util/iterable';
 import {iterableChangesAsString, iterableDifferToString} from '../util';
@@ -284,7 +284,7 @@ class ComplexItem {
         }));
       });
 
-      // https://github.com/angular/angular/issues/17852
+      // https://github.com/ng-classic/angular/issues/17852
       it('support re-insertion', () => {
         const l = ['a', '*', '*', 'd', '-', '-', '-', 'e'];
         differ.check(l);

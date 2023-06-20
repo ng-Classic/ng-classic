@@ -1,4 +1,4 @@
-import { Injector } from '@angular/core';
+import { Injector } from '@angular-classic/core';
 import { LocalStorage, NoopStorage, SessionStorage, STORAGE_PROVIDERS } from './storage.service';
 import { WindowToken } from './window';
 

@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {absoluteFrom, getFileSystem, PathManipulation} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {runInEachFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
-import {ɵParsedMessage, ɵSourceLocation} from '@angular/localize';
+import {absoluteFrom, getFileSystem, PathManipulation} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {runInEachFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
+import {ɵParsedMessage, ɵSourceLocation} from '@angular-classic/localize';
 
 import {XmbTranslationSerializer} from '../../../src/extract/translation_files/xmb_translation_serializer';
 

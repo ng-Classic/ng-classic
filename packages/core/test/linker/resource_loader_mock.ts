@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ResourceLoader} from '@angular/compiler';
+import {ResourceLoader} from '@angular-classic/compiler';
 
 /**
  * A mock implementation of {@link ResourceLoader} that allows outgoing requests to be mocked

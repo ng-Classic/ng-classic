@@ -1,4 +1,4 @@
-import * as i0 from '@angular/core';
+import * as i0 from '@angular-classic/core';
 
 declare class LibDirective {
   static ɵfac: i0.ɵɵFactoryDeclaration<LibDirective, never>;

@@ -1,5 +1,5 @@
 // #docplaster
-import { fakeAsync, ComponentFixture, TestBed, tick, waitForAsync } from '@angular/core/testing';
+import { fakeAsync, ComponentFixture, TestBed, tick, waitForAsync } from '@angular-classic/core/testing';
 
 import { asyncData, asyncError } from '../../testing';
 

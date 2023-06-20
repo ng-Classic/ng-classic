@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, XhrFactory} from '@angular/common';
-import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, JsonpClientBackend} from '@angular/common/http';
-import {HttpClientTestingModule, HttpTestingController, provideHttpClientTesting} from '@angular/common/http/testing';
-import {createEnvironmentInjector, EnvironmentInjector, inject, InjectionToken, PLATFORM_ID, Provider} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {DOCUMENT, XhrFactory} from '@angular-classic/common';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, JsonpClientBackend} from '@angular-classic/common/http';
+import {HttpClientTestingModule, HttpTestingController, provideHttpClientTesting} from '@angular-classic/common/http/testing';
+import {createEnvironmentInjector, EnvironmentInjector, inject, InjectionToken, PLATFORM_ID, Provider} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 import {EMPTY, Observable} from 'rxjs';
 
 import {HttpInterceptorFn} from '../src/interceptor';

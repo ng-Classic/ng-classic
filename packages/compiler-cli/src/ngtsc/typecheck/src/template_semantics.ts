@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, BoundTarget, ImplicitReceiver, PropertyWrite, RecursiveAstVisitor, TmplAstVariable} from '@angular/compiler';
+import {AST, BoundTarget, ImplicitReceiver, PropertyWrite, RecursiveAstVisitor, TmplAstVariable} from '@angular-classic/compiler';
 
 import {TemplateId} from '../api';
 

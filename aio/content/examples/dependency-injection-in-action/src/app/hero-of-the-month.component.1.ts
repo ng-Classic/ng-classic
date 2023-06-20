@@ -1,6 +1,6 @@
 // Illustrative (not used), mini-version of the actual HeroOfTheMonthComponent
 // Injecting with the MinimalLogger "interface-class"
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular-classic/core';
 import { LoggerService } from './logger.service';
 import { MinimalLogger } from './minimal-logger.service';
 
@@ -19,7 +19,7 @@ export class HeroOfTheMonthComponent {
 }
 // #enddocregion
 
-// This NgModule exists only to avoid the Angular language service's "undeclared component" error
+// This NgModule exists only to avoid the Angular Classiclanguage service's "undeclared component" error
 @NgModule({
   declarations: [ HeroOfTheMonthComponent ]
 })

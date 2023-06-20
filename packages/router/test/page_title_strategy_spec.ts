@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT} from '@angular/common';
-import {provideLocationMocks} from '@angular/common/testing';
-import {Component, Inject, Injectable, NgModule} from '@angular/core';
-import {fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {Router, RouterModule, RouterStateSnapshot, TitleStrategy} from '@angular/router';
+import {DOCUMENT} from '@angular-classic/common';
+import {provideLocationMocks} from '@angular-classic/common/testing';
+import {Component, Inject, Injectable, NgModule} from '@angular-classic/core';
+import {fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {Router, RouterModule, RouterStateSnapshot, TitleStrategy} from '@angular-classic/router';
 
 import {provideRouter} from '../src/provide_router';
 

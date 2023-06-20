@@ -31,7 +31,7 @@ runInEachFileSystem(() => {
         // This test verifies that renaming the class field of an input is correctly reflected into
         // the TCB.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -42,7 +42,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -53,7 +53,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -67,7 +67,7 @@ runInEachFileSystem(() => {
         // Now rename the backing field of the input; the TCB should be updated such that the `dir`
         // input binding is still valid.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -84,7 +84,7 @@ runInEachFileSystem(() => {
         // This test verifies that renaming the class field of an output is correctly reflected into
         // the TCB.
         env.write('dir.ts', `
-          import {Directive, EventEmitter, Output} from '@angular/core';
+          import {Directive, EventEmitter, Output} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -95,7 +95,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -106,7 +106,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -120,7 +120,7 @@ runInEachFileSystem(() => {
         // Now rename the backing field of the output; the TCB should be updated such that the `dir`
         // input binding is still valid.
         env.write('dir.ts', `
-          import {Directive, EventEmitter, Output} from '@angular/core';
+          import {Directive, EventEmitter, Output} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -139,7 +139,7 @@ runInEachFileSystem(() => {
         // would be an error. This test verifies that the TCB is regenerated when a backing field
         // is removed.
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -150,7 +150,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -161,7 +161,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -178,7 +178,7 @@ runInEachFileSystem(() => {
         // Now remove the backing field for the `dir` input. The compilation should now succeed
         // as there are no type-check errors.
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -197,7 +197,7 @@ runInEachFileSystem(() => {
         // otherwise an error would incorrectly be reported.
         env.tsconfig({strictTemplates: true, strictInputAccessModifiers: false});
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -208,7 +208,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -219,7 +219,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -233,7 +233,7 @@ runInEachFileSystem(() => {
         // Now change the `dir` input to be readonly. Because `strictInputAccessModifiers` is
         // disabled this should be allowed.
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -251,7 +251,7 @@ runInEachFileSystem(() => {
         // writes to an input property should then be targeted against this static member instead
         // of the input field itself.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -262,7 +262,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -273,7 +273,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -291,7 +291,7 @@ runInEachFileSystem(() => {
         // also accepts `boolean`, unlike the type of `dir`'s class field. This should therefore
         // allow the compilation to succeed.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -310,7 +310,7 @@ runInEachFileSystem(() => {
         // This test adds an `ngTemplateContextGuard` static member to verify that the TCB is
         // regenerated for the template context to take effect.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -321,7 +321,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -332,7 +332,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -347,7 +347,7 @@ runInEachFileSystem(() => {
         // Doing so should report an error for `Cmp`, as the type of `bar` which binds to
         // `$implicit` is no longer compatible with the method signature which requires a `string`.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           export interface TemplateContext {
             $implicit: number;
@@ -374,7 +374,7 @@ runInEachFileSystem(() => {
         // This test verifies that adding an `ngTemplateGuard` static member has the desired effect
         // of type-narrowing the bound input expression within the template.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -385,7 +385,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -397,7 +397,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -416,7 +416,7 @@ runInEachFileSystem(() => {
         // specify that the bound expression for `dir` should be used as template guard. This
         // should allow the compilation to succeed.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           export interface TemplateContext {
             $implicit: number;
@@ -443,7 +443,7 @@ runInEachFileSystem(() => {
         // compares against null. An incremental step changes the type of the guard to be of type
         // `binding`.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -456,7 +456,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -468,7 +468,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -486,7 +486,7 @@ runInEachFileSystem(() => {
         // Now change the type of the template guard into "binding" to achieve the desired narrowing
         // of `foo`, allowing the compilation to succeed.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           export interface TemplateContext {
             $implicit: number;
@@ -510,7 +510,7 @@ runInEachFileSystem(() => {
         // static member applies correctly removes its narrowing effect on the original input
         // binding expression.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -523,7 +523,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -535,7 +535,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -549,7 +549,7 @@ runInEachFileSystem(() => {
         // Now change the `ngTemplateGuard` to target a different field. The `dir` binding should
         // no longer be narrowed, causing the template of `Cmp` to become invalid.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           export interface TemplateContext {
             $implicit: number;
@@ -581,7 +581,7 @@ runInEachFileSystem(() => {
         // otherwise the prior declaration without generic type argument would be invalid.
 
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -592,7 +592,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -603,7 +603,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -616,7 +616,7 @@ runInEachFileSystem(() => {
 
         // Adding a generic type should still allow the compilation to succeed.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -636,7 +636,7 @@ runInEachFileSystem(() => {
         // prior declaration with fewer generic type argument would be invalid.
 
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -647,7 +647,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -658,7 +658,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -671,7 +671,7 @@ runInEachFileSystem(() => {
 
         // Add generic type parameter `U` should continue to allow the compilation to succeed.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -691,7 +691,7 @@ runInEachFileSystem(() => {
         // `Dir` is also updated, as otherwise the prior declaration with a generic type argument
         // would be invalid.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -702,7 +702,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -713,7 +713,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -726,7 +726,7 @@ runInEachFileSystem(() => {
 
         // Changing `Dir` to become non-generic should allow the compilation to succeed.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -745,7 +745,7 @@ runInEachFileSystem(() => {
         // type requires that `Cmp`'s local declaration of `Dir` is also updated, as otherwise the
         // prior declaration with the initial number of generic type arguments would be invalid.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -756,7 +756,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -767,7 +767,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -780,7 +780,7 @@ runInEachFileSystem(() => {
 
         // Removing type parameter `U` should allow the compilation to succeed.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -803,7 +803,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -814,7 +814,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -825,7 +825,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -840,7 +840,7 @@ runInEachFileSystem(() => {
         // template of `Cmp` should now fail to type-check, as its bound value for `T` does not
         // conform to the `Foo` constraint.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
           import {Foo} from 'foo';
 
           @Directive({
@@ -859,7 +859,7 @@ runInEachFileSystem(() => {
         // Now update `Dir` again to remove the constraint of `T`, which should allow the template
         // of `Cmp` to succeed type-checking.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -896,7 +896,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
           import {Foo} from 'foo-a';
 
           @Directive({
@@ -908,7 +908,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           import {Foo} from 'foo-a';
 
           @Component({
@@ -920,7 +920,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -935,7 +935,7 @@ runInEachFileSystem(() => {
         // failure in `Cmp`, as its binding into `Dir` still provides an incompatible `Foo`
         // from `foo-a`.
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
           import {Foo} from 'foo-b';
 
           @Directive({
@@ -959,7 +959,7 @@ runInEachFileSystem(() => {
         // changing the type of the binding into `Dir` to also be the `Foo` from `foo-b`. This
         // should result in a successful compilation.
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           import {Foo} from 'foo-b';
 
           @Component({
@@ -981,7 +981,7 @@ runInEachFileSystem(() => {
            // change to `Dir`'s base class `Parent` causes the type-check result of component `Cmp`
            // that uses `Dir` to be updated accordingly.
            env.write('parent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
 
              @Directive()
              export class Parent {
@@ -990,7 +990,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('dir.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {Parent} from './parent';
 
              @Directive({
@@ -1002,7 +1002,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('cmp.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'test-cmp',
@@ -1013,7 +1013,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {Cmp} from './cmp';
              import {Dir} from './dir';
 
@@ -1027,7 +1027,7 @@ runInEachFileSystem(() => {
            // Now remove an input from `Parent`. This invalidates the binding in `Cmp`'s template,
            // so an error diagnostic should be reported.
            env.write('parent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
 
              @Directive()
              export class Parent {
@@ -1046,7 +1046,7 @@ runInEachFileSystem(() => {
            // change to `Dir`'s transitive base class `Grandparent` causes the type-check result of
            // component `Cmp` that uses `Dir` to be updated accordingly.
            env.write('grandparent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
 
              @Directive()
              export class Grandparent {
@@ -1055,7 +1055,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('parent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {Grandparent} from './grandparent';
 
              @Directive()
@@ -1065,7 +1065,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('dir.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {Parent} from './parent';
 
              @Directive({
@@ -1077,7 +1077,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('cmp.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'test-cmp',
@@ -1088,7 +1088,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {Cmp} from './cmp';
              import {Dir} from './dir';
 
@@ -1102,7 +1102,7 @@ runInEachFileSystem(() => {
            // Now remove an input from `Grandparent`. This invalidates the binding in `Cmp`'s
            // template, so an error diagnostic should be reported.
            env.write('grandparent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
 
              @Directive()
              export class Grandparent {
@@ -1121,7 +1121,7 @@ runInEachFileSystem(() => {
         // causes the type-check result of component `Cmp` that uses `Dir` to be
         // updated accordingly.
         env.write('grandgrandparent.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive()
           export class Grandgrandparent {
@@ -1130,7 +1130,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('grandparent.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive()
           export class Grandparent {
@@ -1139,7 +1139,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('parent.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
           import {Grandparent} from './grandparent';
 
           @Directive()
@@ -1149,7 +1149,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
           import {Parent} from './parent';
 
           @Directive({
@@ -1161,7 +1161,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -1172,7 +1172,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {Dir} from './dir';
 
@@ -1193,7 +1193,7 @@ runInEachFileSystem(() => {
         // Now fix the issue by adding the base class to `Grandparent`; this should allow
         // type-checking to succeed.
         env.write('grandparent.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
           import {Grandgrandparent} from './grandgrandparent';
 
           @Directive()
@@ -1212,7 +1212,7 @@ runInEachFileSystem(() => {
            // `Grandparent` causes the type-check result of component `Cmp` that uses `Dir` to be
            // updated accordingly.
            env.write('grandgrandparent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
 
              @Directive()
              export class Grandgrandparent {
@@ -1221,7 +1221,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('grandparent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {Grandgrandparent} from './grandgrandparent';
 
              @Directive()
@@ -1231,7 +1231,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('parent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {Grandparent} from './grandparent';
 
              @Directive()
@@ -1241,7 +1241,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('dir.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {Parent} from './parent';
 
              @Directive({
@@ -1253,7 +1253,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('cmp.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'test-cmp',
@@ -1264,7 +1264,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {Cmp} from './cmp';
              import {Dir} from './dir';
 
@@ -1279,7 +1279,7 @@ runInEachFileSystem(() => {
            // error in `Cmp`'s template, as its binding to the `grandgrandparent` input is no
            // longer valid.
            env.write('grandparent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
 
              @Directive()
              export class Grandparent {
@@ -1300,7 +1300,7 @@ runInEachFileSystem(() => {
            // changing the base class of `Dir`'s transitive base class `Grandparent` causes the
            // type-check result of component `Cmp` that uses `Dir` to be updated accordingly.
            env.write('grandgrandparent-a.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
 
              @Directive()
              export class GrandgrandparentA {
@@ -1309,7 +1309,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('grandgrandparent-b.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
 
              @Directive()
              export class GrandgrandparentB {
@@ -1318,7 +1318,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('grandparent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {GrandgrandparentA} from './grandgrandparent-a';
 
              @Directive()
@@ -1328,7 +1328,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('parent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {Grandparent} from './grandparent';
 
              @Directive()
@@ -1338,7 +1338,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('dir.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {Parent} from './parent';
 
              @Directive({
@@ -1350,7 +1350,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('cmp.ts', `
-             import {Component} from '@angular/core';
+             import {Component} from '@angular-classic/core';
 
              @Component({
                selector: 'test-cmp',
@@ -1361,7 +1361,7 @@ runInEachFileSystem(() => {
              }
            `);
            env.write('mod.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {Cmp} from './cmp';
              import {Dir} from './dir';
 
@@ -1376,7 +1376,7 @@ runInEachFileSystem(() => {
            // `GrandgrandparentB` causes the input binding to `grandgrandparentA` to be reported as
            // an error, as it's no longer available.
            env.write('grandparent.ts', `
-             import {Directive, Input} from '@angular/core';
+             import {Directive, Input} from '@angular-classic/core';
              import {GrandgrandparentB} from './grandgrandparent-b';
 
              @Directive()

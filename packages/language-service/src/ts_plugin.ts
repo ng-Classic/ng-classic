@@ -31,7 +31,7 @@ export function create(info: ts.server.PluginCreateInfo): NgLanguageService {
     if (angularOnly) {
       return ngLS.getQuickInfoAtPosition(fileName, position);
     } else {
-      // If TS could answer the query, then return that result. Otherwise, return from Angular LS.
+      // If TS could answer the query, then return that result. Otherwise, return from Angular ClassicLS.
       return tsLS.getQuickInfoAtPosition(fileName, position) ??
           ngLS.getQuickInfoAtPosition(fileName, position);
     }
@@ -42,7 +42,7 @@ export function create(info: ts.server.PluginCreateInfo): NgLanguageService {
     if (angularOnly) {
       return ngLS.getTypeDefinitionAtPosition(fileName, position);
     } else {
-      // If TS could answer the query, then return that result. Otherwise, return from Angular LS.
+      // If TS could answer the query, then return that result. Otherwise, return from Angular ClassicLS.
       return tsLS.getTypeDefinitionAtPosition(fileName, position) ??
           ngLS.getTypeDefinitionAtPosition(fileName, position);
     }
@@ -53,7 +53,7 @@ export function create(info: ts.server.PluginCreateInfo): NgLanguageService {
     if (angularOnly) {
       return ngLS.getDefinitionAndBoundSpan(fileName, position);
     } else {
-      // If TS could answer the query, then return that result. Otherwise, return from Angular LS.
+      // If TS could answer the query, then return that result. Otherwise, return from Angular ClassicLS.
       return tsLS.getDefinitionAndBoundSpan(fileName, position) ??
           ngLS.getDefinitionAndBoundSpan(fileName, position);
     }
@@ -85,7 +85,7 @@ export function create(info: ts.server.PluginCreateInfo): NgLanguageService {
     if (angularOnly) {
       return ngLS.getCompletionsAtPosition(fileName, position, options);
     } else {
-      // If TS could answer the query, then return that result. Otherwise, return from Angular LS.
+      // If TS could answer the query, then return that result. Otherwise, return from Angular ClassicLS.
       return tsLS.getCompletionsAtPosition(fileName, position, options) ??
           ngLS.getCompletionsAtPosition(fileName, position, options);
     }
@@ -100,7 +100,7 @@ export function create(info: ts.server.PluginCreateInfo): NgLanguageService {
       return ngLS.getCompletionEntryDetails(
           fileName, position, entryName, formatOptions, preferences, data);
     } else {
-      // If TS could answer the query, then return that result. Otherwise, return from Angular LS.
+      // If TS could answer the query, then return that result. Otherwise, return from Angular ClassicLS.
       return tsLS.getCompletionEntryDetails(
                  fileName, position, entryName, formatOptions, source, preferences, data) ??
           ngLS.getCompletionEntryDetails(
@@ -114,7 +114,7 @@ export function create(info: ts.server.PluginCreateInfo): NgLanguageService {
     if (angularOnly) {
       return ngLS.getCompletionEntrySymbol(fileName, position, name);
     } else {
-      // If TS could answer the query, then return that result. Otherwise, return from Angular LS.
+      // If TS could answer the query, then return that result. Otherwise, return from Angular ClassicLS.
       return tsLS.getCompletionEntrySymbol(fileName, position, name, source) ??
           ngLS.getCompletionEntrySymbol(fileName, position, name);
     }
@@ -173,7 +173,7 @@ export function create(info: ts.server.PluginCreateInfo): NgLanguageService {
     } else {
       const tsLsCodeFixes =
           tsLS.getCodeFixesAtPosition(fileName, start, end, errorCodes, formatOptions, preferences);
-      // If TS could answer the query, then return that result. Otherwise, return from Angular LS.
+      // If TS could answer the query, then return that result. Otherwise, return from Angular ClassicLS.
       return tsLsCodeFixes.length > 0 ?
           tsLsCodeFixes :
           ngLS.getCodeFixesAtPosition(fileName, start, end, errorCodes, formatOptions, preferences);
@@ -187,7 +187,7 @@ export function create(info: ts.server.PluginCreateInfo): NgLanguageService {
       return ngLS.getCombinedCodeFix(scope, fixId, formatOptions, preferences);
     } else {
       const tsLsCombinedCodeFix = tsLS.getCombinedCodeFix(scope, fixId, formatOptions, preferences);
-      // If TS could answer the query, then return that result. Otherwise, return from Angular LS.
+      // If TS could answer the query, then return that result. Otherwise, return from Angular ClassicLS.
       return tsLsCombinedCodeFix.changes.length > 0 ?
           tsLsCombinedCodeFix :
           ngLS.getCombinedCodeFix(scope, fixId, formatOptions, preferences);

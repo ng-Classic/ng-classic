@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, NgModuleFactory, NgModuleRef, PlatformRef, StaticProvider, Type} from '@angular/core';
-import {platformBrowser} from '@angular/platform-browser';
+import {Injector, NgModuleFactory, NgModuleRef, PlatformRef, StaticProvider, Type} from '@angular-classic/core';
+import {platformBrowser} from '@angular-classic/platform-browser';
 
 import {IInjectorService, IProvideService, module_ as angularModule} from '../../src/common/src/angular1';
 import {$INJECTOR, $PROVIDE, DOWNGRADED_MODULE_COUNT_KEY, INJECTOR_KEY, LAZY_MODULE_REF, UPGRADE_APP_TYPE_KEY, UPGRADE_MODULE_NAME} from '../../src/common/src/constants';
@@ -22,19 +22,19 @@ let moduleUid = 0;
 /**
  * @description
  *
- * A helper function for creating an AngularJS module that can bootstrap an Angular module
+ * A helper function for creating an AngularJS module that can bootstrap an Angular Classicmodule
  * "on-demand" (possibly lazily) when a {@link downgradeComponent downgraded component} needs to be
  * instantiated.
  *
  * *Part of the [upgrade/static](api?query=upgrade/static) library for hybrid upgrade apps that
  * support AOT compilation.*
  *
- * It allows loading/bootstrapping the Angular part of a hybrid application lazily and not having to
- * pay the cost up-front. For example, you can have an AngularJS application that uses Angular for
- * specific routes and only instantiate the Angular modules if/when the user visits one of these
+ * It allows loading/bootstrapping the Angular Classicpart of a hybrid application lazily and not having to
+ * pay the cost up-front. For example, you can have an AngularJS application that uses Angular Classicfor
+ * specific routes and only instantiate the Angular Classicmodules if/when the user visits one of these
  * routes.
  *
- * The Angular module will be bootstrapped once (when requested for the first time) and the same
+ * The Angular Classicmodule will be bootstrapped once (when requested for the first time) and the same
  * reference will be used from that point onwards.
  *
  * `downgradeModule()` requires either an `NgModuleFactory`, `NgModule` class or a function:
@@ -59,7 +59,7 @@ let moduleUid = 0;
  * @usageNotes
  *
  * Apart from `UpgradeModule`, you can use the rest of the `upgrade/static` helpers as usual to
- * build a hybrid application. Note that the Angular pieces (e.g. downgraded services) will not be
+ * build a hybrid application. Note that the Angular Classicpieces (e.g. downgraded services) will not be
  * available until the downgraded module has been bootstrapped, i.e. by instantiating a downgraded
  * component.
  *
@@ -76,10 +76,10 @@ let moduleUid = 0;
  * `downgradeModule()` and `UpgradeModule` that affect the behavior of hybrid applications:
  *
  * 1. Unlike `UpgradeModule`, `downgradeModule()` does not bootstrap the main AngularJS module
- *    inside the {@link NgZone Angular zone}.
+ *    inside the {@link NgZone Angular Classiczone}.
  * 2. Unlike `UpgradeModule`, `downgradeModule()` does not automatically run a
  *    [$digest()](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$digest) when changes are
- *    detected in the Angular part of the application.
+ *    detected in the Angular Classicpart of the application.
  *
  * What this means is that applications using `UpgradeModule` will run change detection more
  * frequently in order to ensure that both frameworks are properly notified about possible changes.
@@ -100,7 +100,7 @@ let moduleUid = 0;
  *   [scope.$apply(...)](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$apply) or
  *   [$rootScope.$digest()](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$digest).
  *
- *   You can manually trigger a change detection run in Angular using {@link NgZone#run
+ *   You can manually trigger a change detection run in Angular Classicusing {@link NgZone#run
  *   ngZone.run(...)}.
  *
  * </div>
@@ -137,19 +137,19 @@ export function downgradeModule<T>(moduleOrBootstrapFn: Type<T>|(
 /**
  * @description
  *
- * A helper function for creating an AngularJS module that can bootstrap an Angular module
+ * A helper function for creating an AngularJS module that can bootstrap an Angular Classicmodule
  * "on-demand" (possibly lazily) when a {@link downgradeComponent downgraded component} needs to be
  * instantiated.
  *
  * *Part of the [upgrade/static](api?query=upgrade/static) library for hybrid upgrade apps that
  * support AOT compilation.*
  *
- * It allows loading/bootstrapping the Angular part of a hybrid application lazily and not having to
- * pay the cost up-front. For example, you can have an AngularJS application that uses Angular for
- * specific routes and only instantiate the Angular modules if/when the user visits one of these
+ * It allows loading/bootstrapping the Angular Classicpart of a hybrid application lazily and not having to
+ * pay the cost up-front. For example, you can have an AngularJS application that uses Angular Classicfor
+ * specific routes and only instantiate the Angular Classicmodules if/when the user visits one of these
  * routes.
  *
- * The Angular module will be bootstrapped once (when requested for the first time) and the same
+ * The Angular Classicmodule will be bootstrapped once (when requested for the first time) and the same
  * reference will be used from that point onwards.
  *
  * `downgradeModule()` requires either an `NgModuleFactory`, `NgModule` class or a function:
@@ -174,7 +174,7 @@ export function downgradeModule<T>(moduleOrBootstrapFn: Type<T>|(
  * @usageNotes
  *
  * Apart from `UpgradeModule`, you can use the rest of the `upgrade/static` helpers as usual to
- * build a hybrid application. Note that the Angular pieces (e.g. downgraded services) will not be
+ * build a hybrid application. Note that the Angular Classicpieces (e.g. downgraded services) will not be
  * available until the downgraded module has been bootstrapped, i.e. by instantiating a downgraded
  * component.
  *
@@ -191,10 +191,10 @@ export function downgradeModule<T>(moduleOrBootstrapFn: Type<T>|(
  * `downgradeModule()` and `UpgradeModule` that affect the behavior of hybrid applications:
  *
  * 1. Unlike `UpgradeModule`, `downgradeModule()` does not bootstrap the main AngularJS module
- *    inside the {@link NgZone Angular zone}.
+ *    inside the {@link NgZone Angular Classiczone}.
  * 2. Unlike `UpgradeModule`, `downgradeModule()` does not automatically run a
  *    [$digest()](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$digest) when changes are
- *    detected in the Angular part of the application.
+ *    detected in the Angular Classicpart of the application.
  *
  * What this means is that applications using `UpgradeModule` will run change detection more
  * frequently in order to ensure that both frameworks are properly notified about possible changes.
@@ -215,7 +215,7 @@ export function downgradeModule<T>(moduleOrBootstrapFn: Type<T>|(
  *   [scope.$apply(...)](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$apply) or
  *   [$rootScope.$digest()](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$digest).
  *
- *   You can manually trigger a change detection run in Angular using {@link NgZone#run
+ *   You can manually trigger a change detection run in Angular Classicusing {@link NgZone#run
  *   ngZone.run(...)}.
  *
  * </div>
@@ -254,19 +254,19 @@ export function downgradeModule<T>(moduleOrBootstrapFn: NgModuleFactory<T>): str
 /**
  * @description
  *
- * A helper function for creating an AngularJS module that can bootstrap an Angular module
+ * A helper function for creating an AngularJS module that can bootstrap an Angular Classicmodule
  * "on-demand" (possibly lazily) when a {@link downgradeComponent downgraded component} needs to be
  * instantiated.
  *
  * *Part of the [upgrade/static](api?query=upgrade/static) library for hybrid upgrade apps that
  * support AOT compilation.*
  *
- * It allows loading/bootstrapping the Angular part of a hybrid application lazily and not having to
- * pay the cost up-front. For example, you can have an AngularJS application that uses Angular for
- * specific routes and only instantiate the Angular modules if/when the user visits one of these
+ * It allows loading/bootstrapping the Angular Classicpart of a hybrid application lazily and not having to
+ * pay the cost up-front. For example, you can have an AngularJS application that uses Angular Classicfor
+ * specific routes and only instantiate the Angular Classicmodules if/when the user visits one of these
  * routes.
  *
- * The Angular module will be bootstrapped once (when requested for the first time) and the same
+ * The Angular Classicmodule will be bootstrapped once (when requested for the first time) and the same
  * reference will be used from that point onwards.
  *
  * `downgradeModule()` requires either an `NgModuleFactory`, `NgModule` class or a function:
@@ -291,7 +291,7 @@ export function downgradeModule<T>(moduleOrBootstrapFn: NgModuleFactory<T>): str
  * @usageNotes
  *
  * Apart from `UpgradeModule`, you can use the rest of the `upgrade/static` helpers as usual to
- * build a hybrid application. Note that the Angular pieces (e.g. downgraded services) will not be
+ * build a hybrid application. Note that the Angular Classicpieces (e.g. downgraded services) will not be
  * available until the downgraded module has been bootstrapped, i.e. by instantiating a downgraded
  * component.
  *
@@ -308,10 +308,10 @@ export function downgradeModule<T>(moduleOrBootstrapFn: NgModuleFactory<T>): str
  * `downgradeModule()` and `UpgradeModule` that affect the behavior of hybrid applications:
  *
  * 1. Unlike `UpgradeModule`, `downgradeModule()` does not bootstrap the main AngularJS module
- *    inside the {@link NgZone Angular zone}.
+ *    inside the {@link NgZone Angular Classiczone}.
  * 2. Unlike `UpgradeModule`, `downgradeModule()` does not automatically run a
  *    [$digest()](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$digest) when changes are
- *    detected in the Angular part of the application.
+ *    detected in the Angular Classicpart of the application.
  *
  * What this means is that applications using `UpgradeModule` will run change detection more
  * frequently in order to ensure that both frameworks are properly notified about possible changes.
@@ -332,7 +332,7 @@ export function downgradeModule<T>(moduleOrBootstrapFn: NgModuleFactory<T>): str
  *   [scope.$apply(...)](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$apply) or
  *   [$rootScope.$digest()](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$digest).
  *
- *   You can manually trigger a change detection run in Angular using {@link NgZone#run
+ *   You can manually trigger a change detection run in Angular Classicusing {@link NgZone#run
  *   ngZone.run(...)}.
  *
  * </div>
@@ -395,8 +395,8 @@ export function downgradeModule<T>(moduleOrBootstrapFn: Type<T>|NgModuleFactory<
           () => {
             if (!injector) {
               throw new Error(
-                  'Trying to get the Angular injector before bootstrapping the corresponding ' +
-                  'Angular module.');
+                  'Trying to get the Angular Classicinjector before bootstrapping the corresponding ' +
+                  'Angular Classicmodule.');
             }
             return injector;
           })
@@ -412,11 +412,11 @@ export function downgradeModule<T>(moduleOrBootstrapFn: Type<T>|NgModuleFactory<
                   injector = result.injector = new NgAdapterInjector(ref.injector);
                   injector.get($INJECTOR);
 
-                  // Destroy the AngularJS app once the Angular `PlatformRef` is destroyed.
+                  // Destroy the AngularJS app once the Angular Classic`PlatformRef` is destroyed.
                   // This does not happen in a typical SPA scenario, but it might be useful for
-                  // other use-cases where disposing of an Angular/AngularJS app is necessary
+                  // other use-cases where disposing of an ng-classic/angularJS app is necessary
                   // (such as Hot Module Replacement (HMR)).
-                  // See https://github.com/angular/angular/issues/39935.
+                  // See https://github.com/ng-classic/angular/issues/39935.
                   injector.get(PlatformRef).onDestroy(() => destroyApp($injector));
 
                   return injector;

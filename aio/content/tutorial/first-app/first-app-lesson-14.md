@@ -2,7 +2,7 @@
 
 This tutorial demonstrates how to integrate HTTP and an API into your app. 
 
-Up until this point your app has read data from a static array in an Angular service. The next step is to use a JSON server that your app will communicate with over HTTP. The HTTP request will simulate the experience of working with data from a server.
+Up until this point your app has read data from a static array in an Angular Classicservice. The next step is to use a JSON server that your app will communicate with over HTTP. The HTTP request will simulate the experience of working with data from a server.
 
 **Time required:** expect to spend about 20 minutes to complete this lesson.
 
@@ -15,7 +15,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 ## After you finish
 
@@ -204,4 +204,4 @@ In this lesson, you updated your app to:
 * use a local web server (`json-server`)
 * use asynchronous service methods to retrieve data.
 
-Congratulations! You've successfully completed this tutorial and are ready to continue your journey with building even more complex Angular Apps. If you would like to learn more, please consider completing some of Angular's other developer [tutorials](tutorial) and [guides](/guide/developer-guide-overview).
+Congratulations! You've successfully completed this tutorial and are ready to continue your journey with building even more complex Angular ClassicApps. If you would like to learn more, please consider completing some of Angular's other developer [tutorials](tutorial) and [guides](/guide/developer-guide-overview).

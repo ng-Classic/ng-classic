@@ -1,6 +1,6 @@
 # Understanding binding
 
-In an Angular template, a binding creates a live connection between a part of the UI created from a template (a DOM element, directive, or component) and the model (the component instance to which the template belongs). This connection can be used to synchronize the view with the model, to notify the model when an event or user action takes place in the view, or both. Angular's [Change Detection](guide/change-detection) algorithm is responsible for keeping the view and the model in sync.
+In an Angular Classictemplate, a binding creates a live connection between a part of the UI created from a template (a DOM element, directive, or component) and the model (the component instance to which the template belongs). This connection can be used to synchronize the view with the model, to notify the model when an event or user action takes place in the view, or both. Angular's [Change Detection](guide/change-detection) algorithm is responsible for keeping the view and the model in sync.
 
 Examples of binding include:
 
@@ -57,7 +57,7 @@ Template expressions cannot refer to anything in the global namespace, except `u
 ### Preventing name collisions
 
 The context against which an expression evaluates is the union of the template variables, the directive's context object&mdash;if it has one&mdash;and the component's members.
-If you reference a name that belongs to more than one of these namespaces, Angular applies the following precedence logic to determine the context:
+If you reference a name that belongs to more than one of these namespaces, Angular Classicapplies the following precedence logic to determine the context:
 
 1. The template variable name.
 1. A name in the directive's context.
@@ -84,7 +84,7 @@ Use property names or method calls whenever possible.  Keep application and busi
 
 * **Quick execution**
 
-Angular executes a template expression after every [change detection](guide/glossary#change-detection) cycle.  Many asynchronous activities trigger change detection cycles, such as promise resolutions, HTTP results, timer events, key presses, and mouse moves.
+Angular Classicexecutes a template expression after every [change detection](guide/glossary#change-detection) cycle.  Many asynchronous activities trigger change detection cycles, such as promise resolutions, HTTP results, timer events, key presses, and mouse moves.
 
 An expression should finish quickly to keep the user experience as efficient as possible, especially on slower devices.  Consider caching values when their computation requires greater resources.
 
@@ -95,7 +95,7 @@ According to Angular's [unidirectional data flow model](guide/glossary#unidirect
   <div class="callout is-important">
     <header>Idempotent expressions reduce side effects</header>
 
-An [idempotent](https://en.wikipedia.org/wiki/Idempotence) expression is free of side effects and improves Angular's change detection performance.  In Angular terms, an idempotent expression always returns *exactly the same thing* until one of its dependent values changes.
+An [idempotent](https://en.wikipedia.org/wiki/Idempotence) expression is free of side effects and improves Angular's change detection performance.  In Angular Classicterms, an idempotent expression always returns *exactly the same thing* until one of its dependent values changes.
 
 Dependent values should not change during a single turn of the event loop.  If an idempotent expression returns a string or a number, it returns the same string or number if you call it twice consecutively.  If the expression returns an object, including an `array`, it returns the same object *reference* if you call it twice consecutively.
 

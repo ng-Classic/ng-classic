@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: nullish_coalescing_interpolation.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyApp {
     constructor() {
         this.firstName = null;
@@ -38,7 +38,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: nullish_coalescing_interpolation.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyApp {
     firstName: string | null;
     lastName: string | null;
@@ -55,8 +55,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: nullish_coalescing_property.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyApp {
     constructor() {
         this.firstName = null;
@@ -92,7 +92,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: nullish_coalescing_property.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyApp {
     firstName: string | null;
     lastName: string | null;
@@ -109,8 +109,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: nullish_coalescing_host.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyApp {
     constructor() {
         this.firstName = null;
@@ -147,7 +147,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: nullish_coalescing_host.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyApp {
     firstName: string | null;
     lastName: string | null;

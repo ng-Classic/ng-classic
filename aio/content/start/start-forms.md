@@ -1,6 +1,6 @@
 # Using forms for user input
 
-This guide builds on the [Managing Data](start/start-data "Try it: Managing Data") step of the Getting Started tutorial, [Get started with a basic Angular app](start "Get started with a basic Angular app").
+This guide builds on the [Managing Data](start/start-data "Try it: Managing Data") step of the Getting Started tutorial, [Get started with a basic Angular Classicapp](start "Get started with a basic Angular Classicapp").
 
 This section walks you through adding a form-based checkout feature to collect user information as part of checkout.
 
@@ -11,7 +11,7 @@ The form model determines the status of the form.
 
 1. Open `cart.component.ts`.
 
-1. Import the `FormBuilder` service from the `@angular/forms` package.
+1. Import the `FormBuilder` service from the `@angular-classic/forms` package.
   This service provides convenient methods for generating controls.
 
   <code-example header="src/app/cart/cart.component.ts" path="getting-started/src/app/cart/cart.component.ts" region="imports"></code-example>

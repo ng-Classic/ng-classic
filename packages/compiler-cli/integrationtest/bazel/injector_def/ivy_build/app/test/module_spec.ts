@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {forwardRef, Injectable, InjectionToken, Injector, NgModule, ɵcreateInjector as createInjector} from '@angular/core';
+import {forwardRef, Injectable, InjectionToken, Injector, NgModule, ɵcreateInjector as createInjector} from '@angular-classic/core';
 import {AOT_TOKEN, AotModule, AotService} from 'app_built/src/module';
 
 describe('NgModule', () => {
@@ -65,7 +65,7 @@ describe('NgModule', () => {
           .toThrowError(
               'NG0200: Circular dependency in DI detected for AModule. ' +
               'Dependency path: AModule > BModule > AModule. ' +
-              'Find more at https://angular.io/errors/NG0200');
+              'Find more at https://angular-classic.com/errors/NG0200');
     });
 
     it('merges imports and exports', () => {

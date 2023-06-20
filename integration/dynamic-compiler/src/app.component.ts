@@ -1,4 +1,4 @@
-import {AfterViewInit, Compiler, Component, ViewChild, ViewContainerRef} from '@angular/core';
+import {AfterViewInit, Compiler, Component, ViewChild, ViewContainerRef} from '@angular-classic/core';
 
 @Component({
   selector: 'app-root',

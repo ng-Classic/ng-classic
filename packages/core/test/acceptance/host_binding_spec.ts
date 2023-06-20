@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {state, style, transition, trigger} from '@angular/animations';
-import {CommonModule} from '@angular/common';
-import {AfterContentInit, Component, ComponentRef, ContentChildren, Directive, DoCheck, HostBinding, HostListener, Injectable, Input, NgModule, OnChanges, OnInit, QueryList, ViewChild, ViewChildren, ViewContainerRef} from '@angular/core';
-import {bypassSanitizationTrustHtml, bypassSanitizationTrustStyle, bypassSanitizationTrustUrl} from '@angular/core/src/sanitization/bypass';
-import {TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {state, style, transition, trigger} from '@angular-classic/animations';
+import {CommonModule} from '@angular-classic/common';
+import {AfterContentInit, Component, ComponentRef, ContentChildren, Directive, DoCheck, HostBinding, HostListener, Injectable, Input, NgModule, OnChanges, OnInit, QueryList, ViewChild, ViewChildren, ViewContainerRef} from '@angular-classic/core';
+import {bypassSanitizationTrustHtml, bypassSanitizationTrustStyle, bypassSanitizationTrustUrl} from '@angular-classic/core/src/sanitization/bypass';
+import {TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {NoopAnimationsModule} from '@angular-classic/platform-browser/animations';
 
 describe('host bindings', () => {
   it('should render host bindings on the root component', () => {
@@ -81,7 +81,7 @@ describe('host bindings', () => {
 
     it('should not cause problems if detectChanges is called when a property updates', () => {
       /**
-       * Angular Material CDK Tree contains a code path whereby:
+       * Angular ClassicMaterial CDK Tree contains a code path whereby:
        *
        * 1. During the execution of a template function in which **more than one** property is
        * updated in a row.

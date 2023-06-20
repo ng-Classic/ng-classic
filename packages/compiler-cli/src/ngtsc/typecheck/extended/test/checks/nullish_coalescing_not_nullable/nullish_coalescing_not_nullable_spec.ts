@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DiagnosticCategoryLabel} from '@angular/compiler-cli/src/ngtsc/core/api';
+import {DiagnosticCategoryLabel} from '@angular-classic/compiler-cli/src/ngtsc/core/api';
 import ts from 'typescript';
 
 import {ErrorCode, ExtendedTemplateDiagnosticName, ngErrorCode} from '../../../../../diagnostics';

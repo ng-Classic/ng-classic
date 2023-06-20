@@ -1,8 +1,8 @@
 // #docplaster
 // #docregion vc
-import { AfterViewInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ViewChild } from '@angular-classic/core';
 // #docregion lv
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 import { CountdownTimerComponent } from './countdown-timer.component';
 
 // #enddocregion lv

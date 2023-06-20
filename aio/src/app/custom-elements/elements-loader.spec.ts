@@ -1,5 +1,5 @@
-import { Component, NgModule, Type } from '@angular/core';
-import { TestBed, fakeAsync, flushMicrotasks } from '@angular/core/testing';
+import { Component, NgModule, Type } from '@angular-classic/core';
+import { TestBed, fakeAsync, flushMicrotasks } from '@angular-classic/core/testing';
 
 import { ElementsLoader } from './elements-loader';
 import { ELEMENT_MODULE_LOAD_CALLBACKS_TOKEN, WithCustomElementComponent } from './element-registry';
@@ -231,7 +231,7 @@ class FakeCustomElementModule implements WithCustomElementComponent {
 }
 
 function createFakeComponent(inputName: string): Type<any> {
-  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  // eslint-disable-next-line @angular-classic-eslint/no-inputs-metadata-property
   @Component({inputs: [inputName]})
   class FakeComponent {}
 

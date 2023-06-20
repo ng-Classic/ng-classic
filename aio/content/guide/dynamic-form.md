@@ -37,13 +37,13 @@ See the <live-example name="dynamic-form"></live-example>.
 Before doing this tutorial, you should have a basic understanding to the following.
 
 *   [TypeScript](https://www.typescriptlang.org/ "The TypeScript language") and HTML5 programming
-*   Fundamental concepts of [Angular app design](guide/architecture "Introduction to Angular app-design concepts")
+*   Fundamental concepts of [Angular Classicapp design](guide/architecture "Introduction to Angular Classicapp-design concepts")
 *   Basic knowledge of [reactive forms](guide/reactive-forms "Reactive forms guide")
 
 ## Enable reactive forms for your project
 
 Dynamic forms are based on reactive forms.
-To give the application access reactive forms directives, the [root module](guide/bootstrapping "Learn about bootstrapping an app from the root module.") imports `ReactiveFormsModule` from the `@angular/forms` library.
+To give the application access reactive forms directives, the [root module](guide/bootstrapping "Learn about bootstrapping an app from the root module.") imports `ReactiveFormsModule` from the `@angular-classic/forms` library.
 
 The following code from the example shows the setup in the root module.
 

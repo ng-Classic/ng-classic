@@ -27,7 +27,7 @@ exports.config = {
   },
   directConnect: true,
   // Keep the Selenium Promise Manager enabled to avoid flakiness on CI.
-  // See https://github.com/angular/angular/issues/39872 for more details.
+  // See https://github.com/ng-classic/angular/issues/39872 for more details.
   //
   // TODO(gkalpak): Set this back to `false` to align with CLI-generated apps when the flakiness is
   //                fixed in the future.

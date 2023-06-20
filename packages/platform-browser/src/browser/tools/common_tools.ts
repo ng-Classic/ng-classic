@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ApplicationRef, ComponentRef} from '@angular/core';
+import {ApplicationRef, ComponentRef} from '@angular-classic/core';
 import {window} from './browser';
 
 export class ChangeDetectionPerfRecord {
@@ -14,7 +14,7 @@ export class ChangeDetectionPerfRecord {
 }
 
 /**
- * Entry point for all Angular profiling-related debug tools. This object
+ * Entry point for all Angular Classicprofiling-related debug tools. This object
  * corresponds to the `ng.profiler` in the dev console.
  */
 export class AngularProfiler {

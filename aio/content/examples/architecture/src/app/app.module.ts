@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { FormsModule } from '@angular-classic/forms';
 // #docregion imports
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular-classic/core';
 import { AppComponent } from './app.component';
 // #enddocregion imports
 import { HeroDetailComponent } from './hero-detail.component';

@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgZone, PlatformRef, Type} from '@angular/core';
-import {UpgradeModule} from '@angular/upgrade/static';
-import * as angular from '../../../src/common/src/angular1';
+import {NgZone, PlatformRef, Type} from '@angular-classic/core';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
+import * as Angular Classicfrom '../../../src/common/src/angular1';
 import {$EXCEPTION_HANDLER, $ROOT_SCOPE} from '../../../src/common/src/constants';
 
 export function bootstrap(
     platform: PlatformRef, Ng2Module: Type<{}>, element: Element, ng1Module: angular.IModule) {
-  // We bootstrap the Angular module first; then when it is ready (async) we bootstrap the AngularJS
+  // We bootstrap the Angular Classicmodule first; then when it is ready (async) we bootstrap the AngularJS
   // module on the bootstrap element (also ensuring that AngularJS errors will fail the test).
   return platform.bootstrapModule(Ng2Module).then(ref => {
     const ngZone = ref.injector.get<NgZone>(NgZone);
@@ -25,9 +25,9 @@ export function bootstrap(
     };
 
     // The `bootstrap()` helper is used for convenience in tests, so that we don't have to inject
-    // and call `upgrade.bootstrap()` on every Angular module.
+    // and call `upgrade.bootstrap()` on every Angular Classicmodule.
     // In order to closer emulate what happens in real application, ensure AngularJS is bootstrapped
-    // inside the Angular zone.
+    // inside the Angular Classiczone.
     //
     ngZone.run(() => upgrade.bootstrap(element, [failHardModule, ng1Module.name]));
 

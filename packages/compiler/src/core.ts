@@ -7,9 +7,9 @@
  */
 
 // Attention:
-// This file duplicates types and values from @angular/core
-// so that we are able to make @angular/compiler independent of @angular/core.
-// This is important to prevent a build cycle, as @angular/core needs to
+// This file duplicates types and values from @angular-classic/core
+// so that we are able to make @angular-classic/compiler independent of @angular-classic/core.
+// This is important to prevent a build cycle, as @angular-classic/core needs to
 // be compiled with the compiler.
 
 import {CssSelector} from './selector';

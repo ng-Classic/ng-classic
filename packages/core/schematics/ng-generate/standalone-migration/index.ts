@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Rule, SchematicsException, Tree} from '@angular-devkit/schematics';
-import {createProgram, NgtscProgram} from '@angular/compiler-cli';
+import {Rule, SchematicsException, Tree} from '@angular-classic-devkit/schematics';
+import {createProgram, NgtscProgram} from '@angular-classic/compiler-cli';
 import {existsSync, statSync} from 'fs';
 import {join, relative} from 'path';
 import ts from 'typescript';
@@ -59,7 +59,7 @@ export default function(options: Options): Rule {
     context.logger.info('🎉 Automated migration step has finished! 🎉');
     context.logger.info(
         'IMPORTANT! Please verify manually that your application builds and behaves as expected.');
-    context.logger.info(`See https://angular.io/guide/standalone-migration for more information.`);
+    context.logger.info(`See https://angular-classic.com/guide/standalone-migration for more information.`);
   };
 }
 

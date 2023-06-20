@@ -1,8 +1,8 @@
 // #docplaster
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { NgModule } from '@angular-classic/core';
 // #docregion router-import
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular-classic/router';
 // #enddocregion router-import
 import { AppComponent } from './app.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';

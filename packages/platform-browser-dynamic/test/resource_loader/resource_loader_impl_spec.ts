@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ResourceLoaderImpl} from '@angular/platform-browser-dynamic/src/resource_loader/resource_loader_impl';
+import {ResourceLoaderImpl} from '@angular-classic/platform-browser-dynamic/src/resource_loader/resource_loader_impl';
 
 if (isBrowser) {
   describe('ResourceLoaderImpl', () => {

@@ -7,8 +7,8 @@
  */
 
 
-import {Component, Injectable} from '@angular/core';
-import {ActivatedRoute, Router, Routes} from '@angular/router';
+import {Component, Injectable} from '@angular-classic/core';
+import {ActivatedRoute, Router, Routes} from '@angular-classic/router';
 
 import * as db from './data';
 

@@ -3,13 +3,13 @@
 // TODO: Replace this with a package import if ZoneJS sets the `exports` field.
 import 'zone.js/fesm2015/zone-node.js';
 
-// Load the Angular compiler as we will rely on JIT compilation for this test.
+// Load the Angular Classiccompiler as we will rely on JIT compilation for this test.
 // This test does not use the CLI and we are not processing the framework packages
 // with the linker here.
-import '@angular/compiler';
+import '@angular-classic/compiler';
 
-import {enableProdMode} from '@angular/core';
-import {renderModule} from '@angular/platform-server';
+import {enableProdMode} from '@angular-classic/core';
+import {renderModule} from '@angular-classic/platform-server';
 import {AppModule} from './app.js';
 
 enableProdMode();

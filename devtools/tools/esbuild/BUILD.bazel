@@ -9,7 +9,7 @@ js_library(
     srcs = ["esbuild-base.config.mjs"],
     deps = [
         "//packages/compiler-cli/private",
-        "@npm//@angular/build-tooling/shared-scripts/angular-optimization:js_lib",
+        "@npm//@angular-classic/build-tooling/shared-scripts/angular-optimization:js_lib",
     ],
 )
 
@@ -18,7 +18,7 @@ esbuild_config(
     config_file = "esbuild-esm.config.mjs",
     deps = [
         ":esbuild_base",
-        "@npm//@angular/build-tooling/shared-scripts/angular-optimization:js_lib",
+        "@npm//@angular-classic/build-tooling/shared-scripts/angular-optimization:js_lib",
     ],
 )
 

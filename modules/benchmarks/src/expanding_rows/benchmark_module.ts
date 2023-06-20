@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, ErrorHandler, Injectable, NgModule} from '@angular/core';
+import {Component, ErrorHandler, Injectable, NgModule} from '@angular-classic/core';
 
 @Component({
   selector: 'benchmark-area',

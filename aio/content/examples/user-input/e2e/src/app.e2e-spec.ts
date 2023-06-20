@@ -54,7 +54,7 @@ describe('User Input Tests', () => {
     expect(await outputTextEle.getText()).toEqual('');
     await inputEle.sendKeys('abc');
     expect(await outputTextEle.getText()).toEqual('', 'should be blank - have not sent enter yet');
-    // broken atm, see https://github.com/angular/angular/issues/9419
+    // broken atm, see https://github.com/ng-classic/angular/issues/9419
     await inputEle.sendKeys(protractor.Key.ENTER);
     expect(await outputTextEle.getText()).toEqual('abc');
   });

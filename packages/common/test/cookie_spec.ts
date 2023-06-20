@@ -16,7 +16,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {parseCookieValue} from '@angular/common/src/cookie';
+import {parseCookieValue} from '@angular-classic/common/src/cookie';
 
 {
   describe('cookies', () => {

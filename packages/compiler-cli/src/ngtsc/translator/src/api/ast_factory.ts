@@ -7,7 +7,7 @@
  */
 
 /**
- * Used to create transpiler specific AST nodes from Angular Output AST nodes in an abstract way.
+ * Used to create transpiler specific AST nodes from Angular ClassicOutput AST nodes in an abstract way.
  *
  * Note that the `AstFactory` makes no assumptions about the target language being generated.
  * It is up to the caller to do this - e.g. only call `createTaggedTemplate()` or pass `let`|`const`

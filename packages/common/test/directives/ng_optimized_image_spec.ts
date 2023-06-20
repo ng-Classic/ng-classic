@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, DOCUMENT} from '@angular/common';
-import {RuntimeErrorCode} from '@angular/common/src/errors';
-import {PLATFORM_SERVER_ID} from '@angular/common/src/platform_id';
-import {Component, PLATFORM_ID, Provider, Type} from '@angular/core';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
-import {withHead} from '@angular/private/testing';
+import {CommonModule, DOCUMENT} from '@angular-classic/common';
+import {RuntimeErrorCode} from '@angular-classic/common/src/errors';
+import {PLATFORM_SERVER_ID} from '@angular-classic/common/src/platform_id';
+import {Component, PLATFORM_ID, Provider, Type} from '@angular-classic/core';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
+import {withHead} from '@angular-classic/private/testing';
 
 import {PRELOADED_IMAGES} from '../..//src/directives/ng_optimized_image/tokens';
 import {createImageLoader, IMAGE_LOADER, ImageLoader, ImageLoaderConfig} from '../../src/directives/ng_optimized_image/image_loaders/image_loader';
@@ -33,8 +33,8 @@ describe('Image directive', () => {
           {provide: PLATFORM_ID, useValue: PLATFORM_SERVER_ID}, {
             provide: IMAGE_LOADER,
             useValue: (config: ImageLoaderConfig) => config.width ?
-                `https://angular.io/${config.src}?width=${config.width}` :
-                `https://angular.io/${config.src}`
+                `https://angular-classic.com/${config.src}?width=${config.width}` :
+                `https://angular-classic.com/${config.src}`
           }
         ]
       });
@@ -53,7 +53,7 @@ describe('Image directive', () => {
 
       const head = _document.head;
 
-      const rewrittenSrc = `https://angular.io/${src}`;
+      const rewrittenSrc = `https://angular-classic.com/${src}`;
 
       const preloadLink = head.querySelector(`link[href="${rewrittenSrc}"]`);
 
@@ -80,13 +80,13 @@ describe('Image directive', () => {
 
       const src = `preload2/img.png`;
 
-      const rewrittenSrc = `https://angular.io/${src}`;
+      const rewrittenSrc = `https://angular-classic.com/${src}`;
 
       setupTestingModule({
         extraProviders: [
           {provide: PLATFORM_ID, useValue: PLATFORM_SERVER_ID}, {
             provide: IMAGE_LOADER,
-            useValue: (config: ImageLoaderConfig) => `https://angular.io/${config.src}`
+            useValue: (config: ImageLoaderConfig) => `https://angular-classic.com/${config.src}`
           }
         ]
       });
@@ -122,7 +122,7 @@ describe('Image directive', () => {
         extraProviders: [
           {provide: PLATFORM_ID, useValue: PLATFORM_SERVER_ID}, {
             provide: IMAGE_LOADER,
-            useValue: (config: ImageLoaderConfig) => `https://angular.io/${config.src}`
+            useValue: (config: ImageLoaderConfig) => `https://angular-classic.com/${config.src}`
           }
         ]
       });
@@ -155,7 +155,7 @@ describe('Image directive', () => {
       setupTestingModule({
         extraProviders: [{
           provide: IMAGE_LOADER,
-          useValue: (config: ImageLoaderConfig) => `https://angular.io/${config.src}`
+          useValue: (config: ImageLoaderConfig) => `https://angular-classic.com/${config.src}`
         }]
       });
 
@@ -948,7 +948,7 @@ describe('Image directive', () => {
     const imageLoader = () => {
       // We need something different from the `localhost` (as we don't want to produce
       // a preconnect warning for local environments).
-      return 'https://angular.io/assets/images/logos/angular/angular.svg';
+      return 'https://angular-classic.com/assets/images/logos/ng-classic/angular.svg';
     };
 
     it('should log a warning if there is no preconnect link for a priority image',
@@ -969,7 +969,7 @@ describe('Image directive', () => {
                  'priority images ensures that these images are delivered as soon as ' +
                  'possible. To fix this, please add the following element into the <head> ' +
                  'of the document:' +
-                 '\n  <link rel="preconnect" href="https://angular.io">');
+                 '\n  <link rel="preconnect" href="https://angular-classic.com">');
        }));
 
     it('should not log a warning if there is no preconnect link, but the image is not set as a priority',
@@ -986,7 +986,7 @@ describe('Image directive', () => {
        }));
 
     it('should log a warning if there is a preconnect, but it doesn\'t match the priority image',
-       withHead('<link rel="preconnect" href="http://angular.io">', () => {
+       withHead('<link rel="preconnect" href="http://angular-classic.com">', () => {
          setupTestingModule({imageLoader});
 
          const consoleWarnSpy = spyOn(console, 'warn');
@@ -1002,12 +1002,12 @@ describe('Image directive', () => {
                  'present for this image. Preconnecting to the origin(s) that serve priority ' +
                  'images ensures that these images are delivered as soon as possible. ' +
                  'To fix this, please add the following element into the <head> of the document:' +
-                 '\n  <link rel="preconnect" href="https://angular.io">');
+                 '\n  <link rel="preconnect" href="https://angular-classic.com">');
        }));
 
     it('should log a warning if there is no matching preconnect link for a priority image, but there is a preload tag',
        withHead(
-           '<link rel="preload" href="https://angular.io/assets/images/logos/angular/angular.svg" as="image">',
+           '<link rel="preload" href="https://angular-classic.com/assets/images/logos/ng-classic/angular.svg" as="image">',
            () => {
              setupTestingModule({imageLoader});
 
@@ -1024,11 +1024,11 @@ describe('Image directive', () => {
                      'present for this image. Preconnecting to the origin(s) that serve priority ' +
                      'images ensures that these images are delivered as soon as possible. ' +
                      'To fix this, please add the following element into the <head> of the document:' +
-                     '\n  <link rel="preconnect" href="https://angular.io">');
+                     '\n  <link rel="preconnect" href="https://angular-classic.com">');
            }));
 
     it('should not log a warning if there is a matching preconnect link for a priority image (with an extra `/` at the end)',
-       withHead('<link rel="preconnect" href="https://angular.io/">', () => {
+       withHead('<link rel="preconnect" href="https://angular-classic.com/">', () => {
          setupTestingModule({imageLoader});
 
          const consoleWarnSpy = spyOn(console, 'warn');
@@ -1061,7 +1061,7 @@ describe('Image directive', () => {
 
     describe('PRECONNECT_CHECK_BLOCKLIST token', () => {
       it(`should allow passing host names`, withHead('', () => {
-           const providers = [{provide: PRECONNECT_CHECK_BLOCKLIST, useValue: 'angular.io'}];
+           const providers = [{provide: PRECONNECT_CHECK_BLOCKLIST, useValue: 'angular-classic.com'}];
            setupTestingModule({imageLoader, extraProviders: providers});
 
            const consoleWarnSpy = spyOn(console, 'warn');
@@ -1075,7 +1075,7 @@ describe('Image directive', () => {
 
       it(`should allow passing origins`, withHead('', () => {
            const providers =
-               [{provide: PRECONNECT_CHECK_BLOCKLIST, useValue: 'https://angular.io'}];
+               [{provide: PRECONNECT_CHECK_BLOCKLIST, useValue: 'https://angular-classic.com'}];
            setupTestingModule({imageLoader, extraProviders: providers});
 
            const consoleWarnSpy = spyOn(console, 'warn');
@@ -1089,7 +1089,7 @@ describe('Image directive', () => {
 
       it(`should allow passing arrays of host names`, withHead('', () => {
            const providers =
-               [{provide: PRECONNECT_CHECK_BLOCKLIST, useValue: ['https://angular.io']}];
+               [{provide: PRECONNECT_CHECK_BLOCKLIST, useValue: ['https://angular-classic.com']}];
            setupTestingModule({imageLoader, extraProviders: providers});
 
            const consoleWarnSpy = spyOn(console, 'warn');
@@ -1103,7 +1103,7 @@ describe('Image directive', () => {
 
       it(`should allow passing nested arrays of host names`, withHead('', () => {
            const providers =
-               [{provide: PRECONNECT_CHECK_BLOCKLIST, useValue: [['https://angular.io']]}];
+               [{provide: PRECONNECT_CHECK_BLOCKLIST, useValue: [['https://angular-classic.com']]}];
            setupTestingModule({imageLoader, extraProviders: providers});
 
            const consoleWarnSpy = spyOn(console, 'warn');

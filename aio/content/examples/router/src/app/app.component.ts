@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion
-import { Component } from '@angular/core';
-import { ChildrenOutletContexts } from '@angular/router';
+import { Component } from '@angular-classic/core';
+import { ChildrenOutletContexts } from '@angular-classic/router';
 import { slideInAnimation } from './animations';
 
 @Component({

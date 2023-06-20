@@ -6,8 +6,8 @@ ts_library(
     srcs = glob(["**/*.ts"]),
     deps = [
         "//packages/core/schematics/utils",
-        "@npm//@angular-devkit/core",
-        "@npm//@angular-devkit/schematics",
+        "@npm//@angular-classic-devkit/core",
+        "@npm//@angular-classic-devkit/schematics",
         "@npm//@bazel/runfiles",
         "@npm//@types/shelljs",
         "@npm//tslint",

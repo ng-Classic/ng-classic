@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion
-import { Component, Host, Optional } from '@angular/core';
+import { Component, Host, Optional } from '@angular-classic/core';
 
 import { HeroCacheService } from './hero-cache.service';
 import { LoggerService } from './logger.service';

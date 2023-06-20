@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AnimationPlayer, ɵStyleDataMap} from '@angular/animations';
+import {AnimationPlayer, ɵStyleDataMap} from '@angular-classic/animations';
 
 import {allowPreviousPlayerStylesMerge, balancePreviousStylesIntoKeyframes, camelCaseToDashCase, copyStyles, normalizeKeyframes} from '../../util';
 import {AnimationDriver} from '../animation_driver';

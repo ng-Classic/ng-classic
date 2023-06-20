@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentProviders, makeEnvironmentProviders} from '@angular/core';
-import {provideNoopAnimations} from '@angular/platform-browser/animations';
+import {EnvironmentProviders, makeEnvironmentProviders} from '@angular-classic/core';
+import {provideNoopAnimations} from '@angular-classic/platform-browser/animations';
 
 import {PLATFORM_SERVER_PROVIDERS} from './server';
 

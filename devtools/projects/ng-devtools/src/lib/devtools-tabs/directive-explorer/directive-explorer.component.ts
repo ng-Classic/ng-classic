@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, NgZone, OnDestroy, OnInit, Output, ViewChild,} from '@angular/core';
+import {ChangeDetectorRef, Component, ElementRef, EventEmitter, Input, NgZone, OnDestroy, OnInit, Output, ViewChild,} from '@angular-classic/core';
 import {ComponentExplorerView, ComponentExplorerViewQuery, DevToolsNode, DirectivePosition, ElementPosition, Events, MessageBus, PropertyQuery, PropertyQueryTypes,} from 'protocol';
 
 import {SplitComponent} from '../../../lib/vendor/angular-split/public_api';

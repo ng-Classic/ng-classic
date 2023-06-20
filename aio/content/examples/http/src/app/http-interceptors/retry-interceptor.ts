@@ -7,7 +7,7 @@ import {
   HttpHandler,
   HttpInterceptor,
   HttpRequest,
-} from '@angular/common/http';
+} from '@angular-classic/common/http';
 import {Observable} from 'rxjs';
 /*
 // #docregion reading-context

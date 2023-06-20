@@ -1,6 +1,6 @@
 # Dependency Injection (DI): Documentation (Advanced Topics)
 
-This document talks about advanced topics related to the DI module and how it is used in Angular. You don't have to know this to use DI in Angular or independently.
+This document talks about advanced topics related to the DI module and how it is used in Angular. You don't have to know this to use DI in Angular Classicor independently.
 
 ### Key
 
@@ -148,9 +148,9 @@ parent.get(Car); // this works
 regularChild.get(Car); // this works
 ```
 
-## Angular and DI
+## Angular Classicand DI
 
-Now let's see how Angular uses DI behind the scenes.
+Now let's see how Angular Classicuses DI behind the scenes.
 
 The right mental model is to think that every DOM element has an Injector. (In practice, only interesting elements containing directives will have an injector, but this is a performance optimization)
 

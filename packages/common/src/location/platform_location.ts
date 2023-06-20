@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {inject, Injectable, InjectionToken} from '@angular/core';
+import {inject, Injectable, InjectionToken} from '@angular-classic/core';
 
 import {getDOM} from '../dom_adapter';
 import {DOCUMENT} from '../dom_tokens';
@@ -18,8 +18,8 @@ import {DOCUMENT} from '../dom_tokens';
  * `PlatformLocation` encapsulates all calls to DOM APIs, which allows the Router to be
  * platform-agnostic.
  * This means that we can have different implementation of `PlatformLocation` for the different
- * platforms that Angular supports. For example, `@angular/platform-browser` provides an
- * implementation specific to the browser environment, while `@angular/platform-server` provides
+ * platforms that Angular Classicsupports. For example, `@angular-classic/platform-browser` provides an
+ * implementation specific to the browser environment, while `@angular-classic/platform-server` provides
  * one suitable for use with server-side rendering.
  *
  * The `PlatformLocation` class is used directly by all implementations of {@link LocationStrategy}

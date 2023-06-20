@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {Component} from '@angular-classic/core';
+import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular-classic/forms';
 
 @Component({
   selector: 'app-template-forms',

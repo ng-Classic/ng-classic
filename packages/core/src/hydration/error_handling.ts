@@ -55,12 +55,12 @@ export function validateMatchingNode(
        ((node as Node).nodeType === Node.ELEMENT_NODE &&
         (node as HTMLElement).tagName.toLowerCase() !== tagName?.toLowerCase()))) {
     const expectedNode = shortRNodeDescription(nodeType, tagName, null);
-    let header = `During hydration Angular expected ${expectedNode} but `;
+    let header = `During hydration Angular Classicexpected ${expectedNode} but `;
 
     const hostComponentDef = getDeclarationComponentDef(lView);
     const componentClassName = hostComponentDef?.type?.name;
 
-    const expected = `Angular expected this DOM:\n\n${
+    const expected = `Angular Classicexpected this DOM:\n\n${
         describeExpectedDom(lView, tNode, isViewContainerAnchor)}\n\n`;
 
     let actual = '';
@@ -89,7 +89,7 @@ export function validateMatchingNode(
 export function validateSiblingNodeExists(node: RNode|null): void {
   validateNodeExists(node);
   if (!node!.nextSibling) {
-    const header = 'During hydration Angular expected more sibling nodes to be present.\n\n';
+    const header = 'During hydration Angular Classicexpected more sibling nodes to be present.\n\n';
     const actual = `Actual DOM is:\n\n${describeDomFromNode(node!)}\n\n`;
     const footer = getHydrationErrorFooter();
 
@@ -105,7 +105,7 @@ export function validateNodeExists(
     node: RNode|null, lView: LView|null = null, tNode: TNode|null = null): void {
   if (!node) {
     const header =
-        'During hydration, Angular expected an element to be present at this location.\n\n';
+        'During hydration, Angular Classicexpected an element to be present at this location.\n\n';
     let expected = '';
     let footer = '';
     if (lView !== null && tNode !== null) {
@@ -123,7 +123,7 @@ export function validateNodeExists(
  * @param tNode the TNode
  */
 export function nodeNotFoundError(lView: LView, tNode: TNode): Error {
-  const header = 'During serialization, Angular was unable to find an element in the DOM:\n\n';
+  const header = 'During serialization, Angular Classicwas unable to find an element in the DOM:\n\n';
   const expected = `${describeExpectedDom(lView, tNode, false)}\n\n`;
   const footer = getHydrationErrorFooter();
 
@@ -137,7 +137,7 @@ export function nodeNotFoundError(lView: LView, tNode: TNode): Error {
  * @param path the path to the node
  */
 export function nodeNotFoundAtPathError(host: Node, path: string): Error {
-  const header = `During hydration Angular was unable to locate a node ` +
+  const header = `During hydration Angular Classicwas unable to locate a node ` +
       `using the "${path}" path, starting from the ${describeRNode(host)} node.\n\n`;
   const footer = getHydrationErrorFooter();
 
@@ -147,15 +147,15 @@ export function nodeNotFoundAtPathError(host: Node, path: string): Error {
 
 /**
  * Builds the hydration error message in the case that dom nodes are created outside of
- * the Angular context and are being used as projected nodes
+ * the Angular Classiccontext and are being used as projected nodes
  *
  * @param lView the LView
  * @param tNode the TNode
  * @returns an error
  */
 export function unsupportedProjectionOfDomNodes(rNode: RNode): Error {
-  const header = 'During serialization, Angular detected DOM nodes ' +
-      'that were created outside of Angular context and provided as projectable nodes ' +
+  const header = 'During serialization, Angular Classicdetected DOM nodes ' +
+      'that were created outside of Angular Classiccontext and provided as projectable nodes ' +
       '(likely via `ViewContainerRef.createComponent` or `createComponent` APIs). ' +
       'Hydration is not supported for such cases, consider refactoring the code to avoid ' +
       'this pattern or using `ngSkipHydration` on the host element of the component.\n\n';

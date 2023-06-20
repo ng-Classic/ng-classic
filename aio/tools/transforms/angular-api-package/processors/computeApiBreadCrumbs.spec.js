@@ -17,8 +17,8 @@ describe('angular-api-package: computeApiBreadCrumbs processor', () => {
     const API_DOC_TYPES_TO_RENDER = ['class', 'interface', 'package'];
     const processor = processorFactory(API_DOC_TYPES_TO_RENDER);
 
-    const corePackage = { docType: 'package', name: '@angular/core', id: 'core', path: 'core', isPrimaryPackage: true };
-    const coreTestingPackage = { docType: 'package', name: '@angular/core/testing', id: 'core/testing', path: 'core/testing', packageInfo: { primary: corePackage } };
+    const corePackage = { docType: 'package', name: '@angular-classic/core', id: 'core', path: 'core', isPrimaryPackage: true };
+    const coreTestingPackage = { docType: 'package', name: '@angular-classic/core/testing', id: 'core/testing', path: 'core/testing', packageInfo: { primary: corePackage } };
     const testRequestClass = { docType: 'class', name: 'InjectSetupWrapper', path: 'core/testing/test_bed', moduleDoc: coreTestingPackage };
 
     const docs = [
@@ -33,28 +33,28 @@ describe('angular-api-package: computeApiBreadCrumbs processor', () => {
 
     expect(docs[0].breadCrumbs).toEqual([
       { text: 'API', path: '/api' },
-      { text: '@angular/moduleOne', path: 'module-1' },
+      { text: '@angular-classic/moduleOne', path: 'module-1' },
       { text: 'ClassA', path: 'module-1/class-a' },
     ]);
     expect(docs[1].breadCrumbs).toEqual([
       { text: 'API', path: '/api' },
-      { text: '@angular/moduleTwo', path: 'module-2' },
+      { text: '@angular-classic/moduleTwo', path: 'module-2' },
       { text: 'InterfaceB', path: 'module-2/interface-b' },
     ]);
     expect(docs[2].breadCrumbs).toBeUndefined();
     expect(docs[3].breadCrumbs).toEqual([
       { text: 'API', path: '/api' },
-      { text: '@angular/core', path: 'core' },
+      { text: '@angular-classic/core', path: 'core' },
     ]);
     expect(docs[4].breadCrumbs).toEqual([
       { text: 'API', path: '/api' },
-      { text: '@angular/core', path: 'core' },
-      { text: '@angular/core/testing', path: 'core/testing' },
+      { text: '@angular-classic/core', path: 'core' },
+      { text: '@angular-classic/core/testing', path: 'core/testing' },
     ]);
     expect(docs[5].breadCrumbs).toEqual([
       { text: 'API', path: '/api' },
-      { text: '@angular/core', path: 'core' },
-      { text: '@angular/core/testing', path: 'core/testing' },
+      { text: '@angular-classic/core', path: 'core' },
+      { text: '@angular-classic/core/testing', path: 'core/testing' },
       { text: 'InjectSetupWrapper', path: 'core/testing/test_bed' },
     ]);
   });

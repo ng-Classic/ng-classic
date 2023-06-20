@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpBackend, HttpEvent, HttpEventType, HttpRequest} from '@angular/common/http';
-import {Injectable} from '@angular/core';
+import {HttpBackend, HttpEvent, HttpEventType, HttpRequest} from '@angular-classic/common/http';
+import {Injectable} from '@angular-classic/core';
 import {Observable, Observer} from 'rxjs';
 
 import {HttpTestingController, RequestMatch} from './api';

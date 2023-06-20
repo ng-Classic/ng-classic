@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 // tslint:disable: no-duplicate-imports
-import {Component, NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {ServiceWorkerModule} from '@angular/service-worker';
+import {Component, NgModule} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {ServiceWorkerModule} from '@angular-classic/service-worker';
 // #docregion inject-sw-push
-import {SwPush} from '@angular/service-worker';
+import {SwPush} from '@angular-classic/service-worker';
 // #enddocregion inject-sw-push
 // tslint:enable: no-duplicate-imports
 

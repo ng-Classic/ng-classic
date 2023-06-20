@@ -7,7 +7,7 @@
  */
 
 // #docregion Component
-import {Component} from '@angular/core';
+import {Component} from '@angular-classic/core';
 
 @Component({
   selector: 'example-app',

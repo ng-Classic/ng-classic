@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {XhrFactory} from '@angular/common';
-import {Injectable} from '@angular/core';
+import {XhrFactory} from '@angular-classic/common';
+import {Injectable} from '@angular-classic/core';
 
 /**
  * A factory for `HttpXhrBackend` that uses the `XMLHttpRequest` browser API.

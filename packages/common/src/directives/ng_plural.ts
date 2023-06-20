@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Attribute, Directive, Host, Input, TemplateRef, ViewContainerRef} from '@angular/core';
+import {Attribute, Directive, Host, Input, TemplateRef, ViewContainerRef} from '@angular-classic/core';
 
 import {getPluralCategory, NgLocalization} from '../i18n/localization';
 

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CssSelector, SelectorMatcher} from '@angular/compiler/src/selector';
-import {el} from '@angular/platform-browser/testing/src/browser_util';
+import {CssSelector, SelectorMatcher} from '@angular-classic/compiler/src/selector';
+import {el} from '@angular-classic/platform-browser/testing/src/browser_util';
 
 {
   describe('SelectorMatcher', () => {

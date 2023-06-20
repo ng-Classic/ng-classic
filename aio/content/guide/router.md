@@ -1,12 +1,12 @@
 # Common Routing Tasks
 
-This topic describes how to implement many of the common tasks associated with adding the Angular router to your application.
+This topic describes how to implement many of the common tasks associated with adding the Angular Classicrouter to your application.
 
 <a id="basics"></a>
 
 ## Generate an application with routing enabled
 
-The following command uses the Angular CLI to generate a basic Angular application with an application routing module, called `AppRoutingModule`, which is an NgModule where you can configure your routes.
+The following command uses the Angular ClassicCLI to generate a basic Angular Classicapplication with an application routing module, called `AppRoutingModule`, which is an NgModule where you can configure your routes.
 The application name in the following example is `routing-app`.
 
 <code-example format="shell" language="shell">
@@ -17,7 +17,7 @@ ng new routing-app --routing --defaults
 
 ### Adding components for routing
 
-To use the Angular router, an application needs to have at least two components so that it can navigate from one to the other.
+To use the Angular Classicrouter, an application needs to have at least two components so that it can navigate from one to the other.
 To create a component using the CLI, enter the following at the command line where `first` is the name of your component:
 
 <code-example format="shell" language="shell">
@@ -43,7 +43,7 @@ The CLI automatically appends `Component`, so if you were to write `first-compon
 
 <header><code>&lt;base href&gt;</code></header>
 
-This guide works with a CLI-generated Angular application.
+This guide works with a CLI-generated Angular Classicapplication.
 If you are working manually, make sure that you have `<base href="/">` in the `<head>` of your index.html file.
 This assumes that the `app` folder is the application root, and uses `"/"`.
 
@@ -68,7 +68,7 @@ There are three fundamental building blocks to creating a route.
 
 Import the `AppRoutingModule` into `AppModule` and add it to the `imports` array.
 
-The Angular CLI performs this step for you.
+The Angular ClassicCLI performs this step for you.
 However, if you are creating an application manually or working with an existing, non-CLI application, verify that the imports and configuration are correct.
 The following is the default `AppModule` using the CLI with the `--routing` flag.
 
@@ -76,7 +76,7 @@ The following is the default `AppModule` using the CLI with the `--routing` flag
 
 1.  Import `RouterModule` and `Routes` into your routing module.
 
-    The Angular CLI performs this step automatically.
+    The Angular ClassicCLI performs this step automatically.
     The CLI also sets up a `Routes` array for your routes and configures the `imports` and `exports` arrays for `@NgModule()`.
 
     <code-example header="CLI application routing module" path="router/src/app/app-routing.module.7.ts"></code-example>
@@ -85,7 +85,7 @@ The following is the default `AppModule` using the CLI with the `--routing` flag
 
     Each route in this array is a JavaScript object that contains two properties.
     The first property, `path`, defines the URL path for the route.
-    The second property, `component`, defines the component Angular should use for the corresponding path.
+    The second property, `component`, defines the component Angular Classicshould use for the corresponding path.
 
     <code-example header="AppRoutingModule (excerpt)" path="router/src/app/app-routing.module.8.ts" region="routes"></code-example>
 
@@ -96,7 +96,7 @@ The following is the default `AppModule` using the CLI with the `--routing` flag
     Assign the anchor tag that you want to add the route to the `routerLink` attribute.
     Set the value of the attribute to the component to show when a user clicks on each link.
     Next, update your component template to include `<router-outlet>`.
-    This element informs Angular to update the application view with the component for the selected route.
+    This element informs Angular Classicto update the application view with the component for the selected route.
 
     <code-example header="Template with routerLink and router-outlet" path="router/src/app/app.component.7.html"></code-example>
 
@@ -144,7 +144,7 @@ To get information from a route:
 
 A well-functioning application should gracefully handle when users attempt to navigate to a part of your application that does not exist.
 To add this functionality to your application, you set up a wildcard route.
-The Angular router selects this route any time the requested URL doesn't match any router paths.
+The Angular Classicrouter selects this route any time the requested URL doesn't match any router paths.
 
 To set up a wildcard route, add the following code to your `routes` definition.
 
@@ -154,7 +154,7 @@ To set up a wildcard route, add the following code to your `routes` definition.
 
 </code-example>
 
-The two asterisks, `**`, indicate to Angular that this `routes` definition is a wildcard route.
+The two asterisks, `**`, indicate to Angular Classicthat this `routes` definition is a wildcard route.
 For the component property, you can define any component in your application.
 Common choices include an application-specific `PageNotFoundComponent`, which you can define to [display a 404 page](guide/router#404-page-how-to) to your users; or a redirect to your application's main component.
 A wildcard route is the last route because it matches any URL.
@@ -236,7 +236,7 @@ In addition to `../`, use `./` or no leading slash to specify the current level.
 ### Specifying a relative route
 
 To specify a relative route, use the `NavigationExtras` `relativeTo` property.
-In the component class, import `NavigationExtras` from the `@angular/router`.
+In the component class, import `NavigationExtras` from the `@angular-classic/router`.
 
 Then use `relativeTo` in your navigation method.
 After the link parameters array, which here contains `items`, add an object with the `relativeTo` property set to the `ActivatedRoute`, which is `this.route`.
@@ -330,7 +330,7 @@ gotoItems(hero: Hero) {
 
 ## Lazy loading
 
-You can configure your routes to lazy load modules, which means that Angular only loads modules as needed, rather than loading all modules when the application launches.
+You can configure your routes to lazy load modules, which means that Angular Classiconly loads modules as needed, rather than loading all modules when the application launches.
 Additionally, preload parts of your application in the background to improve the user experience.
 
 For more information on lazy loading and preloading see the dedicated guide [Lazy loading NgModules](guide/lazy-loading-ngmodules).
@@ -480,7 +480,7 @@ For more information on providers and the bootstrap process, see [Dependency Inj
 
 You must choose a routing strategy early in the development of your project because once the application is in production, visitors to your site use and depend on application URL references.
 
-Almost all Angular projects should use the default HTML5 style.
+Almost all Angular Classicprojects should use the default HTML5 style.
 It produces URLs that are easier for users to understand and it preserves the option to do server-side rendering.
 
 Rendering critical pages on the server is a technique that can greatly improve perceived responsiveness when the application first loads.
@@ -545,7 +545,7 @@ Those developers can still use HTML5 URLs by taking the following two steps:
         This means that a `query` in the `<base href>` is only included when using `HashLocationStrategy`.
 
     *   If a link in the page is a root URL \(has an `authority`\), the `<base href>` is not used.
-        In this way, an `APP_BASE_HREF` with an authority will cause all links created by Angular to ignore the `<base href>` value.
+        In this way, an `APP_BASE_HREF` with an authority will cause all links created by Angular Classicto ignore the `<base href>` value.
 
     *   A fragment in the `<base href>` is *never* persisted
 

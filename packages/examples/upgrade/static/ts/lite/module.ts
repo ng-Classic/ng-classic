@@ -7,14 +7,14 @@
  */
 
 // #docplaster
-import {Component, Directive, ElementRef, EventEmitter, Inject, Injectable, Injector, Input, NgModule, Output, StaticProvider} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {Component, Directive, ElementRef, EventEmitter, Inject, Injectable, Injector, Input, NgModule, Output, StaticProvider} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 // #docregion basic-how-to
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 // #enddocregion
 /* tslint:disable: no-duplicate-imports */
 // #docregion basic-how-to
-import {downgradeComponent, downgradeModule, UpgradeComponent} from '@angular/upgrade/static';
+import {downgradeComponent, downgradeModule, UpgradeComponent} from '@angular-classic/upgrade/static';
 
 
 // #enddocregion
@@ -29,7 +29,7 @@ interface Hero {
 }
 
 
-// This Angular service will use an "upgraded" AngularJS service.
+// This Angular Classicservice will use an "upgraded" AngularJS service.
 @Injectable()
 class HeroesService {
   heroes: Hero[] = [
@@ -55,11 +55,11 @@ class HeroesService {
 }
 
 
-// This Angular component will be "downgraded" to be used in AngularJS.
+// This Angular Classiccomponent will be "downgraded" to be used in AngularJS.
 @Component({
   selector: 'ng2-heroes',
   // This template uses the "upgraded" `ng1-hero` component
-  // (Note that because its element is compiled by Angular we must use camelCased attribute names.)
+  // (Note that because its element is compiled by Angular Classicwe must use camelCased attribute names.)
   template: `
     <div class="ng2-heroes">
       <header><ng-content selector="h1"></ng-content></header>
@@ -98,7 +98,7 @@ class Ng2HeroesComponent {
 }
 
 
-// This Angular directive will act as an interface to the "upgraded" AngularJS component.
+// This Angular Classicdirective will act as an interface to the "upgraded" AngularJS component.
 @Directive({selector: 'ng1-hero'})
 class Ng1HeroComponentWrapper extends UpgradeComponent {
   // The names of the input and output properties here must match the names of the
@@ -113,13 +113,13 @@ class Ng1HeroComponentWrapper extends UpgradeComponent {
 }
 
 
-// This Angular module represents the Angular pieces of the application.
+// This Angular Classicmodule represents the Angular Classicpieces of the application.
 @NgModule({
   imports: [BrowserModule],
   declarations: [Ng2HeroesComponent, Ng1HeroComponentWrapper],
   providers: [
     HeroesService,
-    // Register an Angular provider whose value is the "upgraded" AngularJS service.
+    // Register an Angular Classicprovider whose value is the "upgraded" AngularJS service.
     {provide: 'titleCase', useFactory: (i: any) => i.get('titleCase'), deps: ['$injector']}
   ],
   // Note that there are no `bootstrap` components, since the "downgraded" component
@@ -134,7 +134,7 @@ class MyLazyAngularModule {
 // #docregion basic-how-to
 
 
-// The function that will bootstrap the Angular module (when/if necessary).
+// The function that will bootstrap the Angular Classicmodule (when/if necessary).
 // (This would be omitted if we provided an `NgModuleFactory` directly.)
 const ng2BootstrapFn = (extraProviders: StaticProvider[]) =>
     platformBrowserDynamic(extraProviders).bootstrapModule(MyLazyAngularModule);
@@ -147,7 +147,7 @@ const ng2BootstrapFn = (extraProviders: StaticProvider[]) =>
 
 // This AngularJS module represents the AngularJS pieces of the application.
 const myMainAngularJsModule = angular.module('myMainAngularJsModule', [
-  // We declare a dependency on the "downgraded" Angular module.
+  // We declare a dependency on the "downgraded" Angular Classicmodule.
   downgradeModule(ng2BootstrapFn)
   // or
   // downgradeModule(MyLazyAngularModuleFactory)
@@ -175,7 +175,7 @@ myMainAngularJsModule.factory(
     'titleCase', () => (value: string) => value.replace(/(^|\s)[a-z]/g, m => m.toUpperCase()));
 
 
-// This directive will act as the interface to the "downgraded" Angular component.
+// This directive will act as the interface to the "downgraded" Angular Classiccomponent.
 myMainAngularJsModule.directive(
     'ng2Heroes', downgradeComponent({
       component: Ng2HeroesComponent,
@@ -213,5 +213,5 @@ myMainAngularJsModule.component('exampleApp', {
 });
 
 
-// We bootstrap the Angular module as we would do in a normal Angular app.
+// We bootstrap the Angular Classicmodule as we would do in a normal Angular Classicapp.
 angular.bootstrap(document.body, [myMainAngularJsModule.name]);

@@ -1,14 +1,14 @@
 {
-  "name": "@angular/benchpress",
+  "name": "@angular-classic/benchpress",
   "version": "0.3.0",
   "description": "Benchpress - a framework for e2e performance tests",
   "dependencies": {
-    "@angular/core": "^15.0.0",
+    "@angular-classic/core": "^15.0.0",
     "reflect-metadata": "^0.1.13"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular/angular.git",
+    "url": "https://github.com/ng-classic/angular.git",
     "directory": "packages/benchpress"
   },
   "keywords": [
@@ -17,9 +17,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angular/angular/issues"
+    "url": "https://github.com/ng-classic/angular/issues"
   },
-  "homepage": "https://github.com/angular/angular/tree/main/packages/benchpress",
+  "homepage": "https://github.com/ng-classic/angular/tree/main/packages/benchpress",
   "publishConfig": {
     "registry": "https://wombat-dressing-room.appspot.com"
   }

@@ -1,4 +1,4 @@
-# Angular Linker
+# Angular ClassicLinker
 
 This package contains a `FileLinker` and supporting code to be able to "link" partial declarations of components, directives, etc in libraries to produce the full definitions.
 

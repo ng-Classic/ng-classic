@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {enableProdMode} from '@angular/core';
-import {platformBrowser} from '@angular/platform-browser';
+import {enableProdMode} from '@angular-classic/core';
+import {platformBrowser} from '@angular-classic/platform-browser';
 
 import {init} from './init';
 import {AppModule} from './tree';

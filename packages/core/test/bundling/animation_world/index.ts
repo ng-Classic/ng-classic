@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import '@angular/core/test/bundling/util/src/reflect_metadata';
+import '@angular-classic/core/test/bundling/util/src/reflect_metadata';
 
-import {ApplicationRef, Component, Directive, ElementRef, HostBinding, HostListener, NgModule, ɵdetectChanges as detectChanges} from '@angular/core';
-import {BrowserModule, platformBrowser} from '@angular/platform-browser';
+import {ApplicationRef, Component, Directive, ElementRef, HostBinding, HostListener, NgModule, ɵdetectChanges as detectChanges} from '@angular-classic/core';
+import {BrowserModule, platformBrowser} from '@angular-classic/platform-browser';
 
 @Directive({
   selector: '[make-color-grey]',

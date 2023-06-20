@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {XhrFactory} from '@angular/common';
-import {Injectable, Provider} from '@angular/core';
+import {XhrFactory} from '@angular-classic/common';
+import {Injectable, Provider} from '@angular-classic/core';
 
 @Injectable()
 export class ServerXhr implements XhrFactory {

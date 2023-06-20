@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
 import { LocalStorage } from 'app/shared/storage.service';
 import { CookiesPopupComponent, storageKey } from './cookies-popup.component';
 

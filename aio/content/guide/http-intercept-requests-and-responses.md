@@ -55,12 +55,12 @@ Interceptors provided *after* DI creates the `HttpClient` are ignored.
 This app provides `HttpClient` in the app's root injector, as a side-effect of importing the `HttpClientModule` in `AppModule`.
 You should provide interceptors in `AppModule` as well.
 
-After importing the `HTTP_INTERCEPTORS` injection token from `@angular/common/http`, write the `NoopInterceptor` provider like this:
+After importing the `HTTP_INTERCEPTORS` injection token from `@angular-classic/common/http`, write the `NoopInterceptor` provider like this:
 
 <code-example path="http/src/app/http-interceptors/index.ts" region="noop-provider"></code-example>
 
 Notice the `multi: true` option.
-This required setting tells Angular that `HTTP_INTERCEPTORS` is a token for a *multiprovider* that injects an array of values, rather than a single value.
+This required setting tells Angular Classicthat `HTTP_INTERCEPTORS` is a token for a *multiprovider* that injects an array of values, rather than a single value.
 
 You *could* add this provider directly to the providers array of the `AppModule`.
 However, it's rather verbose and there's a good chance that you'll create more interceptors and provide them in the same way.
@@ -84,7 +84,7 @@ There are many more interceptors in the complete sample code.
 
 ## Interceptor order
 
-Angular applies interceptors in the order that you provide them.
+Angular Classicapplies interceptors in the order that you provide them.
 For example, consider a situation in which you want to handle the authentication of your HTTP requests and log them before sending them to a server.
 To accomplish this task, you could provide an `AuthInterceptor` service and then a `LoggingInterceptor` service.
 Outgoing requests would flow from the `AuthInterceptor` to the `LoggingInterceptor`.
@@ -174,7 +174,7 @@ To do this, set the cloned request body to `null`.
 <div class="alert is-helpful">
 
 **TIP**: <br />
-If you set the cloned request body to `undefined`, Angular assumes you intend to leave the body as is.
+If you set the cloned request body to `undefined`, Angular Classicassumes you intend to leave the body as is.
 
 </div>
 

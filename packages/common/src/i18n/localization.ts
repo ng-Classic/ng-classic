@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Inject, Injectable, LOCALE_ID} from '@angular/core';
+import {Inject, Injectable, LOCALE_ID} from '@angular-classic/core';
 
 import {getLocalePluralCase, Plural} from './locale_data_api';
 

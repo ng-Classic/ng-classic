@@ -1,6 +1,6 @@
-/* eslint-disable @angular-eslint/no-host-metadata-property */
+/* eslint-disable @angular-classic-eslint/no-host-metadata-property */
 // #docregion progressbar-component
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular-classic/core';
 
 /**
  * Example progressbar component.

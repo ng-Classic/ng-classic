@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, destroyPlatform, ErrorHandler, Inject, Injectable, InjectionToken, NgModule, NgZone, PlatformRef} from '@angular/core';
-import {R3Injector} from '@angular/core/src/di/r3_injector';
-import {NoopNgZone} from '@angular/core/src/zone/ng_zone';
-import {withBody} from '@angular/private/testing';
+import {Component, destroyPlatform, ErrorHandler, Inject, Injectable, InjectionToken, NgModule, NgZone, PlatformRef} from '@angular-classic/core';
+import {R3Injector} from '@angular-classic/core/src/di/r3_injector';
+import {NoopNgZone} from '@angular-classic/core/src/zone/ng_zone';
+import {withBody} from '@angular-classic/private/testing';
 
 import {bootstrapApplication, BrowserModule} from '../../src/browser';
 

@@ -1,5 +1,5 @@
 // TODO: Feature Componetized like HeroCenter
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular-classic/core';
 import { Observable } from 'rxjs';
 
 import { HeroService } from '../hero.service';

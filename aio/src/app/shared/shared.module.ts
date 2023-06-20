@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { SelectComponent } from './select/select.component';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular-classic/material/icon';
 
 @NgModule({
   imports: [

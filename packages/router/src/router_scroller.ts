@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ViewportScroller} from '@angular/common';
-import {Injectable, InjectionToken, NgZone, OnDestroy} from '@angular/core';
+import {ViewportScroller} from '@angular-classic/common';
+import {Injectable, InjectionToken, NgZone, OnDestroy} from '@angular-classic/core';
 import {Unsubscribable} from 'rxjs';
 
 import {NavigationEnd, NavigationSkipped, NavigationSkippedCode, NavigationStart, Scroll} from './events';

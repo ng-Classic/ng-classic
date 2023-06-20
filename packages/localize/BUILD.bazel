@@ -11,7 +11,7 @@ ts_library(
             "src/**/*.ts",
         ],
     ),
-    module_name = "@angular/localize",
+    module_name = "@angular-classic/localize",
     deps = [
         "//packages/localize/src/localize",
         "//packages/localize/src/utils",
@@ -27,7 +27,7 @@ types_bundle(
 
 ng_package(
     name = "npm_package",
-    package_name = "@angular/localize",
+    package_name = "@angular-classic/localize",
     srcs = [
         "package.json",
         ":api_type_definitions",

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CustomTransformers, defaultGatherDiagnostics, Program} from '@angular/compiler-cli';
-import * as api from '@angular/compiler-cli/src/transformers/api';
+import {CustomTransformers, defaultGatherDiagnostics, Program} from '@angular-classic/compiler-cli';
+import * as api from '@angular-classic/compiler-cli/src/transformers/api';
 import * as tsickle from 'tsickle';
 import ts from 'typescript';
 

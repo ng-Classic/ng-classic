@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BoundTarget, DirectiveMeta, ParseSourceFile} from '@angular/compiler';
+import {BoundTarget, DirectiveMeta, ParseSourceFile} from '@angular-classic/compiler';
 
 import {Reference} from '../../imports';
 import {ClassDeclaration} from '../../reflection';

@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, HashLocationStrategy, Location, LocationStrategy} from '@angular/common';
-import {provideLocationMocks, SpyLocation} from '@angular/common/testing';
-import {ChangeDetectionStrategy, Component, EnvironmentInjector, inject as coreInject, Inject, Injectable, InjectionToken, NgModule, NgModuleRef, NgZone, OnDestroy, QueryList, Type, ViewChild, ViewChildren, ɵConsole as Console, ɵNoopNgZone as NoopNgZone} from '@angular/core';
-import {ComponentFixture, fakeAsync, inject, TestBed, tick} from '@angular/core/testing';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
-import {ActivatedRoute, ActivatedRouteSnapshot, ActivationEnd, ActivationStart, ChildActivationEnd, ChildActivationStart, DefaultUrlSerializer, DetachedRouteHandle, Event, GuardsCheckEnd, GuardsCheckStart, Navigation, NavigationCancel, NavigationCancellationCode, NavigationEnd, NavigationError, NavigationSkipped, NavigationStart, ParamMap, Params, PreloadAllModules, PreloadingStrategy, PRIMARY_OUTLET, ResolveEnd, ResolveStart, RouteConfigLoadEnd, RouteConfigLoadStart, Router, RouteReuseStrategy, RouterEvent, RouterLink, RouterLinkActive, RouterModule, RouterOutlet, RouterPreloader, RouterStateSnapshot, RoutesRecognized, RunGuardsAndResolvers, UrlHandlingStrategy, UrlSegment, UrlSegmentGroup, UrlSerializer, UrlTree} from '@angular/router';
+import {CommonModule, HashLocationStrategy, Location, LocationStrategy} from '@angular-classic/common';
+import {provideLocationMocks, SpyLocation} from '@angular-classic/common/testing';
+import {ChangeDetectionStrategy, Component, EnvironmentInjector, inject as coreInject, Inject, Injectable, InjectionToken, NgModule, NgModuleRef, NgZone, OnDestroy, QueryList, Type, ViewChild, ViewChildren, ɵConsole as Console, ɵNoopNgZone as NoopNgZone} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, inject, TestBed, tick} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
+import {ActivatedRoute, ActivatedRouteSnapshot, ActivationEnd, ActivationStart, ChildActivationEnd, ChildActivationStart, DefaultUrlSerializer, DetachedRouteHandle, Event, GuardsCheckEnd, GuardsCheckStart, Navigation, NavigationCancel, NavigationCancellationCode, NavigationEnd, NavigationError, NavigationSkipped, NavigationStart, ParamMap, Params, PreloadAllModules, PreloadingStrategy, PRIMARY_OUTLET, ResolveEnd, ResolveStart, RouteConfigLoadEnd, RouteConfigLoadStart, Router, RouteReuseStrategy, RouterEvent, RouterLink, RouterLinkActive, RouterModule, RouterOutlet, RouterPreloader, RouterStateSnapshot, RoutesRecognized, RunGuardsAndResolvers, UrlHandlingStrategy, UrlSegment, UrlSegmentGroup, UrlSerializer, UrlTree} from '@angular-classic/router';
 import {concat, EMPTY, Observable, Observer, of, Subscription} from 'rxjs';
 import {delay, filter, first, last, map, mapTo, takeWhile, tap} from 'rxjs/operators';
 
@@ -278,7 +278,7 @@ describe('Integration', () => {
          location.back();
          advance(fixture);
 
-         // Angular does not support restoring state to the primitive.
+         // Angular Classicdoes not support restoring state to the primitive.
          expect(navigation.extras.state).toEqual(undefined);
          expect(location.getState()).toEqual({navigationId: 3});
        })));
@@ -365,7 +365,7 @@ describe('Integration', () => {
     });
 
     describe('with NgZone enabled', () => {
-      it('should warn when triggered outside Angular zone',
+      it('should warn when triggered outside Angular Classiczone',
          fakeAsync(inject([Router], (router: Router) => {
            isInAngularZone = false;
            router.navigateByUrl('/simple');
@@ -373,10 +373,10 @@ describe('Integration', () => {
            expect(warnings.length).toBe(1);
            expect(warnings[0])
                .toBe(
-                   `Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?`);
+                   `Navigation triggered outside Angular Classiczone, did you forget to call 'ngZone.run()'?`);
          })));
 
-      it('should not warn when triggered inside Angular zone',
+      it('should not warn when triggered inside Angular Classiczone',
          fakeAsync(inject([Router], (router: Router) => {
            router.navigateByUrl('/simple');
 
@@ -389,7 +389,7 @@ describe('Integration', () => {
         TestBed.overrideProvider(NgZone, {useValue: new NoopNgZone()});
       });
 
-      it('should not warn when triggered outside Angular zone',
+      it('should not warn when triggered outside Angular Classiczone',
          fakeAsync(inject([Router], (router: Router) => {
            isInAngularZone = false;
            router.navigateByUrl('/simple');
@@ -1630,7 +1630,7 @@ describe('Integration', () => {
        router.navigateByUrl('/user/victor');
        expect(router.getCurrentNavigation()).not.toBe(null);
        router.navigateByUrl('/user/fedor');
-       // Due to https://github.com/angular/angular/issues/29389, this would be `false`
+       // Due to https://github.com/ng-classic/angular/issues/29389, this would be `false`
        // when running a second navigation.
        expect(router.getCurrentNavigation()).not.toBe(null);
        advance(fixture);
@@ -4594,7 +4594,7 @@ describe('Integration', () => {
          })));
 
       // Regression where navigateByUrl with false CanLoad no longer resolved `false` value on
-      // navigateByUrl promise: https://github.com/angular/angular/issues/26284
+      // navigateByUrl promise: https://github.com/ng-classic/angular/issues/26284
       it('should resolve navigateByUrl promise after CanLoad executes',
          fakeAsync(inject([Router], (router: Router) => {
            @Component({selector: 'lazy', template: 'lazy-loaded'})
@@ -5732,7 +5732,7 @@ describe('Integration', () => {
          expect(cmInj.get(Child, '-')).toEqual('-');
        })));
 
-    // https://github.com/angular/angular/issues/12889
+    // https://github.com/ng-classic/angular/issues/12889
     it('should create a single instance of lazy-loaded modules',
        fakeAsync(inject([Router, Location], (router: Router, location: Location) => {
          @Component(
@@ -5767,7 +5767,7 @@ describe('Integration', () => {
          expect(LoadedModule.instances).toEqual(1);
        })));
 
-    // https://github.com/angular/angular/issues/13870
+    // https://github.com/ng-classic/angular/issues/13870
     it('should create a single instance of guards for lazy-loaded modules',
        fakeAsync(inject([Router, Location], (router: Router, location: Location) => {
          @Injectable()

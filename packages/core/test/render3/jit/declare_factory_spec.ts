@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, ɵcreateInjector, ɵɵFactoryTarget, ɵɵngDeclareFactory} from '@angular/core';
-import {ɵɵdefineInjector} from '@angular/core/src/di';
-import {setCurrentInjector} from '@angular/core/src/di/injector_compatibility';
+import {Injector, ɵcreateInjector, ɵɵFactoryTarget, ɵɵngDeclareFactory} from '@angular-classic/core';
+import {ɵɵdefineInjector} from '@angular-classic/core/src/di';
+import {setCurrentInjector} from '@angular-classic/core/src/di/injector_compatibility';
 
 describe('Factory declaration jit compilation', () => {
   let previousInjector: Injector|null|undefined;

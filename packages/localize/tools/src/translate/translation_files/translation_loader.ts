@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AbsoluteFsPath, ReadonlyFileSystem} from '@angular/compiler-cli/private/localize';
+import {AbsoluteFsPath, ReadonlyFileSystem} from '@angular-classic/compiler-cli/private/localize';
 import {DiagnosticHandlingStrategy, Diagnostics} from '../../diagnostics';
 import {TranslationBundle} from '../translator';
 

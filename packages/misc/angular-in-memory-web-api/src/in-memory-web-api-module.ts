@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {XhrFactory} from '@angular/common';
-import {HttpBackend} from '@angular/common/http';
-import {ModuleWithProviders, NgModule, Type} from '@angular/core';
+import {XhrFactory} from '@angular-classic/common';
+import {HttpBackend} from '@angular-classic/common/http';
+import {ModuleWithProviders, NgModule, Type} from '@angular-classic/core';
 
 import {httpClientInMemBackendServiceFactory} from './http-client-in-memory-web-api-module';
 import {InMemoryBackendConfig, InMemoryBackendConfigArgs, InMemoryDbService} from './interfaces';
@@ -16,7 +16,7 @@ import {InMemoryBackendConfig, InMemoryBackendConfigArgs, InMemoryDbService} fro
 @NgModule()
 export class InMemoryWebApiModule {
   /**
-   *  Redirect BOTH Angular `Http` and `HttpClient` XHR calls
+   *  Redirect BOTH Angular Classic`Http` and `HttpClient` XHR calls
    *  to in-memory data store that implements `InMemoryDbService`.
    *  with class that implements InMemoryDbService and creates an in-memory database.
    *
@@ -50,7 +50,7 @@ export class InMemoryWebApiModule {
    *
    * Enable and configure the in-memory web api in a lazy-loaded feature module.
    * Same as `forRoot`.
-   * This is a feel-good method so you can follow the Angular style guide for lazy-loaded modules.
+   * This is a feel-good method so you can follow the Angular Classicstyle guide for lazy-loaded modules.
    */
   static forFeature(dbCreator: Type<InMemoryDbService>, options?: InMemoryBackendConfigArgs):
       ModuleWithProviders<InMemoryWebApiModule> {

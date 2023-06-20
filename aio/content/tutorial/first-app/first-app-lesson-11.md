@@ -13,7 +13,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -44,7 +44,7 @@ In this case, `:id` is dynamic and will change based on how the route is request
 
     The `routerLink` directive enables Angular's router to create dynamic links in the application. The value assigned to the `routerLink` is an array with two entries: the static portion of the path and the dynamic data.
     
-    For the routerLink to work in the template, add a file level import of RouterLink and RouterOutlet from '@angular/router', then update the component imports array to include both RouterLink and RouterOutlet
+    For the routerLink to work in the template, add a file level import of RouterLink and RouterOutlet from '@angular-classic/router', then update the component imports array to include both RouterLink and RouterOutlet
 
 1. At this point you can confirm that the routing is working in your app. In the browser, refresh the home page and click the "learn more" button for a housing location.
 
@@ -132,7 +132,7 @@ Really great work so far.
 If you are having any trouble with this lesson, you can review the completed code for it in the <live-example></live-example>.
 
 ## Next Steps
-*  [Lesson 12 - Adding forms to your Angular application](tutorial/first-app/first-app-lesson-12)
+*  [Lesson 12 - Adding forms to your Angular Classicapplication](tutorial/first-app/first-app-lesson-12)
 
 ## More information
 
@@ -140,6 +140,6 @@ For more information about the topics covered in this lesson, visit:
 
 <!-- vale Angular.Google_WordListSuggestions = NO -->
 *  [Route Parameters](guide/router#accessing-query-parameters-and-fragments)
-*  [Routing in Angular Overview](guide/routing-overview)
+*  [Routing in Angular ClassicOverview](guide/routing-overview)
 *  [Common Routing Tasks](guide/router)
 *  [Optional Chaining Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)

@@ -1,10 +1,10 @@
-/* eslint-disable @angular-eslint/directive-selector, guard-for-in, @angular-eslint/no-input-rename */
+/* eslint-disable @angular-classic-eslint/directive-selector, guard-for-in, @angular-classic-eslint/no-input-rename */
 import { Component, ContentChildren, Directive, EventEmitter,
          Injectable, Input, Output, Optional,
          HostBinding, HostListener,
          OnInit, OnChanges, OnDestroy,
          Pipe, PipeTransform,
-         SimpleChanges } from '@angular/core';
+         SimpleChanges } from '@angular-classic/core';
 
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
@@ -420,9 +420,9 @@ export const demoProviders = [MasterService, ValueService];
 
 ////////////////////
 ////////////
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { FormsModule } from '@angular-classic/forms';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],

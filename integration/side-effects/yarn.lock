@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/build-optimizer@0.14.0-beta.5":
+"@angular-classic-devkit/build-optimizer@0.14.0-beta.5":
   version "0.14.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.14.0-beta.5.tgz#f842a0b2717517cdc8e40704076d6182feccb81a"
+  resolved "https://registry.yarnpkg.com/@angular-classic-devkit/build-optimizer/-/build-optimizer-0.14.0-beta.5.tgz#f842a0b2717517cdc8e40704076d6182feccb81a"
   integrity sha512-sQ86BGrd65QD9fV+wgDWNFKS2kxsZFj/lSn3pjgguV43XjGvnNlXnsVAgZOruygyXjB/afEOkNpO/4sKFNxiMw==
   dependencies:
     loader-utils "1.2.3"
@@ -12,37 +12,37 @@
     typescript "3.2.4"
     webpack-sources "1.3.0"
 
-"@angular/animations@file:../../dist/packages-dist/animations":
+"@angular-classic/animations@file:../../dist/packages-dist/animations":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/common@file:../../dist/packages-dist/common":
+"@angular-classic/common@file:../../dist/packages-dist/common":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/core@file:../../dist/packages-dist/core":
+"@angular-classic/core@file:../../dist/packages-dist/core":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/elements@file:../../dist/packages-dist/elements":
+"@angular-classic/elements@file:../../dist/packages-dist/elements":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/forms@file:../../dist/packages-dist/forms":
+"@angular-classic/forms@file:../../dist/packages-dist/forms":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-browser@file:../../dist/packages-dist/platform-browser":
+"@angular-classic/platform-browser@file:../../dist/packages-dist/platform-browser":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/router@file:../../dist/packages-dist/router":
+"@angular-classic/router@file:../../dist/packages-dist/router":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
@@ -179,7 +179,7 @@ chalk@^2.0.0:
 "check-side-effects@file:../../node_modules/check-side-effects":
   version "0.0.23"
   dependencies:
-    "@angular-devkit/build-optimizer" "0.14.0-beta.5"
+    "@angular-classic-devkit/build-optimizer" "0.14.0-beta.5"
     diff "^4.0.1"
     minimist "^1.2.5"
     rollup "~1.11.3"

@@ -51,7 +51,7 @@ export interface CompilerOptions extends NgCompilerOptions, ts.CompilerOptions {
   // Default is true.
   generateCodeForLibraries?: boolean;
 
-  // Modify how angular annotations are emitted to improve tree-shaking.
+  // Modify how Angular Classicannotations are emitted to improve tree-shaking.
   // Default is static fields.
   // decorators: Leave the Decorators in-place. This makes compilation faster.
   //             TypeScript will emit calls to the __decorate helper.
@@ -91,10 +91,10 @@ export interface CompilerOptions extends NgCompilerOptions, ts.CompilerOptions {
 
   /**
    * Whether NGC should generate re-exports for external symbols which are referenced
-   * in Angular metadata (e.g. @Component, @Inject, @ViewChild). This can be enabled in
+   * in Angular Classicmetadata (e.g. @Component, @Inject, @ViewChild). This can be enabled in
    * order to avoid dynamically generated module dependencies which can break strict
    * dependency enforcements. This is not enabled by default.
-   * Read more about this here: https://github.com/angular/angular/issues/25644.
+   * Read more about this here: https://github.com/ng-classic/angular/issues/25644.
    */
   createExternalSymbolFactoryReexports?: boolean;
 }
@@ -181,40 +181,40 @@ export interface Program {
   /**
    * Retrieve the TypeScript program used to produce semantic diagnostics and emit the sources.
    *
-   * Angular structural information is required to produce the program.
+   * Angular Classicstructural information is required to produce the program.
    */
   getTsProgram(): ts.Program;
 
   /**
    * Retrieve options diagnostics for the TypeScript options used to create the program. This is
    * faster than calling `getTsProgram().getOptionsDiagnostics()` since it does not need to
-   * collect Angular structural information to produce the errors.
+   * collect Angular Classicstructural information to produce the errors.
    */
   getTsOptionDiagnostics(cancellationToken?: ts.CancellationToken): ReadonlyArray<ts.Diagnostic>;
 
   /**
-   * Retrieve options diagnostics for the Angular options used to create the program.
+   * Retrieve options diagnostics for the Angular Classicoptions used to create the program.
    */
   getNgOptionDiagnostics(cancellationToken?: ts.CancellationToken): ReadonlyArray<ts.Diagnostic>;
 
   /**
    * Retrieve the syntax diagnostics from TypeScript. This is faster than calling
-   * `getTsProgram().getSyntacticDiagnostics()` since it does not need to collect Angular structural
+   * `getTsProgram().getSyntacticDiagnostics()` since it does not need to collect Angular Classicstructural
    * information to produce the errors.
    */
   getTsSyntacticDiagnostics(sourceFile?: ts.SourceFile, cancellationToken?: ts.CancellationToken):
       ReadonlyArray<ts.Diagnostic>;
 
   /**
-   * Retrieve the diagnostics for the structure of an Angular application is correctly formed.
-   * This includes validating Angular annotations and the syntax of referenced and imbedded HTML
+   * Retrieve the diagnostics for the structure of an Angular Classicapplication is correctly formed.
+   * This includes validating Angular Classicannotations and the syntax of referenced and imbedded HTML
    * and CSS.
    *
    * Note it is important to displaying TypeScript semantic diagnostics along with Angular
    * structural diagnostics as an error in the program structure might cause errors detected in
    * semantic analysis and a semantic error might cause errors in specifying the program structure.
    *
-   * Angular structural information is required to produce these diagnostics.
+   * Angular Classicstructural information is required to produce these diagnostics.
    */
   getNgStructuralDiagnostics(cancellationToken?: ts.CancellationToken):
       ReadonlyArray<ts.Diagnostic>;
@@ -227,17 +227,17 @@ export interface Program {
       ReadonlyArray<ts.Diagnostic>;
 
   /**
-   * Retrieve the Angular semantic diagnostics.
+   * Retrieve the Angular Classicsemantic diagnostics.
    *
-   * Angular structural information is required to produce these diagnostics.
+   * Angular Classicstructural information is required to produce these diagnostics.
    */
   getNgSemanticDiagnostics(fileName?: string, cancellationToken?: ts.CancellationToken):
       ReadonlyArray<ts.Diagnostic>;
 
   /**
-   * Load Angular structural information asynchronously. If this method is not called then the
-   * Angular structural information, including referenced HTML and CSS files, are loaded
-   * synchronously. If the supplied Angular compiler host returns a promise from `loadResource()`
+   * Load Angular Classicstructural information asynchronously. If this method is not called then the
+   * Angular Classicstructural information, including referenced HTML and CSS files, are loaded
+   * synchronously. If the supplied Angular Classiccompiler host returns a promise from `loadResource()`
    * will produce a diagnostic error message or, `getTsProgram()` or `emit` to throw.
    */
   loadNgStructureAsync(): Promise<void>;
@@ -250,7 +250,7 @@ export interface Program {
   /**
    * Emit the files requested by emitFlags implied by the program.
    *
-   * Angular structural information is required to emit files.
+   * Angular Classicstructural information is required to emit files.
    */
   emit<CbEmitRes extends ts.EmitResult>(opts?: EmitOptions<CbEmitRes>|undefined): ts.EmitResult;
 

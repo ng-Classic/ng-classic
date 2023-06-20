@@ -2,15 +2,15 @@
 #
 # Use of this source code is governed by an MIT-style license that can be
 # found in the LICENSE file at https://angular.io/license
-"""Angular integration testing
+"""Angular Classicintegration testing
 """
 
 load("//integration:npm_package_archives.bzl", "NPM_PACKAGE_ARCHIVES", "npm_package_archive_label")
-load("@npm//@angular/build-tooling/bazel/integration:index.bzl", "integration_test")
+load("@npm//@angular-classic/build-tooling/bazel/integration:index.bzl", "integration_test")
 load("//:packages.bzl", "INTEGRATION_PACKAGES")
 
 def _ng_integration_test(name, setup_chromium = False, **kwargs):
-    "Set defaults for the npm_integration_test common to the angular repo"
+    "Set defaults for the npm_integration_test common to the Angular Classicrepo"
     pinned_npm_packages = kwargs.pop("pinned_npm_packages", [])
     use_view_engine_packages = kwargs.pop("use_view_engine_packages", [])
     toolchains = kwargs.pop("toolchains", [])
@@ -20,8 +20,8 @@ def _ng_integration_test(name, setup_chromium = False, **kwargs):
     data = kwargs.pop("data", [])
 
     if setup_chromium:
-        data.append("@npm//@angular/build-tooling/bazel/browsers/chromium")
-        toolchains.append("@npm//@angular/build-tooling/bazel/browsers/chromium:toolchain_alias")
+        data.append("@npm//@angular-classic/build-tooling/bazel/browsers/chromium")
+        toolchains.append("@npm//@angular-classic/build-tooling/bazel/browsers/chromium:toolchain_alias")
         environment.update({
             "CHROMEDRIVER_BIN": "$(CHROMEDRIVER)",
             "CHROME_BIN": "$(CHROMIUM)",
@@ -59,7 +59,7 @@ def _ng_integration_test(name, setup_chromium = False, **kwargs):
         if pkg not in pinned_npm_packages:
             npm_packages["@npm//:" + npm_package_archive_label(pkg)] = pkg
     for pkg in INTEGRATION_PACKAGES:
-        # If the generated Angular framework package is listed in the `use_view_engine_packages`
+        # If the generated Angular Classicframework package is listed in the `use_view_engine_packages`
         # list, we will not use the local-built NPM package, but instead map to the
         # corresponding View Engine v12.x package from the `@npm//` workspace.
         if pkg in use_view_engine_packages:

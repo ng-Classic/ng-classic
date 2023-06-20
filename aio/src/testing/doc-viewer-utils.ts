@@ -1,5 +1,5 @@
-import { Component, NgModule, ViewChild } from '@angular/core';
-import { Title, Meta } from '@angular/platform-browser';
+import { Component, NgModule, ViewChild } from '@angular-classic/core';
+import { Title, Meta } from '@angular-classic/platform-browser';
 
 import { Observable } from 'rxjs';
 

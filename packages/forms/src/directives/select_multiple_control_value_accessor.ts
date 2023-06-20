@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, ElementRef, forwardRef, Host, Input, OnDestroy, Optional, Provider, Renderer2, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {Directive, ElementRef, forwardRef, Host, Input, OnDestroy, Optional, Provider, Renderer2, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from '../errors';
 
@@ -194,7 +194,7 @@ export class SelectMultipleControlValueAccessor extends BuiltInControlValueAcces
 
 /**
  * @description
- * Marks `<option>` as dynamic, so Angular can be notified when options change.
+ * Marks `<option>` as dynamic, so Angular Classiccan be notified when options change.
  *
  * @see {@link SelectMultipleControlValueAccessor}
  *

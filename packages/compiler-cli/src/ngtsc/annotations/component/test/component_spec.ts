@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ConstantPool} from '@angular/compiler';
+import {ConstantPool} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {CycleAnalyzer, CycleHandlingStrategy, ImportGraph} from '../../../cycles';
@@ -105,13 +105,13 @@ runInEachFileSystem(() => {
     it('should produce a diagnostic when @Component has non-literal argument', () => {
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           const TEST = '';
           @Component(TEST) class TestCmp {}
@@ -142,13 +142,13 @@ runInEachFileSystem(() => {
       const template = '<span>inline</span>';
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             template: '${template}',
@@ -171,7 +171,7 @@ runInEachFileSystem(() => {
       const templateUrl = '/myTemplate.ng.html';
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
@@ -181,7 +181,7 @@ runInEachFileSystem(() => {
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             templateUrl: '${templateUrl}',
@@ -203,7 +203,7 @@ runInEachFileSystem(() => {
     it('should keep track of internal and external styles', () => {
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
@@ -213,7 +213,7 @@ runInEachFileSystem(() => {
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           // These are ignored because we only attempt to store string literals
           const ignoredStyleUrl = 'asdlfkj';
@@ -240,13 +240,13 @@ runInEachFileSystem(() => {
       const template = '<span>indirect</span>';
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           const TEMPLATE = '${template}';
 
@@ -270,13 +270,13 @@ runInEachFileSystem(() => {
       const template = '{{x ? y }}';
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           @Component({
             template: '${template}',
           }) class TestCmp {}
@@ -302,13 +302,13 @@ runInEachFileSystem(() => {
     it('should replace inline style content with transformed content', async () => {
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             template: '',
@@ -343,13 +343,13 @@ runInEachFileSystem(() => {
     it('should error if canPreprocess is true and async analyze is not used', async () => {
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             template: '',
@@ -375,13 +375,13 @@ runInEachFileSystem(() => {
     it('should not error if component has no inline styles and canPreprocess is true', async () => {
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             template: '',
@@ -411,18 +411,18 @@ runInEachFileSystem(() => {
     it('should evaluate the name of animations', () => {
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
-          name: _('/node_modules/@angular/animations/index.d.ts'),
+          name: _('/node_modules/@angular-classic/animations/index.d.ts'),
           contents: 'export declare function trigger(name: any): any',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
-          import {trigger} from '@angular/animations';
+          import {Component} from '@angular-classic/core';
+          import {trigger} from '@angular-classic/animations';
 
           @Component({
             template: '',
@@ -453,18 +453,18 @@ runInEachFileSystem(() => {
     it('should tell if the animations include a dynamic value', () => {
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
-          name: _('/node_modules/@angular/animations/index.d.ts'),
+          name: _('/node_modules/@angular-classic/animations/index.d.ts'),
           contents: 'export declare function trigger(name: any): any',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
-          import {trigger} from '@angular/animations';
+          import {Component} from '@angular-classic/core';
+          import {trigger} from '@angular-classic/animations';
 
           function buildComplexAnimations() {
             const name = 'complex';
@@ -497,18 +497,18 @@ runInEachFileSystem(() => {
     it('should treat complex animations expressions as dynamic', () => {
       const {program, options, host} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Component: any;',
         },
         {
-          name: _('/node_modules/@angular/animations/index.d.ts'),
+          name: _('/node_modules/@angular-classic/animations/index.d.ts'),
           contents: 'export declare function trigger(name: any): any',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Component} from '@angular/core';
-          import {trigger} from '@angular/animations';
+          import {Component} from '@angular-classic/core';
+          import {trigger} from '@angular-classic/animations';
 
           function buildComplexAnimations() {
             const name = 'complex';

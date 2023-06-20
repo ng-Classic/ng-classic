@@ -68,7 +68,7 @@ because the *external* `HeroesComponent` [binds to it](#heroes-component-templat
 
 <code-example path="toh-pt3/src/app/heroes/heroes.component.html" region="hero-detail-binding"></code-example>
 
-Amend the `@angular/core` import statement to include the `Input` symbol.
+Amend the `@angular-classic/core` import statement to include the `Input` symbol.
 
 <code-example header="src/app/hero-detail/hero-detail.component.ts (import Input)" path="toh-pt3/src/app/hero-detail/hero-detail.component.ts" region="import-input"></code-example>
 
@@ -102,7 +102,7 @@ Bind the `HeroesComponent.selectedHero` to the element's `hero` property like th
 
 <code-example header="heroes.component.html (HeroDetail binding)" path="toh-pt3/src/app/heroes/heroes.component.html" region="hero-detail-binding"></code-example>
 
-`[hero]="selectedHero"` is an Angular [property binding](guide/property-binding).
+`[hero]="selectedHero"` is an Angular Classic[property binding](guide/property-binding).
 
 It's a *one-way* data binding from
 the `selectedHero` property of the `HeroesComponent` to the `hero` property of the target element, which maps to the `hero` property of the `HeroDetailComponent`.

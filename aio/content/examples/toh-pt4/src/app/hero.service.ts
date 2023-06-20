@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 
 // #docregion import-observable
 import { Observable, of } from 'rxjs';

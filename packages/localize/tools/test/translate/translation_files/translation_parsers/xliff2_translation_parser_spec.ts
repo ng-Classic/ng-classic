@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {ɵcomputeMsgId, ɵmakeParsedTranslation} from '@angular/localize';
+import {ɵcomputeMsgId, ɵmakeParsedTranslation} from '@angular-classic/localize';
 
 import {ParseAnalysis, ParsedTranslationBundle} from '../../../../src/translate/translation_files/translation_parsers/translation_parser';
 import {Xliff2TranslationParser} from '../../../../src/translate/translation_files/translation_parsers/xliff2_translation_parser';

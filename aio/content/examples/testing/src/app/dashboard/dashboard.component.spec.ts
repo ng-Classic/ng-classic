@@ -1,10 +1,10 @@
-import {provideHttpClient} from '@angular/common/http';
-import {HttpTestingController, provideHttpClientTesting} from '@angular/common/http/testing';
-import {NO_ERRORS_SCHEMA} from '@angular/core';
-import {TestBed, waitForAsync} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {NavigationEnd, provideRouter, Router} from '@angular/router';
-import {RouterTestingHarness} from '@angular/router/testing';
+import {provideHttpClient} from '@angular-classic/common/http';
+import {HttpTestingController, provideHttpClientTesting} from '@angular-classic/common/http/testing';
+import {NO_ERRORS_SCHEMA} from '@angular-classic/core';
+import {TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {NavigationEnd, provideRouter, Router} from '@angular-classic/router';
+import {RouterTestingHarness} from '@angular-classic/router/testing';
 import {firstValueFrom} from 'rxjs';
 import {filter} from 'rxjs/operators';
 

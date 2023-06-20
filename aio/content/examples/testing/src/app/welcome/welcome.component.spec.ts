@@ -1,5 +1,5 @@
 // #docplaster
-import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
+import { ComponentFixture, inject, TestBed } from '@angular-classic/core/testing';
 
 import { UserService } from '../model/user.service';
 import { WelcomeComponent } from './welcome.component';
@@ -35,7 +35,7 @@ describe('WelcomeComponent (class only)', () => {
     expect(comp.welcome).toBe('');
   });
 
-  it('should welcome logged in user after Angular calls ngOnInit', () => {
+  it('should welcome logged in user after Angular Classiccalls ngOnInit', () => {
     comp.ngOnInit();
     expect(comp.welcome).toContain(userService.user.name);
   });

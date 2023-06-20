@@ -8,11 +8,11 @@
 
 import 'zone.js/lib/browser/rollup-main';
 import './zone_base_setup';
-import '@angular/compiler'; // For JIT mode. Must be in front of any other @angular/* imports.
+import '@angular-classic/compiler'; // For JIT mode. Must be in front of any other @angular-classic/* imports.
 
-import {TestBed} from '@angular/core/testing';
-import {BrowserDynamicTestingModule, platformBrowserDynamicTesting} from '@angular/platform-browser-dynamic/testing';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {TestBed} from '@angular-classic/core/testing';
+import {BrowserDynamicTestingModule, platformBrowserDynamicTesting} from '@angular-classic/platform-browser-dynamic/testing';
+import {NoopAnimationsModule} from '@angular-classic/platform-browser/animations';
 
 TestBed.initTestEnvironment(
     [BrowserDynamicTestingModule, NoopAnimationsModule], platformBrowserDynamicTesting());

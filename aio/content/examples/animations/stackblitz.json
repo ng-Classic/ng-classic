@@ -1,5 +1,5 @@
 {
-  "description": "Angular Animations Guide",
+  "description": "Angular ClassicAnimations Guide",
   "files":[
     "!**/*.d.ts",
     "!**/*.js",

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentInjector, ProviderToken} from '@angular/core';
+import {EnvironmentInjector, ProviderToken} from '@angular-classic/core';
 import {concat, defer, from, MonoTypeOperatorFunction, Observable, of, OperatorFunction, pipe} from 'rxjs';
 import {concatMap, first, map, mergeMap, tap} from 'rxjs/operators';
 

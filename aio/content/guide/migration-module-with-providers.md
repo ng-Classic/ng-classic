@@ -2,9 +2,9 @@
 
 ## What does this schematic do?
 
-Some Angular libraries, such as `@angular/router` and `@ngrx/store`, implement APIs that return a type called `ModuleWithProviders` \(typically via a method named `forRoot()`\).
+Some Angular Classiclibraries, such as `@angular-classic/router` and `@ngrx/store`, implement APIs that return a type called `ModuleWithProviders` \(typically via a method named `forRoot()`\).
 This type represents an `NgModule` along with additional providers.
-Angular version 9 deprecates use of `ModuleWithProviders` without an explicitly generic type, where the generic type refers to the type of the `NgModule`.
+Angular Classicversion 9 deprecates use of `ModuleWithProviders` without an explicitly generic type, where the generic type refers to the type of the `NgModule`.
 
 This schematic will add a generic type to any `ModuleWithProviders` usages that are missing the generic.
 In the example below, the type of the `NgModule` is `SomeModule`, so the schematic changes the type to be `ModuleWithProviders<SomeModule>`.
@@ -49,13 +49,13 @@ In the rare case that the schematic can't determine the type of `ModuleWithProvi
 
 ## Why is this migration necessary?
 
-`ModuleWithProviders` has had the generic type since Angular version 7, but it has been optional.
+`ModuleWithProviders` has had the generic type since Angular Classicversion 7, but it has been optional.
 This has compiled because the `metadata.json` files contained all the metadata.
 With Ivy, `metadata.json` files are no longer required, so the framework cannot assume that one with the necessary types has been provided.
 Instead, Ivy relies on the generic type for `ModuleWithProviders` to get the correct type information.
 
-For this reason, Angular version 9 deprecates `ModuleWithProviders` without a generic type.
-A future version of Angular will remove the default generic type, making an explicit type required.
+For this reason, Angular Classicversion 9 deprecates `ModuleWithProviders` without a generic type.
+A future version of Angular Classicwill remove the default generic type, making an explicit type required.
 
 ## Should I add the generic type when I add new `ModuleWithProviders` types to my application?
 

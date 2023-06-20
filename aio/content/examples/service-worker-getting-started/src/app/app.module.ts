@@ -1,8 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, isDevMode } from '@angular/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { NgModule, isDevMode } from '@angular-classic/core';
 import { AppComponent } from './app.component';
 
-import { ServiceWorkerModule } from '@angular/service-worker';
+import { ServiceWorkerModule } from '@angular-classic/service-worker';
 
 import { CheckForUpdateService } from './check-for-update.service';
 import { LogUpdateService } from './log-update.service';

@@ -1,9 +1,9 @@
-# Common GitHub tasks to edit angular.io
+# Common GitHub tasks to edit angular-classic.com
 
 <!-- markdownLint-disable MD001 -->
 <!-- markdownLint-disable MD033 -->
 
-These are some of the common `git` tasks that you perform while editing Angular documentation.
+These are some of the common `git` tasks that you perform while editing Angular Classicdocumentation.
 
 The procedures in this topic assume that the files on your local computer are organized as illustrated in the following diagram.
 
@@ -22,17 +22,17 @@ Remember to replace `personal` with your GitHub username in the commands and exa
 </div>
 
 *   The procedures assume that your working directories are in a single `workspace` directory such that
-    *   The local `working` directory of the upstream repo, `angular/angular` is in the `angular` subdirectory of the `angular` subdirectory of the `workspace` directory
+    *   The local `working` directory of the upstream repo, `ng-classic/angular` is in the `angular` subdirectory of the `angular` subdirectory of the `workspace` directory
     *   The local `working` directory of the origin repo, `personal/angular` is in the `angular` subdirectory of the `personal` subdirectory of the `workspace` directory
 *   The procedures assume that you are starting from your `workspace` directory
 
 ## Update your clone of the upstream repo
 
-The upstream repo is the `angular/angular` repo.
+The upstream repo is the `ng-classic/angular` repo.
 As it is updated, such as by merging pull requests, your clone falls behind.
-To keep your clone of `angular/angular` up-to-date, you want to follow this procedure daily.
+To keep your clone of `ng-classic/angular` up-to-date, you want to follow this procedure daily.
 
-This procedure updates your **clone** of the `angular/angular` repo on your local computer so it has the current code, as illustrated here.
+This procedure updates your **clone** of the `ng-classic/angular` repo on your local computer so it has the current code, as illustrated here.
 The circled number correspond to the procedure step.
 
 <div class="lightbox">
@@ -48,7 +48,7 @@ The circled number correspond to the procedure step.
 
     <code-example format="shell" language="shell">
 
-    cd angular/angular
+    cd ng-classic/angular
 
     </code-example>
 
@@ -60,7 +60,7 @@ The circled number correspond to the procedure step.
 
     </code-example>
 
-1.  Update the `main` branch in the `working` directory on your local computer with any changes in the upstream `angular/angular` repo.
+1.  Update the `main` branch in the `working` directory on your local computer with any changes in the upstream `ng-classic/angular` repo.
 
     <code-example format="shell" language="shell">
 
@@ -73,11 +73,11 @@ Now would be a good time to update your fork as well.
 
 ## Update your fork with the upstream repo
 
-You want to sync the `main` branch of your fork with the `main` branch of the upstream, `angular/angular` repo at least daily.
+You want to sync the `main` branch of your fork with the `main` branch of the upstream, `ng-classic/angular` repo at least daily.
 This is good thing to do at the beginning of each day.
-Sync your fork after you update your clone of the upstream repo and before you start working on the Angular documentation.
+Sync your fork after you update your clone of the upstream repo and before you start working on the Angular Classicdocumentation.
 
-This procedure updates your **fork** of the `angular/angular` repo on your local computer so it has the current code, as illustrated here.
+This procedure updates your **fork** of the `ng-classic/angular` repo on your local computer so it has the current code, as illustrated here.
 The circled numbers correspond to procedure steps.
 
 <div class="lightbox">
@@ -105,7 +105,7 @@ The circled numbers correspond to procedure steps.
 
     </code-example>
 
-1.  Update the `main` branch in the `working` directory on your local computer from the upstream `angular/angular` repo.
+1.  Update the `main` branch in the `working` directory on your local computer from the upstream `ng-classic/angular` repo.
 
     <code-example format="shell" language="shell">
 
@@ -114,7 +114,7 @@ The circled numbers correspond to procedure steps.
 
     </code-example>
 
-1.  Update your `personal/angular` repo on `github.com` with the latest from the upstream `angular/angular` repo.
+1.  Update your `personal/angular` repo on `github.com` with the latest from the upstream `ng-classic/angular` repo.
 
     <code-example format="shell" language="shell">
 
@@ -123,39 +123,39 @@ The circled numbers correspond to procedure steps.
     </code-example>
 
 The `main` branch on your local computer and your *origin* repo on `github.com` are now in sync.
-They have been updated with any changes to the upstream `angular/angular` repo that were made since the last time you updated your fork.
+They have been updated with any changes to the upstream `ng-classic/angular` repo that were made since the last time you updated your fork.
 
 ## Create a working branch for editing
 
-Almost all your editing on the Angular documentation is done:
+Almost all your editing on the Angular Classicdocumentation is done:
 
-*   In the clone of your fork of `angular/angular`, not in your clone of `angular/angular`
+*   In the clone of your fork of `ng-classic/angular`, not in your clone of `ng-classic/angular`
 *   In a `working` or `feature` branch made from the `main` branch
 
 If this isn't clear, see [More about branches](#more-about-branches).
 
-Before you start editing the Angular documentation, you want to:
+Before you start editing the Angular Classicdocumentation, you want to:
 
-1.  [Update your clone of `angular/angular`](#update-your-clone-of-the-upstream-repo).
-1.  [Update your fork of `angular/angular`](#update-your-fork-with-the-upstream-repo).
+1.  [Update your clone of `ng-classic/angular`](#update-your-clone-of-the-upstream-repo).
+1.  [Update your fork of `ng-classic/angular`](#update-your-fork-with-the-upstream-repo).
 1.  Create a working branch from the `main` branch.
 
-A working branch gives you a way to keep track of the changes that you make to the Angular documentation.
+A working branch gives you a way to keep track of the changes that you make to the Angular Classicdocumentation.
 You also need a separate branch to submit those changes in a pull request.
 Creating a working branch also keeps your changes for one update separate from those of another.
 
 <div class="alert is-informational">
 
 **NOTE**: <br />
-Before you edit Angular documentation, make sure that you are using the correct `working` branch.
+Before you edit Angular Classicdocumentation, make sure that you are using the correct `working` branch.
 You can confirm your current branch by running `git status` from your `working` directory before you start editing.
 
 </div>
 
 #### To create a `working` branch for editing
 
-1.  [Update your clone of `angular/angular`](#update-your-clone-of-the-upstream-repo).
-1.  [Update your fork of `angular/angular`](#update-your-fork-with-the-upstream-repo).
+1.  [Update your clone of `ng-classic/angular`](#update-your-clone-of-the-upstream-repo).
+1.  [Update your fork of `ng-classic/angular`](#update-your-fork-with-the-upstream-repo).
 1.  From your `workspace` directory, navigate to your `working` directory.
 
     <code-example format="shell" language="shell">
@@ -196,10 +196,10 @@ You can confirm your current branch by running `git status` from your `working` 
 
 ## Save your changes
 
-This section describes how to save the changes you make to files in the working directory of your fork of the Angular repo.
+This section describes how to save the changes you make to files in the working directory of your fork of the Angular Classicrepo.
 If you are new to using git and GitHub, review this section carefully to understand how to save your changes as you make them.
 
-As you make changes to files in the working directory of your fork of the Angular repo, your changes can be:
+As you make changes to files in the working directory of your fork of the Angular Classicrepo, your changes can be:
 
 * **Made but not saved**
 
@@ -219,12 +219,12 @@ As you make changes to files in the working directory of your fork of the Angula
 
 * **Committed and pushed**
 
-    After you push your commits to your personal repo in `github.com`, your changes have been recorded by `git` and saved to the cloud. They are not yet part of the `angular/angular` repo.
-    This is the state your files need to be in before you can open a pull request for it to become part of the `angular/angular` repo.
+    After you push your commits to your personal repo in `github.com`, your changes have been recorded by `git` and saved to the cloud. They are not yet part of the `ng-classic/angular` repo.
+    This is the state your files need to be in before you can open a pull request for it to become part of the `ng-classic/angular` repo.
 
 * **Merged into Angular**
 
-    After your pull request is approved and merged, the changes you made are now part of the `angular/angular` repo.
+    After your pull request is approved and merged, the changes you made are now part of the `ng-classic/angular` repo.
 
 ### Save your changes to your local computer
 
@@ -341,13 +341,13 @@ After you have committed changes to your local computer, this procedure saves yo
 
     </code-example>
 
-### Open pull requests to merge a change into `angular/angular`
+### Open pull requests to merge a change into `ng-classic/angular`
 
 For information about preparing your changes to open a pull request, see [Preparing documentation for a pull request](guide/doc-pr-prep).
 
 ## Keep your branch up-to-date
 
-If your changes to the documentation take more than a day, the `angular/angular` repo can change while you're editing.
+If your changes to the documentation take more than a day, the `ng-classic/angular` repo can change while you're editing.
 Before you can merge your changes, they must be made on top of the current code.
 You must update your working branch after you've made all your changes and before you open a pull request.
 You might also want to keep your working branch updated as you're editing.
@@ -355,8 +355,8 @@ Either way, the procedure to update your branch is the same.
 
 #### To keep your branch up-to-date
 
-1.  [Update your clone of `angular/angular`](#update-your-clone-of-the-upstream-repo).
-1.  [Update your fork of `angular/angular`](#update-your-fork-with-the-upstream-repo).
+1.  [Update your clone of `ng-classic/angular`](#update-your-clone-of-the-upstream-repo).
+1.  [Update your fork of `ng-classic/angular`](#update-your-fork-with-the-upstream-repo).
 1.  From your workspace directory, navigate to your working directory.
 
     <code-example format="shell" language="shell">
@@ -422,7 +422,7 @@ In this example, the result of all the changes in commits one through five is th
 
 ### Creating a working branch
 
-In `angular/angular`, the `main` branch contains all the changes that have been made to the Angular project since it began to get it to where it is today.
+In `ng-classic/angular`, the `main` branch contains all the changes that have been made to the Angular Classicproject since it began to get it to where it is today.
 The list of commits in the `main` branch have all been reviewed and tested.
 
 When you update the documentation, you might need to make several changes before have exactly what you want.
@@ -433,7 +433,7 @@ This example names the new `working` branch.
 
 <code-example format="shell" language="shell">
 
-&num; From the working directory of your personal/angular repo
+&num; From the working directory of your personal/Angular Classicrepo
 git checkout main;        &num; start from the main branch
 git checkout -b working;  &num; create a new branch named "working"
 
@@ -472,7 +472,7 @@ Because both branches include commits 1-7, they now have the same content.
 ### Merging your work into a changed main branch
 
 Being able to `fast-foward` a merge is simple.
-Unfortunately, in a repo like `angular/angular` that has many contributors, the main branch is changing frequently.
+Unfortunately, in a repo like `ng-classic/angular` that has many contributors, the main branch is changing frequently.
 A more likely scenario is illustrated here, where the `main` branch changed while you're working on your changes in the `working` branch.
 The resulting branches could be imagined as the following illustration.
 While you were working on commits six and seven, others had contributed commits eight and nine.

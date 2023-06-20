@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Location} from '@angular/common';
-import {provideLocationMocks} from '@angular/common/testing';
-import {Compiler, inject, Injector, ModuleWithProviders, NgModule} from '@angular/core';
-import {ChildrenOutletContexts, ExtraOptions, NoPreloading, Route, Router, ROUTER_CONFIGURATION, RouteReuseStrategy, RouterModule, ROUTES, Routes, TitleStrategy, UrlHandlingStrategy, UrlSerializer, withPreloading, ɵROUTER_PROVIDERS as ROUTER_PROVIDERS} from '@angular/router';
+import {Location} from '@angular-classic/common';
+import {provideLocationMocks} from '@angular-classic/common/testing';
+import {Compiler, inject, Injector, ModuleWithProviders, NgModule} from '@angular-classic/core';
+import {ChildrenOutletContexts, ExtraOptions, NoPreloading, Route, Router, ROUTER_CONFIGURATION, RouteReuseStrategy, RouterModule, ROUTES, Routes, TitleStrategy, UrlHandlingStrategy, UrlSerializer, withPreloading, ɵROUTER_PROVIDERS as ROUTER_PROVIDERS} from '@angular-classic/router';
 
 function isUrlHandlingStrategy(opts: ExtraOptions|
                                UrlHandlingStrategy): opts is UrlHandlingStrategy {

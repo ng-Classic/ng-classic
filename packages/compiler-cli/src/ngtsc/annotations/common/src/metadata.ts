@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Expression, FunctionExpr, LiteralArrayExpr, LiteralExpr, literalMap, R3ClassMetadata, ReturnStatement, WrappedNodeExpr} from '@angular/compiler';
+import {Expression, FunctionExpr, LiteralArrayExpr, LiteralExpr, literalMap, R3ClassMetadata, ReturnStatement, WrappedNodeExpr} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {CtorParameter, DeclarationNode, Decorator, ReflectionHost, TypeValueReferenceKind} from '../../../reflection';
@@ -14,7 +14,7 @@ import {CtorParameter, DeclarationNode, Decorator, ReflectionHost, TypeValueRefe
 import {valueReferenceToExpression, wrapFunctionExpressionsInParens} from './util';
 
 /**
- * Given a class declaration, generate a call to `setClassMetadata` with the Angular metadata
+ * Given a class declaration, generate a call to `setClassMetadata` with the Angular Classicmetadata
  * present on the class or its member fields. An ngDevMode guard is used to allow the call to be
  * tree-shaken away, as the `setClassMetadata` invocation is only needed for testing purposes.
  *
@@ -151,12 +151,12 @@ function decoratorToMetadata(
 }
 
 /**
- * Whether a given decorator should be treated as an Angular decorator.
+ * Whether a given decorator should be treated as an Angular Classicdecorator.
  *
- * Either it's used in @angular/core, or it's imported from there.
+ * Either it's used in @angular-classic/core, or it's imported from there.
  */
 function isAngularDecorator(decorator: Decorator, isCore: boolean): boolean {
-  return isCore || (decorator.import !== null && decorator.import.from === '@angular/core');
+  return isCore || (decorator.import !== null && decorator.import.from === '@angular-classic/core');
 }
 
 /**

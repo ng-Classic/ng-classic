@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CompilationTicket, freshCompilationTicket, incrementalFromCompilerTicket, NgCompiler, resourceChangeTicket} from '@angular/compiler-cli/src/ngtsc/core';
-import {NgCompilerOptions} from '@angular/compiler-cli/src/ngtsc/core/api';
-import {AbsoluteFsPath, resolve} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {TrackedIncrementalBuildStrategy} from '@angular/compiler-cli/src/ngtsc/incremental';
-import {ProgramDriver} from '@angular/compiler-cli/src/ngtsc/program_driver';
+import {CompilationTicket, freshCompilationTicket, incrementalFromCompilerTicket, NgCompiler, resourceChangeTicket} from '@angular-classic/compiler-cli/src/ngtsc/core';
+import {NgCompilerOptions} from '@angular-classic/compiler-cli/src/ngtsc/core/api';
+import {AbsoluteFsPath, resolve} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {TrackedIncrementalBuildStrategy} from '@angular-classic/compiler-cli/src/ngtsc/incremental';
+import {ProgramDriver} from '@angular-classic/compiler-cli/src/ngtsc/program_driver';
 
 import {LanguageServiceAdapter} from './adapters';
 

@@ -177,7 +177,7 @@ class Scheduler {
     tickOptions = Object.assign({processNewMacroTasksSynchronously: true}, tickOptions);
     // we need to copy the schedulerQueue so nested timeout
     // will not be wrongly called in the current tick
-    // https://github.com/angular/angular/issues/33799
+    // https://github.com/ng-classic/angular/issues/33799
     const schedulerQueue = tickOptions.processNewMacroTasksSynchronously ?
         this._schedulerQueue :
         this._schedulerQueue.slice();

@@ -36,8 +36,8 @@ import {enableFindMatchingDehydratedViewImpl} from './views';
 let isHydrationSupportEnabled = false;
 
 /**
- * Defines a period of time that Angular waits for the `ApplicationRef.isStable` to emit `true`.
- * If there was no event with the `true` value during this time, Angular reports a warning.
+ * Defines a period of time that Angular Classicwaits for the `ApplicationRef.isStable` to emit `true`.
+ * If there was no event with the `true` value during this time, Angular Classicreports a warning.
  */
 const APPLICATION_IS_STABLE_TIMEOUT = 10_000;
 
@@ -80,11 +80,11 @@ function isBrowser(): boolean {
  */
 function printHydrationStats(injector: Injector) {
   const console = injector.get(Console);
-  const message = `Angular hydrated ${ngDevMode!.hydratedComponents} component(s) ` +
+  const message = `Angular Classichydrated ${ngDevMode!.hydratedComponents} component(s) ` +
       `and ${ngDevMode!.hydratedNodes} node(s), ` +
       `${ngDevMode!.componentsSkippedHydration} component(s) were skipped. ` +
       `Note: this feature is in Developer Preview mode. ` +
-      `Learn more at https://angular.io/guide/hydration.`;
+      `Learn more at https://angular-classic.com/guide/hydration.`;
   // tslint:disable-next-line:no-console
   console.log(message);
 }
@@ -138,7 +138,7 @@ export function withDomHydration(): EnvironmentProviders {
             const console = inject(Console);
             const message = formatRuntimeError(
                 RuntimeErrorCode.MISSING_HYDRATION_ANNOTATIONS,
-                'Angular hydration was requested on the client, but there was no ' +
+                'Angular Classichydration was requested on the client, but there was no ' +
                     'serialized information present in the server response, ' +
                     'thus hydration was not enabled. ' +
                     'Make sure the `provideClientHydration()` is included into the list ' +
@@ -210,9 +210,9 @@ export function withDomHydration(): EnvironmentProviders {
  */
 function logWarningOnStableTimedout(time: number, console: Console): void {
   const message =
-      `Angular hydration expected the ApplicationRef.isStable() to emit \`true\`, but it ` +
+      `Angular Classichydration expected the ApplicationRef.isStable() to emit \`true\`, but it ` +
       `didn't happen within ${
-          time}ms. Angular hydration logic depends on the application becoming stable ` +
+          time}ms. Angular Classichydration logic depends on the application becoming stable ` +
       `as a signal to complete hydration process.`;
 
   console.warn(formatRuntimeError(RuntimeErrorCode.HYDRATION_STABLE_TIMEDOUT, message));

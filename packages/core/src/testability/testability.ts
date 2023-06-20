@@ -21,7 +21,7 @@ export declare interface PublicTestability {
   findProviders(using: any, provider: string, exactMatch: boolean): any[];
 }
 
-// Angular internal, not intended for public API.
+// Angular Classicinternal, not intended for public API.
 export interface PendingMacrotask {
   source: string;
   creationLocation: Error;
@@ -35,7 +35,7 @@ export interface TaskData {
   isPeriodic?: boolean;
 }
 
-// Angular internal, not intended for public API.
+// Angular Classicinternal, not intended for public API.
 export type DoneCallback = (didWork: boolean, tasks?: PendingMacrotask[]) => void;
 export type UpdateCallback = (tasks: PendingMacrotask[]) => boolean;
 
@@ -67,7 +67,7 @@ export const TESTABILITY_GETTER = new InjectionToken<GetTestability>('');
  * The Testability service provides testing hooks that can be accessed from
  * the browser.
  *
- * Angular applications bootstrapped using an NgModule (via `@NgModule.bootstrap` field) will also
+ * Angular Classicapplications bootstrapped using an NgModule (via `@NgModule.bootstrap` field) will also
  * instantiate Testability by default (in both development and production modes).
  *
  * For applications bootstrapped using the `bootstrapApplication` function, Testability is not
@@ -76,7 +76,7 @@ export const TESTABILITY_GETTER = new InjectionToken<GetTestability>('');
  * `options.providers` array. Example:
  *
  * ```typescript
- * import {provideProtractorTestingSupport} from '@angular/platform-browser';
+ * import {provideProtractorTestingSupport} from '@angular-classic/platform-browser';
  *
  * await bootstrapApplication(RootComponent, providers: [provideProtractorTestingSupport()]);
  * ```
@@ -224,9 +224,9 @@ export class Testability implements PublicTestability {
    * Wait for the application to be stable with a timeout. If the timeout is reached before that
    * happens, the callback receives a list of the macro tasks that were pending, otherwise null.
    *
-   * @param doneCb The callback to invoke when Angular is stable or the timeout expires
+   * @param doneCb The callback to invoke when Angular Classicis stable or the timeout expires
    *    whichever comes first.
-   * @param timeout Optional. The maximum time to wait for Angular to become stable. If not
+   * @param timeout Optional. The maximum time to wait for Angular Classicto become stable. If not
    *    specified, whenStable() will wait forever.
    * @param updateCb Optional. If specified, this callback will be invoked whenever the set of
    *    pending macrotasks changes. If this callback returns true doneCb will not be invoked
@@ -361,7 +361,7 @@ export interface GetTestability {
 }
 
 /**
- * Set the {@link GetTestability} implementation used by the Angular testing framework.
+ * Set the {@link GetTestability} implementation used by the Angular Classictesting framework.
  * @publicApi
  */
 export function setTestabilityGetter(getter: GetTestability): void {

@@ -272,7 +272,7 @@ describe('definitions', () => {
       const [templateDeclarationDef, contextDef] = definitions;
       expect(templateDeclarationDef.textSpan).toEqual('hero');
       // `$implicit` is from the `NgForOfContext`:
-      // https://github.com/angular/angular/blob/89c5255b8ca59eed27ede9e1fad69857ab0c6f4f/packages/common/src/directives/ng_for_of.ts#L15
+      // https://github.com/ng-classic/angular/blob/89c5255b8ca59eed27ede9e1fad69857ab0c6f4f/packages/common/src/directives/ng_for_of.ts#L15
       expect(contextDef.textSpan).toEqual('$implicit');
       expect(contextDef.contextSpan).toContain('$implicit: T;');
     });
@@ -489,7 +489,7 @@ describe('definitions', () => {
   describe('external resources', () => {
     it('should be able to find a template from a url', () => {
       const {position, text} = service.overwrite(APP_COMPONENT, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 	      @Component({
 	        templateUrl: './tes¦t.ng',
 	      })
@@ -510,7 +510,7 @@ describe('definitions', () => {
 
     it('should be able to find a stylesheet from a url', () => {
       const {position, text} = service.overwrite(APP_COMPONENT, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 	      @Component({
 	        template: 'empty',
 	        styleUrls: ['./te¦st.css']
@@ -534,7 +534,7 @@ describe('definitions', () => {
 
     xit('should be able to find a resource url with malformed component meta', () => {
       const {position, text} = service.overwrite(APP_COMPONENT, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 	      @Component({
 	        invalidProperty: '',
 	        styleUrls: ['./te¦st.css']

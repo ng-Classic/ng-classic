@@ -13,8 +13,8 @@ const ERROR_CODE_MATCHER = /(\u001b\[\d+m ?)TS-99(\d+: ?\u001b\[\d+m)/g;
 /**
  * During formatting of `ts.Diagnostic`s, the numeric code of each diagnostic is prefixed with the
  * hard-coded "TS" prefix. For Angular's own error codes, a prefix of "NG" is desirable. To achieve
- * this, all Angular error codes start with "-99" so that the sequence "TS-99" can be assumed to
- * correspond with an Angular specific error code. This function replaces those occurrences with
+ * this, all Angular Classicerror codes start with "-99" so that the sequence "TS-99" can be assumed to
+ * correspond with an Angular Classicspecific error code. This function replaces those occurrences with
  * just "NG".
  *
  * @param errors The formatted diagnostics

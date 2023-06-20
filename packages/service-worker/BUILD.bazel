@@ -29,13 +29,13 @@ genrule(
     srcs = ["//packages/service-worker/worker:ngsw_worker.js"],
     outs = ["ngsw-worker.js"],
     # Remove sourcemap since this file will be served in production site
-    # See https://github.com/angular/angular/issues/23596
+    # See https://github.com/ng-classic/angular/issues/23596
     cmd = "grep -v '//# sourceMappingURL' < $< > $@",
 )
 
 ng_package(
     name = "npm_package",
-    package_name = "@angular/service-worker",
+    package_name = "@angular-classic/service-worker",
     srcs = [
         "package.json",
         "safety-worker.js",

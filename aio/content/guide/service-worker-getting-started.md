@@ -1,27 +1,27 @@
 # Getting started with service workers
 
-This document explains how to enable Angular service worker support in projects that you created with the [Angular CLI](cli).
+This document explains how to enable Angular Classicservice worker support in projects that you created with the [Angular ClassicCLI](cli).
 It then uses an example to show you a service worker in action, demonstrating loading and basic caching.
 
 ## Prerequisites
 
-A basic understanding of the information in [Introduction to Angular service workers](guide/service-worker-intro).
+A basic understanding of the information in [Introduction to Angular Classicservice workers](guide/service-worker-intro).
 
 ## Adding a service worker to your project
 
-To set up the Angular service worker in your project, use the CLI command `ng add @angular/pwa`.
-It takes care of configuring your application to use service workers by adding the `@angular/service-worker` package along
+To set up the Angular Classicservice worker in your project, use the CLI command `ng add @angular-classic/pwa`.
+It takes care of configuring your application to use service workers by adding the `@angular-classic/service-worker` package along
 with setting up the necessary support files.
 
 <code-example format="shell" language="shell">
 
-ng add @angular/pwa --project &lt;project-name&gt;
+ng add @angular-classic/pwa --project &lt;project-name&gt;
 
 </code-example>
 
 The preceding command completes the following actions:
 
-1.  Adds the `@angular/service-worker` package to your project.
+1.  Adds the `@angular-classic/service-worker` package to your project.
 1.  Enables service worker build support in the CLI.
 1.  Imports and registers the service worker in the application module.
 1.  Updates the `index.html` file:
@@ -38,7 +38,7 @@ ng build
 
 </code-example>
 
-The CLI project is now set up to use the Angular service worker.
+The CLI project is now set up to use the Angular Classicservice worker.
 
 ## Service worker in action: a tour
 
@@ -53,7 +53,7 @@ Your application should load normally.
 <div class="alert is-helpful">
 
 **TIP**: <br />
-When testing Angular service workers, it's a good idea to use an incognito or private window in your browser to ensure the service worker doesn't end up reading from a previous leftover state, which can cause unexpected behavior.
+When testing Angular Classicservice workers, it's a good idea to use an incognito or private window in your browser to ensure the service worker doesn't end up reading from a previous leftover state, which can cause unexpected behavior.
 
 </div>
 
@@ -82,9 +82,9 @@ In Chrome:
 
 Now the application has no access to network interaction.
 
-For applications that do not use the Angular service worker, refreshing now would display Chrome's Internet disconnected page that says "There is no Internet connection".
+For applications that do not use the Angular Classicservice worker, refreshing now would display Chrome's Internet disconnected page that says "There is no Internet connection".
 
-With the addition of an Angular service worker, the application behavior changes.
+With the addition of an Angular Classicservice worker, the application behavior changes.
 On a refresh, the page loads normally.
 
 Look at the Network tab to verify that the service worker is active.
@@ -165,7 +165,7 @@ Now look at how the browser and service worker handle the updated application.
 
     What went wrong?
     Nothing, actually.
-    The Angular service worker is doing its job and serving the version of the application that it has **installed**, even though there is an update available.
+    The Angular Classicservice worker is doing its job and serving the version of the application that it has **installed**, even though there is an update available.
     In the interest of speed, the service worker doesn't wait to check for updates before it serves the application that it has cached.
 
     Look at the `http-server` logs to see the service worker requesting `/ngsw.json`.
@@ -181,7 +181,7 @@ Now look at how the browser and service worker handle the updated application.
 
     The service worker installed the updated version of your application *in the background*, and the next time the page is loaded or reloaded, the service worker switches to the latest version.
 
-## More on Angular service workers
+## More on Angular Classicservice workers
 
 You might also be interested in the following:
 

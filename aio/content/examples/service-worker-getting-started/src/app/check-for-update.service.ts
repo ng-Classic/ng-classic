@@ -1,5 +1,5 @@
-import { ApplicationRef, Injectable } from '@angular/core';
-import { SwUpdate } from '@angular/service-worker';
+import { ApplicationRef, Injectable } from '@angular-classic/core';
+import { SwUpdate } from '@angular-classic/service-worker';
 import { concat, interval } from 'rxjs';
 import { first } from 'rxjs/operators';
 

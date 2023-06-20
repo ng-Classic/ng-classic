@@ -5,11 +5,11 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import '@angular/localize/init';
-import '@angular/compiler';
+import '@angular-classic/localize/init';
+import '@angular-classic/compiler';
 
-import {clearTranslations} from '@angular/localize';
-import {withBody} from '@angular/private/testing';
+import {clearTranslations} from '@angular-classic/localize';
+import {withBody} from '@angular-classic/private/testing';
 import * as path from 'path';
 
 const PACKAGE = 'angular/packages/core/test/bundling/todo_i18n';

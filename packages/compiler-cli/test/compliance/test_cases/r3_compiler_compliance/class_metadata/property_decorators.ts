@@ -1,4 +1,4 @@
-import {Directive, Input, Output} from '@angular/core';
+import {Directive, Input, Output} from '@angular-classic/core';
 import {CustomPropDecorator} from './custom';
 
 @Directive()

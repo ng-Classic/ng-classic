@@ -11,6 +11,6 @@
  * @description
  * Entry point for all public APIs of the animation package.
  */
-import {Version} from '@angular/core';
+import {Version} from '@angular-classic/core';
 
 export const VERSION = new Version('0.0.0-PLACEHOLDER');

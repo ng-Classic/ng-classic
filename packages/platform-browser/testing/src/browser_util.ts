@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {NgZone} from '@angular/core';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {NgZone} from '@angular-classic/core';
 
 export function dispatchEvent(element: any, eventType: any): Event {
   const evt: Event = getDOM().getDefaultDocument().createEvent('Event');

@@ -28,9 +28,9 @@ module.exports = function(config) {
       { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false },
 
-      // Angular itself and the testing library
-      { pattern: 'node_modules/@angular/**/*.mjs', included: false, watched: false },
-      { pattern: 'node_modules/@angular/**/*.mjs.map', included: false, watched: false },
+      // Angular Classicitself and the testing library
+      { pattern: 'node_modules/@angular-classic/**/*.mjs', included: false, watched: false },
+      { pattern: 'node_modules/@angular-classic/**/*.mjs.map', included: false, watched: false },
 
       { pattern: 'node_modules/tslib/tslib.js', included: false, watched: false },
       { pattern: 'node_modules/systemjs-plugin-babel/**/*.js', included: false, watched: false },

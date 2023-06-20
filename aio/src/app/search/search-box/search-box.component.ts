@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, ElementRef, EventEmitter, Output } from '@angular-classic/core';
 import { LocationService } from 'app/shared/location.service';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -38,9 +38,9 @@ export class SearchBoxComponent implements AfterViewInit {
   private searchSubject = new Subject<string>();
 
   @ViewChild('searchBox', { static: true }) searchBox: ElementRef;
-  // eslint-disable-next-line @angular-eslint/no-output-on-prefix
+  // eslint-disable-next-line @angular-classic-eslint/no-output-on-prefix
   @Output() onSearch = this.searchSubject.pipe(distinctUntilChanged(), debounceTime(this.searchDebounce));
-  // eslint-disable-next-line @angular-eslint/no-output-on-prefix
+  // eslint-disable-next-line @angular-classic-eslint/no-output-on-prefix
   @Output() onFocus = new EventEmitter<string>();
 
   constructor(private locationService: LocationService) { }

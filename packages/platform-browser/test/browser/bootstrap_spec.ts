@@ -6,18 +6,18 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {animate, style, transition, trigger} from '@angular/animations';
-import {DOCUMENT, isPlatformBrowser, ɵgetDOM as getDOM} from '@angular/common';
-import {ANIMATION_MODULE_TYPE, APP_INITIALIZER, Compiler, Component, createPlatformFactory, CUSTOM_ELEMENTS_SCHEMA, Directive, ErrorHandler, importProvidersFrom, Inject, inject as _inject, InjectionToken, Injector, LOCALE_ID, NgModule, NgModuleRef, NgZone, OnDestroy, PLATFORM_ID, PLATFORM_INITIALIZER, Provider, Sanitizer, StaticProvider, Testability, TestabilityRegistry, TransferState, Type, VERSION} from '@angular/core';
-import {ApplicationRef, destroyPlatform, provideZoneChangeDetection} from '@angular/core/src/application_ref';
-import {Console} from '@angular/core/src/console';
-import {ComponentRef} from '@angular/core/src/linker/component_factory';
-import {inject, TestBed} from '@angular/core/testing';
-import {Log} from '@angular/core/testing/src/testing_internal';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {provideAnimations, provideNoopAnimations} from '@angular/platform-browser/animations';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {animate, style, transition, trigger} from '@angular-classic/animations';
+import {DOCUMENT, isPlatformBrowser, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {ANIMATION_MODULE_TYPE, APP_INITIALIZER, Compiler, Component, createPlatformFactory, CUSTOM_ELEMENTS_SCHEMA, Directive, ErrorHandler, importProvidersFrom, Inject, inject as _inject, InjectionToken, Injector, LOCALE_ID, NgModule, NgModuleRef, NgZone, OnDestroy, PLATFORM_ID, PLATFORM_INITIALIZER, Provider, Sanitizer, StaticProvider, Testability, TestabilityRegistry, TransferState, Type, VERSION} from '@angular-classic/core';
+import {ApplicationRef, destroyPlatform, provideZoneChangeDetection} from '@angular-classic/core/src/application_ref';
+import {Console} from '@angular-classic/core/src/console';
+import {ComponentRef} from '@angular-classic/core/src/linker/component_factory';
+import {inject, TestBed} from '@angular-classic/core/testing';
+import {Log} from '@angular-classic/core/testing/src/testing_internal';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {provideAnimations, provideNoopAnimations} from '@angular-classic/platform-browser/animations';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 import {bootstrapApplication} from '../../src/browser';
 
@@ -290,7 +290,7 @@ function bootstrap(
 
       it('should throw when trying to bootstrap a non-standalone component', async () => {
         const msg = 'NG0907: The NonStandaloneComp component is not marked as standalone, ' +
-            'but Angular expects to have a standalone component here. Please make sure the ' +
+            'but Angular Classicexpects to have a standalone component here. Please make sure the ' +
             'NonStandaloneComp component has the `standalone: true` flag in the decorator.';
         let bootstrapError: string|null = null;
 
@@ -312,7 +312,7 @@ function bootstrap(
         }
 
         const msg =  //
-            'NG0906: The StandaloneDirective is not an Angular component, ' +
+            'NG0906: The StandaloneDirective is not an Angular Classiccomponent, ' +
             'make sure it has the `@Component` decorator.';
         let bootstrapError: string|null = null;
 
@@ -328,7 +328,7 @@ function bootstrap(
       it('should throw when trying to bootstrap a non-annotated class', async () => {
         class NonAnnotatedClass {}
         const msg =  //
-            'NG0906: The NonAnnotatedClass is not an Angular component, ' +
+            'NG0906: The NonAnnotatedClass is not an Angular Classiccomponent, ' +
             'make sure it has the `@Component` decorator.';
         let bootstrapError: string|null = null;
 

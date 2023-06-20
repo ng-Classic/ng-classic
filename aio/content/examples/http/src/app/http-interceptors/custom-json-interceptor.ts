@@ -1,5 +1,5 @@
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular-classic/common/http';
+import { Injectable } from '@angular-classic/core';
 import { map } from 'rxjs/operators';
 
 // #docregion custom-json-interceptor

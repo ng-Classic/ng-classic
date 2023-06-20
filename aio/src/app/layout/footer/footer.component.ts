@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular-classic/core';
 
 import { NavigationNode, VersionInfo } from 'app/navigation/navigation.service';
 

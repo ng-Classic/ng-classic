@@ -5,11 +5,11 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Component, Renderer2, ViewEncapsulation} from '@angular/core';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {NAMESPACE_URIS, REMOVE_STYLES_ON_COMPONENT_DESTROY} from '@angular/platform-browser/src/dom/dom_renderer';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {Component, Renderer2, ViewEncapsulation} from '@angular-classic/core';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {NAMESPACE_URIS, REMOVE_STYLES_ON_COMPONENT_DESTROY} from '@angular-classic/platform-browser/src/dom/dom_renderer';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 {
   describe('DefaultDomRendererV2', () => {

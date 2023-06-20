@@ -1,7 +1,7 @@
 {
-  "name": "@angular/common",
+  "name": "@angular-classic/common",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - commonly needed directives and services",
+  "description": "Angular Classic- commonly needed directives and services",
   "author": "angular",
   "license": "MIT",
   "engines": {
@@ -20,12 +20,12 @@
     }
   },
   "peerDependencies": {
-    "@angular/core": "0.0.0-PLACEHOLDER",
+    "@angular-classic/core": "0.0.0-PLACEHOLDER",
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular/angular.git",
+    "url": "https://github.com/ng-classic/angular.git",
     "directory": "packages/common"
   },
   "ng-update": {

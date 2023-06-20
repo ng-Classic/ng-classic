@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Injector, ɵɵelement} from '@angular/core';
+import {Injector, ɵɵelement} from '@angular-classic/core';
 
 import {RenderFlags} from '../../../../src/render3/interfaces/definition';
 import {createBenchmark} from '../micro_bench';

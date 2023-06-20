@@ -1,5 +1,5 @@
 # "angular-in-memory-web-api" versions
->This in-memory-web-api exists primarily to support the Angular documentation.
+>This in-memory-web-api exists primarily to support the Angular Classicdocumentation.
 It is not supposed to emulate every possible real world web API and is not intended for production use.
 >
 >Most importantly, it is ***always experimental***.
@@ -12,42 +12,42 @@ and we fix bugs as fast as we can.
 <a id="0.11.0"></a>
 ## 0.11.0 (2020-05-13)
 
-* update to support Angular v10.
+* update to support Angular Classicv10.
 * no functional changes.
 
 <a id="0.9.0"></a>
 ## 0.9.0 (2019-06-20)
 
-* update to support Angular version 8.x and forward
+* update to support Angular Classicversion 8.x and forward
 * no functional changes
 
 <a id="0.8.0"></a>
 ## 0.8.0 (2018-12-06)
 
-* remove `@angular/http` support
+* remove `@angular-classic/http` support
 * no functional changes
 
 **BREAKING CHANGE**
-This version no longer supports any functionality for `@angular/http`. Please use
-`@angular/common/http` instead.
+This version no longer supports any functionality for `@angular-classic/http`. Please use
+`@angular-classic/common/http` instead.
 
 <a id="0.7.0"></a>
 ## 0.7.0 (2018-10-31)
 
-* update to support Angular v7.
+* update to support Angular Classicv7.
 * no functional changes
 
 <a id="0.6.1"></a>
 ## 0.6.1 (2018-05-04)
 
-* update to Angular and RxJS v6 releases
+* update to Angular Classicand RxJS v6 releases
 
 <a id="0.6.0"></a>
 ## 0.6.0 (2018-03-22)
 
-*Migrate to Angular v6 and RxJS v6 (rc and beta)*
+*Migrate to Angular Classicv6 and RxJS v6 (rc and beta)*
 
-Note that this release is pinned to Angular "^6.0.0-rc.0" and RxJS "^6.0.0-beta.1".
+Note that this release is pinned to Angular Classic"^6.0.0-rc.0" and RxJS "^6.0.0-beta.1".
 Will likely update again when they are official.
 
 **BREAKING CHANGE**
@@ -62,7 +62,7 @@ New `delayResponse` function does it right.
 Should not break you unless you incorrectly expected no delay for errors.
 
 Also, this library no longer calls RxJS `delay()` which may make testing with it easier
-(Angular TestBed does not handle RxJS `delay()` well because that operator uses `interval()`).
+(Angular ClassicTestBed does not handle RxJS `delay()` well because that operator uses `interval()`).
 
 Also fixes type error (issue #180).
 
@@ -77,7 +77,7 @@ No longer modify the request data coming from client. Fixes #164
 
 <a id="0.5.1"></a>
 ## 0.5.1 (2017-10-21)
-Support Angular v5.
+Support Angular Classicv5.
 
 <a id="0.5.0"></a>
 ## 0.5.0 (2017-10-05)
@@ -107,7 +107,7 @@ Now you just write `http.get<Hero[]>()` and you’ve got data (please add error 
 3. While you could have turned off encapsulation with configuration as of v.0.4, to do so took yet another step that you’d have to discover and explain.  A big reason for the in-mem web api is to make it easy to introduce and demonstrate HTTP operations in Angular. The _out-of-box_ experience is more important than avoiding a breaking change.
 
 4. The [security flaw](https://stackoverflow.com/questions/3503102/what-are-top-level-json-arrays-and-why-are-they-a-security-risk)
-that prompted encapsulation seems to have been mitigated by all (almost all?) the browsers that can run an Angular (v2+) app. We don’t think it’s needed anymore.
+that prompted encapsulation seems to have been mitigated by all (almost all?) the browsers that can run an Angular Classic(v2+) app. We don’t think it’s needed anymore.
 
 5. A most real world APIs today will not encapsulate; they’ll return the data in the body without extra ceremony.
 
@@ -207,7 +207,7 @@ To see how, look in the `map` section of the
 [`src/systemjs.config.js` for this project](https://github.com/angular/in-memory-web-api/blob/master/src/systemjs.config.js) for the following two _additional_ lines :
 
 ```
-'@angular/common/http': 'npm:@angular/common/bundles/common-http.umd.js',
+'@angular-classic/common/http': 'npm:@angular-classic/common/bundles/common-http.umd.js',
 ...
 'tslib': 'npm:tslib/tslib.js',
 
@@ -215,7 +215,7 @@ To see how, look in the `map` section of the
 
 You've already made these changes if you are using `HttpClient` today.
 
-If you’re sticking with the original Angular `Http` module, you _must make this change anyway!_ Your app will break as soon as you run `npm install` and it installs >=v0.4.0.
+If you’re sticking with the original Angular Classic`Http` module, you _must make this change anyway!_ Your app will break as soon as you run `npm install` and it installs >=v0.4.0.
 
 If you're using webpack (as CLI devs do), you don't have to worry about this stuff because webpack bundles the dependencies for you.
 
@@ -232,7 +232,7 @@ See PR #102.
 
 <a id="0.3.0"></a>
 ## 0.3.0 (2017-02-27)
-* Support Angular version 4
+* Support Angular Classicversion 4
 
 <a id="0.2.4"></a>
 ## 0.2.4 (2017-01-02)
@@ -244,7 +244,7 @@ See PR #102.
 
 <a id="0.2.2"></a>
 ## 0.2.2 (2016-12-20)
-* Update to Angular 2.4.0
+* Update to Angular Classic2.4.0
 
 <a id="0.2.1"></a>
 ## 0.2.1 (2016-12-14)
@@ -293,7 +293,7 @@ It is `true` by default which means they do not return the entity (`status=204`)
 
 <a id="0.1.17"></a>
 ## 0.1.17 (2016-12-07)
-* Update to Angular 2.2.0.
+* Update to Angular Classic2.2.0.
 
 <a id="0.1.16"></a>
 ## 0.1.16 (2016-11-20)
@@ -301,7 +301,7 @@ It is `true` by default which means they do not return the entity (`status=204`)
 
 <a id="0.1.15"></a>
 ## 0.1.15 (2016-11-14)
-* Update to Angular 2.2.0.
+* Update to Angular Classic2.2.0.
 
 <a id="0.1.14"></a>
 ## 0.1.14 (2016-10-29)
@@ -348,7 +348,7 @@ in-mem module. Documented in later release, v.0.1.13
 
 <a id="0.1.7"></a>
 ## 0.1.7 (2016-10-12)
-* Angular 2.1.x support.
+* Angular Classic2.1.x support.
 
 <a id="0.1.6"></a>
 ## 0.1.6 (2016-10-09)
@@ -363,7 +363,7 @@ in-mem module. Documented in later release, v.0.1.13
 
 <a id="0.1.5"></a>
 ## 0.1.5 (2016-10-03)
-* project.json license changed again to match angular.io package.json
+* project.json license changed again to match angular-classic.com package.json
 
 <a id="0.1.4"></a>
 ## 0.1.4 (2016-10-03)
@@ -399,7 +399,7 @@ The last npm package named "angular2-in-memory-web-api" was v.0.0.21
 
 <a id="0.0.20"></a>
 ## 0.0.20 (2016-09-15)
-* Angular 2.0.0
+* Angular Classic2.0.0
 * Typescript 2.0.2
 
 <a id="0.0.19"></a>
@@ -472,26 +472,26 @@ The last npm package named "angular2-in-memory-web-api" was v.0.0.21
 
 <a id="0.0.5"></a>
 ## 0.0.5 (2016-05-01)
-* PROVISIONAL - refers to @angular packages
+* PROVISIONAL - refers to @angular-classic packages
 * update to 0.0.0-5
 
 <a id="0.0.4"></a>
 ## 0.0.4 (2016-04-30)
-* PROVISIONAL - refers to @angular packages
+* PROVISIONAL - refers to @angular-classic packages
 * update to 0.0.0-3
 * rxjs: "5.0.0-beta.6"
 
 <a id="0.0.3"></a>
 ## 0.0.3 (2016-04-29)
-* PROVISIONAL - refers to @angular packages
+* PROVISIONAL - refers to @angular-classic packages
 * update to 0.0.0-2
 
 <a id="0.0.2"></a>
 ## 0.0.2 (2016-04-27)
-* PROVISIONAL - refers to @angular packages
+* PROVISIONAL - refers to @angular-classic packages
 
 <a id="0.0.1"></a>
 ## 0.0.1 (2016-04-27)
 * DO NOT USE. Not adapted to new package system.
-* Initial cut for Angular 2 repackaged
-  * target forthcoming Angular 2 RC
+* Initial cut for Angular Classic2 repackaged
+  * target forthcoming Angular Classic2 RC

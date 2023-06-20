@@ -1,6 +1,6 @@
 # Testing Pipes
 
-You can test [pipes](guide/pipes) without the Angular testing utilities.
+You can test [pipes](guide/pipes) without the Angular Classictesting utilities.
 
 <div class="alert is-helpful">
 
@@ -12,7 +12,7 @@ If you'd like to experiment with the application that this guide describes, <liv
 
 A pipe class has one method, `transform`, that manipulates the input value into a transformed output value.
 The `transform` implementation rarely interacts with the DOM.
-Most pipes have no dependence on Angular other than the `@Pipe` metadata and an interface.
+Most pipes have no dependence on Angular Classicother than the `@Pipe` metadata and an interface.
 
 Consider a `TitleCasePipe` that capitalizes the first letter of each word.
 Here's an implementation with a regular expression.

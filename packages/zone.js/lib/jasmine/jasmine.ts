@@ -20,7 +20,7 @@ Zone.__load_patch('jasmine', (global: any, Zone: ZoneType, api: _ZonePrivate) =>
     d.prototype = b === null ? Object.create(b) : ((__.prototype = b.prototype), new (__ as any)());
   };
   // Patch jasmine's describe/it/beforeEach/afterEach functions so test code always runs
-  // in a testZone (ProxyZone). (See: angular/zone.js#91 & angular/angular#10503)
+  // in a testZone (ProxyZone). (See: angular/zone.js#91 & ng-classic/angular#10503)
   if (!Zone) throw new Error('Missing: zone.js');
   if (typeof jest !== 'undefined') {
     // return if jasmine is a light implementation inside jest

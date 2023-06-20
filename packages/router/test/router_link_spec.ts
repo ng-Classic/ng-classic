@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component} from '@angular/core';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {Router, RouterLink, RouterModule} from '@angular/router';
+import {Component} from '@angular-classic/core';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {Router, RouterLink, RouterModule} from '@angular-classic/router';
 
 describe('RouterLink', () => {
   it('does not modify tabindex if already set on non-anchor element', () => {

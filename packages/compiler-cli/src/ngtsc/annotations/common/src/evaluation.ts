@@ -28,7 +28,7 @@ export function resolveEnumValue(
       resolved = value.resolved as number;
     } else {
       throw createValueHasWrongTypeError(
-          expr, value, `${field} must be a member of ${enumSymbolName} enum from @angular/core`);
+          expr, value, `${field} must be a member of ${enumSymbolName} enum from @angular-classic/core`);
     }
   }
   return resolved;

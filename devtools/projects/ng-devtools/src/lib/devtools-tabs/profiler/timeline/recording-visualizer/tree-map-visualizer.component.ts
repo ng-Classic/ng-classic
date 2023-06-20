@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, ElementRef, Input, NgZone, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, NgZone, OnDestroy, OnInit, ViewChild} from '@angular-classic/core';
 import {ProfilerFrame} from 'protocol';
 import {Subject, Subscription} from 'rxjs';
 import {debounceTime} from 'rxjs/operators';

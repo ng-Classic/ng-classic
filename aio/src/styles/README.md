@@ -1,6 +1,6 @@
-# CSS styles in angular.io
+# CSS styles in angular-classic.com
 
-This document gives an overview of how angular.io CSS styles are implemented and organized in files.
+This document gives an overview of how angular-classic.com CSS styles are implemented and organized in files.
 
 
 ## General
@@ -40,8 +40,8 @@ When appropriate, the styles in these files should be scoped to the targeted com
 
 ## Theming
 
-Angular.io supports choosing between themes. Currently, a `light` and a `dark` theme are supported.
-See also [#41129](https://github.com/angular/angular/pull/41129) for more details/discussions around the theming implementation.
+angular-classic.com supports choosing between themes. Currently, a `light` and a `dark` theme are supported.
+See also [#41129](https://github.com/ng-classic/angular/pull/41129) for more details/discussions around the theming implementation.
 
 
 ## Styles for theming
@@ -67,14 +67,14 @@ Disadvantages of the chosen approach:
 ## Applying a theme at runtime
 
 When building the app the following styles bundles are generated:
-- One [based on `main.scss`](https://github.com/angular/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/angular.json#L44), which is always included in `index.html` and contains the general (non-theme-specific) styles.
-- [One bundle per theme](https://github.com/angular/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/angular.json#L45-L54), which is loaded "on demand" and contains theme-specific styles.
+- One [based on `main.scss`](https://github.com/ng-classic/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/angular.json#L44), which is always included in `index.html` and contains the general (non-theme-specific) styles.
+- [One bundle per theme](https://github.com/ng-classic/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/angular.json#L45-L54), which is loaded "on demand" and contains theme-specific styles.
 
-A theme bundle is [loaded at runtime](https://github.com/angular/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/src/index.html#L33-L36) using the CSS [`@import` rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@import).
+A theme bundle is [loaded at runtime](https://github.com/ng-classic/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/src/index.html#L33-L36) using the CSS [`@import` rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@import).
 The appropriate theme is chosen based on the user's preference (either through an operating system setting or a user agent setting) using the [`prefers-color-scheme` media query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
-Once the application has bootstrapped, the theme [may be updated](https://github.com/angular/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/src/app/shared/theme-picker/theme-toggle.component.ts#L49-L72) based on a previously stored application-specific preference.
-Whenever the user explicitly changes the theme using the theme-toggle component, the new preference [is stored](https://github.com/angular/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/src/app/shared/theme-picker/theme-toggle.component.ts#L89) for use in future visits.
+Once the application has bootstrapped, the theme [may be updated](https://github.com/ng-classic/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/src/app/shared/theme-picker/theme-toggle.component.ts#L49-L72) based on a previously stored application-specific preference.
+Whenever the user explicitly changes the theme using the theme-toggle component, the new preference [is stored](https://github.com/ng-classic/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/src/app/shared/theme-picker/theme-toggle.component.ts#L89) for use in future visits.
 
 > **NOTE:**<br />
-> The theming infrastructure is based on the [material.angular.io](https://github.com/angular/material.angular.io) implementation.
+> The theming infrastructure is based on the [material.angular-classic.com](https://github.com/angular/material.angular-classic.com) implementation.

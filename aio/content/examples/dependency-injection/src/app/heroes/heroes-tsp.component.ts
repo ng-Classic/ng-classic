@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 /**
  * A version of `HeroesComponent` that does not provide the `HeroService` (and thus relies on its

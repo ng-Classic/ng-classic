@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgModule, Type} from '@angular/core';
+import {NgModule, Type} from '@angular-classic/core';
 
 import {CheckboxControlValueAccessor} from './directives/checkbox_value_accessor';
 import {DefaultValueAccessor} from './directives/default_value_accessor';

@@ -1,4 +1,4 @@
-import {Directive, NgModule} from '@angular/core';
+import {Directive, NgModule} from '@angular-classic/core';
 
 @Directive({selector: 'div.foo[some-directive]:not([title]):not(.baz)'})
 export class SomeDirective {

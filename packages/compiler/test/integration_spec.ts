@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, Input} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {Component, Directive, Input} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 {
   describe('integration tests', () => {

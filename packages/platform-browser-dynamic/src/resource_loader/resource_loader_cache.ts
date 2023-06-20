@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ResourceLoader} from '@angular/compiler';
-import {ɵglobal as global} from '@angular/core';
+import {ResourceLoader} from '@angular-classic/compiler';
+import {ɵglobal as global} from '@angular-classic/core';
 
 /**
  * An implementation of ResourceLoader that uses a template cache to avoid doing an actual

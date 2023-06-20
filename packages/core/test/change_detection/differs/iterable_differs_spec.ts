@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, IterableDiffer, IterableDifferFactory, IterableDiffers, NgModule, TrackByFunction} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Injector, IterableDiffer, IterableDifferFactory, IterableDiffers, NgModule, TrackByFunction} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 {
   describe('IterableDiffers', function() {

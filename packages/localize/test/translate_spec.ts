@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 // Ensure that `$localize` is loaded to the global scope.
-import '@angular/localize/init';
+import '@angular-classic/localize/init';
 
 import {clearTranslations, loadTranslations} from '../localize';
 import {computeMsgId, MessageId, TargetMessage} from '../src/utils';

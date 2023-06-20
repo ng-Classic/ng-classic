@@ -15,7 +15,7 @@ For the sample application used in this topic, see the <live-example name="pipes
 
 ## Built-in pipes
 
-Angular provides built-in pipes for typical data transformations, including transformations for internationalization (i18n), which use locale information to format data.
+Angular Classicprovides built-in pipes for typical data transformations, including transformations for internationalization (i18n), which use locale information to format data.
 The following are commonly used built-in pipes for data formatting:
 
 *   [`DatePipe`](api/common/DatePipe): Formats a date value according to locale rules.

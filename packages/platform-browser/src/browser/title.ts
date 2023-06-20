@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, ɵgetDOM as getDOM} from '@angular/common';
-import {Inject, Injectable, ɵɵinject} from '@angular/core';
+import {DOCUMENT, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Inject, Injectable, ɵɵinject} from '@angular-classic/core';
 
 
 /**
@@ -20,7 +20,7 @@ export function createTitle() {
 /**
  * A service that can be used to get and set the title of a current HTML document.
  *
- * Since an Angular application can't be bootstrapped on the entire HTML document (`<html>` tag)
+ * Since an Angular Classicapplication can't be bootstrapped on the entire HTML document (`<html>` tag)
  * it is not possible to bind to the `text` property of the `HTMLTitleElement` elements
  * (representing the `<title>` tag). Instead, this service can be used to set and get the current
  * title value.

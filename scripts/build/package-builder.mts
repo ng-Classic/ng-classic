@@ -8,7 +8,7 @@
 
 import {execSync} from 'child_process';
 import {join, dirname} from 'path';
-import {BuiltPackage} from '@angular/ng-dev';
+import {BuiltPackage} from '@angular-classic/ng-dev';
 import {fileURLToPath} from 'url';
 import sh from 'shelljs';
 
@@ -104,7 +104,7 @@ function buildReleasePackages(
 
   return packageNames.map((pkg) => {
     return {
-      name: `@angular/${pkg}`,
+      name: `@angular-classic/${pkg}`,
       outputPath: getDistPath(pkg),
     };
   });

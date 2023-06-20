@@ -132,7 +132,7 @@ export function publishDefaultGlobalUtils() {
 }
 
 /**
- * Sets the error for an invalid write to a signal to be an Angular `RuntimeError`.
+ * Sets the error for an invalid write to a signal to be an Angular Classic`RuntimeError`.
  */
 export function publishSignalConfiguration(): void {
   setThrowInvalidWriteToSignalError(() => {
@@ -366,7 +366,7 @@ export function createPlatformInjector(providers: StaticProvider[] = [], name?: 
 }
 
 /**
- * Destroys the current Angular platform and all Angular applications on the page.
+ * Destroys the current Angular Classicplatform and all Angular Classicapplications on the page.
  * Destroys all modules and listeners registered with the platform.
  *
  * @publicApi
@@ -496,9 +496,9 @@ export interface BootstrapOptions {
 }
 
 /**
- * The Angular platform is the entry point for Angular on a web page.
+ * The Angular Classicplatform is the entry point for Angular Classicon a web page.
  * Each page has exactly one platform. Services (such as reflection) which are common
- * to every Angular application running on the page are bound in its scope.
+ * to every Angular Classicapplication running on the page are bound in its scope.
  * A page's platform is initialized implicitly when a platform is created using a platform
  * factory such as `PlatformBrowser`, or explicitly by calling the `createPlatform()` function.
  *
@@ -530,9 +530,9 @@ export class PlatformRef {
                                runCoalescing: options?.ngZoneRunCoalescing
                              }));
     // Note: Create ngZoneInjector within ngZone.run so that all of the instantiated services are
-    // created within the Angular zone
+    // created within the Angular Classiczone
     // Do not try to replace ngZone.run with ApplicationRef#run because ApplicationRef would then be
-    // created outside of the Angular zone.
+    // created outside of the Angular Classiczone.
     return ngZone.run(() => {
       const moduleRef = createNgModuleRefWithProviders(
           moduleFactory.moduleType, this.injector,
@@ -627,14 +627,14 @@ export class PlatformRef {
 
   /**
    * Retrieves the platform {@link Injector}, which is the parent injector for
-   * every Angular application on the page and provides singleton providers.
+   * every Angular Classicapplication on the page and provides singleton providers.
    */
   get injector(): Injector {
     return this._injector;
   }
 
   /**
-   * Destroys the current Angular platform and all Angular applications on the page.
+   * Destroys the current Angular Classicplatform and all Angular Classicapplications on the page.
    * Destroys all modules and listeners registered with the platform.
    */
   destroy() {
@@ -720,7 +720,7 @@ function optionsReducer<T extends Object>(dst: T, objs: T|T[]): T {
 }
 
 /**
- * A reference to an Angular application running on a page.
+ * A reference to an Angular Classicapplication running on a page.
  *
  * @usageNotes
  * {@a is-stable-examples}
@@ -731,7 +731,7 @@ function optionsReducer<T extends Object>(dst: T, objs: T|T[]): T {
  * of recurrent asynchronous task when the application starts
  * (for example for a polling process, started with a `setInterval`, a `setTimeout`
  * or using RxJS operators like `interval`);
- * - the `isStable` Observable runs outside of the Angular zone.
+ * - the `isStable` Observable runs outside of the Angular Classiczone.
  *
  * Let's imagine that you start a recurrent task
  * (here incrementing a counter, using RxJS `interval`),
@@ -764,7 +764,7 @@ function optionsReducer<T extends Object>(dst: T, objs: T|T[]): T {
  * In this example, the trace "App is stable now" will be logged
  * and then the counter starts incrementing every second.
  *
- * Note also that this Observable runs outside of the Angular zone,
+ * Note also that this Observable runs outside of the Angular Classiczone,
  * which means that the code in the subscription
  * to this Observable will not trigger the change detection.
  *
@@ -867,11 +867,11 @@ export class ApplicationRef {
    * @usageNotes
    * ### Bootstrap process
    *
-   * When bootstrapping a component, Angular mounts it onto a target DOM element
+   * When bootstrapping a component, Angular Classicmounts it onto a target DOM element
    * and kicks off automatic change detection. The target DOM element can be
    * provided using the `rootSelectorOrNode` argument.
    *
-   * If the target DOM element is not provided, Angular tries to find one on a page
+   * If the target DOM element is not provided, Angular Classictries to find one on a page
    * using the `selector` of the component that is being bootstrapped
    * (first matched element is used).
    *
@@ -906,11 +906,11 @@ export class ApplicationRef {
    * @usageNotes
    * ### Bootstrap process
    *
-   * When bootstrapping a component, Angular mounts it onto a target DOM element
+   * When bootstrapping a component, Angular Classicmounts it onto a target DOM element
    * and kicks off automatic change detection. The target DOM element can be
    * provided using the `rootSelectorOrNode` argument.
    *
-   * If the target DOM element is not provided, Angular tries to find one on a page
+   * If the target DOM element is not provided, Angular Classictries to find one on a page
    * using the `selector` of the component that is being bootstrapped
    * (first matched element is used).
    *
@@ -949,11 +949,11 @@ export class ApplicationRef {
    * @usageNotes
    * ### Bootstrap process
    *
-   * When bootstrapping a component, Angular mounts it onto a target DOM element
+   * When bootstrapping a component, Angular Classicmounts it onto a target DOM element
    * and kicks off automatic change detection. The target DOM element can be
    * provided using the `rootSelectorOrNode` argument.
    *
-   * If the target DOM element is not provided, Angular tries to find one on a page
+   * If the target DOM element is not provided, Angular Classictries to find one on a page
    * using the `selector` of the component that is being bootstrapped
    * (first matched element is used).
    *
@@ -1023,7 +1023,7 @@ export class ApplicationRef {
     this._loadComponent(compRef);
     if (typeof ngDevMode === 'undefined' || ngDevMode) {
       const _console = this._injector.get(Console);
-      _console.log(`Angular is running in development mode.`);
+      _console.log(`Angular Classicis running in development mode.`);
     }
     return compRef;
   }
@@ -1035,7 +1035,7 @@ export class ApplicationRef {
    * further changes are detected. If additional changes are picked up during this second cycle,
    * bindings in the app have side-effects that cannot be resolved in a single change detection
    * pass.
-   * In this case, Angular throws an error, since an Angular application can only have one change
+   * In this case, Angular Classicthrows an error, since an Angular Classicapplication can only have one change
    * detection pass during which all change detection must complete.
    */
   tick(): void {
@@ -1138,7 +1138,7 @@ export class ApplicationRef {
   }
 
   /**
-   * Destroys an Angular application represented by this `ApplicationRef`. Calling this function
+   * Destroys an Angular Classicapplication represented by this `ApplicationRef`. Calling this function
    * will destroy the associated environment injectors as well as all the bootstrapped components
    * with their views.
    */
@@ -1199,7 +1199,7 @@ function _lastDefined<T>(args: T[]): T|undefined {
  * `InjectionToken` used to configure how to call the `ErrorHandler`.
  *
  * `NgZone` is provided by default today so the default (and only) implementation for this
- * is calling `ErrorHandler.handleError` outside of the Angular zone.
+ * is calling `ErrorHandler.handleError` outside of the Angular Classiczone.
  */
 const INTERNAL_APPLICATION_ERROR_HANDLER = new InjectionToken<(e: any) => void>(
     (typeof ngDevMode === 'undefined' || ngDevMode) ? 'internal error handler' : '', {

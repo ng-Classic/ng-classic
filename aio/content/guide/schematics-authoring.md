@@ -1,13 +1,13 @@
 # Authoring schematics
 
-You can create your own schematics to operate on Angular projects.
-Library developers typically package schematics with their libraries to integrate them with the Angular CLI.
-You can also create stand-alone schematics to manipulate the files and constructs in Angular applications as a way of customizing them for your development environment and making them conform to your standards and constraints.
+You can create your own schematics to operate on Angular Classicprojects.
+Library developers typically package schematics with their libraries to integrate them with the Angular ClassicCLI.
+You can also create stand-alone schematics to manipulate the files and constructs in Angular Classicapplications as a way of customizing them for your development environment and making them conform to your standards and constraints.
 Schematics can be chained, running other schematics to perform complex operations.
 
 Manipulating the code in an application has the potential to be both very powerful and correspondingly dangerous.
 For example, creating a file that already exists would be an error, and if it was applied immediately, it would discard all the other changes applied so far.
-The Angular Schematics tooling guards against side effects and errors by creating a virtual file system.
+The Angular ClassicSchematics tooling guards against side effects and errors by creating a virtual file system.
 A schematic describes a pipeline of transformations that can be applied to the virtual file system.
 When a schematic runs, the transformations are recorded in memory, and only applied in the real file system once they're confirmed to be valid.
 
@@ -54,7 +54,7 @@ Your rules can make changes to your projects by calling external tools and imple
 You need a rule, for example, to define how a template in the schematic is to be merged into the hosting project.
 
 Rules can make use of utilities provided with the `@schematics/angular` package.
-Look for helper functions for working with modules, dependencies, TypeScript, AST, JSON, Angular CLI workspaces and projects, and more.
+Look for helper functions for working with modules, dependencies, TypeScript, AST, JSON, Angular ClassicCLI workspaces and projects, and more.
 
 <code-example header="index.ts" language="typescript">
 
@@ -95,7 +95,7 @@ For example, the hypothetical "Hello World" schematic might have the following s
 }
 </code-example>
 
-See examples of schema files for the Angular CLI command schematics in [`@schematics/angular`](https://github.com/angular/angular-cli/blob/main/packages/schematics/angular/application/schema.json).
+See examples of schema files for the Angular ClassicCLI command schematics in [`@schematics/angular`](https://github.com/ng-classic/angular-cli/blob/main/packages/schematics/angular/application/schema.json).
 
 ### Schematic prompts
 
@@ -191,7 +191,7 @@ In this form, the `x-prompt` field value is a JSON object with subfields that cu
 | message | string \(required\)                                                         |
 | items   | string and/or label/value object pair \(only valid with type `list`\)       |
 
-The following example of the long form is from the JSON schema for the schematic that the CLI uses to [generate applications](https://github.com/angular/angular-cli/blob/ba8a6ea59983bb52a6f1e66d105c5a77517f062e/packages/schematics/angular/application/schema.json#L56).
+The following example of the long form is from the JSON schema for the schematic that the CLI uses to [generate applications](https://github.com/ng-classic/angular-cli/blob/ba8a6ea59983bb52a6f1e66d105c5a77517f062e/packages/schematics/angular/application/schema.json#L56).
 It defines the prompt that lets users choose which style preprocessor they want to use for the application being created.
 By using the long form, the schematic can provide more explicit formatting of the menu choices.
 
@@ -278,8 +278,8 @@ This installs the `schematics` executable, which you can use to create a new sch
 
 In the following sections, you will create a new schematics collection using the CLI to introduce the files and file structure, and some of the basic concepts.
 
-The most common use of schematics, however, is to integrate an Angular library with the Angular CLI.
-Do this by creating the schematic files directly within the library project in an Angular workspace, without using the Schematics CLI.
+The most common use of schematics, however, is to integrate an Angular Classiclibrary with the Angular ClassicCLI.
+Do this by creating the schematic files directly within the library project in an Angular Classicworkspace, without using the Schematics CLI.
 See [Schematics for Libraries](guide/schematics-for-libraries).
 
 ### Creating a schematics collection
@@ -375,7 +375,7 @@ Each schematic is created with a name, description, and factory function.
 
 *   The optional  `schema` property points to a JSON schema file that defines the command-line options available to the schematic.
 *   The optional `aliases` array specifies one or more strings that can be used to invoke the schematic.
-    For example, the schematic for the Angular CLI "generate" command has an alias "g", that lets you use the command `ng g`.
+    For example, the schematic for the Angular ClassicCLI "generate" command has an alias "g", that lets you use the command `ng g`.
 
 ### Named schematics
 
@@ -401,7 +401,7 @@ Each named schematic in the collection has the following main parts.
 | `files/`       | Optional component/template files to replicate.                    |
 
 It is possible for a schematic to provide all of its logic in the `index.ts` file, without additional templates.
-You can create dynamic schematics for Angular, however, by providing components and templates in the `files` folder, like those in standalone Angular projects.
+You can create dynamic schematics for Angular, however, by providing components and templates in the `files` folder, like those in standalone Angular Classicprojects.
 The logic in the index file configures these templates by defining rules that inject data and modify variables.
 
 <!-- links -->

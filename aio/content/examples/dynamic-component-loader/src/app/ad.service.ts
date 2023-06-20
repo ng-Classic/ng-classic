@@ -1,5 +1,5 @@
 // #docregion
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 
 import { HeroJobAdComponent } from './hero-job-ad.component';
 import { HeroProfileComponent } from './hero-profile.component';

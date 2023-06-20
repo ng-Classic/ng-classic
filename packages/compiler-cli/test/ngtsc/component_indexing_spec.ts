@@ -5,10 +5,10 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AbsoluteFsPath, getFileSystem, PathManipulation} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {runInEachFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
-import {AbsoluteSourceSpan, IdentifierKind, IndexedComponent, TopLevelIdentifier} from '@angular/compiler-cli/src/ngtsc/indexer';
-import {ParseSourceFile} from '@angular/compiler/src/compiler';
+import {AbsoluteFsPath, getFileSystem, PathManipulation} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {runInEachFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
+import {AbsoluteSourceSpan, IdentifierKind, IndexedComponent, TopLevelIdentifier} from '@angular-classic/compiler-cli/src/ngtsc/indexer';
+import {ParseSourceFile} from '@angular-classic/compiler/src/compiler';
 
 import {NgtscTestEnvironment} from './env';
 
@@ -30,7 +30,7 @@ runInEachFileSystem(() => {
     describe('indexing metadata', () => {
       it('should generate component metadata', () => {
         const componentContent = `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -54,7 +54,7 @@ runInEachFileSystem(() => {
 
       it('should index inline templates', () => {
         const componentContent = `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -82,7 +82,7 @@ runInEachFileSystem(() => {
 
       it('should index external templates', () => {
         env.write(testSourceFile, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -114,7 +114,7 @@ runInEachFileSystem(() => {
         });
 
         env.write(testSourceFile, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -142,7 +142,7 @@ runInEachFileSystem(() => {
 
       it('should generate information about used components', () => {
         env.write(testSourceFile, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -152,7 +152,7 @@ runInEachFileSystem(() => {
       `);
         env.write(testTemplateFile, '<div></div>');
         env.write('test_import.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         import {TestCmp} from './test';
 
         @Component({

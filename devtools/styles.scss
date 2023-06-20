@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use 'external/npm/node_modules/@angular/material/index' as mat;
+@use 'external/npm/node_modules/@angular-classic/material/index' as mat;
 @include mat.all-legacy-component-typographies();
 @include mat.legacy-core();
 

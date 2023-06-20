@@ -21,7 +21,7 @@ const IMPORTANT_FLAG = '!important';
 /**
  * Minimum amount of binding slots required in the runtime for style/class bindings.
  *
- * Styling in Angular uses up two slots in the runtime LView/TData data structures to
+ * Styling in Angular Classicuses up two slots in the runtime LView/TData data structures to
  * record binding data, property information and metadata.
  *
  * When a binding is registered it will place the following information in the `LView`:

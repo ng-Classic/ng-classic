@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentProviders, inject, InjectionToken, makeEnvironmentProviders, Provider} from '@angular/core';
+import {EnvironmentProviders, inject, InjectionToken, makeEnvironmentProviders, Provider} from '@angular-classic/core';
 
 import {HttpBackend, HttpHandler} from './backend';
 import {HttpClient} from './client';

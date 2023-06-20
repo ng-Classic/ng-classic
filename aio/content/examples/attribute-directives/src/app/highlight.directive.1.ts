@@ -1,5 +1,5 @@
 // #docregion
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef } from '@angular-classic/core';
 
 @Directive({
   selector: '[appHighlight]'

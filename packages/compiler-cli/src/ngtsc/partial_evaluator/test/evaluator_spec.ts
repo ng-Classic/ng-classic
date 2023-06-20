@@ -369,7 +369,7 @@ runInEachFileSystem(() => {
       expect(evaluate(`declare const x: ['bar'];`, `[...x]`)).toEqual(['bar']);
     });
 
-    // https://github.com/angular/angular/issues/48089
+    // https://github.com/ng-classic/angular/issues/48089
     it('supports declarations of readonly tuples with class references', () => {
       const tuple = evaluate(
           `

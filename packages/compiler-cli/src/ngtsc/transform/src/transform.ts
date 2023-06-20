@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ConstantPool} from '@angular/compiler';
+import {ConstantPool} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {DefaultImportTracker, ImportRewriter} from '../../imports';
@@ -50,7 +50,7 @@ export function ivyTransformFactory(
 }
 
 /**
- * Visits all classes, performs Ivy compilation where Angular decorators are present and collects
+ * Visits all classes, performs Ivy compilation where Angular Classicdecorators are present and collects
  * result in a Map that associates a ts.ClassDeclaration with Ivy compilation results. This visitor
  * does NOT perform any TS transformations.
  */
@@ -89,7 +89,7 @@ class IvyTransformationVisitor extends Visitor {
 
   override visitClassDeclaration(node: ts.ClassDeclaration):
       VisitListEntryResult<ts.Statement, ts.ClassDeclaration> {
-    // If this class is not registered in the map, it means that it doesn't have Angular decorators,
+    // If this class is not registered in the map, it means that it doesn't have Angular Classicdecorators,
     // thus no further processing is required.
     if (!this.classCompilationMap.has(node)) {
       return {node};
@@ -148,13 +148,13 @@ class IvyTransformationVisitor extends Visitor {
     // Replace the class declaration with an updated version.
     node = ts.factory.updateClassDeclaration(
         node, updatedModifiers, node.name, node.typeParameters, node.heritageClauses || [],
-        // Map over the class members and remove any Angular decorators from them.
+        // Map over the class members and remove any Angular Classicdecorators from them.
         members.map(member => this._stripAngularDecorators(member)));
     return {node, after: statements};
   }
 
   /**
-   * Return all decorators on a `Declaration` which are from @angular/core, or an empty set if none
+   * Return all decorators on a `Declaration` which are from @angular-classic/core, or an empty set if none
    * are.
    */
   private _angularCoreDecorators(decl: ts.Declaration): Set<ts.Decorator> {
@@ -178,7 +178,7 @@ class IvyTransformationVisitor extends Visitor {
     if (decorators === undefined) {
       return undefined;
     }
-    // Build a Set of the decorators on this node from @angular/core.
+    // Build a Set of the decorators on this node from @angular-classic/core.
     const coreDecorators = this._angularCoreDecorators(node);
 
     if (coreDecorators.size === decorators.length) {
@@ -203,7 +203,7 @@ class IvyTransformationVisitor extends Visitor {
   }
 
   /**
-   * Remove Angular decorators from a `ts.Node` in a shallow manner.
+   * Remove Angular Classicdecorators from a `ts.Node` in a shallow manner.
    *
    * This will remove decorators from class elements (getters, setters, properties, methods) as well
    * as parameters of constructors.
@@ -374,7 +374,7 @@ function maybeFilterDecorator(
 }
 
 function isFromAngularCore(decorator: Decorator): boolean {
-  return decorator.import !== null && decorator.import.from === '@angular/core';
+  return decorator.import !== null && decorator.import.from === '@angular-classic/core';
 }
 
 function createRecorderFn(defaultImportTracker: DefaultImportTracker):

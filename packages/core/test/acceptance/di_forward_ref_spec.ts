@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, forwardRef, Host, Inject, ViewChild} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Component, Directive, forwardRef, Host, Inject, ViewChild} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 // **NOTE**: More details on why tests relying on `forwardRef` are put into this
 // file can be found in the `BUILD.bazel` file declaring the forward ref test target.
@@ -32,7 +32,7 @@ describe('di with forwardRef', () => {
       TestBed.configureTestingModule({declarations: [DirectiveA, DirectiveB, MyComp]});
       expect(() => TestBed.createComponent(MyComp))
           .toThrowError(
-              'NG0200: Circular dependency in DI detected for DirectiveA. Find more at https://angular.io/errors/NG0200');
+              'NG0200: Circular dependency in DI detected for DirectiveA. Find more at https://angular-classic.com/errors/NG0200');
     });
 
     describe('flags', () => {

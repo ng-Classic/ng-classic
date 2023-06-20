@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {Component, Directive, forwardRef, Inject, Injectable, InjectionToken, Injector, NgModule, Optional} from '@angular/core';
-import {leaveView, specOnlyIsInstructionStateEmpty} from '@angular/core/src/render3/state';
-import {inject, TestBed, waitForAsync} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule} from '@angular-classic/common';
+import {Component, Directive, forwardRef, Inject, Injectable, InjectionToken, Injector, NgModule, Optional} from '@angular-classic/core';
+import {leaveView, specOnlyIsInstructionStateEmpty} from '@angular-classic/core/src/render3/state';
+import {inject, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('providers', () => {
   describe('inheritance', () => {

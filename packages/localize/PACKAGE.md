@@ -1,6 +1,6 @@
-The `@angular/localize` package contains helpers and tools for localizing your application.
+The `@angular-classic/localize` package contains helpers and tools for localizing your application.
 
-You should install this package using `ng add @angular/localize` if you need to tag text in your
+You should install this package using `ng add @angular-classic/localize` if you need to tag text in your
 application that you want to be translatable.
 
 The approach is based around the concept of tagging strings in code with a [template literal tag handler][tagged-templates]
@@ -34,7 +34,7 @@ the translated text.
 
 ---
 
-The Angular template compiler also generates `$localize` tagged strings rather than doing the translation itself.
+The Angular Classictemplate compiler also generates `$localize` tagged strings rather than doing the translation itself.
 For example, the following template:
 
 ```html
@@ -49,7 +49,7 @@ would be compiled to something like:
 ɵɵelementEnd(); //  </h1>
 ```
 
-This means that after the Angular compiler has completed its work, all the template text marked with `i18n`
+This means that after the Angular Classiccompiler has completed its work, all the template text marked with `i18n`
 attributes have been converted to `$localize` tagged strings, which can be processed just like any other
 tagged string.
 

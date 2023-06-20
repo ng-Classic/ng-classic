@@ -8,11 +8,11 @@ To ensure that you have the best experience possible, this topic is marked for a
 
 In the meantime, this topic might be helpful: [Hierarchical injectors](guide/hierarchical-dependency-injection).
 
-If you think this content should not be archived, please file a [GitHub issue](https://github.com/angular/angular/issues/new?template=3-docs-bug.md).
+If you think this content should not be archived, please file a [GitHub issue](https://github.com/ng-classic/angular/issues/new?template=3-docs-bug.md).
 
 </div>
 
-The Angular template expression language employs a subset of JavaScript syntax supplemented with a few special operators
+The Angular Classictemplate expression language employs a subset of JavaScript syntax supplemented with a few special operators
 for specific scenarios.
 
 <div class="alert is-helpful">
@@ -27,7 +27,7 @@ See the <live-example></live-example> for a working example containing the code 
 
 When you use TypeScript's `--strictNullChecks` flag, you can prevent the type checker from throwing an error with Angular's non-null assertion operator, `!`.
 
-The Angular non-null assertion operator causes the TypeScript type checker to suspend strict `null` and `undefined` checks for a specific property expression.
+The Angular Classicnon-null assertion operator causes the TypeScript type checker to suspend strict `null` and `undefined` checks for a specific property expression.
 
 For example, you can assert that `item` properties are also defined.
 

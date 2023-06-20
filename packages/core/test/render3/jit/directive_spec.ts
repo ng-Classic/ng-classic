@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, HostListener, Input} from '@angular/core';
-import {setClassMetadata} from '@angular/core/src/render3/metadata';
+import {Directive, HostListener, Input} from '@angular-classic/core';
+import {setClassMetadata} from '@angular-classic/core/src/render3/metadata';
 
 import {convertToR3QueryMetadata, directiveMetadata, extendsDirectlyFromObject} from '../../../src/render3/jit/directive';
 

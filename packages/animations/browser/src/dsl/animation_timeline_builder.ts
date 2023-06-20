@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AnimateChildOptions, AnimateTimings, AnimationMetadataType, AnimationOptions, AnimationQueryOptions, AUTO_STYLE, ɵPRE_STYLE as PRE_STYLE, ɵStyleDataMap} from '@angular/animations';
+import {AnimateChildOptions, AnimateTimings, AnimationMetadataType, AnimationOptions, AnimationQueryOptions, AUTO_STYLE, ɵPRE_STYLE as PRE_STYLE, ɵStyleDataMap} from '@angular-classic/animations';
 
 import {invalidQuery} from '../error_helpers';
 import {AnimationDriver} from '../render/animation_driver';

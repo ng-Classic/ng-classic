@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Component, NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {BrowserModule, platformBrowser} from '@angular/platform-browser';
+import {Component, NgModule} from '@angular-classic/core';
+import {FormsModule} from '@angular-classic/forms';
+import {BrowserModule, platformBrowser} from '@angular-classic/platform-browser';
 
 @Component({
   selector: 'app-template-forms',

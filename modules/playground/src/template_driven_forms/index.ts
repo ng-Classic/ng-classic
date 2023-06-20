@@ -8,10 +8,10 @@
 
 /* tslint:disable:no-console  */
 
-import {Component, Directive, Host, NgModule} from '@angular/core';
-import {FormControl, FormGroup, FormsModule, NG_VALIDATORS, NgForm} from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {Component, Directive, Host, NgModule} from '@angular-classic/core';
+import {FormControl, FormGroup, FormsModule, NG_VALIDATORS, NgForm} from '@angular-classic/forms';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
 
 

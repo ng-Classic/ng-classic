@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkVirtualScrollViewport} from '@angular/cdk/scrolling';
-import {Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild} from '@angular/core';
+import {CdkVirtualScrollViewport} from '@angular-classic/cdk/scrolling';
+import {Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild} from '@angular-classic/core';
 import {Observable, Subscription} from 'rxjs';
 
 import {TabUpdate} from '../../tab-update/index';

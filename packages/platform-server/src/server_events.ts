@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, ɵgetDOM as getDOM} from '@angular/common';
-import {Inject, Injectable} from '@angular/core';
+import {DOCUMENT, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Inject, Injectable} from '@angular-classic/core';
 
 @Injectable()
 export class ServerEventManagerPlugin /* extends EventManagerPlugin which is private */ {

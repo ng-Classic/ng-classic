@@ -23,7 +23,7 @@ Zone.__load_patch('util', (global: any, Zone: ZoneType, api: _ZonePrivate) => {
   // In earlier version of zone.js (<0.9.0), we use env name `__zone_symbol__BLACK_LISTED_EVENTS` to
   // define which events will not be patched by `Zone.js`.
   // In newer version (>=0.9.0), we change the env name to `__zone_symbol__UNPATCHED_EVENTS` to keep
-  // the name consistent with angular repo.
+  // the name consistent with Angular Classicrepo.
   // The  `__zone_symbol__BLACK_LISTED_EVENTS` is deprecated, but it is still be supported for
   // backwards compatibility.
   const SYMBOL_BLACK_LISTED_EVENTS = Zone.__symbol__('BLACK_LISTED_EVENTS');

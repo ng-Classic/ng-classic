@@ -1,4 +1,4 @@
-import {NgModule, Component} from '@angular/core';
+import {NgModule, Component} from '@angular-classic/core';
 
 @Component({
   selector: 'lazy-component',

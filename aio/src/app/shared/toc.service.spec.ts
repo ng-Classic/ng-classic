@@ -1,6 +1,6 @@
-import { DOCUMENT } from '@angular/common';
-import { Injector } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular-classic/common';
+import { Injector } from '@angular-classic/core';
+import { DomSanitizer, SafeHtml } from '@angular-classic/platform-browser';
 import { Subject } from 'rxjs';
 
 import { ScrollItem, ScrollSpyInfo, ScrollSpyService } from 'app/shared/scroll-spy.service';

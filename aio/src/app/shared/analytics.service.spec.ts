@@ -1,4 +1,4 @@
-import { Injector } from '@angular/core';
+import { Injector } from '@angular-classic/core';
 
 import { AnalyticsService } from 'app/shared/analytics.service';
 import { WindowToken } from 'app/shared/window';

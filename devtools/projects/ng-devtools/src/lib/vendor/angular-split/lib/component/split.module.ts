@@ -1,5 +1,5 @@
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
 
 import {SplitComponent} from './split.component';
 import {SplitAreaDirective} from './splitArea.directive';

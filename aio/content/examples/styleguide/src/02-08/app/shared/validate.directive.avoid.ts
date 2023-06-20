@@ -1,5 +1,5 @@
 // #docregion
-import { Directive } from '@angular/core';
+import { Directive } from '@angular-classic/core';
 // #docregion example
 /* avoid */
 

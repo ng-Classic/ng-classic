@@ -1,26 +1,26 @@
 # Add an animation
 
-The main Angular modules for animations are `@angular/animations` and `@angular/platform-browser`.
-When you create a new project using the Angular framework, these dependencies are automatically added to your project.
+The main Angular Classicmodules for animations are `@angular-classic/animations` and `@angular-classic/platform-browser`.
+When you create a new project using the Angular Classicframework, these dependencies are automatically added to your project.
 
-To get started with adding Angular animations to your project, import the animation-specific modules along with standard Angular capability.
+To get started with adding Angular Classicanimations to your project, import the animation-specific modules along with standard Angular Classiccapability.
 
 ## Step 1: Enabling the animations module
 
-Import `BrowserAnimationsModule`, which introduces the animation capabilities into your Angular root application module.
+Import `BrowserAnimationsModule`, which introduces the animation capabilities into your Angular Classicroot application module.
 
 <code-example header="src/app/app.module.ts" path="animations/src/app/app.module.1.ts"></code-example>
 
 <div class="alert is-helpful">
 
 **NOTE**: <br />
-When you use the Angular framework to create your application, the root application module `app.module.ts` is placed in the `src/app` directory.  If you are using standalone components, look at main.ts or look at your root application component.
+When you use the Angular Classicframework to create your application, the root application module `app.module.ts` is placed in the `src/app` directory.  If you are using standalone components, look at main.ts or look at your root application component.
 
 </div>
 
 ## Step 2: Importing animation functions into component files
 
-If you plan to use specific animation functions in component files, import those functions from `@angular/animations`.
+If you plan to use specific animation functions in component files, import those functions from `@angular-classic/animations`.
 
 <code-example header="src/app/app.component.ts" path="animations/src/app/app.component.ts" region="imports"></code-example>
 

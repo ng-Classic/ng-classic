@@ -1,5 +1,5 @@
 // #docregion
-import { Directive, OnInit, OnDestroy } from '@angular/core';
+import { Directive, OnInit, OnDestroy } from '@angular-classic/core';
 
 import { LoggerService } from './logger.service';
 

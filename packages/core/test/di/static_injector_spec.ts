@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {forwardRef, Inject, InjectFlags, Injector, Self, SkipSelf} from '@angular/core';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {forwardRef, Inject, InjectFlags, Injector, Self, SkipSelf} from '@angular-classic/core';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 import {stringify} from '../../src/util/stringify';
 

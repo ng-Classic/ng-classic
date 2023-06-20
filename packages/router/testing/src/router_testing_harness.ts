@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, DebugElement, Injectable, Type, ViewChild} from '@angular/core';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {Router, RouterOutlet, ɵafterNextNavigation as afterNextNavigation} from '@angular/router';
+import {Component, DebugElement, Injectable, Type, ViewChild} from '@angular-classic/core';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {Router, RouterOutlet, ɵafterNextNavigation as afterNextNavigation} from '@angular-classic/router';
 
 @Injectable({providedIn: 'root'})
 export class RootFixtureService {

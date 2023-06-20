@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, createEnvironmentInjector, EnvironmentInjector, importProvidersFrom, InjectionToken, NgModule} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Component, createEnvironmentInjector, EnvironmentInjector, importProvidersFrom, InjectionToken, NgModule} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 import {internalImportProvidersFrom} from '../../src/di/provider_collection';
 

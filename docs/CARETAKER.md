@@ -4,8 +4,8 @@ Caretaker is responsible for merging PRs into the individual branches and intern
 
 ## Responsibilities
 
-- Draining the queue of PRs ready to be merged. (PRs with [`action: merge`](https://github.com/angular/angular/pulls?q=is%3Aopen+is%3Apr+label%3A%22action%3A+merge%22) label)
-- Assigning [new issues](https://github.com/angular/angular/issues?q=is%3Aopen+is%3Aissue+no%3Alabel) to individual component authors.
+- Draining the queue of PRs ready to be merged. (PRs with [`action: merge`](https://github.com/ng-classic/angular/pulls?q=is%3Aopen+is%3Apr+label%3A%22action%3A+merge%22) label)
+- Assigning [new issues](https://github.com/ng-classic/angular/issues?q=is%3Aopen+is%3Aissue+no%3Alabel) to individual component authors.
 
 ## Merging the PR
 

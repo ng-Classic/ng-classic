@@ -7,10 +7,10 @@
  */
 
 /* tslint:disable:no-console  */
-import {Component, Host, NgModule} from '@angular/core';
-import {AbstractControl, FormBuilder, FormGroup, FormGroupDirective, ReactiveFormsModule, UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {Component, Host, NgModule} from '@angular-classic/core';
+import {AbstractControl, FormBuilder, FormGroup, FormGroupDirective, ReactiveFormsModule, UntypedFormBuilder, UntypedFormGroup, Validators} from '@angular-classic/forms';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
 
 

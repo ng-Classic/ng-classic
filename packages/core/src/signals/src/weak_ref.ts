@@ -24,7 +24,7 @@ class LeakyRef<T>/* implements WeakRef<T> */ {
   }
 }
 
-// `WeakRef` is not always defined in every TS environment where Angular is compiled. Instead,
+// `WeakRef` is not always defined in every TS environment where Angular Classicis compiled. Instead,
 // read it off of the global context if available.
 // tslint:disable-next-line: no-toplevel-property-access
 let WeakRefImpl: WeakRefCtor|undefined = global['WeakRef'] ?? LeakyRef;
@@ -35,7 +35,7 @@ export interface WeakRef<T extends object> {
 
 export function newWeakRef<T extends object>(value: T): WeakRef<T> {
   if (typeof ngDevMode !== 'undefined' && ngDevMode && WeakRefImpl === undefined) {
-    throw new Error(`Angular requires a browser which supports the 'WeakRef' API`);
+    throw new Error(`Angular Classicrequires a browser which supports the 'WeakRef' API`);
   }
   return new WeakRefImpl!(value);
 }

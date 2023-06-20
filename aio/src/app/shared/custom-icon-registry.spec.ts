@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { ErrorHandler } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClient } from '@angular-classic/common/http';
+import { ErrorHandler } from '@angular-classic/core';
+import { MatIconRegistry } from '@angular-classic/material/icon';
+import { DomSanitizer } from '@angular-classic/platform-browser';
 import { unwrapHtml, concatHtmls } from 'safevalues';
 import { CustomIconRegistry, SvgIconInfo } from './custom-icon-registry';
 import { svg } from './security';

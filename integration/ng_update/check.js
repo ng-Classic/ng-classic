@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const angularRoot = path.resolve('./node_modules/@angular');
+const angularRoot = path.resolve('./node_modules/@angular-classic');
 const angularModules = fs.readdirSync(angularRoot).map(function (name) {
   const content = fs.readFileSync(path.join(angularRoot, name, 'package.json'), 'utf-8').toString();
   return JSON.parse(content);

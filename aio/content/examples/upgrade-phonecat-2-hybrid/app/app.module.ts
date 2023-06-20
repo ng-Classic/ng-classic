@@ -1,16 +1,16 @@
 // #docplaster
 // #docregion bare
-import { DoBootstrap, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { DoBootstrap, NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
 // #enddocregion bare
 // #docregion upgrademodule
-import { UpgradeModule } from '@angular/upgrade/static';
+import { UpgradeModule } from '@angular-classic/upgrade/static';
 // #enddocregion upgrademodule
 // #docregion httpclientmodule
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular-classic/common/http';
 // #enddocregion httpclientmodule
 // #docregion phonelist
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular-classic/forms';
 // #enddocregion phonelist
 // #docregion phone
 import { Phone } from './core/phone/phone.service';

@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 import { HomeComponent } from './home/home.component';
 // #docregion import-router-module
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular-classic/router';
 // #enddocregion
 @Component({
   selector: 'app-root',

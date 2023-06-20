@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, NgModule, Optional, Self} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {Component, NgModule, Optional, Self} from '@angular-classic/core';
+import {RouterModule} from '@angular-classic/router';
 import {Service} from './root_service';
 
 @Component({

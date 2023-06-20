@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {createPlatformFactory, PlatformRef} from '@angular/core';
-import {ɵplatformCoreDynamic as platformCoreDynamic} from '@angular/platform-browser-dynamic';
+import {createPlatformFactory, PlatformRef} from '@angular-classic/core';
+import {ɵplatformCoreDynamic as platformCoreDynamic} from '@angular-classic/platform-browser-dynamic';
 
 /**
  * Platform for dynamic tests

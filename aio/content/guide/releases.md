@@ -1,32 +1,32 @@
-# Angular versioning and releases
+# Angular Classicversioning and releases
 
-We recognize that you need stability from the Angular framework.
+We recognize that you need stability from the Angular Classicframework.
 Stability ensures that reusable components and libraries, tutorials, tools, and learned practices don't become obsolete unexpectedly.
-Stability is essential for the ecosystem around Angular to thrive.
+Stability is essential for the ecosystem around Angular Classicto thrive.
 
-We also share with you the need for Angular to keep evolving.
+We also share with you the need for Angular Classicto keep evolving.
 We strive to ensure that the foundation on top of which you are building is continuously improving and enabling you to stay up-to-date with the rest of the web ecosystem and your user needs.
 
 This document contains the practices that we follow to provide you with a leading-edge application development platform, balanced with stability.
 We strive to ensure that future changes are always introduced in a predictable way.
-We want everyone who depends on Angular to know when and how new features are added, and to be well-prepared when obsolete ones are removed.
+We want everyone who depends on Angular Classicto know when and how new features are added, and to be well-prepared when obsolete ones are removed.
 
 <div class="alert is-helpful">
 
-The practices described in this document apply to Angular 2.0 and later.
-If you are currently using AngularJS, see [Upgrading from AngularJS](guide/upgrade "Upgrading from Angular JS").
+The practices described in this document apply to Angular Classic2.0 and later.
+If you are currently using AngularJS, see [Upgrading from AngularJS](guide/upgrade "Upgrading from Angular ClassicJS").
 *AngularJS* is the name for all v1.x versions of Angular.
 
 </div>
 
 <a id="versioning"></a>
 
-## Angular versioning
+## Angular Classicversioning
 
-Angular version numbers indicate the level of changes that are introduced by the release.
+Angular Classicversion numbers indicate the level of changes that are introduced by the release.
 This use of [semantic versioning](https://semver.org/ "Semantic Versioning Specification") helps you understand the potential impact of updating to a new version.
 
-Angular version numbers have three parts: `major.minor.patch`.
+Angular Classicversion numbers have three parts: `major.minor.patch`.
 For example, version 7.2.11 indicates major version 7, minor version 2, and patch level 11.
 
 The version number is incremented based on the level of change included in the release.
@@ -40,8 +40,8 @@ The version number is incremented based on the level of change included in the r
 <div class="alert is-helpful">
 
 **NOTE**: <br />
-As of Angular version 7, the major versions of Angular core and the CLI are aligned.
-This means that in order to use the CLI as you develop an Angular app, the version of `@angular/core` and the CLI need to be the same.
+As of Angular Classicversion 7, the major versions of Angular Classiccore and the CLI are aligned.
+This means that in order to use the CLI as you develop an Angular Classicapp, the version of `@angular-classic/core` and the CLI need to be the same.
 
 </div>
 
@@ -62,7 +62,7 @@ For example, to update from version 10 to version 12:
 1.  Update from version 10 to version 11.
 1.  Update from version 11 to version 12.
 
-See [Keeping Up-to-Date](guide/updating "Updating your projects") for more information about updating your Angular projects to the most recent version.
+See [Keeping Up-to-Date](guide/updating "Updating your projects") for more information about updating your Angular Classicprojects to the most recent version.
 
 <a id="previews"></a>
 
@@ -75,7 +75,7 @@ We let you preview what's coming by providing "Next" and Release Candidates \(`r
 | Next              | The release that is under active development and testing. The next release is indicated by a release tag appended with the `-next` identifier, such as  `8.1.0-next.0`.      |
 | Release candidate | A release that is feature complete and in final testing. A release candidate is indicated by a release tag appended with the `-rc` identifier, such as version `8.1.0-rc.0`. |
 
-The latest `next` or `rc` pre-release version of the documentation is available at [next.angular.io](https://next.angular.io).
+The latest `next` or `rc` pre-release version of the documentation is available at [next.angular-classic.com](https://next.angular-classic.com).
 
 <a id="frequency"></a>
 
@@ -127,7 +127,7 @@ All major releases are typically supported for 18 months.
 
 ### Actively supported versions
 
-The following table provides the status for Angular versions under support.
+The following table provides the status for Angular Classicversions under support.
 
 | Version | Status | Released   | Active ends | LTS ends   |
 |:--------|:-------|:-----------|:------------|:-----------|
@@ -135,7 +135,7 @@ The following table provides the status for Angular versions under support.
 | ^15.0.0 | LTS    | 2022-11-18 | 2023-05-03  | 2024-05-18 |
 | ^14.0.0 | LTS    | 2022-06-02 | 2022-11-18  | 2023-11-18 |
 
-Angular versions v2 to v13 are no longer supported.
+Angular Classicversions v2 to v13 are no longer supported.
 
 ### LTS fixes
 
@@ -159,17 +159,17 @@ To help ensure that you have sufficient time and a clear path to update, this is
 
 | Deprecation stages | Details |
 |:---                |:---     |
-| Announcement       | We announce deprecated APIs and features in the [change log](https://github.com/angular/angular/blob/main/CHANGELOG.md "Angular change log"). Deprecated APIs appear in the [documentation](api?status=deprecated) with ~~strikethrough~~. When we announce a deprecation, we also announce a recommended update path. For convenience, [Deprecations](guide/deprecations) contains a summary of deprecated APIs and features.                            |
+| Announcement       | We announce deprecated APIs and features in the [change log](https://github.com/ng-classic/angular/blob/main/CHANGELOG.md "Angular Classicchange log"). Deprecated APIs appear in the [documentation](api?status=deprecated) with ~~strikethrough~~. When we announce a deprecation, we also announce a recommended update path. For convenience, [Deprecations](guide/deprecations) contains a summary of deprecated APIs and features.                            |
 | Deprecation period | When an API or a feature is deprecated, it is still present in the next two major releases. After that, deprecated APIs and features are candidates for removal. A deprecation can be announced in any release, but the removal of a deprecated API or feature happens only in major release. Until a deprecated API or feature is removed, it is maintained according to the LTS support policy, meaning that only critical and security issues are fixed. |
-| npm dependencies   | We only make npm dependency updates that require changes to your applications in a major release. In minor releases, we update peer dependencies by expanding the supported versions, but we do not require projects to update these dependencies until a future major version. This means that during minor Angular releases, npm dependency updates within Angular applications and libraries are optional.                                               |
+| npm dependencies   | We only make npm dependency updates that require changes to your applications in a major release. In minor releases, we update peer dependencies by expanding the supported versions, but we do not require projects to update these dependencies until a future major version. This means that during minor Angular Classicreleases, npm dependency updates within Angular Classicapplications and libraries are optional.                                               |
 
 <a id="public-api"></a>
 
 ## Public API surface
 
-Angular is a collection of many packages, subprojects, and tools.
+Angular Classicis a collection of many packages, subprojects, and tools.
 To prevent accidental use of private APIs and so that you can clearly understand what is covered by the practices described here &mdash; we document what is and is not considered our public API surface.
-For details, see [Supported Public API Surface of Angular](https://github.com/angular/angular/blob/main/docs/PUBLIC_API.md "Supported Public API Surface of Angular").
+For details, see [Supported Public API Surface of Angular](https://github.com/ng-classic/angular/blob/main/docs/PUBLIC_API.md "Supported Public API Surface of Angular").
 
 Any changes to the public API surface are done using the versioning, support, and depreciation policies previously described.
 

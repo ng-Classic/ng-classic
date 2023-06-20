@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstElement, TmplAstNode, TmplAstTemplate, TmplAstTextAttribute} from '@angular/compiler';
-import {NgCompiler} from '@angular/compiler-cli/src/ngtsc/core';
-import {absoluteFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {isExternalResource} from '@angular/compiler-cli/src/ngtsc/metadata';
-import {ProgramDriver} from '@angular/compiler-cli/src/ngtsc/program_driver';
-import {DirectiveSymbol, DomBindingSymbol, ElementSymbol, Symbol, SymbolKind, TcbLocation, TemplateSymbol} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {AST, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstElement, TmplAstNode, TmplAstTemplate, TmplAstTextAttribute} from '@angular-classic/compiler';
+import {NgCompiler} from '@angular-classic/compiler-cli/src/ngtsc/core';
+import {absoluteFrom} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {isExternalResource} from '@angular-classic/compiler-cli/src/ngtsc/metadata';
+import {ProgramDriver} from '@angular-classic/compiler-cli/src/ngtsc/program_driver';
+import {DirectiveSymbol, DomBindingSymbol, ElementSymbol, Symbol, SymbolKind, TcbLocation, TemplateSymbol} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript';
 
 import {convertToTemplateDocumentSpan} from './references_and_rename_utils';
@@ -41,7 +41,7 @@ export class DefinitionBuilder {
     const templateInfo = getTemplateInfoAtPosition(fileName, position, this.compiler);
     if (templateInfo === undefined) {
       // We were unable to get a template at the given position. If we are in a TS file, instead
-      // attempt to get an Angular definition at the location inside a TS file (examples of this
+      // attempt to get an Angular Classicdefinition at the location inside a TS file (examples of this
       // would be templateUrl or a url in styleUrls).
       if (!isTypeScriptFile(fileName)) {
         return;

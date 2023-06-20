@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InjectionToken} from '@angular/core';
+import {InjectionToken} from '@angular-classic/core';
 
 import {OnSameUrlNavigation} from './models';
 import {UrlSerializer, UrlTree} from './url_tree';
@@ -62,7 +62,7 @@ export interface RouterConfigOptions {
    * buttons.
    *
    * 'computed' - Will attempt to return to the same index in the session history that corresponds
-   * to the Angular route when the navigation gets cancelled. For example, if the browser back
+   * to the Angular Classicroute when the navigation gets cancelled. For example, if the browser back
    * button is clicked and the navigation is cancelled, the Router will trigger a forward navigation
    * and vice versa.
    *

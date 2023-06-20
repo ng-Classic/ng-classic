@@ -5,12 +5,12 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, AnimationBuilder, style} from '@angular/animations';
-import {AnimationDriver} from '@angular/animations/browser';
-import {MockAnimationDriver} from '@angular/animations/browser/testing';
-import {Component, ViewChild} from '@angular/core';
-import {fakeAsync, flushMicrotasks, TestBed} from '@angular/core/testing';
-import {NoopAnimationsModule, ɵBrowserAnimationBuilder as BrowserAnimationBuilder} from '@angular/platform-browser/animations';
+import {animate, AnimationBuilder, style} from '@angular-classic/animations';
+import {AnimationDriver} from '@angular-classic/animations/browser';
+import {MockAnimationDriver} from '@angular-classic/animations/browser/testing';
+import {Component, ViewChild} from '@angular-classic/core';
+import {fakeAsync, flushMicrotasks, TestBed} from '@angular-classic/core/testing';
+import {NoopAnimationsModule, ɵBrowserAnimationBuilder as BrowserAnimationBuilder} from '@angular-classic/platform-browser/animations';
 
 {
   describe('BrowserAnimationBuilder', () => {

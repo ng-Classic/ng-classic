@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {MatLegacyDialogModule as MatDialogModule} from '@angular/material/legacy-dialog';
-import {MatSelectModule} from '@angular/material/select';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {MatLegacyDialogModule as MatDialogModule} from '@angular-classic/material/legacy-dialog';
+import {MatSelectModule} from '@angular-classic/material/select';
 
 import {RouterTreeComponent} from './router-tree.component';
 

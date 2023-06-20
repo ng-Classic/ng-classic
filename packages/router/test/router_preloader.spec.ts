@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {provideLocationMocks} from '@angular/common/testing';
-import {Compiler, Component, Injectable, InjectionToken, Injector, NgModule, NgModuleFactory, NgModuleRef, Type} from '@angular/core';
-import {R3Injector} from '@angular/core/src/di/r3_injector';
-import {NgModuleRef as R3NgModuleRef} from '@angular/core/src/render3';
-import {fakeAsync, inject, TestBed, tick} from '@angular/core/testing';
-import {PreloadAllModules, PreloadingStrategy, RouterPreloader, ROUTES, withPreloading} from '@angular/router';
+import {provideLocationMocks} from '@angular-classic/common/testing';
+import {Compiler, Component, Injectable, InjectionToken, Injector, NgModule, NgModuleFactory, NgModuleRef, Type} from '@angular-classic/core';
+import {R3Injector} from '@angular-classic/core/src/di/r3_injector';
+import {NgModuleRef as R3NgModuleRef} from '@angular-classic/core/src/render3';
+import {fakeAsync, inject, TestBed, tick} from '@angular-classic/core/testing';
+import {PreloadAllModules, PreloadingStrategy, RouterPreloader, ROUTES, withPreloading} from '@angular-classic/router';
 import {BehaviorSubject, Observable, of, throwError} from 'rxjs';
 import {catchError, delay, filter, switchMap, take} from 'rxjs/operators';
 

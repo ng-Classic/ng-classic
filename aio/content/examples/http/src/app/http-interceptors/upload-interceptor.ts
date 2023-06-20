@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import {
   HttpEvent, HttpInterceptor, HttpHandler,
   HttpRequest, HttpResponse,
   HttpEventType, HttpProgressEvent
-} from '@angular/common/http';
+} from '@angular-classic/common/http';
 
 import { Observable } from 'rxjs';
 

@@ -1,4 +1,4 @@
-import {Pipe} from '@angular/core';
+import {Pipe} from '@angular-classic/core';
 
 @Pipe({
   standalone: true,

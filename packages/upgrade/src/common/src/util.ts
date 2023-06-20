@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, Type, ɵNG_MOD_DEF} from '@angular/core';
+import {Injector, Type, ɵNG_MOD_DEF} from '@angular-classic/core';
 
 import {element as angularElement, IAugmentedJQuery, IInjectorService, INgModelController, IRootScopeService} from './angular1';
 import {$ROOT_ELEMENT, $ROOT_SCOPE, DOWNGRADED_MODULE_COUNT_KEY, UPGRADE_APP_TYPE_KEY} from './constants';
@@ -23,12 +23,12 @@ export function onError(e: any) {
 /**
  * Clean the jqLite/jQuery data on the element and all its descendants.
  * Equivalent to how jqLite/jQuery invoke `cleanData()` on an Element when removed:
- *   https://github.com/angular/angular.js/blob/2e72ea13fa98bebf6ed4b5e3c45eaf5f990ed16f/src/jqLite.js#L349-L355
+ *   https://github.com/ng-classic/angular.js/blob/2e72ea13fa98bebf6ed4b5e3c45eaf5f990ed16f/src/jqLite.js#L349-L355
  *   https://github.com/jquery/jquery/blob/6984d1747623dbc5e87fd6c261a5b6b1628c107c/src/manipulation.js#L182
  *
  * NOTE:
  * `cleanData()` will also invoke the AngularJS `$destroy` DOM event on the element:
- *   https://github.com/angular/angular.js/blob/2e72ea13fa98bebf6ed4b5e3c45eaf5f990ed16f/src/Angular.js#L1932-L1945
+ *   https://github.com/ng-classic/angular.js/blob/2e72ea13fa98bebf6ed4b5e3c45eaf5f990ed16f/src/Angular.js#L1932-L1945
  *
  * @param node The DOM node whose data needs to be cleaned.
  */
@@ -107,29 +107,29 @@ export function validateInjectionKey(
         throw new Error(
             `Error while ${attemptedAction}: 'downgradedModule' unexpectedly specified.\n` +
             'You should not specify a value for \'downgradedModule\', unless you are downgrading ' +
-            'more than one Angular module (via \'downgradeModule()\').');
+            'more than one Angular Classicmodule (via \'downgradeModule()\').');
       }
       break;
     case UpgradeAppType.Lite:
       if (!downgradedModule && (downgradedModuleCount >= 2)) {
         throw new Error(
             `Error while ${attemptedAction}: 'downgradedModule' not specified.\n` +
-            'This application contains more than one downgraded Angular module, thus you need to ' +
+            'This application contains more than one downgraded Angular Classicmodule, thus you need to ' +
             'always specify \'downgradedModule\' when downgrading components and injectables.');
       }
 
       if (!$injector.has(injectionKey)) {
         throw new Error(
             `Error while ${attemptedAction}: Unable to find the specified downgraded module.\n` +
-            'Did you forget to downgrade an Angular module or include it in the AngularJS ' +
+            'Did you forget to downgrade an Angular Classicmodule or include it in the AngularJS ' +
             'application?');
       }
 
       break;
     default:
       throw new Error(
-          `Error while ${attemptedAction}: Not a valid '@angular/upgrade' application.\n` +
-          'Did you forget to downgrade an Angular module or include it in the AngularJS ' +
+          `Error while ${attemptedAction}: Not a valid '@angular-classic/upgrade' application.\n` +
+          'Did you forget to downgrade an Angular Classicmodule or include it in the AngularJS ' +
           'application?');
   }
 }
@@ -153,16 +153,16 @@ export interface LazyModuleRef {
 }
 
 export const enum UpgradeAppType {
-  // App NOT using `@angular/upgrade`. (This should never happen in an `ngUpgrade` app.)
+  // App NOT using `@angular-classic/upgrade`. (This should never happen in an `ngUpgrade` app.)
   None,
 
-  // App using the deprecated `@angular/upgrade` APIs (a.k.a. dynamic `ngUpgrade`).
+  // App using the deprecated `@angular-classic/upgrade` APIs (a.k.a. dynamic `ngUpgrade`).
   Dynamic,
 
-  // App using `@angular/upgrade/static` with `UpgradeModule`.
+  // App using `@angular-classic/upgrade/static` with `UpgradeModule`.
   Static,
 
-  // App using @angular/upgrade/static` with `downgradeModule()` (a.k.a `ngUpgrade`-lite ).
+  // App using @angular-classic/upgrade/static` with `downgradeModule()` (a.k.a `ngUpgrade`-lite ).
   Lite,
 }
 

@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular-classic/core';
 import { Logger } from 'app/shared/logger.service';
 import { ElementsLoader } from './elements-loader';
 

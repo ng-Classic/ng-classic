@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Type, ɵRuntimeError as RuntimeError, ɵstringify as stringify} from '@angular/core';
+import {Type, ɵRuntimeError as RuntimeError, ɵstringify as stringify} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from '../errors';
 

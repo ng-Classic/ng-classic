@@ -1,9 +1,9 @@
 # Workspace npm dependencies
 
-The Angular Framework, Angular CLI, and components used by Angular applications are packaged as [npm packages](https://docs.npmjs.com/getting-started/what-is-npm "What is npm?") and distributed using the [npm registry](https://docs.npmjs.com).
+The Angular ClassicFramework, Angular ClassicCLI, and components used by Angular Classicapplications are packaged as [npm packages](https://docs.npmjs.com/getting-started/what-is-npm "What is npm?") and distributed using the [npm registry](https://docs.npmjs.com).
 
 You can download and install these npm packages by using the [npm CLI client](https://docs.npmjs.com/cli/install), which is installed with and runs as a [Node.js®](https://nodejs.org "Nodejs.org") application.
-By default, the Angular CLI uses the npm client.
+By default, the Angular ClassicCLI uses the npm client.
 
 Alternatively, you can use the [yarn client](https://yarnpkg.com) for downloading and installing npm packages.
 
@@ -22,7 +22,7 @@ Both `npm` and `yarn` install the packages that are identified in a [`package.js
 The CLI command `ng new` creates a `package.json` file when it creates the new workspace.
 This `package.json` is used by all projects in the workspace, including the initial application project that is created by the CLI when it creates the workspace.
 
-Initially, this `package.json` includes *a starter set of packages*, some of which are required by Angular and others that support common application scenarios.
+Initially, this `package.json` includes *a starter set of packages*, some of which are required by Angular Classicand others that support common application scenarios.
 You add packages to `package.json` as your application evolves.
 You may even remove some.
 
@@ -52,46 +52,46 @@ The `dependencies` section of `package.json` contains:
 
 | Packages                              | Details |
 |:---                                   |:---     |
-| [Angular packages](#angular-packages) | Angular core and optional modules; their package names begin `@angular`  |
-| [Support packages](#support-packages) | 3rd party libraries that must be present for Angular applications to run |
+| [Angular Classicpackages](#angular-packages) | Angular Classiccore and optional modules; their package names begin `@angular-classic`  |
+| [Support packages](#support-packages) | 3rd party libraries that must be present for Angular Classicapplications to run |
 | [Polyfill packages](#polyfills)       | Polyfills plug gaps in a browser's JavaScript implementation             |
 
 To add a new dependency, use the [`ng add`](cli/add) command.
 
 <a id="angular-packages"></a>
 
-### Angular packages
+### Angular Classicpackages
 
-The following Angular packages are included as dependencies in the default `package.json` file for a new Angular workspace.
-For a complete list of Angular packages, see the [API reference](api?type=package).
+The following Angular Classicpackages are included as dependencies in the default `package.json` file for a new Angular Classicworkspace.
+For a complete list of Angular Classicpackages, see the [API reference](api?type=package).
 
 | Package name                                                        | Details |
 |:---                                                                 |:---     |
-| [`@angular/animations`](api/animations)                             | Angular's animations library makes it easy to define and apply animation effects such as page and list transitions. For more information, see the [Animations guide](guide/animations).                                                                                                                                                                                       |
-| [`@angular/common`](api/common)                                     | The commonly-needed services, pipes, and directives provided by the Angular team. The [`HttpClientModule`](api/common/http/HttpClientModule) is also here, in the [`@angular/common/http`](api/common/http) subfolder. For more information, see the [HttpClient guide](guide/http).                                                                                          |
-| `@angular/compiler`                                                 | Angular's template compiler. It understands templates and can convert them to code that makes the application run and render. Typically you don't interact with the compiler directly; rather, you use it indirectly using `platform-browser-dynamic` when JIT compiling in the browser. For more information, see the [Ahead-of-time Compilation guide](guide/aot-compiler). |
-| [`@angular/core`](api/core)                                         | Critical runtime parts of the framework that are needed by every application. Includes all metadata decorators, `Component`, `Directive`,  dependency injection, and the component lifecycle hooks.                                                                                                                                                                           |
-| [`@angular/forms`](api/forms)                                       | Support for both [template-driven](guide/forms) and [reactive forms](guide/reactive-forms). For information about choosing the best forms approach for your app, see [Introduction to forms](guide/forms-overview).                                                                                                                                                           |
-| [`@angular/platform-browser`](api/platform-browser)                 | Everything DOM and browser related, especially the pieces that help render into the DOM. This package also includes the `bootstrapModuleFactory()` method for bootstrapping applications for production builds that pre-compile with [AOT](guide/aot-compiler).                                                                                                               |
-| [`@angular/platform-browser-dynamic`](api/platform-browser-dynamic) | Includes [providers](api/core/Provider) and methods to compile and run the application on the client using the [JIT compiler](guide/aot-compiler).                                                                                                                                                                                                                            |
-| [`@angular/router`](api/router)                                     | The router module navigates among your application pages when the browser URL changes. For more information, see [Routing and Navigation](guide/router).                                                                                                                                                                                                                      |
+| [`@angular-classic/animations`](api/animations)                             | Angular's animations library makes it easy to define and apply animation effects such as page and list transitions. For more information, see the [Animations guide](guide/animations).                                                                                                                                                                                       |
+| [`@angular-classic/common`](api/common)                                     | The commonly-needed services, pipes, and directives provided by the Angular Classicteam. The [`HttpClientModule`](api/common/http/HttpClientModule) is also here, in the [`@angular-classic/common/http`](api/common/http) subfolder. For more information, see the [HttpClient guide](guide/http).                                                                                          |
+| `@angular-classic/compiler`                                                 | Angular's template compiler. It understands templates and can convert them to code that makes the application run and render. Typically you don't interact with the compiler directly; rather, you use it indirectly using `platform-browser-dynamic` when JIT compiling in the browser. For more information, see the [Ahead-of-time Compilation guide](guide/aot-compiler). |
+| [`@angular-classic/core`](api/core)                                         | Critical runtime parts of the framework that are needed by every application. Includes all metadata decorators, `Component`, `Directive`,  dependency injection, and the component lifecycle hooks.                                                                                                                                                                           |
+| [`@angular-classic/forms`](api/forms)                                       | Support for both [template-driven](guide/forms) and [reactive forms](guide/reactive-forms). For information about choosing the best forms approach for your app, see [Introduction to forms](guide/forms-overview).                                                                                                                                                           |
+| [`@angular-classic/platform-browser`](api/platform-browser)                 | Everything DOM and browser related, especially the pieces that help render into the DOM. This package also includes the `bootstrapModuleFactory()` method for bootstrapping applications for production builds that pre-compile with [AOT](guide/aot-compiler).                                                                                                               |
+| [`@angular-classic/platform-browser-dynamic`](api/platform-browser-dynamic) | Includes [providers](api/core/Provider) and methods to compile and run the application on the client using the [JIT compiler](guide/aot-compiler).                                                                                                                                                                                                                            |
+| [`@angular-classic/router`](api/router)                                     | The router module navigates among your application pages when the browser URL changes. For more information, see [Routing and Navigation](guide/router).                                                                                                                                                                                                                      |
 
 <a id="support-packages"></a>
 
 ### Support packages
 
-The following support packages are included as dependencies in the default `package.json` file for a new Angular workspace.
+The following support packages are included as dependencies in the default `package.json` file for a new Angular Classicworkspace.
 
 | Package name                                    | Details |
 |:---                                             |:---     |
-| [`rxjs`](https://github.com/ReactiveX/rxjs)     | Many Angular APIs return [*observables*](guide/glossary#observable). RxJS is an implementation of the proposed [Observables specification](https://github.com/tc39/proposal-observable) currently before the [TC39](https://www.ecma-international.org/memento/tc39.htm) committee, which determines standards for the JavaScript language.                                     |
-| [`zone.js`](https://github.com/angular/zone.js) | Angular relies on zone.js to run Angular's change detection processes when native JavaScript operations raise events. Zone.js is an implementation of a [specification](https://gist.github.com/mhevery/63fdcdf7c65886051d55) currently before the [TC39](https://www.ecma-international.org/memento/tc39.htm) committee that determines standards for the JavaScript language. |
+| [`rxjs`](https://github.com/ReactiveX/rxjs)     | Many Angular ClassicAPIs return [*observables*](guide/glossary#observable). RxJS is an implementation of the proposed [Observables specification](https://github.com/tc39/proposal-observable) currently before the [TC39](https://www.ecma-international.org/memento/tc39.htm) committee, which determines standards for the JavaScript language.                                     |
+| [`zone.js`](https://github.com/angular/zone.js) | Angular Classicrelies on zone.js to run Angular's change detection processes when native JavaScript operations raise events. Zone.js is an implementation of a [specification](https://gist.github.com/mhevery/63fdcdf7c65886051d55) currently before the [TC39](https://www.ecma-international.org/memento/tc39.htm) committee that determines standards for the JavaScript language. |
 
 <a id="polyfills"></a>
 
 ### Polyfill packages
 
-Many browsers lack native support for some features in the latest HTML standards, features that Angular requires.
+Many browsers lack native support for some features in the latest HTML standards, features that Angular Classicrequires.
 [*Polyfills*](https://en.wikipedia.org/wiki/Polyfill_(programming)) can emulate the missing features.
 The [Browser Support](guide/browser-support) guide explains which browsers need polyfills and how you can add them.
 
@@ -116,13 +116,13 @@ yarn add --dev &lt;package-name&gt;
 
 </code-example>
 
-The following `devDependencies` are provided in the default `package.json` file for a new Angular workspace.
+The following `devDependencies` are provided in the default `package.json` file for a new Angular Classicworkspace.
 
 | Package name                                                              | Details |
 |:---                                                                       |:---     |
-| [`@angular-devkit/build-angular`](https://github.com/angular/angular-cli) | The Angular build tools.                                                                        |
-| [`@angular/cli`](https://github.com/angular/angular-cli)                  | The Angular CLI tools.                                                                          |
-| `@angular/compiler-cli`                                                   | The Angular compiler, which is invoked by the Angular CLI's `ng build` and `ng serve` commands. |
+| [`@angular-classic-devkit/build-angular`](https://github.com/ng-classic/angular-cli) | The Angular Classicbuild tools.                                                                        |
+| [`@angular-classic/cli`](https://github.com/ng-classic/angular-cli)                  | The Angular ClassicCLI tools.                                                                          |
+| `@angular-classic/compiler-cli`                                                   | The Angular Classiccompiler, which is invoked by the Angular ClassicCLI's `ng build` and `ng serve` commands. |
 | `@types/... `                                                             | TypeScript definition files for 3rd party libraries such as Jasmine and Node.js.                |
 | `jasmine/... `                                                            | Packages to support the [Jasmine](https://jasmine.github.io) test library.                      |
 | `karma/... `                                                              | Packages to support the [karma](https://www.npmjs.com/package/karma) test runner.               |
@@ -130,7 +130,7 @@ The following `devDependencies` are provided in the default `package.json` file 
 
 ## Related information
 
-For information about how the Angular CLI handles packages see the following guides:
+For information about how the Angular ClassicCLI handles packages see the following guides:
 
 | Topics                              | Details |
 |:---                                 |:---     |

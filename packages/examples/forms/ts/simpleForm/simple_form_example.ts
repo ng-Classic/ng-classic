@@ -8,8 +8,8 @@
 
 /* tslint:disable:no-console  */
 // #docregion Component
-import {Component} from '@angular/core';
-import {NgForm} from '@angular/forms';
+import {Component} from '@angular-classic/core';
+import {NgForm} from '@angular-classic/forms';
 
 @Component({
   selector: 'example-app',

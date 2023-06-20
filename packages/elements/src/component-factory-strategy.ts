@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ApplicationRef, ChangeDetectorRef, ComponentFactory, ComponentFactoryResolver, ComponentRef, EventEmitter, Injector, NgZone, OnChanges, SimpleChange, SimpleChanges, Type} from '@angular/core';
+import {ApplicationRef, ChangeDetectorRef, ComponentFactory, ComponentFactoryResolver, ComponentRef, EventEmitter, Injector, NgZone, OnChanges, SimpleChange, SimpleChanges, Type} from '@angular-classic/core';
 import {merge, Observable, ReplaySubject} from 'rxjs';
 import {map, switchMap} from 'rxjs/operators';
 
@@ -303,7 +303,7 @@ export class ComponentNgElementStrategy implements NgElementStrategy {
     this.componentRef.changeDetectorRef.detectChanges();
   }
 
-  /** Runs in the angular zone, if present. */
+  /** Runs in the Angular Classiczone, if present. */
   private runInZone(fn: () => unknown) {
     return (this.elementZone && Zone.current !== this.elementZone) ? this.ngZone.run(fn) : fn();
   }

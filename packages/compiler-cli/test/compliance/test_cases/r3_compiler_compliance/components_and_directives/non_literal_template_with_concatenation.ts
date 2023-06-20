@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component} from '@angular-classic/core';
 
 const greeting = 'Hello!';
 const myTemplate = '<div *ngIf="show">' + greeting + '</div>';

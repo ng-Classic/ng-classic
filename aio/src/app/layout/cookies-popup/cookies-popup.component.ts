@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject } from '@angular-classic/core';
 import { LocalStorage } from 'app/shared/storage.service';
 
 export const storageKey = 'aio-accepts-cookies';

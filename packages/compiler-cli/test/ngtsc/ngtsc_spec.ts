@@ -57,7 +57,7 @@ function allTests(os: string) {
       env.addCommandLineArgs('--rootDir', './rootDir');
       env.write('rootDir/test.html', '<p>Hello World</p>');
       env.write('rootDir/test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -74,7 +74,7 @@ function allTests(os: string) {
 
     it('should compile Injectables without errors', () => {
       env.write('test.ts', `
-        import {Injectable} from '@angular/core';
+        import {Injectable} from '@angular-classic/core';
 
         @Injectable()
         export class Dep {}
@@ -100,7 +100,7 @@ function allTests(os: string) {
 
     it('should compile Injectables with a generic service', () => {
       env.write('test.ts', `
-        import {Injectable} from '@angular/core';
+        import {Injectable} from '@angular-classic/core';
 
         @Injectable()
         export class Store<T> {}
@@ -118,7 +118,7 @@ function allTests(os: string) {
 
     it('should compile Injectables with providedIn without errors', () => {
       env.write('test.ts', `
-        import {Injectable} from '@angular/core';
+        import {Injectable} from '@angular-classic/core';
 
         @Injectable()
         export class Dep {}
@@ -149,7 +149,7 @@ function allTests(os: string) {
 
     it('should compile Injectables with providedIn and factory without errors', () => {
       env.write('test.ts', `
-        import {Injectable} from '@angular/core';
+        import {Injectable} from '@angular-classic/core';
 
         @Injectable({ providedIn: 'root', useFactory: () => new Service() })
         export class Service {
@@ -173,7 +173,7 @@ function allTests(os: string) {
 
     it('should compile Injectables with providedIn and factory with deps without errors', () => {
       env.write('test.ts', `
-        import {Injectable} from '@angular/core';
+        import {Injectable} from '@angular-classic/core';
 
         @Injectable()
         export class Dep {}
@@ -202,7 +202,7 @@ function allTests(os: string) {
     it('should compile Injectables with providedIn and factory with deps with array literal tokens',
        () => {
          env.write('test.ts', `
-        import {Injectable, Optional, Self} from '@angular/core';
+        import {Injectable, Optional, Self} from '@angular-classic/core';
 
         @Injectable()
         export class Dep {}
@@ -234,7 +234,7 @@ function allTests(os: string) {
 
     it('should compile Injectables with providedIn using forwardRef without errors', () => {
       env.write('test.ts', `
-        import {Injectable, NgModule, forwardRef} from '@angular/core';
+        import {Injectable, NgModule, forwardRef} from '@angular-classic/core';
 
         @Injectable()
         export class Dep {}
@@ -269,7 +269,7 @@ function allTests(os: string) {
 
     it('should compile @Injectable with an @Optional dependency', () => {
       env.write('test.ts', `
-      import {Injectable, Optional as Opt} from '@angular/core';
+      import {Injectable, Optional as Opt} from '@angular-classic/core';
 
       @Injectable()
       class Dep {}
@@ -286,7 +286,7 @@ function allTests(os: string) {
 
     it('should compile @Injectable with constructor overloads', () => {
       env.write('test.ts', `
-      import {Injectable, Optional} from '@angular/core';
+      import {Injectable, Optional} from '@angular-classic/core';
 
       @Injectable()
       class Dep {}
@@ -312,7 +312,7 @@ function allTests(os: string) {
 
     it('should compile Directives without errors', () => {
       env.write('test.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({selector: '[dir]'})
         export class TestDir {}
@@ -334,7 +334,7 @@ function allTests(os: string) {
 
     it('should compile abstract Directives without errors', () => {
       env.write('test.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive()
         export class TestDir {}
@@ -356,7 +356,7 @@ function allTests(os: string) {
 
     it('should compile Components (inline template) without errors', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -381,7 +381,7 @@ function allTests(os: string) {
 
     it('should compile Components (dynamic inline template) without errors', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -408,7 +408,7 @@ function allTests(os: string) {
 
     it('should compile Components (function call inline template) without errors', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         function getTemplate() {
           return 'this is a test';
@@ -436,7 +436,7 @@ function allTests(os: string) {
 
     it('should compile Components (external template) without errors', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -454,7 +454,7 @@ function allTests(os: string) {
 
     it('should not report that broken components in modules are not components', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'broken-cmp',
@@ -481,7 +481,7 @@ function allTests(os: string) {
         onlyPublishPublicTypingsForNgModules: true,
       });
       env.write('test.ts', `
-            import {Directive, NgModule} from '@angular/core';
+            import {Directive, NgModule} from '@angular-classic/core';
 
             @Directive({selector: 'internal'})
             export class InternalDir {}
@@ -509,7 +509,7 @@ function allTests(os: string) {
         onlyPublishPublicTypingsForNgModules: true,
       });
       env.write('test.ts', `
-            import {Directive, NgModule} from '@angular/core';
+            import {Directive, NgModule} from '@angular-classic/core';
 
             @Directive({selector: 'internal'})
             export class InternalDir {}
@@ -547,7 +547,7 @@ function allTests(os: string) {
             'annotateForClosureCompiler': true,
           });
           env.write(`test.ts`, `
-            import {Directive} from '@angular/core';
+            import {Directive} from '@angular-classic/core';
 
             @Directive({
               selector: '[base]',
@@ -575,7 +575,7 @@ function allTests(os: string) {
             'annotateForClosureCompiler': true,
           });
           env.write('test.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -597,7 +597,7 @@ function allTests(os: string) {
             'annotateForClosureCompiler': true,
           });
           env.write('test.ts', `
-            import {Component, Directive, NgModule} from '@angular/core';
+            import {Component, Directive, NgModule} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -694,7 +694,7 @@ function allTests(os: string) {
             });
             env.write('service.ts', service);
             env.write('test.ts', `
-              import {NgModule} from '@angular/core';
+              import {NgModule} from '@angular-classic/core';
               import {Service} from './service';
 
               @NgModule({
@@ -713,7 +713,7 @@ function allTests(os: string) {
             });
             env.write('service.ts', service);
             env.write('test.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
               import {Service} from './service';
 
               @Component({
@@ -733,7 +733,7 @@ function allTests(os: string) {
             });
             env.write('service.ts', service);
             env.write('test.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
               import {Service} from './service';
 
               @Component({
@@ -753,7 +753,7 @@ function allTests(os: string) {
             });
             env.write('service.ts', service);
             env.write('test.ts', `
-              import {Directive} from '@angular/core';
+              import {Directive} from '@angular-classic/core';
               import {Service} from './service';
 
               @Directive({
@@ -779,37 +779,37 @@ function allTests(os: string) {
         NgModule as AngularNgModule,
         Input as AngularInput,
         Output as AngularOutput
-      } from '@angular/core';
+      } from '@angular-classic/core';
 
-      @AngularDirective()
+      @angular-classicDirective()
       export class TestBase {
-        @AngularInput() input: any;
-        @AngularOutput() output: any;
+        @angular-classicInput() input: any;
+        @angular-classicOutput() output: any;
       }
 
-      @AngularComponent({
+      @angular-classicComponent({
         selector: 'test-component',
         template: '...'
       })
       export class TestComponent {
-        @AngularInput() input: any;
-        @AngularOutput() output: any;
+        @angular-classicInput() input: any;
+        @angular-classicOutput() output: any;
       }
 
-      @AngularDirective({
+      @angular-classicDirective({
         selector: 'test-directive'
       })
       export class TestDirective {}
 
-      @AngularPipe({
+      @angular-classicPipe({
         name: 'test-pipe'
       })
       export class TestPipe {}
 
-      @AngularInjectable({})
+      @angular-classicInjectable({})
       export class TestInjectable {}
 
-      @AngularNgModule({
+      @angular-classicNgModule({
         declarations: [
           TestComponent,
           TestDirective,
@@ -841,7 +841,7 @@ function allTests(os: string) {
     it('should pick a Pipe defined in `declarations` over imported Pipes', () => {
       env.tsconfig({});
       env.write('test.ts', `
-        import {Component, Pipe, NgModule} from '@angular/core';
+        import {Component, Pipe, NgModule} from '@angular-classic/core';
 
         // ModuleA classes
 
@@ -888,7 +888,7 @@ function allTests(os: string) {
        () => {
          env.tsconfig({});
          env.write('test.ts', `
-            import {Component, Pipe, NgModule} from '@angular/core';
+            import {Component, Pipe, NgModule} from '@angular-classic/core';
 
             // ModuleA classes
 
@@ -942,7 +942,7 @@ function allTests(os: string) {
     it('should add Directives and Components from `declarations` at the end of the list', () => {
       env.tsconfig({});
       env.write('test.ts', `
-        import {Component, Directive, NgModule} from '@angular/core';
+        import {Component, Directive, NgModule} from '@angular-classic/core';
 
         // ModuleA classes
 
@@ -998,7 +998,7 @@ function allTests(os: string) {
     it('should respect imported module order while processing Directives and Components', () => {
       env.tsconfig({});
       env.write('test.ts', `
-        import {Component, Directive, NgModule} from '@angular/core';
+        import {Component, Directive, NgModule} from '@angular-classic/core';
 
         // ModuleA classes
 
@@ -1063,7 +1063,7 @@ function allTests(os: string) {
       env.tsconfig({}, ['./extraRootDir']);
       env.write('extraRootDir/test.html', '<p>Hello World</p>');
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -1082,7 +1082,7 @@ function allTests(os: string) {
       env.tsconfig({}, ['./extraRootDir']);
       env.write('extraRootDir/test.html', '<p>Hello World</p>');
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -1099,7 +1099,7 @@ function allTests(os: string) {
 
     it('should compile components with styleUrls', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -1118,7 +1118,7 @@ function allTests(os: string) {
 
     it('should compile components with styleUrls with fallback to .css extension', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -1137,7 +1137,7 @@ function allTests(os: string) {
 
     it('should include generic type in directive definition', () => {
       env.write('test.ts', `
-        import {Directive, Input, NgModule} from '@angular/core';
+        import {Directive, Input, NgModule} from '@angular-classic/core';
 
         @Directive()
         export class TestBase {
@@ -1157,7 +1157,7 @@ function allTests(os: string) {
       expect(dtsContents).toContain(expectedDirectiveDeclaration);
     });
 
-    describe('undecorated classes using Angular features', () => {
+    describe('undecorated classes using Angular Classicfeatures', () => {
       it('should error if @Input has been discovered',
          () => assertErrorUndecoratedClassWithField('Input'));
       it('should error if @Output has been discovered',
@@ -1192,7 +1192,7 @@ function allTests(os: string) {
 
       function assertErrorUndecoratedClassWithField(fieldDecoratorName: string) {
         env.write('test.ts', `
-          import {Component, ${fieldDecoratorName}, NgModule} from '@angular/core';
+          import {Component, ${fieldDecoratorName}, NgModule} from '@angular-classic/core';
 
           export class SomeBaseClass {
             @${fieldDecoratorName}() someMember: any;
@@ -1203,13 +1203,13 @@ function allTests(os: string) {
         expect(errors.length).toBe(1);
         expect(trim(errors[0].messageText as string))
             .toContain(
-                'Class is using Angular features but is not decorated. Please add an explicit ' +
-                'Angular decorator.');
+                'Class is using Angular Classicfeatures but is not decorated. Please add an explicit ' +
+                'Angular Classicdecorator.');
       }
 
       function assertErrorUndecoratedClassWithLifecycleHook(lifecycleName: string) {
         env.write('test.ts', `
-            import {Component, NgModule} from '@angular/core';
+            import {Component, NgModule} from '@angular-classic/core';
 
             export class SomeBaseClass {
               ${lifecycleName}() {
@@ -1222,14 +1222,14 @@ function allTests(os: string) {
         expect(errors.length).toBe(1);
         expect(trim(errors[0].messageText as string))
             .toContain(
-                'Class is using Angular features but is not decorated. Please add an explicit ' +
-                'Angular decorator.');
+                'Class is using Angular Classicfeatures but is not decorated. Please add an explicit ' +
+                'Angular Classicdecorator.');
       }
     });
 
     it('should compile NgModules without errors', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -1269,7 +1269,7 @@ function allTests(os: string) {
 
     it('should not emit a ɵɵsetNgModuleScope call when no scope metadata is present', () => {
       env.write('test.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
 
         @NgModule({})
         export class TestModule {}
@@ -1284,7 +1284,7 @@ function allTests(os: string) {
 
     it('should emit the id when the module\'s id is a string', () => {
       env.write('test.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
 
         @NgModule({id: 'test'})
         export class TestModule {}
@@ -1301,7 +1301,7 @@ function allTests(os: string) {
          declare const module = {id: string};
        `);
       env.write('test.ts', `
-         import {NgModule} from '@angular/core';
+         import {NgModule} from '@angular-classic/core';
 
          @NgModule({id: module.id})
          export class TestModule {}
@@ -1321,7 +1321,7 @@ function allTests(os: string) {
 
     it('should emit a side-effectful registration call when an @NgModule has an id', () => {
       env.write('test.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
 
         @NgModule({id: 'test'})
         export class TestModule {}
@@ -1335,8 +1335,8 @@ function allTests(os: string) {
 
     it('should filter out directives and pipes from module exports in the injector def', () => {
       env.write('test.ts', `
-      import {NgModule} from '@angular/core';
-      import {RouterComp, RouterModule} from '@angular/router';
+      import {NgModule} from '@angular-classic/core';
+      import {RouterComp, RouterModule} from '@angular-classic/router';
       import {Dir, OtherDir, MyPipe, Comp} from './decls';
 
       @NgModule({
@@ -1355,7 +1355,7 @@ function allTests(os: string) {
       export class TestModule {}
     `);
       env.write(`decls.ts`, `
-      import {Component, Directive, Pipe} from '@angular/core';
+      import {Component, Directive, Pipe} from '@angular-classic/core';
 
       @Directive({selector: '[dir]'})
       export class Dir {}
@@ -1369,8 +1369,8 @@ function allTests(os: string) {
       @Component({selector: 'test', template: ''})
       export class Comp {}
     `);
-      env.write('node_modules/@angular/router/index.d.ts', `
-      import {ɵɵComponentDeclaration, ModuleWithProviders, ɵɵNgModuleDeclaration} from '@angular/core';
+      env.write('node_modules/@angular-classic/router/index.d.ts', `
+      import {ɵɵComponentDeclaration, ModuleWithProviders, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
       export declare class RouterComp {
         static ɵcmp: ɵɵComponentDeclaration<RouterComp, "lib-cmp", never, {}, {}, never>
@@ -1396,7 +1396,7 @@ function allTests(os: string) {
 
     it('should compile NgModules with services without errors', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         export class Token {}
 
@@ -1439,7 +1439,7 @@ function allTests(os: string) {
 
     it('should compile NgModules with factory providers without errors', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         export class Token {}
 
@@ -1482,7 +1482,7 @@ function allTests(os: string) {
 
     it('should compile NgModules with factory providers and deps without errors', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         export class Dep {}
 
@@ -1529,7 +1529,7 @@ function allTests(os: string) {
 
     it('should compile NgModules with references to local components', () => {
       env.write('test.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {Foo} from './foo';
 
       @NgModule({
@@ -1538,7 +1538,7 @@ function allTests(os: string) {
       export class FooModule {}
     `);
       env.write('foo.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       @Component({selector: 'foo', template: ''})
       export class Foo {}
     `);
@@ -1564,7 +1564,7 @@ function allTests(os: string) {
         },
       }));
       env.write('test.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {Foo} from 'foo';
 
       @NgModule({
@@ -1573,7 +1573,7 @@ function allTests(os: string) {
       export class FooModule {}
     `);
       env.write('shared/foo/index.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         selector: 'foo',
@@ -1595,7 +1595,7 @@ function allTests(os: string) {
 
     it('should compile NgModules with references to forward declared bootstrap components', () => {
       env.write('test.ts', `
-      import {Component, forwardRef, NgModule} from '@angular/core';
+      import {Component, forwardRef, NgModule} from '@angular-classic/core';
 
       @NgModule({
         bootstrap: [forwardRef(() => Foo)],
@@ -1614,7 +1614,7 @@ function allTests(os: string) {
 
     it('should compile NgModules with references to forward declared directives', () => {
       env.write('test.ts', `
-      import {Directive, forwardRef, NgModule} from '@angular/core';
+      import {Directive, forwardRef, NgModule} from '@angular-classic/core';
 
       @NgModule({
         declarations: [forwardRef(() => Foo)],
@@ -1633,7 +1633,7 @@ function allTests(os: string) {
 
     it('should compile NgModules with references to forward declared imports', () => {
       env.write('test.ts', `
-      import {forwardRef, NgModule} from '@angular/core';
+      import {forwardRef, NgModule} from '@angular-classic/core';
 
       @NgModule({
         imports: [forwardRef(() => BarModule)],
@@ -1652,7 +1652,7 @@ function allTests(os: string) {
 
     it('should compile NgModules with references to forward declared exports', () => {
       env.write('test.ts', `
-      import {forwardRef, NgModule} from '@angular/core';
+      import {forwardRef, NgModule} from '@angular-classic/core';
 
       @NgModule({
         exports: [forwardRef(() => BarModule)],
@@ -1672,7 +1672,7 @@ function allTests(os: string) {
     it('should use relative import for forward references that were resolved from a relative file',
        () => {
          env.write('dir.ts', `
-          import {Directive, forwardRef} from '@angular/core';
+          import {Directive, forwardRef} from '@angular-classic/core';
 
           export const useFoo = forwardRef(() => Foo);
 
@@ -1680,7 +1680,7 @@ function allTests(os: string) {
           export class Foo {}
           `);
          env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {useFoo} from './dir';
 
           @NgModule({
@@ -1699,7 +1699,7 @@ function allTests(os: string) {
     it('should use absolute import for forward references that were resolved from an absolute file',
        () => {
          env.write('dir.ts', `
-          import {Directive, forwardRef} from '@angular/core';
+          import {Directive, forwardRef} from '@angular-classic/core';
 
           export const useFoo = forwardRef(() => Foo);
 
@@ -1707,7 +1707,7 @@ function allTests(os: string) {
           export class Foo {}
           `);
          env.write('test.ts', `
-          import {forwardRef, NgModule} from '@angular/core';
+          import {forwardRef, NgModule} from '@angular-classic/core';
           import {useFoo} from 'dir';
 
           @NgModule({
@@ -1725,7 +1725,7 @@ function allTests(os: string) {
 
     it('should compile Pipes without errors', () => {
       env.write('test.ts', `
-        import {Pipe} from '@angular/core';
+        import {Pipe} from '@angular-classic/core';
 
         @Pipe({
           name: 'test-pipe',
@@ -1752,7 +1752,7 @@ function allTests(os: string) {
 
     it('should compile pure Pipes without errors', () => {
       env.write('test.ts', `
-        import {Pipe} from '@angular/core';
+        import {Pipe} from '@angular-classic/core';
 
         @Pipe({
           name: 'test-pipe',
@@ -1778,7 +1778,7 @@ function allTests(os: string) {
 
     it('should compile Pipes with dependencies', () => {
       env.write('test.ts', `
-        import {Pipe} from '@angular/core';
+        import {Pipe} from '@angular-classic/core';
 
         export class Dep {}
 
@@ -1799,7 +1799,7 @@ function allTests(os: string) {
 
     it('should compile Pipes with generic types', () => {
       env.write('test.ts', `
-        import {Pipe} from '@angular/core';
+        import {Pipe} from '@angular-classic/core';
 
         @Pipe({
           name: 'test-pipe',
@@ -1819,7 +1819,7 @@ function allTests(os: string) {
 
     it('should include @Pipes in @NgModule scopes', () => {
       env.write('test.ts', `
-        import {Component, NgModule, Pipe} from '@angular/core';
+        import {Component, NgModule, Pipe} from '@angular-classic/core';
 
         @Pipe({name: 'test'})
         export class TestPipe {
@@ -1849,7 +1849,7 @@ function allTests(os: string) {
     describe('empty and missing selectors', () => {
       it('should use default selector for Components when no selector present', () => {
         env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '...',
@@ -1865,7 +1865,7 @@ function allTests(os: string) {
 
       it('should use default selector for Components with empty string selector', () => {
         env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: '',
@@ -1882,7 +1882,7 @@ function allTests(os: string) {
 
       it('should allow directives with no selector that are not in NgModules', () => {
         env.write('main.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({})
           export class BaseDir {}
@@ -1908,7 +1908,7 @@ function allTests(os: string) {
           compilerOptions: {rootDir: '.', outDir: '../node_modules/lib1_built'},
         }));
         env.write('index.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive()
           export class BaseClass {}
@@ -1918,7 +1918,7 @@ function allTests(os: string) {
 
         env.tsconfig();
         env.write('index.ts', `
-          import {NgModule, Directive} from '@angular/core';
+          import {NgModule, Directive} from '@angular-classic/core';
           import {BaseClass} from 'lib1_built';
 
           @Directive({selector: 'my-dir'})
@@ -1933,7 +1933,7 @@ function allTests(os: string) {
 
       it('should not allow directives with no selector that are in NgModules', () => {
         env.write('main.ts', `
-          import {Directive, NgModule} from '@angular/core';
+          import {Directive, NgModule} from '@angular-classic/core';
 
           @Directive({})
           export class BaseDir {}
@@ -1950,7 +1950,7 @@ function allTests(os: string) {
 
       it('should throw if Directive selector is an empty string', () => {
         env.write('test.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({
           selector: ''
@@ -1977,7 +1977,7 @@ function allTests(os: string) {
       it('should throw if invalid arguments are provided in @NgModule', () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           @NgModule('invalidNgModuleArgumentType')
           export class MyModule {}
@@ -1989,7 +1989,7 @@ function allTests(os: string) {
       it('should throw if multiple query decorators are used on the same field', () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {Component, ContentChild} from '@angular/core';
+          import {Component, ContentChild} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -2011,7 +2011,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({});
              env.write('test.ts', `
-              import {Component, ${decorator}, Input} from '@angular/core';
+              import {Component, ${decorator}, Input} from '@angular-classic/core';
 
               @Component({
                 selector: 'test-cmp',
@@ -2029,7 +2029,7 @@ function allTests(os: string) {
         it(`should throw if invalid options are provided in ${decorator}`, () => {
           env.tsconfig({});
           env.write('test.ts', `
-            import {Component, ${decorator}, Input} from '@angular/core';
+            import {Component, ${decorator}, Input} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2047,7 +2047,7 @@ function allTests(os: string) {
         it(`should throw if @${decorator} is used on non property-type member`, () => {
           env.tsconfig({});
           env.write('test.ts', `
-            import {Component, ${decorator}} from '@angular/core';
+            import {Component, ${decorator}} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2065,7 +2065,7 @@ function allTests(os: string) {
         it(`should throw error if @${decorator} has too many arguments`, () => {
           env.tsconfig({});
           env.write('test.ts', `
-            import {Component, ${decorator}} from '@angular/core';
+            import {Component, ${decorator}} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2082,7 +2082,7 @@ function allTests(os: string) {
         it(`should throw error if @${decorator} predicate argument has wrong type`, () => {
           env.tsconfig({});
           env.write('test.ts', `
-            import {Component, ${decorator}} from '@angular/core';
+            import {Component, ${decorator}} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2099,7 +2099,7 @@ function allTests(os: string) {
         it(`should throw error if one of @${decorator}'s predicate has wrong type`, () => {
           env.tsconfig({});
           env.write('test.ts', `
-            import {Component, ${decorator}} from '@angular/core';
+            import {Component, ${decorator}} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2118,7 +2118,7 @@ function allTests(os: string) {
       it(`should throw error if @Directive.inputs has wrong type`, () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'test-dir',
@@ -2134,7 +2134,7 @@ function allTests(os: string) {
       it(`should throw error if @Directive.outputs has wrong type`, () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'test-dir',
@@ -2153,7 +2153,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({});
              env.write('test.ts', `
-              import {Component, ContentChild} from '@angular/core';
+              import {Component, ContentChild} from '@angular-classic/core';
 
               @Component({
                 selector: 'test-cmp',
@@ -2173,7 +2173,7 @@ function allTests(os: string) {
         it(`should throw error if @${decorator} decorator argument has unsupported type`, () => {
           env.tsconfig({});
           env.write('test.ts', `
-            import {Component, ${decorator}} from '@angular/core';
+            import {Component, ${decorator}} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2191,7 +2191,7 @@ function allTests(os: string) {
         it(`should throw error if @${decorator} decorator has too many arguments`, () => {
           env.tsconfig({});
           env.write('test.ts', `
-            import {Component, ${decorator}} from '@angular/core';
+            import {Component, ${decorator}} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -2210,7 +2210,7 @@ function allTests(os: string) {
       it('should throw error if @HostBinding decorator argument has unsupported type', () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {Component, HostBinding} from '@angular/core';
+          import {Component, HostBinding} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -2227,7 +2227,7 @@ function allTests(os: string) {
       it('should throw error if @HostBinding decorator has too many arguments', () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {Component, HostBinding} from '@angular/core';
+          import {Component, HostBinding} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -2244,7 +2244,7 @@ function allTests(os: string) {
       it('should throw error if @Directive.host field has wrong type', () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'test-dir',
@@ -2260,7 +2260,7 @@ function allTests(os: string) {
          () => {
            env.tsconfig({});
            env.write('test.ts', `
-              import {Directive} from '@angular/core';
+              import {Directive} from '@angular-classic/core';
 
               @Directive({
                 selector: 'test-dir',
@@ -2276,7 +2276,7 @@ function allTests(os: string) {
       it('should throw error if @Directive.queries field has wrong type', () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'test-dir',
@@ -2291,7 +2291,7 @@ function allTests(os: string) {
       it('should throw error if @Directive.queries object has incorrect values', () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'test-dir',
@@ -2310,7 +2310,7 @@ function allTests(os: string) {
          () => {
            env.tsconfig({});
            env.write('test.ts', `
-              import {Directive, Input} from '@angular/core';
+              import {Directive, Input} from '@angular-classic/core';
 
               @Directive({
                 selector: 'test-dir',
@@ -2328,7 +2328,7 @@ function allTests(os: string) {
       it('should throw error if @Injectable has incorrect argument', () => {
         env.tsconfig({});
         env.write('test.ts', `
-          import {Injectable} from '@angular/core';
+          import {Injectable} from '@angular-classic/core';
 
           @Injectable('invalid')
           export class TestProvider {}
@@ -2339,7 +2339,7 @@ function allTests(os: string) {
 
       it('should produce a diangostic if the transform value is not a function', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           const NOT_A_FUNCTION = 1;
 
@@ -2355,7 +2355,7 @@ function allTests(os: string) {
       it('should produce a diangostic if the transform value in the inputs array is not a function',
          () => {
            env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           const NOT_A_FUNCTION = 1;
 
@@ -2381,7 +2381,7 @@ function allTests(os: string) {
          () => {
            env.tsconfig({noImplicitAny: false});
            env.write('/test.ts', `
-              import {Directive, Input} from '@angular/core';
+              import {Directive, Input} from '@angular-classic/core';
 
               @Directive({selector: '[dir]', standalone: true})
               export class Dir {
@@ -2396,7 +2396,7 @@ function allTests(os: string) {
 
       it('should produce a diangostic if the transform function is generic', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({selector: '[dir]', standalone: true})
           export class Dir {
@@ -2410,7 +2410,7 @@ function allTests(os: string) {
 
       it('should produce a diangostic if there is a conflicting coercion member', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({selector: '[dir]', standalone: true})
           export class Dir {
@@ -2436,7 +2436,7 @@ function allTests(os: string) {
           `);
 
            env.write('/test.ts', `
-            import {Directive, Input} from '@angular/core';
+            import {Directive, Input} from '@angular-classic/core';
             import {toNumber} from './util';
 
             @Directive({selector: '[dir]', standalone: true})
@@ -2460,7 +2460,7 @@ function allTests(os: string) {
             `);
 
            env.write('/test.ts', `
-              import {Directive, Input} from '@angular/core';
+              import {Directive, Input} from '@angular-classic/core';
               import {toNumber} from './util';
 
               @Directive({selector: '[dir]', standalone: true})
@@ -2488,7 +2488,7 @@ function allTests(os: string) {
             `);
 
            env.write('/test.ts', `
-              import {Directive, Input} from '@angular/core';
+              import {Directive, Input} from '@angular-classic/core';
               import {toNumber} from './util';
 
               @Directive({selector: '[dir]', standalone: true})
@@ -2503,7 +2503,7 @@ function allTests(os: string) {
 
       it('should produce a diangostic if transform type is not exported', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           interface InternalType {
             foo: boolean;
@@ -2522,7 +2522,7 @@ function allTests(os: string) {
 
       it('should produce a diangostic if the transform value is not a function', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           function createTransform(outerValue: number) {
             return (innerValue: string) => outerValue;
@@ -2539,7 +2539,7 @@ function allTests(os: string) {
 
       it('should produce a diangostic if the first parameter of a transform is a spread', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           function toNumber(...value: (string | boolean)[]) { return 1; }
 
@@ -2556,7 +2556,7 @@ function allTests(os: string) {
 
       it('should produce a diangostic if a transform function has multiple signatures', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           function toNumber(value: boolean): number;
           function toNumber(value: string): number;
@@ -2577,7 +2577,7 @@ function allTests(os: string) {
     describe('multiple decorators on classes', () => {
       it('should compile @Injectable on Components, Directives, Pipes, and Modules', () => {
         env.write('test.ts', `
-        import {Component, Directive, Injectable, NgModule, Pipe} from '@angular/core';
+        import {Component, Directive, Injectable, NgModule, Pipe} from '@angular-classic/core';
 
         @Component({selector: 'test', template: 'test'})
         @Injectable()
@@ -2628,7 +2628,7 @@ function allTests(os: string) {
 
       it('should not compile a component and a directive annotation on the same class', () => {
         env.write('test.ts', `
-        import {Component, Directive} from '@angular/core';
+        import {Component, Directive} from '@angular-classic/core';
 
         @Component({selector: 'test', template: 'test'})
         @Directive({selector: 'test'})
@@ -2644,7 +2644,7 @@ function allTests(os: string) {
 
       it('should leave decorators present on jit: true directives', () => {
         env.write('test.ts', `
-        import {Directive, Inject} from '@angular/core';
+        import {Directive, Inject} from '@angular-classic/core';
 
         @Directive({
           selector: 'test',
@@ -2667,7 +2667,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({strictInjectionParameters: true});
              env.write('test.ts', `
-            import {Injectable} from '@angular/core';
+            import {Injectable} from '@angular-classic/core';
 
             @Injectable()
             export class Test {
@@ -2690,7 +2690,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({strictInjectionParameters: true});
              env.write('test.ts', `
-            import {Injectable} from '@angular/core';
+            import {Injectable} from '@angular-classic/core';
 
             @Injectable({providedIn: 'root'})
             export class Test {
@@ -2716,7 +2716,7 @@ function allTests(os: string) {
               export class TypeOnly {}
             `);
              env.write(`test.ts`, `
-              import {Injectable} from '@angular/core';
+              import {Injectable} from '@angular-classic/core';
               import type {TypeOnly} from './types';
 
               @Injectable()
@@ -2748,7 +2748,7 @@ function allTests(os: string) {
                 export class TypeOnly {}
               `);
              env.write(`test.ts`, `
-                import {Injectable} from '@angular/core';
+                import {Injectable} from '@angular-classic/core';
                 import {type TypeOnly} from './types';
 
                 @Injectable()
@@ -2776,7 +2776,7 @@ function allTests(os: string) {
         it('should report an error when using a primitive type as injection token', () => {
           env.tsconfig({strictInjectionParameters: true});
           env.write(`test.ts`, `
-             import {Injectable} from '@angular/core';
+             import {Injectable} from '@angular-classic/core';
 
              @Injectable()
              export class MyService {
@@ -2798,7 +2798,7 @@ function allTests(os: string) {
         it('should report an error when using a union type as injection token', () => {
           env.tsconfig({strictInjectionParameters: true});
           env.write(`test.ts`, `
-             import {Injectable} from '@angular/core';
+             import {Injectable} from '@angular-classic/core';
 
              export class ClassA {}
              export class ClassB {}
@@ -2823,7 +2823,7 @@ function allTests(os: string) {
         it('should report an error when using an interface as injection token', () => {
           env.tsconfig({strictInjectionParameters: true});
           env.write(`test.ts`, `
-             import {Injectable} from '@angular/core';
+             import {Injectable} from '@angular-classic/core';
 
              export interface Interface {}
 
@@ -2852,7 +2852,7 @@ function allTests(os: string) {
           // test to verify that ngtsc's analysis is able to operate in this situation.
           env.tsconfig({strictInjectionParameters: true});
           env.write(`test.ts`, `
-             import {Injectable} from '@angular/core';
+             import {Injectable} from '@angular-classic/core';
              // @ts-expect-error
              import {Interface} from 'missing';
 
@@ -2877,7 +2877,7 @@ function allTests(os: string) {
         it('should report an error when no type is present', () => {
           env.tsconfig({strictInjectionParameters: true, noImplicitAny: false});
           env.write(`test.ts`, `
-             import {Injectable} from '@angular/core';
+             import {Injectable} from '@angular-classic/core';
 
              @Injectable()
              export class MyService {
@@ -2899,7 +2899,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({strictInjectionParameters: true});
              env.write('test.ts', `
-               import {Injectable} from '@angular/core';
+               import {Injectable} from '@angular-classic/core';
 
                @Injectable({
                  providedIn: 'root',
@@ -2920,7 +2920,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({strictInjectionParameters: true});
              env.write('test.ts', `
-               import {Injectable} from '@angular/core';
+               import {Injectable} from '@angular-classic/core';
 
                @Injectable({
                  providedIn: 'root',
@@ -2941,7 +2941,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({strictInjectionParameters: true});
              env.write('test.ts', `
-               import {Injectable} from '@angular/core';
+               import {Injectable} from '@angular-classic/core';
 
                export class MyService {}
 
@@ -2964,7 +2964,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({strictInjectionParameters: true});
              env.write('test.ts', `
-               import {Injectable} from '@angular/core';
+               import {Injectable} from '@angular-classic/core';
 
                export class MyService {}
 
@@ -2987,7 +2987,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({strictInjectionParameters: true});
              env.write('test.ts', `
-               import {Injectable} from '@angular/core';
+               import {Injectable} from '@angular-classic/core';
 
                @Injectable()
                export abstract class Test {
@@ -3005,7 +3005,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({strictInjectionParameters: true});
              env.write('test.ts', `
-               import {Injectable} from '@angular/core';
+               import {Injectable} from '@angular-classic/core';
 
                @Injectable({
                  providedIn: 'root',
@@ -3024,7 +3024,7 @@ function allTests(os: string) {
         it('should give a compile-time error when a derived Directive inherits an invalid constructor', () => {
           env.tsconfig({strictInjectionParameters: true});
           env.write('test.ts', `
-               import {Directive} from '@angular/core';
+               import {Directive} from '@angular-classic/core';
 
                @Directive()
                export abstract class ParentDir {
@@ -3077,7 +3077,7 @@ function allTests(os: string) {
         it('should give a compile-time error when a derived Injectable inherits an invalid constructor', () => {
           env.tsconfig({strictInjectionParameters: true});
           env.write('test.ts', `
-               import {Injectable} from '@angular/core';
+               import {Injectable} from '@angular-classic/core';
 
                @Injectable()
                export abstract class ParentService {
@@ -3155,7 +3155,7 @@ function allTests(os: string) {
         it('should give a compile-time error when a derived Directive inherits from a non-decorated class', () => {
           env.tsconfig({strictInjectionParameters: true});
           env.write('test.ts', `
-               import {Directive} from '@angular/core';
+               import {Directive} from '@angular-classic/core';
 
                export abstract class ParentClass {
                  constructor(private notInjectable: string) {}
@@ -3187,7 +3187,7 @@ function allTests(os: string) {
           expect(diags[0].messageText)
               .toEqual(
                   `The directive AbstractMiddleDir inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to AbstractMiddleDir.`);
           expect(getDiagnosticSourceCode(diags[0])).toBe('AbstractMiddleDir');
@@ -3196,7 +3196,7 @@ function allTests(os: string) {
           expect(diags[1].messageText)
               .toEqual(
                   `The directive ConcreteMiddleDir inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, or ` +
                   `add an explicit constructor to ConcreteMiddleDir.`);
           expect(getDiagnosticSourceCode(diags[1])).toBe('ConcreteMiddleDir');
@@ -3205,18 +3205,18 @@ function allTests(os: string) {
           expect(diags[2].messageText)
               .toEqual(
                   `The directive ConcreteDirWithoutCtor inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to ConcreteDirWithoutCtor.`);
           expect(getDiagnosticSourceCode(diags[2])).toBe('ConcreteDirWithoutCtor');
         });
 
-        // https://github.com/angular/angular/issues/48152
+        // https://github.com/ng-classic/angular/issues/48152
         it('should not give a compile-time error when a class inherits from foreign compilation unit',
            () => {
              env.tsconfig({strictInjectionParameters: true});
              env.write('node_modules/external/index.d.ts', `
-               import * as i0 from '@angular/core';
+               import * as i0 from '@angular-classic/core';
 
                export abstract class ExternalClass {
                  static ɵprov: i0.ɵɵInjectableDeclaration<ExternalClass>;
@@ -3226,7 +3226,7 @@ function allTests(os: string) {
                }
           `);
              env.write('test.ts', `
-               import {Directive} from '@angular/core';
+               import {Directive} from '@angular-classic/core';
                import {ExternalClass} from 'external';
 
                @Directive()
@@ -3247,7 +3247,7 @@ function allTests(os: string) {
         it('should compile an @Injectable on a class with a non-injectable constructor', () => {
           env.tsconfig({strictInjectionParameters: false});
           env.write('test.ts', `
-            import {Injectable} from '@angular/core';
+            import {Injectable} from '@angular-classic/core';
 
             @Injectable()
             export class Test {
@@ -3265,7 +3265,7 @@ function allTests(os: string) {
            () => {
              env.tsconfig({strictInjectionParameters: false});
              env.write('test.ts', `
-              import {Injectable} from '@angular/core';
+              import {Injectable} from '@angular-classic/core';
               @Injectable({providedIn: 'root'})
               export class Test {
                 constructor(private notInjectable: string) {}
@@ -3281,7 +3281,7 @@ function allTests(os: string) {
         it('should compile when a derived Directive inherits an invalid constructor', () => {
           env.tsconfig({strictInjectionParameters: false});
           env.write('test.ts', `
-               import {Directive} from '@angular/core';
+               import {Directive} from '@angular-classic/core';
 
                @Directive()
                export abstract class ParentDir {
@@ -3314,7 +3314,7 @@ function allTests(os: string) {
         it('should compile when a derived Injectable inherits an invalid constructor', () => {
           env.tsconfig({strictInjectionParameters: false});
           env.write('test.ts', `
-               import {Injectable} from '@angular/core';
+               import {Injectable} from '@angular-classic/core';
 
                @Injectable()
                export abstract class ParentService {
@@ -3364,7 +3364,7 @@ function allTests(os: string) {
           // `strictInjectionParameters`.
           env.tsconfig({strictInjectionParameters: false});
           env.write('test.ts', `
-               import {Directive} from '@angular/core';
+               import {Directive} from '@angular-classic/core';
 
                export abstract class ParentClass {
                  constructor(private notInjectable: string) {}
@@ -3396,7 +3396,7 @@ function allTests(os: string) {
           expect(diags[0].messageText)
               .toEqual(
                   `The directive AbstractMiddleDir inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to AbstractMiddleDir.`);
           expect(getDiagnosticSourceCode(diags[0])).toBe('AbstractMiddleDir');
@@ -3405,7 +3405,7 @@ function allTests(os: string) {
           expect(diags[1].messageText)
               .toEqual(
                   `The directive ConcreteMiddleDir inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to ConcreteMiddleDir.`);
           expect(getDiagnosticSourceCode(diags[1])).toBe('ConcreteMiddleDir');
@@ -3414,7 +3414,7 @@ function allTests(os: string) {
           expect(diags[2].messageText)
               .toEqual(
                   `The directive ConcreteDirWithoutCtor inherits its constructor from ParentClass, but the latter ` +
-                  `does not have an Angular decorator of its own. Dependency injection will not be able to resolve ` +
+                  `does not have an Angular Classicdecorator of its own. Dependency injection will not be able to resolve ` +
                   `the parameters of ParentClass's constructor. Either add a @Directive decorator to ParentClass, ` +
                   `or add an explicit constructor to ConcreteDirWithoutCtor.`);
           expect(getDiagnosticSourceCode(diags[2])).toBe('ConcreteDirWithoutCtor');
@@ -3427,7 +3427,7 @@ function allTests(os: string) {
         it('should give a compile-time error if an invalid constructor is used', () => {
           env.tsconfig({strictInjectionParameters: true});
           env.write('test.ts', `
-            import {Directive} from '@angular/core';
+            import {Directive} from '@angular-classic/core';
 
             @Directive({selector: 'app-test'})
             export class Test {
@@ -3446,7 +3446,7 @@ function allTests(os: string) {
         it('should generate a factory function that throws', () => {
           env.tsconfig({strictInjectionParameters: false});
           env.write('test.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive()
           export class Test {
@@ -3465,7 +3465,7 @@ function allTests(os: string) {
          () => {
            env.tsconfig({strictInjectionParameters: true});
            env.write('test.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive()
         export class Test {
@@ -3508,7 +3508,7 @@ function allTests(os: string) {
         it(`should handle ${styleRef}`, () => {
           env.write(styleLoc, ':host { background-color: blue; }');
           env.write(compLoc, `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -3530,7 +3530,7 @@ function allTests(os: string) {
         it(`should handle ${templateRef}`, () => {
           env.write(templateLoc, 'Template Content');
           env.write(compLoc, `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -3550,7 +3550,7 @@ function allTests(os: string) {
     describe('former View Engine AST transform bugs', () => {
       it('should compile array literals behind conditionals', () => {
         env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -3568,7 +3568,7 @@ function allTests(os: string) {
 
       it('should compile array literals inside function arguments', () => {
         env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -3592,7 +3592,7 @@ function allTests(os: string) {
       it('should use a local ModuleWithProviders-annotated return type if a function is not statically analyzable',
          () => {
            env.write(`module.ts`, `
-            import {NgModule, ModuleWithProviders} from '@angular/core';
+            import {NgModule, ModuleWithProviders} from '@angular-classic/core';
 
             export function notStaticallyAnalyzable(): ModuleWithProviders<SomeModule> {
               console.log('this interferes with static analysis');
@@ -3607,7 +3607,7 @@ function allTests(os: string) {
           `);
 
            env.write('test.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {notStaticallyAnalyzable} from './module';
 
             @NgModule({
@@ -3630,7 +3630,7 @@ function allTests(os: string) {
 
       it('should extract the generic type and include it in the module\'s declaration', () => {
         env.write(`test.ts`, `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {RouterModule} from 'router';
 
         @NgModule({imports: [RouterModule.forRoot()]})
@@ -3638,7 +3638,7 @@ function allTests(os: string) {
     `);
 
         env.write('node_modules/router/index.d.ts', `
-        import {ModuleWithProviders, ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ModuleWithProviders, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
         declare class RouterModule {
           static forRoot(): ModuleWithProviders<RouterModule>;
@@ -3660,7 +3660,7 @@ function allTests(os: string) {
 
       it('should throw if ModuleWithProviders is missing its generic type argument', () => {
         env.write(`test.ts`, `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {RouterModule} from 'router';
 
           @NgModule({imports: [RouterModule.forRoot()]})
@@ -3668,7 +3668,7 @@ function allTests(os: string) {
         `);
 
         env.write('node_modules/router/index.d.ts', `
-          import {ModuleWithProviders, ɵɵNgModuleDeclaration} from '@angular/core';
+          import {ModuleWithProviders, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
           declare class RouterModule {
             static forRoot(): ModuleWithProviders;
@@ -3685,7 +3685,7 @@ function allTests(os: string) {
 
       it('should extract the generic type if it is provided as qualified type name', () => {
         env.write(`test.ts`, `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {RouterModule} from 'router';
 
         @NgModule({imports: [RouterModule.forRoot()]})
@@ -3693,7 +3693,7 @@ function allTests(os: string) {
     `);
 
         env.write('node_modules/router/index.d.ts', `
-        import {ModuleWithProviders} from '@angular/core';
+        import {ModuleWithProviders} from '@angular-classic/core';
         import * as internal from './internal';
         export {InternalRouterModule} from './internal';
 
@@ -3704,7 +3704,7 @@ function allTests(os: string) {
     `);
 
         env.write('node_modules/router/internal.d.ts', `
-        import {ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵNgModuleDeclaration} from '@angular-classic/core';
         export declare class InternalRouterModule {
           static ɵmod: ɵɵNgModuleDeclaration<InternalRouterModule, never, never, never>;
         }
@@ -3725,14 +3725,14 @@ function allTests(os: string) {
       it('should extract the generic type if it is provided as qualified type name from another package',
          () => {
            env.write(`test.ts`, `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {RouterModule} from 'router';
 
             @NgModule({imports: [RouterModule.forRoot()]})
             export class TestModule {}`);
 
            env.write('node_modules/router/index.d.ts', `
-            import {ModuleWithProviders} from '@angular/core';
+            import {ModuleWithProviders} from '@angular-classic/core';
             import * as router2 from 'router2';
 
             declare export class RouterModule {
@@ -3740,7 +3740,7 @@ function allTests(os: string) {
             }`);
 
            env.write('node_modules/router2/index.d.ts', `
-            import {ɵɵNgModuleDeclaration} from '@angular/core';
+            import {ɵɵNgModuleDeclaration} from '@angular-classic/core';
             export declare class Router2Module {
               static ɵmod: ɵɵNgModuleDeclaration<Router2Module, never, never, never>;
             }`);
@@ -3760,7 +3760,7 @@ function allTests(os: string) {
       it('should not reference a constant with a ModuleWithProviders value in module def imports',
          () => {
            env.write('dep.d.ts', `
-          import {ModuleWithProviders, ɵɵNgModuleDeclaration as ɵɵNgModuleDeclaration} from '@angular/core';
+          import {ModuleWithProviders, ɵɵNgModuleDeclaration as ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
           export declare class DepModule {
             static forRoot(arg1: any, arg2: any): ModuleWithProviders<DepModule>;
@@ -3768,7 +3768,7 @@ function allTests(os: string) {
           }
         `);
            env.write('test.ts', `
-          import {NgModule, ModuleWithProviders} from '@angular/core';
+          import {NgModule, ModuleWithProviders} from '@angular-classic/core';
           import {DepModule} from './dep';
 
           @NgModule({})
@@ -3790,7 +3790,7 @@ function allTests(os: string) {
     it('should unwrap a ModuleWithProviders-like function if a matching literal type is provided for it',
        () => {
          env.write(`test.ts`, `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
       import {RouterModule} from 'router';
 
       @NgModule({imports: [RouterModule.forRoot()]})
@@ -3798,7 +3798,7 @@ function allTests(os: string) {
   `);
 
          env.write('node_modules/router/index.d.ts', `
-      import {ModuleWithProviders, ɵɵNgModuleDeclaration} from '@angular/core';
+      import {ModuleWithProviders, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
       export interface MyType extends ModuleWithProviders {}
 
@@ -3823,7 +3823,7 @@ function allTests(os: string) {
     it('should unwrap a namespace imported ModuleWithProviders function if a generic type is provided for it',
        () => {
          env.write(`test.ts`, `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {RouterModule} from 'router';
 
         @NgModule({imports: [RouterModule.forRoot()]})
@@ -3831,7 +3831,7 @@ function allTests(os: string) {
     `);
 
          env.write('node_modules/router/index.d.ts', `
-        import * as core from '@angular/core';
+        import * as core from '@angular-classic/core';
         import {RouterModule} from 'router';
 
         declare class RouterModule {
@@ -3863,7 +3863,7 @@ function allTests(os: string) {
           Renderer2,
           TemplateRef,
           ViewContainerRef,
-        } from '@angular/core';
+        } from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -3891,7 +3891,7 @@ function allTests(os: string) {
 
     it('should include constructor dependency metadata for directives/components/pipes', () => {
       env.write(`test.ts`, `
-        import {Attribute, Component, Directive, Pipe, Self, SkipSelf, Host, Optional} from '@angular/core';
+        import {Attribute, Component, Directive, Pipe, Self, SkipSelf, Host, Optional} from '@angular-classic/core';
 
         export class MyService {}
         export function dynamic() {};
@@ -3953,7 +3953,7 @@ function allTests(os: string) {
 
     it('should include constructor dependency metadata for @Injectable', () => {
       env.write(`test.ts`, `
-        import {Injectable, Self, Host} from '@angular/core';
+        import {Injectable, Self, Host} from '@angular-classic/core';
 
         export class MyService {}
 
@@ -4014,7 +4014,7 @@ function allTests(os: string) {
 
     it('should include ng-content selectors in the metadata', () => {
       env.write(`test.ts`, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -4033,7 +4033,7 @@ function allTests(os: string) {
 
     it('should generate queries for components', () => {
       env.write(`test.ts`, `
-        import {Component, ContentChild, ContentChildren, TemplateRef, ViewChild} from '@angular/core';
+        import {Component, ContentChild, ContentChildren, TemplateRef, ViewChild} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -4065,8 +4065,8 @@ function allTests(os: string) {
 
     it('should generate queries for directives', () => {
       env.write(`test.ts`, `
-        import {Directive, ContentChild, ContentChildren, TemplateRef, ViewChild} from '@angular/core';
-        import * as core from '@angular/core';
+        import {Directive, ContentChild, ContentChildren, TemplateRef, ViewChild} from '@angular-classic/core';
+        import * as core from '@angular-classic/core';
 
         @Directive({
           selector: '[test]',
@@ -4101,7 +4101,7 @@ function allTests(os: string) {
 
     it('should handle queries that use forwardRef', () => {
       env.write(`test.ts`, `
-        import {Component, ContentChild, TemplateRef, ViewContainerRef, forwardRef} from '@angular/core';
+        import {Component, ContentChild, TemplateRef, ViewContainerRef, forwardRef} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -4129,7 +4129,7 @@ function allTests(os: string) {
 
     it('should handle queries that use an InjectionToken', () => {
       env.write(`test.ts`, `
-        import {Component, ContentChild, InjectionToken, ViewChild} from '@angular/core';
+        import {Component, ContentChild, InjectionToken, ViewChild} from '@angular-classic/core';
 
         const TOKEN = new InjectionToken('token');
 
@@ -4153,7 +4153,7 @@ function allTests(os: string) {
 
     it('should compile expressions that write keys', () => {
       env.write(`test.ts`, `
-        import {Component, ContentChild, TemplateRef, ViewContainerRef, forwardRef} from '@angular/core';
+        import {Component, ContentChild, TemplateRef, ViewContainerRef, forwardRef} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -4171,7 +4171,7 @@ function allTests(os: string) {
 
     it('should generate host listeners for components', () => {
       env.write(`test.ts`, `
-        import {Component, HostListener} from '@angular/core';
+        import {Component, HostListener} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -4203,7 +4203,7 @@ function allTests(os: string) {
 
     it('should throw in case unknown global target is provided', () => {
       env.write(`test.ts`, `
-        import {Component, HostListener} from '@angular/core';
+        import {Component, HostListener} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -4222,7 +4222,7 @@ function allTests(os: string) {
 
     it('should provide error location for invalid host properties', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -4243,7 +4243,7 @@ function allTests(os: string) {
 
     it('should throw in case pipes are used in host listeners', () => {
       env.write(`test.ts`, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -4261,7 +4261,7 @@ function allTests(os: string) {
 
     it('should throw in case pipes are used in host bindings (defined as `value | pipe`)', () => {
       env.write(`test.ts`, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test',
@@ -4279,7 +4279,7 @@ function allTests(os: string) {
 
     it('should generate host bindings for directives', () => {
       env.write(`test.ts`, `
-        import {Component, HostBinding, HostListener, TemplateRef} from '@angular/core';
+        import {Component, HostBinding, HostListener, TemplateRef} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -4320,10 +4320,10 @@ function allTests(os: string) {
       expect(trim(jsContents)).toContain(trim(hostBindingsFn));
     });
 
-    // https://github.com/angular/angular/issues/46936
+    // https://github.com/ng-classic/angular/issues/46936
     it('should support bindings with Object builtin names', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -4340,7 +4340,7 @@ function allTests(os: string) {
 
     it('should handle $any used inside a listener', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -4360,7 +4360,7 @@ function allTests(os: string) {
       export declare const foo: any;
     `);
       env.write('test.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {foo} from './other';
 
       const test = foo.bar();
@@ -4381,7 +4381,7 @@ function allTests(os: string) {
 
     it('should accept enum values as host bindings', () => {
       env.write(`test.ts`, `
-        import {Component, HostBinding, HostListener, TemplateRef} from '@angular/core';
+        import {Component, HostBinding, HostListener, TemplateRef} from '@angular-classic/core';
 
         enum HostBindings {
           Hello = 'foo'
@@ -4405,7 +4405,7 @@ function allTests(os: string) {
 
     it('should generate host listeners for directives within hostBindings section', () => {
       env.write(`test.ts`, `
-        import {Directive, HostListener} from '@angular/core';
+        import {Directive, HostListener} from '@angular-classic/core';
 
         @Directive({
           selector: '[test]',
@@ -4431,7 +4431,7 @@ function allTests(os: string) {
     it('should use proper default value for preserveWhitespaces config param', () => {
       env.tsconfig();  // default is `false`
       env.write(`test.ts`, `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
        @Component({
         selector: 'test',
         preserveWhitespaces: false,
@@ -4451,7 +4451,7 @@ function allTests(os: string) {
     it('should take preserveWhitespaces config option into account', () => {
       env.tsconfig({preserveWhitespaces: true});
       env.write(`test.ts`, `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
        @Component({
         selector: 'test',
         template: \`
@@ -4471,7 +4471,7 @@ function allTests(os: string) {
     it('@Component\'s preserveWhitespaces should override the one defined in config', () => {
       env.tsconfig({preserveWhitespaces: true});
       env.write(`test.ts`, `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
        @Component({
         selector: 'test',
         preserveWhitespaces: false,
@@ -4491,7 +4491,7 @@ function allTests(os: string) {
     it('should use proper default value for i18nUseExternalIds config param', () => {
       env.tsconfig();  // default is `true`
       env.write(`test.ts`, `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
        @Component({
         selector: 'test',
         template: '<div i18n>Some text</div>'
@@ -4506,7 +4506,7 @@ function allTests(os: string) {
     it('should take i18nUseExternalIds config option into account', () => {
       env.tsconfig({i18nUseExternalIds: false});
       env.write(`test.ts`, `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
        @Component({
         selector: 'test',
         template: '<div i18n>Some text</div>'
@@ -4521,7 +4521,7 @@ function allTests(os: string) {
     it('should render legacy ids when `enableI18nLegacyMessageIdFormat` is not false', () => {
       env.tsconfig({});
       env.write(`test.ts`, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         @Component({
           selector: 'test',
           template: '<div i18n>Some text</div>'
@@ -4538,7 +4538,7 @@ function allTests(os: string) {
        () => {
          env.tsconfig({i18nFormatIn: 'xlf'});
          env.write(`test.ts`, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         @Component({
           selector: 'test',
           template: '<div i18n="@@custom">Some text</div>'
@@ -4555,7 +4555,7 @@ function allTests(os: string) {
        () => {
          env.tsconfig({enableI18nLegacyMessageIdFormat: false, i18nInFormat: 'xmb'});
          env.write(`test.ts`, `
-     import {Component} from '@angular/core';
+     import {Component} from '@angular-classic/core';
      @Component({
        selector: 'test',
        template: '<div i18n>Some text</div>'
@@ -4571,7 +4571,7 @@ function allTests(os: string) {
     it('should also render legacy ids for ICUs when normal messages are using legacy ids', () => {
       env.tsconfig({i18nInFormat: 'xliff'});
       env.write(`test.ts`, `
-     import {Component} from '@angular/core';
+     import {Component} from '@angular-classic/core';
      @Component({
        selector: 'test',
        template: '<div i18n="@@custom">Some text {age, plural, 10 {ten} other {other}}</div>'
@@ -4591,7 +4591,7 @@ function allTests(os: string) {
 
     it('@Component\'s `interpolation` should override default interpolation config', () => {
       env.write(`test.ts`, `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       @Component({
         selector: 'cmp-with-custom-interpolation-a',
         template: \`<div>{%text%}</div>\`,
@@ -4609,7 +4609,7 @@ function allTests(os: string) {
 
     it('should handle `encapsulation` field', () => {
       env.write(`test.ts`, `
-      import {Component, ViewEncapsulation} from '@angular/core';
+      import {Component, ViewEncapsulation} from '@angular-classic/core';
       @Component({
         selector: 'comp-a',
         template: '...',
@@ -4625,7 +4625,7 @@ function allTests(os: string) {
 
     it('should throw if `encapsulation` contains invalid value', () => {
       env.write('test.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       @Component({
         selector: 'comp-a',
         template: '...',
@@ -4637,13 +4637,13 @@ function allTests(os: string) {
       expect(errors.length).toBe(1);
       const messageText = ts.flattenDiagnosticMessageText(errors[0].messageText, '\n');
       expect(messageText)
-          .toContain('encapsulation must be a member of ViewEncapsulation enum from @angular/core');
+          .toContain('encapsulation must be a member of ViewEncapsulation enum from @angular-classic/core');
       expect(messageText).toContain('Value is of type \'string\'.');
     });
 
     it('should handle `changeDetection` field', () => {
       env.write(`test.ts`, `
-      import {Component, ChangeDetectionStrategy} from '@angular/core';
+      import {Component, ChangeDetectionStrategy} from '@angular-classic/core';
       @Component({
         selector: 'comp-a',
         template: '...',
@@ -4659,7 +4659,7 @@ function allTests(os: string) {
 
     it('should throw if `changeDetection` contains invalid value', () => {
       env.write('test.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       @Component({
         selector: 'comp-a',
         template: '...',
@@ -4672,13 +4672,13 @@ function allTests(os: string) {
       const messageText = ts.flattenDiagnosticMessageText(errors[0].messageText, '\n');
       expect(messageText)
           .toContain(
-              'changeDetection must be a member of ChangeDetectionStrategy enum from @angular/core');
+              'changeDetection must be a member of ChangeDetectionStrategy enum from @angular-classic/core');
       expect(messageText).toContain('Value is of type \'string\'.');
     });
 
     it('should ignore empty bindings', () => {
       env.write(`test.ts`, `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
        @Component({
         selector: 'test',
         template: '<div [class]></div>'
@@ -4692,7 +4692,7 @@ function allTests(os: string) {
 
     it('should correctly recognize local symbols', () => {
       env.write('module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {Dir, Comp} from './test';
 
         @NgModule({
@@ -4702,7 +4702,7 @@ function allTests(os: string) {
         class Module {}
     `);
       env.write(`test.ts`, `
-        import {Component, Directive} from '@angular/core';
+        import {Component, Directive} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir]',
@@ -4723,7 +4723,7 @@ function allTests(os: string) {
 
     it('should generate exportAs declarations', () => {
       env.write('test.ts', `
-        import {Component, Directive} from '@angular/core';
+        import {Component, Directive} from '@angular-classic/core';
 
         @Directive({
           selector: '[test]',
@@ -4740,7 +4740,7 @@ function allTests(os: string) {
 
     it('should generate multiple exportAs declarations', () => {
       env.write('test.ts', `
-        import {Component, Directive} from '@angular/core';
+        import {Component, Directive} from '@angular-classic/core';
 
         @Directive({
           selector: '[test]',
@@ -4757,7 +4757,7 @@ function allTests(os: string) {
 
     it('should compile a banana-in-a-box inside of a template', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '<div *tmpl [(bananaInABox)]="prop"></div>',
@@ -4771,7 +4771,7 @@ function allTests(os: string) {
 
     it('generates inherited factory definitions', () => {
       env.write(`test.ts`, `
-        import {Injectable} from '@angular/core';
+        import {Injectable} from '@angular-classic/core';
 
         class Dep {}
 
@@ -4806,7 +4806,7 @@ function allTests(os: string) {
 
     it('generates base factories for directives', () => {
       env.write(`test.ts`, `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({
           selector: '[base]',
@@ -4831,7 +4831,7 @@ function allTests(os: string) {
     it('should wrap "directives" in component metadata in a closure when forward references are present',
        () => {
          env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'cmp-a',
@@ -4859,7 +4859,7 @@ function allTests(os: string) {
 
     it('should wrap setClassMetadata in an iife with ngDevMode guard', () => {
       env.write('test.ts', `
-        import {Injectable} from '@angular/core';
+        import {Injectable} from '@angular-classic/core';
 
         @Injectable({providedIn: 'root'})
         export class Service {}
@@ -4875,7 +4875,7 @@ function allTests(os: string) {
 
     it('should not include `schemas` in component and module defs', () => {
       env.write('test.ts', `
-        import {Component, NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+        import {Component, NgModule, NO_ERRORS_SCHEMA} from '@angular-classic/core';
         @Component({
           selector: 'comp',
           template: '<custom-el></custom-el>',
@@ -4911,7 +4911,7 @@ function allTests(os: string) {
 
     it('should emit setClassMetadata calls for all types', () => {
       env.write('test.ts', `
-      import {Component, Directive, Injectable, NgModule, Pipe} from '@angular/core';
+      import {Component, Directive, Injectable, NgModule, Pipe} from '@angular-classic/core';
 
       @Component({selector: 'cmp', template: 'I am a component!'}) class TestComponent {}
       @Directive({selector: 'dir'}) class TestDirective {}
@@ -4935,7 +4935,7 @@ function allTests(os: string) {
       export class MyTypeB {}
     `);
       env.write(`test.ts`, `
-      import {Component, Inject, Injectable} from '@angular/core';
+      import {Component, Inject, Injectable} from '@angular-classic/core';
       import {MyTypeA, MyTypeB} from './types';
 
       @Injectable({providedIn: 'root'})
@@ -4966,7 +4966,7 @@ function allTests(os: string) {
          export class MyTypeB {}
        `);
          env.write(`test.ts`, `
-         import {Component, Inject, Injectable} from '@angular/core';
+         import {Component, Inject, Injectable} from '@angular-classic/core';
          import * as types from './types';
 
          @Injectable({providedIn: 'root'})
@@ -4996,7 +4996,7 @@ function allTests(os: string) {
             export class Other {}
           `);
       env.write(`test.ts`, `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             import {Other} from './types';
             import Default from './types';
 
@@ -5018,7 +5018,7 @@ function allTests(os: string) {
 
     it('should not throw when using an SVG-specific `title` tag', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           template: \`
             <svg>
@@ -5052,7 +5052,7 @@ function allTests(os: string) {
               }
            `);
            env.write(`test.ts`, `
-              import {Inject, Injectable, InjectionToken} from '@angular/core';
+              import {Inject, Injectable, InjectionToken} from '@angular-classic/core';
               import * as ns from 'ns';
 
               @Injectable()
@@ -5090,7 +5090,7 @@ function allTests(os: string) {
               }
            `);
            env.write(`test.ts`, `
-              import {Inject, Injectable, InjectionToken} from '@angular/core';
+              import {Inject, Injectable, InjectionToken} from '@angular-classic/core';
               import {ns} from 'ns';
               import {ns as alias} from 'ns';
 
@@ -5131,7 +5131,7 @@ function allTests(os: string) {
           declare namespace Foo {}
         `);
         env.write(`test.ts`, `
-          import {Inject, Injectable, InjectionToken} from '@angular/core';
+          import {Inject, Injectable, InjectionToken} from '@angular-classic/core';
           import * as Foo from 'foo';
 
           export const TOKEN = new InjectionToken<Foo>('Foo');
@@ -5156,7 +5156,7 @@ function allTests(os: string) {
           declare namespace Foo {}
         `);
         env.write(`test.ts`, `
-          import {Injectable} from '@angular/core';
+          import {Injectable} from '@angular-classic/core';
           import * as Foo from 'foo';
 
           @Injectable()
@@ -5186,7 +5186,7 @@ function allTests(os: string) {
       export type MyType = Map<any, any>;
     `);
          env.write(`test.ts`, `
-      import {Component, Inject, Injectable} from '@angular/core';
+      import {Component, Inject, Injectable} from '@angular-classic/core';
       import {MyType} from './types';
 
       @Component({
@@ -5210,7 +5210,7 @@ function allTests(os: string) {
         export const enum KeyCodes {A, B};
       `);
       env.write(`test.ts`, `
-        import {Component, Inject} from '@angular/core';
+        import {Component, Inject} from '@angular-classic/core';
         import {KeyCodes} from './keycodes';
 
         @Component({
@@ -5234,7 +5234,7 @@ function allTests(os: string) {
         export enum KeyCodes {A, B};
       `);
       env.write(`test.ts`, `
-        import {Component, Inject} from '@angular/core';
+        import {Component, Inject} from '@angular-classic/core';
         import {KeyCodes} from './keycodes';
 
         @Component({
@@ -5260,7 +5260,7 @@ function allTests(os: string) {
            export class TypeOnlyTwo {}
          `);
          env.write(`test.ts`, `
-           import {Component, Inject, Injectable} from '@angular/core';
+           import {Component, Inject, Injectable} from '@angular-classic/core';
            import type DefaultImport from './types';
            import type {TypeOnlyOne} from './types';
            import {type TypeOnlyTwo} from './types';
@@ -5297,7 +5297,7 @@ function allTests(os: string) {
     it('should not throw in case whitespaces and HTML comments are present inside <ng-content>',
        () => {
          env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'cmp-a',
@@ -5315,7 +5315,7 @@ function allTests(os: string) {
 
     it('should compile a template using multiple directives with the same selector', () => {
       env.write('test.ts', `
-      import {Component, Directive, NgModule} from '@angular/core';
+      import {Component, Directive, NgModule} from '@angular-classic/core';
 
       @Directive({selector: '[test]'})
       class DirA {}
@@ -5342,7 +5342,7 @@ function allTests(os: string) {
     describe('cycle detection', () => {
       it('should detect a simple cycle and use remote component scoping', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         import {NormalComponent} from './cyclic';
 
         @Component({
@@ -5358,7 +5358,7 @@ function allTests(os: string) {
       `);
 
         env.write('cyclic.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'normal-component',
@@ -5377,7 +5377,7 @@ function allTests(os: string) {
 
       it('should detect a cycle added entirely during compilation', () => {
         env.write('test.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {ACmp} from './a';
         import {BCmp} from './b';
 
@@ -5385,7 +5385,7 @@ function allTests(os: string) {
         export class Module {}
       `);
         env.write('a.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'a-cmp',
@@ -5394,7 +5394,7 @@ function allTests(os: string) {
         export class ACmp {}
       `);
         env.write('b.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'b-cmp',
@@ -5411,7 +5411,7 @@ function allTests(os: string) {
 
       it('should not detect a potential cycle if it doesn\'t actually happen', () => {
         env.write('test.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {ACmp} from './a';
         import {BCmp} from './b';
 
@@ -5419,7 +5419,7 @@ function allTests(os: string) {
         export class Module {}
       `);
         env.write('a.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'a-cmp',
@@ -5428,7 +5428,7 @@ function allTests(os: string) {
         export class ACmp {}
       `);
         env.write('b.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'b-cmp',
@@ -5443,7 +5443,7 @@ function allTests(os: string) {
 
       it('should not consider type-only import clauses during cycle detection', () => {
         env.write('test.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {ACmp} from './a';
         import {BCmp} from './b';
 
@@ -5451,7 +5451,7 @@ function allTests(os: string) {
         export class Module {}
       `);
         env.write('a.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'a-cmp',
@@ -5460,7 +5460,7 @@ function allTests(os: string) {
         export class ACmp {}
       `);
         env.write('b.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import type {ACmp} from './a';
 
         @Component({
@@ -5479,7 +5479,7 @@ function allTests(os: string) {
       it('should not consider import clauses where all the specifiers are type-only during cycle detection',
          () => {
            env.write('test.ts', `
-              import {NgModule} from '@angular/core';
+              import {NgModule} from '@angular-classic/core';
               import {SharedOne, SharedTwo} from './shared';
               import {CyclicCmp} from './cyclic';
 
@@ -5487,7 +5487,7 @@ function allTests(os: string) {
               export class Module {}
             `);
            env.write('shared.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
 
               @Component({
                 selector: 'shared-one-cmp',
@@ -5502,7 +5502,7 @@ function allTests(os: string) {
               export class SharedTwo {}
             `);
            env.write('cyclic.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
               import {type SharedOne, type SharedTwo} from './shared';
 
               @Component({
@@ -5522,7 +5522,7 @@ function allTests(os: string) {
 
       it('should only pass components actually used to setComponentScope', () => {
         env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
           import {NormalComponent} from './cyclic';
           import {OtherComponent} from './other';
 
@@ -5539,7 +5539,7 @@ function allTests(os: string) {
         `);
 
         env.write('cyclic.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'normal-component',
@@ -5549,7 +5549,7 @@ function allTests(os: string) {
         `);
 
         env.write('other.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'other-component',
@@ -5569,7 +5569,7 @@ function allTests(os: string) {
         });
 
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         import {NormalComponent} from './cyclic';
 
         @Component({
@@ -5585,7 +5585,7 @@ function allTests(os: string) {
       `);
 
         env.write('cyclic.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'normal-component',
@@ -5615,7 +5615,7 @@ function allTests(os: string) {
       it('should not generate an error when a local ref is unresolved (outside of template type-checking)',
          () => {
            env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             template: '<div #ref="unknownTarget"></div>',
@@ -5631,7 +5631,7 @@ function allTests(os: string) {
 
     describe('multiple local refs', () => {
       const getComponentScript = (template: string): string => `
-      import {Component, Directive, NgModule} from '@angular/core';
+      import {Component, Directive, NgModule} from '@angular-classic/core';
 
       @Component({selector: 'my-cmp', template: \`${template}\`})
       class Cmp {}
@@ -5678,7 +5678,7 @@ function allTests(os: string) {
 
     it('should wrap "inputs" and "outputs" keys if they contain unsafe characters', () => {
       env.write(`test.ts`, `
-      import {Directive, Input} from '@angular/core';
+      import {Directive, Input} from '@angular-classic/core';
 
       @Directive({
         selector: '[somedir]',
@@ -5714,7 +5714,7 @@ function allTests(os: string) {
 
     it('should generate the correct declaration for class members decorated with @Input', () => {
       env.write('test.ts', `
-        import {Directive, Input} from '@angular/core';
+        import {Directive, Input} from '@angular-classic/core';
 
         @Directive({selector: '[dir]'})
         export class TestDir {
@@ -5740,7 +5740,7 @@ function allTests(os: string) {
 
     it('should generate the correct declaration for directives using the `inputs` array', () => {
       env.write('test.ts', `
-        import {Directive, Input} from '@angular/core';
+        import {Directive, Input} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir]',
@@ -5793,7 +5793,7 @@ function allTests(os: string) {
           export declare class NotAModule {}
         `);
         env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {NotAModule} from 'external';
 
           @NgModule({
@@ -5805,7 +5805,7 @@ function allTests(os: string) {
         verifyThrownError(
             ErrorCode.NGMODULE_INVALID_IMPORT,
             'This likely means that the library (external) which declares NotAModule is not ' +
-                'compatible with Angular Ivy.');
+                'compatible with Angular ClassicIvy.');
       });
 
       it('should provide a hint when importing an invalid NgModule from a local library', () => {
@@ -5814,7 +5814,7 @@ function allTests(os: string) {
         `);
 
         env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {NotAModule} from './libs/external';
 
           @NgModule({
@@ -5826,7 +5826,7 @@ function allTests(os: string) {
         verifyThrownError(
             ErrorCode.NGMODULE_INVALID_IMPORT,
             'This likely means that the dependency which declares NotAModule is not ' +
-                'compatible with Angular Ivy.');
+                'compatible with Angular ClassicIvy.');
       });
 
       it('should provide a hint when importing an invalid NgModule in the current program', () => {
@@ -5835,7 +5835,7 @@ function allTests(os: string) {
         `);
 
         env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {NotAModule} from './invalid';
 
           @NgModule({
@@ -5852,7 +5852,7 @@ function allTests(os: string) {
     describe('when processing external directives', () => {
       it('should not emit multiple references to the same directive', () => {
         env.write('node_modules/external/index.d.ts', `
-        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
         export declare class ExternalDir {
           static ɵdir: ɵɵDirectiveDeclaration<ExternalDir, '[test]', never, never, never, never>;
@@ -5863,7 +5863,7 @@ function allTests(os: string) {
         }
       `);
         env.write('test.ts', `
-        import {Component, Directive, NgModule} from '@angular/core';
+        import {Component, Directive, NgModule} from '@angular-classic/core';
         import {ExternalModule} from 'external';
 
         @Component({
@@ -5887,7 +5887,7 @@ function allTests(os: string) {
 
       it('should import directives by their external name', () => {
         env.write('node_modules/external/index.d.ts', `
-        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
         import {InternalDir} from './internal';
 
         export {InternalDir as ExternalDir} from './internal';
@@ -5903,7 +5903,7 @@ function allTests(os: string) {
         }
       `);
         env.write('test.ts', `
-        import {Component, Directive, NgModule} from '@angular/core';
+        import {Component, Directive, NgModule} from '@angular-classic/core';
         import {ExternalModule} from 'external';
 
         @Component({
@@ -5941,7 +5941,7 @@ function allTests(os: string) {
 
         it('should throw if @Component is missing a template', async () => {
           env.write('test.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test',
@@ -5956,7 +5956,7 @@ function allTests(os: string) {
 
         it('should throw if `styleUrls` is defined incorrectly in @Component', async () => {
           env.write('test.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test',
@@ -6065,13 +6065,13 @@ function allTests(os: string) {
            expect(errors.length).toBe(1);
            expect(errors[0].messageText)
                .toBe(
-                   'Angular compiler option "flatModuleOutFile" requires one and only one .ts file in the "files" field.');
+                   'Angular Classiccompiler option "flatModuleOutFile" requires one and only one .ts file in the "files" field.');
          });
 
       it('should report an error when a visible directive is not exported', () => {
         env.tsconfig({'flatModuleOutFile': 'flat.js'});
         env.write('test.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
 
         // The directive is not exported.
         @Directive({selector: 'test'})
@@ -6100,7 +6100,7 @@ function allTests(os: string) {
       it('should report an error when a visible host directive is not exported', () => {
         env.tsconfig({'flatModuleOutFile': 'flat.js'});
         env.write('test.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
 
         @Directive({
           standalone: true,
@@ -6120,7 +6120,7 @@ function allTests(os: string) {
       it('should report an error when a deeply visible directive is not exported', () => {
         env.tsconfig({'flatModuleOutFile': 'flat.js'});
         env.write('test.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
 
         // The directive is not exported.
         @Directive({selector: 'test'})
@@ -6152,7 +6152,7 @@ function allTests(os: string) {
       it('should report an error when a deeply visible module is not exported', () => {
         env.tsconfig({'flatModuleOutFile': 'flat.js'});
         env.write('test.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
 
         // The directive is exported.
         @Directive({selector: 'test'})
@@ -6180,7 +6180,7 @@ function allTests(os: string) {
          () => {
            env.tsconfig({'flatModuleOutFile': 'flat.js'});
            env.write('test.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
 
         // The directive is not exported.
         @Directive({selector: 'test'})
@@ -6203,7 +6203,7 @@ function allTests(os: string) {
       it('should not report an error when re-exporting an external symbol', () => {
         env.tsconfig({'flatModuleOutFile': 'flat.js'});
         env.write('test.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
         import {ExternalModule} from 'external';
 
         // This module makes ExternalModule and ExternalDir visible.
@@ -6211,7 +6211,7 @@ function allTests(os: string) {
         export class Module {}
       `);
         env.write('node_modules/external/index.d.ts', `
-        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
         export declare class ExternalDir {
           static ɵdir: ɵɵDirectiveDeclaration<ExternalDir, '[test]', never, never, never, never>;
@@ -6236,7 +6236,7 @@ function allTests(os: string) {
 
       it('should re-export a directive from a different file under a private symbol name', () => {
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'dir',
@@ -6244,7 +6244,7 @@ function allTests(os: string) {
           export class Dir {}
         `);
         env.write('module.ts', `
-          import {Directive, NgModule} from '@angular/core';
+          import {Directive, NgModule} from '@angular-classic/core';
           import {Dir} from './dir';
 
           @Directive({selector: '[inline]'})
@@ -6270,7 +6270,7 @@ function allTests(os: string) {
       it('should re-export a directive from an exported NgModule under a private symbol name',
          () => {
            env.write('dir.ts', `
-          import {Directive, NgModule} from '@angular/core';
+          import {Directive, NgModule} from '@angular-classic/core';
 
           @Directive({
             selector: 'dir',
@@ -6284,7 +6284,7 @@ function allTests(os: string) {
           export class DirModule {}
         `);
            env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {DirModule} from './dir';
 
           @NgModule({
@@ -6303,7 +6303,7 @@ function allTests(os: string) {
 
       it('should not re-export a directive that\'s not exported from the NgModule', () => {
         env.write('dir.ts', `
-             import {Directive} from '@angular/core';
+             import {Directive} from '@angular-classic/core';
 
              @Directive({
                selector: 'dir',
@@ -6311,7 +6311,7 @@ function allTests(os: string) {
              export class Dir {}
            `);
         env.write('module.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {Dir} from './dir';
 
              @NgModule({
@@ -6331,7 +6331,7 @@ function allTests(os: string) {
 
       it('should not re-export a directive that\'s already exported', () => {
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'dir',
@@ -6339,7 +6339,7 @@ function allTests(os: string) {
           export class Dir {}
         `);
         env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Dir} from './dir';
 
           @NgModule({
@@ -6361,7 +6361,7 @@ function allTests(os: string) {
 
       it('should not re-export a directive from an exported, external NgModule', () => {
         env.write(`node_modules/external/index.d.ts`, `
-          import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+          import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
           export declare class ExternalDir {
             static ɵdir: ɵɵDirectiveDeclaration<ExternalDir, '[test]', never, never, never, never>;
@@ -6372,7 +6372,7 @@ function allTests(os: string) {
           }
           `);
         env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {ExternalModule} from 'external';
 
           @NgModule({
@@ -6390,7 +6390,7 @@ function allTests(os: string) {
       it('should error when two directives with the same declared name are exported from the same NgModule',
          () => {
            env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'dir',
@@ -6398,7 +6398,7 @@ function allTests(os: string) {
           export class Dir {}
         `);
            env.write('dir2.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'dir',
@@ -6406,7 +6406,7 @@ function allTests(os: string) {
           export class Dir {}
         `);
            env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Dir} from './dir';
           import {Dir as Dir2} from './dir2';
 
@@ -6425,7 +6425,7 @@ function allTests(os: string) {
       it('should not error when two directives with the same declared name are exported from the same NgModule, but one is exported from the file directly',
          () => {
            env.write('dir.ts', `
-             import {Directive} from '@angular/core';
+             import {Directive} from '@angular-classic/core';
 
              @Directive({
                selector: 'dir',
@@ -6433,7 +6433,7 @@ function allTests(os: string) {
              export class Dir {}
            `);
            env.write('dir2.ts', `
-             import {Directive} from '@angular/core';
+             import {Directive} from '@angular-classic/core';
 
              @Directive({
                selector: 'dir',
@@ -6441,7 +6441,7 @@ function allTests(os: string) {
              export class Dir {}
            `);
            env.write('module.ts', `
-             import {NgModule} from '@angular/core';
+             import {NgModule} from '@angular-classic/core';
              import {Dir} from './dir';
              import {Dir as Dir2} from './dir2';
 
@@ -6461,14 +6461,14 @@ function allTests(os: string) {
 
       it('should choose a re-exported symbol if one is present', () => {
         env.write(`node_modules/external/dir.d.ts`, `
-          import {ɵɵDirectiveDeclaration} from '@angular/core';
+          import {ɵɵDirectiveDeclaration} from '@angular-classic/core';
 
           export declare class ExternalDir {
             static ɵdir: ɵɵDirectiveDeclaration<ExternalDir, '[test]', never, never, never, never>;
           }
           `);
         env.write('node_modules/external/module.d.ts', `
-          import {ɵɵNgModuleDeclaration} from '@angular/core';
+          import {ɵɵNgModuleDeclaration} from '@angular-classic/core';
           import {ExternalDir} from './dir';
 
           export declare class ExternalModule {
@@ -6478,7 +6478,7 @@ function allTests(os: string) {
           export {ExternalDir as ɵngExportɵExternalModuleɵExternalDir};
         `);
         env.write('test.ts', `
-          import {Component, Directive, NgModule} from '@angular/core';
+          import {Component, Directive, NgModule} from '@angular-classic/core';
           import {ExternalModule} from 'external/module';
 
           @Component({
@@ -6505,7 +6505,7 @@ function allTests(os: string) {
         env.tsconfig();
 
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: 'dir',
@@ -6513,7 +6513,7 @@ function allTests(os: string) {
           export class Dir {}
         `);
         env.write('module.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Dir} from './dir';
 
           @NgModule({
@@ -6537,7 +6537,7 @@ function allTests(os: string) {
       let afterCount = 0;
 
       env.write('test.ts', `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
 
       @NgModule({})
       class Module {}
@@ -6568,7 +6568,7 @@ function allTests(os: string) {
             'annotateForClosureCompiler': true,
           });
           env.write(`test.ts`, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '<div class="test"></div>',
@@ -6616,7 +6616,7 @@ function allTests(os: string) {
          * @modName {some_comp}
          */
 
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '<div class="test"></div>',
@@ -6675,7 +6675,7 @@ function allTests(os: string) {
       it('should generate sanitizers for unsafe attributes in hostBindings fn in Directives',
          () => {
            env.write(`test.ts`, `
-        import {Component, Directive, HostBinding, NgModule, Input} from '@angular/core';
+        import {Component, Directive, HostBinding, NgModule, Input} from '@angular-classic/core';
 
         @Directive({
           selector: '[unsafeAttrs]'
@@ -6730,7 +6730,7 @@ function allTests(os: string) {
       it('should generate sanitizers for unsafe properties in hostBindings fn in Directives',
          () => {
            env.write(`test.ts`, `
-        import {Component, Directive, HostBinding, Input, NgModule} from '@angular/core';
+        import {Component, Directive, HostBinding, Input, NgModule} from '@angular-classic/core';
 
         @Directive({
           selector: '[unsafeProps]'
@@ -6785,7 +6785,7 @@ function allTests(os: string) {
       it('should not generate sanitizers for URL properties in hostBindings fn in Component',
          () => {
            env.write(`test.ts`, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'foo',
@@ -6823,7 +6823,7 @@ function allTests(os: string) {
 
         // 'alpha' declares the directive which will ultimately be imported.
         env.write('alpha.d.ts', `
-        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
         export declare class ExternalDir {
           static ɵdir: ɵɵDirectiveDeclaration<ExternalDir, '[test]', never, never, never, never>;
@@ -6836,7 +6836,7 @@ function allTests(os: string) {
 
         // 'beta' re-exports AlphaModule from alpha.
         env.write('beta.d.ts', `
-        import {ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵNgModuleDeclaration} from '@angular-classic/core';
         import {AlphaModule} from './alpha';
 
         export declare class BetaModule {
@@ -6847,7 +6847,7 @@ function allTests(os: string) {
         // The application imports BetaModule from beta, gaining visibility of
         // ExternalDir from alpha.
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         import {BetaModule} from './beta';
 
         @Component({
@@ -6873,7 +6873,7 @@ function allTests(os: string) {
       it('should write alias ES2015 exports for NgModule exported directives', () => {
         env.tsconfig({'_useHostForImportGeneration': true});
         env.write('external.d.ts', `
-        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
         import {LibModule} from './lib';
 
         export declare class ExternalDir {
@@ -6885,7 +6885,7 @@ function allTests(os: string) {
         }
       `);
         env.write('lib.d.ts', `
-        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+        import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
         export declare class LibDir {
           static ɵdir: ɵɵDirectiveDeclaration<LibDir, '[lib]', never, never, never, never>;
@@ -6896,7 +6896,7 @@ function allTests(os: string) {
         }
       `);
         env.write('foo.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
         import {ExternalModule} from './external';
 
         @Directive({selector: '[foo]'})
@@ -6909,7 +6909,7 @@ function allTests(os: string) {
         export class FooModule {}
       `);
         env.write('index.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         import {FooModule} from './foo';
 
         @Component({
@@ -6933,7 +6933,7 @@ function allTests(os: string) {
       it('should escape unusual characters in aliased filenames', () => {
         env.tsconfig({'_useHostForImportGeneration': true});
         env.write('other._$test.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
 
         @Directive({selector: 'test'})
         export class TestDir {}
@@ -6945,7 +6945,7 @@ function allTests(os: string) {
         export class OtherModule {}
       `);
         env.write('index.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {OtherModule} from './other._$test';
 
         @NgModule({
@@ -7006,7 +7006,7 @@ function allTests(os: string) {
     describe('inherited directives', () => {
       beforeEach(() => {
         env.write('local.ts', `
-          import {Component, Directive, ElementRef} from '@angular/core';
+          import {Component, Directive, ElementRef} from '@angular-classic/core';
 
           export class BasePlain {}
 
@@ -7031,7 +7031,7 @@ function allTests(os: string) {
         `);
 
         env.write('lib.d.ts', `
-          import {ɵɵComponentDeclaration, ɵɵDirectiveDeclaration, ElementRef} from '@angular/core';
+          import {ɵɵComponentDeclaration, ɵɵDirectiveDeclaration, ElementRef} from '@angular-classic/core';
 
           export declare class BasePlain {}
 
@@ -7056,7 +7056,7 @@ function allTests(os: string) {
       it('should not error when inheriting a constructor from a decorated directive class', () => {
         env.tsconfig();
         env.write('test.ts', `
-          import {Directive, Component} from '@angular/core';
+          import {Directive, Component} from '@angular-classic/core';
           import {BaseDir, BaseCmp} from './local';
 
           @Directive({
@@ -7077,7 +7077,7 @@ function allTests(os: string) {
       it('should not error when inheriting a constructor without parameters', () => {
         env.tsconfig();
         env.write('test.ts', `
-          import {Directive, Component} from '@angular/core';
+          import {Directive, Component} from '@angular-classic/core';
           import {BasePlainWithBlankConstructor} from './local';
 
           @Directive({
@@ -7098,7 +7098,7 @@ function allTests(os: string) {
       it('should not error when inheriting from a class without a constructor', () => {
         env.tsconfig();
         env.write('test.ts', `
-          import {Directive, Component} from '@angular/core';
+          import {Directive, Component} from '@angular-classic/core';
           import {BasePlain} from './local';
 
           @Directive({
@@ -7119,7 +7119,7 @@ function allTests(os: string) {
       it('should error when inheriting a constructor from an undecorated class', () => {
         env.tsconfig();
         env.write('test.ts', `
-          import {Directive, Component} from '@angular/core';
+          import {Directive, Component} from '@angular-classic/core';
           import {BasePlainWithConstructorParameters} from './local';
 
           @Directive({
@@ -7144,7 +7144,7 @@ function allTests(os: string) {
       it('should error when inheriting a constructor from undecorated grand super class', () => {
         env.tsconfig();
         env.write('test.ts', `
-          import {Directive, Component} from '@angular/core';
+          import {Directive, Component} from '@angular-classic/core';
           import {BasePlainWithConstructorParameters} from './local';
 
           class Parent extends BasePlainWithConstructorParameters {}
@@ -7173,7 +7173,7 @@ function allTests(os: string) {
          () => {
            env.tsconfig();
            env.write('test.ts', `
-              import {Directive, Component} from '@angular/core';
+              import {Directive, Component} from '@angular-classic/core';
               import {BasePlainWithConstructorParameters} from './local';
 
               class GrandParent extends BasePlainWithConstructorParameters {}
@@ -7204,7 +7204,7 @@ function allTests(os: string) {
          () => {
            env.tsconfig();
            env.write('test.ts', `
-              import {Component, Directive} from '@angular/core';
+              import {Component, Directive} from '@angular-classic/core';
               import {BaseDir, BaseCmp} from './lib';
 
               @Directive({
@@ -7226,7 +7226,7 @@ function allTests(os: string) {
          () => {
            env.tsconfig();
            env.write('test.ts', `
-              import {Directive} from '@angular/core';
+              import {Directive} from '@angular-classic/core';
 
               import {BasePlainWithConstructorParameters} from './lib';
 
@@ -7244,7 +7244,7 @@ function allTests(os: string) {
       it('should produce a diagnostic if an inherited required input is not bound', () => {
         env.tsconfig();
         env.write('test.ts', `
-          import {Directive, Component, Input} from '@angular/core';
+          import {Directive, Component, Input} from '@angular-classic/core';
 
           @Directive()
           export class BaseDir {
@@ -7274,7 +7274,7 @@ function allTests(os: string) {
       it('should not produce a diagnostic if an inherited required input is bound', () => {
         env.tsconfig();
         env.write('test.ts', `
-          import {Directive, Component, Input} from '@angular/core';
+          import {Directive, Component, Input} from '@angular-classic/core';
 
           @Directive()
           export class BaseDir {
@@ -7305,7 +7305,7 @@ function allTests(os: string) {
     describe('inline resources', () => {
       it('should process inline <style> tags', () => {
         env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -7325,7 +7325,7 @@ function allTests(os: string) {
       it('should process inline <link> tags', () => {
         env.write('style.css', `h1 {font-size: larger}`);
         env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -7341,7 +7341,7 @@ function allTests(os: string) {
 
       it('should share same styles declared in different components in the same file', () => {
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'comp-a',
@@ -7410,7 +7410,7 @@ function allTests(os: string) {
         });
 
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'comp-a',
@@ -7438,7 +7438,7 @@ function allTests(os: string) {
 
         // Verify that long strings are extracted to a separate var. This should be
         // wrapped in a function to trick Closure not to inline the contents for very
-        // large strings. See: https://github.com/angular/angular/pull/38253.
+        // large strings. See: https://github.com/ng-classic/angular/pull/38253.
         expect(jsContents)
             .toContain(
                 '_c0 = function () {' +
@@ -7468,7 +7468,7 @@ function allTests(os: string) {
     describe('empty resources', () => {
       it('should not include empty inline styles in the compiled output', () => {
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           const someStyle = ' ';
 
@@ -7490,7 +7490,7 @@ function allTests(os: string) {
         env.write('dir/a.css', '');
         env.write('dir/b.css', '                ');
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -7510,7 +7510,7 @@ function allTests(os: string) {
         env.write('dir/a.css', '');
         env.write('dir/b.css', '                ');
         env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -7534,7 +7534,7 @@ function allTests(os: string) {
 
       it('should not emit directive definitions for non-exported classes if configured', () => {
         env.write('test.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             selector: '[test]'
@@ -7550,7 +7550,7 @@ function allTests(os: string) {
 
       it('should not emit component definitions for non-exported classes if configured', () => {
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -7567,7 +7567,7 @@ function allTests(os: string) {
 
       it('should not emit module definitions for non-exported classes if configured', () => {
         env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           @NgModule({
             declarations: []
@@ -7583,7 +7583,7 @@ function allTests(os: string) {
 
       it('should still compile a class that is indirectly exported', () => {
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -7604,11 +7604,11 @@ function allTests(os: string) {
       it('should generate attribute and property bindings with a validator fn when on <iframe>',
          () => {
            env.write('test.ts', `
-                import {Component} from '@angular/core';
+                import {Component} from '@angular-classic/core';
 
                 @Component({
                   template: \`
-                    <iframe src="http://angular.io"
+                    <iframe src="http://angular-classic.com"
                       [sandbox]="''" [attr.allow]="''"
                       [title]="'Hi!'"
                     ></iframe>
@@ -7631,15 +7631,15 @@ function allTests(os: string) {
          });
 
       it('should generate an attribute binding instruction with a validator function ' +
-             '(making sure it\'s case-insensitive, since this is allowed in Angular templates)',
+             '(making sure it\'s case-insensitive, since this is allowed in Angular Classictemplates)',
          () => {
            env.write('test.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
 
               @Component({
                 template: \`
                   <IFRAME
-                    src="http://angular.io"
+                    src="http://angular-classic.com"
                     [attr.SANDBOX]="''"
                   ></IFRAME>
                 \`
@@ -7659,7 +7659,7 @@ function allTests(os: string) {
       it('should *not* generate a validator fn for attribute and property bindings when *not* on <iframe>',
          () => {
            env.write('test.ts', `
-                import {Component, Directive} from '@angular/core';
+                import {Component, Directive} from '@angular-classic/core';
 
                 @Directive({
                   standalone: true,
@@ -7689,13 +7689,13 @@ function allTests(os: string) {
       it('should generate a validator fn for attribute and property host bindings on a directive',
          () => {
            env.write('test.ts', `
-              import {Directive} from '@angular/core';
+              import {Directive} from '@angular-classic/core';
 
               @Directive({
                 host: {
                   '[sandbox]': "''",
                   '[attr.allow]': "''",
-                  'src': 'http://angular.io'
+                  'src': 'http://angular-classic.com'
                 }
               })
               export class SomeDir {}
@@ -7719,7 +7719,7 @@ function allTests(os: string) {
              '(making sure the check is case-insensitive)',
          () => {
            env.write('test.ts', `
-              import {Directive} from '@angular/core';
+              import {Directive} from '@angular-classic/core';
 
               @Directive({
                 host: {
@@ -7742,7 +7742,7 @@ function allTests(os: string) {
       it('should error when an undecorated class, with a non-trivial constructor, is provided directly in a module',
          () => {
            env.write('test.ts', `
-            import {NgModule, NgZone} from '@angular/core';
+            import {NgModule, NgZone} from '@angular-classic/core';
 
             class NotAService {
               constructor(ngZone: NgZone) {}
@@ -7761,7 +7761,7 @@ function allTests(os: string) {
 
       it('should error when an undecorated class is provided via useClass', () => {
         env.write('test.ts', `
-          import {NgModule, Injectable, NgZone} from '@angular/core';
+          import {NgModule, Injectable, NgZone} from '@angular-classic/core';
 
           @Injectable({providedIn: 'root'})
           class Service {}
@@ -7783,7 +7783,7 @@ function allTests(os: string) {
 
       it('should not error when an undecorated class is provided via useClass with deps', () => {
         env.write('test.ts', `
-          import {NgModule, Injectable, NgZone} from '@angular/core';
+          import {NgModule, Injectable, NgZone} from '@angular-classic/core';
 
           @Injectable({providedIn: 'root'})
           class Service {}
@@ -7804,7 +7804,7 @@ function allTests(os: string) {
 
       it('should error when an undecorated class is provided via an array', () => {
         env.write('test.ts', `
-          import {NgModule, Injectable, NgZone} from '@angular/core';
+          import {NgModule, Injectable, NgZone} from '@angular-classic/core';
 
           @Injectable({providedIn: 'root'})
           class Service {}
@@ -7826,7 +7826,7 @@ function allTests(os: string) {
 
       it('should error when an undecorated class is provided to a directive', () => {
         env.write('test.ts', `
-          import {NgModule, Directive, NgZone} from '@angular/core';
+          import {NgModule, Directive, NgZone} from '@angular-classic/core';
 
           class NotAService {
             constructor(ngZone: NgZone) {}
@@ -7851,7 +7851,7 @@ function allTests(os: string) {
 
       it('should error when an undecorated class is provided to a component', () => {
         env.write('test.ts', `
-          import {NgModule, Component, NgZone} from '@angular/core';
+          import {NgModule, Component, NgZone} from '@angular-classic/core';
 
           class NotAService {
             constructor(ngZone: NgZone) {}
@@ -7878,7 +7878,7 @@ function allTests(os: string) {
       it('should error when an undecorated class is provided to a component via viewProviders',
          () => {
            env.write('test.ts', `
-          import {NgModule, Component, NgZone} from '@angular/core';
+          import {NgModule, Component, NgZone} from '@angular-classic/core';
 
           class NotAService {
             constructor(ngZone: NgZone) {}
@@ -7904,7 +7904,7 @@ function allTests(os: string) {
 
       it('should not error when a class with a factory is provided', () => {
         env.write('test.ts', `
-          import {NgModule, Pipe} from '@angular/core';
+          import {NgModule, Pipe} from '@angular-classic/core';
 
           @Pipe({
             name: 'some-pipe'
@@ -7924,7 +7924,7 @@ function allTests(os: string) {
 
       it('should not error when an NgModule is provided', () => {
         env.write('test.ts', `
-          import {Injectable, NgModule} from '@angular/core';
+          import {Injectable, NgModule} from '@angular-classic/core';
 
           @Injectable()
           export class Service {}
@@ -7946,13 +7946,13 @@ function allTests(os: string) {
       });
 
       it('should not error when an undecorated class from a declaration file is provided', () => {
-        env.write('node_modules/@angular/core/testing/index.d.ts', `
+        env.write('node_modules/@angular-classic/core/testing/index.d.ts', `
           export declare class Testability {
           }
         `);
         env.write('test.ts', `
-          import {NgModule} from '@angular/core';
-          import {Testability} from '@angular/core/testing';
+          import {NgModule} from '@angular-classic/core';
+          import {Testability} from '@angular-classic/core/testing';
 
           @NgModule({
             providers: [Testability]
@@ -7966,13 +7966,13 @@ function allTests(os: string) {
 
       it('should not error when an undecorated class without a constructor from a declaration file is provided via useClass',
          () => {
-           env.write('node_modules/@angular/core/testing/index.d.ts', `
+           env.write('node_modules/@angular-classic/core/testing/index.d.ts', `
             export declare class Testability {
             }
           `);
            env.write('test.ts', `
-            import {NgModule, Injectable} from '@angular/core';
-            import {Testability} from '@angular/core/testing';
+            import {NgModule, Injectable} from '@angular-classic/core';
+            import {Testability} from '@angular-classic/core/testing';
 
             @Injectable()
             class TestingService {}
@@ -7990,7 +7990,7 @@ function allTests(os: string) {
       it('should not error if the undecorated class does not have a constructor or the constructor is blank',
          () => {
            env.write('test.ts', `
-          import {NgModule, NgZone} from '@angular/core';
+          import {NgModule, NgZone} from '@angular-classic/core';
 
           class NoConstructorService {
           }
@@ -8015,7 +8015,7 @@ function allTests(os: string) {
       // can be updated.
       xit('should error when an undecorated class with a non-trivial constructor in a declaration file is provided via useClass',
           () => {
-            env.write('node_modules/@angular/core/testing/index.d.ts', `
+            env.write('node_modules/@angular-classic/core/testing/index.d.ts', `
             export declare class NgZone {}
 
             export declare class Testability {
@@ -8023,8 +8023,8 @@ function allTests(os: string) {
             }
           `);
             env.write('test.ts', `
-            import {NgModule, Injectable} from '@angular/core';
-            import {Testability} from '@angular/core/testing';
+            import {NgModule, Injectable} from '@angular-classic/core';
+            import {Testability} from '@angular-classic/core/testing';
 
             @Injectable()
             class TestingService {}
@@ -8042,8 +8042,8 @@ function allTests(os: string) {
 
       it('should not error when an class with a factory definition and a non-trivial constructor in a declaration file is provided via useClass',
          () => {
-           env.write('node_modules/@angular/core/testing/index.d.ts', `
-            import * as i0 from '@angular/core';
+           env.write('node_modules/@angular-classic/core/testing/index.d.ts', `
+            import * as i0 from '@angular-classic/core';
 
             export declare class NgZone {}
 
@@ -8053,8 +8053,8 @@ function allTests(os: string) {
             }
           `);
            env.write('test.ts', `
-            import {NgModule, Injectable} from '@angular/core';
-            import {Testability} from '@angular/core/testing';
+            import {NgModule, Injectable} from '@angular-classic/core';
+            import {Testability} from '@angular-classic/core/testing';
 
             @Injectable()
             class TestingService {}
@@ -8077,7 +8077,7 @@ function allTests(os: string) {
         // tests.
         it('should emit a diagnostic for a template parsing error', () => {
           env.write('test.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               template: '<div></span>',
               selector: 'test-cmp',
@@ -8091,7 +8091,7 @@ function allTests(os: string) {
 
         it('should emit a diagnostic for an expression parsing error', () => {
           env.write('test.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               template: '<input [value]="x ? y"/>',
               selector: 'test-cmp',
@@ -8108,7 +8108,7 @@ function allTests(os: string) {
 
         it('should use a single character span for an unexpected EOF parsing error', () => {
           env.write('test.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
               @Component({
                 template: '<input [value]="x/>',
                 selector: 'test-cmp',
@@ -8124,7 +8124,7 @@ function allTests(os: string) {
 
         it('should emit both type-check diagnostics and parse error diagnostics', () => {
           env.write('test.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
               @Component({
                 template: \`<input (click)="x = 'invalid'"/> {{x = 2}}\`,
                 selector: 'test-cmp',
@@ -8146,7 +8146,7 @@ function allTests(os: string) {
       describe('shadow DOM selector diagnostics', () => {
         it('should emit a diagnostic when a selector does not include a hyphen', () => {
           env.write('test.ts', `
-            import {Component, ViewEncapsulation} from '@angular/core';
+            import {Component, ViewEncapsulation} from '@angular-classic/core';
             @Component({
               template: '',
               selector: 'cmp',
@@ -8165,7 +8165,7 @@ function allTests(os: string) {
 
         it('should emit a diagnostic when a selector includes uppercase letters', () => {
           env.write('test.ts', `
-            import {Component, ViewEncapsulation} from '@angular/core';
+            import {Component, ViewEncapsulation} from '@angular-classic/core';
             @Component({
               template: '',
               selector: 'my-Comp',
@@ -8183,7 +8183,7 @@ function allTests(os: string) {
 
         it('should emit a diagnostic when a selector starts with a digit', () => {
           env.write('test.ts', `
-            import {Component, ViewEncapsulation} from '@angular/core';
+            import {Component, ViewEncapsulation} from '@angular-classic/core';
             @Component({
               template: '',
               selector: '123-comp',
@@ -8202,7 +8202,7 @@ function allTests(os: string) {
 
         it('should emit a diagnostic when a selector starts with a hyphen', () => {
           env.write('test.ts', `
-            import {Component, ViewEncapsulation} from '@angular/core';
+            import {Component, ViewEncapsulation} from '@angular-classic/core';
             @Component({
               template: '',
               selector: '-comp',
@@ -8221,7 +8221,7 @@ function allTests(os: string) {
 
         it('should not emit a diagnostic for a component using an attribute selector', () => {
           env.write('test.ts', `
-            import {Component, ViewEncapsulation} from '@angular/core';
+            import {Component, ViewEncapsulation} from '@angular-classic/core';
             @Component({
               template: '',
               selector: '[button]',
@@ -8235,7 +8235,7 @@ function allTests(os: string) {
 
         it('should not emit a diagnostic for a component using a class selector', () => {
           env.write('test.ts', `
-            import {Component, ViewEncapsulation} from '@angular/core';
+            import {Component, ViewEncapsulation} from '@angular-classic/core';
             @Component({
               template: '',
               selector: '.button',
@@ -8251,7 +8251,7 @@ function allTests(os: string) {
       describe('i18n errors', () => {
         it('reports a diagnostics on nested i18n sections', () => {
           env.write('test.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'test-component',
               template: '<div i18n><div i18n>Content</div></div>'
@@ -8273,7 +8273,7 @@ function allTests(os: string) {
 
         it('reports a diagnostic on nested i18n sections with tags in between', () => {
           env.write('test.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'test-component',
               template: '<div i18n><div><div i18n>Content</div></div></div>'
@@ -8295,7 +8295,7 @@ function allTests(os: string) {
 
         it('reports a diagnostic on nested i18n sections represented with <ng-continers>s', () => {
           env.write('test.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
             @Component({
               selector: 'test-component',
               template: '<div i18n><div><ng-container i18n>Content</ng-container></div></div>'
@@ -8321,7 +8321,7 @@ function allTests(os: string) {
            ' that points to a non-existent file',
        () => {
          env.write('test.ts', `
-                  import {Component} from '@angular/core';
+                  import {Component} from '@angular-classic/core';
                   @Component({
                     selector: 'test-component',
                     templateUrl: './non-existent-file.html'
@@ -8341,7 +8341,7 @@ function allTests(os: string) {
            ` does not exist`,
        () => {
          env.write('test.ts', `
-                  import {Component} from '@angular/core';
+                  import {Component} from '@angular-classic/core';
                   @Component({
                     selector: 'test-component',
                     templateUrl: './test.html'
@@ -8365,7 +8365,7 @@ function allTests(os: string) {
            'defined in a spread that points to a non-existent file',
        () => {
          env.write('test.ts', `
-                  import {Component} from '@angular/core';
+                  import {Component} from '@angular-classic/core';
                   @Component({
                     selector: 'test-component',
                     template: '',
@@ -8386,7 +8386,7 @@ function allTests(os: string) {
       env.tsconfig({strictTemplates: true});
 
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-component',
@@ -8407,7 +8407,7 @@ function allTests(os: string) {
       env.tsconfig();
 
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           standalone: true,
@@ -8432,7 +8432,7 @@ function allTests(os: string) {
          env.tsconfig();
 
          env.write('test.ts', `
-        import {Component, NgModule, forwardRef} from '@angular/core';
+        import {Component, NgModule, forwardRef} from '@angular-classic/core';
 
         @Component({
           standalone: true,
@@ -8455,7 +8455,7 @@ function allTests(os: string) {
     describe('InjectorDef emit optimizations for standalone', () => {
       it('should not filter components out of NgModule.imports', () => {
         env.write('test.ts', `
-          import {Component, Injectable, NgModule} from '@angular/core';
+          import {Component, Injectable, NgModule} from '@angular-classic/core';
 
           @Injectable()
           export class Service {}
@@ -8487,7 +8487,7 @@ function allTests(os: string) {
 
       it('should filter directives & pipes out of NgModule.imports', () => {
         env.write('test.ts', `
-          import {Directive, ModuleWithProviders, NgModule, Pipe} from '@angular/core';
+          import {Directive, ModuleWithProviders, NgModule, Pipe} from '@angular-classic/core';
           @Directive({standalone: true})
           export class StandaloneDir {}
 
@@ -8526,7 +8526,7 @@ function allTests(os: string) {
     describe('input transforms', () => {
       it('should compile a directive input with a transform function', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           function toNumber(value: boolean | string) { return 1; }
 
@@ -8548,7 +8548,7 @@ function allTests(os: string) {
 
       it('should compile a component input with a transform function', () => {
         env.write('/test.ts', `
-          import {Component, Input} from '@angular/core';
+          import {Component, Input} from '@angular-classic/core';
 
           function toNumber(value: boolean | string) { return 1; }
 
@@ -8577,7 +8577,7 @@ function allTests(os: string) {
             }
           `);
            env.write('/test.ts', `
-            import {Directive, Input} from '@angular/core';
+            import {Directive, Input} from '@angular-classic/core';
             import {GenericWrapper} from './types';
 
             function toNumber(value: boolean | string | GenericWrapper<string>) { return 1; }
@@ -8615,7 +8615,7 @@ function allTests(os: string) {
             `);
 
            env.write('/test.ts', `
-              import {Directive, Input} from '@angular/core';
+              import {Directive, Input} from '@angular-classic/core';
               import {GenericWrapper} from './types';
               import {GenericClass} from './other-types';
 
@@ -8653,7 +8653,7 @@ function allTests(os: string) {
         `);
 
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
           import {externalToNumber} from 'external';
 
           @Directive({standalone: true})
@@ -8684,7 +8684,7 @@ function allTests(os: string) {
         `);
 
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
           import {ExternalToNumberType} from 'external';
 
           @Directive({standalone: true})
@@ -8707,7 +8707,7 @@ function allTests(os: string) {
 
       it('should compile a directive input with a transform function with a `this` typing', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           function toNumber(this: Dir, value: boolean | string) { return 1; }
 
@@ -8729,7 +8729,7 @@ function allTests(os: string) {
 
       it('should treat an input transform function only with a `this` parameter as unknown', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           function toNumber(this: Dir) { return 1; }
 
@@ -8751,7 +8751,7 @@ function allTests(os: string) {
 
       it('should insert the InputTransformsFeature before the InheritDefinitionFeature', () => {
         env.write('/test.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           function toNumber(value: boolean | string) { return 1; }
 

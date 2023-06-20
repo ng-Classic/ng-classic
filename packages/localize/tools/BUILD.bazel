@@ -37,9 +37,9 @@ esbuild(
         ":src/translate/cli.ts",
     ],
     external = [
-        "@angular/localize",
-        "@angular/compiler",
-        "@angular/compiler-cli/private/localize",
+        "@angular-classic/localize",
+        "@angular-classic/compiler",
+        "@angular-classic/compiler-cli/private/localize",
         "@babel/core",
         "yargs",
         "fast-glob",

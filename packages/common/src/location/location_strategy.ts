@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Inject, inject, Injectable, InjectionToken, OnDestroy, Optional} from '@angular/core';
+import {Inject, inject, Injectable, InjectionToken, OnDestroy, Optional} from '@angular-classic/core';
 
 import {DOCUMENT} from '../dom_tokens';
 
@@ -15,7 +15,7 @@ import {joinWithSlash, normalizeQueryParams} from './util';
 
 /**
  * Enables the `Location` service to read route state from the browser's URL.
- * Angular provides two strategies:
+ * Angular Classicprovides two strategies:
  * `HashLocationStrategy` and `PathLocationStrategy`.
  *
  * Applications should use the `Router` or `Location` services to
@@ -58,8 +58,8 @@ export abstract class LocationStrategy {
  * with a base href value, so that the DI framework can supply the dependency anywhere in the app.
  *
  * ```typescript
- * import {Component, NgModule} from '@angular/core';
- * import {APP_BASE_HREF} from '@angular/common';
+ * import {Component, NgModule} from '@angular-classic/core';
+ * import {APP_BASE_HREF} from '@angular-classic/common';
  *
  * @NgModule({
  *   providers: [{provide: APP_BASE_HREF, useValue: '/my/app'}]

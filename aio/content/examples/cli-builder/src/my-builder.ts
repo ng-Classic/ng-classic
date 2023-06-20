@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion builder, builder-skeleton, handling-output, progress-reporting
-import { BuilderContext, BuilderOutput, createBuilder } from '@angular-devkit/architect';
-import { JsonObject } from '@angular-devkit/core';
+import { BuilderContext, BuilderOutput, createBuilder } from '@angular-classic-devkit/architect';
+import { JsonObject } from '@angular-classic-devkit/core';
 // #enddocregion builder-skeleton
 import { promises as fs } from 'fs';
 // #docregion builder-skeleton

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {StaticProvider} from '@angular/core';
+import {StaticProvider} from '@angular-classic/core';
 
 import {WebDriverAdapter} from '../web_driver_adapter';
 

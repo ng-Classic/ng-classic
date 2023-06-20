@@ -1,4 +1,4 @@
-import { Component, Self, Optional } from '@angular/core';
+import { Component, Self, Optional } from '@angular-classic/core';
 import { LeafService } from '../leaf.service';
 
 // #docregion self-no-data-component

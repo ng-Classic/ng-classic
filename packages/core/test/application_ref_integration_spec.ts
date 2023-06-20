@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT} from '@angular/common';
-import {ApplicationRef, Component, DoCheck, NgModule, OnInit, TestabilityRegistry} from '@angular/core';
-import {getTestBed} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {withBody} from '@angular/private/testing';
+import {DOCUMENT} from '@angular-classic/common';
+import {ApplicationRef, Component, DoCheck, NgModule, OnInit, TestabilityRegistry} from '@angular-classic/core';
+import {getTestBed} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {withBody} from '@angular-classic/private/testing';
 
 import {NgModuleFactory} from '../src/render3/ng_module_ref';
 

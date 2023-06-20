@@ -1,10 +1,10 @@
 ####################################################################################
 ####################################################################################
-#                               Angular Code Ownership                             #
+#                               Angular ClassicCode Ownership                             #
 ####################################################################################
 ####################################################################################
 #
-#  Configuration of code ownership and review approvals for the angular/angular repo.
+#  Configuration of code ownership and review approvals for the ng-classic/angular Classicrepo.
 #
 #  More info: https://docs.pullapprove.com/
 #
@@ -16,8 +16,8 @@
 #  - We enforce that only approved PRs are merged ensuring that unreviewed code isn't accidentally merged
 #  - We distribute approval rights as much as possible to help us scale better
 #  - Groups have one or two global approvers groups as fallbacks:
-#    - @angular/fw-global-approvers: for approving minor changes, large-scale refactorings, and emergency situations.
-#    - @angular/fw-global-approvers-for-docs-only-changes: for approving minor documentation-only changes that don't require engineering review
+#    - @angular-classic/fw-global-approvers: for approving minor changes, large-scale refactorings, and emergency situations.
+#    - @angular-classic/fw-global-approvers-for-docs-only-changes: for approving minor documentation-only changes that don't require engineering review
 #  - A small number of file groups have very limited number of reviewers because incorrect changes to the files they guard would have serious consequences (e.g. security, public api)
 #
 #  Configuration nuances:
@@ -27,7 +27,7 @@
 #  - All groups whose pullapprove rules are matched will be required for overall approval.
 #
 #  NOTE:
-#    In the case of emergency, the repo administrators which include the current angular caretaker
+#    In the case of emergency, the repo administrators which include the current Angular Classiccaretaker
 #    can bypass this reviewer approval requirement, this is expected as a last resort and to be
 #    done exceedingly sparingly.
 
@@ -41,7 +41,7 @@
 #  Approval Groups
 ####################################################################################
 # =========================================================
-# @angular/framework-global-approvers
+# @angular-classic/framework-global-approvers
 # =========================================================
 #  Used for approving minor changes, large-scale refactorings, and in emergency situations.
 #
@@ -50,7 +50,7 @@
 # josephperrott
 #
 # =========================================================
-# @angular/framework-global-approvers-for-docs-only-changes
+# @angular-classic/framework-global-approvers-for-docs-only-changes
 # =========================================================
 #  Used for approving minor documentation-only changes that don't require engineering review.
 
@@ -941,7 +941,7 @@ groups:
         - jelbourn
 
   # =========================================================
-  #  Docs: Angular DevTools
+  #  Docs: Angular ClassicDevTools
   # =========================================================
   docs-devtools:
     <<: *defaults
@@ -958,9 +958,9 @@ groups:
         - twerske
 
   # =========================================================
-  #  Tooling: Compiler API shared with Angular CLI
+  #  Tooling: Compiler API shared with Angular ClassicCLI
   #
-  #  Changing this API might break Angular CLI, so we require
+  #  Changing this API might break Angular ClassicCLI, so we require
   #  the CLI team to approve changes here.
   # =========================================================
   tooling-cli-shared-api:
@@ -1114,7 +1114,7 @@ groups:
         - josephperrott
 
   # =========================================================
-  #  Angular DevTools
+  #  Angular ClassicDevTools
   # =========================================================
   devtools:
     <<: *defaults

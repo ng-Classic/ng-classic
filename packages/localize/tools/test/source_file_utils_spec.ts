@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {absoluteFrom, getFileSystem, PathManipulation} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {ɵmakeTemplateObject} from '@angular/localize';
+import {absoluteFrom, getFileSystem, PathManipulation} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {ɵmakeTemplateObject} from '@angular-classic/localize';
 import babel, {NodePath, TransformOptions, types as t} from '@babel/core';
 import _generate from '@babel/generator';
 import _template from '@babel/template';

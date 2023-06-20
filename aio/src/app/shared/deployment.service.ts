@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import { LocationService } from 'app/shared/location.service';
 import { environment } from 'environments/environment';
 

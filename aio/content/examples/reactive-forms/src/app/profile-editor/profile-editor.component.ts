@@ -1,10 +1,10 @@
 // #docplaster
-import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component } from '@angular-classic/core';
+import { FormBuilder } from '@angular-classic/forms';
 // #docregion validator-imports
-import { Validators } from '@angular/forms';
+import { Validators } from '@angular-classic/forms';
 // #enddocregion validator-imports
-import { FormArray } from '@angular/forms';
+import { FormArray } from '@angular-classic/forms';
 
 @Component({
   selector: 'app-profile-editor',

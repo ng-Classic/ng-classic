@@ -1,4 +1,4 @@
-import {Component, Directive} from '@angular/core';
+import {Component, Directive} from '@angular-classic/core';
 
 @Directive({standalone: true, host: {'class': 'dir-a'}})
 export class DirectiveA {

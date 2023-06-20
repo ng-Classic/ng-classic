@@ -1,6 +1,6 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, DebugElement } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, DebugElement } from '@angular-classic/core';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { By } from '@angular-classic/platform-browser';
 import { asapScheduler, BehaviorSubject } from 'rxjs';
 
 import { ScrollService } from 'app/shared/scroll.service';

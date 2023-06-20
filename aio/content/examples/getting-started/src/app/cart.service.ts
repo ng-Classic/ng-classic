@@ -1,8 +1,8 @@
 // #docregion import-http
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular-classic/common/http';
 // #docregion props
 import { Product } from './products';
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 // #enddocregion props, import-http
 
 // #docregion props, methods, inject-http, get-shipping

@@ -21,7 +21,7 @@
  */
 export enum ViewEncapsulation {
   // TODO: consider making `ViewEncapsulation` a `const enum` instead. See
-  // https://github.com/angular/angular/issues/44119 for additional information.
+  // https://github.com/ng-classic/angular/issues/44119 for additional information.
 
   /**
    * Emulates a native Shadow DOM encapsulation behavior by adding a specific attribute to the

@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion create-control
-import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component } from '@angular-classic/core';
+import { FormControl } from '@angular-classic/forms';
 
 @Component({
   selector: 'app-name-editor',

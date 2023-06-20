@@ -1,6 +1,6 @@
-# First Angular app lesson 3 - Create the application’s HousingLocation component
+# First Angular Classicapp lesson 3 - Create the application’s HousingLocation component
 
-This tutorial lesson demonstrates how to add the `HousingLocation` component to your Angular app.
+This tutorial lesson demonstrates how to add the `HousingLocation` component to your Angular Classicapp.
 
 **Time required:** expect to spend about 10 minutes to complete this lesson.
 
@@ -13,7 +13,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -92,4 +92,4 @@ If you are having any trouble with this lesson, you can review the completed cod
 
 ## Next steps
 
-* [First Angular app lesson 4 -  Add a housing location interface to the application](tutorial/first-app/first-app-lesson-04)
+* [First Angular Classicapp lesson 4 -  Add a housing location interface to the application](tutorial/first-app/first-app-lesson-04)

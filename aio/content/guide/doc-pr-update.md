@@ -5,7 +5,7 @@
 This topic describes how to respond to test failures and feedback on your pull request.
 
 After you open a pull request, it is tested and reviewed.
-After it's approved, the changes are merged into `angular/angular` and they become part of the Angular documentation.
+After it's approved, the changes are merged into `ng-classic/angular` and they become part of the Angular Classicdocumentation.
 
 While some pull requests are approved with no further action on your part, most pull requests receive feedback that requires you to make a change.
 
@@ -80,7 +80,7 @@ Follow this procedure to change a file in the pull request or to add a new file 
 
 1.  Test your update locally as described in [Testing a documentation update](guide/doc-build-test).
 1.  After your updates have been tested, commit your changes and push the new commits to the working branch of your repo on your `origin` server.
-1.  After you update the working branch on your `origin` server, the fork of the `angular/angular` repo in your GitHub account, your pull request updates automatically.
+1.  After you update the working branch on your `origin` server, the fork of the `ng-classic/angular` repo in your GitHub account, your pull request updates automatically.
 1.  After the pull request updates, the automated tests are restarted and the reviewers are notified.
 
 Repeat this process as needed to address the feedback you get from reviews of the pull request.
@@ -208,10 +208,10 @@ Perform these steps from a command-line tool on your local computer.
 
 Repeat these update steps as necessary to respond to all the feedback you receive.
 
-After you address all the feedback and your pull request has been approved, it is merged into `angular/angular`.
+After you address all the feedback and your pull request has been approved, it is merged into `ng-classic/angular`.
 The changes in your pull request should appear in the documentation shortly afterwards.
 
-After your pull request is merged into `angular/angular`, you can [clean up your workspace](guide/doc-edit-finish).
+After your pull request is merged into `ng-classic/angular`, you can [clean up your workspace](guide/doc-edit-finish).
 
 <!-- links -->
 

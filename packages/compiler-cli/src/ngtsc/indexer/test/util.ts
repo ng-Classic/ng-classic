@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BoundTarget, CssSelector, parseTemplate, ParseTemplateOptions, R3TargetBinder, SelectorMatcher} from '@angular/compiler';
+import {BoundTarget, CssSelector, parseTemplate, ParseTemplateOptions, R3TargetBinder, SelectorMatcher} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {absoluteFrom, AbsoluteFsPath} from '../../file_system';

@@ -5,10 +5,10 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Compiler, Component, ComponentFactory, Injector, NgModule, TestabilityRegistry} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Compiler, Component, ComponentFactory, Injector, NgModule, TestabilityRegistry} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
-import * as angular from '../src/angular1';
+import * as Angular Classicfrom '../src/angular1';
 import {DowngradeComponentAdapter, groupNodesBySelector} from '../src/downgrade_component_adapter';
 
 import {nodes, withEachNg1Version} from './helpers/common_test_helpers';

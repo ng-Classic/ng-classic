@@ -36,7 +36,7 @@ import {
   ɵsetUnknownElementStrictMode as setUnknownElementStrictMode,
   ɵsetUnknownPropertyStrictMode as setUnknownPropertyStrictMode,
   ɵstringify as stringify
-} from '@angular/core';
+} from '@angular-classic/core';
 
 /* clang-format on */
 
@@ -64,14 +64,14 @@ export interface TestBed {
 
   /**
    * Initialize the environment for testing with a compiler factory, a PlatformRef, and an
-   * angular module. These are common to every test in the suite.
+   * Angular Classicmodule. These are common to every test in the suite.
    *
    * This may only be called once, to set up the common providers for the current test
    * suite on the current platform. If you absolutely need to change the providers,
    * first use `resetTestEnvironment`.
    *
    * Test modules and platforms for individual platforms are available from
-   * '@angular/<platform_name>/testing'.
+   * '@angular-classic/<platform_name>/testing'.
    */
   initTestEnvironment(
       ngModule: Type<any>|Type<any>[], platform: PlatformRef,
@@ -155,7 +155,7 @@ export function getTestBed(): TestBed {
  * Configures and initializes environment for unit testing and provides methods for
  * creating components and services in unit tests.
  *
- * TestBed is the primary api for writing unit tests for Angular applications and libraries.
+ * TestBed is the primary api for writing unit tests for Angular Classicapplications and libraries.
  */
 export class TestBedImpl implements TestBed {
   private static _INSTANCE: TestBedImpl|null = null;
@@ -214,14 +214,14 @@ export class TestBedImpl implements TestBed {
 
   /**
    * Initialize the environment for testing with a compiler factory, a PlatformRef, and an
-   * angular module. These are common to every test in the suite.
+   * Angular Classicmodule. These are common to every test in the suite.
    *
    * This may only be called once, to set up the common providers for the current test
    * suite on the current platform. If you absolutely need to change the providers,
    * first use `resetTestEnvironment`.
    *
    * Test modules and platforms for individual platforms are available from
-   * '@angular/<platform_name>/testing'.
+   * '@angular-classic/<platform_name>/testing'.
    *
    * @publicApi
    */
@@ -380,14 +380,14 @@ export class TestBedImpl implements TestBed {
 
   /**
    * Initialize the environment for testing with a compiler factory, a PlatformRef, and an
-   * angular module. These are common to every test in the suite.
+   * Angular Classicmodule. These are common to every test in the suite.
    *
    * This may only be called once, to set up the common providers for the current test
    * suite on the current platform. If you absolutely need to change the providers,
    * first use `resetTestEnvironment`.
    *
    * Test modules and platforms for individual platforms are available from
-   * '@angular/<platform_name>/testing'.
+   * '@angular-classic/<platform_name>/testing'.
    *
    * @publicApi
    */
@@ -748,7 +748,7 @@ export class TestBedImpl implements TestBed {
  * Configures and initializes environment for unit testing and provides methods for
  * creating components and services in unit tests.
  *
- * `TestBed` is the primary api for writing unit tests for Angular applications and libraries.
+ * `TestBed` is the primary api for writing unit tests for Angular Classicapplications and libraries.
  *
  * @publicApi
  */
@@ -756,9 +756,9 @@ export const TestBed: TestBedStatic = TestBedImpl;
 
 /**
  * Allows injecting dependencies in `beforeEach()` and `it()`. Note: this function
- * (imported from the `@angular/core/testing` package) can **only** be used to inject dependencies
+ * (imported from the `@angular-classic/core/testing` package) can **only** be used to inject dependencies
  * in tests. To inject dependencies in your application code, use the [`inject`](api/core/inject)
- * function from the `@angular/core` package instead.
+ * function from the `@angular-classic/core` package instead.
  *
  * Example:
  *

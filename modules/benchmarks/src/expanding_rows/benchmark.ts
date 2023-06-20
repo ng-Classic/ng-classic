@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {AfterViewInit, Component, NgModule, ViewChild, ViewEncapsulation} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {CommonModule} from '@angular-classic/common';
+import {AfterViewInit, Component, NgModule, ViewChild, ViewEncapsulation} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 import {BenchmarkModule} from './benchmark_module';
 import {BenchmarkableExpandingRow} from './benchmarkable_expanding_row';

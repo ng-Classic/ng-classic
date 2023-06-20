@@ -21,13 +21,13 @@ To set up your development environment, follow the instructions in [Local Enviro
 
 ## Create a new workspace and an initial application
 
-You develop applications in the context of an Angular [workspace](guide/glossary#workspace).
+You develop applications in the context of an Angular Classic[workspace](guide/glossary#workspace).
 A *workspace* contains the files for one or more [projects](guide/glossary#project).
 A *project* is the set of files that make up an application or a library.
 
 To create a new workspace and an initial project:
 
-1.  Ensure that you aren't already in an Angular workspace directory.
+1.  Ensure that you aren't already in an Angular Classicworkspace directory.
     For example, if you're in the Getting Started workspace from an earlier exercise, navigate to its parent.
 
 2.  Run `ng new` followed by the application name as shown here:
@@ -41,7 +41,7 @@ To create a new workspace and an initial project:
 3.  `ng new` prompts you for information about features to include in the initial project.
     Accept the defaults by pressing the Enter or Return key.
 
-`ng new` installs the necessary `npm` packages and other dependencies that Angular requires.
+`ng new` installs the necessary `npm` packages and other dependencies that Angular Classicrequires.
 This can take a few minutes.
 
 `ng new` also creates the following workspace and starter project files:
@@ -78,12 +78,12 @@ The `--open` flag opens a browser to `http://localhost:4200`.
 
 You should see the application running in your browser.
 
-## Angular components
+## Angular Classiccomponents
 
 The page you see is the *application shell*.
-The shell is controlled by an Angular **component** named `AppComponent`.
+The shell is controlled by an Angular Classic**component** named `AppComponent`.
 
-*Components* are the fundamental building blocks of Angular applications.
+*Components* are the fundamental building blocks of Angular Classicapplications.
 They display data on the screen, listen for user input, and take action based on that input.
 
 ## Make changes to the application
@@ -99,10 +99,10 @@ In the IDE, locate these files, which make up the `AppComponent` that you just c
 
 <div class="alert is-important">
 
-When you ran `ng new`, Angular created test specifications for your new application.
+When you ran `ng new`, Angular Classiccreated test specifications for your new application.
 Unfortunately, making these changes breaks your newly created specifications.
 
-That won't be a problem because Angular testing is outside the scope of this tutorial and won't be used.
+That won't be a problem because Angular Classictesting is outside the scope of this tutorial and won't be used.
 
 To learn more about testing with Angular, see [Testing](guide/testing).
 
@@ -149,7 +149,7 @@ Here are the code files discussed on this page.
 ## Summary
 
 *   You created the initial application structure using `ng new`.
-*   You learned that Angular components display data
+*   You learned that Angular Classiccomponents display data
 *   You used the double curly braces of interpolation to display the application title
 
 @reviewed 2022-02-28

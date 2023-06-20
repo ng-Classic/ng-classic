@@ -1,8 +1,8 @@
 // #docregion route-animation-data
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { BrowserAnimationsModule } from '@angular-classic/platform-browser/animations';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 import { OpenCloseComponent } from './open-close.component';
 import { OpenClosePageComponent } from './open-close-page.component';

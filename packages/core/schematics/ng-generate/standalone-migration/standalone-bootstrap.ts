@@ -7,8 +7,8 @@
  */
 
 
-import {NgtscProgram} from '@angular/compiler-cli';
-import {TemplateTypeChecker} from '@angular/compiler-cli/private/migrations';
+import {NgtscProgram} from '@angular-classic/compiler-cli';
+import {TemplateTypeChecker} from '@angular-classic/compiler-cli/private/migrations';
 import {dirname, join} from 'path';
 import ts from 'typescript';
 
@@ -49,7 +49,7 @@ export function toStandaloneBootstrap(
   // `bootstrapApplication` doesn't include Protractor support by default
   // anymore so we have to opt the app in, if we detect it being used.
   const additionalProviders = hasImport(program, rootFileNames, 'protractor') ?
-      new Map([['provideProtractorTestingSupport', '@angular/platform-browser']]) :
+      new Map([['provideProtractorTestingSupport', '@angular-classic/platform-browser']]) :
       null;
 
   for (const sourceFile of sourceFiles) {
@@ -230,14 +230,14 @@ function replaceBootstrapCallExpression(
       getRelativeImportPath(sourceFile.fileName, analysis.component.getSourceFile().fileName);
   const args = [tracker.addImport(sourceFile, analysis.component.name.text, componentPath)];
   const bootstrapExpression =
-      tracker.addImport(sourceFile, 'bootstrapApplication', '@angular/platform-browser');
+      tracker.addImport(sourceFile, 'bootstrapApplication', '@angular-classic/platform-browser');
 
   if (providers.length > 0 || modules.length > 0) {
     const combinedProviders: ts.Expression[] = [];
 
     if (modules.length > 0) {
       const importProvidersExpression =
-          tracker.addImport(sourceFile, 'importProvidersFrom', '@angular/core');
+          tracker.addImport(sourceFile, 'importProvidersFrom', '@angular-classic/core');
       combinedProviders.push(
           ts.factory.createCallExpression(importProvidersExpression, [], modules));
     }
@@ -300,7 +300,7 @@ function migrateImportsForBootstrapCall(
       // has a configuration that can't be migrated automatically.
       if (features !== null) {
         providersInNewCall.push(ts.factory.createCallExpression(
-            tracker.addImport(sourceFile, 'provideRouter', '@angular/router'), [],
+            tracker.addImport(sourceFile, 'provideRouter', '@angular-classic/router'), [],
             [element.arguments[0], ...features]));
         addNodesToCopy(
             sourceFile, element.arguments[0], nodeLookup, tracker, nodesToCopy, referenceResolver);
@@ -314,7 +314,7 @@ function migrateImportsForBootstrapCall(
     if (ts.isIdentifier(element)) {
       // `BrowserAnimationsModule` can be replaced with `provideAnimations`.
       const animationsModule = 'platform-browser/animations';
-      const animationsImport = `@angular/${animationsModule}`;
+      const animationsImport = `@angular-classic/${animationsModule}`;
 
       if (isClassReferenceInAngularModule(
               element, 'BrowserAnimationsModule', animationsModule, typeChecker)) {
@@ -333,7 +333,7 @@ function migrateImportsForBootstrapCall(
 
       // `HttpClientModule` can be replaced with `provideHttpClient()`.
       const httpClientModule = 'common/http';
-      const httpClientImport = `@angular/${httpClientModule}`;
+      const httpClientImport = `@angular-classic/${httpClientModule}`;
       if (isClassReferenceInAngularModule(
               element, 'HttpClientModule', httpClientModule, typeChecker)) {
         const callArgs = [
@@ -467,7 +467,7 @@ function getRouterModuleForRootFeatures(
       }
     });
     featureExpressions.push(ts.factory.createCallExpression(
-        tracker.addImport(sourceFile, feature, '@angular/router'), [], callArgs));
+        tracker.addImport(sourceFile, feature, '@angular-classic/router'), [], callArgs));
   }
 
   return featureExpressions;

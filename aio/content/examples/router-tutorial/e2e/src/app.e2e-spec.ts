@@ -4,8 +4,8 @@ describe('Router basic tutorial e2e tests', () => {
 
   beforeEach(() => browser.get(''));
 
-  it('should display Angular Router Sample', async () => {
-    expect(await element(by.css('h1')).getText()).toBe('Angular Router Sample');
+  it('should display Angular ClassicRouter Sample', async () => {
+    expect(await element(by.css('h1')).getText()).toBe('Angular ClassicRouter Sample');
   });
 
   it('should display Crisis Center button', async () => {

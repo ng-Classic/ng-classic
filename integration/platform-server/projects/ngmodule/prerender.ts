@@ -8,7 +8,7 @@
 /* tslint:disable:no-console  */
 import 'zone.js/node';
 import {join} from 'path';
-import {renderModule} from '@angular/platform-server';
+import {renderModule} from '@angular-classic/platform-server';
 import {readFileSync} from 'fs';
 import {AppServerModule} from './src/main.server';
 

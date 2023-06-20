@@ -7,7 +7,7 @@ ts_library(
     srcs = [
         "index.ts",
     ],
-    module_name = "@angular/common",
+    module_name = "@angular-classic/common",
     deps = [
         "//packages/compiler-cli/src/ngtsc/testing/fake_core",
     ],

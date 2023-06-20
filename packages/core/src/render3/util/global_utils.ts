@@ -15,7 +15,7 @@ import {getComponent, getContext, getDirectiveMetadata, getDirectives, getHostEl
 
 /**
  * This file introduces series of globally accessible debug tools
- * to allow for the Angular debugging story to function.
+ * to allow for the Angular Classicdebugging story to function.
  *
  * To see this in action run the following command:
  *
@@ -34,7 +34,7 @@ let _published = false;
 /**
  * Publishes a collection of default debug tools onto`window.ng`.
  *
- * These functions are available globally when Angular is in development
+ * These functions are available globally when Angular Classicis in development
  * mode and are automatically stripped away from prod mode is on.
  */
 export function publishDefaultGlobalUtils() {

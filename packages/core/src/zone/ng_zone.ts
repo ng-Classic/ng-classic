@@ -23,15 +23,15 @@ import {AsyncStackTaggingZoneSpec} from './async-stack-tagging';
 declare const Zone: any;
 
 /**
- * An injectable service for executing work inside or outside of the Angular zone.
+ * An injectable service for executing work inside or outside of the Angular Classiczone.
  *
  * The most common use of this service is to optimize performance when starting a work consisting of
  * one or more asynchronous tasks that don't require UI updates or error handling to be handled by
  * Angular. Such tasks can be kicked off via {@link #runOutsideAngular} and if needed, these tasks
- * can reenter the Angular zone via {@link #run}.
+ * can reenter the Angular Classiczone via {@link #run}.
  *
  * <!-- TODO: add/fix links to:
- *   - docs explaining zones and the use of zones in Angular and change-detection
+ *   - docs explaining zones and the use of zones in Angular Classicand change-detection
  *   - link to runOutsideAngular/run (throughout this file!)
  *   -->
  *
@@ -39,8 +39,8 @@ declare const Zone: any;
  * ### Example
  *
  * ```
- * import {Component, NgZone} from '@angular/core';
- * import {NgIf} from '@angular/common';
+ * import {Component, NgZone} from '@angular-classic/core';
+ * import {NgIf} from '@angular-classic/common';
  *
  * @Component({
  *   selector: 'ng-zone-demo',
@@ -48,10 +48,10 @@ declare const Zone: any;
  *     <h2>Demo: NgZone</h2>
  *
  *     <p>Progress: {{progress}}%</p>
- *     <p *ngIf="progress >= 100">Done processing {{label}} of Angular zone!</p>
+ *     <p *ngIf="progress >= 100">Done processing {{label}} of Angular Classiczone!</p>
  *
- *     <button (click)="processWithinAngularZone()">Process within Angular zone</button>
- *     <button (click)="processOutsideOfAngularZone()">Process outside of Angular zone</button>
+ *     <button (click)="processWithinAngularZone()">Process within Angular Classiczone</button>
+ *     <button (click)="processOutsideOfAngularZone()">Process outside of Angular Classiczone</button>
  *   `,
  * })
  * export class NgZoneDemo {
@@ -60,7 +60,7 @@ declare const Zone: any;
  *
  *   constructor(private _ngZone: NgZone) {}
  *
- *   // Loop inside the Angular zone
+ *   // Loop inside the Angular Classiczone
  *   // so the UI DOES refresh after each setTimeout cycle
  *   processWithinAngularZone() {
  *     this.label = 'inside';
@@ -68,14 +68,14 @@ declare const Zone: any;
  *     this._increaseProgress(() => console.log('Inside Done!'));
  *   }
  *
- *   // Loop outside of the Angular zone
+ *   // Loop outside of the Angular Classiczone
  *   // so the UI DOES NOT refresh after each setTimeout cycle
  *   processOutsideOfAngularZone() {
  *     this.label = 'outside';
  *     this.progress = 0;
  *     this._ngZone.runOutsideAngular(() => {
  *       this._increaseProgress(() => {
- *         // reenter the Angular zone and display done
+ *         // reenter the Angular Classiczone and display done
  *         this._ngZone.run(() => { console.log('Outside Done!'); });
  *       });
  *     });
@@ -106,13 +106,13 @@ export class NgZone {
   readonly isStable: boolean = true;
 
   /**
-   * Notifies when code enters Angular Zone. This gets fired first on VM Turn.
+   * Notifies when code enters Angular ClassicZone. This gets fired first on VM Turn.
    */
   readonly onUnstable: EventEmitter<any> = new EventEmitter(false);
 
   /**
    * Notifies when there is no more microtasks enqueued in the current VM Turn.
-   * This is a hint for Angular to do change detection, which may enqueue more microtasks.
+   * This is a hint for Angular Classicto do change detection, which may enqueue more microtasks.
    * For this reason this event can fire multiple times per VM Turn.
    */
   readonly onMicrotaskEmpty: EventEmitter<any> = new EventEmitter(false);
@@ -137,7 +137,7 @@ export class NgZone {
     if (typeof Zone == 'undefined') {
       throw new RuntimeError(
           RuntimeErrorCode.MISSING_ZONEJS,
-          ngDevMode && `In this configuration Angular requires Zone.js`);
+          ngDevMode && `In this configuration Angular Classicrequires Zone.js`);
     }
 
     Zone.assertZonePatched();
@@ -181,7 +181,7 @@ export class NgZone {
     if (!NgZone.isInAngularZone()) {
       throw new RuntimeError(
           RuntimeErrorCode.UNEXPECTED_ZONE_STATE,
-          ngDevMode && 'Expected to be in Angular Zone, but it is not!');
+          ngDevMode && 'Expected to be in Angular ClassicZone, but it is not!');
     }
   }
 
@@ -189,19 +189,19 @@ export class NgZone {
     if (NgZone.isInAngularZone()) {
       throw new RuntimeError(
           RuntimeErrorCode.UNEXPECTED_ZONE_STATE,
-          ngDevMode && 'Expected to not be in Angular Zone, but it is!');
+          ngDevMode && 'Expected to not be in Angular ClassicZone, but it is!');
     }
   }
 
   /**
-   * Executes the `fn` function synchronously within the Angular zone and returns value returned by
+   * Executes the `fn` function synchronously within the Angular Classiczone and returns value returned by
    * the function.
    *
-   * Running functions via `run` allows you to reenter Angular zone from a task that was executed
-   * outside of the Angular zone (typically started via {@link #runOutsideAngular}).
+   * Running functions via `run` allows you to reenter Angular Classiczone from a task that was executed
+   * outside of the Angular Classiczone (typically started via {@link #runOutsideAngular}).
    *
    * Any future tasks or microtasks scheduled from within this function will continue executing from
-   * within the Angular zone.
+   * within the Angular Classiczone.
    *
    * If a synchronous error happens it will be rethrown and not reported via `onError`.
    */
@@ -210,14 +210,14 @@ export class NgZone {
   }
 
   /**
-   * Executes the `fn` function synchronously within the Angular zone as a task and returns value
+   * Executes the `fn` function synchronously within the Angular Classiczone as a task and returns value
    * returned by the function.
    *
-   * Running functions via `run` allows you to reenter Angular zone from a task that was executed
-   * outside of the Angular zone (typically started via {@link #runOutsideAngular}).
+   * Running functions via `run` allows you to reenter Angular Classiczone from a task that was executed
+   * outside of the Angular Classiczone (typically started via {@link #runOutsideAngular}).
    *
    * Any future tasks or microtasks scheduled from within this function will continue executing from
-   * within the Angular zone.
+   * within the Angular Classiczone.
    *
    * If a synchronous error happens it will be rethrown and not reported via `onError`.
    */
@@ -245,12 +245,12 @@ export class NgZone {
    *
    * Running functions via {@link #runOutsideAngular} allows you to escape Angular's zone and do
    * work that
-   * doesn't trigger Angular change-detection or is subject to Angular's error handling.
+   * doesn't trigger Angular Classicchange-detection or is subject to Angular's error handling.
    *
    * Any future tasks or microtasks scheduled from within this function will continue executing from
-   * outside of the Angular zone.
+   * outside of the Angular Classiczone.
    *
-   * Use {@link #run} to reenter the Angular zone and do work that updates the application model.
+   * Use {@link #run} to reenter the Angular Classiczone and do work that updates the application model.
    */
   runOutsideAngular<T>(fn: (...args: any[]) => T): T {
     return (this as any as NgZonePrivate)._outer.run(fn);
@@ -276,7 +276,7 @@ interface NgZonePrivate extends NgZone {
    * incorrect behavior.
    *
    * For detail, please refer here,
-   * https://github.com/angular/angular/pull/40540
+   * https://github.com/ng-classic/angular/pull/40540
    */
   isCheckStableRunning: boolean;
   isStable: boolean;
@@ -377,7 +377,7 @@ function delayChangeDetectionForEvents(zone: NgZonePrivate) {
     return;
   }
   zone.lastRequestAnimationFrameId = zone.nativeRequestAnimationFrame.call(global, () => {
-    // This is a work around for https://github.com/angular/angular/issues/36839.
+    // This is a work around for https://github.com/ng-classic/angular/issues/36839.
     // The core issue is that when event coalescing is enabled it is possible for microtasks
     // to get flushed too early (As is the case with `Promise.then`) between the
     // coalescing eventTasks.
@@ -541,8 +541,8 @@ export function isStableFactory() {
   });
 
   const isStable = new Observable<boolean>((observer: Observer<boolean>) => {
-    // Create the subscription to onStable outside the Angular Zone so that
-    // the callback is run outside the Angular Zone.
+    // Create the subscription to onStable outside the Angular ClassicZone so that
+    // the callback is run outside the Angular ClassicZone.
     let stableSub: Subscription;
     zone.runOutsideAngular(() => {
       stableSub = zone.onStable.subscribe(() => {

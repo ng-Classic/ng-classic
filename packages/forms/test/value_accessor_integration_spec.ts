@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Directive, EventEmitter, Input, Output, Type, ViewChild} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular/core/testing';
-import {AbstractControl, ControlValueAccessor, FormControl, FormGroup, FormsModule, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgControl, NgForm, NgModel, ReactiveFormsModule, Validators} from '@angular/forms';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {dispatchEvent} from '@angular/platform-browser/testing/src/browser_util';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Directive, EventEmitter, Input, Output, Type, ViewChild} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular-classic/core/testing';
+import {AbstractControl, ControlValueAccessor, FormControl, FormGroup, FormsModule, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgControl, NgForm, NgModel, ReactiveFormsModule, Validators} from '@angular-classic/forms';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {dispatchEvent} from '@angular-classic/platform-browser/testing/src/browser_util';
 
 {
   describe('value accessors', () => {

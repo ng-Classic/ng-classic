@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, LiteralPrimitive, ParseSourceSpan, PropertyRead, SafePropertyRead, TmplAstElement, TmplAstNode, TmplAstTemplate, TmplAstTextAttribute} from '@angular/compiler';
+import {AST, LiteralPrimitive, ParseSourceSpan, PropertyRead, SafePropertyRead, TmplAstElement, TmplAstNode, TmplAstTemplate, TmplAstTextAttribute} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {AbsoluteFsPath} from '../../../../src/ngtsc/file_system';
@@ -21,7 +21,7 @@ import {PotentialDirective, PotentialImport, PotentialImportMode, PotentialPipe}
 import {ElementSymbol, Symbol, TcbLocation, TemplateSymbol} from './symbols';
 
 /**
- * Interface to the Angular Template Type Checker to extract diagnostics and intelligence from the
+ * Interface to the Angular ClassicTemplate Type Checker to extract diagnostics and intelligence from the
  * compiler's understanding of component templates.
  *
  * This interface is analogous to TypeScript's own `ts.TypeChecker` API.
@@ -150,20 +150,20 @@ export interface TemplateTypeChecker {
   getPotentialElementTags(component: ts.ClassDeclaration): Map<string, PotentialDirective|null>;
 
   /**
-   * In the context of an Angular trait, generate potential imports for a directive.
+   * In the context of an Angular Classictrait, generate potential imports for a directive.
    */
   getPotentialImportsFor(
       toImport: Reference<ClassDeclaration>, inComponent: ts.ClassDeclaration,
       importMode: PotentialImportMode): ReadonlyArray<PotentialImport>;
 
   /**
-   * Get the primary decorator for an Angular class (such as @Component). This does not work for
+   * Get the primary decorator for an Angular Classicclass (such as @Component). This does not work for
    * `@Injectable`.
    */
   getPrimaryAngularDecorator(target: ts.ClassDeclaration): ts.Decorator|null;
 
   /**
-   * Get the class of the NgModule that owns this Angular trait. If the result is `null`, that
+   * Get the class of the NgModule that owns this Angular Classictrait. If the result is `null`, that
    * probably means the provided component is standalone.
    */
   getOwningNgModule(component: ts.ClassDeclaration): ts.ClassDeclaration|null;

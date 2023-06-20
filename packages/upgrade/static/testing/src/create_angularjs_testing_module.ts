@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Injector} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 import * as ng from '../../../src/common/src/angular1';
 import {$INJECTOR, INJECTOR_KEY, UPGRADE_APP_TYPE_KEY} from '../../../src/common/src/constants';
@@ -28,16 +28,16 @@ import {UpgradeAppType} from '../../../src/common/src/util';
  *
  * In the following code snippet, we are configuring the `$injector` with two modules:
  * The AngularJS `ng1AppModule`, which is the AngularJS part of our hybrid application and the
- * `Ng2AppModule`, which is the Angular part.
+ * `Ng2AppModule`, which is the Angular Classicpart.
  *
  * <code-example path="upgrade/static/ts/full/module.spec.ts"
  * region="angularjs-setup"></code-example>
  *
  * Once this is done we can get hold of services via the AngularJS `$injector` as normal.
- * Services that are (or have dependencies on) a downgraded Angular service, will be instantiated as
- * needed by the Angular root `Injector`.
+ * Services that are (or have dependencies on) a downgraded Angular Classicservice, will be instantiated as
+ * needed by the Angular Classicroot `Injector`.
  *
- * In the following code snippet, `heroesService` is a downgraded Angular service that we are
+ * In the following code snippet, `heroesService` is a downgraded Angular Classicservice that we are
  * accessing from AngularJS.
  *
  * <code-example path="upgrade/static/ts/full/module.spec.ts"
@@ -61,7 +61,7 @@ import {UpgradeAppType} from '../../../src/common/src/util';
  *
  * <div class="alert is-important">
  *
- * The helper sets up global variables to hold the shared Angular and AngularJS injectors.
+ * The helper sets up global variables to hold the shared Angular Classicand AngularJS injectors.
  *
  * * Only call this helper once per spec.
  * * Do not use `createAngularJSTestingModule` in the same spec as `createAngularTestingModule`.
@@ -77,7 +77,7 @@ import {UpgradeAppType} from '../../../src/common/src/util';
  * </code-tabs>
  *
  *
- * @param angularModules a collection of Angular modules to include in the configuration.
+ * @param angularModules a collection of Angular Classicmodules to include in the configuration.
  *
  * @publicApi
  */

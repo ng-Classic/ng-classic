@@ -9,7 +9,7 @@
 /**
  * This is an example of a Hero-oriented InMemoryDbService with method overrides.
  */
-import {Injectable} from '@angular/core';
+import {Injectable} from '@angular-classic/core';
 import {getStatusText, ParsedRequestUrl, RequestInfo, RequestInfoUtilities, ResponseOptions, STATUS} from 'angular-in-memory-web-api';
 import {Observable} from 'rxjs';
 

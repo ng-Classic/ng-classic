@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {absoluteFrom} from '@angular/compiler-cli';
-import {NgCompiler} from '@angular/compiler-cli/src/ngtsc/core';
+import {absoluteFrom} from '@angular-classic/compiler-cli';
+import {NgCompiler} from '@angular-classic/compiler-cli/src/ngtsc/core';
 import tss from 'typescript/lib/tsserverlibrary';
 
 import {TemplateInfo} from '../utils';

@@ -11,7 +11,7 @@
  * @description
  * Entry point for all animation APIs of the animation browser package.
  */
-export {ANIMATION_MODULE_TYPE} from '@angular/core';
+export {ANIMATION_MODULE_TYPE} from '@angular-classic/core';
 export {BrowserAnimationsModule, BrowserAnimationsModuleConfig, NoopAnimationsModule, provideAnimations, provideNoopAnimations} from './module';
 
 export * from './private_export';

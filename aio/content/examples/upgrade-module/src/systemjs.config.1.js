@@ -1,5 +1,5 @@
 /**
- * System configuration for Angular samples
+ * System configuration for Angular Classicsamples
  * Adjust as necessary for your application needs.
  */
 (function (global) {
@@ -12,17 +12,17 @@
     map: {
       // our app is within the app folder
       app: 'app',
-      // angular bundles
-      '@angular/core': 'npm:@angular/core/fesm2022/core.mjs',
-      '@angular/common': 'npm:@angular/common/fesm2022/common.mjs',
-      '@angular/common/http': 'npm:@angular/common/fesm2022/http.mjs',
-      '@angular/compiler': 'npm:@angular/compiler/fesm2022/compiler.mjs',
-      '@angular/platform-browser': 'npm:@angular/platform-browser/fesm2022/platform-browser.mjs',
-      '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/fesm2022/platform-browser-dynamic.mjs',
-      '@angular/router': 'npm:@angular/router/fesm2022/router.mjs',
-      '@angular/forms': 'npm:@angular/forms/fesm2022/forms.mjs',
+      // Angular Classicbundles
+      '@angular-classic/core': 'npm:@angular-classic/core/fesm2022/core.mjs',
+      '@angular-classic/common': 'npm:@angular-classic/common/fesm2022/common.mjs',
+      '@angular-classic/common/http': 'npm:@angular-classic/common/fesm2022/http.mjs',
+      '@angular-classic/compiler': 'npm:@angular-classic/compiler/fesm2022/compiler.mjs',
+      '@angular-classic/platform-browser': 'npm:@angular-classic/platform-browser/fesm2022/platform-browser.mjs',
+      '@angular-classic/platform-browser-dynamic': 'npm:@angular-classic/platform-browser-dynamic/fesm2022/platform-browser-dynamic.mjs',
+      '@angular-classic/router': 'npm:@angular-classic/router/fesm2022/router.mjs',
+      '@angular-classic/forms': 'npm:@angular-classic/forms/fesm2022/forms.mjs',
       // #docregion upgrade-static-package
-      '@angular/upgrade/static': 'npm:@angular/upgrade/fesm2022/static.mjs',
+      '@angular-classic/upgrade/static': 'npm:@angular-classic/upgrade/fesm2022/static.mjs',
       // #enddocregion upgrade-static-package
 
       // other libraries

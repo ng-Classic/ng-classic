@@ -241,7 +241,7 @@ describe('extract_i18n command line', () => {
          <p id="welcomeMessage">${welcomeMessage}</p>`);
 
     write('src/comp1.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'basic',
@@ -250,7 +250,7 @@ describe('extract_i18n command line', () => {
     export class BasicCmp1 {}`);
 
     write('src/comp2.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'basic2',
@@ -265,7 +265,7 @@ describe('extract_i18n command line', () => {
     export class BasicCmp4 {}`);
 
     write('src/comp3.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'basic3',
@@ -278,7 +278,7 @@ describe('extract_i18n command line', () => {
     }}</b></div>`);
 
     write('src/placeholder_cmp.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'placeholders',
@@ -294,7 +294,7 @@ describe('extract_i18n command line', () => {
     </div>`);
 
     write('src/icu_cmp.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'icu',
@@ -303,8 +303,8 @@ describe('extract_i18n command line', () => {
     export class IcuCmp { count = 3; }`);
 
     write('src/module.ts', `
-    import {NgModule} from '@angular/core';
-    import {CommonModule} from '@angular/common';
+    import {NgModule} from '@angular-classic/core';
+    import {CommonModule} from '@angular-classic/common';
     import {BasicCmp1} from './comp1';
     import {BasicCmp2, BasicCmp4} from './comp2';
     import {BasicCmp3} from './comp3';

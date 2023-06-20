@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ConstantPool, Expression, Statement, Type} from '@angular/compiler';
+import {ConstantPool, Expression, Statement, Type} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {Reexport, ReferenceEmitter} from '../../imports';
@@ -85,10 +85,10 @@ export enum HandlerFlags {
 
 
 /**
- * Provides the interface between a decorator compiler from @angular/compiler and the Typescript
+ * Provides the interface between a decorator compiler from @angular-classic/compiler and the Typescript
  * compiler/transform.
  *
- * The decorator compilers in @angular/compiler do not depend on Typescript. The handler is
+ * The decorator compilers in @angular-classic/compiler do not depend on Typescript. The handler is
  * responsible for extracting the information required to perform compilation from the decorators
  * and Typescript source, invoking the decorator compiler, and returning the result.
  *

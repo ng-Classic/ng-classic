@@ -1,6 +1,6 @@
 # Style Precedence
 
-When there are multiple bindings to the same class name or style attribute, Angular uses a set of precedence rules to determine which classes or styles to apply to the element.
+When there are multiple bindings to the same class name or style attribute, Angular Classicuses a set of precedence rules to determine which classes or styles to apply to the element.
 These rules specify an order for which style and class related bindings have priority.
 This styling precedence is as follows, from the most specific with the highest priority to least specific with the lowest priority:
 
@@ -73,7 +73,7 @@ width = ''; // undefined
 
 <div class="alert is-helpful">
 
-If `dirWithHostBinding` sets its binding to `null`, Angular removes the `width` property entirely.
+If `dirWithHostBinding` sets its binding to `null`, Angular Classicremoves the `width` property entirely.
 
 <code-example format="typescript" header="dirWithHostBinding" language="typescript">
 

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, OnDestroy, OnInit} from '@angular/core';
+import {Directive, OnDestroy, OnInit} from '@angular-classic/core';
 
 import {FormGroup} from '../model/form_group';
 

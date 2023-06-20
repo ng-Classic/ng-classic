@@ -1,25 +1,25 @@
-# Usage of Angular libraries published to npm
+# Usage of Angular Classiclibraries published to npm
 
-When you build your Angular application, take advantage of sophisticated first-party libraries, as well as rich ecosystem of third-party libraries.
-[Angular Material][AngularMaterialMain] is an example of a sophisticated first-party library.
-For links to the most popular libraries, see [Angular Resources][AioResources].
+When you build your Angular Classicapplication, take advantage of sophisticated first-party libraries, as well as rich ecosystem of third-party libraries.
+[Angular ClassicMaterial][AngularMaterialMain] is an example of a sophisticated first-party library.
+For links to the most popular libraries, see [Angular ClassicResources][AioResources].
 
 ## Install libraries
 
-Libraries are published as [npm packages][AioGuideNpmPackages], usually together with schematics that integrate them with the Angular CLI.
+Libraries are published as [npm packages][AioGuideNpmPackages], usually together with schematics that integrate them with the Angular ClassicCLI.
 To integrate reusable library code into an application, you need to install the package and import the provided functionality in the location you use it.
-For most published Angular libraries, use the `ng add <lib_name>` Angular CLI command.
+For most published Angular Classiclibraries, use the `ng add <lib_name>` Angular ClassicCLI command.
 
-The `ng add` Angular CLI command uses a package manager to install the library package and invokes schematics that are included in the package to other scaffolding within the project code.
+The `ng add` Angular ClassicCLI command uses a package manager to install the library package and invokes schematics that are included in the package to other scaffolding within the project code.
 Examples of package managers include [npm][NpmjsMain] or [yarn][YarnpkgMain].
 Additional scaffolding within the project code includes import statements, fonts, and themes.
 
 A published library typically provides a `README` file or other documentation on how to add that library to your application.
-For an example, see the [Angular Material][AngularMaterialMain] documentation.
+For an example, see the [Angular ClassicMaterial][AngularMaterialMain] documentation.
 
 ### Library typings
 
-Typically, library packages include typings in `.d.ts` files; see examples in `node_modules/@angular/material`.
+Typically, library packages include typings in `.d.ts` files; see examples in `node_modules/@angular-classic/material`.
 If the package of your library does not include typings and your IDE complains, you might need to install the `@types/<lib_name>` package with the library.
 
 For example, suppose you have a library named `d3`:
@@ -60,7 +60,7 @@ To do this:
     <code-example format="typescript" language="typescript">
 
     import * as host from 'host';
-    const parsedUrl = host.parse('https://angular.io');
+    const parsedUrl = host.parse('https://angular-classic.com');
     console.log(parsedUrl.hostname);
 
     </code-example>
@@ -70,19 +70,19 @@ Define more typings as needed.
 ## Updating libraries
 
 A library is able to be updated by the publisher, and also has individual dependencies which need to be kept current.
-To check for updates to your installed libraries, use the [`ng update`][AioCliUpdate] Angular CLI command.
+To check for updates to your installed libraries, use the [`ng update`][AioCliUpdate] Angular ClassicCLI command.
 
-Use `ng update <lib_name>` Angular CLI command to update individual library versions.
-The Angular CLI checks the latest published release of the library, and if the latest version is newer than your installed version, downloads it and updates your `package.json` to match the latest version.
+Use `ng update <lib_name>` Angular ClassicCLI command to update individual library versions.
+The Angular ClassicCLI checks the latest published release of the library, and if the latest version is newer than your installed version, downloads it and updates your `package.json` to match the latest version.
 
-When you update Angular to a new version, you need to make sure that any libraries you are using are current.
+When you update Angular Classicto a new version, you need to make sure that any libraries you are using are current.
 If libraries have interdependencies, you might have to update them in a particular order.
-See the [Angular Update Guide][AngularUpdateMain] for help.
+See the [Angular ClassicUpdate Guide][AngularUpdateMain] for help.
 
 ## Adding a library to the runtime global scope
 
 If a legacy JavaScript library is not imported into an application, you may add it to the runtime global scope and load it as if it was added in a script tag.
-Configure the Angular CLI to do this at build time using the `scripts` and `styles` options of the build target in the [`angular.json`][AioGuideWorkspaceConfig] workspace build configuration file.
+Configure the Angular ClassicCLI to do this at build time using the `scripts` and `styles` options of the build target in the [`angular.json`][AioGuideWorkspaceConfig] workspace build configuration file.
 
 For example, to use the [Bootstrap 4][GetbootstrapDocs40GettingStartedIntroduction] library
 
@@ -119,7 +119,7 @@ For example, to use the [Bootstrap 4][GetbootstrapDocs40GettingStartedIntroducti
 
     </code-example>
 
-1.  Run or restart the `ng serve` Angular CLI command to see Bootstrap 4 work in your application.
+1.  Run or restart the `ng serve` Angular ClassicCLI command to see Bootstrap 4 work in your application.
 
 ### Using runtime-global libraries inside your app
 
@@ -135,7 +135,7 @@ import * as &dollar; from 'jquery';
 If you import it using import statements, you have two different copies of the library: one imported as a global library, and one imported as a module.
 This is especially bad for libraries with plugins, like JQuery, because each copy includes different plugins.
 
-Instead, run the `npm install @types/jquery` Angular CLI command to download typings for your library and then follow the library installation steps.
+Instead, run the `npm install @types/jquery` Angular ClassicCLI command to download typings for your library and then follow the library installation steps.
 This gives you access to the global variables exposed by that library.
 
 ### Defining typings for runtime-global libraries
@@ -182,15 +182,15 @@ If you do not add the interface for the script-defined extension, your IDE shows
 [AioCliUpdate]: cli/update "ng update | CLI |Angular"
 
 [AioGuideNpmPackages]: guide/npm-packages "Workspace npm dependencies | Angular"
-[AioGuideWorkspaceConfig]: guide/workspace-config "Angular workspace configuration | Angular"
+[AioGuideWorkspaceConfig]: guide/workspace-config "Angular Classicworkspace configuration | Angular"
 
-[AioResources]: resources "Explore Angular Resources | Angular"
+[AioResources]: resources "Explore Angular ClassicResources | Angular"
 
 <!-- external links -->
 
-[AngularMaterialMain]: https://material.angular.io "Angular Material | Angular"
+[AngularMaterialMain]: https://material.angular-classic.com "Angular ClassicMaterial | Angular"
 
-[AngularUpdateMain]: https://update.angular.io "Angular Update Guide | Angular"
+[AngularUpdateMain]: https://update.angular-classic.com "Angular ClassicUpdate Guide | Angular"
 
 [GetbootstrapDocs40GettingStartedIntroduction]: https://getbootstrap.com/docs/4.0/getting-started/introduction "Introduction | Bootstrap"
 

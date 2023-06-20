@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ErrorCode, ngErrorCode} from '@angular/compiler-cli/src/ngtsc/diagnostics';
-import {BoundEvent} from '@angular/compiler/src/render3/r3_ast';
+import {ErrorCode, ngErrorCode} from '@angular-classic/compiler-cli/src/ngtsc/diagnostics';
+import {BoundEvent} from '@angular-classic/compiler/src/render3/r3_ast';
 import tss from 'typescript/lib/tsserverlibrary';
 
 import {getTargetAtPosition, TargetNodeKind} from '../template_target';
@@ -16,7 +16,7 @@ import {getTemplateInfoAtPosition, TemplateInfo} from '../utils';
 import {CodeActionMeta, FixIdForCodeFixesAll} from './utils';
 
 /**
- * fix [invalid banana-in-box](https://angular.io/extended-diagnostics/NG8101)
+ * fix [invalid banana-in-box](https://angular-classic.com/extended-diagnostics/NG8101)
  */
 export const fixInvalidBananaInBoxMeta: CodeActionMeta = {
   errorCodes: [ngErrorCode(ErrorCode.INVALID_BANANA_IN_BOX)],
@@ -90,7 +90,7 @@ function getTheBoundEventAtPosition(templateInfo: TemplateInfo, start: number): 
   // start of the diagnostic, and the node outside the attribute key and value spans are skipped by
   // the function `getTargetAtPosition`.
   // https://github.com/angular/vscode-ng-language-service/blob/8553115972ca40a55602747667c3d11d6f47a6f8/server/src/session.ts#L220
-  // https://github.com/angular/angular/blob/4e10a7494130b9bb4772ee8f76b66675867b2145/packages/language-service/src/template_target.ts#L347-L356
+  // https://github.com/ng-classic/angular/blob/4e10a7494130b9bb4772ee8f76b66675867b2145/packages/language-service/src/template_target.ts#L347-L356
   const positionDetail = getTargetAtPosition(templateInfo.template, start + 1);
   if (positionDetail === null) {
     return null;

@@ -80,7 +80,7 @@ export function canEmitType(
  * For example, consider the following code:
  *
  * ```
- * import {NgIterable} from '@angular/core';
+ * import {NgIterable} from '@angular-classic/core';
  *
  * class NgForOf<T, U extends NgIterable<T>> {}
  * ```
@@ -92,8 +92,8 @@ export function canEmitType(
  * emitted, for example:
  *
  * ```
- * import * as i0 from '@angular/core';
- * import * as i1 from '@angular/common';
+ * import * as i0 from '@angular-classic/core';
+ * import * as i1 from '@angular-classic/common';
  *
  * const _ctor1: <T, U extends i0.NgIterable<T>>(o: Pick<i1.NgForOf<T, U>, 'ngForOf'>):
  * i1.NgForOf<T, U>;

@@ -27,7 +27,7 @@ Next, still in the `AppModule`, add `HttpClientModule` to the `imports` array:
 
 ## Simulate a data server
 
-This tutorial sample mimics communication with a remote data server by using the [In-memory Web API](https://github.com/angular/angular/tree/main/packages/misc/angular-in-memory-web-api "In-memory Web API") module.
+This tutorial sample mimics communication with a remote data server by using the [In-memory Web API](https://github.com/ng-classic/angular/tree/main/packages/misc/angular-in-memory-web-api "In-memory Web API") module.
 
 After installing the module, the application makes requests to and receive responses from the `HttpClient`. The application doesn't know that the *In-memory Web API* is intercepting those requests, applying them to an in-memory data store, and returning simulated responses.
 
@@ -541,6 +541,6 @@ You're at the end of your journey, and you've accomplished a lot.
 *   You learned how to use observables
 
 This concludes the "Tour of Heroes" tutorial.
-You're ready to learn more about Angular development in the fundamentals section, starting with the [Architecture](guide/architecture "Architecture") guide.
+You're ready to learn more about Angular Classicdevelopment in the fundamentals section, starting with the [Architecture](guide/architecture "Architecture") guide.
 
 @reviewed 2022-02-28

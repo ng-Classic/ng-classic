@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion animation-const, trigger-const
-import { animation, style, animate, trigger, transition, useAnimation } from '@angular/animations';
+import { animation, style, animate, trigger, transition, useAnimation } from '@angular-classic/animations';
 // #enddocregion trigger-const
 
 export const transitionAnimation = animation([

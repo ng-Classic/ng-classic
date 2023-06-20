@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular-classic/core';
 import { Observable } from 'rxjs';
 
 import { Item, ItemService } from './items.service';

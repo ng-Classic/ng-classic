@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentRef, inject, Injectable} from '@angular/core';
+import {ComponentRef, inject, Injectable} from '@angular-classic/core';
 
 import {OutletContext} from './router_outlet_context';
 import {ActivatedRoute, ActivatedRouteSnapshot} from './router_state';
@@ -70,7 +70,7 @@ export abstract class RouteReuseStrategy {
  *
  * This strategy does not store any routes for later reuse.
  *
- * Angular uses this strategy by default.
+ * Angular Classicuses this strategy by default.
  *
  *
  * It can be used as a base class for custom route reuse strategies, i.e. you can create your own

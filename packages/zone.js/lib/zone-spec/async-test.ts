@@ -209,7 +209,7 @@ Zone.__load_patch('asynctest', (global: any, Zone: ZoneType, api: _ZonePrivate) 
       // Not using an arrow function to preserve context passed from call site
       return function(this: unknown, done: any) {
         if (!done) {
-          // if we run beforeEach in @angular/core/testing/testing_internal then we get no done
+          // if we run beforeEach in @angular-classic/core/testing/testing_internal then we get no done
           // fake it here and assume sync.
           done = function() {};
           done.fail = function(e: any) {

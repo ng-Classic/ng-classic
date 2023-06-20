@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 import ts from 'typescript';
 
 import {DisplayInfoKind, unsafeCastDisplayInfoKindToScriptElementKind} from '../src/display_parts';
@@ -1493,7 +1493,7 @@ function setup(
   const env = LanguageServiceTestEnv.setup();
   const project = env.addProject('test', {
     'test.ts': `
-         import {Component, Directive, NgModule, Pipe, TemplateRef} from '@angular/core';
+         import {Component, Directive, NgModule, Pipe, TemplateRef} from '@angular-classic/core';
 
          ${functionDeclarations}
 
@@ -1529,7 +1529,7 @@ function setupInlineTemplate(
   const env = LanguageServiceTestEnv.setup();
   const project = env.addProject('test', {
     'test.ts': `
-         import {Component, Directive, NgModule, Pipe, TemplateRef} from '@angular/core';
+         import {Component, Directive, NgModule, Pipe, TemplateRef} from '@angular-classic/core';
 
          @Component({
            template: '${template}',

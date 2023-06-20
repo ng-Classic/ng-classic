@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, IMAGE_LOADER, NgOptimizedImage} from '@angular/common';
-import {Component, Inject} from '@angular/core';
+import {DOCUMENT, IMAGE_LOADER, NgOptimizedImage} from '@angular-classic/common';
+import {Component, Inject} from '@angular-classic/core';
 
 @Component({
   selector: 'preconnect-check',
@@ -20,7 +20,7 @@ import {Component, Inject} from '@angular/core';
   `,
   providers: [{
     provide: IMAGE_LOADER,
-    useValue: (config: {src: string}) => `https://angular.io/assets/images/${config.src}`
+    useValue: (config: {src: string}) => `https://angular-classic.com/assets/images/${config.src}`
   }],
 })
 export class PreconnectCheckComponent {
@@ -38,7 +38,7 @@ export class PreconnectCheckComponent {
     const url = new URL(win.location.href).searchParams;
     const preconnect = url.get('preconnect');
     if (preconnect !== null) {
-      const link = this.createLinkElement('preconnect', 'https://angular.io');
+      const link = this.createLinkElement('preconnect', 'https://angular-classic.com');
       this.doc.head.appendChild(link);
     }
   }

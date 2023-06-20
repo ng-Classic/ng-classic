@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {animate, style, transition, trigger} from '@angular/animations';
+import {Component} from '@angular-classic/core';
+import {animate, style, transition, trigger} from '@angular-classic/animations';
 
 @Component({
   selector: 'app-animations',

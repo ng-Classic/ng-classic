@@ -2,7 +2,7 @@
 import {
   Component, Input,
   OnChanges, SimpleChanges,
-} from '@angular/core';
+} from '@angular-classic/core';
 
 @Component({
   selector: 'app-counter',

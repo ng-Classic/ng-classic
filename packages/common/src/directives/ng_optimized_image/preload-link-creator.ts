@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {inject, Injectable, Renderer2, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {inject, Injectable, Renderer2, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {DOCUMENT} from '../../dom_tokens';
 import {RuntimeErrorCode} from '../../errors';
@@ -28,7 +28,7 @@ export class PreloadLinkCreator {
 
   /**
    * @description Add a preload `<link>` to the `<head>` of the `index.html` that is served from the
-   * server while using Angular Universal and SSR to kick off image loads for high priority images.
+   * server while using Angular ClassicUniversal and SSR to kick off image loads for high priority images.
    *
    * The `sizes` (passed in from the user) and `srcset` (parsed and formatted from `ngSrcset`)
    * properties used to set the corresponding attributes, `imagesizes` and `imagesrcset`

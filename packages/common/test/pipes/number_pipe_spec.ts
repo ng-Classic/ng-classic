@@ -6,15 +6,15 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CurrencyPipe, DecimalPipe, PercentPipe} from '@angular/common';
-import localeAr from '@angular/common/locales/ar';
-import localeDa from '@angular/common/locales/da';
-import localeDeAt from '@angular/common/locales/de-AT';
-import localeEn from '@angular/common/locales/en';
-import localeEsUS from '@angular/common/locales/es-US';
-import localeFr from '@angular/common/locales/fr';
-import {Component, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {CurrencyPipe, DecimalPipe, PercentPipe} from '@angular-classic/common';
+import localeAr from '@angular-classic/common/locales/ar';
+import localeDa from '@angular-classic/common/locales/da';
+import localeDeAt from '@angular-classic/common/locales/de-AT';
+import localeEn from '@angular-classic/common/locales/en';
+import localeEsUS from '@angular-classic/common/locales/es-US';
+import localeFr from '@angular-classic/common/locales/fr';
+import {Component, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 {
   describe('Number pipes', () => {
@@ -213,7 +213,7 @@ import {TestBed} from '@angular/core/testing';
           const warnSpy = spyOn(console, 'warn');
           pipe.transform(123, 'USD', true);
           expect(warnSpy).toHaveBeenCalledWith(
-              `Warning: the currency pipe has been changed in Angular v5. The symbolDisplay option (third parameter) is now a string instead of a boolean. The accepted values are "code", "symbol" or "symbol-narrow".`);
+              `Warning: the currency pipe has been changed in Angular Classicv5. The symbolDisplay option (third parameter) is now a string instead of a boolean. The accepted values are "code", "symbol" or "symbol-narrow".`);
         });
       });
 

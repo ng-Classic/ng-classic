@@ -7,8 +7,8 @@
  */
 
 // #docregion angular-setup
-import {TestBed} from '@angular/core/testing';
-import {createAngularJSTestingModule, createAngularTestingModule} from '@angular/upgrade/static/testing';
+import {TestBed} from '@angular-classic/core/testing';
+import {createAngularJSTestingModule, createAngularTestingModule} from '@angular-classic/upgrade/static/testing';
 
 import {HeroesService, ng1AppModule, Ng2AppModule} from './module';
 

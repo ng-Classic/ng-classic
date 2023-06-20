@@ -1,4 +1,4 @@
-import {Component, EventEmitter, NgModule, Output} from '@angular/core';
+import {Component, EventEmitter, NgModule, Output} from '@angular-classic/core';
 
 @Component({
   selector: 'some-comp',

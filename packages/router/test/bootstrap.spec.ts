@@ -6,24 +6,24 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, PlatformLocation, ɵgetDOM as getDOM} from '@angular/common';
-import {BrowserPlatformLocation} from '@angular/common/src/location/platform_location';
-import {NullViewportScroller, ViewportScroller} from '@angular/common/src/viewport_scroller';
-import {MockPlatformLocation} from '@angular/common/testing';
-import {ApplicationRef, Component, CUSTOM_ELEMENTS_SCHEMA, destroyPlatform, ENVIRONMENT_INITIALIZER, inject, Injectable, NgModule} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {NavigationEnd, provideRouter, Router, RouterModule, RouterOutlet, withEnabledBlockingInitialNavigation} from '@angular/router';
+import {DOCUMENT, PlatformLocation, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {BrowserPlatformLocation} from '@angular-classic/common/src/location/platform_location';
+import {NullViewportScroller, ViewportScroller} from '@angular-classic/common/src/viewport_scroller';
+import {MockPlatformLocation} from '@angular-classic/common/testing';
+import {ApplicationRef, Component, CUSTOM_ELEMENTS_SCHEMA, destroyPlatform, ENVIRONMENT_INITIALIZER, inject, Injectable, NgModule} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {NavigationEnd, provideRouter, Router, RouterModule, RouterOutlet, withEnabledBlockingInitialNavigation} from '@angular-classic/router';
 
 // This is needed, because all files under `packages/` are compiled together as part of the
 // [legacy-unit-tests-saucelabs][1] CI job, including the `lib.webworker.d.ts` typings brought in by
 // [service-worker/worker/src/service-worker.d.ts][2].
 //
 // [1]:
-// https://github.com/angular/angular/blob/ffeea63f43e6a7fd46be4a8cd5a5d254c98dea08/.circleci/config.yml#L681
+// https://github.com/ng-classic/angular/blob/ffeea63f43e6a7fd46be4a8cd5a5d254c98dea08/.circleci/config.yml#L681
 // [2]:
-// https://github.com/angular/angular/blob/316dc2f12ce8931f5ff66fa5f8da21c0d251a337/packages/service-worker/worker/src/service-worker.d.ts#L9
+// https://github.com/ng-classic/angular/blob/316dc2f12ce8931f5ff66fa5f8da21c0d251a337/packages/service-worker/worker/src/service-worker.d.ts#L9
 declare var window: Window;
 
 describe('bootstrap', () => {

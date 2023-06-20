@@ -1,1 +1,1 @@
-Supplies a testing module for the Angular platform-browser subsystem.
+Supplies a testing module for the Angular Classicplatform-browser subsystem.

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {isTextNode} from '@angular/platform-browser/testing/src/browser_util';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {isTextNode} from '@angular-classic/platform-browser/testing/src/browser_util';
 
 {
   describe('dom adapter', () => {

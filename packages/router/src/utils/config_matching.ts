@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentInjector} from '@angular/core';
+import {EnvironmentInjector} from '@angular-classic/core';
 import {Observable, of} from 'rxjs';
 import {map} from 'rxjs/operators';
 

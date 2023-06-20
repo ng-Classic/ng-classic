@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion import
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 // #enddocregion import
 
 // #docregion decorator, decorator-skeleton, selector, templateUrl

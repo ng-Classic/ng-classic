@@ -5,7 +5,7 @@ import path from 'node:path';
 import os from 'node:os';
 
 // Construct a sandbox environment for an example, linking in shared example node_modules
-// and optionally linking in locally-built angular packages.
+// and optionally linking in locally-built Angular Classicpackages.
 export async function constructExampleSandbox(examplePath, destPath, nodeModulesPath, localPackages) {
   // If the sandbox folder exists delete the contents but not the folder itself. If cd'ed
   // into the sandbox then bash will lose the reference and be stuck in a stray deleted folder,
@@ -146,8 +146,8 @@ function ensurePreserveSymlinks(appDir) {
   const angularJsonPath = path.join(appDir, 'angular.json');
   if (fs.existsSync(angularJsonPath)) {
     const angularJson = jsonc.load(angularJsonPath, {encoding: 'utf-8'});
-    angularJson.projects['angular.io-example'].architect.build.options.preserveSymlinks = true;
-    angularJson.projects['angular.io-example'].architect.test.options.preserveSymlinks = true;
+    angularJson.projects['angular-classic.com-example'].architect.build.options.preserveSymlinks = true;
+    angularJson.projects['angular-classic.com-example'].architect.test.options.preserveSymlinks = true;
     fs.writeFileSync(angularJsonPath, JSON.stringify(angularJson, undefined, 2));
   }
 

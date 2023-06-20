@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {assertInInjectionContext, Attribute, ChangeDetectorRef, Component, ComponentRef, createEnvironmentInjector, createNgModule, Directive, ElementRef, ENVIRONMENT_INITIALIZER, EnvironmentInjector, EventEmitter, forwardRef, Host, HostBinding, ImportedNgModuleProviders, importProvidersFrom, ImportProvidersSource, inject, Inject, Injectable, InjectFlags, InjectionToken, InjectOptions, INJECTOR, Injector, Input, LOCALE_ID, makeEnvironmentProviders, ModuleWithProviders, NgModule, NgModuleRef, NgZone, Optional, Output, Pipe, PipeTransform, Provider, runInInjectionContext, Self, SkipSelf, TemplateRef, Type, ViewChild, ViewContainerRef, ViewEncapsulation, ViewRef, ɵcreateInjector as createInjector, ɵDEFAULT_LOCALE_ID as DEFAULT_LOCALE_ID, ɵINJECTOR_SCOPE, ɵInternalEnvironmentProviders as InternalEnvironmentProviders} from '@angular/core';
-import {RuntimeError, RuntimeErrorCode} from '@angular/core/src/errors';
-import {ViewRef as ViewRefInternal} from '@angular/core/src/render3/view_ref';
-import {TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
+import {CommonModule} from '@angular-classic/common';
+import {assertInInjectionContext, Attribute, ChangeDetectorRef, Component, ComponentRef, createEnvironmentInjector, createNgModule, Directive, ElementRef, ENVIRONMENT_INITIALIZER, EnvironmentInjector, EventEmitter, forwardRef, Host, HostBinding, ImportedNgModuleProviders, importProvidersFrom, ImportProvidersSource, inject, Inject, Injectable, InjectFlags, InjectionToken, InjectOptions, INJECTOR, Injector, Input, LOCALE_ID, makeEnvironmentProviders, ModuleWithProviders, NgModule, NgModuleRef, NgZone, Optional, Output, Pipe, PipeTransform, Provider, runInInjectionContext, Self, SkipSelf, TemplateRef, Type, ViewChild, ViewContainerRef, ViewEncapsulation, ViewRef, ɵcreateInjector as createInjector, ɵDEFAULT_LOCALE_ID as DEFAULT_LOCALE_ID, ɵINJECTOR_SCOPE, ɵInternalEnvironmentProviders as InternalEnvironmentProviders} from '@angular-classic/core';
+import {RuntimeError, RuntimeErrorCode} from '@angular-classic/core/src/errors';
+import {ViewRef as ViewRefInternal} from '@angular-classic/core/src/render3/view_ref';
+import {TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
 import {BehaviorSubject} from 'rxjs';
 
 const getProvidersByToken =
@@ -965,7 +965,7 @@ describe('di', () => {
 
     it('should not have access to the directive injector in a standalone injector from within a directive-level provider factory',
        () => {
-         // https://github.com/angular/angular/issues/42651
+         // https://github.com/ng-classic/angular/issues/42651
          class TestA {
            constructor(public injector: string) {}
          }
@@ -1063,7 +1063,7 @@ describe('di', () => {
       TestBed.configureTestingModule({declarations: [DirectiveA, DirectiveB, MyComp]});
       expect(() => TestBed.createComponent(MyComp))
           .toThrowError(
-              'NG0200: Circular dependency in DI detected for DirectiveA. Find more at https://angular.io/errors/NG0200');
+              'NG0200: Circular dependency in DI detected for DirectiveA. Find more at https://angular-classic.com/errors/NG0200');
     });
 
     describe('flags', () => {
@@ -2160,7 +2160,7 @@ describe('di', () => {
           TestBed.configureTestingModule({declarations: [DirectiveString, MyComp, MyApp]});
           expect(() => TestBed.createComponent(MyApp))
               .toThrowError(
-                  'NG0201: No provider for String found in NodeInjector. Find more at https://angular.io/errors/NG0201');
+                  'NG0201: No provider for String found in NodeInjector. Find more at https://angular-classic.com/errors/NG0201');
         });
 
         it('should not find other directives on the host itself', () => {
@@ -2236,7 +2236,7 @@ describe('di', () => {
           TestBed.configureTestingModule({declarations: [DirectiveComp, MyComp, MyApp]});
           expect(() => TestBed.createComponent(MyApp))
               .toThrowError(
-                  'NG0201: No provider for MyApp found in NodeInjector. Find more at https://angular.io/errors/NG0201');
+                  'NG0201: No provider for MyApp found in NodeInjector. Find more at https://angular-classic.com/errors/NG0201');
         });
 
         describe('regression', () => {

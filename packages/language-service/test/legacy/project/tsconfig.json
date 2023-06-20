@@ -11,7 +11,7 @@
     "target": "es2015",
     "baseUrl": "../../../../../",
     "paths": {
-      "@angular/*": [
+      "@angular-classic/*": [
         "packages/*"
       ]
     }

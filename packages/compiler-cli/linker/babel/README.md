@@ -1,4 +1,4 @@
-# Angular linker - Babel plugin
+# Angular Classiclinker - Babel plugin
 
 This package contains a Babel plugin that can be used to find and link partially compiled declarations in library source code.
 See the [linker package README](../README.md) for more information.

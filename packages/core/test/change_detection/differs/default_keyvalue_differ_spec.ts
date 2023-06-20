@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DefaultKeyValueDiffer, DefaultKeyValueDifferFactory} from '@angular/core/src/change_detection/differs/default_keyvalue_differ';
+import {DefaultKeyValueDiffer, DefaultKeyValueDifferFactory} from '@angular-classic/core/src/change_detection/differs/default_keyvalue_differ';
 
 import {kvChangesAsString, testChangesAsString} from '../util';
 
@@ -197,7 +197,7 @@ import {kvChangesAsString, testChangesAsString} from '../util';
           }));
         });
 
-        // https://github.com/angular/angular/issues/14997
+        // https://github.com/ng-classic/angular/issues/14997
         it('should work regardless key order', () => {
           differ.check({a: 1, b: 2});
           differ.check({b: 3, a: 2});

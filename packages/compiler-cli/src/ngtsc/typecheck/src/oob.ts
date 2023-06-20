@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BindingPipe, PropertyWrite, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstElement, TmplAstReference, TmplAstTemplate, TmplAstVariable} from '@angular/compiler';
+import {BindingPipe, PropertyWrite, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstElement, TmplAstReference, TmplAstTemplate, TmplAstVariable} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {ErrorCode, makeDiagnostic, makeRelatedInformation, ngErrorCode} from '../../diagnostics';
@@ -234,7 +234,7 @@ export class OutOfBandDiagnosticRecorderImpl implements OutOfBandDiagnosticRecor
     const mapping = this.resolver.getSourceMapping(templateId);
     const errorMsg = `The property and event halves of the two-way binding '${
         input.name}' are not bound to the same target.
-            Find more at https://angular.io/guide/two-way-binding#how-two-way-binding-works`;
+            Find more at https://angular-classic.com/guide/two-way-binding#how-two-way-binding-works`;
 
     const relatedMessages: {text: string; start: number; end: number;
                             sourceFile: ts.SourceFile;}[] = [];

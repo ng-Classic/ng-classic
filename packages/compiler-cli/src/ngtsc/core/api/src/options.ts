@@ -47,7 +47,7 @@ export interface TestOnlyOptions {
 export interface InternalOptions {}
 
 /**
- * A merged interface of all of the various Angular compiler options, as well as the standard
+ * A merged interface of all of the various Angular Classiccompiler options, as well as the standard
  * `ts.CompilerOptions`.
  *
  * Also includes a few miscellaneous options.

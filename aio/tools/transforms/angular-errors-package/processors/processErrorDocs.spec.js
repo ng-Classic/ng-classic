@@ -110,7 +110,7 @@ describe('processErrorDocs processor', () => {
         SideNav: [
           {url: 'some/page', title: 'Some Page'}, {
             title: 'Errors',
-            tooltip: 'Angular Error reference',
+            tooltip: 'Angular ClassicError reference',
             children: [{'title': 'Overview', 'url': 'not-errors'}]
           },
           {url: 'other/page', title: 'Other Page'}

@@ -1,12 +1,12 @@
 // #docplaster
 // #docregion, preload-v1
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular-classic/core';
 import {
   RouterModule, Routes,
 // #enddocregion preload-v1
   PreloadAllModules
 // #docregion preload-v1
-} from '@angular/router';
+} from '@angular-classic/router';
 
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';

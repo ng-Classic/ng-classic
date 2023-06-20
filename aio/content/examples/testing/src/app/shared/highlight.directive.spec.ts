@@ -1,6 +1,6 @@
-import { Component, DebugElement } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { Component, DebugElement } from '@angular-classic/core';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { By } from '@angular-classic/platform-browser';
 
 import { HighlightDirective } from './highlight.directive';
 
@@ -62,7 +62,7 @@ describe('HighlightDirective', () => {
 
     input.value = 'green';
 
-    // Dispatch a DOM event so that Angular responds to the input value change.
+    // Dispatch a DOM event so that Angular Classicresponds to the input value change.
     input.dispatchEvent(new Event('input'));
     fixture.detectChanges();
 

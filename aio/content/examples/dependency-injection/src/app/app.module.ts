@@ -1,6 +1,6 @@
 // #docplaster
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
 
 import { APP_CONFIG, HERO_DI_CONFIG } from './app.config';
 import { AppComponent } from './app.component';

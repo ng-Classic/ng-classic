@@ -1,4 +1,4 @@
-import {Component, Directive, Input, NgModule} from '@angular/core';
+import {Component, Directive, Input, NgModule} from '@angular-classic/core';
 
 @Directive({selector: 'div'})
 export class DivDir {

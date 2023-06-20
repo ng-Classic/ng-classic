@@ -48,7 +48,7 @@ export interface FormControlOptions extends AbstractControlOptions {
 /**
  * Tracks the value and validation status of an individual form control.
  *
- * This is one of the four fundamental building blocks of Angular forms, along with
+ * This is one of the four fundamental building blocks of Angular Classicforms, along with
  * `FormGroup`, `FormArray` and `FormRecord`. It extends the `AbstractControl` class that
  * implements most of the base functionality for accessing the value, validation status,
  * user interactions and events.

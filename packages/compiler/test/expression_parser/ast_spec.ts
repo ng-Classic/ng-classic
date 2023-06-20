@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, Lexer, Parser, RecursiveAstVisitor} from '@angular/compiler';
-import {Call, ImplicitReceiver, PropertyRead} from '@angular/compiler/src/compiler';
+import {AST, Lexer, Parser, RecursiveAstVisitor} from '@angular-classic/compiler';
+import {Call, ImplicitReceiver, PropertyRead} from '@angular-classic/compiler/src/compiler';
 
 describe('RecursiveAstVisitor', () => {
   it('should visit every node', () => {

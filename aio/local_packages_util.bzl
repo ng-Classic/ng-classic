@@ -4,18 +4,18 @@ load("@build_bazel_rules_nodejs//:providers.bzl", "LinkablePackageInfo")
 load("@build_bazel_rules_nodejs//internal/linker:link_node_modules.bzl", "LinkerPackageMappingInfo")
 
 def _is_angular_dep(dep):
-    """Check if a dep , e.g., @aio_npm//@angular/core corresonds to a local Angular pacakge."""
+    """Check if a dep , e.g., @aio_npm//@angular-classic/core corresonds to a local Angular Classicpacakge."""
     return dep.startswith("@aio_npm//") and _angular_dep_to_pkg_name(dep) in ALL_PACKAGES
 
 def _angular_dep_to_pkg_name(dep):
-    """E.g., @aio_npm//@angular/core => '@angular/core'"""
+    """E.g., @aio_npm//@angular-classic/core => '@angular-classic/core'"""
     label = Label(dep)
     return label.package
 
 def link_local_packages(all_aio_deps):
-    """Create targets needed for building AIO against local angular packages.
+    """Create targets needed for building AIO against local Angular Classicpackages.
 
-    Creates targets that link Angular packages, as well as targets to be used
+    Creates targets that link Angular Classicpackages, as well as targets to be used
     in place of any deps required to build and test AIO. These targets filter
     out any transitive deps on the npm packages and must be used in place of
     any original list of deps.
@@ -30,7 +30,7 @@ def link_local_packages(all_aio_deps):
     aio_angular_deps = [dep for dep in all_aio_deps if _is_angular_dep(dep)]
     angular_packages = [_angular_dep_to_pkg_name(dep) for dep in aio_angular_deps]
 
-    # Link local angular packages in place of their npm equivalent
+    # Link local Angular Classicpackages in place of their npm equivalent
     for dep in aio_angular_deps:
         pkg_name = _angular_dep_to_pkg_name(dep)
         npm_link(
@@ -43,11 +43,11 @@ def link_local_packages(all_aio_deps):
 
     # Special case deps that must be testonly
     testonly_deps = [
-        "@aio_npm//@angular/build-tooling/bazel/browsers/chromium",
+        "@aio_npm//@angular-classic/build-tooling/bazel/browsers/chromium",
     ]
 
     # Stamp a corresponding target for each AIO dep that filters out transitive
-    # dependencies on angular npm packages. This help the rules_nodejs linker,
+    # dependencies on Angular Classicnpm packages. This help the rules_nodejs linker,
     # which fails to link local packages a transitive dependency on the npm
     # package exists.
     for dep in all_aio_deps:
@@ -101,7 +101,7 @@ def _filter_transitive_angular_deps_impl(ctx):
     filtered_deps = []
 
     # Note: to_list() is expensive; we need to invoke it here to get the path
-    # of each transitive dependency to check if it's an angular npm package.
+    # of each transitive dependency to check if it's an Angular Classicnpm package.
     for file in ctx.attr.target[DefaultInfo].default_runfiles.files.to_list():
         if not any([file.path.startswith(path) for path in paths]):
             filtered_deps.append(file)
@@ -121,10 +121,10 @@ def _filter_transitive_angular_deps_impl(ctx):
     return providers
 
 filter_transitive_angular_deps = rule(
-    doc = "Filter out transitive angular dependencies from a target",
+    doc = "Filter out transitive Angular Classicdependencies from a target",
     implementation = _filter_transitive_angular_deps_impl,
     attrs = {
         "target": attr.label(mandatory = True, doc = "Target to filter"),
-        "angular_packages": attr.string_list(default = [], doc = "Angular packages to filter"),
+        "angular_packages": attr.string_list(default = [], doc = "Angular Classicpackages to filter"),
     },
 )

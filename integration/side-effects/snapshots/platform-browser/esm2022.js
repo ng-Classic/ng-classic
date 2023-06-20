@@ -1,3 +1,3 @@
-import "@angular/common";
+import "@angular-classic/common";
 
-import "@angular/core";
+import "@angular-classic/core";

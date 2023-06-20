@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵɵdefineInjectable, ɵɵinject} from '@angular/core';
+import {ɵɵdefineInjectable, ɵɵinject} from '@angular-classic/core';
 
 import {DOCUMENT} from './dom_tokens';
 

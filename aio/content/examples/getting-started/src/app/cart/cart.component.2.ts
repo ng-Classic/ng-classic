@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion imports
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 import { CartService } from '../cart.service';
 // #enddocregion imports
 

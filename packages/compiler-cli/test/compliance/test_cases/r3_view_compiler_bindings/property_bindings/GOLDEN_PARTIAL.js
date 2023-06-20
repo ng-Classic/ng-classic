@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: bind.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.title = 'Hello World';
@@ -27,7 +27,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: bind.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     title: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -42,8 +42,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: interpolation.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.name = 'World';
@@ -73,7 +73,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: interpolation.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     name: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -88,8 +88,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: interpolated_properties.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.name = 'John Doe';
@@ -139,7 +139,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: interpolated_properties.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     name: string;
     one: any;
@@ -163,8 +163,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: special_property_remapping.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.forValue = 'some-input';
@@ -194,7 +194,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: special_property_remapping.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     forValue: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -209,8 +209,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: temporary_variables.js
  ****************************************************************************************************/
-import { Component, NgModule, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class AsyncPipe {
     transform(v) { }
 }
@@ -220,7 +220,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
             type: Pipe,
             args: [{ name: 'async' }]
         }] });
-// https://github.com/angular/angular/issues/37194
+// https://github.com/ng-classic/angular/issues/37194
 // Verifies that temporary expressions used for expressions with potential side-effects in
 // the LHS of a safe navigation access are emitted within the binding expression itself, to
 // ensure that these temporaries are evaluated during the evaluation of the binding. This
@@ -252,7 +252,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: temporary_variables.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class AsyncPipe {
     transform(v: any): null | any;
     static ɵfac: i0.ɵɵFactoryDeclaration<AsyncPipe, never>;
@@ -275,8 +275,8 @@ export declare class MyMod {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myTitle = 'hello';
@@ -293,7 +293,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myTitle: string;
     buttonId: string;
@@ -304,8 +304,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_mixed.js
  ****************************************************************************************************/
-import { Component, Directive, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ButtonDir {
 }
 ButtonDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ButtonDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -338,7 +338,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_mixed.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class ButtonDir {
     al: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonDir, never>;
@@ -357,8 +357,8 @@ export declare class MyMod {
 /****************************************************************************************************
  * PARTIAL FILE: chain_bindings_with_interpolations.js
  ****************************************************************************************************/
-import { Component, Directive, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ButtonDir {
 }
 ButtonDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: ButtonDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -393,7 +393,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_bindings_with_interpolations.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class ButtonDir {
     al: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonDir, never>;
@@ -412,8 +412,8 @@ export declare class MyMod {
 /****************************************************************************************************
  * PARTIAL FILE: chain_synthetic_bindings.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.expansionState = 'expanded';
@@ -444,7 +444,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_synthetic_bindings.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     expansionState: string;
     myTitle: string;
@@ -455,8 +455,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: chain_ngtemplate_bindings.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myTitle = 'hello';
@@ -473,7 +473,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_ngtemplate_bindings.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myTitle: string;
     buttonId: string;
@@ -484,8 +484,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_for_multiple_elements.js
  ****************************************************************************************************/
-import { Component, Directive, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SpanDir {
 }
 SpanDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SpanDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -543,7 +543,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_for_multiple_elements.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SpanDir {
     someProp: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<SpanDir, never>;
@@ -570,8 +570,8 @@ export declare class MyMod {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_with_child_elements.js
  ****************************************************************************************************/
-import { Component, Directive, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SpanDir {
 }
 SpanDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SpanDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -615,7 +615,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_bindings_with_child_elements.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class SpanDir {
     someProp: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<SpanDir, never>;

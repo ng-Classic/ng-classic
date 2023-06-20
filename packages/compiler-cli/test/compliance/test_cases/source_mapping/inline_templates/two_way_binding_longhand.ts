@@ -1,4 +1,4 @@
-import {Component, Directive, EventEmitter, Input, NgModule, Output} from '@angular/core';
+import {Component, Directive, EventEmitter, Input, NgModule, Output} from '@angular-classic/core';
 
 @Component({
   selector: 'test-cmp',

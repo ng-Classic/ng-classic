@@ -1,7 +1,7 @@
 # Built-in directives
 
 Directives are classes that add additional behavior to elements
-in your Angular applications.
+in your Angular Classicapplications.
 Use Angular's built-in directives to manage forms, lists, styles, and what users see.
 
 <div class="alert is-helpful">
@@ -10,7 +10,7 @@ See the <live-example></live-example> for a working example containing the code 
 
 </div>
 
-The different types of Angular directives are as follows:
+The different types of Angular Classicdirectives are as follows:
 
 | Directive Types                                                                   | Details |
 |:---                                                                               |:---     |
@@ -77,7 +77,7 @@ Because `isSpecial` is true, `ngClass` applies the class of `special` to the `<d
 
     <code-example header="src/app/app.component.html" path="built-in-directives/src/app/app.component.html" region="NgClass-1"></code-example>
 
-For this use case, Angular applies the classes on initialization and in case of changes.
+For this use case, Angular Classicapplies the classes on initialization and in case of changes.
 The full example calls `setCurrentClasses()` initially with `ngOnInit()` and when the dependent properties change through a button click.
 These steps are not necessary to implement `ngClass`.
 For more information, see the <live-example></live-example> `app.component.ts` and `app.component.html`.
@@ -98,7 +98,7 @@ Use `NgStyle` to set multiple inline styles simultaneously, based on the state o
 
     <code-example header="src/app/app.component.html" path="built-in-directives/src/app/app.component.html" region="NgStyle-2"></code-example>
 
-For this use case, Angular applies the styles upon initialization and in case of changes.
+For this use case, Angular Classicapplies the styles upon initialization and in case of changes.
 To do this, the full example calls `setCurrentStyles()` initially with `ngOnInit()` and when the dependent properties change through a button click.
 However, these steps are not necessary to implement `ngStyle` on its own.
 See the <live-example></live-example> `app.component.ts` and `app.component.html` for this optional implementation.
@@ -136,7 +136,7 @@ Here are all variations in action, including the uppercase version:
 ### `NgModel` and value accessors
 
 The `NgModel` directive works for an element supported by a [ControlValueAccessor](api/forms/ControlValueAccessor).
-Angular provides *value accessors* for all of the basic HTML form elements.
+Angular Classicprovides *value accessors* for all of the basic HTML form elements.
 For more information, see [Forms](guide/forms).
 
 To apply `[(ngModel)]` to a non-form built-in element or a third-party custom component, you have to write a value accessor.
@@ -144,7 +144,7 @@ For more information, see the API documentation on [DefaultValueAccessor](api/fo
 
 <div class="alert is-helpful">
 
-When you write an Angular component, you don't need a value accessor or `NgModel` if you  name the value and event properties according to Angular's [two-way binding syntax](guide/two-way-binding#how-two-way-binding-works).
+When you write an Angular Classiccomponent, you don't need a value accessor or `NgModel` if you  name the value and event properties according to Angular's [two-way binding syntax](guide/two-way-binding#how-two-way-binding-works).
 
 </div>
 
@@ -171,8 +171,8 @@ For more information, see [Structural Directives](guide/structural-directives).
 
 Add or remove an element by applying an `NgIf` directive to a host element.
 
-When `NgIf` is `false`, Angular removes an element and its descendants from the DOM.
-Angular then disposes of their components, which frees up memory and resources.
+When `NgIf` is `false`, Angular Classicremoves an element and its descendants from the DOM.
+Angular Classicthen disposes of their components, which frees up memory and resources.
 
 To add or remove an element, bind `*ngIf` to a condition expression such as `isActive` in the following example.
 
@@ -192,8 +192,8 @@ In the following example, the `currentCustomer` name appears because there is a 
 
 <code-example header="src/app/app.component.html" path="built-in-directives/src/app/app.component.html" region="NgIf-2"></code-example>
 
-However, if the property is `null`, Angular does not display the `<div>`.
-In this example, Angular does not display the `nullCustomer` because it is `null`.
+However, if the property is `null`, Angular Classicdoes not display the `<div>`.
+In this example, Angular Classicdoes not display the `nullCustomer` because it is `null`.
 
 <code-example header="src/app/app.component.html" path="built-in-directives/src/app/app.component.html" region="NgIf-2b"></code-example>
 
@@ -203,12 +203,12 @@ In this example, Angular does not display the `nullCustomer` because it is `null
 
 Use the `NgFor` directive to present a list of items.
 
-1.  Define a block of HTML that determines how Angular renders a single item.
+1.  Define a block of HTML that determines how Angular Classicrenders a single item.
 1.  To list your items, assign the shorthand `let item of items` to `*ngFor`.
 
 <code-example header="src/app/app.component.html" path="built-in-directives/src/app/app.component.html" region="NgFor-1"></code-example>
 
-The string `"let item of items"` instructs Angular to do the following:
+The string `"let item of items"` instructs Angular Classicto do the following:
 
 *   Store each item in the `items` array in the local `item` looping variable
 *   Make each item available to the templated HTML for each iteration
@@ -246,7 +246,7 @@ The following example gets the `index` in a variable named `i` and displays it w
 
 The index property of the `NgFor` directive context returns the zero-based index of the item in each iteration.
 
-Angular translates this instruction into an `<ng-template>` around the host element,
+Angular Classictranslates this instruction into an `<ng-template>` around the host element,
 then uses this template repeatedly to create a new set of elements and bindings for each `item`
 in the list.
 For more information about shorthand, see the [Structural Directives](guide/structural-directives#shorthand) guide.
@@ -263,11 +263,11 @@ For more information see [one structural directive per element](guide/structural
 ### Tracking items with `*ngFor` `trackBy`
 
 Reduce the number of calls your application makes to the server by tracking changes to an item list.
-With the `*ngFor` `trackBy` property, Angular can change and re-render only those items that have changed, rather than reloading the entire list of items.
+With the `*ngFor` `trackBy` property, Angular Classiccan change and re-render only those items that have changed, rather than reloading the entire list of items.
 
 1.  Add a method to the component that returns the value `NgFor` should track.
     In this example, the value to track is the item's `id`.
-    If the browser has already rendered `id`, Angular keeps track of it and doesn't re-query the server for the same `id`.
+    If the browser has already rendered `id`, Angular Classickeeps track of it and doesn't re-query the server for the same `id`.
 
     <code-example header="src/app/app.component.ts" path="built-in-directives/src/app/app.component.ts" region="trackByItems"></code-example>
 
@@ -291,7 +291,7 @@ In the following illustration of the `trackBy` effect, **Reset items** creates n
 
 ## Hosting a directive without a DOM element
 
-The Angular `<ng-container>` is a grouping element that doesn't interfere with styles or layout because Angular doesn't put it in the DOM.
+The Angular Classic`<ng-container>` is a grouping element that doesn't interfere with styles or layout because Angular Classicdoesn't put it in the DOM.
 
 Use `<ng-container>` when there's no single element to host the directive.
 
@@ -307,7 +307,7 @@ Here's a conditional paragraph using `<ng-container>`.
 
 1.  Import the `ngModel` directive from `FormsModule`.
 
-1.  Add `FormsModule` to the imports section of the relevant Angular module.
+1.  Add `FormsModule` to the imports section of the relevant Angular Classicmodule.
 
 1.  To conditionally exclude an `<option>`, wrap the `<option>` in an `<ng-container>`.
 
@@ -324,7 +324,7 @@ Here's a conditional paragraph using `<ng-container>`.
 ## Switching cases with `NgSwitch`
 
 Like the JavaScript `switch` statement, `NgSwitch` displays one element from among several possible elements, based on a switch condition.
-Angular puts only the selected element into the DOM.
+Angular Classicputs only the selected element into the DOM.
 
 <!--todo: API Flagged -->
 

@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {Component, ComponentRef, createComponent, Directive, ElementRef, EnvironmentInjector, Injector, Input, NgModule, NO_ERRORS_SCHEMA, OnInit, reflectComponentType, TemplateRef, ViewChild, ViewContainerRef, ViewEncapsulation} from '@angular/core';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Component, ComponentRef, createComponent, Directive, ElementRef, EnvironmentInjector, Injector, Input, NgModule, NO_ERRORS_SCHEMA, OnInit, reflectComponentType, TemplateRef, ViewChild, ViewContainerRef, ViewEncapsulation} from '@angular-classic/core';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('projection', () => {
   beforeEach(() => TestBed.configureTestingModule({declarations: [MainComp, OtherComp, Simple]}));
@@ -283,7 +283,7 @@ describe('projection', () => {
     expect(fixture.nativeElement).toHaveText('BB()');
   });
 
-  // GH-2095 - https://github.com/angular/angular/issues/2095
+  // GH-2095 - https://github.com/ng-classic/angular/issues/2095
   // important as we are removing the ng-content element during compilation,
   // which could skrew up text node indices.
   it('should support text nodes after content tags', () => {

@@ -15,16 +15,16 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@angular/core": [
+      "@angular-classic/core": [
         "../"
       ],
-      "@angular/compiler": [
+      "@angular-classic/compiler": [
         "../../compiler"
       ],
-      "@angular/compiler-cli": [
+      "@angular-classic/compiler-cli": [
         "../../compiler-cli"
       ],
-      "@angular/compiler-cli/private/*": [
+      "@angular-classic/compiler-cli/private/*": [
         "../../compiler-cli/private/*"
       ]
     }

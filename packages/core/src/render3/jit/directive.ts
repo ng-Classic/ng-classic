@@ -44,7 +44,7 @@ import {isModuleWithProviders} from './util';
 let compilationDepth = 0;
 
 /**
- * Compile an Angular component according to its decorator metadata, and patch the resulting
+ * Compile an Angular Classiccomponent according to its decorator metadata, and patch the resulting
  * component def (ɵcmp) onto the component type.
  *
  * Compilation may be asynchronous (due to the need to resolve URLs for the component template or
@@ -87,7 +87,7 @@ export function compileComponent(type: Type<any>, metadata: Component): void {
 
         // This const was called `jitOptions` previously but had to be renamed to `options` because
         // of a bug with Terser that caused optimized JIT builds to throw a `ReferenceError`.
-        // This bug was investigated in https://github.com/angular/angular-cli/issues/17264.
+        // This bug was investigated in https://github.com/ng-classic/angular-cli/issues/17264.
         // We should not rename it back until https://github.com/terser/terser/issues/615 is fixed.
         const options = getJitOptions();
         let preserveWhitespaces = metadata.preserveWhitespaces;
@@ -320,7 +320,7 @@ function hasSelectorScope<T>(component: Type<T>): component is Type<T>&
 }
 
 /**
- * Compile an Angular directive according to its decorator metadata, and patch the resulting
+ * Compile an Angular Classicdirective according to its decorator metadata, and patch the resulting
  * directive def onto the component type.
  *
  * In the event that compilation is not immediate, `compileDirective` will return a `Promise` which
@@ -423,7 +423,7 @@ export function directiveMetadata(type: Type<any>, metadata: Directive): R3Direc
 }
 
 /**
- * Adds a directive definition to all parent classes of a type that don't have an Angular decorator.
+ * Adds a directive definition to all parent classes of a type that don't have an Angular Classicdecorator.
  */
 function addDirectiveDefToUndecoratedParents(type: Type<any>) {
   const objPrototype = Object.prototype;

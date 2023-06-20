@@ -1,6 +1,6 @@
-/* eslint-disable @angular-eslint/no-host-metadata-property */
+/* eslint-disable @angular-classic-eslint/no-host-metadata-property */
 // #docregion
-import { Directive } from '@angular/core';
+import { Directive } from '@angular-classic/core';
 
 @Directive({
   selector: '[tohValidator2]',

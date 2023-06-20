@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes } from '@angular-classic/router';
 
 import { AppComponent as S0101 } from '../01-01/app';
 

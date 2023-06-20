@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵCurrencyIndex, ɵExtraLocaleDataIndex, ɵfindLocaleData, ɵgetLocaleCurrencyCode, ɵgetLocalePluralCase, ɵLocaleDataIndex} from '@angular/core';
+import {ɵCurrencyIndex, ɵExtraLocaleDataIndex, ɵfindLocaleData, ɵgetLocaleCurrencyCode, ɵgetLocalePluralCase, ɵLocaleDataIndex} from '@angular-classic/core';
 
 import {CURRENCIES_EN, CurrenciesSymbols} from './currencies';
 
@@ -511,7 +511,7 @@ function checkFullData(data: any) {
   if (!data[ɵLocaleDataIndex.ExtraData]) {
     throw new Error(`Missing extra locale data for the locale "${
         data[ɵLocaleDataIndex
-                 .LocaleId]}". Use "registerLocaleData" to load new data. See the "I18n guide" on angular.io to know more.`);
+                 .LocaleId]}". Use "registerLocaleData" to load new data. See the "I18n guide" on angular-classic.com to know more.`);
   }
 }
 

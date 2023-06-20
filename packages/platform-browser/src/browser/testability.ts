@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {GetTestability, Testability, TestabilityRegistry, ɵglobal as global, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {GetTestability, Testability, TestabilityRegistry, ɵglobal as global, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from '../errors';
 

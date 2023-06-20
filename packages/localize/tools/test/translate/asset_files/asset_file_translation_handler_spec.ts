@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {absoluteFrom, AbsoluteFsPath, FileSystem, getFileSystem, PathSegment, relativeFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {runInEachFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {absoluteFrom, AbsoluteFsPath, FileSystem, getFileSystem, PathSegment, relativeFrom} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {runInEachFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 
 import {Diagnostics} from '../../../src/diagnostics';
 import {AssetTranslationHandler} from '../../../src/translate/asset_files/asset_translation_handler';

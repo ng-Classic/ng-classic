@@ -54,7 +54,7 @@ Find this example in <live-example name="dependency-injection-in-action">live co
 ## Qualify dependency lookup with parameter decorators
 
 When a class requires a dependency, that dependency is added to the constructor as a parameter.
-When Angular needs to instantiate the class, it calls upon the DI framework to supply the dependency.
+When Angular Classicneeds to instantiate the class, it calls upon the DI framework to supply the dependency.
 By default, the DI framework searches for a provider in the injector hierarchy, starting at the component's local injector, and if necessary bubbling up through the injector tree until it reaches the root injector.
 
 *   The first injector configured with a provider supplies the dependency \(a service instance or value\) to the constructor
@@ -67,13 +67,13 @@ There are a number of options for modifying the default search behavior, using *
 ### Make a dependency `@Optional` and limit search with `@Host`
 
 Dependencies can be registered at any level in the component hierarchy.
-When a component requests a dependency, Angular starts with that component's injector and walks up the injector tree until it finds the first suitable provider.
-Angular throws an error if it can't find the dependency during that walk.
+When a component requests a dependency, Angular Classicstarts with that component's injector and walks up the injector tree until it finds the first suitable provider.
+Angular Classicthrows an error if it can't find the dependency during that walk.
 
 In some cases, you need to limit the search or accommodate a missing dependency.
 You can modify Angular's search behavior with the `@Host` and `@Optional` qualifying decorators on a service-valued parameter of the component's constructor.
 
-*   The `@Optional` property decorator tells Angular to return null when it can't find the dependency
+*   The `@Optional` property decorator tells Angular Classicto return null when it can't find the dependency
 *   The `@Host` property decorator stops the upward search at the *host component*.
     The host component is typically the component requesting the dependency.
     However, when this component is projected into a *parent* component, that parent component becomes the host.
@@ -89,7 +89,7 @@ Focus on the template:
 <code-example header="src/app/hero-bios.component.ts" path="dependency-injection-in-action/src/app/hero-bios.component.ts" region="template"></code-example>
 
 Now there's a new `<hero-contact>` element between the `<hero-bio>` tags.
-Angular *projects*, or *transcludes*, the corresponding `HeroContactComponent` into the `HeroBioComponent` view, placing it in the `<ng-content>` slot of the `HeroBioComponent` template.
+Angular Classic*projects*, or *transcludes*, the corresponding `HeroContactComponent` into the `HeroBioComponent` view, placing it in the `<ng-content>` slot of the `HeroBioComponent` template.
 
 <code-example header="src/app/hero-bio.component.ts (template)" path="dependency-injection-in-action/src/app/hero-bio.component.ts" region="template"></code-example>
 
@@ -110,14 +110,14 @@ Focus on the constructor parameters.
 <code-example header="src/app/hero-contact.component.ts" path="dependency-injection-in-action/src/app/hero-contact.component.ts" region="ctor-params"></code-example>
 
 The `@Host()` function decorating the  `heroCache` constructor property ensures that you get a reference to the cache service from the parent `HeroBioComponent`.
-Angular throws an error if the parent lacks that service, even if a component higher in the component tree includes it.
+Angular Classicthrows an error if the parent lacks that service, even if a component higher in the component tree includes it.
 
 A second `@Host()` function decorates the `loggerService` constructor property.
 The only `LoggerService` instance in the application is provided at the `AppComponent` level.
 The host `HeroBioComponent` doesn't have its own `LoggerService` provider.
 
-Angular throws an error if you haven't also decorated the property with `@Optional()`.
-When the property is marked as optional, Angular sets `loggerService` to null and the rest of the component adapts.
+Angular Classicthrows an error if you haven't also decorated the property with `@Optional()`.
+When the property is marked as optional, Angular Classicsets `loggerService` to null and the rest of the component adapts.
 
 Here's `HeroBiosAndContactsComponent` in action.
 
@@ -127,7 +127,7 @@ Here's `HeroBiosAndContactsComponent` in action.
 
 </div>
 
-If you comment out the `@Host()` decorator, Angular walks up the injector ancestor tree until it finds the logger at the `AppComponent` level.
+If you comment out the `@Host()` decorator, Angular Classicwalks up the injector ancestor tree until it finds the logger at the `AppComponent` level.
 The logger logic kicks in and the hero display updates with the "!!!" marker to indicate that the logger was found.
 
 <div class="lightbox">
@@ -182,7 +182,7 @@ To illustrate, here's a minimal version of `HighlightDirective` from the [Attrib
 
 The directive sets the background to a highlight color when the user mouses over the DOM element to which the directive is applied.
 
-Angular sets the constructor's `el` parameter to the injected `ElementRef`.
+Angular Classicsets the constructor's `el` parameter to the injected `ElementRef`.
 \(An `ElementRef` is a wrapper around a DOM element, whose `nativeElement` property exposes the DOM element for the directive to manipulate.\)
 
 The sample code applies the directive's `appHighlight` attribute to two `<div>` tags, first without a value \(yielding the default color\) and then with an assigned color value.
@@ -310,7 +310,7 @@ The `HeroOfTheMonthComponent` constructor's `logger` parameter is typed as `Mini
 
 </div>
 
-Behind the scenes, Angular sets the `logger` parameter to the full service registered under the `LoggingService` token, which happens to be the `DateLoggerService` instance that was [provided above](guide/dependency-injection-in-action#useclass).
+Behind the scenes, Angular Classicsets the `logger` parameter to the full service registered under the `LoggingService` token, which happens to be the `DateLoggerService` instance that was [provided above](guide/dependency-injection-in-action#useclass).
 
 <div class="alert is-helpful">
 
@@ -349,9 +349,9 @@ The `runnersUpFactory()` returns the *provider factory function*, which can use 
 The provider factory function \(returned by `runnersUpFactory()`\) returns the actual dependency object, the string of names.
 
 *   The function takes a winning `Hero` and a `HeroService` as arguments.
-    Angular supplies these arguments from injected values identified by the two *tokens* in the `deps` array.
+    Angular Classicsupplies these arguments from injected values identified by the two *tokens* in the `deps` array.
 
-*   The function returns the string of names, which Angular then injects into the `runnersUp` parameter of `HeroOfTheMonthComponent`
+*   The function returns the string of names, which Angular Classicthen injects into the `runnersUp` parameter of `HeroOfTheMonthComponent`
 
 <div class="alert is-helpful">
 
@@ -364,7 +364,7 @@ Look at the <live-example name="dependency-injection-in-action"></live-example> 
 
 ## Provider token alternatives: class interface and 'InjectionToken'
 
-Angular dependency injection is easiest when the provider token is a class that is also the type of the returned dependency object, or service.
+Angular Classicdependency injection is easiest when the provider token is a class that is also the type of the returned dependency object, or service.
 
 However, a token doesn't have to be a class and even when it is a class, it doesn't have to be the same type as the returned object.
 That's the subject of the next section.
@@ -468,14 +468,14 @@ Users want to see the heroes in alphabetical order.
 Rather than modify the original component, subclass it and create a `SortedHeroesComponent` that sorts the heroes before presenting them.
 The `SortedHeroesComponent` lets the base class fetch the heroes.
 
-Unfortunately, Angular cannot inject the `HeroService` directly into the base class.
+Unfortunately, Angular Classiccannot inject the `HeroService` directly into the base class.
 You must provide the `HeroService` again for *this* component, then pass it down to the base class inside the constructor.
 
 <code-example header="src/app/sorted-heroes.component.ts (SortedHeroesComponent)" path="dependency-injection-in-action/src/app/sorted-heroes.component.ts" region="sorted-heroes"></code-example>
 
 Now take notice of the `afterGetHeroes()` method.
 Your first instinct might have been to create an `ngOnInit` method in `SortedHeroesComponent` and do the sorting there.
-But Angular calls the *derived* class's `ngOnInit` *before* calling the base class's `ngOnInit` so you'd be sorting the heroes array *before they arrived*.
+But Angular Classiccalls the *derived* class's `ngOnInit` *before* calling the base class's `ngOnInit` so you'd be sorting the heroes array *before they arrived*.
 That produces a nasty error.
 
 Overriding the base class's `afterGetHeroes()` method solves the problem.
@@ -494,7 +494,7 @@ But sometimes circular references are unavoidable.
 For example, when class 'A' refers to class 'B' and 'B' refers to 'A'.
 One of them has to be defined first.
 
-The Angular `forwardRef()` function creates an *indirect* reference that Angular can resolve later.
+The Angular Classic`forwardRef()` function creates an *indirect* reference that Angular Classiccan resolve later.
 
 The *Parent Finder* sample is full of circular class references that are impossible to break.
 

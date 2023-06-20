@@ -7,7 +7,7 @@ ts_library(
     srcs = ["index.ts"] + glob([
         "src/*.ts",
     ]),
-    module_name = "@angular/compiler-cli/src/ngtsc/core",
+    module_name = "@angular-classic/compiler-cli/src/ngtsc/core",
     deps = [
         ":api",
         "//packages:types",

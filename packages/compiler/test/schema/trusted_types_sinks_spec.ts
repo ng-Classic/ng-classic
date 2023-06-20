@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isTrustedTypesSink} from '@angular/compiler/src/schema/trusted_types_sinks';
+import {isTrustedTypesSink} from '@angular-classic/compiler/src/schema/trusted_types_sinks';
 
 {
   describe('isTrustedTypesSink', () => {

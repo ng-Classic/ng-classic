@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 
 import {assertFileNames, createModuleAndProjectWithDeclarations, humanizeDocumentSpanLike, LanguageServiceTestEnv} from '../testing';
 
@@ -18,7 +18,7 @@ describe('get template location for component', () => {
   it('finds location of inline template', () => {
     const files = {
       'app.ts': `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         template: '<div>{{ myProp }}</div>',
@@ -41,7 +41,7 @@ describe('get template location for component', () => {
   it('finds location of external template', () => {
     const files = {
       'app.ts': `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               templateUrl: './app.html',
@@ -64,7 +64,7 @@ describe('get template location for component', () => {
   it('finds correct location when there are multiple components in one file', () => {
     const files = {
       'app.ts': `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         templateUrl: './template1.html',
@@ -97,7 +97,7 @@ describe('get template location for component', () => {
   it('returns nothing when cursor is not in a component', () => {
     const files = {
       'app.ts': `
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({selector: 'my-dir'})
       export class MyDir {
@@ -115,7 +115,7 @@ describe('get template location for component', () => {
   it('returns nothing when cursor is not in a component', () => {
     const files = {
       'app.ts': `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       const x = 1;
 
@@ -135,7 +135,7 @@ describe('get template location for component', () => {
   it('returns template when cursor is on `class` keyword', () => {
     const files = {
       'app.ts': `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({template: 'abc'})
       export class MyDir {

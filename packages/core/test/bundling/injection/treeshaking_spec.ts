@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import '@angular/compiler';
+import '@angular-classic/compiler';
 import {INJECTOR, ScopedService} from './usage';
 
 

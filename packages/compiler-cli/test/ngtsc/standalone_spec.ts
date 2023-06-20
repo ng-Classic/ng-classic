@@ -28,7 +28,7 @@ runInEachFileSystem(() => {
     describe('component-side', () => {
       it('should compile a basic standalone component', () => {
         env.write('test.ts', `
-              import {Component, Directive} from '@angular/core';
+              import {Component, Directive} from '@angular-classic/core';
 
               @Directive({
                 selector: '[dir]',
@@ -58,7 +58,7 @@ runInEachFileSystem(() => {
 
       it('should compile a recursive standalone component', () => {
         env.write('test.ts', `
-              import {Component, Directive} from '@angular/core';
+              import {Component, Directive} from '@angular-classic/core';
 
               @Component({
                 selector: 'test-cmp',
@@ -75,7 +75,7 @@ runInEachFileSystem(() => {
 
       it('should compile a basic standalone pipe', () => {
         env.write('test.ts', `
-          import {Pipe} from '@angular/core';
+          import {Pipe} from '@angular-classic/core';
 
           @Pipe({
             standalone: true,
@@ -95,7 +95,7 @@ runInEachFileSystem(() => {
 
       it('should use existing imports for dependencies', () => {
         env.write('dep.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({
             standalone: true,
@@ -104,7 +104,7 @@ runInEachFileSystem(() => {
           export class TestDir {}
         `);
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           import {TestDir} from './dep';
 
           @Component({
@@ -124,7 +124,7 @@ runInEachFileSystem(() => {
 
       it('should compile a standalone component even in the presence of cycles', () => {
         env.write('dep.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           // This import creates a cycle, since 'test.ts' imports 'dir.ts'.
           import {TestType} from './test';
@@ -138,7 +138,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           import {TestDir} from './dep';
 
           export interface TestType {
@@ -162,7 +162,7 @@ runInEachFileSystem(() => {
 
       it('should compile a standalone component in a cycle with its module', () => {
         env.write('module.ts', `
-          import {Component, NgModule, forwardRef} from '@angular/core';
+          import {Component, NgModule, forwardRef} from '@angular-classic/core';
 
           import {StandaloneCmp} from './component';
 
@@ -181,7 +181,7 @@ runInEachFileSystem(() => {
         `);
 
         env.write('component.ts', `
-          import {Component, forwardRef} from '@angular/core';
+          import {Component, forwardRef} from '@angular-classic/core';
 
           import {Module} from './module';
 
@@ -205,7 +205,7 @@ runInEachFileSystem(() => {
 
       it('should error when a non-standalone component tries to use imports', () => {
         env.write('test.ts', `
-              import {Component, Directive} from '@angular/core';
+              import {Component, Directive} from '@angular-classic/core';
 
               @Directive({
                 selector: '[dir]',
@@ -228,7 +228,7 @@ runInEachFileSystem(() => {
 
       it('should compile a standalone component with schema support', () => {
         env.write('test.ts', `
-              import {Component, NO_ERRORS_SCHEMA} from '@angular/core';
+              import {Component, NO_ERRORS_SCHEMA} from '@angular-classic/core';
 
               @Component({
                 selector: 'test-cmp',
@@ -256,7 +256,7 @@ runInEachFileSystem(() => {
 
       it('should error when a non-standalone component tries to use schemas', () => {
         env.write('test.ts', `
-              import {Component, NO_ERRORS_SCHEMA} from '@angular/core';
+              import {Component, NO_ERRORS_SCHEMA} from '@angular-classic/core';
 
               @Component({
                 selector: 'test-cmp',
@@ -275,7 +275,7 @@ runInEachFileSystem(() => {
 
       it('should compile a standalone component that imports an NgModule', () => {
         env.write('test.ts', `
-              import {Component, Directive, NgModule} from '@angular/core';
+              import {Component, Directive, NgModule} from '@angular-classic/core';
 
               @Directive({
                 selector: '[dir]',
@@ -302,7 +302,7 @@ runInEachFileSystem(() => {
 
       it('should allow nested arrays in standalone component imports', () => {
         env.write('test.ts', `
-              import {Component, Directive} from '@angular/core';
+              import {Component, Directive} from '@angular-classic/core';
 
               @Directive({
                 selector: '[dir]',
@@ -326,7 +326,7 @@ runInEachFileSystem(() => {
 
       it('should deduplicate standalone component imports', () => {
         env.write('test.ts', `
-              import {Component, Directive} from '@angular/core';
+              import {Component, Directive} from '@angular-classic/core';
 
               @Directive({
                 selector: '[dir]',
@@ -350,7 +350,7 @@ runInEachFileSystem(() => {
 
       it('should error when a standalone component imports a non-standalone entity', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule} from '@angular/core';
+          import {Component, Directive, NgModule} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -387,7 +387,7 @@ runInEachFileSystem(() => {
       it('should error when a standalone component imports a ModuleWithProviders using a foreign function',
          () => {
            env.write('test.ts', `
-             import {Component, ModuleWithProviders, NgModule} from '@angular/core';
+             import {Component, ModuleWithProviders, NgModule} from '@angular-classic/core';
 
              @NgModule({})
              export class TestModule {}
@@ -427,7 +427,7 @@ runInEachFileSystem(() => {
 
       it('should error when a standalone component imports a ModuleWithProviders', () => {
         env.write('test.ts', `
-          import {Component, ModuleWithProviders, NgModule} from '@angular/core';
+          import {Component, ModuleWithProviders, NgModule} from '@angular-classic/core';
 
           @NgModule({})
           export class TestModule {
@@ -455,7 +455,7 @@ runInEachFileSystem(() => {
       it('should error when a standalone component imports a non-standalone entity, with a specific error when that entity is not exported',
          () => {
            env.write('test.ts', `
-            import {Component, Directive, NgModule} from '@angular/core';
+            import {Component, Directive, NgModule} from '@angular-classic/core';
 
             @Directive({
               selector: '[dir]',
@@ -490,7 +490,7 @@ runInEachFileSystem(() => {
 
       it('should type-check standalone component templates', () => {
         env.write('test.ts', `
-          import {Component, Input, NgModule} from '@angular/core';
+          import {Component, Input, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'not-standalone',
@@ -532,7 +532,7 @@ runInEachFileSystem(() => {
 
       it('should not spam errors if imports is misconfigured', () => {
         env.write('test.ts', `
-          import {Component, Input} from '@angular/core';
+          import {Component, Input} from '@angular-classic/core';
 
           @Component({
             standalone: true,
@@ -558,7 +558,7 @@ runInEachFileSystem(() => {
 
       it('should handle a forwardRef used inside `imports`', () => {
         env.write('test.ts', `
-          import {Component, forwardRef} from '@angular/core';
+          import {Component, forwardRef} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -585,7 +585,7 @@ runInEachFileSystem(() => {
     describe('NgModule-side', () => {
       it('should not allow a standalone component to be declared in an NgModule', () => {
         env.write('test.ts', `
-              import {Component, NgModule} from '@angular/core';
+              import {Component, NgModule} from '@angular-classic/core';
 
               @Component({
                 selector: 'test-cmp',
@@ -608,7 +608,7 @@ runInEachFileSystem(() => {
 
       it('should not allow a standalone pipe to be declared in an NgModule', () => {
         env.write('test.ts', `
-          import {Pipe, NgModule} from '@angular/core';
+          import {Pipe, NgModule} from '@angular-classic/core';
 
           @Pipe({
             name: 'test',
@@ -630,7 +630,7 @@ runInEachFileSystem(() => {
 
       it('should allow a standalone component to be imported by an NgModule', () => {
         env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'st-cmp',
@@ -657,7 +657,7 @@ runInEachFileSystem(() => {
 
       it('should allow a standalone directive to be imported by an NgModule', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule} from '@angular/core';
+          import {Component, Directive, NgModule} from '@angular-classic/core';
 
           @Directive({
             selector: '[st-dir]',
@@ -683,7 +683,7 @@ runInEachFileSystem(() => {
 
       it('should allow a standalone pipe to be imported by an NgModule', () => {
         env.write('test.ts', `
-          import {Component, Pipe, NgModule} from '@angular/core';
+          import {Component, Pipe, NgModule} from '@angular-classic/core';
 
           @Pipe({
             name: 'stpipe',
@@ -716,7 +716,7 @@ runInEachFileSystem(() => {
       it('should error when a standalone entity is exported by an NgModule without importing it first',
          () => {
            env.write('test.ts', `
-          import {Component, Directive, NgModule} from '@angular/core';
+          import {Component, Directive, NgModule} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -739,7 +739,7 @@ runInEachFileSystem(() => {
 
       it('should error when a non-standalone entity is imported into an NgModule', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule} from '@angular/core';
+          import {Component, Directive, NgModule} from '@angular-classic/core';
 
           @Directive({
             selector: '[dir]',
@@ -762,7 +762,7 @@ runInEachFileSystem(() => {
     describe('other types', () => {
       it('should compile a basic standalone directive', () => {
         env.write('test.ts', `
-              import {Directive} from '@angular/core';
+              import {Directive} from '@angular-classic/core';
 
               @Directive({
                 selector: '[dir]',
@@ -776,7 +776,7 @@ runInEachFileSystem(() => {
 
       it('should compile a basic standalone pipe', () => {
         env.write('test.ts', `
-              import {Pipe} from '@angular/core';
+              import {Pipe} from '@angular-classic/core';
 
               @Pipe({
                 name: 'testpipe',
@@ -792,14 +792,14 @@ runInEachFileSystem(() => {
     describe('from libraries', () => {
       it('should consume standalone directives from libraries', () => {
         env.write('lib.d.ts', `
-          import {ɵɵDirectiveDeclaration} from '@angular/core';
+          import {ɵɵDirectiveDeclaration} from '@angular-classic/core';
 
           export declare class StandaloneDir {
             static ɵdir: ɵɵDirectiveDeclaration<StandaloneDir, "[dir]", never, {}, {}, never, never, true>;
           }
         `);
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           import {StandaloneDir} from './lib';
 
           @Component({
@@ -818,14 +818,14 @@ runInEachFileSystem(() => {
 
       it('should consume standalone components from libraries', () => {
         env.write('lib.d.ts', `
-          import {ɵɵComponentDeclaration} from '@angular/core';
+          import {ɵɵComponentDeclaration} from '@angular-classic/core';
 
           export declare class StandaloneCmp {
             static ɵcmp: ɵɵComponentDeclaration<StandaloneCmp, "standalone-cmp", never, {}, {}, never, never, true>;
           }
         `);
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           import {StandaloneCmp} from './lib';
 
           @Component({
@@ -844,7 +844,7 @@ runInEachFileSystem(() => {
 
       it('should consume standalone pipes from libraries', () => {
         env.write('lib.d.ts', `
-          import {ɵɵPipeDeclaration} from '@angular/core';
+          import {ɵɵPipeDeclaration} from '@angular-classic/core';
 
           export declare class StandalonePipe {
             transform(value: any): any;
@@ -852,7 +852,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           import {StandalonePipe} from './lib';
 
           @Component({
@@ -873,7 +873,7 @@ runInEachFileSystem(() => {
 
       it('should compile imports using a const tuple in external library', () => {
         env.write('node_modules/external/index.d.ts', `
-          import {ɵɵDirectiveDeclaration} from '@angular/core';
+          import {ɵɵDirectiveDeclaration} from '@angular-classic/core';
 
           export declare class StandaloneDir {
             static ɵdir: ɵɵDirectiveDeclaration<StandaloneDir, "[dir]", never, {}, {}, never, never, true>;
@@ -882,7 +882,7 @@ runInEachFileSystem(() => {
           export declare const DECLARATIONS: readonly [typeof StandaloneDir];
         `);
         env.write('test.ts', `
-          import {Component, Directive} from '@angular/core';
+          import {Component, Directive} from '@angular-classic/core';
           import {DECLARATIONS} from 'external';
 
           @Component({
@@ -904,7 +904,7 @@ runInEachFileSystem(() => {
     describe('optimizations', () => {
       it('does emit standalone components in injector imports if they contain providers', () => {
         env.write('test.ts', `
-          import {Component, Injectable, NgModule} from '@angular/core';
+          import {Component, Injectable, NgModule} from '@angular-classic/core';
 
           @Injectable()
           export class Service {}
@@ -937,7 +937,7 @@ runInEachFileSystem(() => {
       it('does emit standalone components in injector imports if they import a NgModule from .d.ts',
          () => {
            env.write('dep.d.ts', `
-            import {ɵɵNgModuleDeclaration} from '@angular/core';
+            import {ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
             declare class DepModule {
               static ɵmod: ɵɵNgModuleDeclaration<DepModule, never, never, never>;
@@ -945,7 +945,7 @@ runInEachFileSystem(() => {
           `);
 
            env.write('test.ts', `
-            import {Component, Injectable, NgModule} from '@angular/core';
+            import {Component, Injectable, NgModule} from '@angular-classic/core';
             import {DepModule} from './dep';
 
             @Component({
@@ -971,7 +971,7 @@ runInEachFileSystem(() => {
       it('does emit standalone components in injector imports if they import a component from .d.ts',
          () => {
            env.write('dep.d.ts', `
-              import {ɵɵComponentDeclaration} from '@angular/core';
+              import {ɵɵComponentDeclaration} from '@angular-classic/core';
 
               export declare class DepCmp {
                 static ɵcmp: ɵɵComponentDeclaration<DepCmp, "dep-cmp", never, {}, {}, never, never, true>
@@ -979,7 +979,7 @@ runInEachFileSystem(() => {
             `);
 
            env.write('test.ts', `
-              import {Component, Injectable, NgModule} from '@angular/core';
+              import {Component, Injectable, NgModule} from '@angular-classic/core';
               import {DepCmp} from './dep';
 
               @Component({
@@ -1004,7 +1004,7 @@ runInEachFileSystem(() => {
 
       it('does not emit standalone directives or pipes in injector imports', () => {
         env.write('test.ts', `
-          import {Directive, NgModule, Pipe} from '@angular/core';
+          import {Directive, NgModule, Pipe} from '@angular-classic/core';
 
           @Directive({
             standalone: true,
@@ -1034,7 +1034,7 @@ runInEachFileSystem(() => {
 
       it('should exclude directives from NgModule imports if they expose no providers', () => {
         env.write('test.ts', `
-            import {Component, NgModule} from '@angular/core';
+            import {Component, NgModule} from '@angular-classic/core';
 
             @NgModule({})
             export class DepModule {}

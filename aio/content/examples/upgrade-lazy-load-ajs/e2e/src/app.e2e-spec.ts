@@ -14,12 +14,12 @@ describe('Lazy Loading AngularJS Tests', () => {
     await browser.get('/');
   });
 
-  it("should display 'Angular Home' when visiting the home page", async () => {
+  it("should display 'Angular ClassicHome' when visiting the home page", async () => {
     await pageElements.homePageHref.click();
 
     const paragraphText = await pageElements.homePageParagraph.getText();
 
-    expect(paragraphText).toEqual('Angular Home');
+    expect(paragraphText).toEqual('Angular ClassicHome');
   });
 
   it("should display 'Users Page' page when visiting the AngularJS page at /users", async () => {
@@ -31,12 +31,12 @@ describe('Lazy Loading AngularJS Tests', () => {
     expect(paragraphText).toEqual('Users Page');
   });
 
-  it("should display 'Angular 404' when visiting an invalid URL", async () => {
+  it("should display 'Angular Classic404' when visiting an invalid URL", async () => {
     await pageElements.notFoundPageHref.click();
 
     const paragraphText = await pageElements.notFoundPageParagraph.getText();
 
-    expect(paragraphText).toEqual('Angular 404');
+    expect(paragraphText).toEqual('Angular Classic404');
   });
 
   // Workaround for https://github.com/angular/protractor/issues/4724
@@ -68,7 +68,7 @@ describe('Lazy Loading AngularJS Tests', () => {
         }
 
         await browser.executeScriptWithDescription(
-            // TODO: must manually assign __TESTABILITY__NG1_APP_ROOT_INJECTOR__ (https://github.com/angular/angular/issues/22723)
+            // TODO: must manually assign __TESTABILITY__NG1_APP_ROOT_INJECTOR__ (https://github.com/ng-classic/angular/issues/22723)
             `window.__TESTABILITY__NG1_APP_ROOT_INJECTOR__ = angular.resumeBootstrap(arguments[0]) `
             + `|| angular.element('app-angular-js').injector();`,
             'resume bootstrap',

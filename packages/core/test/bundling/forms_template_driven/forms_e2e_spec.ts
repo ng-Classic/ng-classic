@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import '@angular/compiler';
+import '@angular-classic/compiler';
 
-import {withBody} from '@angular/private/testing';
+import {withBody} from '@angular-classic/private/testing';
 import * as path from 'path';
 
 const PACKAGE = 'angular/packages/core/test/bundling/forms_template_driven';

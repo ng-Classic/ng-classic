@@ -1,4 +1,4 @@
-import {Component, Injector, NgModule} from '@angular/core';
+import {Component, Injector, NgModule} from '@angular-classic/core';
 import {Lib1Module, Service} from 'lib1_built';
 
 @Component({

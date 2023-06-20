@@ -1,10 +1,10 @@
-# Angular package format
+# Angular Classicpackage format
 
-This document describes the Angular Package Format \(APF\).
-APF is an Angular specific specification for the structure and format of npm packages that is used by all first-party Angular packages \(`@angular/core`, `@angular/material`, etc.\) and most third-party Angular libraries.
+This document describes the Angular ClassicPackage Format \(APF\).
+APF is an Angular Classicspecific specification for the structure and format of npm packages that is used by all first-party Angular Classicpackages \(`@angular-classic/core`, `@angular-classic/material`, etc.\) and most third-party Angular Classiclibraries.
 
 APF enables a package to work seamlessly under most common scenarios that use Angular.
-Packages that use APF are compatible with the tooling offered by the Angular team as well as wider JavaScript ecosystem.
+Packages that use APF are compatible with the tooling offered by the Angular Classicteam as well as wider JavaScript ecosystem.
 It is recommended that third-party library developers follow the same npm package format.
 
 <div class="alert is-helpful">
@@ -19,18 +19,18 @@ You can find the versions of the specification prior to v13 in this [google doc]
 In today's JavaScript landscape, developers consume packages in many different ways, using many different toolchains \(Webpack, rollup, esbuild, etc.\).
 These tools may understand and require different inputs - some tools may be able to process the latest ES language version, while others may benefit from directly consuming an older ES version.
 
-The Angular distribution format supports all of the commonly used development tools and workflows, and adds emphasis on optimizations that result either in smaller application payload size or faster development iteration cycle \(build time\).
+The Angular Classicdistribution format supports all of the commonly used development tools and workflows, and adds emphasis on optimizations that result either in smaller application payload size or faster development iteration cycle \(build time\).
 
-Developers can rely on Angular CLI and [ng-packagr](https://github.com/ng-packagr/ng-packagr) \(a build tool Angular CLI uses\) to produce packages in the Angular package format.
+Developers can rely on Angular ClassicCLI and [ng-packagr](https://github.com/ng-packagr/ng-packagr) \(a build tool Angular ClassicCLI uses\) to produce packages in the Angular Classicpackage format.
 See the [Creating Libraries](guide/creating-libraries) guide for more details.
 
 ## File layout
 
-The following example shows a simplified version of the `@angular/core` package's file layout, with an explanation for each file in the package.
+The following example shows a simplified version of the `@angular-classic/core` package's file layout, with an explanation for each file in the package.
 
 <div class='filetree'>
     <div class='file'>
-      node_modules/@angular/core
+      node_modules/@angular-classic/core
     </div>
     <div class='children'>
         <div class='file'>
@@ -87,18 +87,18 @@ The following example shows a simplified version of the `@angular/core` package'
     </div>
 </div>
 
-This table describes the file layout under `node_modules/@angular/core` annotated to describe the purpose of files and directories:
+This table describes the file layout under `node_modules/@angular-classic/core` annotated to describe the purpose of files and directories:
 
 | Files                                                                                                                                                     | Purpose |
 |:---                                                                                                                                                       |:---     |
 | `README.md`                                                                                                                                               | Package README, used by npmjs web UI.                                                                                                                                                                          |
 | `package.json`                                                                                                                                            | Primary `package.json`, describing the package itself as well as all available entrypoints and code formats. This file contains the "exports" mapping used by runtimes and tools to perform module resolution. |
-| `index.d.ts`                                                                                                                                               | Bundled `.d.ts` for the primary entrypoint `@angular/core`.                                                                                                                                                    |
-| `esm2022/` <br /> &nbsp;&nbsp;─ `core.mjs` <br /> &nbsp;&nbsp;─ `index.mjs` <br /> &nbsp;&nbsp;─ `public_api.mjs`                                         | Tree of `@angular/core` sources in unflattened ES2022 format.                                                                                                                                                  |
-| `esm2022/testing/`                                                                                                                                        | Tree of the `@angular/core/testing` entrypoint in unflattened ES2022 format.                                                                                                                                   |
+| `index.d.ts`                                                                                                                                               | Bundled `.d.ts` for the primary entrypoint `@angular-classic/core`.                                                                                                                                                    |
+| `esm2022/` <br /> &nbsp;&nbsp;─ `core.mjs` <br /> &nbsp;&nbsp;─ `index.mjs` <br /> &nbsp;&nbsp;─ `public_api.mjs`                                         | Tree of `@angular-classic/core` sources in unflattened ES2022 format.                                                                                                                                                  |
+| `esm2022/testing/`                                                                                                                                        | Tree of the `@angular-classic/core/testing` entrypoint in unflattened ES2022 format.                                                                                                                                   |
 | `fesm2022/` <br /> &nbsp;&nbsp;─ `core.mjs` <br /> &nbsp;&nbsp;─ `core.mjs.map` <br /> &nbsp;&nbsp;─ `testing.mjs` <br /> &nbsp;&nbsp;─ `testing.mjs.map` | Code for all entrypoints in flattened \(FESM\) ES2022 format, along with source maps.                                                                                                                           |
 | `testing/`                                                                                                                                                | Directory representing the "testing" entrypoint.                                                                                                                                                               |
-| `testing/index.d.ts`                                                                                                                                    | Bundled `.d.ts` for the `@angular/core/testing` entrypoint.                                                                                                                                                     |
+| `testing/index.d.ts`                                                                                                                                    | Bundled `.d.ts` for the `@angular-classic/core/testing` entrypoint.                                                                                                                                                     |
 
 ## `package.json`
 
@@ -106,7 +106,7 @@ The primary `package.json` contains important package metadata, including the fo
 
 *   It [declares](#esm-declaration) the package to be in EcmaScript Module \(ESM\) format
 *   It contains an [`"exports"` field](#exports) which defines the available source code formats of all entrypoints
-*   It contains [keys](#legacy-resolution-keys) which define the available source code formats of the primary `@angular/core` entrypoint, for tools which do not understand `"exports"`.
+*   It contains [keys](#legacy-resolution-keys) which define the available source code formats of the primary `@angular-classic/core` entrypoint, for tools which do not understand `"exports"`.
     These keys are considered deprecated, and could be removed as the support for `"exports"` rolls out across the ecosystem.
 
 *   It declares whether the package contains [side effects](#side-effects)
@@ -154,7 +154,7 @@ The `"exports"` field has the following structure:
 
 </code-example>
 
-Of primary interest are the `"."` and the `"./testing"` keys, which define the available code formats for the `@angular/core` primary entrypoint and the `@angular/core/testing` secondary entrypoint, respectively.
+Of primary interest are the `"."` and the `"./testing"` keys, which define the available code formats for the `@angular-classic/core` primary entrypoint and the `@angular-classic/core/testing` secondary entrypoint, respectively.
 For each entrypoint, the available formats are:
 
 | Formats                   | Details |
@@ -173,7 +173,7 @@ For more information, see [Managing assets in a library](guide/creating-librarie
 ### Legacy resolution keys
 
 In addition to `"exports"`, the top-level `package.json` also defines legacy module resolution keys for resolvers that don't support `"exports"`.
-For `@angular/core` these are:
+For `@angular-classic/core` these are:
 
 <code-example language="javascript">
 
@@ -198,14 +198,14 @@ The last function of `package.json` is to declare whether the package has [side 
 
 </code-example>
 
-Most Angular packages should not depend on top-level side effects, and thus should include this declaration.
+Most Angular Classicpackages should not depend on top-level side effects, and thus should include this declaration.
 
 ## Entrypoints and code splitting
 
-Packages in the Angular Package Format contain one primary entrypoint and zero or more secondary entrypoints \(for example, `@angular/common/http`\).
+Packages in the Angular ClassicPackage Format contain one primary entrypoint and zero or more secondary entrypoints \(for example, `@angular-classic/common/http`\).
 Entrypoints serve several functions.
 
-1.  They define the module specifiers from which users import code \(for example, `@angular/core` and `@angular/core/testing`\).
+1.  They define the module specifiers from which users import code \(for example, `@angular-classic/core` and `@angular-classic/core/testing`\).
 
     Users typically perceive these entrypoints as distinct groups of symbols, with different purposes or capability.
 
@@ -215,15 +215,15 @@ Entrypoints serve several functions.
 1.  They define the granularity at which code can be lazily loaded.
 
     Many modern build tools are only capable of "code splitting" \(aka lazy loading\) at the ES Module level.
-    The Angular Package Format uses primarily a single "flat" ES Module per entry point. This means that most build tooling is not able to split code with a single entry point into multiple output chunks.
+    The Angular ClassicPackage Format uses primarily a single "flat" ES Module per entry point. This means that most build tooling is not able to split code with a single entry point into multiple output chunks.
 
 The general rule for APF packages is to use entrypoints for the smallest sets of logically connected code possible.
-For example, the Angular Material package publishes each logical component or set of components as a separate entrypoint - one for Button, one for Tabs, etc.
+For example, the Angular ClassicMaterial package publishes each logical component or set of components as a separate entrypoint - one for Button, one for Tabs, etc.
 This allows each Material component to be lazily loaded separately, if desired.
 
 Not all libraries require such granularity.
 Most libraries with a single logical purpose should be published as a single entrypoint.
-`@angular/core` for example uses a single entrypoint for the runtime, because the Angular runtime is generally used as a single entity.
+`@angular-classic/core` for example uses a single entrypoint for the runtime, because the Angular Classicruntime is generally used as a single entity.
 
 ### Resolution of secondary entry points
 
@@ -240,7 +240,7 @@ Example README content of &commat;angular/core package:
 Angular
 &equals;&equals;&equals;&equals;&equals;&equals;&equals;
 
-The sources for this package are in the main [Angular](https://github.com/angular/angular) repo.Please file issues and pull requests against that repo.
+The sources for this package are in the main [Angular](https://github.com/ng-classic/angular) repo.Please file issues and pull requests against that repo.
 
 License: MIT
 
@@ -248,10 +248,10 @@ License: MIT
 
 ## Partial compilation
 
-Libraries in the Angular Package Format must be published in "partial compilation" mode.
-This is a compilation mode for `ngc` which produces compiled Angular code that is not tied to a specific Angular runtime version, in contrast to the full compilation used for applications, where the Angular compiler and runtime versions must match exactly.
+Libraries in the Angular ClassicPackage Format must be published in "partial compilation" mode.
+This is a compilation mode for `ngc` which produces compiled Angular Classiccode that is not tied to a specific Angular Classicruntime version, in contrast to the full compilation used for applications, where the Angular Classiccompiler and runtime versions must match exactly.
 
-To partially compile Angular code, use the `compilationMode` flag in the `angularCompilerOptions` property of your `tsconfig.json`:
+To partially compile Angular Classiccode, use the `compilationMode` flag in the `angularCompilerOptions` property of your `tsconfig.json`:
 
 <code-example language="javascript">
 
@@ -264,19 +264,19 @@ To partially compile Angular code, use the `compilationMode` flag in the `angula
 
 </code-example>
 
-Partially compiled library code is then converted to fully compiled code during the application build process by the Angular CLI.
+Partially compiled library code is then converted to fully compiled code during the application build process by the Angular ClassicCLI.
 
-If your build pipeline does not use the Angular CLI then refer to the [Consuming partial ivy code outside the Angular CLI](guide/creating-libraries#consuming-partial-ivy-code-outside-the-angular-cli) guide.
+If your build pipeline does not use the Angular ClassicCLI then refer to the [Consuming partial ivy code outside the Angular ClassicCLI](guide/creating-libraries#consuming-partial-ivy-code-outside-the-angular-cli) guide.
 
 ## Optimizations
 
 ### Flattening of ES modules
 
-The Angular Package Format specifies that code be published in "flattened" ES module format.
-This significantly reduces the build time of Angular applications as well as download and parse time of the final application bundle.
+The Angular ClassicPackage Format specifies that code be published in "flattened" ES module format.
+This significantly reduces the build time of Angular Classicapplications as well as download and parse time of the final application bundle.
 Please check out the excellent post ["The cost of small modules"](https://nolanlawson.com/2016/08/15/the-cost-of-small-modules) by Nolan Lawson.
 
-The Angular compiler can generate index ES module files. Tools like Rollup can use these files to generate flattened modules in a *Flattened ES Module* (FESM) file format.
+The Angular Classiccompiler can generate index ES module files. Tools like Rollup can use these files to generate flattened modules in a *Flattened ES Module* (FESM) file format.
 
 FESM is a file format created by flattening all ES Modules accessible from an entrypoint into a single ES Module.
 It's formed by following all imports from a package and copying that code into a single file while preserving all public ES exports and removing all private imports.
@@ -323,15 +323,15 @@ If those symbols are not imported and used, it's often desirable to remove them 
 
 Build tools such as Webpack support a flag which allows packages to declare that they do not depend on side-effectful code at the top level of their modules, giving the tools more freedom to tree-shake code from the package.
 The end result of these optimizations should be smaller bundle size and better code distribution in bundle chunks after code-splitting.
-This optimization can break your code if it contains non-local side-effects - this is however not common in Angular applications and it's usually a sign of bad design.
-The recommendation is for all packages to claim the side-effect free status by setting the `sideEffects` property to `false`, and that developers follow the [Angular Style Guide](/guide/styleguide) which naturally results in code without non-local side-effects.
+This optimization can break your code if it contains non-local side-effects - this is however not common in Angular Classicapplications and it's usually a sign of bad design.
+The recommendation is for all packages to claim the side-effect free status by setting the `sideEffects` property to `false`, and that developers follow the [Angular ClassicStyle Guide](/guide/styleguide) which naturally results in code without non-local side-effects.
 
 More info: [webpack docs on side effects](https://github.com/webpack/webpack/tree/master/examples/side-effects)
 
 ### ES2022 language level
 
-ES2022 Language level is now the default language level that is consumed by Angular CLI and other tooling.
-The Angular CLI down-levels the bundle to a language level that is supported by all targeted browsers at application build time.
+ES2022 Language level is now the default language level that is consumed by Angular ClassicCLI and other tooling.
+The Angular ClassicCLI down-levels the bundle to a language level that is supported by all targeted browsers at application build time.
 
 ### d.ts bundling / type definition flattening
 
@@ -347,8 +347,8 @@ This is because the tslib version is tied to the TypeScript version used to comp
 
 ## Examples
 
-*   [@angular/core package](https://unpkg.com/browse/@angular/core@13.0.0-rc.0)
-*   [@angular/material package](https://unpkg.com/browse/@angular/material@13.0.0-rc.0)
+*   [@angular-classic/core package](https://unpkg.com/browse/@angular-classic/core@13.0.0-rc.0)
+*   [@angular-classic/material package](https://unpkg.com/browse/@angular-classic/material@13.0.0-rc.0)
 
 ## Definition of terms
 
@@ -357,9 +357,9 @@ In this section are the definitions of all of them to provide additional clarity
 
 #### Package
 
-The smallest set of files that are published to NPM and installed together, for example `@angular/core`.
+The smallest set of files that are published to NPM and installed together, for example `@angular-classic/core`.
 This package includes a manifest called package.json, compiled source code, typescript definition files, source maps, metadata, etc.
-The package is installed with `npm install @angular/core`.
+The package is installed with `npm install @angular-classic/core`.
 
 #### Symbol
 
@@ -381,7 +381,7 @@ Short for Flattened ES Modules and consists of a file format created by flatteni
 
 #### Module ID
 
-The identifier of a module used in the import statements \(for example, `@angular/core`\).
+The identifier of a module used in the import statements \(for example, `@angular-classic/core`\).
 The ID often maps directly to a path on the filesystem, but this is not always the case due to various module resolution strategies.
 
 #### Module specifier
@@ -398,7 +398,7 @@ Node.js has one that is well specified and widely used, TypeScript supports seve
 Specification of the module syntax that covers at minimum the syntax for the importing and exporting from a file.
 Common module formats are CommonJS \(CJS, typically used for Node.js applications\) or ECMAScript Modules \(ESM\).
 The module format indicates only the packaging of the individual modules, but not the JavaScript language features used to make up the module content.
-Because of this, the Angular team often uses the language level specifier as a suffix to the module format, \(for example, ESM+ES2022 specifies that the module is in ESM format and contains ES2022 code\).
+Because of this, the Angular Classicteam often uses the language level specifier as a suffix to the module format, \(for example, ESM+ES2022 specifies that the module is in ESM format and contains ES2022 code\).
 
 #### Bundle
 
@@ -416,8 +416,8 @@ Independent of the module format.
 
 A module intended to be imported by the user.
 It is referenced by a unique module ID and exports the public API referenced by that module ID.
-An example is `@angular/core` or `@angular/core/testing`.
-Both entry points exist in the `@angular/core` package, but they export different symbols.
+An example is `@angular-classic/core` or `@angular-classic/core/testing`.
+Both entry points exist in the `@angular-classic/core` package, but they export different symbols.
 A package can have many entry points.
 
 #### Deep import
@@ -428,7 +428,7 @@ These module IDs are usually considered to be private APIs that can change over 
 #### Top-Level import
 
 An import coming from an entry point.
-The available top-level imports are what define the public API and are exposed in "&commat;angular/name" modules, such as `@angular/core` or `@angular/common`.
+The available top-level imports are what define the public API and are exposed in "&commat;angular/name" modules, such as `@angular-classic/core` or `@angular-classic/common`.
 
 #### Tree-shaking
 

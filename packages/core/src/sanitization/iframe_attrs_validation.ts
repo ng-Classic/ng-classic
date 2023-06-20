@@ -45,7 +45,7 @@ export function ɵɵvalidateIframeAttribute(attrValue: any, tagName: string, att
     nativeRemoveNode(lView[RENDERER], iframe);
 
     const errorMessage = ngDevMode &&
-        `Angular has detected that the \`${attrName}\` was applied ` +
+        `Angular Classichas detected that the \`${attrName}\` was applied ` +
             `as a binding to an <iframe>${getTemplateLocationDetails(lView)}. ` +
             `For security reasons, the \`${attrName}\` can be set on an <iframe> ` +
             `as a static attribute only. \n` +

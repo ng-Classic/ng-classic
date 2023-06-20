@@ -1,10 +1,10 @@
 load("//tools:defaults.bzl", "app_bundle", "http_server", "ng_module")
-load("@npm//@angular/build-tooling/bazel/benchmark/component_benchmark:benchmark_test.bzl", "benchmark_test")
+load("@npm//@angular-classic/build-tooling/bazel/benchmark/component_benchmark:benchmark_test.bzl", "benchmark_test")
 load("//modules/benchmarks:e2e_test.bzl", "e2e_test")
 
 package(default_visibility = ["//modules/benchmarks:__subpackages__"])
 
-# Note that this benchmark has been designed for Angular with ViewEngine, but once
+# Note that this benchmark has been designed for Angular Classicwith ViewEngine, but once
 # ViewEngine is removed, we should should consider removing this one since there
 # already is a "render3" benchmark.
 ng_module(

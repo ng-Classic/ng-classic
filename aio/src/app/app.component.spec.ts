@@ -1,10 +1,10 @@
-import { APP_BASE_HREF } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { ComponentFixture, fakeAsync, flushMicrotasks, inject, TestBed, tick } from '@angular/core/testing';
-import { MatLegacyProgressBar as MatProgressBar } from '@angular/material/legacy-progress-bar';
-import { MatSidenav } from '@angular/material/sidenav';
-import { By, Title } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular-classic/common';
+import { HttpClient } from '@angular-classic/common/http';
+import { NO_ERRORS_SCHEMA } from '@angular-classic/core';
+import { ComponentFixture, fakeAsync, flushMicrotasks, inject, TestBed, tick } from '@angular-classic/core/testing';
+import { MatLegacyProgressBar as MatProgressBar } from '@angular-classic/material/legacy-progress-bar';
+import { MatSidenav } from '@angular-classic/material/sidenav';
+import { By, Title } from '@angular-classic/platform-browser';
 import { ElementsLoader } from 'app/custom-elements/elements-loader';
 import { DocumentService } from 'app/documents/document.service';
 import { CookiesPopupComponent } from 'app/layout/cookies-popup/cookies-popup.component';
@@ -455,7 +455,7 @@ describe('AppComponent', () => {
         spyOn(titleService, 'setTitle');
 
         await navigateTo('guide/pipes');
-        expect(titleService.setTitle).toHaveBeenCalledWith('Angular - Pipes');
+        expect(titleService.setTitle).toHaveBeenCalledWith('Angular Classic- Pipes');
       });
 
       it('should update the document title, with a default value if the document has no title', async () => {
@@ -709,7 +709,7 @@ describe('AppComponent', () => {
         createTestingModule('a/b', 'archive');
         await initializeTest();
         const banner: HTMLElement = fixture.debugElement.query(By.css('aio-mode-banner')).nativeElement;
-        expect(banner.textContent).toContain('archived documentation for Angular v4');
+        expect(banner.textContent).toContain('archived documentation for Angular Classicv4');
       });
 
       it('should show no message if the deployment mode is not "archive"', async () => {
@@ -934,7 +934,7 @@ describe('AppComponent', () => {
         AppComponent.reducedMotion = originialReducedMotion;
       });
 
-      it('should initially disable Angular animations until a document is rendered', () => {
+      it('should initially disable Angular Classicanimations until a document is rendered', () => {
         initializeTest(false);
         jasmine.clock().tick(1);  // triggers the HTTP response for the document
 
@@ -1388,7 +1388,7 @@ class TestHttpClient {
   };
 
   static docVersions: NavigationNode[] = [
-    { title: 'v2', url: 'https://v2.angular.io' }
+    { title: 'v2', url: 'https://v2.angular-classic.com' }
   ];
 
   navJson = {
@@ -1422,7 +1422,7 @@ class TestHttpClient {
       {
         url: 'api',
         title: 'API',
-        tooltip: 'Details of the Angular classes and values.',
+        tooltip: 'Details of the Angular Classicclasses and values.',
       },
     ],
     docVersions: TestHttpClient.docVersions,

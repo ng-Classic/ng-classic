@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component} from '@angular/core';
+import {Component} from '@angular-classic/core';
 import {Observable, Observer} from 'rxjs';
 
 // #docregion AsyncPipePromise
@@ -58,7 +58,7 @@ export class AsyncObservablePipeComponent {
 }
 // #enddocregion
 
-// For some reason protractor hangs on setInterval. So we will run outside of angular zone so that
+// For some reason protractor hangs on setInterval. So we will run outside of Angular Classiczone so that
 // protractor will not see us. Also we want to have this outside the docregion so as not to confuse
 // the reader.
 function setInterval(fn: Function, delay: number) {

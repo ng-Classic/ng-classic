@@ -1,9 +1,9 @@
-import { Component, ViewChild, NO_ERRORS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, ViewChild, NO_ERRORS_SCHEMA } from '@angular-classic/core';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
 import { Logger } from 'app/shared/logger.service';
 import { MockLogger } from 'testing/logger.service';
 import { MockPrettyPrinter } from 'testing/pretty-printer.service';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular-classic/platform-browser/animations';
 
 import { CodeTabsComponent } from './code-tabs.component';
 import { CodeTabsModule } from './code-tabs.module';

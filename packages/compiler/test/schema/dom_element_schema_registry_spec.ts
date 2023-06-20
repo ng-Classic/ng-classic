@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DomElementSchemaRegistry} from '@angular/compiler/src/schema/dom_element_schema_registry';
-import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, SecurityContext} from '@angular/core';
+import {DomElementSchemaRegistry} from '@angular-classic/compiler/src/schema/dom_element_schema_registry';
+import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, SecurityContext} from '@angular-classic/core';
 
 import {Element} from '../../src/ml_parser/ast';
 import {HtmlParser} from '../../src/ml_parser/html_parser';
@@ -31,7 +31,7 @@ import {extractSchema} from './schema_extractor';
       expect(registry.hasElement('abc', [])).toBeFalsy();
     });
 
-    // https://github.com/angular/angular/issues/11219
+    // https://github.com/ng-classic/angular/issues/11219
     it('should detect elements missing from chrome', () => {
       expect(registry.hasElement('data', [])).toBeTruthy();
       expect(registry.hasElement('menuitem', [])).toBeTruthy();
@@ -54,7 +54,7 @@ import {extractSchema} from './schema_extractor';
       expect(registry.hasProperty('div', 'unknown', [])).toBeFalsy();
     });
 
-    // https://github.com/angular/angular/issues/11219
+    // https://github.com/ng-classic/angular/issues/11219
     it('should detect properties on elements missing from Chrome', () => {
       expect(registry.hasProperty('data', 'value', [])).toBeTruthy();
 
@@ -173,7 +173,7 @@ If 'onAnything' is a directive input, make sure the directive is imported by the
       expect(registry.securityContext('p', 'formaction', true)).toBe(SecurityContext.URL);
     });
 
-    describe('Angular custom elements', () => {
+    describe('Angular Classiccustom elements', () => {
       it('should support <ng-container>', () => {
         expect(registry.hasProperty('ng-container', 'id', [])).toBeFalsy();
       });

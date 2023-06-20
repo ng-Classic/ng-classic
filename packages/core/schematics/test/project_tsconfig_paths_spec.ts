@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HostTree} from '@angular-devkit/schematics';
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-classic-devkit/schematics';
+import {UnitTestTree} from '@angular-classic-devkit/schematics/testing';
 
 import {getProjectTsConfigPaths} from '../utils/project_tsconfig_paths';
 

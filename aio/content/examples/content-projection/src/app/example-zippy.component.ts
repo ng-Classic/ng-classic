@@ -1,4 +1,4 @@
-import { Component, Directive, Input, TemplateRef, ContentChild, HostBinding, HostListener } from '@angular/core';
+import { Component, Directive, Input, TemplateRef, ContentChild, HostBinding, HostListener } from '@angular-classic/core';
 
 @Directive({
   selector: 'button[appExampleZippyToggle]',

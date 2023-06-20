@@ -12,8 +12,8 @@ import {computeMsgId} from '../../../../compiler/src/i18n/digest';
 import {BLOCK_MARKER, ID_SEPARATOR, LEGACY_ID_INDICATOR, MEANING_SEPARATOR} from './constants';
 
 /**
- * Re-export this helper function so that users of `@angular/localize` don't need to actively import
- * from `@angular/compiler`.
+ * Re-export this helper function so that users of `@angular-classic/localize` don't need to actively import
+ * from `@angular-classic/compiler`.
  */
 export {computeMsgId};
 
@@ -41,14 +41,14 @@ export type TargetMessage = string;
 export type MessageId = string;
 
 /**
- * Declares a copy of the `AbsoluteFsPath` branded type in `@angular/compiler-cli` to avoid an
- * import into `@angular/compiler-cli`. The compiler-cli's declaration files are not necessarily
- * compatible with web environments that use `@angular/localize`, and would inadvertently include
- * `typescript` declaration files in any compilation unit that uses `@angular/localize` (which
+ * Declares a copy of the `AbsoluteFsPath` branded type in `@angular-classic/compiler-cli` to avoid an
+ * import into `@angular-classic/compiler-cli`. The compiler-cli's declaration files are not necessarily
+ * compatible with web environments that use `@angular-classic/localize`, and would inadvertently include
+ * `typescript` declaration files in any compilation unit that uses `@angular-classic/localize` (which
  * increases parsing time and memory usage during builds) using a default import that only
  * type-checks when `allowSyntheticDefaultImports` is enabled.
  *
- * @see https://github.com/angular/angular/issues/45179
+ * @see https://github.com/ng-classic/angular/issues/45179
  */
 type AbsoluteFsPathLocalizeCopy = string&{_brand: 'AbsoluteFsPath'};
 

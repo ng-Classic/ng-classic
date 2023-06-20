@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, NgModule, OnInit, TemplateRef, ViewChild} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {Component, NgModule, OnInit, TemplateRef, ViewChild} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 import {Subject} from 'rxjs';
 
 

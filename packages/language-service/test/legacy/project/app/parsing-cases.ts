@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, EventEmitter, Input, OnChanges, Output, Pipe, PipeTransform, SimpleChanges, TemplateRef, ViewContainerRef} from '@angular/core';
+import {Component, Directive, EventEmitter, Input, OnChanges, Output, Pipe, PipeTransform, SimpleChanges, TemplateRef, ViewContainerRef} from '@angular-classic/core';
 
 import {Hero} from './app.component';
 

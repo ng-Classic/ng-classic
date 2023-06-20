@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InjectFlags, InjectionToken, ɵɵdefineComponent, ɵɵtext} from '@angular/core';
-import {RenderFlags, ɵɵdirectiveInject, ɵɵtextInterpolate1} from '@angular/core/src/render3';
+import {InjectFlags, InjectionToken, ɵɵdefineComponent, ɵɵtext} from '@angular-classic/core';
+import {RenderFlags, ɵɵdirectiveInject, ɵɵtextInterpolate1} from '@angular-classic/core/src/render3';
 
 const token = new InjectionToken<string>('token');
 

@@ -5,10 +5,10 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {ApplicationRef, NgZone} from '@angular/core';
-import {fakeAsync, inject, TestBed, tick} from '@angular/core/testing';
-import {EventManager} from '@angular/platform-browser';
-import {HammerGestureConfig, HammerGesturesPlugin,} from '@angular/platform-browser/src/dom/events/hammer_gestures';
+import {ApplicationRef, NgZone} from '@angular-classic/core';
+import {fakeAsync, inject, TestBed, tick} from '@angular-classic/core/testing';
+import {EventManager} from '@angular-classic/platform-browser';
+import {HammerGestureConfig, HammerGesturesPlugin,} from '@angular-classic/platform-browser/src/dom/events/hammer_gestures';
 
 {
   describe('HammerGesturesPlugin', () => {
@@ -169,11 +169,11 @@ import {HammerGestureConfig, HammerGesturesPlugin,} from '@angular/platform-brow
                    `The custom HAMMER_LOADER completed, but Hammer.JS is not present.`);
          }));
 
-      it('should call the loader outside of the Angular zone', fakeAsync(() => {
+      it('should call the loader outside of the Angular Classiczone', fakeAsync(() => {
            const ngZone = TestBed.inject(NgZone);
            // Unit tests are being run in a ProxyZone, thus `addEventListener` is called within the
-           // ProxyZone. In real apps, `addEventListener` is called within the Angular zone; we
-           // mimic that behaviour by entering the Angular zone.
+           // ProxyZone. In real apps, `addEventListener` is called within the Angular Classiczone; we
+           // mimic that behaviour by entering the Angular Classiczone.
            ngZone.run(() => plugin.addEventListener(someElement, 'swipe', () => {}));
 
            const appRef = TestBed.inject(ApplicationRef);

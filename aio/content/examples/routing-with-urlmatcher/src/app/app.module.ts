@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { FormsModule } from '@angular-classic/forms';
 // #docregion import
-import { RouterModule, UrlSegment } from '@angular/router';
+import { RouterModule, UrlSegment } from '@angular-classic/router';
 // #enddocregion import
 
 import { AppComponent } from './app.component';

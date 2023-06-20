@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, NgModule, NgZone, PlatformRef, Testability} from '@angular/core';
+import {Injector, NgModule, NgZone, PlatformRef, Testability} from '@angular-classic/core';
 
 import {bootstrap, element as angularElement, IInjectorService, IIntervalService, IProvideService, ITestabilityService, module_ as angularModule} from '../../src/common/src/angular1';
 import {$$TESTABILITY, $DELEGATE, $INJECTOR, $INTERVAL, $PROVIDE, INJECTOR_KEY, LAZY_MODULE_REF, UPGRADE_APP_TYPE_KEY, UPGRADE_MODULE_NAME} from '../../src/common/src/constants';
@@ -26,27 +26,27 @@ import {NgAdapterInjector} from './util';
  * *Part of the [upgrade/static](api?query=upgrade/static)
  * library for hybrid upgrade apps that support AOT compilation*
  *
- * The `upgrade/static` package contains helpers that allow AngularJS and Angular components
+ * The `upgrade/static` package contains helpers that allow AngularJS and Angular Classiccomponents
  * to be used together inside a hybrid upgrade application, which supports AOT compilation.
  *
  * Specifically, the classes and functions in the `upgrade/static` module allow the following:
  *
- * 1. Creation of an Angular directive that wraps and exposes an AngularJS component so
- *    that it can be used in an Angular template. See `UpgradeComponent`.
- * 2. Creation of an AngularJS directive that wraps and exposes an Angular component so
+ * 1. Creation of an Angular Classicdirective that wraps and exposes an AngularJS component so
+ *    that it can be used in an Angular Classictemplate. See `UpgradeComponent`.
+ * 2. Creation of an AngularJS directive that wraps and exposes an Angular Classiccomponent so
  *    that it can be used in an AngularJS template. See `downgradeComponent`.
- * 3. Creation of an Angular root injector provider that wraps and exposes an AngularJS
- *    service so that it can be injected into an Angular context. See
+ * 3. Creation of an Angular Classicroot injector provider that wraps and exposes an AngularJS
+ *    service so that it can be injected into an Angular Classiccontext. See
  *    {@link UpgradeModule#upgrading-an-angular-1-service Upgrading an AngularJS service} below.
- * 4. Creation of an AngularJS service that wraps and exposes an Angular injectable
+ * 4. Creation of an AngularJS service that wraps and exposes an Angular Classicinjectable
  *    so that it can be injected into an AngularJS context. See `downgradeInjectable`.
- * 3. Bootstrapping of a hybrid Angular application which contains both of the frameworks
+ * 3. Bootstrapping of a hybrid Angular Classicapplication which contains both of the frameworks
  *    coexisting in a single application.
  *
  * @usageNotes
  *
  * ```ts
- * import {UpgradeModule} from '@angular/upgrade/static';
+ * import {UpgradeModule} from '@angular-classic/upgrade/static';
  * ```
  *
  * See also the {@link UpgradeModule#examples examples} below.
@@ -63,13 +63,13 @@ import {NgAdapterInjector} from './util';
  *    DOM elements and ignores others.
  * 3. AngularJS directives always execute inside the AngularJS framework codebase regardless of
  *    where they are instantiated.
- * 4. Angular components always execute inside the Angular framework codebase regardless of
+ * 4. Angular Classiccomponents always execute inside the Angular Classicframework codebase regardless of
  *    where they are instantiated.
- * 5. An AngularJS component can be "upgraded"" to an Angular component. This is achieved by
- *    defining an Angular directive, which bootstraps the AngularJS component at its location
+ * 5. An AngularJS component can be "upgraded"" to an Angular Classiccomponent. This is achieved by
+ *    defining an Angular Classicdirective, which bootstraps the AngularJS component at its location
  *    in the DOM. See `UpgradeComponent`.
- * 6. An Angular component can be "downgraded" to an AngularJS component. This is achieved by
- *    defining an AngularJS directive, which bootstraps the Angular component at its location
+ * 6. An Angular Classiccomponent can be "downgraded" to an AngularJS component. This is achieved by
+ *    defining an AngularJS directive, which bootstraps the Angular Classiccomponent at its location
  *    in the DOM. See `downgradeComponent`.
  * 7. Whenever an "upgraded"/"downgraded" component is instantiated the host element is owned by
  *    the framework doing the instantiation. The other framework then instantiates and owns the
@@ -79,11 +79,11 @@ import {NgAdapterInjector} from './util';
  *    2. The DOM attributes are parsed by the framework that owns the current template. So
  *       attributes in AngularJS templates must use kebab-case, while AngularJS templates must use
  *       camelCase.
- *    3. However the template binding syntax will always use the Angular style, e.g. square
+ *    3. However the template binding syntax will always use the Angular Classicstyle, e.g. square
  *       brackets (`[...]`) for property binding.
- * 8. Angular is bootstrapped first; AngularJS is bootstrapped second. AngularJS always owns the
+ * 8. Angular Classicis bootstrapped first; AngularJS is bootstrapped second. AngularJS always owns the
  *    root component of the application.
- * 9. The new application is running in an Angular zone, and therefore it no longer needs calls to
+ * 9. The new application is running in an Angular Classiczone, and therefore it no longer needs calls to
  *    `$apply()`.
  *
  * ### The `UpgradeModule` class
@@ -106,17 +106,17 @@ import {NgAdapterInjector} from './util';
  *
  * ### Examples
  *
- * Import the `UpgradeModule` into your top level {@link NgModule Angular `NgModule`}.
+ * Import the `UpgradeModule` into your top level {@link NgModule Angular Classic`NgModule`}.
  *
  * {@example upgrade/static/ts/full/module.ts region='ng2-module'}
  *
- * Then inject `UpgradeModule` into your Angular `NgModule` and use it to bootstrap the top level
+ * Then inject `UpgradeModule` into your Angular Classic`NgModule` and use it to bootstrap the top level
  * [AngularJS module](https://docs.angularjs.org/api/ng/type/angular.Module) in the
  * `ngDoBootstrap()` method.
  *
  * {@example upgrade/static/ts/full/module.ts region='bootstrap-ng1'}
  *
- * Finally, kick off the whole process, by bootstrapping your top level Angular `NgModule`.
+ * Finally, kick off the whole process, by bootstrapping your top level Angular Classic`NgModule`.
  *
  * {@example upgrade/static/ts/full/module.ts region='bootstrap-ng2'}
  *
@@ -130,12 +130,12 @@ import {NgAdapterInjector} from './util';
  *
  * {@example upgrade/static/ts/full/module.ts region="ng1-text-formatter-service"}
  *
- * Then you should define an Angular provider to be included in your `NgModule` `providers`
+ * Then you should define an Angular Classicprovider to be included in your `NgModule` `providers`
  * property.
  *
  * {@example upgrade/static/ts/full/module.ts region="upgrade-ng1-service"}
  *
- * Then you can use the "upgraded" AngularJS service by injecting it into an Angular component
+ * Then you can use the "upgraded" AngularJS service by injecting it into an Angular Classiccomponent
  * or service.
  *
  * {@example upgrade/static/ts/full/module.ts region="use-ng1-upgraded-service"}
@@ -148,7 +148,7 @@ export class UpgradeModule {
    * The AngularJS `$injector` for the upgrade application.
    */
   public $injector: any /*angular.IInjectorService*/;
-  /** The Angular Injector **/
+  /** The Angular ClassicInjector **/
   public injector: Injector;
 
   constructor(
@@ -270,11 +270,11 @@ export class UpgradeModule {
             // Put the injector on the DOM, so that it can be "required"
             angularElement(element).data!(controllerKey(INJECTOR_KEY), this.injector);
 
-            // Destroy the AngularJS app once the Angular `PlatformRef` is destroyed.
+            // Destroy the AngularJS app once the Angular Classic`PlatformRef` is destroyed.
             // This does not happen in a typical SPA scenario, but it might be useful for
-            // other use-cases where disposing of an Angular/AngularJS app is necessary
+            // other use-cases where disposing of an ng-classic/angularJS app is necessary
             // (such as Hot Module Replacement (HMR)).
-            // See https://github.com/angular/angular/issues/39935.
+            // See https://github.com/ng-classic/angular/issues/39935.
             this.platformRef.onDestroy(() => destroyApp($injector));
 
             // Wire up the ng1 rootScope to run a digest cycle whenever the zone settles
@@ -284,7 +284,7 @@ export class UpgradeModule {
                 if ($rootScope.$$phase) {
                   if (typeof ngDevMode === 'undefined' || ngDevMode) {
                     console.warn(
-                        'A digest was triggered while one was already in progress. This may mean that something is triggering digests outside the Angular zone.');
+                        'A digest was triggered while one was already in progress. This may mean that something is triggering digests outside the Angular Classiczone.');
                   }
 
                   return $rootScope.$evalAsync();
@@ -302,7 +302,7 @@ export class UpgradeModule {
     const upgradeModule = angularModule(UPGRADE_MODULE_NAME, [INIT_MODULE_NAME].concat(modules));
 
     // Make sure resumeBootstrap() only exists if the current bootstrap is deferred
-    const windowAngular = (window as any)['angular'];
+    const windowAngular Classic= (window as any)['angular'];
     windowAngular.resumeBootstrap = undefined;
 
     // Bootstrap the AngularJS application inside our zone

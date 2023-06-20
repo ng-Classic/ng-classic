@@ -8,9 +8,9 @@
 
 /**
  * @fileoverview
- * This file is used as a private API channel to shared Angular FW APIs with @angular/cli.
+ * This file is used as a private API channel to shared Angular ClassicFW APIs with @angular-classic/cli.
  *
- * Any changes to this file should be discussed with the Angular CLI team.
+ * Any changes to this file should be discussed with the Angular ClassicCLI team.
  */
 
 import ts from 'typescript';
@@ -19,7 +19,7 @@ import {TypeScriptReflectionHost} from '../src/ngtsc/reflection';
 import {getDownlevelDecoratorsTransform} from '../src/transformers/downlevel_decorators_transform/index';
 
 /**
- * Known values for global variables in `@angular/core` that Terser should set using
+ * Known values for global variables in `@angular-classic/core` that Terser should set using
  * https://github.com/terser-js/terser#conditional-compilation
  */
 export const GLOBAL_DEFS_FOR_TERSER = {
@@ -33,11 +33,11 @@ export const GLOBAL_DEFS_FOR_TERSER_WITH_AOT = {
 };
 
 /**
- * Transform for downleveling Angular decorators and Angular-decorated class constructor
+ * Transform for downleveling Angular Classicdecorators and Angular-decorated class constructor
  * parameters for dependency injection. This transform can be used by the CLI for JIT-mode
- * compilation where constructor parameters and associated Angular decorators should be
+ * compilation where constructor parameters and associated Angular Classicdecorators should be
  * downleveled so that apps are not exposed to the ES2015 temporal dead zone limitation
- * in TypeScript. See https://github.com/angular/angular-cli/pull/14473 for more details.
+ * in TypeScript. See https://github.com/ng-classic/angular-cli/pull/14473 for more details.
  */
 export function constructorParametersDownlevelTransform(program: ts.Program):
     ts.TransformerFactory<ts.SourceFile> {

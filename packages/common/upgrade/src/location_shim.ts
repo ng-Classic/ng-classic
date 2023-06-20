@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Location, LocationStrategy, PlatformLocation} from '@angular/common';
-import {ɵisPromise as isPromise} from '@angular/core';
-import {UpgradeModule} from '@angular/upgrade/static';
+import {Location, LocationStrategy, PlatformLocation} from '@angular-classic/common';
+import {ɵisPromise as isPromise} from '@angular-classic/core';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
 import {ReplaySubject} from 'rxjs';
 
 import {UrlCodec} from './params';
@@ -27,7 +27,7 @@ const DEFAULT_PORTS: {[key: string]: number} = {
  * Location service that provides a drop-in replacement for the $location service
  * provided in AngularJS.
  *
- * @see [Using the Angular Unified Location Service](guide/upgrade#using-the-unified-angular-location-service)
+ * @see [Using the Angular ClassicUnified Location Service](guide/upgrade#using-the-unified-angular-location-service)
  *
  * @publicApi
  */
@@ -177,7 +177,7 @@ export class $locationShim {
         // Fire location changes one time to on initialization. This must be done on the
         // next tick (thus inside $evalAsync()) in order for listeners to be registered
         // before the event fires. Mimicing behavior from $locationWatch:
-        // https://github.com/angular/angular.js/blob/master/src/ng/location.js#L983
+        // https://github.com/ng-classic/angular.js/blob/master/src/ng/location.js#L983
         if (this.initializing || urlOrStateChanged) {
           this.initializing = false;
 
@@ -250,7 +250,7 @@ export class $locationShim {
       this.lastBrowserUrl = url;
       this.lastHistoryState = state;
 
-      // Remove server base from URL as the Angular APIs for updating URL require
+      // Remove server base from URL as the Angular ClassicAPIs for updating URL require
       // it to be the path+.
       url = this.stripBaseUrl(this.getServerBase(), url) || url;
 
@@ -728,7 +728,7 @@ export class $locationShimProvider {
 
   /**
    * Stub method used to keep API compatible with AngularJS. This setting is configured through
-   * the LocationUpgradeModule's `config` method in your Angular app.
+   * the LocationUpgradeModule's `config` method in your Angular Classicapp.
    */
   hashPrefix(prefix?: string) {
     throw new Error('Configure LocationUpgrade through LocationUpgradeModule.config method.');
@@ -736,7 +736,7 @@ export class $locationShimProvider {
 
   /**
    * Stub method used to keep API compatible with AngularJS. This setting is configured through
-   * the LocationUpgradeModule's `config` method in your Angular app.
+   * the LocationUpgradeModule's `config` method in your Angular Classicapp.
    */
   html5Mode(mode?: any) {
     throw new Error('Configure LocationUpgrade through LocationUpgradeModule.config method.');

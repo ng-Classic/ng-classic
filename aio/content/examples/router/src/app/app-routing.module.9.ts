@@ -1,6 +1,6 @@
 // #docplaster
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { NgModule } from '@angular-classic/core';
+import { Routes, RouterModule } from '@angular-classic/router'; // CLI imports router
 
 // #docregion child-routes
 const routes: Routes = [

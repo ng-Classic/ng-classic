@@ -1,7 +1,7 @@
 # Glossary
 
-Angular has its own vocabulary.
-Most Angular terms are common English words or computing terms that have a specific meaning within the Angular system.
+Angular Classichas its own vocabulary.
+Most Angular Classicterms are common English words or computing terms that have a specific meaning within the Angular Classicsystem.
 
 This glossary lists the most prominent terms and a few less familiar ones with unusual or unexpected definitions.
 
@@ -38,22 +38,22 @@ This glossary lists the most prominent terms and a few less familiar ones with u
 
 ## ahead-of-time (AOT) compilation
 
-The Angular ahead-of-time \(AOT\) compiler converts Angular HTML and TypeScript code into efficient JavaScript code during the build phase. The build phase occurs before the browser downloads and runs the rendered code.
+The Angular Classicahead-of-time \(AOT\) compiler converts Angular ClassicHTML and TypeScript code into efficient JavaScript code during the build phase. The build phase occurs before the browser downloads and runs the rendered code.
 This is the best compilation mode for production environments, with decreased load time and increased performance compared to [just-in-time (JIT) compilation][AioGuideGlossaryJustInTimeJitCompilation].
 
-By compiling your application using the `ngc` command-line tool, you can bootstrap directly to a module factory, so you do not need to include the Angular compiler in your JavaScript bundle.
+By compiling your application using the `ngc` command-line tool, you can bootstrap directly to a module factory, so you do not need to include the Angular Classiccompiler in your JavaScript bundle.
 
-## Angular element
+## Angular Classicelement
 
-An Angular [component][AioGuideGlossaryComponent] packaged as a [custom element][AioGuideGlossaryCustomElement].
+An Angular Classic[component][AioGuideGlossaryComponent] packaged as a [custom element][AioGuideGlossaryCustomElement].
 
-Learn more in [Angular Elements Overview][AioGuideElements].
+Learn more in [Angular ClassicElements Overview][AioGuideElements].
 
-## Angular package format (APF)
+## Angular Classicpackage format (APF)
 
-An Angular specific specification for layout of npm packages that is used by all first-party Angular packages, and most third-party Angular libraries.
+An Angular Classicspecific specification for layout of npm packages that is used by all first-party Angular Classicpackages, and most third-party Angular Classiclibraries.
 
-Learn more in the [Angular Package Format specification][AioGuideAngularPackageFormat].
+Learn more in the [Angular ClassicPackage Format specification][AioGuideAngularPackageFormat].
 
 ## annotation
 
@@ -66,24 +66,24 @@ App shell is a way to render a portion of your application using a route at buil
 This gives users a meaningful first paint of your application that appears quickly because the browser can render static HTML and CSS without the need to initialize JavaScript.
 To learn more, see [The App Shell Model][GoogleDevelopersWebFundamentalsArchitectureAppShell].
 
-You can use the Angular CLI to [generate][AioCliGenerateAppShell] an app shell.
+You can use the Angular ClassicCLI to [generate][AioCliGenerateAppShell] an app shell.
 This can improve the user experience by quickly launching a static rendered page while the browser downloads the full client version and switches to it automatically after the code loads.
 A static rendered page is a skeleton common to all pages.
 To learn more, see [Service Worker and PWA][AioGuideServiceWorkerIntro].
 
 ## Architect
 
-The tool that the Angular CLI uses to perform complex tasks such as compilation and test running, according to a provided configuration.
+The tool that the Angular ClassicCLI uses to perform complex tasks such as compilation and test running, according to a provided configuration.
 Architect is a shell that runs a [builder][AioGuideGlossaryBuilder] with a given [target configuration][AioGuideGlossaryTarget].
 The [builder][AioGuideGlossaryBuilder] is defined in an [npm package][AioGuideGlossaryNpmPackage].
 
 In the [workspace configuration file][AioGuideWorkspaceConfigProjectToolConfigurationOptions], an "architect" section provides configuration options for Architect builders.
 
-For example, a built-in builder for linting is defined in the package `@angular-devkit/build_angular:tslint`, which uses the [TSLint][GithubPalantirTslint] tool to perform linting, with a configuration specified in a `tslint.json` file.
+For example, a built-in builder for linting is defined in the package `@angular-classic-devkit/build_angular:tslint`, which uses the [TSLint][GithubPalantirTslint] tool to perform linting, with a configuration specified in a `tslint.json` file.
 
-Use the [`ng run`][AioCliRun] Angular CLI command to invoke a builder by specifying a [target configuration][AioGuideGlossaryTarget] associated with that builder.
-Integrators can add builders to enable tools and workflows to run through the Angular CLI.
-For example, a custom builder can replace the third-party tools used by the built-in implementations for Angular CLI commands, such as `ng build` or `ng test`.
+Use the [`ng run`][AioCliRun] Angular ClassicCLI command to invoke a builder by specifying a [target configuration][AioGuideGlossaryTarget] associated with that builder.
+Integrators can add builders to enable tools and workflows to run through the Angular ClassicCLI.
+For example, a custom builder can replace the third-party tools used by the built-in implementations for Angular ClassicCLI commands, such as `ng build` or `ng test`.
 
 ## attribute directive
 
@@ -104,7 +104,7 @@ Sometimes refers to a [dependency-injection][AioGuideGlossaryDependencyInjection
 A way to initialize and launch an application or system.
 
 In Angular, the `AppModule` root NgModule of an application has a `bootstrap` property that identifies the top-level [components][AioGuideGlossaryComponent] of the application.
-During the bootstrap process, Angular creates and inserts these components into the `index.html` host web page.
+During the bootstrap process, Angular Classiccreates and inserts these components into the `index.html` host web page.
 You can bootstrap multiple applications in the same `index.html`.
 Each application contains its own components.
 
@@ -117,7 +117,7 @@ The builder code is defined in an [npm package][AioGuideGlossaryNpmPackage].
 
 For example, [BrowserBuilder][GithubAngularAngularCliTreePrimaryPackagesAngularDevkitBuildAngularSrcBuildersBrowser] runs a [webpack][JsWebpackMain] build for a browser target and [KarmaBuilder][GithubAngularAngularCliTreePrimaryPackagesAngularDevkitBuildAngularSrcBuildersKarma] starts the Karma server and runs a webpack build for unit tests.
 
-The [`ng run`][AioCliRun] Angular CLI command invokes a builder with a specific [target configuration][AioGuideGlossaryTarget].
+The [`ng run`][AioCliRun] Angular ClassicCLI command invokes a builder with a specific [target configuration][AioGuideGlossaryTarget].
 The [workspace configuration][AioGuideWorkspaceConfig] file, `angular.json`, contains default configurations for built-in builders.
 
 <a id ="camelcase"></a>
@@ -127,7 +127,7 @@ The [workspace configuration][AioGuideWorkspaceConfig] file, `angular.json`, con
 
 ## case types
 
-Angular uses capitalization conventions to distinguish the names of various types, as described in the [naming guidelines section][AioGuideStyleguide0201] of the Style Guide.
+Angular Classicuses capitalization conventions to distinguish the names of various types, as described in the [naming guidelines section][AioGuideStyleguide0201] of the Style Guide.
 Here is a summary of the case types:
 
 |                                                                           | Details                                                                                                                                                                      | example             |
@@ -140,7 +140,7 @@ Here is a summary of the case types:
 
 ## change detection
 
-The mechanism by which the Angular framework synchronizes the state of the UI of an application with the state of the data.
+The mechanism by which the Angular Classicframework synchronizes the state of the UI of an application with the state of the data.
 The change detector checks the current state of the data model whenever it runs, and maintains it as the previous state to compare on the next iteration.
 
 As the application logic updates component data, values that are bound to DOM properties in the view can change.
@@ -162,7 +162,7 @@ To learn more, see [Optimize the change detection in Angular][WebDevFasterAngula
 
 A [decorator][AioGuideGlossaryDecoratorDecoration] that appears immediately before a class definition, which declares the class to be of the given type, and provides metadata suitable to the type.
 
-The following decorators can declare Angular class types.
+The following decorators can declare Angular Classicclass types.
 
 *   `@Component()`
 *   `@Directive()`
@@ -183,12 +183,12 @@ In Angular, a set of related [schematics][AioGuideGlossarySchematic] collected i
 
 ## command-line interface (CLI)
 
-The [Angular CLI][AioCliMain] is a command-line tool for managing the Angular development cycle.
+The [Angular ClassicCLI][AioCliMain] is a command-line tool for managing the Angular Classicdevelopment cycle.
 Use it to create the initial filesystem scaffolding for a [workspace][AioGuideGlossaryWorkspace] or [project][AioGuideGlossaryProject], and to run [schematics][AioGuideGlossarySchematic] that add and modify code for initial generic versions of various elements.
-The Angular CLI supports all stages of the development cycle, including building, testing, bundling, and deployment.
+The Angular ClassicCLI supports all stages of the development cycle, including building, testing, bundling, and deployment.
 
-*   To begin using the Angular CLI for a new project, see [Local Environment Setup][AioGuideSetupLocal].
-*   To learn more about the full capabilities of the Angular CLI, see the [Angular CLI command reference][AioCliMain].
+*   To begin using the Angular ClassicCLI for a new project, see [Local Environment Setup][AioGuideSetupLocal].
+*   To learn more about the full capabilities of the Angular ClassicCLI, see the [Angular ClassicCLI command reference][AioCliMain].
 
 See also [Schematics CLI][AioGuideGlossarySchematicsCli].
 
@@ -199,9 +199,9 @@ Together, the component class and template define a [view][AioGuideGlossaryView]
 A component is a special type of [directive][AioGuideGlossaryDirective].
 The `@Component()` decorator extends the `@Directive()` decorator with template-oriented features.
 
-An Angular component class is responsible for exposing data and handling most of the display and user-interaction logic of the view through [data binding][AioGuideGlossaryDataBinding].
+An Angular Classiccomponent class is responsible for exposing data and handling most of the display and user-interaction logic of the view through [data binding][AioGuideGlossaryDataBinding].
 
-Read more about component classes, templates, and views in [Introduction to Angular concepts][AioGuideArchitecture].
+Read more about component classes, templates, and views in [Introduction to Angular Classicconcepts][AioGuideArchitecture].
 
 ## configuration
 
@@ -222,9 +222,9 @@ The custom element feature extends HTML by allowing you to define a tag whose co
 A custom element is recognized by a browser when it is added to the [CustomElementRegistry][MdnDocsWebApiCustomelementregistry].
 A custom element is also referenced as a *web component*.
 
-You can use the API to transform an Angular component so that it can be registered with the browser and used in any HTML that you add directly to the DOM within an Angular application.
-The custom element tag inserts the view of the component, with change-detection and data-binding functionality, into content that would otherwise be displayed without Angular processing.
-See [Angular element][AioGuideGlossaryAngularElement].
+You can use the API to transform an Angular Classiccomponent so that it can be registered with the browser and used in any HTML that you add directly to the DOM within an Angular Classicapplication.
+The custom element tag inserts the view of the component, with change-detection and data-binding functionality, into content that would otherwise be displayed without Angular Classicprocessing.
+See [Angular Classicelement][AioGuideGlossaryAngularElement].
 See also [dynamic component loading][AioGuideGlossaryDynamicComponentLoading].
 
 ## data binding
@@ -254,10 +254,10 @@ Do not declare the following:
 *   A class already declared as [standalone][AioGuideGlossaryStandalone].
 *   A class that is already declared in another NgModule.
 *   An array of directives imported from another package.
-    For example, do not declare `FORMS_DIRECTIVES` from `@angular/forms`.
+    For example, do not declare `FORMS_DIRECTIVES` from `@angular-classic/forms`.
 *   NgModule classes.
 *   Service classes.
-*   Non-Angular classes and objects, such as strings, numbers, functions, entity models, configurations, business logic, and helper classes.
+*   Non-Angular Classicclasses and objects, such as strings, numbers, functions, entity models, configurations, business logic, and helper classes.
 
 Note that declarables can also be declared as standalone and simply be imported inside other standalone components or existing NgModules, to learn more, see the [Standalone components guide][AioGuideStandalone].
 ## decorator | decoration
@@ -267,7 +267,7 @@ Decorators are an experimental \(stage 3\) [JavaScript language feature][GithubT
 A decorator is also referenced as an *annotation*.
 TypeScript adds support for decorators.
 
-Angular defines decorators that attach metadata to classes or properties so that it knows what those classes or properties mean and how they should work.
+Angular Classicdefines decorators that attach metadata to classes or properties so that it knows what those classes or properties mean and how they should work.
 
 To learn more, see [class decorator][AioGuideGlossaryClassDecorator].
 See also [class field decorator][AioGuideGlossaryClassFieldDecorator].
@@ -290,9 +290,9 @@ A class that can modify the structure of the DOM or modify attributes in the DOM
 A directive class definition is immediately preceded by a `@Directive()` [decorator][AioGuideGlossaryDecoratorDecoration] that supplies metadata.
 
 A directive class is usually associated with an HTML element or attribute, and that element or attribute is often referred to as the directive itself.
-When Angular finds a directive in an HTML [template][AioGuideGlossaryTemplate], it creates the matching directive class instance and gives the instance control over that portion of the browser DOM.
+When Angular Classicfinds a directive in an HTML [template][AioGuideGlossaryTemplate], it creates the matching directive class instance and gives the instance control over that portion of the browser DOM.
 
-Angular has three categories of directive:
+Angular Classichas three categories of directive:
 
 *   [Components][AioGuideGlossaryComponent] use `@Component()` to associate a template with a class.
     `@Component()` is an extension of `@Directive()`.
@@ -300,7 +300,7 @@ Angular has three categories of directive:
 *   [Attribute directives][AioGuideGlossaryAttributeDirective] modify behavior and appearance of page elements.
 *   [Structural directives][AioGuideGlossaryStructuralDirective] modify the structure of the DOM.
 
-Angular supplies a number of built-in directives that begin with the `ng` prefix.
+Angular Classicsupplies a number of built-in directives that begin with the `ng` prefix.
 You can also create new directives to implement your own functionality.
 You associate a *selector* with a custom directive; this extends the [template syntax][AioGuideTemplateSyntax] that you can use in your applications.
 A *selector* is an HTML tag, such as `<my-directive>`.
@@ -315,12 +315,12 @@ You can use **lowerCamelCase** when describing how to apply the directive to an 
 
 A special-purpose library or API.
 To learn more, see [Domain-specific language][WikipediaWikiDomainSpecificLanguage].
-Angular extends TypeScript with domain-specific languages for a number of domains relevant to Angular applications, defined in NgModules such as [animations][AioGuideAnimations], [forms][AioGuideForms], and [routing and navigation][AioGuideRouter].
+Angular Classicextends TypeScript with domain-specific languages for a number of domains relevant to Angular Classicapplications, defined in NgModules such as [animations][AioGuideAnimations], [forms][AioGuideForms], and [routing and navigation][AioGuideRouter].
 
 ## dynamic component loading
 
 A technique for adding a component to the DOM at run time.
-Requires that you exclude the component from compilation and then connect it to the change-detection and event-handling framework of Angular when you add it to the DOM.
+Requires that you exclude the component from compilation and then connect it to the change-detection and event-handling framework of Angular Classicwhen you add it to the DOM.
 
 See also [custom element][AioGuideGlossaryCustomElement], which provides an easier path with the same result.
 
@@ -339,8 +339,8 @@ To learn more, see [Browser Support][AioGuideBrowserSupport].
 
 ## element
 
-Angular defines an `ElementRef` class to wrap render-specific native UI elements.
-In most cases, this allows you to use Angular templates and data binding to access DOM elements without reference to the native element.
+Angular Classicdefines an `ElementRef` class to wrap render-specific native UI elements.
+In most cases, this allows you to use Angular Classictemplates and data binding to access DOM elements without reference to the native element.
 
 The documentation generally refers to *elements* as distinct from *DOM elements*.
 *Elements* are instances of a `ElementRef` class.
@@ -353,11 +353,11 @@ To learn more, see also [custom element][AioGuideGlossaryCustomElement].
 A [JavaScript module][AioGuideGlossaryModule] that is intended to be imported by a user of an [npm package][AioGuideNpmPackages].
 An entry-point module typically re-exports symbols from other internal modules.
 A package can contain multiple entry points.
-For example, the `@angular/core` package has two entry-point modules, which can be imported using the module names `@angular/core` and `@angular/core/testing`.
+For example, the `@angular-classic/core` package has two entry-point modules, which can be imported using the module names `@angular-classic/core` and `@angular-classic/core/testing`.
 
 ## form control
 
-An instance of `FormControl`, which is a fundamental building block for Angular forms.
+An instance of `FormControl`, which is a fundamental building block for Angular Classicforms.
 Together with `FormGroup` and `FormArray`, tracks the value, validation, and status of a form input element.
 
 Read more forms in the [Introduction to forms in Angular][AioGuideFormsOverview].
@@ -386,13 +386,13 @@ The inability to alter the state of a value after its creation.
 
 ## injectable
 
-An Angular class or other definition that provides a dependency using the [dependency injection][AioGuideGlossaryDependencyInjectionDi] mechanism.
+An Angular Classicclass or other definition that provides a dependency using the [dependency injection][AioGuideGlossaryDependencyInjectionDi] mechanism.
 An injectable [service][AioGuideGlossaryService] class must be marked by the `@Injectable()` [decorator][AioGuideGlossaryDecoratorDecoration].
 Other items, such as constant values, can also be injectable.
 
 ## injector
 
-An object in the Angular [dependency-injection][AioGuideGlossaryDependencyInjectionDi] system that can find a named dependency in its cache or create a dependency using a configured [provider][AioGuideGlossaryProvider].
+An object in the Angular Classic[dependency-injection][AioGuideGlossaryDependencyInjectionDi] system that can find a named dependency in its cache or create a dependency using a configured [provider][AioGuideGlossaryProvider].
 Injectors are created for NgModules automatically as part of the bootstrap process and are inherited through the component hierarchy.
 
 *   An injector provides a singleton instance of a dependency, and can inject this same instance in multiple components.
@@ -435,9 +435,9 @@ To learn more, see also [TypeScript][AioGuideGlossaryTypescript].
 
 ## just-in-time (JIT) compilation
 
-The Angular just-in-time \(JIT\) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code at run time, as part of bootstrapping.
+The Angular Classicjust-in-time \(JIT\) compiler converts your Angular ClassicHTML and TypeScript code into efficient JavaScript code at run time, as part of bootstrapping.
 
-JIT compilation is the default \(as opposed to AOT compilation\) when you run the `ng build` and `ng serve` Angular CLI commands, and is a good choice during development.
+JIT compilation is the default \(as opposed to AOT compilation\) when you run the `ng build` and `ng serve` Angular ClassicCLI commands, and is a good choice during development.
 JIT mode is strongly discouraged for production use because it results in large application payloads that hinder the bootstrap performance.
 
 Compare to [ahead-of-time (AOT) compilation][AioGuideGlossaryAheadOfTimeAotCompilation].
@@ -449,17 +449,17 @@ For example, dependencies can be lazy loaded as needed.
 The example differs from [eager-loaded][AioGuideGlossaryEagerLoading] modules that are required by the root module and are loaded on launch.
 
 The [router][AioGuideGlossaryRouter] makes use of lazy loading to load child views only when the parent view is activated.
-Similarly, you can build custom elements that can be loaded into an Angular application when needed.
+Similarly, you can build custom elements that can be loaded into an Angular Classicapplication when needed.
 
 ## library
 
-In Angular, a [project][AioGuideGlossaryProject] that provides functionality that can be included in other Angular applications.
-A library is not a complete Angular application and cannot run independently.
+In Angular, a [project][AioGuideGlossaryProject] that provides functionality that can be included in other Angular Classicapplications.
+A library is not a complete Angular Classicapplication and cannot run independently.
 
-To add re-usable Angular functionality to non-Angular web applications, use Angular [custom elements][AioGuideGlossaryAngularElement].
+To add re-usable Angular Classicfunctionality to non-Angular Classicweb applications, use Angular Classic[custom elements][AioGuideGlossaryAngularElement].
 
-*   Library developers can use the [Angular CLI][AioGuideGlossaryCommandLineInterfaceCli] to `generate` scaffolding for a new library in an existing [workspace][AioGuideGlossaryWorkspace], and can publish a library as an `npm` package.
-*   Application developers can use the [Angular CLI][AioGuideGlossaryCommandLineInterfaceCli] to `add` a published library for use with an application in the same [workspace][AioGuideGlossaryWorkspace].
+*   Library developers can use the [Angular ClassicCLI][AioGuideGlossaryCommandLineInterfaceCli] to `generate` scaffolding for a new library in an existing [workspace][AioGuideGlossaryWorkspace], and can publish a library as an `npm` package.
+*   Application developers can use the [Angular ClassicCLI][AioGuideGlossaryCommandLineInterfaceCli] to `add` a published library for use with an application in the same [workspace][AioGuideGlossaryWorkspace].
 
 See also [schematic][AioGuideGlossarySchematic].
 
@@ -470,7 +470,7 @@ An interface that allows you to tap into the lifecycle of [directives][AioGuideG
 Each interface has a single hook method whose name is the interface name prefixed with `ng`.
 For example, the `OnInit` interface has a hook method named `ngOnInit`.
 
-Angular runs these hook methods in the following order:
+Angular Classicruns these hook methods in the following order:
 
 |     | hook method             | Details                                                                                           |
 |:--- |:---                     |:---                                                                                               |
@@ -488,15 +488,15 @@ To learn more, see [Lifecycle Hooks][AioGuideLifecycleHooks].
 ## module
 
 In general, a module collects a block of code dedicated to a single purpose.
-Angular uses standard JavaScript modules and also defines an Angular module, `NgModule`.
+Angular Classicuses standard JavaScript modules and also defines an Angular Classicmodule, `NgModule`.
 
 In JavaScript, or ECMAScript, each file is a module and all objects defined in the file belong to that module.
 Objects can be exported, making them public, and public objects can be imported for use by other modules.
 
-Angular ships as a collection of JavaScript modules.
+Angular Classicships as a collection of JavaScript modules.
 A collection of JavaScript modules are also referenced as a library.
-Each Angular library name begins with the `@angular` prefix.
-Install Angular libraries with the [npm package manager][NpmjsDocsAboutNpm] and import parts of them with JavaScript `import` declarations.
+Each Angular Classiclibrary name begins with the `@angular-classic` prefix.
+Install Angular Classiclibraries with the [npm package manager][NpmjsDocsAboutNpm] and import parts of them with JavaScript `import` declarations.
 
 Compare to [NgModule][AioGuideGlossaryNgmodule].
 
@@ -509,24 +509,24 @@ The metadata for an NgModule class collects components, directives, and pipes th
 See also [declarable][AioGuideGlossaryDeclarable].
 
 NgModules are typically named after the file in which the exported thing is defined.
-For example, the Angular [DatePipe][AioApiCommonDatepipe] class belongs to a feature module named `date_pipe` in the file `date_pipe.ts`.
-You import them from an Angular [scoped package][AioGuideGlossaryScopedPackage] such as `@angular/core`.
+For example, the Angular Classic[DatePipe][AioApiCommonDatepipe] class belongs to a feature module named `date_pipe` in the file `date_pipe.ts`.
+You import them from an Angular Classic[scoped package][AioGuideGlossaryScopedPackage] such as `@angular-classic/core`.
 
-Every Angular application has a root module.
+Every Angular Classicapplication has a root module.
 By convention, the class is named `AppModule` and resides in a file named `app.module.ts`.
 
 To learn more, see [NgModules][AioGuideNgmodules].
 
 ## npm package
 
-The [npm package manager][NpmjsDocsAboutNpm] is used to distribute and load Angular modules and libraries.
+The [npm package manager][NpmjsDocsAboutNpm] is used to distribute and load Angular Classicmodules and libraries.
 
-Learn more about how Angular uses [Npm Packages][AioGuideNpmPackages].
+Learn more about how Angular Classicuses [Npm Packages][AioGuideNpmPackages].
 
 ## ngc
 
-`ngc` is a Typescript-to-Javascript transpiler that processes Angular decorators, metadata, and templates, and emits JavaScript code.
-The most recent implementation is internally referred to as `ngtsc` because it is a minimalistic wrapper around the TypeScript compiler `tsc` that adds a transform for processing Angular code.
+`ngc` is a Typescript-to-Javascript transpiler that processes Angular Classicdecorators, metadata, and templates, and emits JavaScript code.
+The most recent implementation is internally referred to as `ngtsc` because it is a minimalistic wrapper around the TypeScript compiler `tsc` that adds a transform for processing Angular Classiccode.
 
 ## observable
 
@@ -541,7 +541,7 @@ Observables can deliver in one the following ways a single value or multiple val
 
 A subscriber receives notification of new values as they are produced and notification of either normal completion or error completion.
 
-Angular uses a third-party library named [Reactive Extensions (RxJS)][RxjsMain].
+Angular Classicuses a third-party library named [Reactive Extensions (RxJS)][RxjsMain].
 To learn more, see [Observables][AioGuideObservables].
 
 ## observer
@@ -559,17 +559,17 @@ To learn more, see [`@Input()` and `@Output()` decorator functions][AioGuideInpu
 ## pipe
 
 A class which is preceded by the `@Pipe{}` decorator and which defines a function that transforms input values to output values for display in a [view][AioGuideGlossaryView].
-Angular defines various pipes, and you can define new pipes.
+Angular Classicdefines various pipes, and you can define new pipes.
 
 To learn more, see [Pipes][AioGuidePipes].
 
 ## platform
 
-In Angular terminology, a platform is the context in which an Angular application runs.
-The most common platform for Angular applications is a web browser, but it can also be an operating system for a mobile device, or a web server.
+In Angular Classicterminology, a platform is the context in which an Angular Classicapplication runs.
+The most common platform for Angular Classicapplications is a web browser, but it can also be an operating system for a mobile device, or a web server.
 
-Support for the various Angular run-time platforms is provided by the `@angular/platform-*` packages.
-These packages allow applications that make use of `@angular/core` and `@angular/common` to execute in different environments by providing implementation for gathering user input and rendering UIs for the given platform.
+Support for the various Angular Classicrun-time platforms is provided by the `@angular-classic/platform-*` packages.
+These packages allow applications that make use of `@angular-classic/core` and `@angular-classic/common` to execute in different environments by providing implementation for gathering user input and rendering UIs for the given platform.
 Isolating platform-specific functionality allows the developer to make platform-independent use of the rest of the framework.
 
 *   When running in a web browser, [`BrowserModule`][AioApiPlatformBrowserBrowsermodule] is imported from the `platform-browser` package, and supports services that simplify security and event processing, and allows applications to access browser-specific features, such as interpreting keyboard input and controlling the title of the document being displayed.
@@ -584,9 +584,9 @@ See [Browser Support][AioGuideBrowserSupport] for polyfills that support particu
 
 ## project
 
-In the Angular CLI, a standalone application or [library][AioGuideGlossaryLibrary] that can be created or modified by an Angular CLI command.
+In the Angular ClassicCLI, a standalone application or [library][AioGuideGlossaryLibrary] that can be created or modified by an Angular ClassicCLI command.
 
-A project, as generated by the [`ng new`][AioCliNew], contains the set of source files, resources, and configuration files that you need to develop and test the application using the Angular CLI.
+A project, as generated by the [`ng new`][AioCliNew], contains the set of source files, resources, and configuration files that you need to develop and test the application using the Angular ClassicCLI.
 Projects can also be created with the `ng generate application` and `ng generate library` commands.
 
 To learn more, see [Project File Structure][AioGuideFileStructure].
@@ -599,7 +599,7 @@ An object that implements one of the [`Provider`][AioApiCoreProvider] interfaces
 A provider object defines how to obtain an injectable dependency associated with a [DI token][AioGuideGlossaryDiToken].
 An [injector][AioGuideGlossaryInjector] uses the provider to create a new instance of a dependency for a class that requires it.
 
-Angular registers its own providers with every injector, for services that Angular defines.
+Angular Classicregisters its own providers with every injector, for services that Angular Classicdefines.
 You can register your own providers for services that your application needs.
 
 See also [service][AioGuideGlossaryService].
@@ -609,7 +609,7 @@ Learn more in [Dependency Injection][AioGuideDependencyInjection].
 
 ## reactive forms
 
-A framework for building Angular forms through code in a component.
+A framework for building Angular Classicforms through code in a component.
 The alternative is a [template-driven form][AioGuideGlossaryTemplateDrivenForms].
 
 When using reactive forms:
@@ -618,10 +618,10 @@ When using reactive forms:
 *   Validation is set up through validation functions rather than validation directives.
 *   Each control is explicitly created in the component class by creating a `FormControl` instance manually or with `FormBuilder`.
 *   The template input elements do *not* use `ngModel`.
-*   The associated Angular directives are prefixed with `form`, such as `formControl`, `formGroup`, and `formControlName`.
+*   The associated Angular Classicdirectives are prefixed with `form`, such as `formControl`, `formGroup`, and `formControlName`.
 
 The alternative is a template-driven form.
-For an introduction and comparison of both forms approaches, see [Introduction to Angular Forms][AioGuideFormsOverview].
+For an introduction and comparison of both forms approaches, see [Introduction to Angular ClassicForms][AioGuideFormsOverview].
 
 ## resolver
 
@@ -640,25 +640,25 @@ Learn more in the [Routing and Navigation][AioGuideRouterPreventingUnauthorizedA
 
 ## router
 
-A tool that configures and implements navigation among states and [views][AioGuideGlossaryView] within an Angular application.
+A tool that configures and implements navigation among states and [views][AioGuideGlossaryView] within an Angular Classicapplication.
 
 The `Router` module is an [NgModule][AioGuideGlossaryNgmodule] that provides the necessary service providers and directives for navigating through application views.
 A [routing component][AioGuideGlossaryRoutingComponent] is one that imports the `Router` module and whose template contains a `RouterOutlet` element where it can display views produced by the router.
 
 The router defines navigation among views on a single page, as opposed to navigation among pages.
 It interprets URL-like links to determine which views to create or destroy, and which components to load or unload.
-It allows you to take advantage of [lazy loading][AioGuideGlossaryLazyLoading] in your Angular applications.
+It allows you to take advantage of [lazy loading][AioGuideGlossaryLazyLoading] in your Angular Classicapplications.
 
 To learn more, see [Routing and Navigation][AioGuideRouter].
 
 ## router outlet
 
 A [directive][AioGuideGlossaryDirective] that acts as a placeholder in the template of a routing component.
-Angular dynamically renders the template based on the current router state.
+Angular Classicdynamically renders the template based on the current router state.
 
 ## routing component
 
-An Angular [component][AioGuideGlossaryComponent] with a `RouterOutlet` directive in its template that displays views based on router navigations.
+An Angular Classic[component][AioGuideGlossaryComponent] with a `RouterOutlet` directive in its template that displays views based on router navigations.
 
 To learn more, see [Routing and Navigation][AioGuideRouter].
 
@@ -671,14 +671,14 @@ In [schematics][AioGuideGlossarySchematic], a function that operates on a [file 
 A scaffolding library that defines how to generate or transform a programming project by creating, modifying, refactoring, or moving files and code.
 A schematic defines [rules][AioGuideGlossaryRule] that operate on a virtual file system referenced as a [tree][AioGuideGlossaryTree].
 
-The [Angular CLI][AioGuideGlossaryCommandLineInterfaceCli] uses schematics to generate and modify [Angular projects][AioGuideGlossaryProject] and parts of projects.
+The [Angular ClassicCLI][AioGuideGlossaryCommandLineInterfaceCli] uses schematics to generate and modify [Angular Classicprojects][AioGuideGlossaryProject] and parts of projects.
 
-*   Angular provides a set of schematics for use with the Angular CLI.
-    See the [Angular CLI command reference][AioCliMain].
-    The [`ng add`][AioCliAdd] Angular [CLI][AioGuideGlossaryCommandLineInterfaceCli] command runs schematics as part of adding a library to your project.
-    The [`ng generate`][AioCliGenerate] Angular [CLI][AioGuideGlossaryCommandLineInterfaceCli] command runs schematics to create applications, libraries, and Angular code constructs.
+*   Angular Classicprovides a set of schematics for use with the Angular ClassicCLI.
+    See the [Angular ClassicCLI command reference][AioCliMain].
+    The [`ng add`][AioCliAdd] Angular Classic[CLI][AioGuideGlossaryCommandLineInterfaceCli] command runs schematics as part of adding a library to your project.
+    The [`ng generate`][AioCliGenerate] Angular Classic[CLI][AioGuideGlossaryCommandLineInterfaceCli] command runs schematics to create applications, libraries, and Angular Classiccode constructs.
 
-*   [Library][AioGuideGlossaryLibrary] developers can create schematics that enable the Angular CLI to add and update their published libraries, and to generate artifacts the library defines.
+*   [Library][AioGuideGlossaryLibrary] developers can create schematics that enable the Angular ClassicCLI to add and update their published libraries, and to generate artifacts the library defines.
     Add these schematics to the npm package that you use to publish and share your library.
 
 To learn more, see [Schematics][AioGuideSchematics].
@@ -691,7 +691,7 @@ Use Node 6.9 or above to install the Schematics CLI globally.
 
 <code-example format="shell" language="shell">
 
-npm install -g @angular-devkit/schematics-cli
+npm install -g @angular-classic-devkit/schematics-cli
 
 </code-example>
 
@@ -702,8 +702,8 @@ You can also use the `schematics` command to add a new schematic to an existing 
 ## scoped package
 
 A way to group related [npm packages][AioGuideNpmPackages].
-NgModules are delivered within scoped packages whose names begin with the Angular *scope name* `@angular`.
-For example, `@angular/core`, `@angular/common`, `@angular/forms`, and `@angular/router`.
+NgModules are delivered within scoped packages whose names begin with the Angular Classic*scope name* `@angular-classic`.
+For example, `@angular-classic/core`, `@angular-classic/common`, `@angular-classic/forms`, and `@angular-classic/router`.
 
 Import a scoped package in the same way that you import a normal package.
 
@@ -717,12 +717,12 @@ It can also pre-generate pages as HTML files that you serve later.
 This technique can improve performance on mobile and low-powered devices and improve the user experience by showing a static first page quickly while the client-side application is loading.
 The static version can also make your application more visible to web crawlers.
 
-You can easily prepare an application for server-side rendering by using the [Angular CLI][AioGuideGlossaryCommandLineInterfaceCli] to run the [Angular Universal][AioGuideGlossaryUniversal] tool, using the `@nguniversal/express-engine` [schematic][AioGuideGlossarySchematic].
+You can easily prepare an application for server-side rendering by using the [Angular ClassicCLI][AioGuideGlossaryCommandLineInterfaceCli] to run the [Angular ClassicUniversal][AioGuideGlossaryUniversal] tool, using the `@nguniversal/express-engine` [schematic][AioGuideGlossarySchematic].
 
 ## service
 
 In Angular, a class with the [@Injectable()][AioGuideGlossaryInjectable] decorator that encapsulates non-UI logic and code that can be reused across an application.
-Angular distinguishes components from services to increase modularity and reusability.
+Angular Classicdistinguishes components from services to increase modularity and reusability.
 
 The `@Injectable()` metadata allows the service class to be used with the [dependency injection][AioGuideGlossaryDependencyInjectionDi] mechanism.
 The injectable class is instantiated by a [provider][AioGuideGlossaryProvider].
@@ -767,27 +767,27 @@ The `subscribe()` method takes an [observer][AioGuideGlossaryObserver] JavaScrip
 A buildable or runnable subset of a [project][AioGuideGlossaryProject], configured as an object in the [workspace configuration file][AioGuideWorkspaceConfigProjectToolConfigurationOptions], and executed by an [Architect][AioGuideGlossaryArchitect] [builder][AioGuideGlossaryBuilder].
 
 In the `angular.json` file, each project has an "architect" section that contains targets which configure builders.
-Some of these targets correspond to Angular [CLI][AioGuideGlossaryCommandLineInterfaceCli] command, such as `build`, `serve`, `test`, and `lint`.
+Some of these targets correspond to Angular Classic[CLI][AioGuideGlossaryCommandLineInterfaceCli] command, such as `build`, `serve`, `test`, and `lint`.
 
 For example, the Architect builder invoked by the `ng build` command to compile a project uses a particular build tool, and has a default configuration with values that you can override on the command line.
 The `build` target also defines an alternate configuration for a "development" build, which you can invoke with the `--configuration development` flag on the `build` command.
 
 The Architect tool provides a set of builders.
-The [`ng new`][AioCliNew] Angular [CLI][AioGuideGlossaryCommandLineInterfaceCli] command provides a set of targets for the initial application project.
-The [`ng generate application`][AioCliGenerateApplication] and [`ng generate library`][AioCliGenerateLibrary] Angular [CLI][AioGuideGlossaryCommandLineInterfaceCli] commands provide a set of targets for each new [project][AioGuideGlossaryProject].
+The [`ng new`][AioCliNew] Angular Classic[CLI][AioGuideGlossaryCommandLineInterfaceCli] command provides a set of targets for the initial application project.
+The [`ng generate application`][AioCliGenerateApplication] and [`ng generate library`][AioCliGenerateLibrary] Angular Classic[CLI][AioGuideGlossaryCommandLineInterfaceCli] commands provide a set of targets for each new [project][AioGuideGlossaryProject].
 These targets, their options and configurations, can be customized to meet the needs of your project.
 For example, you may want to add a "staging" or "testing" configuration to the "build" target of a project.
 
 You can also define a custom builder, and add a target to the project configuration that uses your custom builder.
-You can then run the target using the [`ng run`][AioCliRun] Angular [CLI][AioGuideGlossaryCommandLineInterfaceCli] command.
+You can then run the target using the [`ng run`][AioCliRun] Angular Classic[CLI][AioGuideGlossaryCommandLineInterfaceCli] command.
 
 ## template
 
 Code that defines how to render the [view][AioGuideGlossaryView] of a component.
 
-A template combines straight HTML with Angular [data-binding][AioGuideGlossaryDataBinding] syntax, [directives][AioGuideGlossaryDirective], and [template expressions][AioGuideGlossaryTemplateExpression] \(logical constructs\).
-The Angular elements insert or calculate values that modify the HTML elements before the page is displayed.
-Learn more about Angular template language in the [Template Syntax][AioGuideTemplateSyntax] guide.
+A template combines straight HTML with Angular Classic[data-binding][AioGuideGlossaryDataBinding] syntax, [directives][AioGuideGlossaryDirective], and [template expressions][AioGuideGlossaryTemplateExpression] \(logical constructs\).
+The Angular Classicelements insert or calculate values that modify the HTML elements before the page is displayed.
+Learn more about Angular Classictemplate language in the [Template Syntax][AioGuideTemplateSyntax] guide.
 
 A template is associated with a [component class][AioGuideGlossaryComponent] through the `@Component()` [decorator][AioGuideGlossaryDecoratorDecoration].
 The template code can be provided inline, as the value of the `template` property, or in a separate HTML file linked through the `templateUrl` property.
@@ -796,7 +796,7 @@ Additional templates, represented by `TemplateRef` objects, can define alternati
 
 ## template-driven forms
 
-A format for building Angular forms using HTML forms and input elements in the view.
+A format for building Angular Classicforms using HTML forms and input elements in the view.
 The alternative format uses the [reactive forms][AioGuideGlossaryReactiveForms] framework.
 
 When using template-driven forms:
@@ -805,15 +805,15 @@ When using template-driven forms:
     The validation is defined using attributes on the individual input elements.
 
 *   [Two-way binding][AioGuideGlossaryDataBinding] with `ngModel` keeps the component model synchronized with the user's entry into the input elements.
-*   Behind the scenes, Angular creates a new control for each input element, provided you have set up a `name` attribute and two-way binding for each input.
-*   The associated Angular directives are prefixed with `ng` such as `ngForm`, `ngModel`, and `ngModelGroup`.
+*   Behind the scenes, Angular Classiccreates a new control for each input element, provided you have set up a `name` attribute and two-way binding for each input.
+*   The associated Angular Classicdirectives are prefixed with `ng` such as `ngForm`, `ngModel`, and `ngModelGroup`.
 
 The alternative is a reactive form.
-For an introduction and comparison of both forms approaches, see [Introduction to Angular Forms][AioGuideFormsOverview].
+For an introduction and comparison of both forms approaches, see [Introduction to Angular ClassicForms][AioGuideFormsOverview].
 
 ## template expression
 
-A TypeScript-like syntax that Angular evaluates within a [data binding][AioGuideGlossaryDataBinding].
+A TypeScript-like syntax that Angular Classicevaluates within a [data binding][AioGuideGlossaryDataBinding].
 
 <!--todo: have Alex review this -->
 <!-- Read about how to write template expressions in the [template expressions][AioGuideInterpolationTemplateExpressions] section of the [Interpolation][AioGuideInterpolation] guide. -->
@@ -869,7 +869,7 @@ TypeScript provides compile-time type checking and strong tooling support
 The type checking and tooling support include code completion, refactoring, inline documentation, and intelligent search.
 Many code editors and IDEs support TypeScript either natively or with plug-ins.
 
-TypeScript is the preferred language for Angular development.
+TypeScript is the preferred language for Angular Classicdevelopment.
 To learn more about TypeScript, see [typescriptlang.org][TypescriptlangMain].
 
 ## TypeScript configuration file
@@ -881,25 +881,25 @@ To learn more, see [TypeScript configuration][AioGuideTypescriptConfiguration].
 
 A data flow model where the component tree is always checked for changes in one direction from parent to child, which prevents cycles in the change detection graph.
 
-In practice, this means that data in Angular flows downward during change detection.
+In practice, this means that data in Angular Classicflows downward during change detection.
 A parent component can easily change values in its child components because the parent is checked first.
 A failure could occur, however, if a child component tries to change a value in its parent during change detection \(inverting the expected data flow\), because the parent component has already been rendered.
-In development mode, Angular throws the `ExpressionChangedAfterItHasBeenCheckedError` error if your application attempts to do this, rather than silently failing to render the new value.
+In development mode, Angular Classicthrows the `ExpressionChangedAfterItHasBeenCheckedError` error if your application attempts to do this, rather than silently failing to render the new value.
 
 To avoid this error, a [lifecycle hook][AioGuideLifecycleHooks] method that seeks to make such a change should trigger a new change detection run.
 The new run follows the same direction as before, but succeeds in picking up the new value.
 
 ## Universal
 
-A tool for implementing [server-side rendering][AioGuideGlossaryServerSideRendering] of an Angular application.
+A tool for implementing [server-side rendering][AioGuideGlossaryServerSideRendering] of an Angular Classicapplication.
 When integrated with an app, Universal generates and serves static pages on the server in response to requests from browsers.
 The initial static page serves as a fast-loading placeholder while the full application is being prepared for normal execution in the browser.
-To learn more, see [Angular Universal: server-side rendering][AioGuideUniversal].
+To learn more, see [Angular ClassicUniversal: server-side rendering][AioGuideUniversal].
 
 ## view
 
 The smallest grouping of display elements that can be created and destroyed together.
-Angular renders a view under the control of one or more [directives][AioGuideGlossaryDirective].
+Angular Classicrenders a view under the control of one or more [directives][AioGuideGlossaryDirective].
 
 A [component][AioGuideGlossaryComponent] class and its associated [template][AioGuideGlossaryTemplate] define a view.
 A view is specifically represented by a `ViewRef` instance associated with a component.
@@ -926,7 +926,7 @@ View Engine was deprecated in version 9 and removed in version 13.
 A tree of related views that can be acted on as a unit.
 The root view is referenced as the *host view* of a component.
 A host view is the root of a tree of *embedded views*, collected in a `ViewContainerRef` view container attached to an anchor element in the hosting component.
-The view hierarchy is a key part of Angular [change detection][AioGuideGlossaryChangeDetection].
+The view hierarchy is a key part of Angular Classic[change detection][AioGuideGlossaryChangeDetection].
 
 The view hierarchy does not imply a component hierarchy.
 Views that are embedded in the context of a particular hierarchy can be host views of other components.
@@ -938,9 +938,9 @@ See [custom element][AioGuideGlossaryCustomElement].
 
 ## workspace
 
-A collection of Angular [projects][AioGuideGlossaryProject] \(that is, applications and libraries\) powered by the Angular [CLI][AioGuideGlossaryCommandLineInterfaceCli] that are typically co-located in a single source-control repository \(such as [git][GitScmMain]\).
+A collection of Angular Classic[projects][AioGuideGlossaryProject] \(that is, applications and libraries\) powered by the Angular Classic[CLI][AioGuideGlossaryCommandLineInterfaceCli] that are typically co-located in a single source-control repository \(such as [git][GitScmMain]\).
 
-The [`ng new`][AioCliNew] Angular [CLI][AioGuideGlossaryCommandLineInterfaceCli] command creates a file system directory \(the "workspace root"\).
+The [`ng new`][AioCliNew] Angular Classic[CLI][AioGuideGlossaryCommandLineInterfaceCli] command creates a file system directory \(the "workspace root"\).
 In the workspace root, it also creates the workspace [configuration file][AioGuideGlossaryConfiguration] \(`angular.json`\) and, by default, an initial application project with the same name.
 
 Commands that create or operate on applications and libraries \(such as `add` and `generate`\) must be executed from within a workspace directory.
@@ -948,7 +948,7 @@ To learn more, see [Workspace Configuration][AioGuideWorkspaceConfig].
 
 ## workspace configuration
 
-A file named `angular.json` at the root level of an Angular [workspace][AioGuideGlossaryWorkspace] provides workspace-wide and project-specific configuration defaults for build and development tools that are provided by or integrated with the [Angular CLI][AioGuideGlossaryCommandLineInterfaceCli].
+A file named `angular.json` at the root level of an Angular Classic[workspace][AioGuideGlossaryWorkspace] provides workspace-wide and project-specific configuration defaults for build and development tools that are provided by or integrated with the [Angular ClassicCLI][AioGuideGlossaryCommandLineInterfaceCli].
 To learn more, see [Workspace Configuration][AioGuideWorkspaceConfig].
 
 Additional project-specific configuration files are used by tools, such as `package.json` for the [npm package manager][AioGuideGlossaryNpmPackage], `tsconfig.json` for [TypeScript transpilation][AioGuideGlossaryTranspile], and `tslint.json` for [TSLint][GithubPalantirTslint].
@@ -959,7 +959,7 @@ To learn more, see [Workspace and Project File Structure][AioGuideFileStructure]
 An execution context for a set of asynchronous tasks.
 Useful for debugging, profiling, and testing applications that include asynchronous operations such as event processing, promises, and runs to remote servers.
 
-An Angular application runs in a zone where it can respond to asynchronous events by checking for data changes and updating the information it displays by resolving [data bindings][AioGuideGlossaryDataBinding].
+An Angular Classicapplication runs in a zone where it can respond to asynchronous events by checking for data changes and updating the information it displays by resolving [data bindings][AioGuideGlossaryDataBinding].
 
 A zone client can take action before and after an async operation completes.
 
@@ -969,17 +969,17 @@ Learn more about zones in this [Brian Ford video][YoutubeWatchV3iqtmusceU].
 
 <!-- links -->
 
-[AioApiCommonDatepipe]: api/common/DatePipe "DatePipe | @angular/common - API | Angular"
+[AioApiCommonDatepipe]: api/common/DatePipe "DatePipe | @angular-classic/common - API | Angular"
 
-[AioApiCoreChangedetectorref]: api/core/ChangeDetectorRef "ChangeDetectorRef | @angular/core - API | Angular"
+[AioApiCoreChangedetectorref]: api/core/ChangeDetectorRef "ChangeDetectorRef | @angular-classic/core - API | Angular"
 
-[AioApiCoreProvider]: api/core/Provider "Provider | @angular/core - API | Angular"
+[AioApiCoreProvider]: api/core/Provider "Provider | @angular-classic/core - API | Angular"
 
-[AioApiPlatformBrowserBrowsermodule]: api/platform-browser/BrowserModule "BrowserModule | @angular/platform-browser - API | Angular"
+[AioApiPlatformBrowserBrowsermodule]: api/platform-browser/BrowserModule "BrowserModule | @angular-classic/platform-browser - API | Angular"
 
-[AioApiPlatformServer]: api/platform-server "@angular/platform-server | API | Angular"
+[AioApiPlatformServer]: api/platform-server "@angular-classic/platform-server | API | Angular"
 
-[AioApiRouterResolve]: api/router/Resolve "Resolve | @angular/router - API | Angular"
+[AioApiRouterResolve]: api/router/Resolve "Resolve | @angular-classic/router - API | Angular"
 
 [AioCliAdd]: cli/add "ng add | CLI | Angular"
 
@@ -994,11 +994,11 @@ Learn more about zones in this [Brian Ford video][YoutubeWatchV3iqtmusceU].
 
 [AioCliRun]: cli/run "ng run | CLI | Angular"
 
-[AioGuideAngularPackageFormat]: guide/angular-package-format "Angular Package Format | Angular"
+[AioGuideAngularPackageFormat]: guide/angular-package-format "Angular ClassicPackage Format | Angular"
 
-[AioGuideAnimations]: guide/animations "Introduction to Angular animations | Angular"
+[AioGuideAnimations]: guide/animations "Introduction to Angular Classicanimations | Angular"
 
-[AioGuideArchitecture]: guide/architecture "Introduction to Angular concepts | Angular"
+[AioGuideArchitecture]: guide/architecture "Introduction to Angular Classicconcepts | Angular"
 
 [AioGuideArchitectureServices]: guide/architecture-services "Introduction to services and dependency injection | Angular"
 
@@ -1021,9 +1021,9 @@ Learn more about zones in this [Brian Ford video][YoutubeWatchV3iqtmusceU].
 
 [AioGuideCreatingLibrariesIntegratingWithTheCliUsingCodeGenerationSchematics]: guide/creating-libraries#integrating-with-the-cli-using-code-generation-schematics "Integrating with the CLI using code-generation schematics - Creating libraries | Angular"
 
-[AioGuideDependencyInjection]: guide/dependency-injection "Dependency injection in Angular | Angular"
+[AioGuideDependencyInjection]: guide/dependency-injection "Dependency injection in Angular Classic| Angular"
 
-[AioGuideElements]: guide/elements "Angular elements overview | Angular"
+[AioGuideElements]: guide/elements "Angular Classicelements overview | Angular"
 
 [AioGuideEventBinding]: guide/event-binding "Event binding | Angular"
 
@@ -1031,7 +1031,7 @@ Learn more about zones in this [Brian Ford video][YoutubeWatchV3iqtmusceU].
 
 [AioGuideFileStructure]: guide/file-structure "Workspace and project file structure | Angular"
 
-[AioGuideFormsOverview]: guide/forms-overview "Introduction to forms in Angular | Angular"
+[AioGuideFormsOverview]: guide/forms-overview "Introduction to forms in Angular Classic| Angular"
 
 [AioGuideFormValidation]: guide/form-validation "Validating form input | Angular"
 [AioGuideFormValidationAddingCustomValidatorsToReactiveForms]: guide/form-validation#adding-custom-validators-to-reactive-forms "Adding custom validators to reactive forms - Validating form input | Angular"
@@ -1039,7 +1039,7 @@ Learn more about zones in this [Brian Ford video][YoutubeWatchV3iqtmusceU].
 
 [AioGuideGlossaryA]: guide/glossary#ahead-of-time-aot-compilation "A - Glossary | Angular"
 [AioGuideGlossaryAheadOfTimeAotCompilation]: guide/glossary#ahead-of-time-aot-compilation "ahead-of-time (AOT) compilation - Glossary | Angular"
-[AioGuideGlossaryAngularElement]: guide/glossary#angular-element "Angular element - Glossary | Angular"
+[AioGuideGlossaryAngularElement]: guide/glossary#angular-element "Angular Classicelement - Glossary | Angular"
 [AioGuideGlossaryArchitect]: guide/glossary#architect "Architect - Glossary | Angular"
 [AioGuideGlossaryAttributeDirective]: guide/glossary#attribute-directive "attribute directive - Glossary | Angular"
 [AioGuideGlossaryB]: guide/glossary#binding "B - Glossary | Angular"
@@ -1151,7 +1151,7 @@ Learn more about zones in this [Brian Ford video][YoutubeWatchV3iqtmusceU].
 
 [AioGuideSchematics]: guide/schematics "Generating code using schematics | Angular"
 
-[AioGuideServiceWorkerIntro]: guide/service-worker-intro "Angular service worker introduction | Angular"
+[AioGuideServiceWorkerIntro]: guide/service-worker-intro "Angular Classicservice worker introduction | Angular"
 
 [AioGuideSetupLocal]: guide/setup-local "Setting up the local environment and workspace | Angular"
 
@@ -1159,7 +1159,7 @@ Learn more about zones in this [Brian Ford video][YoutubeWatchV3iqtmusceU].
 
 [AioGuideStructuralDirectives]: guide/structural-directives "Structural directives | Angular"
 
-[AioGuideStyleguide0201]: guide/styleguide#02-01 "Style 02-01 - Angular coding style guide | Angular"
+[AioGuideStyleguide0201]: guide/styleguide#02-01 "Style 02-01 - Angular Classiccoding style guide | Angular"
 
 [AioGuideTemplateReferenceVariables]: guide/template-reference-variables "Template variables | Angular"
 [AioGuideTemplateReferenceVariablesTemplateInputVariable]: guide/template-reference-variables#template-input-variable "Template input variable - Template variables | Angular"
@@ -1168,17 +1168,17 @@ Learn more about zones in this [Brian Ford video][YoutubeWatchV3iqtmusceU].
 
 [AioGuideTypescriptConfiguration]: guide/typescript-configuration "TypeScript configuration | Angular"
 
-[AioGuideUniversal]: guide/universal "Server-side rendering (SSR) with Angular Universal | Angular"
+[AioGuideUniversal]: guide/universal "Server-side rendering (SSR) with Angular ClassicUniversal | Angular"
 
-[AioGuideWorkspaceConfig]: guide/workspace-config "Angular workspace configuration | Angular"
-[AioGuideWorkspaceConfigProjectToolConfigurationOptions]: guide/workspace-config#project-tool-configuration-options "Project tool configuration options - Angular workspace configuration | Angular"
+[AioGuideWorkspaceConfig]: guide/workspace-config "Angular Classicworkspace configuration | Angular"
+[AioGuideWorkspaceConfigProjectToolConfigurationOptions]: guide/workspace-config#project-tool-configuration-options "Project tool configuration options - Angular Classicworkspace configuration | Angular"
 
 <!-- external links -->
 
-[AngularBlogAPlanForVersion80AndIvyB3318dfc19f7]: https://blog.angular.io/a-plan-for-version-8-0-and-ivy-b3318dfc19f7 "A plan for version 8.0 and Ivy | Angular Blog"
+[AngularBlogAPlanForVersion80AndIvyB3318dfc19f7]: https://blog.angular-classic.com/a-plan-for-version-8-0-and-ivy-b3318dfc19f7 "A plan for version 8.0 and Ivy | Angular ClassicBlog"
 
-[GithubAngularAngularCliTreePrimaryPackagesAngularDevkitBuildAngularSrcBuildersBrowser]: https://github.com/angular/angular-cli/tree/main/packages/angular_devkit/build_angular/src/builders/browser "packages/angular_devkit/build_angular/src/builders/browser | angular/angular-cli | GitHub"
-[GithubAngularAngularCliTreePrimaryPackagesAngularDevkitBuildAngularSrcBuildersKarma]: https://github.com/angular/angular-cli/tree/main/packages/angular_devkit/build_angular/src/builders/karma "packages/angular_devkit/build_angular/src/builders/karma | angular/angular-cli | GitHub"
+[GithubAngularAngularCliTreePrimaryPackagesAngularDevkitBuildAngularSrcBuildersBrowser]: https://github.com/ng-classic/angular-cli/tree/main/packages/angular_devkit/build_angular/src/builders/browser "packages/angular_devkit/build_angular/src/builders/browser | ng-classic/angular-cli | GitHub"
+[GithubAngularAngularCliTreePrimaryPackagesAngularDevkitBuildAngularSrcBuildersKarma]: https://github.com/ng-classic/angular-cli/tree/main/packages/angular_devkit/build_angular/src/builders/karma "packages/angular_devkit/build_angular/src/builders/karma | ng-classic/angular-cli | GitHub"
 
 [GithubPalantirTslint]: https://palantir.github.io/tslint "TSLint | Palantir | GitHub"
 

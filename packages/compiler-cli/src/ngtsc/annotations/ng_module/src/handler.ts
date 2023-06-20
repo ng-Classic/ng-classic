@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {compileClassMetadata, compileDeclareClassMetadata, compileDeclareInjectorFromMetadata, compileDeclareNgModuleFromMetadata, compileInjector, compileNgModule, Expression, ExternalExpr, FactoryTarget, FunctionExpr, InvokeFunctionExpr, LiteralArrayExpr, R3ClassMetadata, R3CompiledExpression, R3FactoryMetadata, R3Identifiers, R3InjectorMetadata, R3NgModuleMetadata, R3Reference, R3SelectorScopeMode, ReturnStatement, SchemaMetadata, Statement, WrappedNodeExpr,} from '@angular/compiler';
+import {compileClassMetadata, compileDeclareClassMetadata, compileDeclareInjectorFromMetadata, compileDeclareNgModuleFromMetadata, compileInjector, compileNgModule, Expression, ExternalExpr, FactoryTarget, FunctionExpr, InvokeFunctionExpr, LiteralArrayExpr, R3ClassMetadata, R3CompiledExpression, R3FactoryMetadata, R3Identifiers, R3InjectorMetadata, R3NgModuleMetadata, R3Reference, R3SelectorScopeMode, ReturnStatement, SchemaMetadata, Statement, WrappedNodeExpr,} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {ErrorCode, FatalDiagnosticError, makeDiagnostic, makeRelatedInformation} from '../../../diagnostics';
@@ -50,7 +50,7 @@ export interface NgModuleResolution {
 }
 
 /**
- * Represents an Angular NgModule.
+ * Represents an Angular ClassicNgModule.
  */
 export class NgModuleSymbol extends SemanticSymbol {
   private remotelyScopedComponents: {
@@ -305,7 +305,7 @@ export class NgModuleDecoratorHandler implements
       } else {
         const diag = makeDiagnostic(
             ErrorCode.WARN_NGMODULE_ID_UNNECESSARY, idExpr,
-            `Using 'module.id' for NgModule.id is a common anti-pattern that is ignored by the Angular compiler.`);
+            `Using 'module.id' for NgModule.id is a common anti-pattern that is ignored by the Angular Classiccompiler.`);
         diag.category = ts.DiagnosticCategory.Warning;
         diagnostics.push(diag);
       }

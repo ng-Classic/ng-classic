@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ErrorCode, ngErrorCode} from '@angular/compiler-cli/src/ngtsc/diagnostics';
+import {ErrorCode, ngErrorCode} from '@angular-classic/compiler-cli/src/ngtsc/diagnostics';
 import ts from 'typescript/lib/tsserverlibrary';
 
 import {LanguageService} from '../../src/language_service';

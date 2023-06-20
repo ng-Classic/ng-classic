@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core';
-import {provideRouter, Routes, withComponentInputBinding} from '@angular/router';
+import {NgModule} from '@angular-classic/core';
+import {provideRouter, Routes, withComponentInputBinding} from '@angular-classic/router';
 
 import {authGuard} from './auth/auth.guard';
 import {ComposeMessageComponent} from './compose-message/compose-message.component';

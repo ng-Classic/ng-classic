@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {Component, Directive, EventEmitter, Input, OnDestroy, Output, ViewChild} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {CommonModule} from '@angular-classic/common';
+import {Component, Directive, EventEmitter, Input, OnDestroy, Output, ViewChild} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 describe('outputs', () => {
   @Component({selector: 'button-toggle', template: ''})
@@ -227,7 +227,7 @@ describe('outputs', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
 
-    // To match current Angular behavior, the click listener is still
+    // To match current Angular Classicbehavior, the click listener is still
     // set up in addition to any matching outputs.
     const button = fixture.nativeElement.querySelector('button');
     button.click();

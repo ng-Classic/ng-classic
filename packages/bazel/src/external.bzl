@@ -53,19 +53,19 @@ DEFAULT_API_EXTRACTOR = (
     # BEGIN-DEV-ONLY
     "@npm" +
     # END-DEV-ONLY
-    "//@angular/bazel/bin:api-extractor"
+    "//@angular-classic/bazel/bin:api-extractor"
 )
 DEFAULT_NG_COMPILER = (
     # BEGIN-DEV-ONLY
     "@npm" +
     # END-DEV-ONLY
-    "//@angular/bazel/bin:ngc-wrapped"
+    "//@angular-classic/bazel/bin:ngc-wrapped"
 )
 DEFAULT_NG_XI18N = (
     # BEGIN-DEV-ONLY
     "@npm" +
     # END-DEV-ONLY
-    "//@angular/bazel/bin:xi18n"
+    "//@angular-classic/bazel/bin:xi18n"
 )
 FLAT_DTS_FILE_SUFFIX = ".bundle.d.ts"
 TsConfigInfo = _TsConfigInfo

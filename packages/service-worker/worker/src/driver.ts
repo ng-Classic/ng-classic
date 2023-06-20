@@ -139,7 +139,7 @@ export class Driver implements Debuggable, UpdateSource {
         await this.scope.clients.claim();
 
         // Once all clients have been taken over, we can delete caches used by old versions of
-        // `@angular/service-worker`, which are no longer needed. This can happen in the background.
+        // `@angular-classic/service-worker`, which are no longer needed. This can happen in the background.
         this.idle.schedule('activate: cleanup-old-sw-caches', async () => {
           try {
             await this.cleanupOldSwCaches();
@@ -214,7 +214,7 @@ export class Driver implements Debuggable, UpdateSource {
     // Although "passive mixed content" (like images) only produces a warning without a
     // ServiceWorker, fetching it via a ServiceWorker results in an error. Let such requests be
     // handled by the browser, since handling with the ServiceWorker would fail anyway.
-    // See https://github.com/angular/angular/issues/23012#issuecomment-376430187 for more details.
+    // See https://github.com/ng-classic/angular/issues/23012#issuecomment-376430187 for more details.
     if (requestUrlObj.origin.startsWith('http:') && scopeUrl.startsWith('https:')) {
       // Still, log the incident for debugging purposes.
       this.debugger.log(`Ignoring passive mixed content request: Driver.fetch(${req.url})`);
@@ -226,7 +226,7 @@ export class Driver implements Debuggable, UpdateSource {
     // will eventually fail, because `only-if-cached` is only allowed to be used with
     // `mode: 'same-origin'`.
     // This is likely a bug in Chrome DevTools. Avoid handling such requests.
-    // (See also https://github.com/angular/angular/issues/22362.)
+    // (See also https://github.com/ng-classic/angular/issues/22362.)
     // TODO(gkalpak): Remove once no longer necessary (i.e. fixed in Chrome DevTools).
     if (req.cache === 'only-if-cached' && req.mode !== 'same-origin') {
       // Log the incident only the first time it happens, to avoid spamming the logs.
@@ -979,7 +979,7 @@ export class Driver implements Debuggable, UpdateSource {
   }
 
   /**
-   * Delete caches that were used by older versions of `@angular/service-worker` to avoid running
+   * Delete caches that were used by older versions of `@angular-classic/service-worker` to avoid running
    * into storage quota limitations imposed by browsers.
    * (Since at this point the SW has claimed all clients, it is safe to remove those caches.)
    */

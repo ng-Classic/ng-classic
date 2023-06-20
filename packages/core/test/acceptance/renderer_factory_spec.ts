@@ -6,20 +6,20 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AnimationEvent} from '@angular/animations';
-import {ɵAnimationEngine, ɵNoopAnimationStyleNormalizer} from '@angular/animations/browser';
-import {MockAnimationDriver, MockAnimationPlayer} from '@angular/animations/browser/testing';
-import {CommonModule, DOCUMENT} from '@angular/common';
-import {PLATFORM_BROWSER_ID, PLATFORM_SERVER_ID} from '@angular/common/src/platform_id';
-import {Component, DoCheck, NgZone, Renderer2, RendererFactory2, RendererStyleFlags2, RendererType2, ViewEncapsulation} from '@angular/core';
-import {RElement} from '@angular/core/src/render3/interfaces/renderer_dom';
-import {ngDevModeResetPerfCounters} from '@angular/core/src/util/ng_dev_mode';
-import {NoopNgZone} from '@angular/core/src/zone/ng_zone';
-import {TestBed} from '@angular/core/testing';
-import {EventManager, ɵSharedStylesHost} from '@angular/platform-browser';
-import {ɵAnimationRendererFactory} from '@angular/platform-browser/animations';
-import {DomRendererFactory2} from '@angular/platform-browser/src/dom/dom_renderer';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {AnimationEvent} from '@angular-classic/animations';
+import {ɵAnimationEngine, ɵNoopAnimationStyleNormalizer} from '@angular-classic/animations/browser';
+import {MockAnimationDriver, MockAnimationPlayer} from '@angular-classic/animations/browser/testing';
+import {CommonModule, DOCUMENT} from '@angular-classic/common';
+import {PLATFORM_BROWSER_ID, PLATFORM_SERVER_ID} from '@angular-classic/common/src/platform_id';
+import {Component, DoCheck, NgZone, Renderer2, RendererFactory2, RendererStyleFlags2, RendererType2, ViewEncapsulation} from '@angular-classic/core';
+import {RElement} from '@angular-classic/core/src/render3/interfaces/renderer_dom';
+import {ngDevModeResetPerfCounters} from '@angular-classic/core/src/util/ng_dev_mode';
+import {NoopNgZone} from '@angular-classic/core/src/zone/ng_zone';
+import {TestBed} from '@angular-classic/core/testing';
+import {EventManager, ɵSharedStylesHost} from '@angular-classic/platform-browser';
+import {ɵAnimationRendererFactory} from '@angular-classic/platform-browser/animations';
+import {DomRendererFactory2} from '@angular-classic/platform-browser/src/dom/dom_renderer';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('renderer factory lifecycle', () => {
   let logs: string[] = [];

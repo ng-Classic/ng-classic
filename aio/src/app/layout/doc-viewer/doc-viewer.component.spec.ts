@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Meta, Title } from '@angular/platform-browser';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { Meta, Title } from '@angular-classic/platform-browser';
 
 import { Observable, asapScheduler, of, lastValueFrom } from 'rxjs';
 import { EMPTY_HTML, htmlEscape } from 'safevalues';
@@ -161,12 +161,12 @@ describe('DocViewerComponent', () => {
     describe('(title)', () => {
       it('should set the title if there is an `<h1>` heading', () => {
         doAddTitleAndToc(DOC_WITH_H1);
-        expect(titleService.setTitle).toHaveBeenCalledWith('Angular - Features');
+        expect(titleService.setTitle).toHaveBeenCalledWith('Angular Classic- Features');
       });
 
       it('should set the title if there is a `.no-toc` `<h1>` heading', () => {
         doAddTitleAndToc(DOC_WITH_NO_TOC_H1);
-        expect(titleService.setTitle).toHaveBeenCalledWith('Angular - Features');
+        expect(titleService.setTitle).toHaveBeenCalledWith('Angular Classic- Features');
       });
 
       it('should set the default title if there is no `<h1>` heading', () => {
@@ -179,7 +179,7 @@ describe('DocViewerComponent', () => {
 
       it('should not include hidden content of the `<h1>` heading in the title', () => {
         doAddTitleAndToc(DOC_WITH_HIDDEN_H1_CONTENT);
-        expect(titleService.setTitle).toHaveBeenCalledWith('Angular - Features');
+        expect(titleService.setTitle).toHaveBeenCalledWith('Angular Classic- Features');
       });
 
       it('should fall back to `textContent` if `innerText` is not available', () => {
@@ -194,7 +194,7 @@ describe('DocViewerComponent', () => {
 
         doAddTitleAndToc(DOC_WITH_HIDDEN_H1_CONTENT);
 
-        expect(titleService.setTitle).toHaveBeenCalledWith('Angular - Text Content');
+        expect(titleService.setTitle).toHaveBeenCalledWith('Angular Classic- Text Content');
       });
 
       it('should still use `innerText` if available but empty', () => {

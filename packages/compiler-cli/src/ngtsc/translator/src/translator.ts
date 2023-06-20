@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import * as o from '@angular/compiler';
+import * as o from '@angular-classic/compiler';
 
 import {AstFactory, BinaryOperator, ObjectLiteralProperty, SourceMapRange, TemplateElement, TemplateLiteral, UnaryOperator} from './api/ast_factory';
 import {ImportGenerator} from './api/import_generator';
@@ -269,7 +269,7 @@ export class ExpressionTranslatorVisitor<TStatement, TExpression> implements o.E
     // Ordinarily the ternary operator is right-associative. The following are equivalent:
     //   `a ? b : c ? d : e` => `a ? b : (c ? d : e)`
     //
-    // However, occasionally Angular needs to produce a left-associative conditional, such as in
+    // However, occasionally Angular Classicneeds to produce a left-associative conditional, such as in
     // the case of a null-safe navigation production: `{{a?.b ? c : d}}`. This template produces
     // a ternary of the form:
     //   `a == null ? null : rest of expression`

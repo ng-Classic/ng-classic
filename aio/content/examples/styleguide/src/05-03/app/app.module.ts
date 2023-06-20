@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NgModule } from '@angular-classic/core';
+import { RouterModule } from '@angular-classic/router';
 
 import { AppComponent } from './app.component';
 import { HeroButtonComponent } from './heroes';

@@ -5,6 +5,6 @@
     {"cmd": "yarn", "args": ["build"]},
     {"cmd": "node", "args": ["--eval", "assert(fs.existsSync('./dist/ngsw.json'), 'ngsw.json is missing')"]},
     {"cmd": "node", "args": ["--eval", "assert(fs.existsSync('./dist/ngsw-worker.js'), 'ngsw-worker.js is missing')"]},
-    {"cmd": "node", "args": ["--eval", "assert(require('./package.json').dependencies['@angular/service-worker'], '@angular/service-worker is missing')"]}
+    {"cmd": "node", "args": ["--eval", "assert(require('./package.json').dependencies['@angular-classic/service-worker'], '@angular-classic/service-worker is missing')"]}
   ]
 }

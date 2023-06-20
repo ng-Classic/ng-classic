@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {PLATFORM_ID} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {NgswCommChannel, NoNewVersionDetectedEvent, VersionDetectedEvent} from '@angular/service-worker/src/low_level';
-import {ngswCommChannelFactory, SwRegistrationOptions} from '@angular/service-worker/src/provider';
-import {SwPush} from '@angular/service-worker/src/push';
-import {SwUpdate} from '@angular/service-worker/src/update';
-import {MockPushManager, MockPushSubscription, MockServiceWorkerContainer, MockServiceWorkerRegistration, patchDecodeBase64} from '@angular/service-worker/testing/mock';
+import {PLATFORM_ID} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {NgswCommChannel, NoNewVersionDetectedEvent, VersionDetectedEvent} from '@angular-classic/service-worker/src/low_level';
+import {ngswCommChannelFactory, SwRegistrationOptions} from '@angular-classic/service-worker/src/provider';
+import {SwPush} from '@angular-classic/service-worker/src/push';
+import {SwUpdate} from '@angular-classic/service-worker/src/update';
+import {MockPushManager, MockPushSubscription, MockServiceWorkerContainer, MockServiceWorkerRegistration, patchDecodeBase64} from '@angular-classic/service-worker/testing/mock';
 
 {
   describe('ServiceWorker library', () => {

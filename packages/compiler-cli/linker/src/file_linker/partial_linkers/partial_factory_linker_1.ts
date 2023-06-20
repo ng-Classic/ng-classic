@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {compileFactoryFunction, ConstantPool, FactoryTarget, outputAst as o, R3DeclareFactoryMetadata, R3DependencyMetadata, R3FactoryMetadata, R3PartialDeclaration} from '@angular/compiler';
+import {compileFactoryFunction, ConstantPool, FactoryTarget, outputAst as o, R3DeclareFactoryMetadata, R3DependencyMetadata, R3FactoryMetadata, R3PartialDeclaration} from '@angular-classic/compiler';
 
 import {AstObject} from '../../ast/ast_value';
 import {FatalLinkerError} from '../../fatal_linker_error';

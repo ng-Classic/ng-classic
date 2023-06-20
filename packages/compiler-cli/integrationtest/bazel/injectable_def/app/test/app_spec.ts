@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Injectable, INJECTOR, NgModule} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {renderModule} from '@angular/platform-server';
+import {Component, Injectable, INJECTOR, NgModule} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {renderModule} from '@angular-classic/platform-server';
 import {BasicAppModule} from 'app_built/src/basic';
 import {DepAppModule} from 'app_built/src/dep';
 import {HierarchyAppModule} from 'app_built/src/hierarchy';

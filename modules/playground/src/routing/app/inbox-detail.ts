@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, NgModule} from '@angular/core';
-import {ActivatedRoute, RouterModule} from '@angular/router';
+import {Component, NgModule} from '@angular-classic/core';
+import {ActivatedRoute, RouterModule} from '@angular-classic/router';
 
 import {DbService, InboxRecord} from './inbox-app';
 

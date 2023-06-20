@@ -1,4 +1,4 @@
-import {Component, HostBinding, NgModule} from '@angular/core';
+import {Component, HostBinding, NgModule} from '@angular-classic/core';
 
 @Component({
   selector: 'my-component',

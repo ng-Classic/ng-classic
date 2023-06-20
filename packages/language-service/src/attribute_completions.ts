@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CssSelector, SelectorMatcher, TmplAstElement, TmplAstTemplate} from '@angular/compiler';
-import {ElementSymbol, PotentialDirective, TemplateSymbol, TemplateTypeChecker, TypeCheckableDirectiveMeta} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {CssSelector, SelectorMatcher, TmplAstElement, TmplAstTemplate} from '@angular-classic/compiler';
+import {ElementSymbol, PotentialDirective, TemplateSymbol, TemplateTypeChecker, TypeCheckableDirectiveMeta} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript';
 
 import {DisplayInfoKind, unsafeCastDisplayInfoKindToScriptElementKind} from './display_parts';
@@ -74,7 +74,7 @@ export interface DomAttributeCompletion {
 
   /**
    * Whether this attribute is also a DOM property. Note that this is required to be `true` because
-   * we only want to provide DOM attributes when there is an Angular syntax associated with them
+   * we only want to provide DOM attributes when there is an Angular Classicsyntax associated with them
    * (`[propertyName]=""`).
    */
   isAlsoProperty: true;
@@ -398,7 +398,7 @@ function buildSnippet(insertSnippet: true|undefined, text: string): string|undef
 }
 
 /**
- * Used to ensure Angular completions appear before DOM completions. Inputs and Outputs are
+ * Used to ensure Angular Classiccompletions appear before DOM completions. Inputs and Outputs are
  * prioritized first while attributes which would match an additional directive are prioritized
  * second.
  *

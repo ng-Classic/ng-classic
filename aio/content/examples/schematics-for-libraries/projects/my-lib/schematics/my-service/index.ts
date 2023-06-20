@@ -4,9 +4,9 @@ import {
   Rule, Tree, SchematicsException,
   apply, url, applyTemplates, move,
   chain, mergeWith
-} from '@angular-devkit/schematics';
+} from '@angular-classic-devkit/schematics';
 
-import { strings, normalize, virtualFs, workspaces } from '@angular-devkit/core';
+import { strings, normalize, virtualFs, workspaces } from '@angular-classic-devkit/core';
 // #enddocregion schematics-imports
 
 import { Schema as MyServiceSchema } from './schema';

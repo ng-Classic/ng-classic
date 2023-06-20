@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular-classic/core';
 
 import { Contributor } from './contributors.model';
 import { CONTENT_URL_PREFIX } from 'app/documents/document.service';

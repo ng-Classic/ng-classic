@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isNamedClassDeclaration} from '@angular/compiler-cli/src/ngtsc/reflection';
-import {PotentialDirective, ReferenceSymbol, Symbol, SymbolKind, TcbLocation, VariableSymbol} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {isNamedClassDeclaration} from '@angular-classic/compiler-cli/src/ngtsc/reflection';
+import {PotentialDirective, ReferenceSymbol, Symbol, SymbolKind, TcbLocation, VariableSymbol} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript';
 
 
@@ -20,7 +20,7 @@ export const SYMBOL_TEXT = ts.SymbolDisplayPartKind[ts.SymbolDisplayPartKind.tex
 
 
 /**
- * Label for various kinds of Angular entities for TS display info.
+ * Label for various kinds of Angular Classicentities for TS display info.
  */
 export enum DisplayInfoKind {
   ATTRIBUTE = 'attribute',

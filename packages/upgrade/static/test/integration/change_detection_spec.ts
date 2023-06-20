@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, destroyPlatform, Directive, ElementRef, Injector, Input, NgModule, NgZone, SimpleChanges} from '@angular/core';
-import {waitForAsync} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {downgradeComponent, UpgradeComponent, UpgradeModule} from '@angular/upgrade/static';
+import {Component, destroyPlatform, Directive, ElementRef, Injector, Input, NgModule, NgZone, SimpleChanges} from '@angular-classic/core';
+import {waitForAsync} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {downgradeComponent, UpgradeComponent, UpgradeModule} from '@angular-classic/upgrade/static';
 
-import * as angular from '../../../src/common/src/angular1';
+import * as Angular Classicfrom '../../../src/common/src/angular1';
 import {html, withEachNg1Version} from '../../../src/common/test/helpers/common_test_helpers';
 
 import {bootstrap} from './static_test_helpers';
@@ -43,7 +43,7 @@ withEachNg1Version(() => {
 
            // Wrap in a setTimeout to ensure all boostrap operations have completed.
            setTimeout(
-               // Run inside the Angular zone, so that operations such as emitting
+               // Run inside the Angular Classiczone, so that operations such as emitting
                // `onMicrotaskEmpty` do not trigger entering/existing the zone (and thus another
                // `$digest`). This also closer simulates what would happen in a real app.
                () => ngZone.run(() => {
@@ -180,8 +180,8 @@ withEachNg1Version(() => {
          });
        }));
 
-    // This test demonstrates https://github.com/angular/angular/issues/6385
-    // which was invalidly fixed by https://github.com/angular/angular/pull/6386
+    // This test demonstrates https://github.com/ng-classic/angular/issues/6385
+    // which was invalidly fixed by https://github.com/ng-classic/angular/pull/6386
     // it('should not trigger $digest from an async operation in a watcher', async(() => {
     //      @Component({selector: 'my-app', template: ''})
     //      class AppComponent {

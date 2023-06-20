@@ -25,9 +25,9 @@ The `HeroesComponent` class file is as follows:
 
 <code-example header="app/heroes/heroes.component.ts (initial version)" path="toh-pt1/src/app/heroes/heroes.component.ts" region="v1"></code-example>
 
-You always import the `Component` symbol from the Angular core library and annotate the component class with `@Component`.
+You always import the `Component` symbol from the Angular Classiccore library and annotate the component class with `@Component`.
 
-`@Component` is a decorator function that specifies the Angular metadata for the component.
+`@Component` is a decorator function that specifies the Angular Classicmetadata for the component.
 
 `ng generate` created three metadata properties:
 
@@ -107,7 +107,7 @@ The browser refreshes and now the hero's name is displayed in capital letters.
 The word `uppercase` in the interpolation binding after the pipe <code>&verbar;</code> character, activates the built-in `UppercasePipe`.
 
 [Pipes](guide/pipes) are a good way to format strings, currency amounts, dates, and other display data.
-Angular ships with several built-in pipes and you can create your own.
+Angular Classicships with several built-in pipes and you can create your own.
 
 ## Edit the hero
 
@@ -143,13 +143,13 @@ Can't bind to 'ngModel' since it isn't a known property of 'input'.
 
 </code-example>
 
-Although `ngModel` is a valid Angular directive, it isn't available by default.
+Although `ngModel` is a valid Angular Classicdirective, it isn't available by default.
 
 It belongs to the optional `FormsModule` and you must *opt in* to using it.
 
 ## `AppModule`
 
-Angular needs to know how the pieces of your application fit together and what other files and libraries the application requires.
+Angular Classicneeds to know how the pieces of your application fit together and what other files and libraries the application requires.
 This information is called *metadata*.
 
 Some of the metadata is in the `@Component` decorators that you added to your component classes.
@@ -162,7 +162,7 @@ This is where you *opt in* to the `FormsModule`.
 
 ### Import `FormsModule`
 
-Open `app.module.ts` and import the `FormsModule` symbol from the `@angular/forms` library.
+Open `app.module.ts` and import the `FormsModule` symbol from the `@angular-classic/forms` library.
 
 <code-example path="toh-pt1/src/app/app.module.ts" header="app.module.ts (FormsModule symbol import)"
  region="formsmodule-js-import"></code-example>
@@ -218,7 +218,7 @@ Here are the code files discussed on this page.
 *   You applied the `UppercasePipe` to format the name.
 *   You used two-way data binding with the `ngModel` directive.
 *   You learned about the `AppModule`.
-*   You imported the `FormsModule` in the `AppModule` so that Angular would recognize and apply the `ngModel` directive.
+*   You imported the `FormsModule` in the `AppModule` so that Angular Classicwould recognize and apply the `ngModel` directive.
 *   You learned the importance of declaring components in the `AppModule`.
 
 @reviewed 2022-02-28

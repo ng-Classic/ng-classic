@@ -1,6 +1,6 @@
-# Building and serving Angular apps
+# Building and serving Angular Classicapps
 
-This page discusses build-specific configuration options for Angular projects.
+This page discusses build-specific configuration options for Angular Classicprojects.
 
 <a id="app-environments"></a>
 
@@ -9,11 +9,11 @@ This page discusses build-specific configuration options for Angular projects.
 You can define different named build configurations for your project, such as `development` and `staging`, with different defaults.
 
 Each named configuration can have defaults for any of the options that apply to the various [builder targets](guide/glossary#target), such as `build`, `serve`, and `test`.
-The [Angular CLI](cli) `build`, `serve`, and `test` commands can then replace files with appropriate versions for your intended target environment.
+The [Angular ClassicCLI](cli) `build`, `serve`, and `test` commands can then replace files with appropriate versions for your intended target environment.
 
 ### Configure environment-specific defaults
 
-Using the Angular CLI, start by running the [generate environments command](cli/generate#environments-command) shown here to create the `src/environments/` directory and configure the project to use these files.
+Using the Angular ClassicCLI, start by running the [generate environments command](cli/generate#environments-command) shown here to create the `src/environments/` directory and configure the project to use these files.
 
 <code-example format="shell" language="shell">
 
@@ -287,14 +287,14 @@ Each budget entry is a JSON object with the following properties:
 
 <div class="alert is-important">
 
-It is recommended that you avoid depending on CommonJS modules in your Angular applications.
+It is recommended that you avoid depending on CommonJS modules in your Angular Classicapplications.
 Depending on CommonJS modules can prevent bundlers and minifiers from optimizing your application, which results in larger bundle sizes.
 Instead, it is recommended that you use [ECMAScript modules](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import) in your entire application.
 For more information, see [How CommonJS is making your bundles larger](https://web.dev/commonjs-larger-bundles).
 
 </div>
 
-The Angular CLI outputs warnings if it detects that your browser application depends on CommonJS modules.
+The Angular ClassicCLI outputs warnings if it detects that your browser application depends on CommonJS modules.
 To disable these warnings, add the CommonJS module name to `allowedCommonJsDependencies` option in the `build` options located in `angular.json` file.
 
 <code-example language="json">
@@ -316,9 +316,9 @@ To disable these warnings, add the CommonJS module name to `allowedCommonJsDepen
 
 ## Configuring browser compatibility
 
-The Angular CLI uses [Browserslist](https://github.com/browserslist/browserslist) to ensure compatibility with different browser versions. [Autoprefixer](https://github.com/postcss/autoprefixer) is used for CSS vendor prefixing and [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env) for JavaScript syntax transformations.
+The Angular ClassicCLI uses [Browserslist](https://github.com/browserslist/browserslist) to ensure compatibility with different browser versions. [Autoprefixer](https://github.com/postcss/autoprefixer) is used for CSS vendor prefixing and [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env) for JavaScript syntax transformations.
 
-Internally, the Angular CLI uses the below `browserslist` configuration which matches the [browsers that are supported](guide/browser-support) by Angular.
+Internally, the Angular ClassicCLI uses the below `browserslist` configuration which matches the [browsers that are supported](guide/browser-support) by Angular.
 
   <code-example format="none" language="text">
   last 2 Chrome versions

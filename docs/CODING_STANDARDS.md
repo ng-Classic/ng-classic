@@ -1,6 +1,6 @@
-# Angular Framework Coding Standards
+# Angular ClassicFramework Coding Standards
 
-The coding practices in this doc apply only to development on Angular itself, not applications
+The coding practices in this doc apply only to development on Angular Classicitself, not applications
 built _with_ Angular. (Though you can follow them too if you really want).
 
 ## Code style

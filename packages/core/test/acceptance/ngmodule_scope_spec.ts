@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, destroyPlatform, NgModule, Pipe, PipeTransform} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {withBody} from '@angular/private/testing';
+import {Component, destroyPlatform, NgModule, Pipe, PipeTransform} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {withBody} from '@angular-classic/private/testing';
 
 describe('NgModule scopes', () => {
   beforeEach(destroyPlatform);
@@ -17,7 +17,7 @@ describe('NgModule scopes', () => {
 
   it('should apply NgModule scope to a component that extends another component class',
      withBody('<my-app></my-app>', async () => {
-       // Regression test for https://github.com/angular/angular/issues/37105
+       // Regression test for https://github.com/ng-classic/angular/issues/37105
        //
        // This test reproduces a scenario that used to fail due to a reentrancy issue in Ivy's JIT
        // compiler. Extending a component from a decorated baseclass would inadvertently compile

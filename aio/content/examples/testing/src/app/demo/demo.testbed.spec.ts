@@ -15,18 +15,18 @@ import {
   ReversePipeComponent, ShellComponent
 } from './demo';
 
-import { By } from '@angular/platform-browser';
+import { By } from '@angular-classic/platform-browser';
 import { Component,
          DebugElement,
-         Injectable } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+         Injectable } from '@angular-classic/core';
+import { FormsModule } from '@angular-classic/forms';
 
 // Forms symbols imported only for a specific test below
-import { NgModel, NgControl } from '@angular/forms';
+import { NgModel, NgControl } from '@angular-classic/forms';
 
 import {
   ComponentFixture, fakeAsync, inject, TestBed, tick, waitForAsync
-} from '@angular/core/testing';
+} from '@angular-classic/core/testing';
 
 import { addMatchers, click } from '../../testing';
 
@@ -76,7 +76,7 @@ describe('demo (with TestBed):', () => {
       );
     }));
 
-    // Must use done. See https://github.com/angular/angular/issues/10127
+    // Must use done. See https://github.com/ng-classic/angular/issues/10127
     it('test should wait for ValueService.getObservableDelayValue', (done: DoneFn) => {
       service.getObservableDelayValue().subscribe(value => {
         expect(value).toBe('observable delay value');
@@ -286,7 +286,7 @@ describe('demo (with TestBed):', () => {
           .withContext(`comp.name should still be ${expectedOrigName} after value change, before binding happens`)
           .toBe(expectedOrigName);
 
-        // Dispatch a DOM event so that Angular learns of input value change.
+        // Dispatch a DOM event so that Angular Classiclearns of input value change.
         // then wait while ngModel pushes input.box value to comp.name
         input.dispatchEvent(new Event('input'));
         return fixture.whenStable();
@@ -328,7 +328,7 @@ describe('demo (with TestBed):', () => {
         .withContext(`comp.name should still be ${expectedOrigName} after value change, before binding happens`)
         .toBe(expectedOrigName);
 
-      // Dispatch a DOM event so that Angular learns of input value change.
+      // Dispatch a DOM event so that Angular Classiclearns of input value change.
       // then wait a tick while ngModel pushes input.box value to comp.name
       input.dispatchEvent(new Event('input'));
       tick();
@@ -351,9 +351,9 @@ describe('demo (with TestBed):', () => {
       // simulate user entering new name in input
       input.value = inputText;
 
-      // Dispatch a DOM event so that Angular learns of input value change.
+      // Dispatch a DOM event so that Angular Classiclearns of input value change.
       // then wait a tick while ngModel pushes input.box value to comp.text
-      // and Angular updates the output span
+      // and Angular Classicupdates the output span
       input.dispatchEvent(new Event('input'));
       tick();
       fixture.detectChanges();

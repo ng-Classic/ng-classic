@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {By, DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {Component} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {By, DomSanitizer, SafeUrl} from '@angular-classic/platform-browser';
 
 describe('attribute creation', () => {
   it('should create an element', () => {
@@ -61,7 +61,7 @@ describe('attribute binding', () => {
       template: `<a [attr.href]="url"></a>`,
     })
     class Comp {
-      url = 'https://angular.io/robots.txt';
+      url = 'https://angular-classic.com/robots.txt';
     }
 
     TestBed.configureTestingModule({declarations: [Comp]});
@@ -70,7 +70,7 @@ describe('attribute binding', () => {
 
     const a = fixture.debugElement.query(By.css('a')).nativeElement;
     // NOTE: different browsers will add `//` into the URI.
-    expect(a.href).toEqual('https://angular.io/robots.txt');
+    expect(a.href).toEqual('https://angular-classic.com/robots.txt');
   });
 
   it('should be able to bind multiple attribute values per element', () => {
@@ -78,7 +78,7 @@ describe('attribute binding', () => {
       template: `<a [attr.id]="id" [attr.href]="url" [attr.tabindex]="'-1'"></a>`,
     })
     class Comp {
-      url = 'https://angular.io/robots.txt';
+      url = 'https://angular-classic.com/robots.txt';
       id = 'my-link';
     }
 
@@ -88,7 +88,7 @@ describe('attribute binding', () => {
 
     const a = fixture.debugElement.query(By.css('a')).nativeElement;
     // NOTE: different browsers will add `//` into the URI.
-    expect(a.getAttribute('href')).toBe('https://angular.io/robots.txt');
+    expect(a.getAttribute('href')).toBe('https://angular-classic.com/robots.txt');
     expect(a.getAttribute('id')).toBe('my-link');
     expect(a.getAttribute('tabindex')).toBe('-1');
   });
@@ -98,7 +98,7 @@ describe('attribute binding', () => {
       template: `<a [id]="id" [attr.href]="url" [title]="'hello'"></a>`,
     })
     class Comp {
-      url = 'https://angular.io/robots.txt';
+      url = 'https://angular-classic.com/robots.txt';
       id = 'my-link';
     }
 
@@ -108,7 +108,7 @@ describe('attribute binding', () => {
 
     const a = fixture.debugElement.query(By.css('a')).nativeElement;
     // NOTE: different browsers will add `//` into the URI.
-    expect(a.getAttribute('href')).toBe('https://angular.io/robots.txt');
+    expect(a.getAttribute('href')).toBe('https://angular-classic.com/robots.txt');
     expect(a.id).toBe('my-link');
     expect(a.getAttribute('title')).toBe('hello');
   });

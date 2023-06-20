@@ -2,7 +2,7 @@ load("//tools:defaults.bzl", "esbuild", "http_server", "ts_library")
 
 package(default_visibility = ["//modules/playground:__subpackages__"])
 
-# Since this test uses the AOT-incompatible version of "@angular/upgrade", we cannot
+# Since this test uses the AOT-incompatible version of "@angular-classic/upgrade", we cannot
 # use the "ng_module" rule here unless we switch this example to "upgrade/static".
 ts_library(
     name = "upgrade",

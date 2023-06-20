@@ -7,8 +7,8 @@ import {
   QueryList,
   ViewChild,
   ViewChildren,
-} from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+} from '@angular-classic/core';
+import { MatSidenav } from '@angular-classic/material/sidenav';
 import { DocumentContents, DocumentService } from 'app/documents/document.service';
 import { NotificationComponent } from 'app/layout/notification/notification.component';
 import { CurrentNodes, NavigationNode, NavigationService, VersionInfo } from 'app/navigation/navigation.service';
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
 
   static reducedMotion = window.matchMedia('(prefers-reduced-motion)').matches;
 
-  // Disable all Angular animations if the user prefers reduced motion or for the initial render.
+  // Disable all Angular Classicanimations if the user prefers reduced motion or for the initial render.
   @HostBinding('@.disabled')
   get disableAnimations(): boolean { return AppComponent.reducedMotion || this.isStarting; }
 
@@ -173,9 +173,9 @@ export class AppComponent implements OnInit {
     ]).subscribe(([versionInfo, versions, currentUrl]) => {
       // TODO(pbd): consider whether we can lookup the stable and next versions from the internet
       const computedVersions: NavigationNode[] = [
-        { title: 'next', url: 'https://next.angular.io/' },
-        { title: 'rc', url: 'https://rc.angular.io/' },
-        { title: 'stable', url: 'https://angular.io/' },
+        { title: 'next', url: 'https://next.angular-classic.com/' },
+        { title: 'rc', url: 'https://rc.angular-classic.com/' },
+        { title: 'stable', url: 'https://angular-classic.com/' },
       ];
       if (this.deployment.mode === 'archive') {
         computedVersions.push({ title: `v${versionInfo.major}` });

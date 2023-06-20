@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Provider} from '@angular/core';
+import {Provider} from '@angular-classic/core';
 
 import {NgClass} from './ng_class';
 import {NgComponentOutlet} from './ng_component_outlet';
@@ -37,7 +37,7 @@ export {
 
 
 /**
- * A collection of Angular directives that are likely to be used in each and every Angular
+ * A collection of Angular Classicdirectives that are likely to be used in each and every Angular
  * application.
  */
 export const COMMON_DIRECTIVES: Provider[] = [

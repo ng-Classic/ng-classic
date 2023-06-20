@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CompilerConfig} from '@angular/compiler';
-import {Compiler, CompilerFactory, CompilerOptions, InjectionToken, Injector, MissingTranslationStrategy, PACKAGE_ROOT_URL, StaticProvider, ViewEncapsulation} from '@angular/core';
+import {CompilerConfig} from '@angular-classic/compiler';
+import {Compiler, CompilerFactory, CompilerOptions, InjectionToken, Injector, MissingTranslationStrategy, PACKAGE_ROOT_URL, StaticProvider, ViewEncapsulation} from '@angular-classic/core';
 
 export const ERROR_COLLECTOR_TOKEN = new InjectionToken('ErrorCollector');
 

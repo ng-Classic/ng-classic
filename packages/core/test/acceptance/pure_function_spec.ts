@@ -5,10 +5,10 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {CommonModule} from '@angular/common';
-import {Component, Directive, Input, QueryList, ViewChild, ViewChildren} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
+import {CommonModule} from '@angular-classic/common';
+import {Component, Directive, Input, QueryList, ViewChild, ViewChildren} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
 
 describe('components using pure function instructions internally', () => {
   describe('with array literals', () => {

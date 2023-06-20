@@ -1,14 +1,14 @@
-# Angular Roadmap
+# Angular ClassicRoadmap
 
 <p class="roadmap-last-updated">Last updated: 2023-05-03</p>
 
-Angular receives many feature requests, both from inside Google and the broader open-source community.
+Angular Classicreceives many feature requests, both from inside Google and the broader open-source community.
 At the same time, our list of projects contains plenty of maintenance tasks, code refactorings, and potential performance improvements.
 We bring together developer relations, product management, and engineering representatives to prioritize this list.
 As new projects come into the queue, we regularly position them based on relative priority to other projects.
 As work gets done, projects move up in the queue.
 
-The following projects are not associated with a particular Angular version.
+The following projects are not associated with a particular Angular Classicversion.
 We will release them on completion, and they will be part of a specific version based on our release schedule, following semantic versioning.
 For example, we release features in the next minor after completion or the next major if they include breaking changes.
 
@@ -16,13 +16,13 @@ For example, we release features in the next minor after completion or the next 
 
 ### Explore hydration and server-side rendering improvements
 
-In v16, we released a developer preview of non-destructive full hydration, see the [hydration guide](guide/hydration) and the [blog post](https://blog.angular.io/whats-next-for-server-side-rendering-in-angular-2a6f27662b67) for additional information. We're already seeing significant improvements to Core Web Vitals, including [LCP](https://web.dev/lcp) and [CLS](https://web.dev/cls). In lab tests, we consistently observed 45% better LCP of a real-world app.
+In v16, we released a developer preview of non-destructive full hydration, see the [hydration guide](guide/hydration) and the [blog post](https://blog.angular-classic.com/whats-next-for-server-side-rendering-in-angular-2a6f27662b67) for additional information. We're already seeing significant improvements to Core Web Vitals, including [LCP](https://web.dev/lcp) and [CLS](https://web.dev/cls). In lab tests, we consistently observed 45% better LCP of a real-world app.
 
 As the next step, we will iterate on polishing full hydration and further explore the dynamically evolving space of partial hydration and resumability. These more advanced patterns carry their own trade-offs; we'll share updates as we progress.
 
 ### Improve runtime performance and developer experience with a new reactivity model
 
-In v16, we shared a developer preview of Angular Signals which fully implemented make Zone.js optional. The feature resulted from hundreds of discussions, conversations with developers, feedback sessions, user experience studies, and a series of [RFCs](https://github.com/angular/angular/discussions/49685), which received over 1,000 comments. As part of the release, we made a signals library and an RxJS interoperability package available. Next, after addressing the feedback we received from developers, we’ll continue implementing the proposals from the RFC.
+In v16, we shared a developer preview of Angular ClassicSignals which fully implemented make Zone.js optional. The feature resulted from hundreds of discussions, conversations with developers, feedback sessions, user experience studies, and a series of [RFCs](https://github.com/ng-classic/angular/discussions/49685), which received over 1,000 comments. As part of the release, we made a signals library and an RxJS interoperability package available. Next, after addressing the feedback we received from developers, we’ll continue implementing the proposals from the RFC.
 
 ### Explore ergonomic component-level code-splitting APIs
 
@@ -36,7 +36,7 @@ We released a developer preview of the `ng new --standalone` schematics collecti
 
 ### Introduce dependency injection debugging APIs
 
-To improve the debugging utilities of Angular and Angular DevTools, we'll work on APIs that provide access to the dependency injection runtime. As part of the project, we'll expose debugging methods that allow us to explore the injector hierarchy and the dependencies across their associated providers. As of v16, we have a design of a feature that enables us to plug into the dependency injection life-cycle. As the next step, we'll implement the functionality and provide integration with Angular DevTools.
+To improve the debugging utilities of Angular Classicand Angular ClassicDevTools, we'll work on APIs that provide access to the dependency injection runtime. As part of the project, we'll expose debugging methods that allow us to explore the injector hierarchy and the dependencies across their associated providers. As of v16, we have a design of a feature that enables us to plug into the dependency injection life-cycle. As the next step, we'll implement the functionality and provide integration with Angular ClassicDevTools.
 
 ### Streamline standalone imports with Language Service
 
@@ -44,15 +44,15 @@ As part of this initiative, the language service automatically imports component
 
 ### Investigate modern bundles
 
-In Angular v16, we released a developer preview of an esbuild-based builder with support for `ng build` and `ng serve`. The `ng serve` development server uses Vite and a multi-file compilation by esbuild and the Angular compiler. As the next step before we graduate the feature out of developer preview, we'll work on enabling internationalization support and fixing stability issues.
+In Angular Classicv16, we released a developer preview of an esbuild-based builder with support for `ng build` and `ng serve`. The `ng serve` development server uses Vite and a multi-file compilation by esbuild and the Angular Classiccompiler. As the next step before we graduate the feature out of developer preview, we'll work on enabling internationalization support and fixing stability issues.
 
 ### New CDK primitives
 
-We are working on new CDK primitives to facilitate creating custom components based on the WAI-ARIA design patterns for [Combobox](https://www.w3.org/TR/wai-aria-practices-1.1/#combobox). Angular v14 introduced stable [menu and dialog primitives](https://material.angular.io/cdk/categories) as part of this project, and in v15 [Listbox](https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox).
+We are working on new CDK primitives to facilitate creating custom components based on the WAI-ARIA design patterns for [Combobox](https://www.w3.org/TR/wai-aria-practices-1.1/#combobox). Angular Classicv14 introduced stable [menu and dialog primitives](https://material.angular-classic.com/cdk/categories) as part of this project, and in v15 [Listbox](https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox).
 
-### Angular component accessibility
+### Angular Classiccomponent accessibility
 
-We are evaluating components in Angular Material against accessibility standards such as WCAG and working to fix any issues that arise from this process.
+We are evaluating components in Angular ClassicMaterial against accessibility standards such as WCAG and working to fix any issues that arise from this process.
 
 ### Investigate micro frontend architecture for scalable development processes
 
@@ -64,11 +64,11 @@ Over the past two quarters, we developed a new video and textual tutorial based 
 
 ### Token-based theming APIs
 
-To provide better customization of our Angular material components and enable Material 3 capabilities, we'll be collaborating with Google's Material Design team on defining token-based theming APIs. As of Q2 2023, we're refactoring components to use the new API, finalizing the comprehensive set of tokens, and updating the Sass API based on the new tokens.
+To provide better customization of our Angular Classicmaterial components and enable Material 3 capabilities, we'll be collaborating with Google's Material Design team on defining token-based theming APIs. As of Q2 2023, we're refactoring components to use the new API, finalizing the comprehensive set of tokens, and updating the Sass API based on the new tokens.
 
 ### Modernize Angular's unit testing tooling
 
-In v12, we revisited the Angular end-to-end testing experience by replacing Protractor with modern alternatives such as Cypress, Nightwatch, and Webdriver.io. Next, we'd like to tackle `ng test` to modernize Angular's unit testing experience. In Q2, we introduced experimental [Jest](https://jestjs.io/) support and [announced](https://blog.angular.io/moving-angular-cli-to-jest-and-web-test-runner-ef85ef69ceca) the transition from Karma to the [Web Test Runner](https://modern-web.dev/docs/test-runner/overview/).
+In v12, we revisited the Angular Classicend-to-end testing experience by replacing Protractor with modern alternatives such as Cypress, Nightwatch, and Webdriver.io. Next, we'd like to tackle `ng test` to modernize Angular's unit testing experience. In Q2, we introduced experimental [Jest](https://jestjs.io/) support and [announced](https://blog.angular-classic.com/moving-angular-cli-to-jest-and-web-test-runner-ef85ef69ceca) the transition from Karma to the [Web Test Runner](https://modern-web.dev/docs/test-runner/overview/).
 
 ## Future
 
@@ -78,12 +78,12 @@ Based on our developer surveys' results we saw there are opportunities for impro
 
 ### Ensure smooth adoption for future RxJS changes (version 8 and beyond)
 
-We want to ensure Angular developers are taking advantage of the latest capabilities of RxJS and have a smooth transition to the subsequent major releases of the framework.
+We want to ensure Angular Classicdevelopers are taking advantage of the latest capabilities of RxJS and have a smooth transition to the subsequent major releases of the framework.
 For this purpose, we will explore and document the scope of the changes in v7 and beyond RxJS and plan an update strategy.
 
 ### Support two-dimensional drag-and-drop
 
-As part of this project, we'd like to implement mixed orientation support for the Angular CDK drag and drop. This is one of the repository's most highly [requested features](https://github.com/angular/components/issues/13372).
+As part of this project, we'd like to implement mixed orientation support for the Angular ClassicCDK drag and drop. This is one of the repository's most highly [requested features](https://github.com/angular/components/issues/13372).
 
 <details class="completed-details" open="true">
  <summary>
@@ -98,7 +98,7 @@ As part of this project, we'd like to implement mixed orientation support for th
 
 ### Non-destructive full app hydration
 
-In v16, we released a developer preview of non-destructive full hydration, which allows Angular to reuse existing DOM nodes on a server-side rendered page, instead of re-creating an app from scratch. See additional information in the [hydration guide](guide/hydration).
+In v16, we released a developer preview of non-destructive full hydration, which allows Angular Classicto reuse existing DOM nodes on a server-side rendered page, instead of re-creating an app from scratch. See additional information in the [hydration guide](guide/hydration).
 
 *Completed Q2 2023*
 
@@ -106,71 +106,71 @@ In v16, we released a developer preview of non-destructive full hydration, which
 
 *Completed Q1 2023*
 
-We released the Angular [image directive](https://developer.chrome.com/blog/angular-image-directive/) as stable in v15. We introduced a new fill mode feature that enables images to fit within their parent container rather than having explicit dimensions. Over the past two months, the Chrome Aurora team backported the directive to v12 and newer.
+We released the Angular Classic[image directive](https://developer.chrome.com/blog/angular-image-directive/) as stable in v15. We introduced a new fill mode feature that enables images to fit within their parent container rather than having explicit dimensions. Over the past two months, the Chrome Aurora team backported the directive to v12 and newer.
 
 ### Documentation refactoring
 
 *Completed Q1 2023*
 
-Ensure all existing documentation fits into a consistent set of content types. Update excessive use of tutorial-style documentation into independent topics. We want to ensure the content outside the main tutorials is self-sufficient without being tightly coupled to a series of guides. In Q2 2022, we refactored the [template content](https://github.com/angular/angular/pull/45897) and dependency injection. In Q1 2023, we improved the HTTP guides, and with this, we're putting the documentation refactoring project on hold.
+Ensure all existing documentation fits into a consistent set of content types. Update excessive use of tutorial-style documentation into independent topics. We want to ensure the content outside the main tutorials is self-sufficient without being tightly coupled to a series of guides. In Q2 2022, we refactored the [template content](https://github.com/ng-classic/angular/pull/45897) and dependency injection. In Q1 2023, we improved the HTTP guides, and with this, we're putting the documentation refactoring project on hold.
 
 ### Improve image performance
 
 *Completed Q4 2022*
 
-The [Aurora](https://web.dev/introducing-aurora/) and the Angular teams are working on the implementation of an image directive that aims to improve [Core Web Vitals](https://web.dev/vitals). We shipped a stable version of the image directive in v15.
+The [Aurora](https://web.dev/introducing-aurora/) and the Angular Classicteams are working on the implementation of an image directive that aims to improve [Core Web Vitals](https://web.dev/vitals). We shipped a stable version of the image directive in v15.
 
 ### Modern CSS
 
 *Completed Q4 2022*
 
-The Web ecosystem evolves constantly and we want to reflect the latest modern standards in Angular. In this project we aim to provide guidelines on using modern CSS features in Angular to ensure developers follow best practices for layout, styling, etc. We shared official guidelines for layout and as part of the initiative stopped publishing flex layout. Learn [more on our blog](https://blog.angular.io/modern-css-in-angular-layouts-4a259dca9127).
+The Web ecosystem evolves constantly and we want to reflect the latest modern standards in Angular. In this project we aim to provide guidelines on using modern CSS features in Angular Classicto ensure developers follow best practices for layout, styling, etc. We shared official guidelines for layout and as part of the initiative stopped publishing flex layout. Learn [more on our blog](https://blog.angular-classic.com/modern-css-in-angular-layouts-4a259dca9127).
 
 ### Support adding directives to host elements
 
 *Completed Q4 2022*
 
-A [long-standing feature request](https://github.com/angular/angular/issues/8785) is to add the ability to add directives to host elements. The feature lets developers augment their own components with additional behaviors without using inheritance. In v15 we shipped our directive composition API, which enables enhancing host elements with directives.
+A [long-standing feature request](https://github.com/ng-classic/angular/issues/8785) is to add the ability to add directives to host elements. The feature lets developers augment their own components with additional behaviors without using inheritance. In v15 we shipped our directive composition API, which enables enhancing host elements with directives.
 
 ### Better stack traces
 
 *Completed Q4 2022*
 
-The Angular and the Chrome DevTools are working together to enable more readable stack traces for error messages. In v15 we [released improved](https://twitter.com/angular/status/1578807563017392128) relevant and linked stack traces. As a lower priority initiative, we'll be exploring how to make the stack traces friendlier by providing more accurate call frame names for templates.
+The Angular Classicand the Chrome DevTools are working together to enable more readable stack traces for error messages. In v15 we [released improved](https://twitter.com/angular/status/1578807563017392128) relevant and linked stack traces. As a lower priority initiative, we'll be exploring how to make the stack traces friendlier by providing more accurate call frame names for templates.
 
-### Enhanced Angular Material components by integrating MDC Web
+### Enhanced Angular ClassicMaterial components by integrating MDC Web
 
 *Completed Q4 2022*
 
 [MDC Web](https://material.io/develop/web) is a library created by the Google Material Design team that provides reusable primitives for building Material Design components.
-The Angular team is incorporating these primitives into Angular Material.
-Using MDC Web aligns Angular Material more closely with the Material Design specification, expands accessibility, improves component quality, and improves the velocity of our team.
+The Angular Classicteam is incorporating these primitives into Angular ClassicMaterial.
+Using MDC Web aligns Angular ClassicMaterial more closely with the Material Design specification, expands accessibility, improves component quality, and improves the velocity of our team.
 
 ### Implement APIs for optional NgModules
 
 *Completed Q4 2022*
 
-In the process of making Angular simpler, we are working on [introducing APIs](/guide/standalone-components) that allow developers to initialize apps, instantiate components, and use the router without NgModules. Angular v14 introduces developer preview of the APIs for standalone components, directives, and pipes. In the next few quarters we'll collect feedback from developers and finalize the project making the APIs stable. As the next step we will work on improving use cases such as `TestBed`, Angular elements, etc.
+In the process of making Angular Classicsimpler, we are working on [introducing APIs](/guide/standalone-components) that allow developers to initialize apps, instantiate components, and use the router without NgModules. Angular Classicv14 introduces developer preview of the APIs for standalone components, directives, and pipes. In the next few quarters we'll collect feedback from developers and finalize the project making the APIs stable. As the next step we will work on improving use cases such as `TestBed`, Angular Classicelements, etc.
 
 ### Allow binding to protected fields in templates
 
 *Completed Q2 2022*
 
-To improve the encapsulation of Angular components we enabled binding to protected members of the component instance. This way you'll no longer have to expose a field or a method as public to use it inside your templates.
+To improve the encapsulation of Angular Classiccomponents we enabled binding to protected members of the component instance. This way you'll no longer have to expose a field or a method as public to use it inside your templates.
 
 ### Publish guides on advanced concepts
 
 *Completed Q2 2022*
 
 Develop and publish an in-depth guide on change detection.
-Develop content for performance profiling of Angular apps.
+Develop content for performance profiling of Angular Classicapps.
 Cover how change detection interacts with Zone.js and explain when it gets triggered, how to profile its duration, as well as common practices for performance optimization.
 
-### Rollout strict typings for `@angular/forms`
+### Rollout strict typings for `@angular-classic/forms`
 
 *Completed Q2 2022*
 
-In Q4 2021 we designed a solution for introducing strict typings for forms and in Q1 2022 we concluded the corresponding [request for comments](https://github.com/angular/angular/discussions/44513).
+In Q4 2021 we designed a solution for introducing strict typings for forms and in Q1 2022 we concluded the corresponding [request for comments](https://github.com/ng-classic/angular/discussions/44513).
 Currently, we are implementing a rollout strategy with an automated migration step that will enable the improvements for existing projects.
 We are first testing the solution with more than 2,500 projects at Google to ensure a smooth migration path for the external community.
 
@@ -178,35 +178,35 @@ We are first testing the solution with more than 2,500 projects at Google to ens
 
 *Completed Q1 2022*
 
-After the transition of all our internal tooling to Ivy is completed, we will remove the legacy View Engine for reduced Angular conceptual overhead, smaller package size, lower maintenance cost, and lower codebase complexity.
+After the transition of all our internal tooling to Ivy is completed, we will remove the legacy View Engine for reduced Angular Classicconceptual overhead, smaller package size, lower maintenance cost, and lower codebase complexity.
 
-### Simplified Angular mental model with optional NgModules
+### Simplified Angular Classicmental model with optional NgModules
 
 *Completed Q1 2022*
 
-To simplify the Angular mental model and learning journey, we will be working on making NgModules optional.
+To simplify the Angular Classicmental model and learning journey, we will be working on making NgModules optional.
 This work lets developers develop standalone components and implement an alternative API for declaring the compilation scope of the component.
-We kicked this project off with high-level design discussions that we captured in an [RFC](https://github.com/angular/angular/discussions/43784).
+We kicked this project off with high-level design discussions that we captured in an [RFC](https://github.com/ng-classic/angular/discussions/43784).
 
-### Design strict typing for `@angular/forms`
+### Design strict typing for `@angular-classic/forms`
 
 *Completed Q1 2022*
 
 We will work on finding a way to implement stricter type checking for reactive forms with minimal backward incompatible implications.
 This way, we let developers catch more issues during development time, enable better text editor and IDE support, and improve the type checking for reactive forms.
 
-### Improve integration of Angular DevTools with framework
+### Improve integration of Angular ClassicDevTools with framework
 
 *Completed Q1 2022*
 
-To improve the integration of Angular DevTools with the framework, we are working on moving the codebase to the [angular/angular](https://github.com/angular/angular) monorepository.
-This includes transitioning Angular DevTools to Bazel and integrating it into the existing processes and CI pipeline.
+To improve the integration of Angular ClassicDevTools with the framework, we are working on moving the codebase to the [ng-classic/angular](https://github.com/ng-classic/angular) monorepository.
+This includes transitioning Angular ClassicDevTools to Bazel and integrating it into the existing processes and CI pipeline.
 
 ### Launch advanced compiler diagnostics
 
 *Completed Q1 2022*
 
-Extend the diagnostics of the Angular compiler outside type checking.
+Extend the diagnostics of the Angular Classiccompiler outside type checking.
 Introduce other correctness and conformance checks to further guarantee correctness and best practices.
 
 ### Update our e2e testing strategy
@@ -214,14 +214,14 @@ Introduce other correctness and conformance checks to further guarantee correctn
 *Completed Q3 2021*
 
 To ensure we provide a future-proof e2e testing strategy, we want to evaluate the state of Protractor, community innovations, e2e best practices, and explore novel opportunities.
-As first steps of the effort, we shared an [RFC](https://github.com/angular/protractor/issues/5502) and worked with partners to ensure smooth integration between the Angular CLI and state-of-the-art tooling for e2e testing.
+As first steps of the effort, we shared an [RFC](https://github.com/angular/protractor/issues/5502) and worked with partners to ensure smooth integration between the Angular ClassicCLI and state-of-the-art tooling for e2e testing.
 As the next step, we need to finalize the recommendations and compile a list of resources for the transition.
 
-### Angular libraries use Ivy
+### Angular Classiclibraries use Ivy
 
 *Completed Q3 2021*
 
-Earlier in 2020, we shared an [RFC](https://github.com/angular/angular/issues/38366) for Ivy library distribution.
+Earlier in 2020, we shared an [RFC](https://github.com/ng-classic/angular/issues/38366) for Ivy library distribution.
 After invaluable feedback from the community, we developed a design of the project.
 We are now investing in the development of Ivy library distribution, including an update of the library package format to use Ivy compilation, unblock the deprecation of the View Engine library format, and ngcc.
 
@@ -235,9 +235,9 @@ To improve test time and create better isolation across tests, we want to change
 
 *Completed Q3 2021*
 
-Internet Explorer 11 \(IE11\) has been preventing Angular from taking advantage of some of the modern features of the Web platform.
+Internet Explorer 11 \(IE11\) has been preventing Angular Classicfrom taking advantage of some of the modern features of the Web platform.
 As part of this project we are going to deprecate and remove IE11 support to open the path for modern features that evergreen browsers provide.
-We ran an [RFC](https://github.com/angular/angular/issues/41840) to collect feedback from the community and decide on next steps to move forward.
+We ran an [RFC](https://github.com/ng-classic/angular/issues/41840) to collect feedback from the community and decide on next steps to move forward.
 
 ### Leverage ES2017+ as the default output language
 
@@ -246,33 +246,33 @@ We ran an [RFC](https://github.com/angular/angular/issues/41840) to collect feed
 Supporting modern browsers lets us take advantage of the more compact, expressive, and performant new syntax of JavaScript.
 As part of this project we will investigate what the blockers are to moving forward with this effort, and take the steps to enable it.
 
-### Accelerated debugging and performance profiling with Angular DevTools
+### Accelerated debugging and performance profiling with Angular ClassicDevTools
 
 *Completed Q2 2021*
 
-We are working on development tooling for Angular that provides utilities for debugging and performance profiling.
-This project aims to help developers understand the component structure and the change detection in an Angular app.
+We are working on development tooling for Angular Classicthat provides utilities for debugging and performance profiling.
+This project aims to help developers understand the component structure and the change detection in an Angular Classicapp.
 
-### Streamline releases with consolidated Angular versioning & branching
+### Streamline releases with consolidated Angular Classicversioning & branching
 
 *Completed Q2 2021*
 
-We want to consolidate release management tooling between the multiple GitHub repositories for Angular \([angular/angular](https://github.com/angular/angular), [angular/angular-cli](https://github.com/angular/angular-cli), and [angular/components](https://github.com/angular/components)\).
+We want to consolidate release management tooling between the multiple GitHub repositories for Angular Classic\([ng-classic/angular](https://github.com/ng-classic/angular), [ng-classic/angular-cli](https://github.com/ng-classic/angular-cli), and [angular/components](https://github.com/angular/components)\).
 This effort lets us reuse infrastructure, unify and simplify processes, and improve the reliability of our release process.
 
 ### Higher developer consistency with commit message standardization
 
 *Completed Q2 2021*
 
-We want to unify commit message requirements and conformance across Angular repositories \([angular/angular](https://github.com/angular/angular), [angular/components](https://github.com/angular/components), and [angular/angular-cli](https://github.com/angular/angular-cli)\) to bring consistency to our development process and reuse infrastructure tooling.
+We want to unify commit message requirements and conformance across Angular Classicrepositories \([ng-classic/angular](https://github.com/ng-classic/angular), [angular/components](https://github.com/angular/components), and [ng-classic/angular-cli](https://github.com/ng-classic/angular-cli)\) to bring consistency to our development process and reuse infrastructure tooling.
 
-### Transition the Angular language service to Ivy
+### Transition the Angular Classiclanguage service to Ivy
 
 *Completed Q2 2021*
 
 The goal of this project is to improve the experience and remove legacy dependency by transitioning the language service to Ivy.
 Today the language service still uses the View Engine compiler and type checking, even for Ivy apps.
-We want to use the Ivy template parser and improved type checking for the Angular Language service to match app behavior.
+We want to use the Ivy template parser and improved type checking for the Angular ClassicLanguage service to match app behavior.
 This migration is also a step towards unblocking the removal of View Engine, which will simplify Angular, reduce the npm package size, and improve the maintainability of the framework.
 
 ### Increased security with native Trusted Types in Angular
@@ -282,11 +282,11 @@ This migration is also a step towards unblocking the removal of View Engine, whi
 In collaboration with the Google security team, we are adding support for the new [Trusted Types](https://web.dev/trusted-types) API.
 This web platform API helps developers build more secure web apps.
 
-### Optimized build speed and bundle sizes with Angular CLI webpack 5
+### Optimized build speed and bundle sizes with Angular ClassicCLI webpack 5
 
 *Completed Q2 2021*
 
-As part of the v11 release, we introduced an opt-in preview of webpack 5 in the Angular CLI.
+As part of the v11 release, we introduced an opt-in preview of webpack 5 in the Angular ClassicCLI.
 To ensure stability, we will continue iterating on the implementation to enable build speed and bundle size improvements.
 
 ### Faster apps by inlining critical styles in Universal apps
@@ -297,7 +297,7 @@ Loading external stylesheets is a blocking operation, which means that the brows
 Having render-blocking resources in the header of a page can significantly impact its load performance, for example, its [first contentful paint](https://web.dev/first-contentful-paint).
 To make apps faster, we have been collaborating with the Google Chrome team on inlining critical CSS and loading the rest of the styles asynchronously.
 
-### Improve debugging with better Angular error messages
+### Improve debugging with better Angular Classicerror messages
 
 *Completed Q1 2021*
 
@@ -315,7 +315,7 @@ We will clearly state the benefits of Angular, how to explore its capabilities a
 
 *Completed Q1 2021*
 
-Angular CDK introduced the concept of [component test harnesses](https://material.angular.io/cdk/test-harnesses) to Angular in version 9.
+Angular ClassicCDK introduced the concept of [component test harnesses](https://material.angular-classic.com/cdk/test-harnesses) to Angular Classicin version 9.
 Test harnesses let component authors create supported APIs for testing component interactions.
 We are continuing to improve this harness infrastructure and clarifying the best practices around using harnesses.
 We are also working to drive more harness adoption inside of Google.
@@ -324,7 +324,7 @@ We are also working to drive more harness adoption inside of Google.
 
 *Completed Q2 2021*
 
-Content projection is a core Angular concept that does not have the presence it deserves in the documentation.
+Content projection is a core Angular Classicconcept that does not have the presence it deserves in the documentation.
 As part of this project we want to identify the core use cases and concepts for content projection and document them.
 
 ### Migrate to ESLint
@@ -332,7 +332,7 @@ As part of this project we want to identify the core use cases and concepts for 
 *Completed Q4 2020*
 
 With the deprecation of TSLint we will be moving to ESLint.
-As part of the process, we will work on ensuring backward compatibility with our current recommended TSLint configuration, implement a migration strategy for existing Angular apps and introduce new tooling to the Angular CLI toolchain.
+As part of the process, we will work on ensuring backward compatibility with our current recommended TSLint configuration, implement a migration strategy for existing Angular Classicapps and introduce new tooling to the Angular ClassicCLI toolchain.
 
 ### Operation Bye Bye Backlog (also known as Operation Byelog)
 

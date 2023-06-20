@@ -29,12 +29,12 @@ function p(templateStringArray: TemplateStringsArray) {
   return path.join(...segments);
 }
 
-describe('@angular/core ng_package', () => {
+describe('@angular-classic/core ng_package', () => {
   describe('misc root files', () => {
     describe('README.md', () => {
       it('should have a README.md file with basic info', () => {
         expect(shx.cat('README.md')).toContain(`Angular`);
-        expect(shx.cat('README.md')).toContain(`https://github.com/angular/angular`);
+        expect(shx.cat('README.md')).toContain(`https://github.com/ng-classic/angular`);
       });
     });
   });
@@ -44,7 +44,7 @@ describe('@angular/core ng_package', () => {
       const packageJson = 'package.json';
 
       it('should have a package.json file', () => {
-        expect(shx.grep('"name":', packageJson)).toContain(`@angular/core`);
+        expect(shx.grep('"name":', packageJson)).toContain(`@angular-classic/core`);
       });
 
       it('should contain correct version number with the PLACEHOLDER string replaced', () => {
@@ -88,7 +88,7 @@ describe('@angular/core ng_package', () => {
 
         expect(shx.cat(packageJson)).not.toContain('NG_UPDATE_PACKAGE_GROUP');
         expect((JSON.parse(shx.cat(packageJson)) as PackageJson)['ng-update'].packageGroup)
-            .toContain('@angular/core');
+            .toContain('@angular-classic/core');
       });
     });
 
@@ -119,7 +119,7 @@ describe('@angular/core ng_package', () => {
 
       it('should have the version info in the header', () => {
         expect(shx.cat('fesm2022/core.mjs'))
-            .toMatch(/@license Angular v\d+\.\d+\.\d+(?!-PLACEHOLDER)/);
+            .toMatch(/@license Angular Classicv\d+\.\d+\.\d+(?!-PLACEHOLDER)/);
       });
     });
 
@@ -154,7 +154,7 @@ describe('@angular/core ng_package', () => {
 
       it('should have the version info in the header', () => {
         expect(shx.cat('fesm2022/testing.mjs'))
-            .toMatch(/@license Angular v\d+\.\d+\.\d+(?!-PLACEHOLDER)/);
+            .toMatch(/@license Angular Classicv\d+\.\d+\.\d+(?!-PLACEHOLDER)/);
       });
     });
   });

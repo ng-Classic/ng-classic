@@ -5,17 +5,17 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, query, state, style, transition, trigger} from '@angular/animations';
-import {AnimationDriver, ɵAnimationEngine, ɵWebAnimationsDriver, ɵWebAnimationsPlayer} from '@angular/animations/browser';
-import {TransitionAnimationPlayer} from '@angular/animations/browser/src/render/transition_animation_engine';
-import {AnimationGroupPlayer} from '@angular/animations/src/players/animation_group_player';
-import {Component, ViewChild} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {animate, query, state, style, transition, trigger} from '@angular-classic/animations';
+import {AnimationDriver, ɵAnimationEngine, ɵWebAnimationsDriver, ɵWebAnimationsPlayer} from '@angular-classic/animations/browser';
+import {TransitionAnimationPlayer} from '@angular-classic/animations/browser/src/render/transition_animation_engine';
+import {AnimationGroupPlayer} from '@angular-classic/animations/src/players/animation_group_player';
+import {Component, ViewChild} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 
 (function() {
 // these tests are only meant to be run within the DOM (for now)
-// Buggy in Chromium 39, see https://github.com/angular/angular/issues/15793
+// Buggy in Chromium 39, see https://github.com/ng-classic/angular/issues/15793
 if (isNode) return;
 
 describe('animation integration tests using web animations', function() {

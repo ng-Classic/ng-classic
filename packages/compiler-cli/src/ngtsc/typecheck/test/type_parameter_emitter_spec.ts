@@ -126,7 +126,7 @@ runInEachFileSystem(() => {
 
     it('can emit references into external modules', () => {
       const emitter = createEmitter(`
-          import {NgIterable} from '@angular/core';
+          import {NgIterable} from '@angular-classic/core';
 
           export class TestClass<T extends NgIterable<any>> {}`);
 
@@ -135,7 +135,7 @@ runInEachFileSystem(() => {
 
     it('can emit references into external modules using qualified name', () => {
       const emitter = createEmitter(`
-          import * as ng from '@angular/core';
+          import * as ng from '@angular-classic/core';
 
           export class TestClass<T extends ng.NgIterable<any>> {}`);
 
@@ -144,7 +144,7 @@ runInEachFileSystem(() => {
 
     it('can emit references to other type parameters', () => {
       const emitter = createEmitter(`
-          import {NgIterable} from '@angular/core';
+          import {NgIterable} from '@angular-classic/core';
 
           export class TestClass<T, U extends NgIterable<T>> {}`);
 
@@ -170,7 +170,7 @@ runInEachFileSystem(() => {
 
     it('cannot emit references to local declarations as nested type arguments', () => {
       const emitter = createEmitter(`
-          import {NgIterable} from '@angular/core';
+          import {NgIterable} from '@angular-classic/core';
 
           class Local {};
           export class TestClass<T extends NgIterable<Local>> {}`);
@@ -180,7 +180,7 @@ runInEachFileSystem(() => {
 
     it('can emit references into external modules within array types', () => {
       const emitter = createEmitter(`
-          import {NgIterable} from '@angular/core';
+          import {NgIterable} from '@angular-classic/core';
 
           export class TestClass<T extends NgIterable[]> {}`);
 

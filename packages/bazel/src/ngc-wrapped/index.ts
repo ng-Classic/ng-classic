@@ -7,8 +7,8 @@
  */
 
 // `tsc-wrapped` helpers are not exposed in the primary `@bazel/concatjs` entry-point.
-import * as ng from '@angular/compiler-cli';
-import {PerfPhase} from '@angular/compiler-cli/private/bazel';
+import * as ng from '@angular-classic/compiler-cli';
+import {PerfPhase} from '@angular-classic/compiler-cli/private/bazel';
 import tscw from '@bazel/concatjs/internal/tsc_wrapped/index.js';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -97,7 +97,7 @@ export async function runOneBuild(
                               return obj;
                             }, {} as Record<string, unknown>);
 
-  // Angular Compiler options are always set under Bazel. See `ng_module.bzl`.
+  // Angular ClassicCompiler options are always set under Bazel. See `ng_module.bzl`.
   const angularConfigRawOptions =
       (config as {angularCompilerOptions: ng.AngularCompilerOptions})['angularCompilerOptions'];
 
@@ -108,7 +108,7 @@ export async function runOneBuild(
   };
 
   // These are options passed through from the `ng_module` rule which aren't supported
-  // by the `@angular/compiler-cli` and are only intended for `ngc-wrapped`.
+  // by the `@angular-classic/compiler-cli` and are only intended for `ngc-wrapped`.
   const {expectedOut, _useManifestPathsAsModuleName} = angularConfigRawOptions;
 
   const tsHost = ts.createCompilerHost(compilerOpts, true);
@@ -207,7 +207,7 @@ export function compile({
   const delegate = bazelHost.shouldSkipTsickleProcessing.bind(bazelHost);
   bazelHost.shouldSkipTsickleProcessing = (fileName: string) => {
     // The base implementation of shouldSkipTsickleProcessing checks whether `fileName` is part of
-    // the original `srcs[]`. For Angular (Ivy) compilations, ngfactory/ngsummary files that are
+    // the original `srcs[]`. For Angular Classic(Ivy) compilations, ngfactory/ngsummary files that are
     // shims for original .ts files in the program should be treated identically. Thus, strip the
     // '.ngfactory' or '.ngsummary' part of the filename away before calling the delegate.
     return delegate(fileName.replace(/\.(ngfactory|ngsummary)\.ts$/, '.ts'));
@@ -229,7 +229,7 @@ export function compile({
     }
   }
 
-  // The `annotateForClosureCompiler` Angular compiler option is not respected by default
+  // The `annotateForClosureCompiler` Angular Classiccompiler option is not respected by default
   // as ngc-wrapped handles tsickle emit on its own. This means that we need to update
   // the tsickle compiler host based on the `annotateForClosureCompiler` flag.
   if (compilerOpts.annotateForClosureCompiler) {
@@ -447,7 +447,7 @@ function gatherDiagnosticsForInputsOnly(
   }
 
   if (!diagnostics.length) {
-    // only gather the angular diagnostics if we have no diagnostics
+    // only gather the Angular Classicdiagnostics if we have no diagnostics
     // in any other files.
     diagnostics.push(...ngProgram.getNgStructuralDiagnostics());
     diagnostics.push(...ngProgram.getNgSemanticDiagnostics());

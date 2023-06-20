@@ -1,13 +1,13 @@
 ﻿# Creating libraries
 
-This page provides a conceptual overview of how to create and publish new libraries to extend Angular functionality.
+This page provides a conceptual overview of how to create and publish new libraries to extend Angular Classicfunctionality.
 
 If you find that you need to solve the same problem in more than one application \(or want to share your solution with other developers\), you have a candidate for a library.
 A simple example might be a button that sends users to your company website, that would be included in all applications that your company builds.
 
 ## Getting started
 
-Use the Angular CLI to generate a new library skeleton in a new workspace with the following commands.
+Use the Angular ClassicCLI to generate a new library skeleton in a new workspace with the following commands.
 
 <code-example format="shell" language="shell">
 
@@ -25,7 +25,7 @@ You should be very careful when choosing the name of your library if you want to
 See [Publishing your library](guide/creating-libraries#publishing-your-library).
   
 Avoid using a name that is prefixed with `ng-`, such as `ng-library`.
-The `ng-` prefix is a reserved keyword used from the Angular framework and its libraries.
+The `ng-` prefix is a reserved keyword used from the Angular Classicframework and its libraries.
 The `ngx-` prefix is preferred as a convention used to denote that the library is suitable for use with Angular.
 It is also an excellent indication to consumers of the registry to differentiate between libraries of different JavaScript frameworks.
 
@@ -97,7 +97,7 @@ Here are some things to consider in migrating application functionality to a lib
 *   Check all internal dependencies.
     *   For custom classes or interfaces used in components or service, check whether they depend on additional classes or interfaces that also need to be migrated
     *   Similarly, if your library code depends on a service, that service needs to be migrated
-    *   If your library code or its templates depend on other libraries \(such as Angular Material, for instance\), you must configure your library with those dependencies
+    *   If your library code or its templates depend on other libraries \(such as Angular ClassicMaterial, for instance\), you must configure your library with those dependencies
 
 *   Consider how you provide services to client applications.
 
@@ -113,11 +113,11 @@ Here are some things to consider in migrating application functionality to a lib
 
 ## Integrating with the CLI using code-generation schematics
 
-A library typically includes *reusable code* that defines components, services, and other Angular artifacts \(pipes, directives\) that you import into a project.
+A library typically includes *reusable code* that defines components, services, and other Angular Classicartifacts \(pipes, directives\) that you import into a project.
 A library is packaged into an npm package for publishing and sharing.
 This package can also include [schematics](guide/glossary#schematic) that provide instructions for generating or transforming code directly in your project, in the same way that the CLI creates a generic new component with `ng generate component`.
-A schematic that is packaged with a library can, for example, provide the Angular CLI with the information it needs to generate a component that configures and uses a particular feature, or set of features, defined in that library.
-One example of this is [Angular Material's navigation schematic](https://material.angular.io/guide/schematics#navigation-schematic) which configures the CDK's [BreakpointObserver](https://material.angular.io/cdk/layout/overview#breakpointobserver) and uses it with Material's [MatSideNav](https://material.angular.io/components/sidenav/overview) and [MatToolbar](https://material.angular.io/components/toolbar/overview) components.
+A schematic that is packaged with a library can, for example, provide the Angular ClassicCLI with the information it needs to generate a component that configures and uses a particular feature, or set of features, defined in that library.
+One example of this is [Angular ClassicMaterial's navigation schematic](https://material.angular-classic.com/guide/schematics#navigation-schematic) which configures the CDK's [BreakpointObserver](https://material.angular-classic.com/cdk/layout/overview#breakpointobserver) and uses it with Material's [MatSideNav](https://material.angular-classic.com/components/sidenav/overview) and [MatToolbar](https://material.angular-classic.com/components/toolbar/overview) components.
 
 Create and include the following kinds of schematics:
 
@@ -139,9 +139,9 @@ For more information, see [Schematics Overview](guide/schematics) and [Schematic
 
 ## Publishing your library
 
-Use the Angular CLI and the npm package manager to build and publish your library as an npm package.
+Use the Angular ClassicCLI and the npm package manager to build and publish your library as an npm package.
 
-Angular CLI uses a tool called [ng-packagr](https://github.com/ng-packagr/ng-packagr/blob/master/README.md) to create packages from your compiled code that can be published to npm.
+Angular ClassicCLI uses a tool called [ng-packagr](https://github.com/ng-packagr/ng-packagr/blob/master/README.md) to create packages from your compiled code that can be published to npm.
 See [Building libraries with Ivy](guide/creating-libraries#ivy-libraries) for information on the distribution formats supported by `ng-packagr` and guidance on how
 to choose the right format for your library.
 
@@ -160,7 +160,7 @@ npm publish
 
 ## Managing assets in a library
 
-In your Angular library, the distributable can include additional assets like theming files, Sass mixins, or documentation \(like a changelog\).
+In your Angular Classiclibrary, the distributable can include additional assets like theming files, Sass mixins, or documentation \(like a changelog\).
 For more information [copy assets into your library as part of the build](https://github.com/ng-packagr/ng-packagr/blob/master/docs/copy-assets.md) and [embed assets in component styles](https://github.com/ng-packagr/ng-packagr/blob/master/docs/embed-assets-css.md).
 
 <div class="alert is-important">
@@ -186,14 +186,14 @@ You need to add these manually to the conditional ["exports"](guide/angular-pack
 
 </code-example>
 
-The above is an extract from the [@angular/material](https://unpkg.com/browse/@angular/material/package.json) distributable.
+The above is an extract from the [@angular-classic/material](https://unpkg.com/browse/@angular-classic/material/package.json) distributable.
 </div>
 
 ## Peer dependencies
 
-Angular libraries should list any `@angular/*` dependencies the library depends on as peer dependencies.
+Angular Classiclibraries should list any `@angular-classic/*` dependencies the library depends on as peer dependencies.
 This ensures that when modules ask for Angular, they all get the exact same module.
-If a library lists `@angular/core` in `dependencies` instead of `peerDependencies`, it might get a different Angular module instead, which would cause your application to break.
+If a library lists `@angular-classic/core` in `dependencies` instead of `peerDependencies`, it might get a different Angular Classicmodule instead, which would cause your application to break.
 
 ## Using your own library in applications
 
@@ -225,12 +225,12 @@ For instance, if you clone your git repository and run `npm install`, your edito
 
 <div class="alert is-helpful">
 
-When you import something from a library in an Angular application, Angular looks for a mapping between the library name and a location on disk.
+When you import something from a library in an Angular Classicapplication, Angular Classiclooks for a mapping between the library name and a location on disk.
 When you install a library package, the mapping is in the `node_modules` folder.
 When you build your own library, it has to find the mapping in your `tsconfig` paths.
 
-Generating a library with the Angular CLI automatically adds its path to the `tsconfig` file.
-The Angular CLI uses the `tsconfig` paths to tell the build system where to find the library.
+Generating a library with the Angular ClassicCLI automatically adds its path to the `tsconfig` file.
+The Angular ClassicCLI uses the `tsconfig` paths to tell the build system where to find the library.
 
 For more information, see [Path mapping overview](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping).
 
@@ -255,7 +255,7 @@ ng build my-lib --watch
 
 The CLI `build` command uses a different builder and invokes a different build tool for libraries than it does for applications.
 
-*   The build system for applications, `@angular-devkit/build-angular`, is based on `webpack`, and is included in all new Angular CLI projects
+*   The build system for applications, `@angular-classic-devkit/build-angular`, is based on `webpack`, and is included in all new Angular ClassicCLI projects
 *   The build system for libraries is based on `ng-packagr`.
     It is only added to your dependencies when you add a library using `ng generate library my-lib`.
 
@@ -275,8 +275,8 @@ There are two distribution formats to use when publishing a library:
 
 | Distribution formats        | Details |
 |:---                         |:---     |
-| Partial-Ivy \(recommended\) | Contains portable code that can be consumed by Ivy applications built with any version of Angular from v12 onwards. |
-| Full-Ivy                    | Contains private Angular Ivy instructions, which are not guaranteed to work across different versions of Angular. This format requires that the library and application are built with the *exact* same version of Angular. This format is useful for environments where all library and application code is built directly from source. |
+| Partial-Ivy \(recommended\) | Contains portable code that can be consumed by Ivy applications built with any version of Angular Classicfrom v12 onwards. |
+| Full-Ivy                    | Contains private Angular ClassicIvy instructions, which are not guaranteed to work across different versions of Angular. This format requires that the library and application are built with the *exact* same version of Angular. This format is useful for environments where all library and application code is built directly from source. |
 
 For publishing to npm use the partial-Ivy format as it is stable between patch versions of Angular.
 
@@ -284,29 +284,29 @@ Avoid compiling libraries with full-Ivy code if you are publishing to npm becaus
 
 ## Ensuring library version compatibility
 
-The Angular version used to build an application should always be the same or greater than the Angular versions used to build any of its dependent libraries.
-For example, if you had a library using Angular version 13, the application that depends on that library should use Angular version 13 or later.
-Angular does not support using an earlier version for the application.
+The Angular Classicversion used to build an application should always be the same or greater than the Angular Classicversions used to build any of its dependent libraries.
+For example, if you had a library using Angular Classicversion 13, the application that depends on that library should use Angular Classicversion 13 or later.
+Angular Classicdoes not support using an earlier version for the application.
 
 If you intend to publish your library to npm, compile with partial-Ivy code by setting `"compilationMode": "partial"` in `tsconfig.prod.json`.
 This partial format is stable between different versions of Angular, so is safe to publish to npm.
-Code with this format is processed during the application build using the same version of the Angular compiler, ensuring that the application and all of its libraries use a single version of Angular.
+Code with this format is processed during the application build using the same version of the Angular Classiccompiler, ensuring that the application and all of its libraries use a single version of Angular.
 
 Avoid compiling libraries with full-Ivy code if you are publishing to npm because the generated Ivy instructions are not part of Angular's public API, and so might change between patch versions.
 
 If you've never published a package in npm before, you must create a user account.
 Read more in [Publishing npm Packages](https://docs.npmjs.com/getting-started/publishing-npm-packages).
 
-## Consuming partial-Ivy code outside the Angular CLI
+## Consuming partial-Ivy code outside the Angular ClassicCLI
 
-An application installs many Angular libraries from npm into its `node_modules` directory.
+An application installs many Angular Classiclibraries from npm into its `node_modules` directory.
 However, the code in these libraries cannot be bundled directly along with the built application as it is not fully compiled.
-To finish compilation, use the Angular linker.
+To finish compilation, use the Angular Classiclinker.
 
-For applications that don't use the Angular CLI, the linker is available as a [Babel](https://babeljs.io) plugin.
-The plugin is to be imported from `@angular/compiler-cli/linker/babel`.
+For applications that don't use the Angular ClassicCLI, the linker is available as a [Babel](https://babeljs.io) plugin.
+The plugin is to be imported from `@angular-classic/compiler-cli/linker/babel`.
 
-The Angular linker Babel plugin supports build caching, meaning that libraries only need to be processed by the linker a single time, regardless of other npm operations.
+The Angular Classiclinker Babel plugin supports build caching, meaning that libraries only need to be processed by the linker a single time, regardless of other npm operations.
 
 Example of integrating the plugin into a custom [Webpack](https://webpack.js.org) build by registering the linker as a [Babel](https://babeljs.io) plugin using [babel-loader](https://webpack.js.org/loaders/babel-loader/#options).
 
@@ -314,7 +314,7 @@ Example of integrating the plugin into a custom [Webpack](https://webpack.js.org
 
 <div class="alert is-helpful">
 
-The Angular CLI integrates the linker plugin automatically, so if consumers of your library are using the CLI, they can install Ivy-native libraries from npm without any additional configuration.
+The Angular ClassicCLI integrates the linker plugin automatically, so if consumers of your library are using the CLI, they can install Ivy-native libraries from npm without any additional configuration.
 
 </div>
 

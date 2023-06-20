@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {RendererStyleFlags2} from '@angular/core/src/render';
-import {Renderer, RendererFactory} from '@angular/core/src/render3/interfaces/renderer';
-import {RComment, RElement, RNode, RText} from '@angular/core/src/render3/interfaces/renderer_dom';
+import {RendererStyleFlags2} from '@angular-classic/core/src/render';
+import {Renderer, RendererFactory} from '@angular-classic/core/src/render3/interfaces/renderer';
+import {RComment, RElement, RNode, RText} from '@angular-classic/core/src/render3/interfaces/renderer_dom';
 
 export class MicroBenchmarkRenderNode implements RNode, RComment, RText {
   tagName?: string;

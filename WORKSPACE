@@ -84,7 +84,7 @@ yarn_install(
         YARN_LABEL,
         "//:.yarnrc",
         "//tools:postinstall-patches.js",
-        "//tools/esm-interop:patches/npm/@angular+build-tooling+0.0.0-e859696da7af56c811b6589f1ae888222d93d797.patch",
+        "//tools/esm-interop:patches/npm/@angular-classic+build-tooling+0.0.0-e859696da7af56c811b6589f1ae888222d93d797.patch",
         "//tools/esm-interop:patches/npm/@bazel+concatjs+5.8.1.patch",
         "//tools/esm-interop:patches/npm/@bazel+esbuild+5.7.1.patch",
         "//tools/esm-interop:patches/npm/@bazel+protractor+5.7.1.patch",
@@ -97,7 +97,7 @@ yarn_install(
     manual_build_file_contents = npm_package_archives(),
     package_json = "//:package.json",
     # We prefer to symlink the `node_modules` to only maintain a single install.
-    # See https://github.com/angular/dev-infra/pull/446#issuecomment-1059820287 for details.
+    # See https://github.com/ng-classic/dev-infra/pull/446#issuecomment-1059820287 for details.
     symlink_node_modules = True,
     yarn = YARN_LABEL,
     yarn_lock = "//:yarn.lock",
@@ -120,7 +120,7 @@ yarn_install(
     manual_build_file_contents = npm_package_archives(),
     package_json = "//aio:package.json",
     # We prefer to symlink the `node_modules` to only maintain a single install.
-    # See https://github.com/angular/dev-infra/pull/446#issuecomment-1059820287 for details.
+    # See https://github.com/ng-classic/dev-infra/pull/446#issuecomment-1059820287 for details.
     symlink_node_modules = True,
     yarn = YARN_LABEL,
     yarn_lock = "//aio:yarn.lock",
@@ -164,7 +164,7 @@ load("@io_bazel_rules_webtesting//web:repositories.bzl", "web_test_repositories"
 
 web_test_repositories()
 
-load("@npm//@angular/build-tooling/bazel/browsers:browser_repositories.bzl", "browser_repositories")
+load("@npm//@angular-classic/build-tooling/bazel/browsers:browser_repositories.bzl", "browser_repositories")
 
 browser_repositories()
 
@@ -215,10 +215,10 @@ sass_repositories(
 
 # Register git toolchains
 register_toolchains(
-    "@npm//@angular/build-tooling/bazel/git-toolchain:git_linux_toolchain",
-    "@npm//@angular/build-tooling/bazel/git-toolchain:git_macos_x86_toolchain",
-    "@npm//@angular/build-tooling/bazel/git-toolchain:git_macos_arm64_toolchain",
-    "@npm//@angular/build-tooling/bazel/git-toolchain:git_windows_toolchain",
+    "@npm//@angular-classic/build-tooling/bazel/git-toolchain:git_linux_toolchain",
+    "@npm//@angular-classic/build-tooling/bazel/git-toolchain:git_macos_x86_toolchain",
+    "@npm//@angular-classic/build-tooling/bazel/git-toolchain:git_macos_arm64_toolchain",
+    "@npm//@angular-classic/build-tooling/bazel/git-toolchain:git_windows_toolchain",
 )
 
 # Fetch sauce connect (tool to open Saucelabs tunnel for Saucelabs browser tests)

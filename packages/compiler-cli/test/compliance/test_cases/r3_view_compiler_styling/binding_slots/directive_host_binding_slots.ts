@@ -1,4 +1,4 @@
-import {Directive, HostBinding} from '@angular/core';
+import {Directive, HostBinding} from '@angular-classic/core';
 
 @Directive({selector: '[myWidthDir]'})
 export class WidthDirective {

@@ -11,8 +11,8 @@ import 'zone.js/lib/browser/rollup-main';
 
 // END-EXTERNAL
 
-import {enableProdMode} from '@angular/core';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {enableProdMode} from '@angular-classic/core';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
 import {AppModule} from './app';
 import {init} from './init';

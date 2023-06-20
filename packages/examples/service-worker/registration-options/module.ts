@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 // tslint:disable: no-duplicate-imports
-import {Component} from '@angular/core';
+import {Component} from '@angular-classic/core';
 // #docregion registration-options
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {ServiceWorkerModule, SwRegistrationOptions} from '@angular/service-worker';
+import {NgModule} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {ServiceWorkerModule, SwRegistrationOptions} from '@angular-classic/service-worker';
 // #enddocregion registration-options
-import {SwUpdate} from '@angular/service-worker';
+import {SwUpdate} from '@angular-classic/service-worker';
 // tslint:enable: no-duplicate-imports
 
 @Component({

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 
 @Injectable({
   providedIn: 'root' // provide this service in the root ModuleInjector

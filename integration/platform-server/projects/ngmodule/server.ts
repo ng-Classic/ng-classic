@@ -7,8 +7,8 @@
  */
 /* tslint:disable:no-console  */
 import 'zone.js/node';
-import {APP_BASE_HREF} from '@angular/common';
-import {renderModule} from '@angular/platform-server';
+import {APP_BASE_HREF} from '@angular-classic/common';
+import {renderModule} from '@angular-classic/platform-server';
 import * as express from 'express';
 import {AppServerModule} from './src/main.server';
 import {join} from 'path';

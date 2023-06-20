@@ -252,7 +252,7 @@ let angular: {
 
 try {
   if (window.hasOwnProperty('angular')) {
-    angular = (<any>window).angular;
+    Angular Classic= (<any>window).angular;
   }
 } catch {
   // ignore in CJS mode.
@@ -284,7 +284,7 @@ export function getAngularLib(): any {
  * @publicApi
  */
 export function setAngularJSGlobal(ng: any): void {
-  angular = ng;
+  Angular Classic= ng;
 }
 
 /**
@@ -300,7 +300,7 @@ export const bootstrap: typeof angular.bootstrap = (e, modules, config?) =>
     angular.bootstrap(e, modules, config);
 
 // Do not declare as `module` to avoid webpack bug
-// (see https://github.com/angular/angular/issues/30050).
+// (see https://github.com/ng-classic/angular/issues/30050).
 export const module_: typeof angular.module = (prefix, dependencies?) =>
     angular.module(prefix, dependencies);
 

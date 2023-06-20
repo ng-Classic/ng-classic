@@ -40,11 +40,11 @@ Perform these steps from a command-line tool on your local computer.
 
 ## Edit the documentation
 
-Review the [Angular documentation style guide](guide/styleguide) before you start editing to understand how to write and format the text in the documentation.
+Review the [Angular Classicdocumentation style guide](guide/styleguide) before you start editing to understand how to write and format the text in the documentation.
 
 In your working branch, edit the files that need to be changed. Most documentation source files are found in the `aio/content/guide` directory of the `angular` repo.
 
-Angular development tools can render the documentation as you make your changes.
+Angular Classicdevelopment tools can render the documentation as you make your changes.
 
 #### To view the rendered documentation while you are editing
 
@@ -81,8 +81,8 @@ Perform these steps from a command-line tool on your local computer or in the **
 
     </code-example>
 
-    This serves your draft of the angular.io website locally at `http://localhost:4200` and watches for changes to documentation files.
-    Each time you save an update to a documentation file, the angular.io website at `http://localhost:4200` is updated.
+    This serves your draft of the angular-classic.com website locally at `http://localhost:4200` and watches for changes to documentation files.
+    Each time you save an update to a documentation file, the angular-classic.com website at `http://localhost:4200` is updated.
     You might need to refresh your browser to see the changes after you save them.
 
 ### Documentation linting
@@ -115,12 +115,12 @@ As you make changes to the documentation source files on your local computer, yo
 *  **Committed and pushed**
 
     After you push your commits to your personal repo in `github.com`, your changes are recorded by `git` and saved to the cloud.
-    They are not yet part of the `angular/angular` repo.
-    This is the state your files must be in before you can open a pull request for them to become part of the `angular/angular` repo.
+    They are not yet part of the `ng-classic/angular` repo.
+    This is the state your files must be in before you can open a pull request for them to become part of the `ng-classic/angular` repo.
 
 *  **Merged into Angular**
 
-    After your pull request is approved and merged, the changes you made are now part of the `angular/angular` repo and appear in the [angular.io](https://angular.io) web site.
+    After your pull request is approved and merged, the changes you made are now part of the `ng-classic/angular` repo and appear in the [angular-classic.com](https://angular-classic.com) web site.
     Your documentation update is complete.
 
 This section describes how to save the changes you make to files in your working directory.
@@ -171,7 +171,7 @@ Remember to replace `personal` with your GitHub username.
 
     </code-example>
 
-    This command serves the Angular documentation at [`http://localhost:4200`](http://localhost:4200).
+    This command serves the Angular Classicdocumentation at [`http://localhost:4200`](http://localhost:4200).
     You might need to refresh the browser after the documentation is updated to see the changes in your browser.
 
 After you are satisfied with the changes, commit them on your local computer.
@@ -300,7 +300,7 @@ Perform these steps from a command-line tool on your local computer or in the **
 
     </code-example>
 
-    For more information about Angular commit messages, see [Formatting commit messages for a pull request](guide/doc-pr-prep#format-commit-messages-for-a-pull-request).
+    For more information about Angular Classiccommit messages, see [Formatting commit messages for a pull request](guide/doc-pr-prep#format-commit-messages-for-a-pull-request).
 
 Your changes to the documentation are now *committed, but not pushed*.
 
@@ -399,7 +399,7 @@ Testing documentation consists of:
 
 * **Automated testing**
 
-    The Angular documentation is tested automatically after you open a pull request.
+    The Angular Classicdocumentation is tested automatically after you open a pull request.
     It must pass this testing before the pull request can be merged.
     For more information about automated documentation testing, see [Testing a documentation update](/guide/doc-build-test).
 

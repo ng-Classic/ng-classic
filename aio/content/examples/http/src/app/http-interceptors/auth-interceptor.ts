@@ -1,8 +1,8 @@
 // #docplaster
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import {
   HttpEvent, HttpInterceptor, HttpHandler, HttpRequest
-} from '@angular/common/http';
+} from '@angular-classic/common/http';
 
 // #docregion
 import { AuthService } from '../auth.service';

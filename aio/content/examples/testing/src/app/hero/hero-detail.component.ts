@@ -1,6 +1,6 @@
 // #docplaster
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular-classic/core';
+import { ActivatedRoute, Router } from '@angular-classic/router';
 
 import { Hero } from '../model/hero';
 import { HeroDetailService } from './hero-detail.service';

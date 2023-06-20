@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, NgTemplateOutlet} from '@angular/common';
-import {Component, ContentChildren, Directive, Inject, Injectable, InjectionToken, Injector, NO_ERRORS_SCHEMA, OnDestroy, Provider, QueryList, TemplateRef} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule, NgTemplateOutlet} from '@angular-classic/common';
+import {Component, ContentChildren, Directive, Inject, Injectable, InjectionToken, Injector, NO_ERRORS_SCHEMA, OnDestroy, Provider, QueryList, TemplateRef} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('NgTemplateOutlet', () => {
   let fixture: ComponentFixture<any>;
@@ -41,7 +41,7 @@ describe('NgTemplateOutlet', () => {
     });
   });
 
-  // https://github.com/angular/angular/issues/14778
+  // https://github.com/ng-classic/angular/issues/14778
   it('should accept the component as the context', waitForAsync(() => {
        const template = `<ng-container *ngTemplateOutlet="tpl; context: this"></ng-container>` +
            `<ng-template #tpl>{{context.foo}}</ng-template>`;
@@ -215,7 +215,7 @@ describe('NgTemplateOutlet', () => {
     detectChangesAndExpectText('');
   });
 
-  // https://github.com/angular/angular/issues/30801
+  // https://github.com/ng-classic/angular/issues/30801
   it('should not throw if the context is left blank', () => {
     const template = `
       <ng-template #testTemplate>test</ng-template>

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Lexer, Token} from '@angular/compiler/src/expression_parser/lexer';
+import {Lexer, Token} from '@angular-classic/compiler/src/expression_parser/lexer';
 
 function lex(text: string): any[] {
   return new Lexer().tokenize(text);

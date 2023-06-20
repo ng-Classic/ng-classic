@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, NgLocalization, NgPlural, NgPluralCase} from '@angular/common';
-import {Component, Injectable} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule, NgLocalization, NgPlural, NgPluralCase} from '@angular-classic/common';
+import {Component, Injectable} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 {
   describe('ngPlural', () => {
@@ -67,8 +67,8 @@ import {expect} from '@angular/platform-browser/testing/src/matchers';
          detectChangesAndExpectText('you have one message.');
        }));
 
-    // https://github.com/angular/angular/issues/9868
-    // https://github.com/angular/angular/issues/9882
+    // https://github.com/ng-classic/angular/issues/9868
+    // https://github.com/ng-classic/angular/issues/9882
     it('should not throw when ngPluralCase contains expressions', waitForAsync(() => {
          const template = '<ul [ngPlural]="switchValue">' +
              '<ng-template ngPluralCase="=0"><li>{{ switchValue }}</li></ng-template>' +

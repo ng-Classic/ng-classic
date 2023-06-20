@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 import ts from 'typescript';
 
 import {addElementToArrayLiteral, collectMemberMethods, ensureArrayWithIdentifier, findTightestNode, generateImport, hasImport, nonCollidingImportName, objectPropertyAssignmentForKey, printNode, updateImport, updateObjectValueForKey} from '../src/ts_utils';

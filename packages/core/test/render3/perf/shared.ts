@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {ɵɵdefineDirective} from '@angular/core/src/core';
+import {ɵɵdefineDirective} from '@angular-classic/core/src/core';
 
 import {HostBindingsFunction} from '../../../src/render3/interfaces/definition';
 

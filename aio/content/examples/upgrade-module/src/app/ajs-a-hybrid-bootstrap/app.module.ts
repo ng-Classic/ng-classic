@@ -1,9 +1,9 @@
 declare const angular: angular.IAngularStatic;
-import '@angular/compiler';
+import '@angular-classic/compiler';
 // #docregion ngmodule
-import { DoBootstrap, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { UpgradeModule } from '@angular/upgrade/static';
+import { DoBootstrap, NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { UpgradeModule } from '@angular-classic/upgrade/static';
 
 @NgModule({
   imports: [
@@ -24,7 +24,7 @@ angular.module('heroApp', [])
   });
 
 // #docregion bootstrap
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 // #enddocregion bootstrap

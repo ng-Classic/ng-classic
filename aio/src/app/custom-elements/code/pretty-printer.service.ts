@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import { htmlSafeByReview } from 'safevalues/restricted/reviewed';
 
 import { from, Observable } from 'rxjs';

@@ -1,4 +1,4 @@
-import {Component, Directive, EventEmitter, NgModule, Output} from '@angular/core';
+import {Component, Directive, EventEmitter, NgModule, Output} from '@angular-classic/core';
 
 @Directive({selector: '[someDirective]'})
 export class SomeDirective {

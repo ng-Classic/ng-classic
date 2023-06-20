@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular-classic/core';
 // #docregion example
 /* avoid pointless aliasing */
 

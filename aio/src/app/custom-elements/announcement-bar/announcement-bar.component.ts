@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular-classic/core';
+import { HttpClient } from '@angular-classic/common/http';
 import { catchError, map } from 'rxjs/operators';
 import { Logger } from 'app/shared/logger.service';
 import { CONTENT_URL_PREFIX } from 'app/documents/document.service';
@@ -39,7 +39,7 @@ export interface Announcement {
  *
  * **Security Note:**
  * The `message` field can contain unsanitized HTML but this field should only updated by
- * verified members of the Angular team.
+ * verified members of the Angular Classicteam.
  */
 @Component({
   selector: 'aio-announcement-bar',

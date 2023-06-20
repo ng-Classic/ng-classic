@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 import {ContentChildrenComp, Pane, Tab} from './content_children_example';
 
 @NgModule({

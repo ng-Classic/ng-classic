@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {runInEachFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
-import {loadStandardTestFiles} from '@angular/compiler-cli/src/ngtsc/testing';
+import {runInEachFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
+import {loadStandardTestFiles} from '@angular-classic/compiler-cli/src/ngtsc/testing';
 import {platform} from 'os';
 
 import {NgtscTestEnvironment} from './env';
@@ -250,7 +250,7 @@ function writeTestCode(env: NgtscTestEnvironment): void {
          <p id="welcomeMessage">${welcomeMessage}</p>`);
 
   env.write('src/comp1.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'basic',
@@ -259,7 +259,7 @@ function writeTestCode(env: NgtscTestEnvironment): void {
     export class BasicCmp1 {}`);
 
   env.write('src/comp2.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'basic2',
@@ -274,7 +274,7 @@ function writeTestCode(env: NgtscTestEnvironment): void {
     export class BasicCmp4 {}`);
 
   env.write('src/comp3.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'basic3',
@@ -287,7 +287,7 @@ function writeTestCode(env: NgtscTestEnvironment): void {
     }}</b></div>`);
 
   env.write('src/placeholder_cmp.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'placeholders',
@@ -303,7 +303,7 @@ function writeTestCode(env: NgtscTestEnvironment): void {
     </div>`);
 
   env.write('src/icu_cmp.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({
       selector: 'icu',
@@ -312,8 +312,8 @@ function writeTestCode(env: NgtscTestEnvironment): void {
     export class IcuCmp { count = 3; }`);
 
   env.write('src/module.ts', `
-    import {NgModule} from '@angular/core';
-    import {CommonModule} from '@angular/common';
+    import {NgModule} from '@angular-classic/core';
+    import {CommonModule} from '@angular-classic/common';
     import {BasicCmp1} from './comp1';
     import {BasicCmp2, BasicCmp4} from './comp2';
     import {BasicCmp3} from './comp3';

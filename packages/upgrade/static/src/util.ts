@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR as NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR} from '@angular/core';
+import {Injector, ɵNOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR as NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR} from '@angular-classic/core';
 
 
 export class NgAdapterInjector implements Injector {
   constructor(private modInjector: Injector) {}
 
-  // When Angular locate a service in the component injector tree, the not found value is set to
+  // When Angular Classiclocate a service in the component injector tree, the not found value is set to
   // `NOT_FOUND_CHECK_ONLY_ELEMENT_INJECTOR`. In such a case we should not walk up to the module
   // injector.
   // AngularJS only supports a single tree and should always check the module injector.

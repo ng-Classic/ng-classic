@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: static_and_dynamic.js
  ****************************************************************************************************/
-import { Component, HostBinding, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, HostBinding, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myStyle = { width: '100px' };
@@ -46,7 +46,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: static_and_dynamic.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myStyle: {
         width: string;
@@ -68,8 +68,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: multiple_dynamic.js
  ****************************************************************************************************/
-import { Component, HostBinding, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, HostBinding, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myHeightProp = 20;
@@ -115,7 +115,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: multiple_dynamic.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myHeightProp: number;
     myBarClass: boolean;
@@ -138,8 +138,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: important.js
  ****************************************************************************************************/
-import { Component, HostBinding, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, HostBinding, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myStyleExp = '';
@@ -185,7 +185,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: important.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myStyleExp: string;
     myClassExp: string;
@@ -205,8 +205,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: class_interpolation.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.p1 = 100;
@@ -262,7 +262,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: class_interpolation.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     p1: number;
     p2: number;
@@ -285,8 +285,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: style_interpolation.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.p1 = 100;
@@ -342,7 +342,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: style_interpolation.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     p1: number;
     p2: number;
@@ -365,8 +365,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: multiple_directives.js
  ****************************************************************************************************/
-import { Component, Directive, HostBinding, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, HostBinding, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ClassDirective {
     constructor() {
         this.myClassMap = { red: true };
@@ -441,7 +441,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: multiple_directives.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class ClassDirective {
     myClassMap: {
         red: boolean;

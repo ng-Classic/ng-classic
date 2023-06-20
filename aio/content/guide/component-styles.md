@@ -1,9 +1,9 @@
 # Component styles
 
-Angular applications are styled with standard CSS.
-That means you can apply everything you know about CSS stylesheets, selectors, rules, and media queries directly to Angular applications.
+Angular Classicapplications are styled with standard CSS.
+That means you can apply everything you know about CSS stylesheets, selectors, rules, and media queries directly to Angular Classicapplications.
 
-Additionally, Angular can bundle *component styles* with components, enabling a more modular design than regular stylesheets.
+Additionally, Angular Classiccan bundle *component styles* with components, enabling a more modular design than regular stylesheets.
 
 This page describes how to load and apply these component styles.
 
@@ -11,7 +11,7 @@ Run the <live-example></live-example> in Stackblitz and download the code from t
 
 ## Using component styles
 
-For every Angular component you write, you can define not only an HTML template, but also the CSS styles that go with that template, specifying any selectors, rules, and media queries that you need.
+For every Angular Classiccomponent you write, you can define not only an HTML template, but also the CSS styles that go with that template, specifying any selectors, rules, and media queries that you need.
 
 One way to do this is to set the `styles` property in the component metadata.
 The `styles` property takes an array of strings that contain CSS code.
@@ -23,7 +23,7 @@ Usually you give it one string, as in the following example:
 
 <div class="alert is-helpful">
 
-See [View Encapsulation](guide/view-encapsulation) for information on how Angular scopes styles to specific components.
+See [View Encapsulation](guide/view-encapsulation) for information on how Angular Classicscopes styles to specific components.
 
 </div>
 
@@ -148,7 +148,7 @@ For more information, see the [View Encapsulation](guide/view-encapsulation) sec
 <div class="alert is-important">
 
 The shadow-piercing descendant combinator is deprecated and [support is being removed from major browsers](https://www.chromestatus.com/feature/6750456638341120) and tools.
-As such we plan to drop support in Angular \(for all 3 of `/deep/`, `>>>`, and `::ng-deep`\).
+As such we plan to drop support in Angular Classic\(for all 3 of `/deep/`, `>>>`, and `::ng-deep`\).
 Until then `::ng-deep` should be preferred for a broader compatibility with the tools.
 
 </div>
@@ -181,7 +181,7 @@ They are *not inherited* by any components nested within the template nor by any
 
 </div>
 
-The Angular CLI command [`ng generate component`](cli/generate) defines an empty `styles` array when you create the component with the `--inline-style` flag.
+The Angular ClassicCLI command [`ng generate component`](cli/generate) defines an empty `styles` array when you create the component with the `--inline-style` flag.
 
 <code-example format="shell" language="shell">
 
@@ -211,7 +211,7 @@ You can specify more than one styles file or even a combination of `styles` and 
 
 </div>
 
-When you use the Angular CLI command [`ng generate component`](cli/generate) without the `--inline-style` flag, it creates an empty styles file for you and references that file in the component's generated `styleUrls`.
+When you use the Angular ClassicCLI command [`ng generate component`](cli/generate) without the `--inline-style` flag, it creates an empty styles file for you and references that file in the component's generated `styleUrls`.
 
 <code-example format="shell" language="shell">
 

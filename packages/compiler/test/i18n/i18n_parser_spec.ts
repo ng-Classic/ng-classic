@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {digest, serializeNodes} from '@angular/compiler/src/i18n/digest';
-import {extractMessages} from '@angular/compiler/src/i18n/extractor_merger';
-import {Message} from '@angular/compiler/src/i18n/i18n_ast';
-import {HtmlParser} from '@angular/compiler/src/ml_parser/html_parser';
-import {DEFAULT_INTERPOLATION_CONFIG} from '@angular/compiler/src/ml_parser/interpolation_config';
+import {digest, serializeNodes} from '@angular-classic/compiler/src/i18n/digest';
+import {extractMessages} from '@angular-classic/compiler/src/i18n/extractor_merger';
+import {Message} from '@angular-classic/compiler/src/i18n/i18n_ast';
+import {HtmlParser} from '@angular-classic/compiler/src/ml_parser/html_parser';
+import {DEFAULT_INTERPOLATION_CONFIG} from '@angular-classic/compiler/src/ml_parser/interpolation_config';
 
 {
   describe('I18nParser', () => {

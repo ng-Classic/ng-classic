@@ -1,7 +1,7 @@
 {
   "name": "version",
   "command": "ng version",
-  "shortDescription": "Outputs Angular CLI version.",
+  "shortDescription": "Outputs Angular ClassicCLI version.",
   "aliases": [
     "v"
   ],

@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import localeEn from '@angular/common/locales/en';
-import localeEnAU from '@angular/common/locales/en-AU';
-import localeFr from '@angular/common/locales/fr';
-import localeHe from '@angular/common/locales/he';
-import localeZh from '@angular/common/locales/zh';
-import {ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular/core';
+import localeEn from '@angular-classic/common/locales/en';
+import localeEnAU from '@angular-classic/common/locales/en-AU';
+import localeFr from '@angular-classic/common/locales/fr';
+import localeHe from '@angular-classic/common/locales/he';
+import localeZh from '@angular-classic/common/locales/zh';
+import {ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular-classic/core';
 
 import {FormatWidth, FormStyle, getCurrencySymbol, getLocaleDateFormat, getLocaleDayNames, getLocaleDirection, getLocaleMonthNames, getNumberOfCurrencyDigits, TranslationWidth} from '../../src/i18n/locale_data_api';
 

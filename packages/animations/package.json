@@ -1,7 +1,7 @@
 {
-  "name": "@angular/animations",
+  "name": "@angular-classic/animations",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - animations integration with web-animations",
+  "description": "Angular Classic- animations integration with web-animations",
   "author": "angular",
   "license": "MIT",
   "engines": {
@@ -11,11 +11,11 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/core": "0.0.0-PLACEHOLDER"
+    "@angular-classic/core": "0.0.0-PLACEHOLDER"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular/angular.git",
+    "url": "https://github.com/ng-classic/angular.git",
     "directory": "packages/animations"
   },
   "ng-update": {

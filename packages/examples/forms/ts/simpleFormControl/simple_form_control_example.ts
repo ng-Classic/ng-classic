@@ -7,8 +7,8 @@
  */
 
 // #docregion Component
-import {Component} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {Component} from '@angular-classic/core';
+import {FormControl, Validators} from '@angular-classic/forms';
 
 @Component({
   selector: 'example-app',

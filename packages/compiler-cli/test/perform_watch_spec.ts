@@ -136,7 +136,7 @@ describe('perform watch', () => {
     expect(getSourceFileSpy!).toHaveBeenCalledWith(utilTsPath, jasmine.anything());
   });
 
-  // https://github.com/angular/angular/pull/26036
+  // https://github.com/ng-classic/angular/pull/26036
   it('should handle redirected source files', () => {
     const config = createConfig();
     const host = new MockWatchHost(config);
@@ -182,13 +182,13 @@ describe('perform watch', () => {
     const host = new MockWatchHost(config);
 
     const okFileContent = `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
 
       @NgModule()
       export class MyModule {}
     `;
     const errorFileContent = `
-      import {NgModule} from '@angular/core';
+      import {NgModule} from '@angular-classic/core';
 
       @NgModule((() => (1===1 ? null as any : null as any)) as any)
       export class MyModule {}
@@ -223,7 +223,7 @@ function createModuleAndCompSource(prefix: string, template: string = prefix + '
   const templateEntry =
       template.endsWith('.html') ? `templateUrl: '${template}'` : `template: \`${template}\``;
   return `
-    import {Component, NgModule} from '@angular/core';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({selector: '${prefix}', ${templateEntry}})
     export class ${prefix}Comp {}

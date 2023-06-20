@@ -1,6 +1,6 @@
 // #docregion
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular-classic/core';
+import { ActivatedRoute } from '@angular-classic/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 

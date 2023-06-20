@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, makeStateKey, NgModule, TransferState} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {renderModule, ServerModule} from '@angular/platform-server';
+import {Component, makeStateKey, NgModule, TransferState} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {renderModule, ServerModule} from '@angular-classic/platform-server';
 
 describe('transfer_state', () => {
   const defaultExpectedOutput =

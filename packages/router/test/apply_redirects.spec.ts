@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentInjector, Injectable, NgModuleRef} from '@angular/core';
-import {fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {EnvironmentInjector, Injectable, NgModuleRef} from '@angular-classic/core';
+import {fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
 import {Observable, of} from 'rxjs';
 import {delay, map, tap} from 'rxjs/operators';
 

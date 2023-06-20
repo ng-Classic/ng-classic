@@ -8,17 +8,17 @@ process.env.CHROME_BIN = getAdjustedChromeBinPathForWindows();
 module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    frameworks: ['jasmine', '@angular-classic-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
-      require('@angular-devkit/build-angular/plugins/karma'),
+      require('@angular-classic-devkit/build-angular/plugins/karma'),
       {'reporter:jasmine-seed': ['type', JasmineSeedReporter]},
     ],
     proxies: {
-      '/dummy/image': 'src/assets/images/logos/angular/angular.png',
+      '/dummy/image': 'src/assets/images/logos/ng-classic/angular.png',
     },
     client: {
       clearContext: false,  // leave Jasmine Spec Runner output visible in browser

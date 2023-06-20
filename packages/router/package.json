@@ -1,14 +1,14 @@
 {
-  "name": "@angular/router",
+  "name": "@angular-classic/router",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - the routing library",
+  "description": "Angular Classic- the routing library",
   "keywords": [
     "angular",
     "router"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angular/angular.git",
+    "url": "git+https://github.com/ng-classic/angular.git",
     "directory": "packages/router"
   },
   "author": "angular",
@@ -17,16 +17,16 @@
     "node": "^16.14.0 || >=18.10.0"
   },
   "bugs": {
-    "url": "https://github.com/angular/angular/issues"
+    "url": "https://github.com/ng-classic/angular/issues"
   },
-  "homepage": "https://github.com/angular/angular/tree/main/packages/router",
+  "homepage": "https://github.com/ng-classic/angular/tree/main/packages/router",
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/core": "0.0.0-PLACEHOLDER",
-    "@angular/common": "0.0.0-PLACEHOLDER",
-    "@angular/platform-browser": "0.0.0-PLACEHOLDER",
+    "@angular-classic/core": "0.0.0-PLACEHOLDER",
+    "@angular-classic/common": "0.0.0-PLACEHOLDER",
+    "@angular-classic/platform-browser": "0.0.0-PLACEHOLDER",
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "ng-update": {

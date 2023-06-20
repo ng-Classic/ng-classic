@@ -5,7 +5,7 @@
 
 import spawn from 'cross-spawn';
 import watchr from '../tools/transforms/authors-package/watchr.js';
-const architectCli = require.resolve('@angular-devkit/architect-cli/bin/architect');
+const architectCli = require.resolve('@angular-classic-devkit/architect-cli/bin/architect');
 
 const serve = spawn(
   process.execPath,

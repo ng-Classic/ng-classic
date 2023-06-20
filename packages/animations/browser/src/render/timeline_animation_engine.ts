@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AnimationMetadata, AnimationMetadataType, AnimationOptions, AnimationPlayer, AUTO_STYLE, ɵStyleDataMap} from '@angular/animations';
+import {AnimationMetadata, AnimationMetadataType, AnimationOptions, AnimationPlayer, AUTO_STYLE, ɵStyleDataMap} from '@angular-classic/animations';
 
 import {Ast} from '../dsl/animation_ast';
 import {buildAnimationAst} from '../dsl/animation_ast_builder';

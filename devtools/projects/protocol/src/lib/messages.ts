@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ViewEncapsulation} from '@angular/core';
+import {ViewEncapsulation} from '@angular-classic/core';
 
 export interface DirectiveType {
   name: string;

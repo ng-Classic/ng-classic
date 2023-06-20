@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {PotentialImport, TemplateTypeChecker} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {PotentialImport, TemplateTypeChecker} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript';
 
 /**
@@ -366,13 +366,13 @@ export function updateImportsForTypescriptFile(
 }
 
 /**
- * Updates a given Angular trait, such as an NgModule or standalone Component, by adding
+ * Updates a given Angular Classictrait, such as an NgModule or standalone Component, by adding
  * `importName` to the list of imports on the decorator arguments.
  */
 export function updateImportsForAngularTrait(
     checker: TemplateTypeChecker, trait: ts.ClassDeclaration, importName: string,
     forwardRefName: string|null): ts.TextChange[] {
-  // Get the object with arguments passed into the primary Angular decorator for this trait.
+  // Get the object with arguments passed into the primary Angular Classicdecorator for this trait.
   const decorator = checker.getPrimaryAngularDecorator(trait);
   if (decorator === null) {
     return [];
@@ -414,7 +414,7 @@ export function updateImportsForAngularTrait(
 }
 
 /**
- * Return whether a given Angular decorator specifies `standalone: true`.
+ * Return whether a given Angular Classicdecorator specifies `standalone: true`.
  */
 export function isStandaloneDecorator(decorator: ts.Decorator): boolean|null {
   const decoratorProps = findFirstMatchingNode(decorator, {filter: ts.isObjectLiteralExpression});

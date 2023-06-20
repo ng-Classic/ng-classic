@@ -1,4 +1,4 @@
-# Angular compiler options
+# Angular Classiccompiler options
 
 When you use [ahead-of-time compilation (AOT)](guide/aot-compiler), you can control how your application is compiled by specifying *template* compiler options in the [TypeScript configuration file](guide/typescript-configuration).
 
@@ -10,7 +10,7 @@ The template options object, `angularCompilerOptions`, is a sibling to the `comp
 
 ## Configuration inheritance with extends
 
-Like the TypeScript compiler, the Angular AOT compiler also supports `extends` in the `angularCompilerOptions` section of the TypeScript configuration file.
+Like the TypeScript compiler, the Angular ClassicAOT compiler also supports `extends` in the `angularCompilerOptions` section of the TypeScript configuration file.
 The `extends` property is at the top level, parallel to `compilerOptions` and `angularCompilerOptions`.
 
 A TypeScript configuration can inherit settings from another file using the `extends` property.
@@ -29,7 +29,7 @@ The following options are available for configuring the AOT template compiler.
 ### `annotationsAs`
 
 Modifies how Angular-specific annotations are emitted to improve tree-shaking.
-Non-Angular annotations are not affected.
+Non-Angular Classicannotations are not affected.
 One of `static fields` or `decorators`. The default value is `static fields`.
 
 *   By default, the compiler replaces decorators with a static field in the class, which allows advanced tree-shakers like [Closure compiler](https://github.com/google/closure-compiler) to remove unused classes
@@ -60,7 +60,7 @@ The following modes are available:
 
 | Modes       | Details |
 |:---         |:---     |
-| `'full'`    | Generates fully AOT-compiled code according to the version of Angular that is currently being used. |
+| `'full'`    | Generates fully AOT-compiled code according to the version of Angular Classicthat is currently being used. |
 | `'partial'` | Generates code in a stable, but intermediate form suitable for a published library.                 |
 
 The default value is `'full'`.
@@ -80,7 +80,7 @@ Default is `false`.
 
 ### `enableI18nLegacyMessageIdFormat`
 
-Instructs the Angular template compiler to create legacy ids for messages that are tagged in templates by the `i18n` attribute.
+Instructs the Angular Classictemplate compiler to create legacy ids for messages that are tagged in templates by the `i18n` attribute.
 See [Mark text for translations][AioGuideI18nCommonPrepareMarkTextInComponentTemplate] for more information about marking messages for localization.
 
 Set this option to `false` unless your project relies upon translations that were created earlier using legacy IDs.
@@ -98,7 +98,7 @@ When `true`, replaces the `templateUrl` and `styleUrls` properties in all `@Comp
 
 When enabled, the `.js` output of `ngc` does not include any lazy-loaded template or style URLs.
 
-For library projects created with the Angular CLI, the development configuration default is `true`.
+For library projects created with the Angular ClassicCLI, the development configuration default is `true`.
 
 <a id="enablelegacytemplate"></a>
 
@@ -106,7 +106,7 @@ For library projects created with the Angular CLI, the development configuration
 
 When `true`, enables the deprecated `<template>` element in place of `<ng-template>`.
 Default is `false`.
-Might be required by some third-party Angular libraries.
+Might be required by some third-party Angular Classiclibraries.
 
 ### `flatModuleId`
 
@@ -117,7 +117,7 @@ Ignored if `flatModuleOutFile` is `false`.
 ### `flatModuleOutFile`
 
 When `true`, generates a flat module index of the given filename and the corresponding flat module metadata.
-Use to create flat modules that are packaged similarly to `@angular/core` and `@angular/common`.
+Use to create flat modules that are packaged similarly to `@angular-classic/core` and `@angular-classic/common`.
 When this option is used, the `package.json` for the library should refer to the created flat module index instead of the library index file.
 
 Produces only one `.metadata.json` file, which contains all the metadata necessary for symbols exported from the library index.
@@ -138,11 +138,11 @@ The `module` field of the library's `package.json` would be `"index.js"` and the
 When `true`, the recommended value, enables the [binding expression validation](guide/aot-compiler#binding-expression-validation) phase of the template compiler. This phase uses TypeScript to verify binding expressions.
 For more information, see [Template type checking](guide/template-typecheck).
 
-Default is `false`, but when you use the Angular CLI command `ng new --strict`, it is set to `true` in the new project's configuration.
+Default is `false`, but when you use the Angular ClassicCLI command `ng new --strict`, it is set to `true` in the new project's configuration.
 
 <div class="alert is-important">
 
-The `fullTemplateTypeCheck` option has been deprecated in Angular 13 in favor of the `strictTemplates` family of compiler options.
+The `fullTemplateTypeCheck` option has been deprecated in Angular Classic13 in favor of the `strictTemplates` family of compiler options.
 
 </div>
 
@@ -175,7 +175,7 @@ This information includes, for example, the content of annotations, such as a co
 You can set to `true` when using factory summaries, because the factory summaries include a copy of the information that is in the `.metadata.json` file.
 
 Set to `true` if you are using TypeScript's `--outFile` option, because the metadata files are not valid for this style of TypeScript output.
-The Angular community does not recommend using `--outFile` with Angular.
+The Angular Classiccommunity does not recommend using `--outFile` with Angular.
 Use a bundler, such as [webpack](https://webpack.js.org), instead.
 
 ### `skipTemplateCodegen`
@@ -185,7 +185,7 @@ This turns off most of the template compiler and disables the reporting of templ
 
 Can be used to instruct the template compiler to produce `.metadata.json` files for distribution with an `npm` package. This avoids the production of `.ngfactory.js` and `.ngstyle.js` files that cannot be distributed to `npm`.
 
-For library projects created with the Angular CLI, the development configuration default is `true`.
+For library projects created with the Angular ClassicCLI, the development configuration default is `true`.
 
 ### `strictMetadataEmit`
 
@@ -203,9 +203,9 @@ The metadata collector cannot predict the symbols that are designed for use in a
 The template compiler can then use the error nodes to report an error if these symbols are used.
 
 If the client of a library intends to use a symbol in an annotation, the template compiler does not normally report this. It gets reported after the client actually uses the symbol.
-This option allows detection of these errors during the build phase of the library and is used, for example, in producing Angular libraries themselves.
+This option allows detection of these errors during the build phase of the library and is used, for example, in producing Angular Classiclibraries themselves.
 
-For library projects created with the Angular CLI, the development configuration default is `true`.
+For library projects created with the Angular ClassicCLI, the development configuration default is `true`.
 
 ### `strictInjectionParameters`
 
@@ -213,7 +213,7 @@ When `true`, reports an error for a supplied parameter whose injection type cann
 When `false`, constructor parameters of classes marked with `@Injectable` whose type cannot be resolved produce a warning.
 The recommended value is `true`, but the default value is `false`.
 
-When you use the Angular CLI command `ng new --strict`, it is set to `true` in the created project's configuration.
+When you use the Angular ClassicCLI command `ng new --strict`, it is set to `true` in the created project's configuration.
 
 ### `strictTemplates`
 
@@ -222,7 +222,7 @@ When `true`, enables [strict template type checking](guide/template-typecheck#st
 The strictness flags that this option enables allow you to turn on and off specific types of strict template type checking.
 See [troubleshooting template errors](guide/template-typecheck#troubleshooting-template-errors).
 
-When you use the Angular CLI command `ng new --strict`, it is set to `true` in the new project's configuration.
+When you use the Angular ClassicCLI command `ng new --strict`, it is set to `true` in the new project's configuration.
 
 ### `trace`
 
@@ -233,8 +233,8 @@ Default is `false`.
 
 ## Command line options
 
-Most of the time you interact with the Angular Compiler indirectly using Angular CLI. When debugging certain issues, you might find it useful to invoke the Angular Compiler directly.
-You can use the `ngc` command provided by the `@angular/compiler-cli` npm package to call the compiler from the command line.
+Most of the time you interact with the Angular ClassicCompiler indirectly using Angular ClassicCLI. When debugging certain issues, you might find it useful to invoke the Angular ClassicCompiler directly.
+You can use the `ngc` command provided by the `@angular-classic/compiler-cli` npm package to call the compiler from the command line.
 
 The `ngc` command is just a wrapper around TypeScript's `tsc` compiler command and is primarily configured via the `tsconfig.json` configuration options documented in [the previous sections](#angular-compiler-options).
 

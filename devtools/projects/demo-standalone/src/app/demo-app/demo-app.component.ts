@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, EventEmitter, inject, Injector, Input, Output, ViewChild, ViewEncapsulation} from '@angular/core';
-import {createCustomElement} from '@angular/elements';
-import {RouterOutlet} from '@angular/router';
+import {Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, EventEmitter, inject, Injector, Input, Output, ViewChild, ViewEncapsulation} from '@angular-classic/core';
+import {createCustomElement} from '@angular-classic/elements';
+import {RouterOutlet} from '@angular-classic/router';
 import {initializeMessageBus} from 'ng-devtools-backend';
 
 import {ZoneUnawareIFrameMessageBus} from '../../../../../src/zone-unaware-iframe-message-bus';

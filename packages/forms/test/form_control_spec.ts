@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {fakeAsync, tick} from '@angular/core/testing';
-import {AsyncValidatorFn, FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
+import {fakeAsync, tick} from '@angular-classic/core/testing';
+import {AsyncValidatorFn, FormArray, FormControl, FormGroup, Validators} from '@angular-classic/forms';
 
 import {asyncValidator, asyncValidatorReturningObservable} from './util';
 
@@ -1513,7 +1513,7 @@ describe('FormControl', () => {
         expect(fn).toThrowError(
             'NG01101: Expected async validator to return Promise or Observable. ' +
             'Are you using a synchronous validator where an async validator is expected? ' +
-            'Find more at https://angular.io/errors/NG01101');
+            'Find more at https://angular-classic.com/errors/NG01101');
       });
 
       it('should not emit value change events when emitEvent = false', () => {

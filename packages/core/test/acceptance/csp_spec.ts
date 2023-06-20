@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, CSP_NONCE, destroyPlatform, ElementRef, inject, ViewEncapsulation} from '@angular/core';
-import {bootstrapApplication} from '@angular/platform-browser';
-import {withBody} from '@angular/private/testing';
+import {Component, CSP_NONCE, destroyPlatform, ElementRef, inject, ViewEncapsulation} from '@angular-classic/core';
+import {bootstrapApplication} from '@angular-classic/platform-browser';
+import {withBody} from '@angular-classic/private/testing';
 
 describe('CSP integration', () => {
   beforeEach(destroyPlatform);

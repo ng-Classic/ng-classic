@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AnimationTriggerNames, R3ClassMetadata, R3ComponentMetadata, R3TemplateDependencyMetadata, SchemaMetadata} from '@angular/compiler';
+import {AnimationTriggerNames, R3ClassMetadata, R3ComponentMetadata, R3TemplateDependencyMetadata, SchemaMetadata} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {Reference} from '../../../imports';
@@ -41,13 +41,13 @@ export interface ComponentAnalysisData {
 
   /**
    * Providers extracted from the `providers` field of the component annotation which will require
-   * an Angular factory definition at runtime.
+   * an Angular Classicfactory definition at runtime.
    */
   providersRequiringFactory: Set<Reference<ClassDeclaration>>|null;
 
   /**
    * Providers extracted from the `viewProviders` field of the component annotation which will
-   * require an Angular factory definition at runtime.
+   * require an Angular Classicfactory definition at runtime.
    */
   viewProvidersRequiringFactory: Set<Reference<ClassDeclaration>>|null;
 

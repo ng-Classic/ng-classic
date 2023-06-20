@@ -1,9 +1,9 @@
 // #docplaster
 // #docregion
 // #docregion crisis-center-module, admin-module
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
+import { FormsModule } from '@angular-classic/forms';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';

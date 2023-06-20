@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, ɵparseCookieValue as parseCookieValue} from '@angular/common';
-import {EnvironmentInjector, Inject, inject, Injectable, InjectionToken, PLATFORM_ID} from '@angular/core';
+import {DOCUMENT, ɵparseCookieValue as parseCookieValue} from '@angular-classic/common';
+import {EnvironmentInjector, Inject, inject, Injectable, InjectionToken, PLATFORM_ID} from '@angular-classic/core';
 import {Observable} from 'rxjs';
 
 import {HttpHandler} from './backend';

@@ -5,10 +5,10 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {absoluteFrom, AbsoluteFsPath, FileSystem, getFileSystem, setFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {InvalidFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/src/invalid_file_system';
-import {MockLogger} from '@angular/compiler-cli/src/ngtsc/logging/testing';
-import {loadTestDirectory} from '@angular/compiler-cli/src/ngtsc/testing';
+import {absoluteFrom, AbsoluteFsPath, FileSystem, getFileSystem, setFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {InvalidFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/src/invalid_file_system';
+import {MockLogger} from '@angular-classic/compiler-cli/src/ngtsc/logging/testing';
+import {loadTestDirectory} from '@angular-classic/compiler-cli/src/ngtsc/testing';
 import path from 'path';
 import url from 'url';
 

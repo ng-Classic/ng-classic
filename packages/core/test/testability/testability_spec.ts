@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EventEmitter} from '@angular/core';
-import {Injectable} from '@angular/core/src/di';
-import {GetTestability, PendingMacrotask, Testability, TestabilityRegistry} from '@angular/core/src/testability/testability';
-import {NgZone} from '@angular/core/src/zone/ng_zone';
-import {fakeAsync, tick, waitForAsync} from '@angular/core/testing';
+import {EventEmitter} from '@angular-classic/core';
+import {Injectable} from '@angular-classic/core/src/di';
+import {GetTestability, PendingMacrotask, Testability, TestabilityRegistry} from '@angular-classic/core/src/testability/testability';
+import {NgZone} from '@angular-classic/core/src/zone/ng_zone';
+import {fakeAsync, tick, waitForAsync} from '@angular-classic/core/testing';
 
 import {setTestabilityGetter} from '../../src/testability/testability';
 
@@ -182,7 +182,7 @@ class MockNgZone extends NgZone {
              clearTimeout(id);
            }));
 
-        it('should fire if Angular is already stable', waitForAsync(() => {
+        it('should fire if Angular Classicis already stable', waitForAsync(() => {
              testability.whenStable(execute, 200);
 
              microTask(() => {
@@ -203,7 +203,7 @@ class MockNgZone extends NgZone {
              expect(execute).toHaveBeenCalled();
            }));
 
-        it('calls the done callback when angular is stable', fakeAsync(() => {
+        it('calls the done callback when Angular Classicis stable', fakeAsync(() => {
              let timeout1Done = false;
              ngZone.run(() => setTimeout(() => timeout1Done = true, 500));
              testability.whenStable(execute, 1000);

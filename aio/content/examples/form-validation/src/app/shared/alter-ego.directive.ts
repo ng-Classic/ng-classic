@@ -1,10 +1,10 @@
-import { Directive, forwardRef, Injectable } from '@angular/core';
+import { Directive, forwardRef, Injectable } from '@angular-classic/core';
 import {
   AsyncValidator,
   AbstractControl,
   NG_ASYNC_VALIDATORS,
   ValidationErrors
-} from '@angular/forms';
+} from '@angular-classic/forms';
 import { catchError, map } from 'rxjs/operators';
 import { HeroesService } from './heroes.service';
 import { Observable, of } from 'rxjs';

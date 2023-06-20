@@ -5,18 +5,18 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import '@angular/compiler';
+import '@angular-classic/compiler';
 
-import {animate, AnimationBuilder, state, style, transition, trigger} from '@angular/animations';
-import {DOCUMENT, isPlatformServer, PlatformLocation, ɵgetDOM as getDOM} from '@angular/common';
-import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
-import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
-import {ApplicationConfig, ApplicationRef, Component, destroyPlatform, EnvironmentProviders, getPlatform, HostListener, Inject, inject as coreInject, Injectable, Input, makeStateKey, mergeApplicationConfig, NgModule, NgZone, PLATFORM_ID, Provider, TransferState, Type, ViewEncapsulation} from '@angular/core';
-import {InitialRenderPendingTasks} from '@angular/core/src/initial_render_pending_tasks';
-import {TestBed} from '@angular/core/testing';
-import {bootstrapApplication, BrowserModule, provideClientHydration, Title, withNoDomReuse, withNoHttpTransferCache} from '@angular/platform-browser';
-import {BEFORE_APP_SERIALIZED, INITIAL_CONFIG, platformServer, PlatformState, provideServerRendering, renderModule, ServerModule} from '@angular/platform-server';
-import {provideRouter, RouterOutlet, Routes} from '@angular/router';
+import {animate, AnimationBuilder, state, style, transition, trigger} from '@angular-classic/animations';
+import {DOCUMENT, isPlatformServer, PlatformLocation, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular-classic/common/http';
+import {HttpClientTestingModule, HttpTestingController} from '@angular-classic/common/http/testing';
+import {ApplicationConfig, ApplicationRef, Component, destroyPlatform, EnvironmentProviders, getPlatform, HostListener, Inject, inject as coreInject, Injectable, Input, makeStateKey, mergeApplicationConfig, NgModule, NgZone, PLATFORM_ID, Provider, TransferState, Type, ViewEncapsulation} from '@angular-classic/core';
+import {InitialRenderPendingTasks} from '@angular-classic/core/src/initial_render_pending_tasks';
+import {TestBed} from '@angular-classic/core/testing';
+import {bootstrapApplication, BrowserModule, provideClientHydration, Title, withNoDomReuse, withNoHttpTransferCache} from '@angular-classic/platform-browser';
+import {BEFORE_APP_SERIALIZED, INITIAL_CONFIG, platformServer, PlatformState, provideServerRendering, renderModule, ServerModule} from '@angular-classic/platform-server';
+import {provideRouter, RouterOutlet, Routes} from '@angular-classic/router';
 import {Observable} from 'rxjs';
 import {first} from 'rxjs/operators';
 

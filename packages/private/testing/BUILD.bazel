@@ -9,12 +9,12 @@ exports_files(["package.json"])
 
 ng_module(
     name = "testing",
-    package_name = "@angular/private/testing",
+    package_name = "@angular-classic/private/testing",
     testonly = True,
     srcs = glob(
         ["**/*.ts"],
     ),
-    module_name = "@angular/private/testing",
+    module_name = "@angular-classic/private/testing",
     deps = [
         "//packages/core",
         "//packages/platform-server:bundled_domino_lib",

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ExpressionType, ExternalExpr, TransplantedType, Type, TypeModifier} from '@angular/compiler';
+import {ExpressionType, ExternalExpr, TransplantedType, Type, TypeModifier} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {assertSuccessfulReferenceEmit, ImportFlags, Reference, ReferenceEmitKind, ReferenceEmitter} from '../../imports';

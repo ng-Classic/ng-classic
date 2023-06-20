@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AfterContentInit, AfterViewInit, ChangeDetectionStrategy, Component, ContentChildren, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnDestroy, Output, QueryList, ViewChild} from '@angular/core';
+import {AfterContentInit, AfterViewInit, ChangeDetectionStrategy, Component, ContentChildren, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnDestroy, Output, QueryList, ViewChild} from '@angular-classic/core';
 import {Subscription} from 'rxjs';
 
 import {EXPANDING_ROW_HOST_INJECTION_TOKEN, ExpandingRow, ExpandingRowHostBase} from './expanding_row';

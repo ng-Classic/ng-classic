@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpClient} from '@angular/common/http';
-import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular-classic/common/http';
+import {Component, OnInit} from '@angular-classic/core';
 
 @Component({
   selector: 'transfer-state-http-on-init',

@@ -7,8 +7,8 @@
  */
 
 // #docregion LocationComponent
-import {HashLocationStrategy, Location, LocationStrategy} from '@angular/common';
-import {Component} from '@angular/core';
+import {HashLocationStrategy, Location, LocationStrategy} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
 
 @Component({
   selector: 'hash-location',

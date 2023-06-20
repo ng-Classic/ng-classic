@@ -1,4 +1,4 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular-classic/core/testing';
 
 import { AppComponent } from './app.component';
 import { ReactiveModule } from './reactive/reactive.module';

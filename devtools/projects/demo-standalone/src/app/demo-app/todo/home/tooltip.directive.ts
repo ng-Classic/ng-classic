@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, HostListener} from '@angular/core';
+import {Directive, HostListener} from '@angular-classic/core';
 
 @Directive({selector: '[appTooltip]', standalone: true})
 export class TooltipDirective {

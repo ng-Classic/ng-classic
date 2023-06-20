@@ -1,4 +1,4 @@
-import { Component, Self } from '@angular/core';
+import { Component, Self } from '@angular-classic/core';
 import { FlowerService } from '../flower.service';
 
 // #docregion self-component

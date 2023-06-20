@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, EventEmitter, forwardRef, Host, Inject, Input, OnChanges, OnDestroy, Optional, Output, Provider, Self, SimpleChanges, SkipSelf} from '@angular/core';
+import {Directive, EventEmitter, forwardRef, Host, Inject, Input, OnChanges, OnDestroy, Optional, Output, Provider, Self, SimpleChanges, SkipSelf} from '@angular-classic/core';
 
 import {FormControl} from '../../model/form_control';
 import {NG_ASYNC_VALIDATORS, NG_VALIDATORS} from '../../validators';
@@ -53,7 +53,7 @@ const controlNameBinding: Provider = {
  * ### Use with ngModel is deprecated
  *
  * Support for using the `ngModel` input property and `ngModelChange` event with reactive
- * form directives has been deprecated in Angular v6 and is scheduled for removal in
+ * form directives has been deprecated in Angular Classicv6 and is scheduled for removal in
  * a future version of Angular.
  *
  * For details, see [Deprecated features](guide/deprecations#ngmodel-with-reactive-forms).

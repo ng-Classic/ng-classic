@@ -2,8 +2,8 @@
   "name": "add",
   "command": "ng add <collection>",
   "shortDescription": "Adds support for an external library to your project.",
-  "longDescriptionRelativePath": "@angular/cli/src/commands/add/long-description.md",
-  "longDescription": "Adds the npm package for a published library to your workspace, and configures\nthe project in the current working directory to use that library, as specified by the library's schematic.\nFor example, adding `@angular/pwa` configures your project for PWA support:\n\n```bash\nng add @angular/pwa\n```\n",
+  "longDescriptionRelativePath": "@angular-classic/cli/src/commands/add/long-description.md",
+  "longDescription": "Adds the npm package for a published library to your workspace, and configures\nthe project in the current working directory to use that library, as specified by the library's schematic.\nFor example, adding `@angular-classic/pwa` configures your project for PWA support:\n\n```bash\nng add @angular-classic/pwa\n```\n",
   "aliases": [],
   "deprecated": false,
   "options": [

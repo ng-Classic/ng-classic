@@ -1,8 +1,8 @@
 #!/bin/bash
 set -ex
 
-# This script is used for building the @angular/language-service package locally
-# so that it can be consumed by the Angular extension for local development.
+# This script is used for building the @angular-classic/language-service package locally
+# so that it can be consumed by the Angular Classicextension for local development.
 # Usage: ./build.sh /path/to/vscode-ng-language-service
 
 readonly bazel_bin=$(yarn run -s bazel info bazel-bin)
@@ -38,6 +38,6 @@ npm_package(
   visibility = ["//visibility:public"],
 )
 EOT
-_sedi 's#\# PLACE_HOLDER_FOR_angular/angular_packages/language-service/build.sh#"//.angular_packages/language-service:package.json", \# FOR TESTING ONLY! DO NOT COMMIT THIS LINE!#' WORKSPACE
-yarn add @angular/language-service@file:".angular_packages/language-service"
+_sedi 's#\# PLACE_HOLDER_FOR_ng-classic/angular_packages/language-service/build.sh#"//.angular_packages/language-service:package.json", \# FOR TESTING ONLY! DO NOT COMMIT THIS LINE!#' WORKSPACE
+yarn add @angular-classic/language-service@file:".angular_packages/language-service"
 popd

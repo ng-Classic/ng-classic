@@ -7,8 +7,8 @@
  */
 
 // #docregion LocationComponent
-import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
-import {Component} from '@angular/core';
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
 
 @Component({
   selector: 'path-location',

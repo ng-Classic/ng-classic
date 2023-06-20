@@ -49,7 +49,7 @@ runInEachFileSystem(() => {
 
 function setupHandler(errorOnDuplicateProv: boolean) {
   const ENTRY_FILE = absoluteFrom('/entry.ts');
-  const ANGULAR_CORE = absoluteFrom('/node_modules/@angular/core/index.d.ts');
+  const ANGULAR_CORE = absoluteFrom('/node_modules/@angular-classic/core/index.d.ts');
   const {program} = makeProgram([
     {
       name: ANGULAR_CORE,
@@ -58,7 +58,7 @@ function setupHandler(errorOnDuplicateProv: boolean) {
     {
       name: ENTRY_FILE,
       contents: `
-        import {Injectable, ɵɵdefineInjectable} from '@angular/core';
+        import {Injectable, ɵɵdefineInjectable} from '@angular-classic/core';
         export const TestClassToken = 'TestClassToken';
         @Injectable({providedIn: 'module'})
         export class TestClass {

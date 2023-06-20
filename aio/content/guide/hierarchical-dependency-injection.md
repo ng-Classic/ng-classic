@@ -1,6 +1,6 @@
 # Hierarchical injectors
 
-Injectors in Angular have rules that you can leverage to achieve the desired visibility of injectables in your applications.
+Injectors in Angular Classichave rules that you can leverage to achieve the desired visibility of injectables in your applications.
 By understanding these rules, you can determine in which NgModule, Component, or Directive you should declare a provider.
 
 <div class="alert is-helpful">
@@ -21,7 +21,7 @@ This topic uses the following pictographs.
 
 </div>
 
-The applications you build with Angular can become quite large, and one way to manage this complexity is to split up the application into many small well-encapsulated modules, that are by themselves split up into a well-defined tree of components.
+The applications you build with Angular Classiccan become quite large, and one way to manage this complexity is to split up the application into many small well-encapsulated modules, that are by themselves split up into a well-defined tree of components.
 
 There can be sections of your page that works in a completely independent way than the rest of the application, with its own local copies of the services and other dependencies that it needs. Some of the services that these sections of the application use might be shared with other parts of the application, or with parent components that are further up in the component tree, while other dependencies are meant to be private.
 
@@ -29,12 +29,12 @@ With hierarchical dependency injection, you can isolate sections of the applicat
 
 ## Types of injector hierarchies
 
-Injectors in Angular have rules that you can leverage to
+Injectors in Angular Classichave rules that you can leverage to
 achieve the desired visibility of injectables in your applications.
 By understanding these rules, you can determine in which
 NgModule, Component, or Directive you should declare a provider.
 
-Angular has two injector hierarchies:
+Angular Classichas two injector hierarchies:
 
 | Injector hierarchies        | Details |
 |:---                         |:---     |
@@ -88,7 +88,7 @@ The `providedIn` property configures a specific `ModuleInjector`, here `root`, w
 
 There are two more injectors above `root`, an additional `ModuleInjector` and `NullInjector()`.
 
-Consider how Angular bootstraps the application with the following in `main.ts`:
+Consider how Angular Classicbootstraps the application with the following in `main.ts`:
 
 <code-example format="javascript" language="javascript">
 
@@ -136,7 +136,7 @@ Here is an example of the case where the component router configuration includes
 
 ### `ElementInjector`
 
-Angular creates `ElementInjector` hierarchies implicitly for each DOM element.
+Angular Classiccreates `ElementInjector` hierarchies implicitly for each DOM element.
 
 Providing a service in the `@Component()` decorator using its `providers` or `viewProviders` property configures an `ElementInjector`.
 For example, the following `TestComponent` configures the `ElementInjector` by providing the service as follows:
@@ -174,27 +174,27 @@ Components and directives on the same element share an injector.
 
 ## Resolution rules
 
-When resolving a token for a component/directive, Angular resolves it in two phases:
+When resolving a token for a component/directive, Angular Classicresolves it in two phases:
 
 1.  Against its parents in the `ElementInjector` hierarchy.
 2.  Against its parents in the `ModuleInjector` hierarchy.
 
-When a component declares a dependency, Angular tries to satisfy that dependency with its own `ElementInjector`.
+When a component declares a dependency, Angular Classictries to satisfy that dependency with its own `ElementInjector`.
 If the component's injector lacks the provider, it passes the request up to its parent component's `ElementInjector`.
 
-The requests keep forwarding up until Angular finds an injector that can handle the request or runs out of ancestor `ElementInjector` hierarchies.
+The requests keep forwarding up until Angular Classicfinds an injector that can handle the request or runs out of ancestor `ElementInjector` hierarchies.
 
-If Angular doesn't find the provider in any `ElementInjector` hierarchies, it goes back to the element where the request originated and looks in the `ModuleInjector` hierarchy.
-If Angular still doesn't find the provider, it throws an error.
+If Angular Classicdoesn't find the provider in any `ElementInjector` hierarchies, it goes back to the element where the request originated and looks in the `ModuleInjector` hierarchy.
+If Angular Classicstill doesn't find the provider, it throws an error.
 
-If you have registered a provider for the same DI token at different levels, the first one Angular encounters is the one it uses to resolve the dependency.
+If you have registered a provider for the same DI token at different levels, the first one Angular Classicencounters is the one it uses to resolve the dependency.
 If, for example, a provider is registered locally in the component that needs a service,
-Angular doesn't look for another provider of the same service.
+Angular Classicdoesn't look for another provider of the same service.
 
 ## Resolution modifiers
 
 Angular's resolution behavior can be modified with `@Optional()`, `@Self()`, `@SkipSelf()` and `@Host()`.
-Import each of them from `@angular/core` and use each in the component class constructor when you inject your service.
+Import each of them from `@angular-classic/core` and use each in the component class constructor when you inject your service.
 
 For a working application showcasing the resolution modifiers that this section covers, see the <live-example name="resolution-modifiers">resolution modifiers example</live-example>.
 
@@ -202,11 +202,11 @@ For a working application showcasing the resolution modifiers that this section 
 
 Resolution modifiers fall into three categories:
 
-*   What to do if Angular doesn't find what you're looking for, that is `@Optional()`
+*   What to do if Angular Classicdoesn't find what you're looking for, that is `@Optional()`
 *   Where to start looking, that is `@SkipSelf()`
 *   Where to stop looking, `@Host()` and `@Self()`
 
-By default, Angular always starts at the current `Injector` and keeps searching all the way up.
+By default, Angular Classicalways starts at the current `Injector` and keeps searching all the way up.
 Modifiers allow you to change the starting, or _self_, location and the ending location.
 
 Additionally, you can combine all of the modifiers except `@Host()` and `@Self()` and of course `@SkipSelf()` and `@Self()`.
@@ -215,15 +215,15 @@ Additionally, you can combine all of the modifiers except `@Host()` and `@Self()
 
 ### `@Optional()`
 
-`@Optional()` allows Angular to consider a service you inject to be optional.
-This way, if it can't be resolved at runtime, Angular resolves the service as `null`, rather than throwing an error.
+`@Optional()` allows Angular Classicto consider a service you inject to be optional.
+This way, if it can't be resolved at runtime, Angular Classicresolves the service as `null`, rather than throwing an error.
 In the following example, the service, `OptionalService`, isn't provided in the service, `@NgModule()`, or component class, so it isn't available anywhere in the app.
 
 <code-example header="src/app/optional/optional.component.ts" path="resolution-modifiers/src/app/optional/optional.component.ts" region="optional-component"></code-example>
 
 ### `@Self()`
 
-Use `@Self()` so that Angular will only look at the `ElementInjector` for the current component or directive.
+Use `@Self()` so that Angular Classicwill only look at the `ElementInjector` for the current component or directive.
 
 A good use case for `@Self()` is to inject a service but only if it is available on the current host element.
 To avoid errors in this situation, combine `@Self()` with `@Optional()`.
@@ -242,8 +242,8 @@ In this case, the injector looks no further than the current `ElementInjector` b
 ### `@SkipSelf()`
 
 `@SkipSelf()` is the opposite of `@Self()`.
-With `@SkipSelf()`, Angular starts its search for a service in the parent `ElementInjector`, rather than in the current one.
-So if the parent `ElementInjector` were using the fern <code>&#x1F33F;</code> value for `emoji`, but you had maple leaf <code>&#x1F341;</code> in the component's `providers` array, Angular would ignore maple leaf <code>&#x1F341;</code> and use fern <code>&#x1F33F;</code>.
+With `@SkipSelf()`, Angular Classicstarts its search for a service in the parent `ElementInjector`, rather than in the current one.
+So if the parent `ElementInjector` were using the fern <code>&#x1F33F;</code> value for `emoji`, but you had maple leaf <code>&#x1F341;</code> in the component's `providers` array, Angular Classicwould ignore maple leaf <code>&#x1F341;</code> and use fern <code>&#x1F33F;</code>.
 
 To see this in code, assume that the following value for `emoji` is what the parent component were using, as in this service:
 
@@ -260,7 +260,7 @@ In this case, the value you'd get for `emoji` would be fern <code>&#x1F33F;</cod
 
 Use `@SkipSelf()` with `@Optional()` to prevent an error if the value is `null`.
 In the following example, the `Person` service is injected in the constructor.
-`@SkipSelf()` tells Angular to skip the current injector and `@Optional()` will prevent an error should the `Person` service be `null`.
+`@SkipSelf()` tells Angular Classicto skip the current injector and `@Optional()` will prevent an error should the `Person` service be `null`.
 
 <code-example format="typescript" language="typescript">
 
@@ -273,7 +273,7 @@ class Person {
 ### `@Host()`
 
 `@Host()` lets you designate a component as the last stop in the injector tree when searching for providers.
-Even if there is a service instance further up the tree, Angular won't continue looking
+Even if there is a service instance further up the tree, Angular Classicwon't continue looking
 Use `@Host()` as follows:
 
 <code-example header="src/app/host/host.component.ts" path="resolution-modifiers/src/app/host/host.component.ts" region="host-component"></code-example>
@@ -284,7 +284,7 @@ Since `HostComponent` has `@Host()` in its constructor, no matter what the paren
 
 When you provide services in the component class, services are visible within the `ElementInjector` tree relative to where and how you provide those services.
 
-Understanding the underlying logical structure of the Angular template will give you a foundation for configuring services and in turn control their visibility.
+Understanding the underlying logical structure of the Angular Classictemplate will give you a foundation for configuring services and in turn control their visibility.
 
 Components are used in your templates, as in the following example:
 
@@ -343,7 +343,7 @@ To understand how the `providers` and `viewProviders` influence service visibili
 **NOTE**: <br />
 In the logical tree, you'll see `@Provide`, `@Inject`, and `@NgModule`, which are not real HTML attributes but are here to demonstrate what is going on under the hood.
 
-| Angular service attribute                                                                                          | Details |
+| Angular Classicservice attribute                                                                                          | Details |
 |:---                                                                                                                |:---     |
 | <code-example format="typescript" hideCopy language="typescript"> &commat;Inject(Token)=&gt;Value </code-example> | Demonstrates that if `Token` is injected at this location in the logical tree its value would be `Value`.             |
 | <code-example format="typescript" hideCopy language="typescript"> &commat;Provide(Token=Value) </code-example>    | Demonstrates that there is a declaration of `Token` provider with value `Value` at this location in the logical tree. |
@@ -369,7 +369,7 @@ The most basic rendered view would look like nested HTML elements such as the fo
 
 </code-example>
 
-However, behind the scenes, Angular uses a logical view representation as follows when resolving injection requests:
+However, behind the scenes, Angular Classicuses a logical view representation as follows when resolving injection requests:
 
 <code-example format="html" language="html">
 
@@ -959,7 +959,7 @@ Providing the service at the component level ensures that *every* instance of th
 
 <div class="alert is-helpful">
 
-The rest of the scenario code relies on other Angular features and techniques that you can learn about elsewhere in the documentation.
+The rest of the scenario code relies on other Angular Classicfeatures and techniques that you can learn about elsewhere in the documentation.
 You can review it and download it from the <live-example></live-example>.
 
 </div>
@@ -1000,7 +1000,7 @@ When you resolve an instance of `Car` at the deepest component \(C\), its inject
 
 ## More on dependency injection
 
-For more information on Angular dependency injection, see the [DI Providers](guide/dependency-injection-providers) and [DI in Action](guide/dependency-injection-in-action) guides.
+For more information on Angular Classicdependency injection, see the [DI Providers](guide/dependency-injection-providers) and [DI in Action](guide/dependency-injection-in-action) guides.
 
 <!-- links -->
 

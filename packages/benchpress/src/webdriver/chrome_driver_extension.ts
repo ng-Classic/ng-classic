@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Inject, Injectable, StaticProvider} from '@angular/core';
+import {Inject, Injectable, StaticProvider} from '@angular-classic/core';
 import * as fs from 'fs';
 
 import {Options} from '../common_options';

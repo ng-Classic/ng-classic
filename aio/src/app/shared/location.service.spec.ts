@@ -1,6 +1,6 @@
-import { Injector } from '@angular/core';
-import { Location, LocationStrategy, PlatformLocation } from '@angular/common';
-import { MockLocationStrategy } from '@angular/common/testing';
+import { Injector } from '@angular-classic/core';
+import { Location, LocationStrategy, PlatformLocation } from '@angular-classic/common';
+import { MockLocationStrategy } from '@angular-classic/common/testing';
 
 import { AnalyticsService } from 'app/shared/analytics.service';
 import { LocationService } from './location.service';

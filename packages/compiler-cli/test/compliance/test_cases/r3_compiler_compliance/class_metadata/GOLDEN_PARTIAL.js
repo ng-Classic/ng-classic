@@ -27,9 +27,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Component, Injectable } from '@angular/core';
+import { Component, Injectable } from '@angular-classic/core';
 import { CustomClassDecorator } from './custom';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class BasicInjectable {
 }
 BasicInjectable.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: BasicInjectable, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
@@ -67,7 +67,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: class_decorators.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class BasicInjectable {
     static ɵfac: i0.ɵɵFactoryDeclaration<BasicInjectable, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<BasicInjectable>;
@@ -113,9 +113,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Directive, Input, Output } from '@angular/core';
+import { Directive, Input, Output } from '@angular-classic/core';
 import { CustomPropDecorator } from './custom';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class MyDir {
 }
 MyDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -144,7 +144,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: property_decorators.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDir {
     foo: string;
     bar: string;
@@ -190,9 +190,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-import { Inject, Injectable, InjectionToken, SkipSelf } from '@angular/core';
+import { Inject, Injectable, InjectionToken, SkipSelf } from '@angular-classic/core';
 import { CustomParamDecorator } from './custom';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export const TOKEN = new InjectionToken('TOKEN');
 class Service {
 }
@@ -273,8 +273,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: parameter_decorators.d.ts
  ****************************************************************************************************/
-import { InjectionToken } from '@angular/core';
-import * as i0 from "@angular/core";
+import { InjectionToken } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export declare const TOKEN: InjectionToken<string>;
 declare class Service {
 }

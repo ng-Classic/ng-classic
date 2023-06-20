@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: component_factory.js
  ****************************************************************************************************/
-import { Attribute, Component, Host, Injectable, NgModule, Optional, Self, SkipSelf } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Attribute, Component, Host, Injectable, NgModule, Optional, Self, SkipSelf } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyService {
 }
 MyService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
@@ -53,7 +53,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: component_factory.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyService {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<MyService>;
@@ -72,8 +72,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: injectable_factory.js
  ****************************************************************************************************/
-import { Injectable } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Injectable } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class MyDependency {
 }
 export class MyService {
@@ -88,7 +88,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: injectable_factory.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 declare class MyDependency {
 }
 export declare class MyService {
@@ -101,8 +101,8 @@ export {};
 /****************************************************************************************************
  * PARTIAL FILE: ctor_overload.js
  ****************************************************************************************************/
-import { Injectable, Optional } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Injectable, Optional } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class MyDependency {
 }
 class MyOptionalDependency {
@@ -121,7 +121,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: ctor_overload.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 declare class MyDependency {
 }
 export declare class MyService {
@@ -134,8 +134,8 @@ export {};
 /****************************************************************************************************
  * PARTIAL FILE: usefactory_without_deps.js
  ****************************************************************************************************/
-import { Injectable } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Injectable } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class MyAlternateService {
 }
 function alternateFactory() {
@@ -153,7 +153,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: usefactory_without_deps.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyService {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<MyService>;
@@ -162,8 +162,8 @@ export declare class MyService {
 /****************************************************************************************************
  * PARTIAL FILE: usefactory_with_deps.js
  ****************************************************************************************************/
-import { Injectable, Optional } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Injectable, Optional } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class SomeDep {
 }
 class MyAlternateService {
@@ -185,7 +185,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: usefactory_with_deps.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyService {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<MyService>;
@@ -194,8 +194,8 @@ export declare class MyService {
 /****************************************************************************************************
  * PARTIAL FILE: useclass_without_deps.js
  ****************************************************************************************************/
-import { Injectable } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Injectable } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class MyAlternateService {
 }
 MyAlternateService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyAlternateService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
@@ -215,7 +215,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: useclass_without_deps.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyService {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<MyService>;
@@ -224,8 +224,8 @@ export declare class MyService {
 /****************************************************************************************************
  * PARTIAL FILE: useclass_with_deps.js
  ****************************************************************************************************/
-import { Injectable } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Injectable } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class SomeDep {
 }
 class MyAlternateService {
@@ -247,7 +247,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: useclass_with_deps.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyService {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyService, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<MyService>;
@@ -256,8 +256,8 @@ export declare class MyService {
 /****************************************************************************************************
  * PARTIAL FILE: useclass_forwardref.js
  ****************************************************************************************************/
-import { forwardRef, Injectable } from '@angular/core';
-import * as i0 from "@angular/core";
+import { forwardRef, Injectable } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class SomeProvider {
 }
 SomeProvider.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: SomeProvider, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
@@ -282,8 +282,8 @@ export {};
 /****************************************************************************************************
  * PARTIAL FILE: providedin_forwardref.js
  ****************************************************************************************************/
-import { forwardRef, Injectable, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { forwardRef, Injectable, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class Dep {
 }
 Dep.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: Dep, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
@@ -312,7 +312,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: providedin_forwardref.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class Dep {
     static ɵfac: i0.ɵɵFactoryDeclaration<Dep, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<Dep>;
@@ -331,8 +331,8 @@ export declare class Mod {
 /****************************************************************************************************
  * PARTIAL FILE: pipe_and_injectable.js
  ****************************************************************************************************/
-import { Component, Injectable, NgModule, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Injectable, NgModule, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class Service {
 }
 Service.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: Service, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
@@ -391,8 +391,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: pipe_and_injectable.d.ts
  ****************************************************************************************************/
-import { PipeTransform } from '@angular/core';
-import * as i0 from "@angular/core";
+import { PipeTransform } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 declare class Service {
     static ɵfac: i0.ɵɵFactoryDeclaration<Service, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<Service>;

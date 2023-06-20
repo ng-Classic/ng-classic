@@ -1,8 +1,8 @@
 // #docplaster
 // #docregion formgroup, nested-formgroup
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 // #docregion imports
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular-classic/forms';
 // #enddocregion imports
 
 @Component({

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgZone} from '@angular/core';
+import {NgZone} from '@angular-classic/core';
 import {Events, MessageBus, Parameters} from 'protocol';
 
 import {ChromeMessageBus} from './chrome-message-bus';

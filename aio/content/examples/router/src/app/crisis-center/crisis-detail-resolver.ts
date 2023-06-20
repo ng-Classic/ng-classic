@@ -1,6 +1,6 @@
 // #docregion
-import {inject} from '@angular/core';
-import {ActivatedRouteSnapshot, ResolveFn, Router} from '@angular/router';
+import {inject} from '@angular-classic/core';
+import {ActivatedRouteSnapshot, ResolveFn, Router} from '@angular-classic/router';
 import {EMPTY, of} from 'rxjs';
 import {mergeMap} from 'rxjs/operators';
 

@@ -13,8 +13,8 @@ import {noSideEffects} from './closure';
 
 
 /**
- * An interface implemented by all Angular type decorators, which allows them to be used as
- * decorators as well as Angular syntax.
+ * An interface implemented by all Angular Classictype decorators, which allows them to be used as
+ * decorators as well as Angular Classicsyntax.
  *
  * ```
  * @ng.Component({...})
@@ -32,7 +32,7 @@ export interface TypeDecorator {
   // Make TypeDecorator assignable to built-in ParameterDecorator type.
   // ParameterDecorator is declared in lib.d.ts as a `declare type`
   // so we cannot declare this interface as a subtype.
-  // see https://github.com/angular/angular/issues/3379#issuecomment-126169417
+  // see https://github.com/ng-classic/angular/issues/3379#issuecomment-126169417
   (target: Object, propertyKey?: string|symbol, parameterIndex?: number): void;
   // Standard (non-experimental) Decorator signature that avoids direct usage of
   // any TS 5.0+ specific types.
@@ -158,7 +158,7 @@ export function makePropDecorator(
         // target is undefined with standard decorators. This case is not supported and will throw
         // if this decorator is used in JIT mode with standard decorators.
         if (target === undefined) {
-          throw new Error('Standard Angular field decorators are not supported in JIT mode.');
+          throw new Error('Standard Angular Classicfield decorators are not supported in JIT mode.');
         }
 
         const constructor = target.constructor;

@@ -1,5 +1,5 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {RouterModule} from '@angular/router';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {RouterModule} from '@angular-classic/router';
 import {of} from 'rxjs';
 
 import {HeroSearchComponent} from '../hero-search/hero-search.component';

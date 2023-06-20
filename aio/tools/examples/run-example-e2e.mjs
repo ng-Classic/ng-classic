@@ -288,7 +288,7 @@ function spawnExt(
         // All NodeJS scripts executed for running example e2e tests should preserve symlinks.
         // This is important as otherwise test commands like `yarn ng build` would escape from the
         // example sandbox into the `bazel-bin` where ultimately incorrect versions of local
-        // framework packages might be resolved. e.g. the `@angular/compiler-cli` version is never
+        // framework packages might be resolved. e.g. the `@angular-classic/compiler-cli` version is never
         // the one locally built.
         env: {...process.env, NODE_PRESERVE_SYMLINKS: '1'},
         ...options

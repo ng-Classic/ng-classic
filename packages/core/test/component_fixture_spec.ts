@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Injectable, Input} from '@angular/core';
-import {ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, TestBed, waitForAsync, withModule} from '@angular/core/testing';
-import {dispatchEvent} from '@angular/platform-browser/testing/src/browser_util';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {Component, Injectable, Input} from '@angular-classic/core';
+import {ComponentFixtureAutoDetect, ComponentFixtureNoNgZone, TestBed, waitForAsync, withModule} from '@angular-classic/core/testing';
+import {dispatchEvent} from '@angular-classic/platform-browser/testing/src/browser_util';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 @Component({selector: 'simple-comp', template: `<span>Original {{simpleBinding}}</span>`})
 @Injectable()

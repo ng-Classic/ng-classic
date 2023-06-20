@@ -2,9 +2,9 @@
   "name": "angular-srcs",
   "version": "16.2.0-next.0",
   "private": true,
-  "description": "Angular - a web framework for modern web apps",
-  "homepage": "https://github.com/angular/angular",
-  "bugs": "https://github.com/angular/angular/issues",
+  "description": "Angular Classic- a web framework for modern web apps",
+  "homepage": "https://github.com/ng-classic/angular",
+  "bugs": "https://github.com/ng-classic/angular/issues",
   "license": "MIT",
   "//engines-comment": "Keep this in sync with /aio/package.json and /aio/tools/examples/shared/package.json",
   "engines": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular/angular.git"
+    "url": "https://github.com/ng-classic/angular.git"
   },
   "scripts": {
     "/": "",
@@ -24,7 +24,7 @@
     "/ ": "",
     "postinstall": "node --preserve-symlinks --preserve-symlinks-main ./tools/postinstall-patches.js && patch-package --patch-dir tools/esm-interop/patches/npm",
     "prepare": "husky install",
-    "ng-dev": "ts-node --esm --project .ng-dev/tsconfig.json --transpile-only node_modules/@angular/ng-dev/bundles/cli.mjs",
+    "ng-dev": "ts-node --esm --project .ng-dev/tsconfig.json --transpile-only node_modules/@angular-classic/ng-dev/bundles/cli.mjs",
     "build": "ts-node --esm --project scripts/tsconfig.json scripts/build/build-packages-dist.mts",
     "test": "bazelisk test",
     "test:ci": "bazelisk test -- //... -//devtools/... -//aio/... && bazelisk test --//packages/compiler:use_template_pipeline //packages/compiler-cli/test/compliance/full",
@@ -46,12 +46,12 @@
   },
   "// 1": "dependencies are used locally and by bazel",
   "dependencies": {
-    "@angular-devkit/build-angular": "16.0.0-rc.4",
-    "@angular-devkit/core": "16.0.0-rc.4",
-    "@angular-devkit/schematics": "16.0.0-rc.4",
-    "@angular/cdk": "16.0.0-rc.2",
-    "@angular/cli": "16.0.0-rc.4",
-    "@angular/material": "16.0.0-rc.2",
+    "@angular-classic-devkit/build-angular": "16.0.0-rc.4",
+    "@angular-classic-devkit/core": "16.0.0-rc.4",
+    "@angular-classic-devkit/schematics": "16.0.0-rc.4",
+    "@angular-classic/cdk": "16.0.0-rc.2",
+    "@angular-classic/cli": "16.0.0-rc.4",
+    "@angular-classic/material": "16.0.0-rc.2",
     "@babel/cli": "7.21.5",
     "@babel/core": "7.21.8",
     "@babel/generator": "7.21.5",
@@ -156,8 +156,8 @@
   },
   "// 2": "devDependencies are not used under Bazel. Many can be removed after test.sh is deleted.",
   "devDependencies": {
-    "@angular/build-tooling": "https://github.com/angular/dev-infra-private-build-tooling-builds.git#7dad055464ea9847e4870b9e3baad1f0c417bdf7",
-    "@angular/ng-dev": "https://github.com/angular/dev-infra-private-ng-dev-builds.git#dec40448ead7b52cddae4d32bdb21d8c48589413",
+    "@angular-classic/build-tooling": "https://github.com/ng-classic/dev-infra-private-build-tooling-builds.git#7dad055464ea9847e4870b9e3baad1f0c417bdf7",
+    "@angular-classic/ng-dev": "https://github.com/ng-classic/dev-infra-private-ng-dev-builds.git#dec40448ead7b52cddae4d32bdb21d8c48589413",
     "@babel/helper-remap-async-to-generator": "^7.18.9",
     "@bazel/bazelisk": "^1.7.5",
     "@bazel/buildifier": "^6.0.0",

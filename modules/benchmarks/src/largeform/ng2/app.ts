@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser';
+import {Component, NgModule} from '@angular-classic/core';
+import {FormsModule} from '@angular-classic/forms';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 @Component({
   selector: 'app',

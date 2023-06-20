@@ -27,7 +27,7 @@ runInEachFileSystem(() => {
 
     it('should produce invalid banana in box warning', () => {
       env.write('test.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
               @Component({
                 selector: 'test',
                 template: '<div ([notARealThing])="bar"></div>',
@@ -46,7 +46,7 @@ runInEachFileSystem(() => {
 
     it('should produce invalid banana in box warning with external html file', () => {
       env.write('test.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
               @Component({
                 selector: 'test',
                 templateUrl: './test.html',
@@ -69,7 +69,7 @@ runInEachFileSystem(() => {
 
     it(`should produce nullish coalescing not nullable warning`, () => {
       env.write('test.ts', `
-              import {Component} from '@angular/core';
+              import {Component} from '@angular-classic/core';
               @Component({
                 selector: 'test',
                 template: '{{ bar ?? "foo" }}',
@@ -89,7 +89,7 @@ runInEachFileSystem(() => {
     describe('handles diagnostic configuration', () => {
       // Component definition which emits one warning.
       const warningComponent = `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-component',

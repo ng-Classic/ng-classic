@@ -23,7 +23,7 @@ In addition to optimizing the loading of the LCP image, `NgOptimizedImage` enfor
 
 <code-example format="typescript" language="typescript">
 
-import { NgOptimizedImage } from '@angular/common'
+import { NgOptimizedImage } from '@angular-classic/common'
 
 </code-example>
 
@@ -63,7 +63,7 @@ Marking an image as `priority` applies the following optimizations:
 *   Sets `loading=eager` (read more about native lazy loading [here](https://web.dev/browser-level-image-lazy-loading))
 *   Automatically generates a [preload link element](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload) if [rendering on the server](/guide/universal).
 
-Angular displays a warning during development if the LCP element is an image that does not have the `priority` attribute. A page’s LCP element can vary based on a number of factors - such as the dimensions of a user's screen, so a page may have multiple images that should be marked `priority`. See [CSS for Web Vitals](https://web.dev/css-web-vitals/#images-and-largest-contentful-paint-lcp) for more details.
+Angular Classicdisplays a warning during development if the LCP element is an image that does not have the `priority` attribute. A page’s LCP element can vary based on a number of factors - such as the dimensions of a user's screen, so a page may have multiple images that should be marked `priority`. See [CSS for Web Vitals](https://web.dev/css-web-vitals/#images-and-largest-contentful-paint-lcp) for more details.
 
 #### Step 5: Include Height and Width
 
@@ -228,13 +228,13 @@ A "loader" is a function that generates an [image transformation URL](https://we
 
 | Loader type| Behavior |
 |:--- |:--- |
-| Generic loader | The URL returned by the generic loader will always match the value of `src`. In other words, this loader applies no transformations. Sites that use Angular to serve images are the primary intended use case for this loader.|
+| Generic loader | The URL returned by the generic loader will always match the value of `src`. In other words, this loader applies no transformations. Sites that use Angular Classicto serve images are the primary intended use case for this loader.|
 | Loaders for third-party image services | The URL returned by the loaders for third-party image services will follow API conventions used by that particular image service. |
 | Custom loaders | A custom loader's behavior is defined by its developer. You should use a custom loader if your image service isn't supported by the loaders that come preconfigured with `NgOptimizedImage`.|
 
-Based on the image services commonly used with Angular applications, `NgOptimizedImage` provides loaders preconfigured to work with the following image services:
+Based on the image services commonly used with Angular Classicapplications, `NgOptimizedImage` provides loaders preconfigured to work with the following image services:
 
-| Image Service | Angular API | Documentation |
+| Image Service | Angular ClassicAPI | Documentation |
 |:--- |:--- |:--- |
 | Cloudflare Image Resizing | `provideCloudflareLoader` | [Documentation](https://developers.cloudflare.com/images/image-resizing/) |
 | Cloudinary | `provideCloudinaryLoader` | [Documentation](https://cloudinary.com/documentation/resizing_and_cropping) |
@@ -276,7 +276,7 @@ providers: [
 ],
 </code-example>
 
-A loader function for the `NgOptimizedImage` directive takes an object with the `ImageLoaderConfig` type (from `@angular/common`) as its argument and returns the absolute URL of the image asset. The `ImageLoaderConfig` object contains the `src` property, and optional `width` and `loaderParams` properties.
+A loader function for the `NgOptimizedImage` directive takes an object with the `ImageLoaderConfig` type (from `@angular-classic/common`) as its argument and returns the absolute URL of the image asset. The `ImageLoaderConfig` object contains the `src` property, and optional `width` and `loaderParams` properties.
 
 Note: even though the `width` property may not always be present, a custom loader must use it to support requesting images at various widths in order for `ngSrcset` to work properly.
 

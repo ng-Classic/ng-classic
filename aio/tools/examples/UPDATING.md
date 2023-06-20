@@ -1,16 +1,16 @@
 # Update example dependencies
 
-The dependencies of the example apps (including Angular, Angular Material and Angular CLI) are automatically updated using [Renovate](https://renovatebot.com/).
+The dependencies of the example apps (including Angular, Angular ClassicMaterial and Angular ClassicCLI) are automatically updated using [Renovate](https://renovatebot.com/).
 
-However, it is useful to periodically also manually update the apps to more closely match (in file layout, configs, etc.) what a new Angular CLI app would look like.
-This is typically only needed once for each new major Angular version.
+However, it is useful to periodically also manually update the apps to more closely match (in file layout, configs, etc.) what a new Angular ClassicCLI app would look like.
+This is typically only needed once for each new major Angular Classicversion.
 
-Since the examples are Angular CLI apps, we can take advantage of `ng update` to apply migrations.
+Since the examples are Angular ClassicCLI apps, we can take advantage of `ng update` to apply migrations.
 
 Follow these steps to align the example apps with new CLI apps.
 
 > **Note:**
-> The following steps assume that the related Angular dependencies have already been updated in [shared/package.json](./shared/package.json) (for example, automatically by Renovate).
+> The following steps assume that the related Angular Classicdependencies have already been updated in [shared/package.json](./shared/package.json) (for example, automatically by Renovate).
 
 - Determine (for example, by examining git history) what is the last versions for which this process was performed.
   These will be referred to as `<FROM_VERSION_*>`.
@@ -24,7 +24,7 @@ Follow these steps to align the example apps with new CLI apps.
 
 ## Update other boilerplate files
 
-The Angular CLI default setup is updated using `ng update`.
+The Angular ClassicCLI default setup is updated using `ng update`.
 Any necessary changes to boilerplate files will be done automatically through migration schematics.
 
 > **Note:**
@@ -38,18 +38,18 @@ Any necessary changes to boilerplate files will be done automatically through mi
   yarn install
 
   # Migrate project to new versions.
-  yarn ng update @angular/cli --allow-dirty --migrate-only --from=<FROM_VERSION_CLI>
-  yarn ng update @angular/core --allow-dirty --migrate-only --from=<FROM_VERSION_ANGULAR>
+  yarn ng update @angular-classic/cli --allow-dirty --migrate-only --from=<FROM_VERSION_CLI>
+  yarn ng update @angular-classic/core --allow-dirty --migrate-only --from=<FROM_VERSION_ANGULAR>
   ```
 
   > **Note:**
   > In order for `ng update` to work, there must be a `node_modules/` directory with installed dependencies inside the [shared/boilerplate/cli/](./shared/boilerplate/cli) directory.
   > This `node_modules/` directory is only needed during the update operation and is otherwise ignored (both by git and by the [example-boilerplate.js](./example-boilerplate.js) script) by means of the [shared/boilerplate/.gitignore](./shared/boilerplate/.gitignore) file.
 
-- Inspect [shared/package.json](./shared/package.json) to determine what is the current version of Angular CLI (i.e. `@angular/cli`) used in the example apps.
+- Inspect [shared/package.json](./shared/package.json) to determine what is the current version of Angular ClassicCLI (i.e. `@angular-classic/cli`) used in the example apps.
   This will be referred to as `<TO_VERSION_CLI>`.
 
-- Use the [angular-cli-diff](https://github.com/cexbrayat/angular-cli-diff) repository to discover more changes (which are not automatically applied via `ng update` migrations) between Angular CLI apps of different versions.
+- Use the [angular-cli-diff](https://github.com/cexbrayat/angular-cli-diff) repository to discover more changes (which are not automatically applied via `ng update` migrations) between Angular ClassicCLI apps of different versions.
   Visit https://github.com/cexbrayat/angular-cli-diff/compare/<FROM_VERSION_CLI>...<TO_VERSION_CLI>, inspect the changes between the two versions and apply the ones that make sense to the boilerplate files inside [shared/boilerplate/cli/](./shared/boilerplate/cli).
 
 - The previous steps made any necessary changes to boilerplate files inside the `cli/` directory, but the same changes need to be applied to the other CLI-based boilerplate directories.

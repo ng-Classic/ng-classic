@@ -1,4 +1,4 @@
-import {Component, ContentChild, ContentChildren, NgModule, QueryList} from '@angular/core';
+import {Component, ContentChild, ContentChildren, NgModule, QueryList} from '@angular-classic/core';
 
 @Component({
   selector: 'content-query-component',

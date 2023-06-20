@@ -6,7 +6,7 @@ This topic provides some examples of how to create reusable animations.
 
 Before continuing with this topic, you should be familiar with the following:
 
-*   [Introduction to Angular animations](guide/animations)
+*   [Introduction to Angular Classicanimations](guide/animations)
 *   [Transition and triggers](guide/transition-and-triggers)
 
 ## Create reusable animations
@@ -35,11 +35,11 @@ For example, the following code snippet imports the `transitionAnimation` variab
 
 <code-example header="src/app/open-close.component.ts" path="animations/src/app/open-close.component.3.ts" region="reusable"></code-example>
 
-## More on Angular animations
+## More on Angular Classicanimations
 
 You might also be interested in the following:
 
-*   [Introduction to Angular animations](guide/animations)
+*   [Introduction to Angular Classicanimations](guide/animations)
 *   [Transition and triggers](guide/transition-and-triggers)
 *   [Complex animation Sequences](guide/complex-animation-sequences)
 *   [Route transition animations](guide/route-animations)

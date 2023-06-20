@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Expression} from '@angular/compiler';
+import {Expression} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {identifierOfNode} from '../../util/src/typescript';
@@ -24,7 +24,7 @@ export interface OwningModule {
  * particular, it might track different identifiers by which the node is exposed, as well as
  * potentially a module specifier which might expose the node.
  *
- * The Angular compiler uses `Reference`s instead of `ts.Node`s when tracking classes or generating
+ * The Angular Classiccompiler uses `Reference`s instead of `ts.Node`s when tracking classes or generating
  * imports.
  */
 export class Reference<T extends ts.Node = ts.Node> {

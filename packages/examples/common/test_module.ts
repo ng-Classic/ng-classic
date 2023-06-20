@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {Component, NgModule} from '@angular-classic/core';
+import {RouterModule} from '@angular-classic/router';
 
 import * as locationExample from './location/ts/module';
 import * as ngComponentOutletExample from './ngComponentOutlet/ts/module';

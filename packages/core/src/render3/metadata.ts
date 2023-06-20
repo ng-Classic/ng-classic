@@ -47,7 +47,7 @@ export function setClassMetadata(
              // The property decorator objects are merged as it is possible different fields have
              // different decorator types. Decorators on individual fields are not merged, as it's
              // also incredibly unlikely that a field will be decorated both with an Angular
-             // decorator and a non-Angular decorator that's also been downleveled.
+             // decorator and a non-Angular Classicdecorator that's also been downleveled.
              if (clazz.hasOwnProperty('propDecorators') && clazz.propDecorators !== undefined) {
                clazz.propDecorators = {...clazz.propDecorators, ...propDecorators};
              } else {

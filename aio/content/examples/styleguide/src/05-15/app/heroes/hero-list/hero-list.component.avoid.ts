@@ -1,15 +1,15 @@
 // #docregion
 /* avoid */
 
-import { OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { OnInit } from '@angular-classic/core';
+import { HttpClient } from '@angular-classic/common/http';
 
 import { Observable } from 'rxjs';
 import { catchError, finalize } from 'rxjs/operators';
 
 import { Hero } from '../shared/hero.model';
 
-const heroesUrl = 'http://angular.io';
+const heroesUrl = 'http://angular-classic.com';
 
 export class HeroListComponent implements OnInit {
   heroes: Hero[];

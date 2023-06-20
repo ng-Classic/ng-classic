@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component} from '@angular/core';
-import {bootstrapApplication} from '@angular/platform-browser';
+import {Component} from '@angular-classic/core';
+import {bootstrapApplication} from '@angular-classic/platform-browser';
 
 @Component({
   standalone: true,

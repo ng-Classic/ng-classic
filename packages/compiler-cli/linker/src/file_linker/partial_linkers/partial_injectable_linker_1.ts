@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {compileInjectable, ConstantPool, createMayBeForwardRefExpression, ForwardRefHandling, outputAst as o, R3DeclareInjectableMetadata, R3InjectableMetadata, R3PartialDeclaration} from '@angular/compiler';
+import {compileInjectable, ConstantPool, createMayBeForwardRefExpression, ForwardRefHandling, outputAst as o, R3DeclareInjectableMetadata, R3InjectableMetadata, R3PartialDeclaration} from '@angular-classic/compiler';
 
 import {AstObject} from '../../ast/ast_value';
 import {FatalLinkerError} from '../../fatal_linker_error';

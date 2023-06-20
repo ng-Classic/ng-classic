@@ -1,6 +1,6 @@
 // #docregion
 // #docregion import-input
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular-classic/core';
 // #enddocregion import-input
 // #docregion import-hero
 import { Hero } from '../hero';

@@ -1,8 +1,8 @@
 
 // #docplaster
-import { DebugElement } from '@angular/core';
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular-classic/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular-classic/core/testing';
+import { By } from '@angular-classic/platform-browser';
 import { first } from 'rxjs/operators';
 
 import { addMatchers, click } from '../../testing';
@@ -150,7 +150,7 @@ describe('DashboardHeroComponent when inside a test host', () => {
 });
 
 ////// Test Host Component //////
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 // #docregion test-host
 @Component({

@@ -6,8 +6,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {FileSystem, getFileSystem, PathSegment, relativeFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {ɵParsedMessage} from '@angular/localize/private';
+import {FileSystem, getFileSystem, PathSegment, relativeFrom} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {ɵParsedMessage} from '@angular-classic/localize/private';
 import {transformSync} from '@babel/core';
 
 import {makeEs5ExtractPlugin} from '../../../src/extract/source_files/es5_extract_plugin';

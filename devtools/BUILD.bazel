@@ -11,8 +11,8 @@ exports_files([
 npm_sass_library(
     name = "material_sass_deps",
     deps = [
-        "@npm//@angular/cdk",
-        "@npm//@angular/material",
+        "@npm//@angular-classic/cdk",
+        "@npm//@angular-classic/material",
     ],
 )
 

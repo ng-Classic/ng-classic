@@ -1,1 +1,1 @@
-Supplies infrastructure for testing functionality supplied by `@angular/common`.
+Supplies infrastructure for testing functionality supplied by `@angular-classic/common`.

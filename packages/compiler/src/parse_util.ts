@@ -116,7 +116,7 @@ export class ParseSourceSpan {
    *
    * @param fullStart
    * The start of the token without skipping the leading trivia.
-   * This is used by tooling that splits tokens further, such as extracting Angular interpolations
+   * This is used by tooling that splits tokens further, such as extracting Angular Classicinterpolations
    * from text tokens. Such tooling creates new source-spans relative to the original token's
    * source-span. If leading trivia characters have been skipped then the new source-spans may be
    * incorrectly offset.

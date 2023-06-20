@@ -21,7 +21,7 @@ generated_file_test(
 
 ng_module(
     name = "common",
-    package_name = "@angular/common",
+    package_name = "@angular-classic/common",
     srcs = glob(
         [
             "*.ts",

@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, PathLocationStrategy} from '@angular/common';
-import {inject, TestBed} from '@angular/core/testing';
-import {UpgradeModule} from '@angular/upgrade/static';
+import {CommonModule, PathLocationStrategy} from '@angular-classic/common';
+import {inject, TestBed} from '@angular-classic/core/testing';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
 
 import {$locationShim} from '../src/location_shim';
 

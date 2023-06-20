@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: external_template.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class TestCmp {
 }
 TestCmp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: TestCmp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -15,11 +15,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: external_template.js.map
  ****************************************************************************************************/
-{"version":3,"file":"external_template.js","sourceRoot":"","sources":["../external_template.ts","../dir/test.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,mDACsB;sGDKT,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './dir/test.html',\n})\nexport class TestCmp {\n}\n","<div>this is a test</div>\n<div>{{ 1 + 2 }}</div>"]}
+{"version":3,"file":"external_template.js","sourceRoot":"","sources":["../external_template.ts","../dir/test.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,mDACsB;sGDKT,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular-classic/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './dir/test.html',\n})\nexport class TestCmp {\n}\n","<div>this is a test</div>\n<div>{{ 1 + 2 }}</div>"]}
 /****************************************************************************************************
  * PARTIAL FILE: external_template.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class TestCmp {
     static ɵfac: i0.ɵɵFactoryDeclaration<TestCmp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TestCmp, "test-cmp", never, {}, {}, never, never, false, never>;
@@ -28,8 +28,8 @@ export declare class TestCmp {
 /****************************************************************************************************
  * PARTIAL FILE: external_template.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class TestCmp {
 }
 TestCmp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: TestCmp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -42,11 +42,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: external_template.js.map
  ****************************************************************************************************/
-{"version":3,"file":"external_template.js","sourceRoot":"","sources":["../external_template.ts","../dir/test.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,mDACsB;sGDKT,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './dir/test.html',\n})\nexport class TestCmp {\n}\n","<div>this is a test</div>\n<div>{{ 1 + 2 }}</div>"]}
+{"version":3,"file":"external_template.js","sourceRoot":"","sources":["../external_template.ts","../dir/test.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,mDACsB;sGDKT,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular-classic/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './dir/test.html',\n})\nexport class TestCmp {\n}\n","<div>this is a test</div>\n<div>{{ 1 + 2 }}</div>"]}
 /****************************************************************************************************
  * PARTIAL FILE: external_template.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class TestCmp {
     static ɵfac: i0.ɵɵFactoryDeclaration<TestCmp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TestCmp, "test-cmp", never, {}, {}, never, never, false, never>;
@@ -55,8 +55,8 @@ export declare class TestCmp {
 /****************************************************************************************************
  * PARTIAL FILE: extra_root_dir.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class TestCmp {
 }
 TestCmp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: TestCmp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -69,11 +69,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: extra_root_dir.js.map
  ****************************************************************************************************/
-{"version":3,"file":"extra_root_dir.js","sourceRoot":"","sources":["../extra_root_dir.ts","../extraRootDir/dir/extra.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,mDACsB;sGDKT,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './dir/extra.html',\n})\nexport class TestCmp {\n}\n","<div>this is a test</div>\n<div>{{ 1 + 2 }}</div>"]}
+{"version":3,"file":"extra_root_dir.js","sourceRoot":"","sources":["../extra_root_dir.ts","../extraRootDir/dir/extra.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,mDACsB;sGDKT,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular-classic/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './dir/extra.html',\n})\nexport class TestCmp {\n}\n","<div>this is a test</div>\n<div>{{ 1 + 2 }}</div>"]}
 /****************************************************************************************************
  * PARTIAL FILE: extra_root_dir.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class TestCmp {
     static ɵfac: i0.ɵɵFactoryDeclaration<TestCmp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TestCmp, "test-cmp", never, {}, {}, never, never, false, never>;
@@ -82,8 +82,8 @@ export declare class TestCmp {
 /****************************************************************************************************
  * PARTIAL FILE: extra_root_dir.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class TestCmp {
 }
 TestCmp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: TestCmp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -96,11 +96,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: extra_root_dir.js.map
  ****************************************************************************************************/
-{"version":3,"file":"extra_root_dir.js","sourceRoot":"","sources":["../extra_root_dir.ts","../extraRootDir/dir/extra.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,mDACsB;sGDKT,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './dir/extra.html',\n})\nexport class TestCmp {\n}\n","<div>this is a test</div>\n<div>{{ 1 + 2 }}</div>"]}
+{"version":3,"file":"extra_root_dir.js","sourceRoot":"","sources":["../extra_root_dir.ts","../extraRootDir/dir/extra.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,mDACsB;sGDKT,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular-classic/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './dir/extra.html',\n})\nexport class TestCmp {\n}\n","<div>this is a test</div>\n<div>{{ 1 + 2 }}</div>"]}
 /****************************************************************************************************
  * PARTIAL FILE: extra_root_dir.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class TestCmp {
     static ɵfac: i0.ɵɵFactoryDeclaration<TestCmp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TestCmp, "test-cmp", never, {}, {}, never, never, false, never>;
@@ -109,8 +109,8 @@ export declare class TestCmp {
 /****************************************************************************************************
  * PARTIAL FILE: escaped_chars.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class TestCmp {
 }
 TestCmp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: TestCmp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -123,11 +123,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: escaped_chars.js.map
  ****************************************************************************************************/
-{"version":3,"file":"escaped_chars.js","sourceRoot":"","sources":["../escaped_chars.ts","../escaped_chars.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,4VAOM;sGDDO,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './escaped_chars.html',\n})\nexport class TestCmp {\n}\n","<!--\n  NOTE: This template has escaped `\\r\\n` line-endings markers that will be converted to real `\\r\\n` line-ending chars when loaded from the test file-system.\n        This conversion happens in the monkeyPatchReadFile() function, which changes `fs.readFile()`.\n-->\n<div>\r\n  Some Message\r\n  Encoded character: 🚀\r\n</div>"]}
+{"version":3,"file":"escaped_chars.js","sourceRoot":"","sources":["../escaped_chars.ts","../escaped_chars.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,4VAOM;sGDDO,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular-classic/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './escaped_chars.html',\n})\nexport class TestCmp {\n}\n","<!--\n  NOTE: This template has escaped `\\r\\n` line-endings markers that will be converted to real `\\r\\n` line-ending chars when loaded from the test file-system.\n        This conversion happens in the monkeyPatchReadFile() function, which changes `fs.readFile()`.\n-->\n<div>\r\n  Some Message\r\n  Encoded character: 🚀\r\n</div>"]}
 /****************************************************************************************************
  * PARTIAL FILE: escaped_chars.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class TestCmp {
     static ɵfac: i0.ɵɵFactoryDeclaration<TestCmp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TestCmp, "test-cmp", never, {}, {}, never, never, false, never>;
@@ -136,8 +136,8 @@ export declare class TestCmp {
 /****************************************************************************************************
  * PARTIAL FILE: escaped_chars.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class TestCmp {
 }
 TestCmp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: TestCmp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -150,11 +150,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: escaped_chars.js.map
  ****************************************************************************************************/
-{"version":3,"file":"escaped_chars.js","sourceRoot":"","sources":["../escaped_chars.ts","../escaped_chars.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,4VAOM;sGDDO,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './escaped_chars.html',\n})\nexport class TestCmp {\n}\n","<!--\n  NOTE: This template has escaped `\\r\\n` line-endings markers that will be converted to real `\\r\\n` line-ending chars when loaded from the test file-system.\n        This conversion happens in the monkeyPatchReadFile() function, which changes `fs.readFile()`.\n-->\n<div>\r\n  Some Message\r\n  Encoded character: 🚀\r\n</div>"]}
+{"version":3,"file":"escaped_chars.js","sourceRoot":"","sources":["../escaped_chars.ts","../escaped_chars.html"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,eAAe,CAAC;;AAMxC,MAAM,OAAO,OAAO;;+GAAP,OAAO;mGAAP,OAAO,gDCNpB,4VAOM;sGDDO,OAAO;kBAJnB,SAAS;+BACE,UAAU","sourcesContent":["import {Component} from '@angular-classic/core';\n\n@Component({\n  selector: 'test-cmp',\n  templateUrl: './escaped_chars.html',\n})\nexport class TestCmp {\n}\n","<!--\n  NOTE: This template has escaped `\\r\\n` line-endings markers that will be converted to real `\\r\\n` line-ending chars when loaded from the test file-system.\n        This conversion happens in the monkeyPatchReadFile() function, which changes `fs.readFile()`.\n-->\n<div>\r\n  Some Message\r\n  Encoded character: 🚀\r\n</div>"]}
 /****************************************************************************************************
  * PARTIAL FILE: escaped_chars.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class TestCmp {
     static ɵfac: i0.ɵɵFactoryDeclaration<TestCmp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TestCmp, "test-cmp", never, {}, {}, never, never, false, never>;

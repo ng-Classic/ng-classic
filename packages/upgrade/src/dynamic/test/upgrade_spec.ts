@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectorRef, Component, destroyPlatform, EventEmitter, forwardRef, Input, NgModule, NgModuleFactory, NgZone, NO_ERRORS_SCHEMA, OnChanges, OnDestroy, Output, SimpleChange, SimpleChanges, Testability} from '@angular/core';
-import {fakeAsync, flushMicrotasks, TestBed, tick, waitForAsync} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {ChangeDetectorRef, Component, destroyPlatform, EventEmitter, forwardRef, Input, NgModule, NgModuleFactory, NgZone, NO_ERRORS_SCHEMA, OnChanges, OnDestroy, Output, SimpleChange, SimpleChanges, Testability} from '@angular-classic/core';
+import {fakeAsync, flushMicrotasks, TestBed, tick, waitForAsync} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
-import * as angular from '../../common/src/angular1';
+import * as Angular Classicfrom '../../common/src/angular1';
 import {$EXCEPTION_HANDLER, $ROOT_SCOPE} from '../../common/src/constants';
 import {html, multiTrim, withEachNg1Version} from '../../common/test/helpers/common_test_helpers';
 import {UpgradeAdapter, UpgradeAdapterRef} from '../src/upgrade_adapter';
@@ -318,7 +318,7 @@ withEachNg1Version(() => {
                html('<div>{{reset(); l(\'1A\');}}<ng2>{{l(\'1B\')}}</ng2>{{l(\'1C\')}}</div>');
            adapter.bootstrap(element, ['ng1']).ready((ref) => {
              expect(document.body.textContent).toEqual('1A;2A;ng1a;2B;ng1b;2C;1C;');
-             // https://github.com/angular/angular.js/issues/12983
+             // https://github.com/ng-classic/angular.js/issues/12983
              expect(log).toEqual(['1A', '1C', '2A', '2B', '2C', 'ng1a', 'ng1b']);
              ref.dispose();
            });
@@ -378,8 +378,8 @@ withEachNg1Version(() => {
            });
          }));
 
-      // This test demonstrates https://github.com/angular/angular/issues/6385
-      // which was invalidly fixed by https://github.com/angular/angular/pull/6386
+      // This test demonstrates https://github.com/ng-classic/angular/issues/6385
+      // which was invalidly fixed by https://github.com/ng-classic/angular/pull/6386
       // it('should not trigger $digest from an async operation in a watcher', async(() => {
       //      @Component({selector: 'my-app', template: ''})
       //      class AppComponent {

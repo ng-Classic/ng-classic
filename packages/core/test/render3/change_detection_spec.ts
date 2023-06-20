@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TestBed} from '@angular/core/testing';
-import {withBody} from '@angular/private/testing';
+import {TestBed} from '@angular-classic/core/testing';
+import {withBody} from '@angular-classic/private/testing';
 
 import {Component, RendererFactory2} from '../../src/core';
 

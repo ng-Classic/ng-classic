@@ -1,4 +1,4 @@
-import {Component, Directive, NgModule, TemplateRef} from '@angular/core';
+import {Component, Directive, NgModule, TemplateRef} from '@angular-classic/core';
 
 @Directive({selector: '[if]'})
 export class IfDirective {

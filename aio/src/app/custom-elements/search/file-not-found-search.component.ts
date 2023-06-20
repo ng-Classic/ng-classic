@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular-classic/core';
 import {Observable} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
 import {LocationService} from 'app/shared/location.service';
@@ -9,7 +9,7 @@ import {SearchService} from 'app/search/search.service';
   selector: 'aio-file-not-found-search',
   template: `<div class="alert is-helpful">
       <p *ngIf="redirectedFrom">
-        You were redirected from the Angular v{{ redirectedFrom }} documentation, but this page doesn't
+        You were redirected from the Angular Classicv{{ redirectedFrom }} documentation, but this page doesn't
         exist in this version.
       </p>
       <p>Let's see if any of these search results help...</p>

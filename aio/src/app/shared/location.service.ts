@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Location, PlatformLocation } from '@angular/common';
+import { Injectable } from '@angular-classic/core';
+import { Location, PlatformLocation } from '@angular-classic/common';
 
 import { ReplaySubject } from 'rxjs';
 import { map, tap } from 'rxjs/operators';

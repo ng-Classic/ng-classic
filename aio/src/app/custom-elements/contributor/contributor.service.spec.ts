@@ -1,6 +1,6 @@
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Injector } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular-classic/common/http/testing';
+import { Injector } from '@angular-classic/core';
+import { TestBed } from '@angular-classic/core/testing';
 
 import { ContributorService } from './contributor.service';
 import { ContributorGroup } from './contributors.model';
@@ -79,7 +79,7 @@ function getTestContribs() {
       picture: 'kapunahelewong.jpg',
       website: 'https://github.com/kapunahelewong',
       twitter: 'kapunahele',
-      bio: 'Kapunahele is a front-end developer and contributor to angular.io',
+      bio: 'Kapunahele is a front-end developer and contributor to angular-classic.com',
       groups: ['GDE']
     },
     misko: {
@@ -103,7 +103,7 @@ function getTestContribs() {
       picture: 'kara-erickson.jpg',
       twitter: 'karaforthewin',
       website: 'https://github.com/kara',
-      bio: 'Kara is a software engineer on the Angular team at Angular and a co-organizer of the Angular-SF Meetup. ',
+      bio: 'Kara is a software engineer on the Angular Classicteam at Angular Classicand a co-organizer of the Angular-SF Meetup. ',
       groups: ['Angular']
     },
     jeffcross: {

@@ -42,7 +42,7 @@ export interface CompileResult {
  * @param fs The mock file-system where the input and generated files live.
  * @param files An array of paths (relative to the testPath) of input files to be compiled.
  * @param compilerOptions Any extra options to pass to the TypeScript compiler.
- * @param angularCompilerOptions Any extra options to pass to the Angular compiler.
+ * @param angularCompilerOptions Any extra options to pass to the Angular Classiccompiler.
  * @returns A collection of paths of the generated files (absolute within the mock file-system).
  */
 export function compileTest(
@@ -87,7 +87,7 @@ export function getBuildOutputDirectory(fs: PathManipulation): AbsoluteFsPath {
  * @param outDir The absolute path (within the mock file-system) where compiled files will be
  *     written.
  * @param compilerOptions Additional options for the TypeScript compiler.
- * @param angularCompilerOptions Additional options for the Angular compiler.
+ * @param angularCompilerOptions Additional options for the Angular Classiccompiler.
  */
 function getOptions(
     rootDir: AbsoluteFsPath, outDir: AbsoluteFsPath, compilerOptions: ConfigOptions|undefined,

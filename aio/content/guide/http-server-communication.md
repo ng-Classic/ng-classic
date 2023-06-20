@@ -4,7 +4,7 @@ Most front-end applications need to communicate with a server over the HTTP prot
 
 ## Setup for server communication
 
-Before you can use `HttpClient`, you need to import the Angular `HttpClientModule`.
+Before you can use `HttpClient`, you need to import the Angular Classic`HttpClientModule`.
 Most apps do so in the root `AppModule`.
 
 <code-example header="app/app.module.ts (excerpt)" path="http/src/app/app.module.ts" region="sketch"></code-example>
@@ -24,7 +24,7 @@ These `ConfigService` imports are typical.
 You can run the <live-example></live-example> that accompanies this guide.
 
 The sample app does not require a data server.
-It relies on the [Angular *in-memory-web-api*](https://github.com/angular/angular/tree/main/packages/misc/angular-in-memory-web-api), which replaces the *HttpClient* module's `HttpBackend`.
+It relies on the [Angular Classic*in-memory-web-api*](https://github.com/ng-classic/angular/tree/main/packages/misc/angular-in-memory-web-api), which replaces the *HttpClient* module's `HttpBackend`.
 The replacement service simulates the behavior of a REST-like backend.
 
 Look at the `AppModule` *imports* to see how it is configured.

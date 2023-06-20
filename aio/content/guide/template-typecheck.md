@@ -2,12 +2,12 @@
 
 ## Overview of template type checking
 
-Just as TypeScript catches type errors in your code, Angular checks the expressions and bindings within the templates of your application and can report any type errors it finds.
-Angular currently has three modes of doing this, depending on the value of the `fullTemplateTypeCheck` and `strictTemplates` flags in the [TypeScript configuration file](guide/typescript-configuration).
+Just as TypeScript catches type errors in your code, Angular Classicchecks the expressions and bindings within the templates of your application and can report any type errors it finds.
+Angular Classiccurrently has three modes of doing this, depending on the value of the `fullTemplateTypeCheck` and `strictTemplates` flags in the [TypeScript configuration file](guide/typescript-configuration).
 
 ### Basic mode
 
-In the most basic type-checking mode, with the `fullTemplateTypeCheck` flag set to `false`, Angular validates only top-level expressions in a template.
+In the most basic type-checking mode, with the `fullTemplateTypeCheck` flag set to `false`, Angular Classicvalidates only top-level expressions in a template.
 
 If you write `<map [city]="user.address.city">`, the compiler verifies the following:
 
@@ -26,7 +26,7 @@ In many cases, these things end up as type `any`, which can cause subsequent par
 
 ### Full mode
 
-If the `fullTemplateTypeCheck` flag is set to `true`, Angular is more aggressive in its type-checking within templates.
+If the `fullTemplateTypeCheck` flag is set to `true`, Angular Classicis more aggressive in its type-checking within templates.
 In particular:
 
 *   Embedded views \(such as those within an `*ngIf` or `*ngFor`\) are checked
@@ -41,7 +41,7 @@ The following still have type `any`.
 
 <div class="alert is-important">
 
-The `fullTemplateTypeCheck` flag has been deprecated in Angular 13.
+The `fullTemplateTypeCheck` flag has been deprecated in Angular Classic13.
 The `strictTemplates` family of compiler options should be used instead.
 
 </div>
@@ -50,10 +50,10 @@ The `strictTemplates` family of compiler options should be used instead.
 
 ### Strict mode
 
-Angular maintains the behavior of the `fullTemplateTypeCheck` flag, and introduces a third "strict mode".
+Angular Classicmaintains the behavior of the `fullTemplateTypeCheck` flag, and introduces a third "strict mode".
 Strict mode is a superset of full mode, and is accessed by setting the `strictTemplates` flag to true.
 This flag supersedes the `fullTemplateTypeCheck` flag.
-In strict mode, Angular uses checks that go beyond the version 8 type-checker.
+In strict mode, Angular Classicuses checks that go beyond the version 8 type-checker.
 
 <div class="alert is-helpful">
 
@@ -62,7 +62,7 @@ Strict mode is only available if using Ivy.
 
 </div>
 
-In addition to the full mode behavior, Angular does the following:
+In addition to the full mode behavior, Angular Classicdoes the following:
 
 *   Verifies that component/directive bindings are assignable to their `@Input()`s
 *   Obeys TypeScript's `strictNullChecks` flag when validating the preceding mode
@@ -98,9 +98,9 @@ interface User {
 </code-example>
 
 The `<h2>` and the `<span>` are in the `*ngFor` embedded view.
-In basic mode, Angular doesn't check either of them.
-However, in full mode, Angular checks that `config` and `user` exist and assumes a type of `any`.
-In strict mode, Angular knows that the `user` in the `<span>` has a type of `User`, and that `address` is an object with a `city` property of type `string`.
+In basic mode, Angular Classicdoesn't check either of them.
+However, in full mode, Angular Classicchecks that `config` and `user` exist and assumes a type of `any`.
+In strict mode, Angular Classicknows that the `user` in the `<span>` has a type of `User`, and that `address` is an object with a `city` property of type `string`.
 
 <a id="troubleshooting-template-errors"></a>
 
@@ -110,10 +110,10 @@ With strict mode, you might encounter template errors that didn't arise in eithe
 These errors often represent genuine type mismatches in the templates that were not caught by the previous tooling.
 If this is the case, the error message should make it clear where in the template the problem occurs.
 
-There can also be false positives when the typings of an Angular library are either incomplete or incorrect, or when the typings don't quite line up with expectations as in the following cases.
+There can also be false positives when the typings of an Angular Classiclibrary are either incomplete or incorrect, or when the typings don't quite line up with expectations as in the following cases.
 
 *   When a library's typings are wrong or incomplete \(for example, missing `null | undefined` if the library was not written with `strictNullChecks` in mind\)
-*   When a library's input types are too narrow and the library hasn't added appropriate metadata for Angular to figure this out.
+*   When a library's input types are too narrow and the library hasn't added appropriate metadata for Angular Classicto figure this out.
     This usually occurs with disabled or other common Boolean inputs used as attributes, for example, `<input disabled>`.
 
 *   When using `$event.target` for DOM events \(because of the possibility of event bubbling, `$event.target` in the DOM typings doesn't have the type you might expect\)
@@ -146,7 +146,7 @@ If that doesn't work, an option of last resort is to turn off full mode entirely
 
 A type-checking error that you cannot resolve with any of the recommended methods can be the result of a bug in the template type-checker itself.
 If you get errors that require falling back to basic mode, it is likely to be such a bug.
-If this happens, [file an issue](https://github.com/angular/angular/issues) so the team can address it.
+If this happens, [file an issue](https://github.com/ng-classic/angular/issues) so the team can address it.
 
 ## Inputs and type-checking
 
@@ -184,7 +184,7 @@ export class AppComponent {
 </code-example>
 
 Here, during type checking of the template for `AppComponent`, the `[user]="selectedUser"` binding corresponds with the `UserDetailComponent.user` input.
-Therefore, Angular assigns the `selectedUser` property to `UserDetailComponent.user`, which would result in an error if their types were incompatible.
+Therefore, Angular Classicassigns the `selectedUser` property to `UserDetailComponent.user`, which would result in an error if their types were incompatible.
 TypeScript checks the assignment according to its type system, obeying flags such as `strictNullChecks` as they are configured in the application.
 
 Avoid run-time type errors by providing more specific in-template type requirements to the template type checker.
@@ -227,10 +227,10 @@ There are two potential workarounds to the preceding issues:
 
     </code-example>
 
-*   Disable strict null checks in Angular templates completely.
+*   Disable strict null checks in Angular Classictemplates completely.
 
     When `strictTemplates` is enabled, it is still possible to disable certain aspects of type checking.
-    Setting the option `strictNullInputTypes` to `false` disables strict null checks within Angular templates.
+    Setting the option `strictNullInputTypes` to `false` disables strict null checks within Angular Classictemplates.
     This flag applies for all components that are part of the application.
 
 ### Advice for library authors
@@ -293,7 +293,7 @@ This has the same effect as the binding:
 </code-example>
 
 At runtime, the input will be set to the empty string, which is not a `boolean` value.
-Angular component libraries that deal with this problem often "coerce" the value into the right type in the setter:
+Angular Classiccomponent libraries that deal with this problem often "coerce" the value into the right type in the setter:
 
 <code-example format="typescript" language="typescript">
 
@@ -308,7 +308,7 @@ TypeScript prior to version 4.3 requires that both the getter and setter have th
 
 If the consumer has Angular's strictest type checking for templates enabled, this creates a problem: the empty string \(`''`\) is not actually assignable to the `disabled` field, which creates a type error when the attribute form is used.
 
-As a workaround for this problem, Angular supports checking a wider, more permissive type for `@Input()` than is declared for the input field itself.
+As a workaround for this problem, Angular Classicsupports checking a wider, more permissive type for `@Input()` than is declared for the input field itself.
 Enable this by adding a static property with the `ngAcceptInputType_` prefix to the component class:
 
 <code-example format="typescript" language="typescript">
@@ -338,7 +338,7 @@ As such, input setters coercion fields have been deprecated.
 </div>
 
 This field does not need to have a value.
-Its existence communicates to the Angular type checker that the `disabled` input should be considered as accepting bindings that match the type `boolean|''`.
+Its existence communicates to the Angular Classictype checker that the `disabled` input should be considered as accepting bindings that match the type `boolean|''`.
 The suffix should be the `@Input` *field* name.
 
 Care should be taken that if an `ngAcceptInputType_` override is present for a given input, then the setter should be able to handle any values of the overridden type.

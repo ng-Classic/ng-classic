@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Compiler, createEnvironmentInjector, EnvironmentInjector, Injectable, OnDestroy} from '@angular/core';
+import {Compiler, createEnvironmentInjector, EnvironmentInjector, Injectable, OnDestroy} from '@angular-classic/core';
 import {from, Observable, of, Subscription} from 'rxjs';
 import {catchError, concatMap, filter, mergeAll, mergeMap} from 'rxjs/operators';
 

@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, importProvidersFrom} from '@angular/core';
-import {bootstrapApplication, provideProtractorTestingSupport} from '@angular/platform-browser';
-import {RouterModule} from '@angular/router';
+import {Component, importProvidersFrom} from '@angular-classic/core';
+import {bootstrapApplication, provideProtractorTestingSupport} from '@angular-classic/platform-browser';
+import {RouterModule} from '@angular-classic/router';
 
 import {BasicComponent} from './e2e/basic/basic';
 import {FillModeFailingComponent, FillModePassingComponent} from './e2e/fill-mode/fill-mode';

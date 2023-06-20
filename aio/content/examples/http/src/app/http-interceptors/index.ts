@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion interceptor-providers
 /* "Barrel" of Http Interceptors */
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular-classic/common/http';
 
 // #enddocregion interceptor-providers
 import { AuthInterceptor } from './auth-interceptor';

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {StaticProvider} from '@angular/core';
+import {StaticProvider} from '@angular-classic/core';
 
 import {Injector, Metric, Options, PerfLogEvent, PerfLogFeatures, PerflogMetric, WebDriverExtension} from '../../index';
 import {TraceEventFactory} from '../trace_event_factory';

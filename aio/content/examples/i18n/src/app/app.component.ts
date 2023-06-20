@@ -1,5 +1,5 @@
 // #docregion
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ export class AppComponent {
   minutes = 0;
   gender = 'female';
   fly = true;
-  logo = 'https://angular.io/assets/images/logos/angular/angular.png';
+  logo = 'https://angular-classic.com/assets/images/logos/ng-classic/angular.png';
   inc(i: number) {
     this.minutes = Math.min(5, Math.max(0, this.minutes + i));
   }

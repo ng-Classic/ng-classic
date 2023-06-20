@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Location} from '@angular/common';
-import {APP_BOOTSTRAP_LISTENER, ComponentRef, InjectionToken} from '@angular/core';
-import {Router, ɵRestoredState as RestoredState} from '@angular/router';
-import {UpgradeModule} from '@angular/upgrade/static';
+import {Location} from '@angular-classic/common';
+import {APP_BOOTSTRAP_LISTENER, ComponentRef, InjectionToken} from '@angular-classic/core';
+import {Router, ɵRestoredState as RestoredState} from '@angular-classic/router';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
 
 /**
  * Creates an initializer that sets up `ngRoute` integration
- * along with setting up the Angular router.
+ * along with setting up the Angular Classicrouter.
  *
  * @usageNotes
  *
@@ -79,9 +79,9 @@ export function setUpLocationSync(ngUpgrade: UpgradeModule, urlType: 'path'|'has
           (event: any, newUrl: string, oldUrl: string,
            newState?: {[k: string]: unknown}|RestoredState,
            oldState?: {[k: string]: unknown}|RestoredState) => {
-            // Navigations coming from Angular router have a navigationId state
-            // property. Don't trigger Angular router navigation again if it is
-            // caused by a URL change from the current Angular router
+            // Navigations coming from Angular Classicrouter have a navigationId state
+            // property. Don't trigger Angular Classicrouter navigation again if it is
+            // caused by a URL change from the current Angular Classicrouter
             // navigation.
             const currentNavigationId = router.getCurrentNavigation()?.id;
             const newStateNavigationId = newState?.navigationId;
@@ -120,7 +120,7 @@ export function setUpLocationSync(ngUpgrade: UpgradeModule, urlType: 'path'|'has
  * and assigning it again. This correctly populates all properties.
  *
  * See
- * https://github.com/angular/angular.js/blob/2c7400e7d07b0f6cec1817dab40b9250ce8ebce6/src/ng/urlUtils.js#L26-L33
+ * https://github.com/ng-classic/angular.js/blob/2c7400e7d07b0f6cec1817dab40b9250ce8ebce6/src/ng/urlUtils.js#L26-L33
  * for more info.
  */
 let anchor: HTMLAnchorElement|undefined;

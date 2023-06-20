@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {OnDestroy} from '@angular/core';
+import {OnDestroy} from '@angular-classic/core';
 
 import {ɵɵdefineDirective, ɵɵelement, ɵɵelementEnd, ɵɵelementStart} from '../../../../src/render3/index';
 import {createLView, createTNode, createTView} from '../../../../src/render3/instructions/shared';

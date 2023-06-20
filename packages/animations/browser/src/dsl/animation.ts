@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AnimationMetadata, AnimationMetadataType, AnimationOptions, ɵStyleDataMap} from '@angular/animations';
+import {AnimationMetadata, AnimationMetadataType, AnimationOptions, ɵStyleDataMap} from '@angular-classic/animations';
 
 import {buildingFailed, validationFailed} from '../error_helpers';
 import {AnimationDriver} from '../render/animation_driver';

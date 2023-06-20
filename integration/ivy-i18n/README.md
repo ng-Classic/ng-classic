@@ -1,6 +1,6 @@
 # CliHelloWorldIvyI18n
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0-next.9.
+This project was generated with [Angular ClassicCLI](https://github.com/ng-classic/angular-cli) version 9.0.0-next.9.
 
 ## Development server
 
@@ -24,4 +24,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](https://www.protra
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/main/README.md).
+To get more help on the Angular ClassicCLI use `ng help` or go check out the [Angular ClassicCLI README](https://github.com/ng-classic/angular-cli/blob/main/README.md).

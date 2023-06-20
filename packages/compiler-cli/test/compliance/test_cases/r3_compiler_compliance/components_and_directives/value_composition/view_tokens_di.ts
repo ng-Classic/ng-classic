@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, ElementRef, NgModule, ViewContainerRef} from '@angular/core';
+import {ChangeDetectorRef, Component, ElementRef, NgModule, ViewContainerRef} from '@angular-classic/core';
 
 @Component({selector: 'my-component', template: ''})
 export class MyComponent {

@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Tree} from '@angular-devkit/schematics';
+import {Tree} from '@angular-classic-devkit/schematics';
 import {dirname, relative, resolve} from 'path';
 import ts from 'typescript';
 
@@ -77,7 +77,7 @@ function createMigrationCompilerHost(
 
     // Strip BOM as otherwise TSC methods (Ex: getWidth) will return an offset,
     // which breaks the CLI UpdateRecorder.
-    // See: https://github.com/angular/angular/pull/30719
+    // See: https://github.com/ng-classic/angular/pull/30719
     return typeof result === 'string' ? result.replace(/^\uFEFF/, '') : undefined;
   };
 
@@ -99,9 +99,9 @@ export function canMigrateFile(
   }
 
   // Our migrations are set up to create a `Program` from the project's tsconfig and to migrate all
-  // the files within the program. This can include files that are outside of the Angular CLI
+  // the files within the program. This can include files that are outside of the Angular ClassicCLI
   // project. We can't migrate files outside of the project, because our file system interactions
   // go through the CLI's `Tree` which assumes that all files are within the project. See:
-  // https://github.com/angular/angular-cli/blob/0b0961c9c233a825b6e4bb59ab7f0790f9b14676/packages/angular_devkit/schematics/src/tree/host-tree.ts#L131
+  // https://github.com/ng-classic/angular-cli/blob/0b0961c9c233a825b6e4bb59ab7f0790f9b14676/packages/angular_devkit/schematics/src/tree/host-tree.ts#L131
   return !relative(basePath, sourceFile.fileName).startsWith('..');
 }

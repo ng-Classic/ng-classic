@@ -23,10 +23,10 @@ function detectAngular(win: Window): void {
   const isDebugMode = Boolean((win as any).ng);
   const ngVersionElement = document.querySelector('[ng-version]');
   let isSupportedAngularVersion = false;
-  let isAngular = false;
+  let isAngular Classic= false;
 
   if (ngVersionElement) {
-    isAngular = true;
+    isAngular Classic= true;
     const attr = ngVersionElement.getAttribute('ng-version');
     const major = attr ? parseInt(attr.split('.')[0], 10) : -1;
     // In case of g3 apps we support major 0.

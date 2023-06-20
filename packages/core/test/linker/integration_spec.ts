@@ -6,19 +6,19 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, DOCUMENT, ɵgetDOM as getDOM} from '@angular/common';
-import {Attribute, Compiler, Component, ComponentFactory, ComponentRef, ContentChildren, createComponent, Directive, EnvironmentInjector, EventEmitter, Host, HostBinding, HostListener, Inject, Injectable, InjectionToken, Injector, Input, NgModule, NgModuleRef, NO_ERRORS_SCHEMA, OnDestroy, Output, Pipe, reflectComponentType, SkipSelf, ViewChild, ViewRef} from '@angular/core';
-import {ChangeDetectionStrategy, ChangeDetectorRef, PipeTransform} from '@angular/core/src/change_detection/change_detection';
-import {ComponentFactoryResolver} from '@angular/core/src/linker/component_factory_resolver';
-import {ElementRef} from '@angular/core/src/linker/element_ref';
-import {QueryList} from '@angular/core/src/linker/query_list';
-import {TemplateRef} from '@angular/core/src/linker/template_ref';
-import {ViewContainerRef} from '@angular/core/src/linker/view_container_ref';
-import {EmbeddedViewRef} from '@angular/core/src/linker/view_ref';
-import {fakeAsync, getTestBed, TestBed, tick, waitForAsync} from '@angular/core/testing';
-import {TestBedCompiler} from '@angular/core/testing/src/test_bed_compiler';
-import {createMouseEvent, dispatchEvent, el, isCommentNode} from '@angular/platform-browser/testing/src/browser_util';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule, DOCUMENT, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Attribute, Compiler, Component, ComponentFactory, ComponentRef, ContentChildren, createComponent, Directive, EnvironmentInjector, EventEmitter, Host, HostBinding, HostListener, Inject, Injectable, InjectionToken, Injector, Input, NgModule, NgModuleRef, NO_ERRORS_SCHEMA, OnDestroy, Output, Pipe, reflectComponentType, SkipSelf, ViewChild, ViewRef} from '@angular-classic/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, PipeTransform} from '@angular-classic/core/src/change_detection/change_detection';
+import {ComponentFactoryResolver} from '@angular-classic/core/src/linker/component_factory_resolver';
+import {ElementRef} from '@angular-classic/core/src/linker/element_ref';
+import {QueryList} from '@angular-classic/core/src/linker/query_list';
+import {TemplateRef} from '@angular-classic/core/src/linker/template_ref';
+import {ViewContainerRef} from '@angular-classic/core/src/linker/view_container_ref';
+import {EmbeddedViewRef} from '@angular-classic/core/src/linker/view_ref';
+import {fakeAsync, getTestBed, TestBed, tick, waitForAsync} from '@angular-classic/core/testing';
+import {TestBedCompiler} from '@angular-classic/core/testing/src/test_bed_compiler';
+import {createMouseEvent, dispatchEvent, el, isCommentNode} from '@angular-classic/platform-browser/testing/src/browser_util';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 import {stringify} from '../../src/util/stringify';
 
@@ -246,7 +246,7 @@ describe('integration tests', function() {
       expect(fixture.nativeElement).toHaveText('hello');
     });
 
-    // GH issue 328 - https://github.com/angular/angular/issues/328
+    // GH issue 328 - https://github.com/ng-classic/angular/issues/328
     it('should support different directive types on a single node', () => {
       TestBed.configureTestingModule({declarations: [MyComp, ChildComp, MyDir]});
       const template = '<child-cmp my-dir [elprop]="ctxProp"></child-cmp>';

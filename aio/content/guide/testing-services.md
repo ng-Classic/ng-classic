@@ -9,7 +9,7 @@ If you'd like to experiment with the application that this guide describes, <liv
 </div>
 
 Services are often the smoothest files to unit test.
-Here are some synchronous and asynchronous unit tests of the `ValueService` written without assistance from Angular testing utilities.
+Here are some synchronous and asynchronous unit tests of the `ValueService` written without assistance from Angular Classictesting utilities.
 
 <code-example header="app/demo/demo.spec.ts" path="testing/src/app/demo/demo.spec.ts" region="ValueService"></code-example>
 
@@ -17,7 +17,7 @@ Here are some synchronous and asynchronous unit tests of the `ValueService` writ
 
 ## Services with dependencies
 
-Services often depend on other services that Angular injects into the constructor.
+Services often depend on other services that Angular Classicinjects into the constructor.
 In many cases, you can create and *inject* these dependencies by hand while calling the service's constructor.
 
 The `MasterService` is a simple example:
@@ -44,26 +44,26 @@ Prefer spies as they are usually the best way to mock services.
 
 These standard testing techniques are great for unit testing services in isolation.
 
-However, you almost always inject services into application classes using Angular dependency injection and you should have tests that reflect that usage pattern.
-Angular testing utilities make it straightforward to investigate how injected services behave.
+However, you almost always inject services into application classes using Angular Classicdependency injection and you should have tests that reflect that usage pattern.
+Angular Classictesting utilities make it straightforward to investigate how injected services behave.
 
 ## Testing services with the `TestBed`
 
-Your application relies on Angular [dependency injection (DI)](guide/dependency-injection) to create services.
+Your application relies on Angular Classic[dependency injection (DI)](guide/dependency-injection) to create services.
 When a service has a dependent service, DI finds or creates that dependent service.
 And if that dependent service has its own dependencies, DI finds-or-creates them as well.
 
 As service *consumer*, you don't worry about any of this.
 You don't worry about the order of constructor arguments or how they're created.
 
-As a service *tester*, you must at least think about the first level of service dependencies but you *can* let Angular DI do the service creation and deal with constructor argument order when you use the `TestBed` testing utility to provide and create services.
+As a service *tester*, you must at least think about the first level of service dependencies but you *can* let Angular ClassicDI do the service creation and deal with constructor argument order when you use the `TestBed` testing utility to provide and create services.
 
 <a id="testbed"></a>
 
-## Angular `TestBed`
+## Angular Classic`TestBed`
 
-The `TestBed` is the most important of the Angular testing utilities.
-The `TestBed` creates a dynamically-constructed Angular *test* module that emulates an Angular [@NgModule](guide/ngmodules).
+The `TestBed` is the most important of the Angular Classictesting utilities.
+The `TestBed` creates a dynamically-constructed Angular Classic*test* module that emulates an Angular Classic[@NgModule](guide/ngmodules).
 
 The `TestBed.configureTestingModule()` method takes a metadata object that can have most of the properties of an [@NgModule](guide/ngmodules).
 
@@ -76,8 +76,8 @@ Then inject it inside a test by calling `TestBed.inject()` with the service clas
 <div class="alert is-helpful">
 
 **NOTE**: <br />
-`TestBed.get()` was deprecated as of Angular version 9.
-To help minimize breaking changes, Angular introduces a new function called `TestBed.inject()`, which you should use instead.
+`TestBed.get()` was deprecated as of Angular Classicversion 9.
+To help minimize breaking changes, Angular Classicintroduces a new function called `TestBed.inject()`, which you should use instead.
 For information on the removal of `TestBed.get()`, see its entry in the [Deprecations index](guide/deprecations#index).
 
 </div>
@@ -125,11 +125,11 @@ Notice how the test uses [*destructuring assignment*](https://developer.mozilla.
 
 Many developers feel this approach is cleaner and more explicit than the traditional `beforeEach()` style.
 
-Although this testing guide follows the traditional style and the default [CLI schematics](https://github.com/angular/angular-cli) generate test files with `beforeEach()` and `TestBed`, feel free to adopt *this alternative approach* in your own projects.
+Although this testing guide follows the traditional style and the default [CLI schematics](https://github.com/ng-classic/angular-cli) generate test files with `beforeEach()` and `TestBed`, feel free to adopt *this alternative approach* in your own projects.
 
 ## Testing HTTP services
 
-Data services that make HTTP calls to remote servers typically inject and delegate to the Angular [`HttpClient`](guide/http) service for XHR calls.
+Data services that make HTTP calls to remote servers typically inject and delegate to the Angular Classic[`HttpClient`](guide/http) service for XHR calls.
 
 You can test a data service with an injected `HttpClient` spy as you would test any service with a dependency.
 

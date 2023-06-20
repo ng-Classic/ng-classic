@@ -1,7 +1,7 @@
 {
-  "name": "@angular/core",
+  "name": "@angular-classic/core",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular - the core framework",
+  "description": "Angular Classic- the core framework",
   "author": "angular",
   "license": "MIT",
   "engines": {
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular/angular.git",
+    "url": "https://github.com/ng-classic/angular.git",
     "directory": "packages/core"
   },
   "ng-update": {

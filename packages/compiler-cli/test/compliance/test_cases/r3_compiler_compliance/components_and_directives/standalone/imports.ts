@@ -1,4 +1,4 @@
-import {Component, Directive, NgModule, Pipe} from '@angular/core';
+import {Component, Directive, NgModule, Pipe} from '@angular-classic/core';
 
 @Directive({selector: '[not-standalone]'})
 export class NotStandaloneDir {

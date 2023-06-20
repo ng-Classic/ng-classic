@@ -1,4 +1,4 @@
-import {Component, NgModule, ViewEncapsulation} from '@angular/core';
+import {Component, NgModule, ViewEncapsulation} from '@angular-classic/core';
 
 @Component({
   encapsulation: ViewEncapsulation.ShadowDom,

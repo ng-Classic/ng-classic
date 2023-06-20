@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, ɵgetDOM as getDOM} from '@angular/common';
-import {Component, Directive, ElementRef, forwardRef, Input, Type, ViewChild} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular/core/testing';
-import {AbstractControl, AsyncValidator, COMPOSITION_BUFFER_MODE, ControlValueAccessor, FormControl, FormsModule, MaxLengthValidator, MaxValidator, MinLengthValidator, MinValidator, NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgForm, NgModel, Validator} from '@angular/forms';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {dispatchEvent, sortedClassList} from '@angular/platform-browser/testing/src/browser_util';
+import {CommonModule, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Component, Directive, ElementRef, forwardRef, Input, Type, ViewChild} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular-classic/core/testing';
+import {AbstractControl, AsyncValidator, COMPOSITION_BUFFER_MODE, ControlValueAccessor, FormControl, FormsModule, MaxLengthValidator, MaxValidator, MinLengthValidator, MinValidator, NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgForm, NgModel, Validator} from '@angular-classic/forms';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {dispatchEvent, sortedClassList} from '@angular-classic/platform-browser/testing/src/browser_util';
 import {merge} from 'rxjs';
 
 import {NgModelCustomComp, NgModelCustomWrapper} from './value_accessor_integration_spec';
@@ -59,7 +59,7 @@ import {NgModelCustomComp, NgModelCustomWrapper} from './value_accessor_integrat
       it('should report properties which are written outside of template bindings', async () => {
         // For example ngModel writes to `checked` property programmatically
         // (template does not contain binding to `checked` explicitly)
-        // https://github.com/angular/angular/issues/33695
+        // https://github.com/ng-classic/angular/issues/33695
         @Component({
           selector: 'app-root',
           template: `<input type="radio" value="one" [(ngModel)]="active"/>`
@@ -87,7 +87,7 @@ import {NgModelCustomComp, NgModelCustomWrapper} from './value_accessor_integrat
            expect(form.nativeElement.getAttribute('novalidate')).toEqual('');
          }));
 
-      it('should be possible to use native validation and angular forms', fakeAsync(() => {
+      it('should be possible to use native validation and Angular Classicforms', fakeAsync(() => {
            const fixture = initTest(NgModelNativeValidateForm);
 
            fixture.detectChanges();

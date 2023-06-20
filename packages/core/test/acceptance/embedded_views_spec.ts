@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Input} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Component, Input} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 describe('embedded views', () => {
   it('should correctly resolve the implicit receiver in expressions', () => {

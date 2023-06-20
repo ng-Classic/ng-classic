@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {APP_BASE_HREF} from '@angular/common';
-import {Component, NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {APP_BASE_HREF} from '@angular-classic/common';
+import {Component, NgModule} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 import {HashLocationComponent} from './hash_location_component';
 import {PathLocationComponent} from './path_location_component';

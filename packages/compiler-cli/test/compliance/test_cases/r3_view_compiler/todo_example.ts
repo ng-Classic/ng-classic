@@ -1,4 +1,4 @@
-import {Component, Input, NgModule} from '@angular/core';
+import {Component, Input, NgModule} from '@angular-classic/core';
 
 @Component({selector: 'my-app', template: '<todo [data]="list"></todo>'})
 export class MyApp {

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {assertInInjectionContext, computed, DestroyRef, inject, Injector, signal, Signal, WritableSignal} from '@angular/core';
+import {assertInInjectionContext, computed, DestroyRef, inject, Injector, signal, Signal, WritableSignal} from '@angular-classic/core';
 import {Observable, Subscribable} from 'rxjs';
 
 import {RuntimeError, RuntimeErrorCode} from '../../src/errors';

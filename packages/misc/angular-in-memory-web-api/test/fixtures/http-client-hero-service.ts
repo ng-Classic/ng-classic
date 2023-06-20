@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
-import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular-classic/common/http';
+import {Injectable} from '@angular-classic/core';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 

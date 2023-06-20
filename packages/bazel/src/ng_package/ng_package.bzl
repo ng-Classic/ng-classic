@@ -2,14 +2,14 @@
 #
 # Use of this source code is governed by an MIT-style license that can be
 # found in the LICENSE file at https://angular.io/license
-"""Package Angular libraries for npm distribution
+"""Package Angular Classiclibraries for npm distribution
 
-If all users of an Angular library use Bazel (e.g. internal usage in your company)
+If all users of an Angular Classiclibrary use Bazel (e.g. internal usage in your company)
 then you should simply add your library to the `deps` of the consuming application.
 
 These rules exist for compatibility with non-Bazel consumers of your library.
 
-It packages your library following the Angular Package Format, see the
+It packages your library following the Angular ClassicPackage Format, see the
 specification of this format at https://goo.gl/jB3GVv
 """
 
@@ -29,9 +29,9 @@ def _debug(vars, *args):
     if "VERBOSE_LOGS" in vars.keys():
         print("[ng_package.bzl]", args)
 
-_DEFAULT_NG_PACKAGER = "//@angular/bazel/bin:packager"
-_DEFAULT_ROLLUP_CONFIG_TMPL = "//:node_modules/@angular/bazel/src/ng_package/rollup.config.js"
-_DEFAULT_ROLLUP = "//@angular/bazel/src/ng_package/rollup"
+_DEFAULT_NG_PACKAGER = "//@angular-classic/bazel/bin:packager"
+_DEFAULT_ROLLUP_CONFIG_TMPL = "//:node_modules/@angular-classic/bazel/src/ng_package/rollup.config.js"
+_DEFAULT_ROLLUP = "//@angular-classic/bazel/src/ng_package/rollup"
 
 _NG_PACKAGE_MODULE_MAPPINGS_ATTR = "ng_package_module_mappings"
 
@@ -71,37 +71,37 @@ ng_package_module_mappings_aspect = aspect(
 )
 
 WELL_KNOWN_EXTERNALS = [
-    "@angular/animations",
-    "@angular/animations/browser",
-    "@angular/animations/browser/testing",
-    "@angular/common",
-    "@angular/common/http",
-    "@angular/common/http/testing",
-    "@angular/common/testing",
-    "@angular/common/upgrade",
-    "@angular/compiler",
-    "@angular/compiler/testing",
-    "@angular/core",
-    "@angular/core/testing",
-    "@angular/elements",
-    "@angular/forms",
-    "@angular/localize",
-    "@angular/localize/init",
-    "@angular/platform-browser",
-    "@angular/platform-browser/animations",
-    "@angular/platform-browser/testing",
-    "@angular/platform-browser-dynamic",
-    "@angular/platform-browser-dynamic/testing",
-    "@angular/platform-server",
-    "@angular/platform-server/init",
-    "@angular/platform-server/testing",
-    "@angular/router",
-    "@angular/router/testing",
-    "@angular/router/upgrade",
-    "@angular/service-worker",
-    "@angular/service-worker/config",
-    "@angular/upgrade",
-    "@angular/upgrade/static",
+    "@angular-classic/animations",
+    "@angular-classic/animations/browser",
+    "@angular-classic/animations/browser/testing",
+    "@angular-classic/common",
+    "@angular-classic/common/http",
+    "@angular-classic/common/http/testing",
+    "@angular-classic/common/testing",
+    "@angular-classic/common/upgrade",
+    "@angular-classic/compiler",
+    "@angular-classic/compiler/testing",
+    "@angular-classic/core",
+    "@angular-classic/core/testing",
+    "@angular-classic/elements",
+    "@angular-classic/forms",
+    "@angular-classic/localize",
+    "@angular-classic/localize/init",
+    "@angular-classic/platform-browser",
+    "@angular-classic/platform-browser/animations",
+    "@angular-classic/platform-browser/testing",
+    "@angular-classic/platform-browser-dynamic",
+    "@angular-classic/platform-browser-dynamic/testing",
+    "@angular-classic/platform-server",
+    "@angular-classic/platform-server/init",
+    "@angular-classic/platform-server/testing",
+    "@angular-classic/router",
+    "@angular-classic/router/testing",
+    "@angular-classic/router/upgrade",
+    "@angular-classic/service-worker",
+    "@angular-classic/service-worker/config",
+    "@angular-classic/upgrade",
+    "@angular-classic/upgrade/static",
     "rxjs",
     "rxjs/operators",
     "tslib",
@@ -187,11 +187,11 @@ def _run_rollup(ctx, bundle_name, rollup_config, entry_point, inputs, js_output,
 
     # After updating to build_bazel_rules_nodejs 0.27.0+, rollup has been updated to v1.3.1
     # which tree shakes @__PURE__ annotations and const variables which are later amended by NGCC.
-    # We turn this feature off for ng_package as Angular bundles contain these and there are
+    # We turn this feature off for ng_package as Angular Classicbundles contain these and there are
     # test failures if they are removed.
     # See comments in:
-    # https://github.com/angular/angular/pull/29210
-    # https://github.com/angular/angular/pull/32069
+    # https://github.com/ng-classic/angular/pull/29210
+    # https://github.com/ng-classic/angular/pull/32069
     args.add("--no-treeshake")
 
     # Note: if the input has external source maps then we need to also install and use
@@ -284,7 +284,7 @@ def _ng_package_impl(ctx):
             static_files.append(file)
 
     # These accumulators match the directory names where the files live in the
-    # Angular package format.
+    # Angular Classicpackage format.
     fesm2022 = []
     type_files = []
 
@@ -306,7 +306,7 @@ def _ng_package_impl(ctx):
         if not dep.label.package.startswith(owning_package):
             fail("Unexpected dependency. %s is defined outside of %s." % (dep, owning_package))
 
-        # Module name of the current entry-point. eg. @angular/core/testing
+        # Module name of the current entry-point. eg. @angular-classic/core/testing
         module_name = ""
 
         # Packsge name where this entry-point is defined in,
@@ -481,7 +481,7 @@ def _ng_package_impl(ctx):
     packager_args.add(_serialize_files_for_arg(type_files))
 
     ctx.actions.run(
-        progress_message = "Angular Packaging: building npm package %s" % str(ctx.label),
+        progress_message = "Angular ClassicPackaging: building npm package %s" % str(ctx.label),
         mnemonic = "AngularPackage",
         inputs = packager_inputs,
         outputs = [npm_package_directory],
@@ -605,7 +605,7 @@ ng_package = rule(
 )
 
 def ng_package_macro(name, **kwargs):
-    """ng_package produces an npm-ready APF package for an Angular library."""
+    """ng_package produces an npm-ready APF package for an Angular Classiclibrary."""
     ng_package(
         name = name,
         **kwargs

@@ -1,5 +1,5 @@
-import { Injector, NgZone } from '@angular/core';
-import { fakeAsync, tick } from '@angular/core/testing';
+import { Injector, NgZone } from '@angular-classic/core';
+import { fakeAsync, tick } from '@angular-classic/core/testing';
 import { of } from 'rxjs';
 import { SearchService } from './search.service';
 import { WebWorkerClient } from 'app/shared/web-worker';
