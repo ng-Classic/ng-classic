@@ -948,7 +948,7 @@ describe('Image directive', () => {
     const imageLoader = () => {
       // We need something different from the `localhost` (as we don't want to produce
       // a preconnect warning for local environments).
-      return 'https://angular.io/assets/images/logos/angular/angular.svg';
+      return 'https://angular.io/assets/images/logos/ng-angular/angular.svg';
     };
 
     it('should log a warning if there is no preconnect link for a priority image',
@@ -1007,7 +1007,7 @@ describe('Image directive', () => {
 
     it('should log a warning if there is no matching preconnect link for a priority image, but there is a preload tag',
        withHead(
-           '<link rel="preload" href="https://angular.io/assets/images/logos/angular/angular.svg" as="image">',
+           '<link rel="preload" href="https://angular.io/assets/images/logos/ng-angular/angular.svg" as="image">',
            () => {
              setupTestingModule({imageLoader});
 

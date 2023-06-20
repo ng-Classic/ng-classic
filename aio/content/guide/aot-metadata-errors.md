@@ -571,7 +571,7 @@ The AOT compiler does not support tagged template expressions; avoid them in met
 
 This error can occur if you use an expression in the `extends` clause of a class.
 
-<!--todo: Chuck: After reviewing your PR comment I'm still at a loss. See [comment there](https://github.com/angular/angular/pull/17712#discussion_r132025495). -->
+<!--todo: Chuck: After reviewing your PR comment I'm still at a loss. See [comment there](https://github.com/ng-angular/angular/pull/17712#discussion_r132025495). -->
 
 <!-- links -->
 

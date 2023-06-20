@@ -146,7 +146,7 @@ If that doesn't work, an option of last resort is to turn off full mode entirely
 
 A type-checking error that you cannot resolve with any of the recommended methods can be the result of a bug in the template type-checker itself.
 If you get errors that require falling back to basic mode, it is likely to be such a bug.
-If this happens, [file an issue](https://github.com/angular/angular/issues) so the team can address it.
+If this happens, [file an issue](https://github.com/ng-angular/angular/issues) so the team can address it.
 
 ## Inputs and type-checking
 

@@ -276,7 +276,7 @@ interface NgZonePrivate extends NgZone {
    * incorrect behavior.
    *
    * For detail, please refer here,
-   * https://github.com/angular/angular/pull/40540
+   * https://github.com/ng-angular/angular/pull/40540
    */
   isCheckStableRunning: boolean;
   isStable: boolean;
@@ -377,7 +377,7 @@ function delayChangeDetectionForEvents(zone: NgZonePrivate) {
     return;
   }
   zone.lastRequestAnimationFrameId = zone.nativeRequestAnimationFrame.call(global, () => {
-    // This is a work around for https://github.com/angular/angular/issues/36839.
+    // This is a work around for https://github.com/ng-angular/angular/issues/36839.
     // The core issue is that when event coalescing is enabled it is possible for microtasks
     // to get flushed too early (As is the case with `Promise.then`) between the
     // coalescing eventTasks.

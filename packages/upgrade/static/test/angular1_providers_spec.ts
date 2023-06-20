@@ -32,8 +32,8 @@ import {compileFactory, injectorFactory, parseFactory, rootScopeFactory, setTemp
         // Ensure the injector is not set. This shouldn't be necessary, but on CI there seems to be
         // some race condition with previous tests not being cleaned up properly.
         // Related:
-        //   - https://github.com/angular/angular/pull/28045
-        //   - https://github.com/angular/angular/pull/28181
+        //   - https://github.com/ng-angular/angular/pull/28045
+        //   - https://github.com/ng-angular/angular/pull/28181
         setTempInjectorRef(null as any);
 
         expect(injectorFactory).toThrowError();

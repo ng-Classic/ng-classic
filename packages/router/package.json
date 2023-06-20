@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angular/angular.git",
+    "url": "git+https://github.com/ng-angular/angular.git",
     "directory": "packages/router"
   },
   "author": "angular",
@@ -17,9 +17,9 @@
     "node": "^16.14.0 || >=18.10.0"
   },
   "bugs": {
-    "url": "https://github.com/angular/angular/issues"
+    "url": "https://github.com/ng-angular/angular/issues"
   },
-  "homepage": "https://github.com/angular/angular/tree/main/packages/router",
+  "homepage": "https://github.com/ng-angular/angular/tree/main/packages/router",
   "dependencies": {
     "tslib": "^2.3.0"
   },

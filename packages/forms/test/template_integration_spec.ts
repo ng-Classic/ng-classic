@@ -59,7 +59,7 @@ import {NgModelCustomComp, NgModelCustomWrapper} from './value_accessor_integrat
       it('should report properties which are written outside of template bindings', async () => {
         // For example ngModel writes to `checked` property programmatically
         // (template does not contain binding to `checked` explicitly)
-        // https://github.com/angular/angular/issues/33695
+        // https://github.com/ng-angular/angular/issues/33695
         @Component({
           selector: 'app-root',
           template: `<input type="radio" value="one" [(ngModel)]="active"/>`

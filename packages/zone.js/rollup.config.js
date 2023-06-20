@@ -38,13 +38,13 @@ const stripBannerPlugin = {
   },
 };
 
-// Add 'use strict' to the bundle, https://github.com/angular/angular/pull/40456
+// Add 'use strict' to the bundle, https://github.com/ng-angular/angular/pull/40456
 // When rollup build esm bundle of zone.js, there will be no 'use strict'
 // since all esm bundles are `strict`, but when webpack load the esm bundle,
 // because zone.js is a module without export and import, webpack is unable
 // to determine the bundle is `esm` module or not, so it doesn't add the 'use strict'
 // which webpack does to all other `esm` modules which has export or import.
-// And it causes issues such as https://github.com/angular/angular/issues/40215
+// And it causes issues such as https://github.com/ng-angular/angular/issues/40215
 // `this` should be `undefined` but is assigned with `Window` instead.
 const banner = `'use strict';
 /**

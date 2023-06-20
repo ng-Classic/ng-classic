@@ -16,7 +16,7 @@ import {Component} from '@angular-classic/core';
   template: `<img ngSrc="/e2e/a.png" width="150" height="150" priority>`,
   providers: [{
     provide: IMAGE_LOADER,
-    useValue: () => 'https://angular.io/assets/images/logos/angular/angular.svg'
+    useValue: () => 'https://angular.io/assets/images/logos/ng-angular/angular.svg'
   }],
 })
 export class BasicComponent {

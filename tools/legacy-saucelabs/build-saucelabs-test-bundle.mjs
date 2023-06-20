@@ -29,7 +29,7 @@ const outFile = join(distDir, 'legacy-test-bundle.spec.js');
 const decoratorDownlevelOutFile = join(distDir, 'legacy-decorator-downlevel-bundle.mjs');
 
 /**
- * This script builds the whole library in `angular/angular` together with its
+ * This script builds the whole library in `ng-angular/angular` together with its
  * spec files into a single IIFE bundle.
  *
  * The bundle can then be used in the legacy Saucelabs or Browserstack tests. Bundling
@@ -218,7 +218,7 @@ async function compileProjectWithTsc() {
 
   const result = program.emit(undefined, undefined, undefined, undefined, {
     // We need to downlevel constructor parameters to make ES2015 JIT work. More details
-    // here: https://github.com/angular/angular/pull/37382.
+    // here: https://github.com/ng-angular/angular/pull/37382.
     before: [legacyCompilationDownlevelDecoratorTransform(program)],
   });
 

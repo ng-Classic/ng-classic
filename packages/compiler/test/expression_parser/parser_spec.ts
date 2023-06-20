@@ -438,7 +438,7 @@ describe('parser', () => {
       // When a LHS expression is parenthesized, the parenthesis on the left used to be
       // excluded from the span. This test verifies that the parenthesis are properly included
       // in the span for both LHS and RHS expressions.
-      // https://github.com/angular/angular/issues/40721
+      // https://github.com/ng-angular/angular/issues/40721
       expectSpan('(foo) && (bar)');
       expectSpan('(foo) || (bar)');
       expectSpan('(foo) == (bar)');

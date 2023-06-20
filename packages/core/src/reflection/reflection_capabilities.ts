@@ -44,7 +44,7 @@ import {PlatformReflectionCapabilities} from './platform_reflection_capabilities
  *     var _this = _super.apply(this, __spreadArray([], __read(arguments), false)) || this;
  * ```
  *
- * More details can be found in: https://github.com/angular/angular/issues/38453.
+ * More details can be found in: https://github.com/ng-angular/angular/issues/38453.
  */
 export const ES5_DELEGATE_CTOR =
     /^function\s+\S+\(\)\s*{[\s\S]+\.apply\(this,\s*(arguments|(?:[^()]+\(\[\],)?[^()]+\(arguments\).*)\)/;

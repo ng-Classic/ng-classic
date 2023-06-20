@@ -15,7 +15,7 @@ permissions:
 jobs:
   update_cli_help:
     name: Update Angular ClassicCLI help (if necessary)
-    if: github.repository == 'angular/angular'
+    if: github.repository == 'ng-angular/angular'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository

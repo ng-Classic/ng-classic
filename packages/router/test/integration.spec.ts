@@ -1630,7 +1630,7 @@ describe('Integration', () => {
        router.navigateByUrl('/user/victor');
        expect(router.getCurrentNavigation()).not.toBe(null);
        router.navigateByUrl('/user/fedor');
-       // Due to https://github.com/angular/angular/issues/29389, this would be `false`
+       // Due to https://github.com/ng-angular/angular/issues/29389, this would be `false`
        // when running a second navigation.
        expect(router.getCurrentNavigation()).not.toBe(null);
        advance(fixture);
@@ -4594,7 +4594,7 @@ describe('Integration', () => {
          })));
 
       // Regression where navigateByUrl with false CanLoad no longer resolved `false` value on
-      // navigateByUrl promise: https://github.com/angular/angular/issues/26284
+      // navigateByUrl promise: https://github.com/ng-angular/angular/issues/26284
       it('should resolve navigateByUrl promise after CanLoad executes',
          fakeAsync(inject([Router], (router: Router) => {
            @Component({selector: 'lazy', template: 'lazy-loaded'})
@@ -5732,7 +5732,7 @@ describe('Integration', () => {
          expect(cmInj.get(Child, '-')).toEqual('-');
        })));
 
-    // https://github.com/angular/angular/issues/12889
+    // https://github.com/ng-angular/angular/issues/12889
     it('should create a single instance of lazy-loaded modules',
        fakeAsync(inject([Router, Location], (router: Router, location: Location) => {
          @Component(
@@ -5767,7 +5767,7 @@ describe('Integration', () => {
          expect(LoadedModule.instances).toEqual(1);
        })));
 
-    // https://github.com/angular/angular/issues/13870
+    // https://github.com/ng-angular/angular/issues/13870
     it('should create a single instance of guards for lazy-loaded modules',
        fakeAsync(inject([Router, Location], (router: Router, location: Location) => {
          @Injectable()

@@ -29,7 +29,7 @@ For information about preparing your system to make major changes to the documen
 Reviewing current documentation requires a minor change if all you need to do is update the `@reviewed`   date.
 If you find a minor problem with a documentation topic, such as a typo, fixing it during your review is also a minor change.
 
-If you find an issue that you don't feel comfortable fixing, [open a docs issue](https://github.com/angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml) in GitHub so someone else can fix it.
+If you find an issue that you don't feel comfortable fixing, [open a docs issue](https://github.com/ng-angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml) in GitHub so someone else can fix it.
 
 </div>
 

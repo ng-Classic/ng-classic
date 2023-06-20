@@ -231,7 +231,7 @@ export declare class AnimationEvent {
       expect(diags[2].messageText).toEqual(`Property 'focused' does not exist on type 'TestCmp'.`);
     });
 
-    // https://github.com/angular/angular/issues/35073
+    // https://github.com/ng-angular/angular/issues/35073
     it('ngIf should narrow on output types', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
@@ -1050,7 +1050,7 @@ export declare class AnimationEvent {
       env.driveMain();
     });
 
-    // https://github.com/angular/angular/issues/40125
+    // https://github.com/ng-angular/angular/issues/40125
     it('should accept NgFor iteration when trackBy is used with a wider type', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
@@ -1087,7 +1087,7 @@ export declare class AnimationEvent {
       env.driveMain();
     });
 
-    // https://github.com/angular/angular/issues/42609
+    // https://github.com/ng-angular/angular/issues/42609
     it('should accept NgFor iteration when trackBy is used with an `any` array', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
@@ -2918,7 +2918,7 @@ export declare class AnimationEvent {
          });
     });
 
-    // Test both sync and async compilations, see https://github.com/angular/angular/issues/32538
+    // Test both sync and async compilations, see https://github.com/ng-angular/angular/issues/32538
     ['sync', 'async'].forEach(mode => {
       describe(`error locations [${mode}]`, () => {
         let driveDiagnostics: () => Promise<ReadonlyArray<ts.Diagnostic>>;

@@ -1437,12 +1437,12 @@
           "tooltip": "Join the discussions at Angular ClassicCommunity Discord server."
         },
         {
-          "url": "https://gitter.im/angular/angular",
+          "url": "https://gitter.im/ng-angular/angular",
           "title": "Gitter",
           "tooltip": "Chat about Angular Classicwith other birds of a feather."
         },
         {
-          "url": "https://github.com/angular/angular/issues",
+          "url": "https://github.com/ng-angular/angular/issues",
           "title": "Report Issues",
           "tooltip": "Post issues and suggestions on github."
         },
@@ -1472,7 +1472,7 @@
           "tooltip": "Twitter"
         },
         {
-          "url": "https://github.com/angular/angular",
+          "url": "https://github.com/ng-angular/angular",
           "title": "GitHub",
           "tooltip": "GitHub"
         },

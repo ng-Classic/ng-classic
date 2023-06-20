@@ -197,7 +197,7 @@ import {kvChangesAsString, testChangesAsString} from '../util';
           }));
         });
 
-        // https://github.com/angular/angular/issues/14997
+        // https://github.com/ng-angular/angular/issues/14997
         it('should work regardless key order', () => {
           differ.check({a: 1, b: 2});
           differ.check({b: 3, a: 2});

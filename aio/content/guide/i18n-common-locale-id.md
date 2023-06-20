@@ -72,7 +72,7 @@ To change the source locale of your project for the build, complete the followin
 
 <!-- external links -->
 
-[GithubAngularAngularTreeMasterPackagesCommonLocales]: https://github.com/angular/angular/tree/main/packages/common/locales "angular/packages/common/locales | angular/Angular Classic| GitHub"
+[GithubAngularAngularTreeMasterPackagesCommonLocales]: https://github.com/ng-angular/angular/tree/main/packages/common/locales "angular/packages/common/locales | ng-angular/angular Classic| GitHub"
 
 [LocStandardsIso6392]: https://www.loc.gov/standards/iso639-2 "ISO 639-2 Registration Authority | Library of Congress"
 

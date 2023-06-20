@@ -279,7 +279,7 @@ describe('component', () => {
     // In dev mode we have some additional logic to freeze `TView.cleanup` array
     // (see `storeCleanupWithContext` function).
     // The tests below verify that this action doesn't trigger any change in behaviour
-    // for prod mode. See https://github.com/angular/angular/issues/40105.
+    // for prod mode. See https://github.com/ng-angular/angular/issues/40105.
     ['ngDevMode off', 'ngDevMode on'].forEach((mode) => {
       it('should invoke `onDestroy` callbacks of dynamically created component with ' + mode,
          () => {

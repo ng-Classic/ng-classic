@@ -5248,7 +5248,7 @@ const ValueAccessorB = createControlValueAccessor('[cva-b]');
         });
       });
 
-      // See https://github.com/angular/angular/issues/40521.
+      // See https://github.com/ng-angular/angular/issues/40521.
       it('should properly clean up when FormControlName has no CVA', () => {
         @Component({
           selector: 'no-cva-compo',

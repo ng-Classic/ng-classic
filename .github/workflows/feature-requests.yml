@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   feature_triage:
-    if: github.repository == 'angular/angular'
+    if: github.repository == 'ng-angular/angular'
     runs-on: ubuntu-latest
     steps:
       - uses: ng-angular/dev-infra/github-actions/feature-request@5f06c4774df908ed69e1441f4ec63b898acf0c68

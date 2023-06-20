@@ -88,7 +88,7 @@ To report progress, use the `context.reportProgress()` method, which takes a cur
 The total can be any number; for example, if you know how many files you have to process, the total could be the number of files, and current should be the number processed so far.
 The status string is unmodified unless you pass in a new string value.
 
-You can see an [example](https://github.com/angular/angular-cli/blob/ba21c855c0c8b778005df01d4851b5a2176edc6f/packages/angular_devkit/build_angular/src/tslint/index.ts#L107) of how the `tslint` builder reports progress.
+You can see an [example](https://github.com/ng-angular/angular-cli/blob/ba21c855c0c8b778005df01d4851b5a2176edc6f/packages/angular_devkit/build_angular/src/tslint/index.ts#L107) of how the `tslint` builder reports progress.
 
 In our example, the copy operation either finishes or is still executing, so there's no need for a progress report, but you can report status so that a parent builder that called our builder would know what's going on.
 Use the `context.reportStatus()` method to generate a status string of any length.

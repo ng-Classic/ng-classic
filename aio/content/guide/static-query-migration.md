@@ -150,7 +150,7 @@ Keep in mind that these categories only applied to `@ViewChild` and `@ContentChi
 This strategy of resolving queries at different times based on the location of potential query matches has caused a lot of confusion.
 Namely:
 
-*   Sometimes query results are available in `ngOnInit`, but sometimes they aren't and it's not clear why \(see [21800](https://github.com/angular/angular/issues/21800) or [19872](https://github.com/angular/angular/issues/19872)\)
+*   Sometimes query results are available in `ngOnInit`, but sometimes they aren't and it's not clear why \(see [21800](https://github.com/ng-angular/angular/issues/21800) or [19872](https://github.com/ng-angular/angular/issues/19872)\)
 *   `@ViewChild` queries are resolved at a different time from `@ViewChildren` queries, and `@ContentChild` queries are resolved at a different time from `@ContentChildren` queries.
     If a user turns a `@ViewChild` query into a `@ViewChildren` query, their code can break suddenly because the timing has shifted.
 

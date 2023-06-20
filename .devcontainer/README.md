@@ -19,7 +19,7 @@ In a nutshell, you need to:
 - Copy [recommended-Dockerfile](./recommended-Dockerfile) to `Dockerfile` (and optionally tweak to suit your needs).
 - Copy [recommended-devcontainer.json](./recommended-devcontainer.json) to `devcontainer.json` (and optionally tweak to suit your needs).
 - Open VSCode and bring up the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette).
-- Type `Remote-Containers: Open Folder in Container` and choose your local clone of [angular/angular](https://github.com/angular/angular).
+- Type `Remote-Containers: Open Folder in Container` and choose your local clone of [ng-angular/angular](https://github.com/ng-angular/angular).
 
 The `.devcontainer/devcontainer.json` and `.devcontainer/Dockerfile` files are ignored by git, so you can have your own local versions. We may occasionally update the template files ([recommended-devcontainer.json](./recommended-devcontainer.json), [recommended-Dockerfile](./recommended-Dockerfile)), in which case you will need to manually update your local copies (if desired).
 

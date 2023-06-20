@@ -371,7 +371,7 @@ export class Router {
       this.locationSubscription = this.location.subscribe(event => {
         const source = event['type'] === 'popstate' ? 'popstate' : 'hashchange';
         if (source === 'popstate') {
-          // The `setTimeout` was added in #12160 and is likely to support Angular/AngularJS
+          // The `setTimeout` was added in #12160 and is likely to support ng-angular/angularJS
           // hybrid apps.
           setTimeout(() => {
             this.navigateToSyncWithBrowser(event['url']!, source, event.state);

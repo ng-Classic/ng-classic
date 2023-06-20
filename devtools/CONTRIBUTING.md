@@ -22,7 +22,7 @@ StackOverflow is a much better place to ask questions since:
 
 To save your and our time we will be systematically closing all the issues that are requests for general support and redirecting people to StackOverflow.
 
-If you would like to chat about the question in real-time, you can reach out via [our gitter channel](https://gitter.im/angular/angular).
+If you would like to chat about the question in real-time, you can reach out via [our gitter channel](https://gitter.im/ng-angular/angular).
 
 ## <a name="issue"></a> Found an Bug?
 
@@ -55,7 +55,7 @@ We want to fix all the issues as soon as possible, but before fixing a bug we ne
 - 3rd-party libraries and their versions
 - and most importantly - a use-case that fails
 
-You can file new issues by filling out our [new issue form](https://github.com/angular/angular/issues/new/choose).
+You can file new issues by filling out our [new issue form](https://github.com/ng-angular/angular/issues/new/choose).
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 
@@ -63,9 +63,9 @@ You can file new issues by filling out our [new issue form](https://github.com/a
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-- Search [GitHub](https://github.com/angular/angular) for an open or closed PR
+- Search [GitHub](https://github.com/ng-angular/angular) for an open or closed PR
   that relates to your submission. You don't want to duplicate effort.
-- [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the angular/Angular Classicrepo.
+- [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the ng-angular/angular Classicrepo.
 - In your forked repository, make your changes in a new git branch:
 
   ```shell
@@ -166,7 +166,7 @@ to read on GitHub as well as in various git tools.
 
 Footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
 
-Samples: (even more [samples](https://github.com/angular/angular/commits/main/devtools))
+Samples: (even more [samples](https://github.com/ng-angular/angular/commits/main/devtools))
 
 ```
 docs(changelog): update change log to beta.5
@@ -224,6 +224,6 @@ reference GitHub issues that this commit **Closes**.
 
 A detailed explanation can be found in this [document][commit-message-format].
 
-[github]: https://github.com/angular/angular
-[gitter]: https://gitter.im/angular/angular
+[github]: https://github.com/ng-angular/angular
+[gitter]: https://gitter.im/ng-angular/angular
 [stackoverflow]: http://stackoverflow.com/questions/tagged/angular-devtools

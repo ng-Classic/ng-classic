@@ -76,10 +76,10 @@ The developer preview currently does not provide HMR support and the HMR related
 
 Several build options are not yet implemented but will be added in the future as the build system moves towards a stable status. If your application uses these options, you can still try out the build system without removing them. Warnings will be issued for any unimplemented options but they will otherwise be ignored. However, if your application relies on any of these options to function, you may want to wait to try.
 
-- [Bundle budgets](https://github.com/angular/angular-cli/issues/25100) (`budgets`)
-- [Localization](https://github.com/angular/angular-cli/issues/25099) (`localize`/`i18nDuplicateTranslation`/`i18nMissingTranslation`)
-- [Web workers](https://github.com/angular/angular-cli/issues/25101) (`webWorkerTsConfig`)
-- [WASM imports](https://github.com/angular/angular-cli/issues/25102) -- WASM can still be loaded manually via [standard web APIs](https://developer.mozilla.org/en-US/docs/WebAssembly/Loading_and_running).
+- [Bundle budgets](https://github.com/ng-angular/angular-cli/issues/25100) (`budgets`)
+- [Localization](https://github.com/ng-angular/angular-cli/issues/25099) (`localize`/`i18nDuplicateTranslation`/`i18nMissingTranslation`)
+- [Web workers](https://github.com/ng-angular/angular-cli/issues/25101) (`webWorkerTsConfig`)
+- [WASM imports](https://github.com/ng-angular/angular-cli/issues/25102) -- WASM can still be loaded manually via [standard web APIs](https://developer.mozilla.org/en-US/docs/WebAssembly/Loading_and_running).
 
 Building libraries with the new build system via `ng-packagr` is also not yet possible but library build support will be available in a future release.
 
@@ -166,10 +166,10 @@ Avoiding the use of modules with non-local side effects (outside of polyfills) i
 
 ### Hashed filenames for non-injected global styles/scripts
 
-If your application currently uses the [`inject`](guide/workspace-config#styles-and-scripts-configuration) sub-option for any global styles and scripts via the `styles` or `scripts` build options, the output file names for those styles/scripts will incorrectly contain a hash. Depending on the usage of the output files, this may cause runtime failures for your application. See the related [issue](https://github.com/angular/angular-cli/issues/25098) for more information.
+If your application currently uses the [`inject`](guide/workspace-config#styles-and-scripts-configuration) sub-option for any global styles and scripts via the `styles` or `scripts` build options, the output file names for those styles/scripts will incorrectly contain a hash. Depending on the usage of the output files, this may cause runtime failures for your application. See the related [issue](https://github.com/ng-angular/angular-cli/issues/25098) for more information.
 
 ## Bug reports
 
-Report issues and feature requests on [GitHub](https://github.com/angular/angular-cli/issues).
+Report issues and feature requests on [GitHub](https://github.com/ng-angular/angular-cli/issues).
 
 Please provide a minimal reproduction where possible to aid the team in addressing issues.

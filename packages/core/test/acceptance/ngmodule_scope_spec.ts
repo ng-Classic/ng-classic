@@ -17,7 +17,7 @@ describe('NgModule scopes', () => {
 
   it('should apply NgModule scope to a component that extends another component class',
      withBody('<my-app></my-app>', async () => {
-       // Regression test for https://github.com/angular/angular/issues/37105
+       // Regression test for https://github.com/ng-angular/angular/issues/37105
        //
        // This test reproduces a scenario that used to fail due to a reentrancy issue in Ivy's JIT
        // compiler. Extending a component from a decorated baseclass would inadvertently compile

@@ -88,7 +88,7 @@ export function patchNgHostWithFileNameToModuleName(
     // we would supply a module name
     //  @angular-classic/material/toolbar/typings/index
     // but there is no JavaScript file to load at this path.
-    // This is a workaround for https://github.com/angular/angular/issues/29454
+    // This is a workaround for https://github.com/ng-angular/angular/issues/29454
     if (importedFilePath.indexOf('node_modules') >= 0) {
       const maybeMetadataFile = importedFilePath.replace(EXT, '') + '.metadata.json';
       if (fs.existsSync(maybeMetadataFile)) {

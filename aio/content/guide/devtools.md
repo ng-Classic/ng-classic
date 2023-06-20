@@ -36,7 +36,7 @@ In the top-right corner of Angular ClassicDevTools you'll find which version of 
 
 ## Bug reports
 
-Report issues and feature requests on [GitHub](https://github.com/angular/angular/issues).
+Report issues and feature requests on [GitHub](https://github.com/ng-angular/angular/issues).
 
 To report an issue with the Profiler, export the Profiler recording by clicking the **Save Profile** button, and then attaching that export as a file in the issue.
 

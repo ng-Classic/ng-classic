@@ -406,7 +406,7 @@ runInEachFileSystem(() => {
         expect(messages).toEqual([]);
       });
 
-      // https://github.com/angular/angular/issues/33528
+      // https://github.com/ng-angular/angular/issues/33528
       it('should not produce a diagnostic for implicit any return types', () => {
         const messages = diagnose(
             `<div (click)="state = null"></div>`, `
@@ -692,7 +692,7 @@ class TestComponent {
     });
   });
 
-  // https://github.com/angular/angular/issues/44999
+  // https://github.com/ng-angular/angular/issues/44999
   it('should not fail for components outside of rootDir', () => {
     // This test configures a component that is located outside the configured `rootDir`. Such
     // configuration requires that an inline type-check block is used as the reference emitter does
@@ -1162,7 +1162,7 @@ class TestComponent {
        });
   });
 
-  // https://github.com/angular/angular/issues/43970
+  // https://github.com/ng-angular/angular/issues/43970
   describe('template parse failures', () => {
     afterEach(resetParseTemplateAsSourceFileForTest);
 

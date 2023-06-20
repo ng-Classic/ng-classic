@@ -14,7 +14,7 @@ npm install -g &commat;angular/cli<aio-angular-dist-tag class="pln"></aio-angula
 
 </code-example>
 
-For details about changes between versions, and information about updating from previous releases, see the Releases tab on GitHub: https://github.com/angular/angular-cli/releases
+For details about changes between versions, and information about updating from previous releases, see the Releases tab on GitHub: https://github.com/ng-angular/angular-cli/releases
 
 ## Basic workflow
 

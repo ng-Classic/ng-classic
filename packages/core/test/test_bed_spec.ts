@@ -694,7 +694,7 @@ describe('TestBed', () => {
     expect(hello.nativeElement).toHaveText('Hello World!');
   });
 
-  // https://github.com/angular/angular/issues/42734
+  // https://github.com/ng-angular/angular/issues/42734
   it('should override a component which is declared in an NgModule which is imported as a `ModuleWithProviders`',
      () => {
        // This test verifies that an overridden component that is declared in an NgModule that has

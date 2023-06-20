@@ -19,7 +19,7 @@ class DecoratedChild extends DecoratedParent {}
       'TestDecorator', (data: any) => data, Object, (fn: any) => fn.Terminal = TerminalDecorator);
 
   describe('Property decorators', () => {
-    // https://github.com/angular/angular/issues/12224
+    // https://github.com/ng-angular/angular/issues/12224
     it('should work on the "watch" property', () => {
       const Prop = makePropDecorator('Prop', (value: any) => ({value}));
 

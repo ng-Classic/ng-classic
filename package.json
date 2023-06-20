@@ -3,8 +3,8 @@
   "version": "16.2.0-next.0",
   "private": true,
   "description": "Angular Classic- a web framework for modern web apps",
-  "homepage": "https://github.com/angular/angular",
-  "bugs": "https://github.com/angular/angular/issues",
+  "homepage": "https://github.com/ng-angular/angular",
+  "bugs": "https://github.com/ng-angular/angular/issues",
   "license": "MIT",
   "//engines-comment": "Keep this in sync with /aio/package.json and /aio/tools/examples/shared/package.json",
   "engines": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular/angular.git"
+    "url": "https://github.com/ng-angular/angular.git"
   },
   "scripts": {
     "/": "",

@@ -120,8 +120,8 @@ The following `devDependencies` are provided in the default `package.json` file 
 
 | Package name                                                              | Details |
 |:---                                                                       |:---     |
-| [`@angular-classic-devkit/build-angular`](https://github.com/angular/angular-cli) | The Angular Classicbuild tools.                                                                        |
-| [`@angular-classic/cli`](https://github.com/angular/angular-cli)                  | The Angular ClassicCLI tools.                                                                          |
+| [`@angular-classic-devkit/build-angular`](https://github.com/ng-angular/angular-cli) | The Angular Classicbuild tools.                                                                        |
+| [`@angular-classic/cli`](https://github.com/ng-angular/angular-cli)                  | The Angular ClassicCLI tools.                                                                          |
 | `@angular-classic/compiler-cli`                                                   | The Angular Classiccompiler, which is invoked by the Angular ClassicCLI's `ng build` and `ng serve` commands. |
 | `@types/... `                                                             | TypeScript definition files for 3rd party libraries such as Jasmine and Node.js.                |
 | `jasmine/... `                                                            | Packages to support the [Jasmine](https://jasmine.github.io) test library.                      |

@@ -72,14 +72,14 @@ We understand that sometimes it might be hard to extract essential bits of code 
 
 Unfortunately, we are not able to investigate / fix bugs without a minimal reproduction, so if we don't hear back from you, we are going to close an issue that doesn't have enough info to be reproduced.
 
-You can file new issues by selecting from our [new issue templates](https://github.com/angular/angular/issues/new/choose) and filling out the issue template.
+You can file new issues by selecting from our [new issue templates](https://github.com/ng-angular/angular/issues/new/choose) and filling out the issue template.
 
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-1. Search [GitHub](https://github.com/angular/angular/pulls) for an open or closed PR that relates to your submission.
+1. Search [GitHub](https://github.com/ng-angular/angular/pulls) for an open or closed PR that relates to your submission.
    You don't want to duplicate existing efforts.
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
@@ -89,7 +89,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
    We cannot accept code without a signed CLA.
    Make sure you author all contributed Git commits with email address associated with your CLA signature.
 
-4. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the angular/Angular Classicrepo.
+4. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the ng-angular/angular Classicrepo.
 
 5. In your forked repository, make your changes in a new git branch:
 
@@ -393,8 +393,8 @@ The following documents can help you sort out issues with GitHub accounts and mu
 [coc]: https://github.com/angular/code-of-conduct/blob/main/CODE_OF_CONDUCT.md
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
 [corporate-cla]: https://cla.developers.google.com/about/google-corporate
-[dev-doc]: https://github.com/angular/angular/blob/main/docs/DEVELOPER.md
-[github]: https://github.com/angular/angular
+[dev-doc]: https://github.com/ng-angular/angular/blob/main/docs/DEVELOPER.md
+[github]: https://github.com/ng-angular/angular
 [discord]: https://discord.gg/angular
 [individual-cla]: https://cla.developers.google.com/about/google-individual
 [js-style-guide]: https://google.github.io/styleguide/jsguide.html

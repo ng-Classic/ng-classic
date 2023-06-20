@@ -5,7 +5,7 @@ import localeFr from '@angular-classic/common/locales/fr';
 
 import { AppComponent } from './app.component';
 
-// adding this code to detect issues like https://github.com/angular/angular-cli/issues/10322
+// adding this code to detect issues like https://github.com/ng-angular/angular-cli/issues/10322
 registerLocaleData(localeFr);
 
 @NgModule({

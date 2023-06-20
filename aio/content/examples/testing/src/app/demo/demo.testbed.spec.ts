@@ -76,7 +76,7 @@ describe('demo (with TestBed):', () => {
       );
     }));
 
-    // Must use done. See https://github.com/angular/angular/issues/10127
+    // Must use done. See https://github.com/ng-angular/angular/issues/10127
     it('test should wait for ValueService.getObservableDelayValue', (done: DoneFn) => {
       service.getObservableDelayValue().subscribe(value => {
         expect(value).toBe('observable delay value');
