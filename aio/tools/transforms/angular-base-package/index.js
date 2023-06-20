@@ -40,7 +40,7 @@ module.exports = new Package('angular-base', [
   .processor(require('./processors/disambiguateDocPaths'))
   .processor(require('./processors/checkAbsoluteAioLinks'))
 
-  // overrides base packageInfo and returns the one for the 'ng-classic/angular' repo.
+  // overrides base packageInfo and returns the one for the 'ng-classic/ng-classic' repo.
   .factory('packageInfo', function() { return require(path.resolve(PROJECT_ROOT, 'package.json')); })
   .factory(require('./readers/json'))
   .factory(require('./services/copyFolder'))

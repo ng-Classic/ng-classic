@@ -81,7 +81,7 @@ Extended diagnostics should generally:
 *   Apply to the vast majority of Angular Classicapplications \(not specific to an unofficial library\)
 *   Improve program correctness or performance \(not style, that responsibility falls to a linter\)
 
-If you have an idea for a compiler check which fits these criteria, consider filing a [feature request](https://github.com/ng-classic/angular/issues/new?template=2-feature-request.yaml).
+If you have an idea for a compiler check which fits these criteria, consider filing a [feature request](https://github.com/ng-classic/ng-classic/issues/new?template=2-feature-request.yaml).
 
 <!-- links -->
 

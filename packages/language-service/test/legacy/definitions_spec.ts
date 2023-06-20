@@ -272,7 +272,7 @@ describe('definitions', () => {
       const [templateDeclarationDef, contextDef] = definitions;
       expect(templateDeclarationDef.textSpan).toEqual('hero');
       // `$implicit` is from the `NgForOfContext`:
-      // https://github.com/ng-classic/angular/blob/89c5255b8ca59eed27ede9e1fad69857ab0c6f4f/packages/common/src/directives/ng_for_of.ts#L15
+      // https://github.com/ng-classic/ng-classic/blob/89c5255b8ca59eed27ede9e1fad69857ab0c6f4f/packages/common/src/directives/ng_for_of.ts#L15
       expect(contextDef.textSpan).toEqual('$implicit');
       expect(contextDef.contextSpan).toContain('$implicit: T;');
     });

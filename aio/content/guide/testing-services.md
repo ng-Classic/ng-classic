@@ -125,7 +125,7 @@ Notice how the test uses [*destructuring assignment*](https://developer.mozilla.
 
 Many developers feel this approach is cleaner and more explicit than the traditional `beforeEach()` style.
 
-Although this testing guide follows the traditional style and the default [CLI schematics](https://github.com/ng-classic/angular-cli) generate test files with `beforeEach()` and `TestBed`, feel free to adopt *this alternative approach* in your own projects.
+Although this testing guide follows the traditional style and the default [CLI schematics](https://github.com/ng-classic/ng-classic-cli) generate test files with `beforeEach()` and `TestBed`, feel free to adopt *this alternative approach* in your own projects.
 
 ## Testing HTTP services
 

@@ -67,8 +67,8 @@ import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
          detectChangesAndExpectText('you have one message.');
        }));
 
-    // https://github.com/ng-classic/angular/issues/9868
-    // https://github.com/ng-classic/angular/issues/9882
+    // https://github.com/ng-classic/ng-classic/issues/9868
+    // https://github.com/ng-classic/ng-classic/issues/9882
     it('should not throw when ngPluralCase contains expressions', waitForAsync(() => {
          const template = '<ul [ngPlural]="switchValue">' +
              '<ng-template ngPluralCase="=0"><li>{{ switchValue }}</li></ng-template>' +

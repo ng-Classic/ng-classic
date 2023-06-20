@@ -120,7 +120,7 @@ export function setUpLocationSync(ngUpgrade: UpgradeModule, urlType: 'path'|'has
  * and assigning it again. This correctly populates all properties.
  *
  * See
- * https://github.com/ng-classic/angular.js/blob/2c7400e7d07b0f6cec1817dab40b9250ce8ebce6/src/ng/urlUtils.js#L26-L33
+ * https://github.com/ng-classic/ng-classic.js/blob/2c7400e7d07b0f6cec1817dab40b9250ce8ebce6/src/ng/urlUtils.js#L26-L33
  * for more info.
  */
 let anchor: HTMLAnchorElement|undefined;

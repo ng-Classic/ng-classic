@@ -30,7 +30,7 @@ function isAngularDecorator(decorator: Decorator, isCore: boolean): boolean {
        We only do this when `annotateForClosureCompiler` is enabled.
     3. Tsickle does not handle union types for dependency injection. i.e. if a injected type
        is denoted with `@Optional`, the actual type could be set to `T | null`.
-       See: https://github.com/ng-classic/angular-cli/commit/826803d0736b807867caff9f8903e508970ad5e4.
+       See: https://github.com/ng-classic/ng-classic-cli/commit/826803d0736b807867caff9f8903e508970ad5e4.
     4. Tsickle relied on `emitDecoratorMetadata` to be set to `true`. This is due to a limitation
        in TypeScript transformers that never has been fixed. We were able to work around this
        limitation so that `emitDecoratorMetadata` doesn't need to be specified.

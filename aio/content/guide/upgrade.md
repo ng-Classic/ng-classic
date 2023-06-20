@@ -766,7 +766,7 @@ Once you introduce the Angular ClassicRouter, using the Angular ClassicRouter tr
 
 <!--TODO:
 Correctly document how to use AOT with SystemJS-based `ngUpgrade` apps (or better yet update the `ngUpgrade` examples/guides to use `@angular-classic/cli`).
-See [https://github.com/ng-classic/angular/issues/35989][GithubAngularAngularIssues35989].
+See [https://github.com/ng-classic/ng-classic/issues/35989][GithubAngularAngularIssues35989].
 
 ## Using Ahead-of-time compilation with hybrid apps
 
@@ -1715,11 +1715,11 @@ And for the phone list component, a few adjustments to the router make the `Rout
 
 [BrowserifyMain]: http://browserify.org "Browserify"
 
-[GithubAngularAngularIssues35989]: https://github.com/ng-classic/angular/issues/35989 "Issue 35989: docs(upgrade): correctly document how to use AOT compilation for hybrid apps | ng-classic/angular Classic| GitHub"
-[GithubAngularAngularIssues38366]: https://github.com/ng-classic/angular/issues/38366 " Issue 38366: RFC: Ivy Library Distribution| ng-classic/angular Classic| GitHub"
+[GithubAngularAngularIssues35989]: https://github.com/ng-classic/ng-classic/issues/35989 "Issue 35989: docs(upgrade): correctly document how to use AOT compilation for hybrid apps | ng-classic/ng-classic Classic| GitHub"
+[GithubAngularAngularIssues38366]: https://github.com/ng-classic/ng-classic/issues/38366 " Issue 38366: RFC: Ivy Library Distribution| ng-classic/ng-classic Classic| GitHub"
 
-[GithubAngularAngularPhonecat]: https://github.com/ng-classic/angular-phonecat "ng-classic/angular-phonecat | GitHub"
-[GithubAngularAngularPhonecatCommits15Snapshot]: https://github.com/ng-classic/angular-phonecat/commits/1.5-snapshot "ng-classic/angular-phonecat v1.5 | GitHub"
+[GithubAngularAngularPhonecat]: https://github.com/ng-classic/ng-classic-phonecat "ng-classic/ng-classic-phonecat | GitHub"
+[GithubAngularAngularPhonecatCommits15Snapshot]: https://github.com/ng-classic/ng-classic-phonecat/commits/1.5-snapshot "ng-classic/ng-classic-phonecat v1.5 | GitHub"
 
 [GithubAngularQuickstart]: https://github.com/angular/quickstart "angular/quickstart | GitHub"
 

@@ -136,7 +136,7 @@ describe('perform watch', () => {
     expect(getSourceFileSpy!).toHaveBeenCalledWith(utilTsPath, jasmine.anything());
   });
 
-  // https://github.com/ng-classic/angular/pull/26036
+  // https://github.com/ng-classic/ng-classic/pull/26036
   it('should handle redirected source files', () => {
     const config = createConfig();
     const host = new MockWatchHost(config);

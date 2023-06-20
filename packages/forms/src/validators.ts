@@ -111,7 +111,7 @@ export const NG_ASYNC_VALIDATORS =
  * ## Implementation background
  *
  * This regexp was ported over from AngularJS (see there for git history):
- * https://github.com/ng-classic/angular.js/blob/c133ef836/src/ng/directive/input.js#L27
+ * https://github.com/ng-classic/ng-classic.js/blob/c133ef836/src/ng/directive/input.js#L27
  * It is based on the
  * [WHATWG version](https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address) with
  * some enhancements to incorporate more RFC rules (such as rules related to domain names and the
@@ -120,7 +120,7 @@ export const NG_ASYNC_VALIDATORS =
  *   - Disallow `local-part` length to exceed 64 characters.
  *   - Disallow total address length to exceed 254 characters.
  *
- * See [this commit](https://github.com/ng-classic/angular.js/commit/f3f5cf72e) for more details.
+ * See [this commit](https://github.com/ng-classic/ng-classic.js/commit/f3f5cf72e) for more details.
  */
 const EMAIL_REGEXP =
     /^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;

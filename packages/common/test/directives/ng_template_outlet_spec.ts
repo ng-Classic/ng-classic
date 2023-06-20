@@ -41,7 +41,7 @@ describe('NgTemplateOutlet', () => {
     });
   });
 
-  // https://github.com/ng-classic/angular/issues/14778
+  // https://github.com/ng-classic/ng-classic/issues/14778
   it('should accept the component as the context', waitForAsync(() => {
        const template = `<ng-container *ngTemplateOutlet="tpl; context: this"></ng-container>` +
            `<ng-template #tpl>{{context.foo}}</ng-template>`;
@@ -215,7 +215,7 @@ describe('NgTemplateOutlet', () => {
     detectChangesAndExpectText('');
   });
 
-  // https://github.com/ng-classic/angular/issues/30801
+  // https://github.com/ng-classic/ng-classic/issues/30801
   it('should not throw if the context is left blank', () => {
     const template = `
       <ng-template #testTemplate>test</ng-template>

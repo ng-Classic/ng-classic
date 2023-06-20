@@ -120,8 +120,8 @@ For information about localizing the Angular Classicdocumentation in a new langu
 
 [AngularMain]: https://angular-classic.com "Angular"
 
-[GithubAngularAngularBlobMainContributingMd]: https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md "Contributing to Angular Classic| ng-classic/angular Classic| GitHub"
-[GithubAngularAngularBlobMainContributingMdSigningTheCla]: https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md#-signing-the-cla "Signing the CLA - Contributing to Angular Classic| ng-classic/angular Classic| GitHub"
+[GithubAngularAngularBlobMainContributingMd]: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md "Contributing to Angular Classic| ng-classic/ng-classic Classic| GitHub"
+[GithubAngularAngularBlobMainContributingMdSigningTheCla]: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#-signing-the-cla "Signing the CLA - Contributing to Angular Classic| ng-classic/ng-classic Classic| GitHub"
 
 [GithubMain]: https://github.com "GitHub"
 

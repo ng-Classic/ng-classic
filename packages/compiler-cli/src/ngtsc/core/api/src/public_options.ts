@@ -125,7 +125,7 @@ export interface StrictTemplateOptions {
    * "strictInputTypes" is set. Note that if `strictInputTypes` is not set, or set to `false`, this
    * flag has no effect.
    *
-   * Tracking issue for enabling this by default: https://github.com/ng-classic/angular/issues/38400
+   * Tracking issue for enabling this by default: https://github.com/ng-classic/ng-classic/issues/38400
    */
   strictInputAccessModifiers?: boolean;
 

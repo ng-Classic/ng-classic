@@ -1,6 +1,6 @@
 # NgAddLocalize
 
-This project was generated with [Angular ClassicCLI](https://github.com/ng-classic/angular-cli) version 13.0.0-next.7.
+This project was generated with [Angular ClassicCLI](https://github.com/ng-classic/ng-classic-cli) version 13.0.0-next.7.
 
 ## Development server
 

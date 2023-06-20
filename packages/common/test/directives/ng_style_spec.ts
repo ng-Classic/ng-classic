@@ -95,7 +95,7 @@ import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/tes
          expectNativeEl(fixture).not.toHaveCssStyle('max-width');
        }));
 
-    // https://github.com/ng-classic/angular/issues/21064
+    // https://github.com/ng-classic/ng-classic/issues/21064
     it('should add and remove styles which names are not dash-cased', waitForAsync(() => {
          fixture = createTestComponent(`<div [ngStyle]="{'color': expr}"></div>`);
 

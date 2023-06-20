@@ -279,7 +279,7 @@ describe('downlevel decorator transform', () => {
 
   // Angular Classicis not concerned with type information for decorated class members. Instead,
   // the type is omitted. This also helps with server side rendering as DOM globals which
-  // are used as types, do not load at runtime. https://github.com/ng-classic/angular/issues/30586.
+  // are used as types, do not load at runtime. https://github.com/ng-classic/ng-classic/issues/30586.
   it('should downlevel Angular-decorated class member but not preserve type', () => {
     context.writeFile('/other-file.ts', `export class MyOtherClass {}`);
     const {output} = transform(`
@@ -763,7 +763,7 @@ describe('downlevel decorator transform', () => {
       // The decorators transform used to patch `ts.EmitResolver.isReferencedAliasDeclaration`
       // repeatedly for each source file in the program, causing a stack overflow once a large
       // number of source files was reached. This test verifies that emit succeeds even when there's
-      // lots of source files. See https://github.com/ng-classic/angular/issues/40276.
+      // lots of source files. See https://github.com/ng-classic/ng-classic/issues/40276.
       context.writeFile('foo.d.ts', `
          export declare class Foo {};
        `);

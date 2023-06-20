@@ -519,7 +519,7 @@ describe('view insertion', () => {
   });
 
   describe('non-regression', () => {
-    // https://github.com/ng-classic/angular/issues/31971
+    // https://github.com/ng-classic/ng-classic/issues/31971
     it('should insert component views into ViewContainerRef injected by querying <ng-container>',
        () => {
          @Component({selector: 'dynamic-cmpt', template: 'dynamic'})
@@ -556,7 +556,7 @@ describe('view insertion', () => {
          expect(fixture.nativeElement.textContent).toBe('start|dynamic|end|click');
        });
 
-    // https://github.com/ng-classic/angular/issues/33679
+    // https://github.com/ng-classic/ng-classic/issues/33679
     it('should insert embedded views into ViewContainerRef injected by querying <ng-container>',
        () => {
          @Component({

@@ -53,7 +53,7 @@ To restore the old behavior import from the `dist` directory instead like so:
 import 'zone.js/dist/zone';
 ```
 
-For details, please refer the [changelog](./CHANGELOG.md) and the [PR](https://github.com/ng-classic/angular/pull/36540).
+For details, please refer the [changelog](./CHANGELOG.md) and the [PR](https://github.com/ng-classic/ng-classic/pull/36540).
 
 ## What's a Zone?
 

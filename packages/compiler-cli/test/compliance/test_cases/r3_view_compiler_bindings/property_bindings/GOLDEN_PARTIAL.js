@@ -220,7 +220,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
             type: Pipe,
             args: [{ name: 'async' }]
         }] });
-// https://github.com/ng-classic/angular/issues/37194
+// https://github.com/ng-classic/ng-classic/issues/37194
 // Verifies that temporary expressions used for expressions with potential side-effects in
 // the LHS of a safe navigation access are emitted within the binding expression itself, to
 // ensure that these temporaries are evaluated during the evaluation of the binding. This

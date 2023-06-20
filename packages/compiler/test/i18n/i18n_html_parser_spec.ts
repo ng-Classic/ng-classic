@@ -13,7 +13,7 @@ import {ParseTreeResult} from '@angular-classic/compiler/src/ml_parser/parser';
 
 {
   describe('I18N html parser', () => {
-    // https://github.com/ng-classic/angular/issues/14322
+    // https://github.com/ng-classic/ng-classic/issues/14322
     it('should parse the translations only once', () => {
       const transBundle = new TranslationBundle({}, null, () => 'id');
       spyOn(TranslationBundle, 'load').and.returnValue(transBundle);

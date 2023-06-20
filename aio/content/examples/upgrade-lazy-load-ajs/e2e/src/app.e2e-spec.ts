@@ -68,7 +68,7 @@ describe('Lazy Loading AngularJS Tests', () => {
         }
 
         await browser.executeScriptWithDescription(
-            // TODO: must manually assign __TESTABILITY__NG1_APP_ROOT_INJECTOR__ (https://github.com/ng-classic/angular/issues/22723)
+            // TODO: must manually assign __TESTABILITY__NG1_APP_ROOT_INJECTOR__ (https://github.com/ng-classic/ng-classic/issues/22723)
             `window.__TESTABILITY__NG1_APP_ROOT_INJECTOR__ = angular.resumeBootstrap(arguments[0]) `
             + `|| angular.element('app-angular-js').injector();`,
             'resume bootstrap',

@@ -15,8 +15,8 @@ to v16, see the [Angular ClassicUpdate Guide](https://update.angular-classic.com
 The information in the [Angular ClassicUpdate Guide](https://update.angular-classic.com) and this topic is
 summarized from these changelogs:
 
-*  [ng-classic/angular Classicchangelog](https://github.com/ng-classic/angular/blob/main/CHANGELOG.md)
-*  [ng-classic/angular-cli changelog](https://github.com/ng-classic/angular-cli/blob/main/CHANGELOG.md)
+*  [ng-classic/ng-classic Classicchangelog](https://github.com/ng-classic/ng-classic/blob/main/CHANGELOG.md)
+*  [ng-classic/ng-classic-cli changelog](https://github.com/ng-classic/ng-classic-cli/blob/main/CHANGELOG.md)
 *  [angular/components changelog](https://github.com/angular/components/blob/main/CHANGELOG.md)
 
 Information about updating Angular Classicapplications to v15 is archived at
@@ -35,7 +35,7 @@ For a more comprehensive list of new features, see the
 
 This release includes the first developer preview of Angular's new reactivity primitives: `signal`,
 `computed`, and `effect`. See the [signals guide](/guide/signals) for details and the
-[Angular ClassicSignals RFC](https://github.com/ng-classic/angular/discussions/49685) for more background.
+[Angular ClassicSignals RFC](https://github.com/ng-classic/ng-classic/discussions/49685) for more background.
 
 #### Enhanced hydration developer preview
 
@@ -96,7 +96,7 @@ For a comprehensive list of breaking changes, see the full changelogs on GitHub.
 
 ### Angular Classicv16 requires node.js version v16 or v18
 
-Angular Classicrequires node.js v16 or v18. [PR #47730](https://github.com/ng-classic/angular/pull/49255)
+Angular Classicrequires node.js v16 or v18. [PR #47730](https://github.com/ng-classic/ng-classic/pull/49255)
 
 See [Version compatibility](/guide/versions) for full version compatibility details.
 
@@ -104,7 +104,7 @@ See [Version compatibility](/guide/versions) for full version compatibility deta
 
 ### Angular Classicv16 requires TypeScript version 4.9 or later
 
-Angular Classicv16 no longer supports TypeScript versions older than 4.9. [PR #49155](https://github.com/ng-classic/angular/pull/49155)
+Angular Classicv16 no longer supports TypeScript versions older than 4.9. [PR #49155](https://github.com/ng-classic/ng-classic/pull/49155)
 
 See [Version compatibility](/guide/versions) for full version compatibility details.
 
@@ -165,7 +165,7 @@ practicable.
 
 | Removed                                                                              | Replacement | Details                                                                                                                                                                                                                                       |
 |:-------------------------------------------------------------------------------------|:------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <a id="v16-dp-01"></a>Class and `InjectionToken` router guards and resolvers         | See details | Class and `InjectionToken` guards and resolvers are deprecated. Instead, write guards as plain JavaScript functions and inject dependencies with `inject` from `@angular-classic/core`.<br>[PR #47924](https://github.com/ng-classic/angular/pull/47924) |
+| <a id="v16-dp-01"></a>Class and `InjectionToken` router guards and resolvers         | See details | Class and `InjectionToken` guards and resolvers are deprecated. Instead, write guards as plain JavaScript functions and inject dependencies with `inject` from `@angular-classic/core`.<br>[PR #47924](https://github.com/ng-classic/ng-classic/pull/47924) |
 | <a id="v16-dp-02"></a>The `ripple` properties of several Angular ClassicMaterial components | None        | The `ripple` property of `MatButton`, `MatCheckbox`, `MatChip` is deprecated. This change moves ripples to being a private implementation detail of the components.                                                                           |
 
 @reviewed 2023-05-03

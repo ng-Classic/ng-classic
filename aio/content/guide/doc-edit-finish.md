@@ -6,26 +6,26 @@ This topic describes how to keep your workspace tidy after your pull request is 
 
 ## Review the commit log of the upstream repo
 
-This procedure confirms that your commit is now in the `main` branch of the `ng-classic/angular` repo.
+This procedure confirms that your commit is now in the `main` branch of the `ng-classic/ng-classic` repo.
 
 #### To review the commit log on <code>github.com</code> for your commit
 
-In a web browser, open [`https://github.com/ng-classic/angular/commits/main`](https://github.com/ng-classic/angular/commits/main).
+In a web browser, open [`https://github.com/ng-classic/ng-classic/commits/main`](https://github.com/ng-classic/ng-classic/commits/main).
 
 1.  Review the commit list.
     1.  Find the entry with your GitHub username, commit message, and pull request number of your commit.
         The commit number might not match the commit from your working branch because of how commits are merged.
 
-    1.  If you see your commit listed, your commit has been merged into `ng-classic/angular` and you can continue cleaning up your workspace.
+    1.  If you see your commit listed, your commit has been merged into `ng-classic/ng-classic` and you can continue cleaning up your workspace.
 
     1.  If you don't see your commit in the list, you might need to wait before you retry this step.
         Do not continue cleaning your workspace until you see your commit listed in or after the log entry that contains `origin/main`.
 
-    1.  If you see your commit listed above the log entry that contains `origin/main`, then you might need to update your clone of the `ng-classic/angular` repo again.
+    1.  If you see your commit listed above the log entry that contains `origin/main`, then you might need to update your clone of the `ng-classic/ng-classic` repo again.
 
 ## Update your fork from the upstream repo
 
-After you see that the commit from your pull request has been merged into the upstream `ng-classic/angular` repo, update your fork.
+After you see that the commit from your pull request has been merged into the upstream `ng-classic/ng-classic` repo, update your fork.
 
 This procedure updates your clone of `personal/angular` on your local computer and then, the repo in the cloud.
 
@@ -50,7 +50,7 @@ Perform these steps from a command-line tool on your local computer.
 
     </code-example>
 
-1. Run this command to update the `main` branch in the `working` directory on your local computer from the upstream `ng-classic/angular` repo.
+1. Run this command to update the `main` branch in the `working` directory on your local computer from the upstream `ng-classic/ng-classic` repo.
 
     <code-example format="shell" language="shell">
 
@@ -59,7 +59,7 @@ Perform these steps from a command-line tool on your local computer.
 
     </code-example>
 
-1.  Run this command to update your `personal/angular` repo on `github.com` with the latest from the upstream `ng-classic/angular` repo.
+1.  Run this command to update your `personal/angular` repo on `github.com` with the latest from the upstream `ng-classic/ng-classic` repo.
 
     <code-example format="shell" language="shell">
 
@@ -69,7 +69,7 @@ Perform these steps from a command-line tool on your local computer.
 
 1. Run this command to review the commit log of your fork.
 
-    The `main` branch on your local computer and your origin repo on `github.com` are now in sync with the upstream `ng-classic/angular` repo.
+    The `main` branch on your local computer and your origin repo on `github.com` are now in sync with the upstream `ng-classic/ng-classic` repo.
     Run this command to list the recent commits.
 
     <code-example format="shell" language="shell">
@@ -87,7 +87,7 @@ If you find the commit from your pull request in the correct place, you can cont
 
 ## Delete the working branch
 
-After you confirm that your pull request is merged into `ng-classic/angular` and appears in the `main` branch of your fork, you can delete the `working` branch.
+After you confirm that your pull request is merged into `ng-classic/ng-classic` and appears in the `main` branch of your fork, you can delete the `working` branch.
 
 Because your working branch was merged into the `main` branch of your fork, and the pull request has been closed, you no longer need the `working` branch.
 It might be tempting to keep it around, just in case, but it is probably not necessary.
