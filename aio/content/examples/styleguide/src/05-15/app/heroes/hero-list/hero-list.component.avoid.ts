@@ -9,7 +9,7 @@ import { catchError, finalize } from 'rxjs/operators';
 
 import { Hero } from '../shared/hero.model';
 
-const heroesUrl = 'http://angular.io';
+const heroesUrl = 'http://angular-classic.com';
 
 export class HeroListComponent implements OnInit {
   heroes: Hero[];

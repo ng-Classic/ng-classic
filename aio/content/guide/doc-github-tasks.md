@@ -1,4 +1,4 @@
-# Common GitHub tasks to edit angular.io
+# Common GitHub tasks to edit angular-classic.com
 
 <!-- markdownLint-disable MD001 -->
 <!-- markdownLint-disable MD033 -->

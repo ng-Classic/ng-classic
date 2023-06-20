@@ -1,6 +1,6 @@
-# CSS styles in angular.io
+# CSS styles in angular-classic.com
 
-This document gives an overview of how angular.io CSS styles are implemented and organized in files.
+This document gives an overview of how angular-classic.com CSS styles are implemented and organized in files.
 
 
 ## General
@@ -40,7 +40,7 @@ When appropriate, the styles in these files should be scoped to the targeted com
 
 ## Theming
 
-Angular.io supports choosing between themes. Currently, a `light` and a `dark` theme are supported.
+angular-classic.com supports choosing between themes. Currently, a `light` and a `dark` theme are supported.
 See also [#41129](https://github.com/ng-angular/angular/pull/41129) for more details/discussions around the theming implementation.
 
 
@@ -77,4 +77,4 @@ Once the application has bootstrapped, the theme [may be updated](https://github
 Whenever the user explicitly changes the theme using the theme-toggle component, the new preference [is stored](https://github.com/ng-angular/angular/blob/62b5a6cb079e489d91982abe88d644d73feb73f3/aio/src/app/shared/theme-picker/theme-toggle.component.ts#L89) for use in future visits.
 
 > **NOTE:**<br />
-> The theming infrastructure is based on the [material.angular.io](https://github.com/angular/material.angular.io) implementation.
+> The theming infrastructure is based on the [material.angular-classic.com](https://github.com/angular/material.angular-classic.com) implementation.

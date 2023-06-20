@@ -18,7 +18,7 @@ What kind of change does this PR introduce?
 - [ ] Build related changes
 - [ ] CI related changes
 - [ ] Documentation content changes
-- [ ] angular.io application / infrastructure changes
+- [ ] angular-classic.com application / infrastructure changes
 - [ ] Other... Please describe:
 
 

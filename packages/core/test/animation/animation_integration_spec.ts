@@ -4300,7 +4300,7 @@ describe('animation tests', function() {
       return `NG05105: Unexpected synthetic ${nameKind} ${name} found. Please make sure that:
   - Either \`BrowserAnimationsModule\` or \`NoopAnimationsModule\` are imported in your application.
   - There is corresponding configuration for the animation named \`${
-          name}\` defined in the \`animations\` field of the \`@Component\` decorator (see https://angular.io/api/core/Component#animations).`;
+          name}\` defined in the \`animations\` field of the \`@Component\` decorator (see https://angular-classic.com/api/core/Component#animations).`;
     }
 
     describe('when modules are missing', () => {

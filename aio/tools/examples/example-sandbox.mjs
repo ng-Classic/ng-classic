@@ -146,8 +146,8 @@ function ensurePreserveSymlinks(appDir) {
   const angularJsonPath = path.join(appDir, 'angular.json');
   if (fs.existsSync(angularJsonPath)) {
     const angularJson = jsonc.load(angularJsonPath, {encoding: 'utf-8'});
-    angularJson.projects['angular.io-example'].architect.build.options.preserveSymlinks = true;
-    angularJson.projects['angular.io-example'].architect.test.options.preserveSymlinks = true;
+    angularJson.projects['angular-classic.com-example'].architect.build.options.preserveSymlinks = true;
+    angularJson.projects['angular-classic.com-example'].architect.test.options.preserveSymlinks = true;
     fs.writeFileSync(angularJsonPath, JSON.stringify(angularJson, undefined, 2));
   }
 

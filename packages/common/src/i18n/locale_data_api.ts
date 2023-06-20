@@ -511,7 +511,7 @@ function checkFullData(data: any) {
   if (!data[ɵLocaleDataIndex.ExtraData]) {
     throw new Error(`Missing extra locale data for the locale "${
         data[ɵLocaleDataIndex
-                 .LocaleId]}". Use "registerLocaleData" to load new data. See the "I18n guide" on angular.io to know more.`);
+                 .LocaleId]}". Use "registerLocaleData" to load new data. See the "I18n guide" on angular-classic.com to know more.`);
   }
 }
 

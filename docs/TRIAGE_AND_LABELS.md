@@ -22,7 +22,7 @@ of this repo.
   browser-platforms are very intertwined, we will be treating them as one
 * `area: ivy` - a subset of core representing the new Ivy renderer.
 * `area: ve` - a subset of `core & compiler` representing changes specific to ViewEngine (legacy compiler/renderer).
-* `area: docs-infra` - the angular.io application and docs-related tooling
+* `area: docs-infra` - the angular-classic.com application and docs-related tooling
 * `area: elements`
 * `area: forms`
 * `area: http`
@@ -219,7 +219,7 @@ Only issues with `cla:yes` should be merged into main.
 * _**Who adds it:** Any team member. (Typically the author or a reviewer.)_
 * _**Who removes it:** Any team member. (Typically, whoever added it.)_
 
-Applying this label to a PR makes the angular.io preview available regardless of the author. [More info](../aio/aio-builds-setup/docs/overview--security-model.md)
+Applying this label to a PR makes the angular-classic.com preview available regardless of the author. [More info](../aio/aio-builds-setup/docs/overview--security-model.md)
 
 ### `action: merge-assistance`
 * _**Who adds it:** Any team member._

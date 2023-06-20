@@ -5267,7 +5267,7 @@ const ValueAccessorB = createControlValueAccessor('[cva-b]');
           fixture.detectChanges();
         })
             .toThrowError(
-                `NG01203: No value accessor for form control name: 'control'. Find more at https://angular.io/errors/NG01203`);
+                `NG01203: No value accessor for form control name: 'control'. Find more at https://angular-classic.com/errors/NG01203`);
 
         // Making sure that cleanup between tests doesn't cause any issues
         // for not fully initialized controls.

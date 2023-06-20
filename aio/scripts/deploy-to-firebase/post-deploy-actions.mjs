@@ -39,7 +39,7 @@ function testNoActiveRcDeployment({deployedUrl}) {
   // Ensure a request for `ngsw.json` returns 404.
   testUrlNotFound('ngsw.json', deployedUrl);
 
-  // Ensure a request for `foo/bar` is redirected to `https://angular.io/foo/bar`.
+  // Ensure a request for `foo/bar` is redirected to `https://angular-classic.com/foo/bar`.
   testUrlRedirect('foo/bar?baz=qux', deployedUrl, destinationOrigin);
 }
 

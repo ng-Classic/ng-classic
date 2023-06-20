@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular.io-example": {
+    "angular-classic.com-example": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -57,10 +57,10 @@
           "builder": "@angular-classic-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular.io-example:build:production"
+              "browserTarget": "angular-classic.com-example:build:production"
             },
             "development": {
-              "browserTarget": "angular.io-example:build:development"
+              "browserTarget": "angular-classic.com-example:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-classic-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular.io-example:build"
+            "browserTarget": "angular-classic.com-example:build"
           }
         },
         "test": {
@@ -90,11 +90,11 @@
           "builder": "@angular-classic-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular.io-example:serve"
+            "devServerTarget": "angular-classic.com-example:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular.io-example:serve:production"
+              "devServerTarget": "angular-classic.com-example:serve:production"
             }
           }
         },
@@ -121,12 +121,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "angular.io-example:build:development",
-              "serverTarget": "angular.io-example:server:development"
+              "browserTarget": "angular-classic.com-example:build:development",
+              "serverTarget": "angular-classic.com-example:server:development"
             },
             "production": {
-              "browserTarget": "angular.io-example:build:production",
-              "serverTarget": "angular.io-example:server:production"
+              "browserTarget": "angular-classic.com-example:build:production",
+              "serverTarget": "angular-classic.com-example:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -140,12 +140,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular.io-example:build:production",
-              "serverTarget": "angular.io-example:server:production"
+              "browserTarget": "angular-classic.com-example:build:production",
+              "serverTarget": "angular-classic.com-example:server:production"
             },
             "development": {
-              "browserTarget": "angular.io-example:build:development",
-              "serverTarget": "angular.io-example:server:development"
+              "browserTarget": "angular-classic.com-example:build:development",
+              "serverTarget": "angular-classic.com-example:server:development"
             }
           },
           "defaultConfiguration": "production"

@@ -1,6 +1,6 @@
-# Generating data for `angular.io/events`
+# Generating data for `angular-classic.com/events`
 
-This document and the contents of this directory contain information and source code related to generating data for the [angular.io Events page](https://angular.io/events).
+This document and the contents of this directory contain information and source code related to generating data for the [angular-classic.com Events page](https://angular-classic.com/events).
 
 
 ## Directory contents
@@ -11,30 +11,30 @@ For more details see the following sections.
 - `apps-script-extension/`:
   The source code for the Apps Script extension that needs to be added to the Google Sheet spreadsheet.
 - `index.mjs`:
-  The script for retrieving the data from the Firebase database and generating the `events.json` file for angular.io.
+  The script for retrieving the data from the Firebase database and generating the `events.json` file for angular-classic.com.
 
 
 ## Background
 
-The "Events" page on angular.io has two sections: One for upcoming events and one for past events.
+The "Events" page on angular-classic.com has two sections: One for upcoming events and one for past events.
 
 Originally, the events were hard-coded into the page's HTML, which meant that the page had to be updated twice for each event (once to add it to the list of upcoming events and once more to move it to the list of past events).
 
 Later, the setup was changed so that the events were loaded as JSON and passed to an [EventsComponent](../../src/app/custom-elements/events/), which was able to categorize them as "upcoming" or "past" based on the date.
-This reduced the maintenance overhead by only requiring one update per event (just to add it to the `events.json` file that was part of the angular.io source code).
+This reduced the maintenance overhead by only requiring one update per event (just to add it to the `events.json` file that was part of the angular-classic.com source code).
 
-However, since the DevRel team had to maintain a separate list of events outside angular.io (in a more suitable format for their needs), that setup still required unnecessary work and resulted in having to manually duplicate the data in two places. Additionally, due to the extra overhead of updating the events list on angular.io (creating a pull request, getting it approved, merged and finally deployed), the events page was often out of date.
+However, since the DevRel team had to maintain a separate list of events outside angular-classic.com (in a more suitable format for their needs), that setup still required unnecessary work and resulted in having to manually duplicate the data in two places. Additionally, due to the extra overhead of updating the events list on angular-classic.com (creating a pull request, getting it approved, merged and finally deployed), the events page was often out of date.
 
 This document describes the latest, revised process for generating the events data with the aim of:
 - Minimizing the manual overhead.
 - Avoiding data duplication.
-- Ensuring the freshness of the data on angular.io.
+- Ensuring the freshness of the data on angular-classic.com.
 - Minimizing changes to the current DevRel team workflow.
 
 
 ## The current process
 
-This section describes the current setup and process for generating events data for angular.io.
+This section describes the current setup and process for generating events data for angular-classic.com.
 
 
 ### Overview

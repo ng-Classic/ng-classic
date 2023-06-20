@@ -7608,7 +7608,7 @@ function allTests(os: string) {
 
                 @Component({
                   template: \`
-                    <iframe src="http://angular.io"
+                    <iframe src="http://angular-classic.com"
                       [sandbox]="''" [attr.allow]="''"
                       [title]="'Hi!'"
                     ></iframe>
@@ -7639,7 +7639,7 @@ function allTests(os: string) {
               @Component({
                 template: \`
                   <IFRAME
-                    src="http://angular.io"
+                    src="http://angular-classic.com"
                     [attr.SANDBOX]="''"
                   ></IFRAME>
                 \`
@@ -7695,7 +7695,7 @@ function allTests(os: string) {
                 host: {
                   '[sandbox]': "''",
                   '[attr.allow]': "''",
-                  'src': 'http://angular.io'
+                  'src': 'http://angular-classic.com'
                 }
               })
               export class SomeDir {}

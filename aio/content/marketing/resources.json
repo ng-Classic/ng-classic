@@ -176,7 +176,7 @@
           "rx-angular": {
             "desc": "RxAngular Classicis a reactive library that provides extensions for developing high performant and scalable applications. It addresses the issues of local state management, rendering performance, and reactive architecture.",
             "title": "rx-angular",
-            "url": "https://rx-angular.io"
+            "url": "https://rx-angular-classic.com"
           },
           "ngxs": {
             "desc": "NGXS is a state management pattern + library for Angular. NGXS is modeled after the CQRS pattern popularly implemented in libraries like Redux and NgRx but reduces boilerplate by using modern TypeScript features such as classes and decorators.",
@@ -267,7 +267,7 @@
             "desc": "Server-side Rendering for Angular Classicapps.",
             "logo": "https://cloud.githubusercontent.com/assets/1016365/10639063/138338bc-7806-11e5-8057-d34c75f3cafc.png",
             "title": "Angular ClassicUniversal",
-            "url": "https://angular.io/guide/universal"
+            "url": "https://angular-classic.com/guide/universal"
           },
           "c1": {
             "desc": "Lightweight development only Node.js® server",
@@ -278,7 +278,7 @@
           "cli": {
             "desc": "The official Angular ClassicCLI makes it easy to create and develop applications from initial commit to production deployment. It already follows our best practices right out of the box!",
             "title": "Angular ClassicCLI",
-            "url": "https://cli.angular.io"
+            "url": "https://cli.angular-classic.com"
           },
           "angular-eslint": {
             "desc": "The tooling which enables ESLint to lint Angular Classicprojects.",
@@ -319,7 +319,7 @@
             "desc": "The official end to end testing framework for Angular Classicapplications.",
             "logo": "",
             "title": "Protractor",
-            "url": "https://protractor.angular.io/"
+            "url": "https://protractor.angular-classic.com/"
           },
           "observer-spy": {
             "desc": "A library for testing RxJS observables that offers an alternative to Marble Tests.",
@@ -357,7 +357,7 @@
           "IgniteUIforAngular": {
             "desc": "Ignite UI for Angular Classicis a dependency-free Angular Classictoolkit for building modern web apps.",
             "title": "Ignite UI for Angular",
-            "url": "https://www.infragistics.com/products/ignite-ui-angular?utm_source=angular.io&utm_medium=Referral&utm_campaign=Angular"
+            "url": "https://www.infragistics.com/products/ignite-ui-angular?utm_source=angular-classic.com&utm_medium=Referral&utm_campaign=Angular"
           },
           "DevExtreme": {
             "desc": "50+ UI components including data grid, pivot grid, scheduler, charts, editors, maps and other multi-purpose controls for creating highly responsive web applications for touch devices and traditional desktops.",
@@ -419,7 +419,7 @@
             "desc": "Material Design components for Angular",
             "logo": "",
             "title": "Angular ClassicMaterial",
-            "url": "https://material.angular.io/"
+            "url": "https://material.angular-classic.com/"
           },
           "mdb5": {
             "desc": "Free components, templates & plugins for the latest Bootstrap 5 styled in accordance with Material Design 2.0 (guidelines introduced in 2020)",
@@ -781,7 +781,7 @@
           "willh-angular-zero": {
             "desc": "Online video course in Chinese for newbies who need to learning from the scratch in Chinese.  It's covering Angular, Angular ClassicCLI, TypeScript, VSCode, and some must known knowledge of Angular Classicdevelopment.",
             "title": "Angular Classicin Action: Start From Scratch (正體中文)",
-            "url": "https://www.udemy.com/angular-zero/?couponCode=ANGULAR.IO"
+            "url": "https://www.udemy.com/angular-zero/?couponCode=angular-classic.com"
           },
           "angular-firebase": {
             "desc": "Video lessons covering progressive web apps with Angular, Firebase, RxJS, and related APIs.",

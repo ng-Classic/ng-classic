@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular.io-example": {
+    "angular-classic.com-example": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -69,13 +69,13 @@
           "builder": "@angular-classic-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular.io-example:build:production"
+              "browserTarget": "angular-classic.com-example:build:production"
             },
             "development": {
-              "browserTarget": "angular.io-example:build:development"
+              "browserTarget": "angular-classic.com-example:build:development"
             },
             "fr": {
-              "browserTarget": "angular.io-example:build:fr"
+              "browserTarget": "angular-classic.com-example:build:fr"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-classic-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular.io-example:build"
+            "browserTarget": "angular-classic.com-example:build"
           }
         },
         "test": {
@@ -105,11 +105,11 @@
           "builder": "@angular-classic-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular.io-example:serve:fr"
+            "devServerTarget": "angular-classic.com-example:serve:fr"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular.io-example:serve:production"
+              "devServerTarget": "angular-classic.com-example:serve:production"
             }
           }
         }

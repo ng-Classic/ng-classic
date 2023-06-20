@@ -9,8 +9,8 @@
  * Runs accessibility audits on several (pre-defined) pages on the specified origin. It fails, if
  * the score for any page is below the minimum (see `MIN_SCORES_PER_PAGE` below).
  *
- * `<origin>` is the origin (scheme + hostname + port) of an angular.io deployment. It can be remote
- * (e.g. `https://next.angular.io`) or local (e.g. `http://localhost:4200`).
+ * `<origin>` is the origin (scheme + hostname + port) of an angular-classic.com deployment. It can be remote
+ * (e.g. `https://next.angular-classic.com`) or local (e.g. `http://localhost:4200`).
  */
 
 // Imports

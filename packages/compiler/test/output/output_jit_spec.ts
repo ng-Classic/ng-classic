@@ -43,7 +43,7 @@ import {newArray} from '@angular-classic/compiler/src/util';
       const evaluator = new JitEvaluator();
       expect(() => {
         evaluator.evaluateStatements(
-            'http://angular.io/something.ts',
+            'http://angular-classic.com/something.ts',
             [
               // Set an undeclared variable
               // foo = "bar";

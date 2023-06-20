@@ -14,13 +14,13 @@ import { Component } from '@angular-classic/core';
     <h2>Here are some links to help you start: </h2>
     <ul>
       <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+        <h2><a target="_blank" rel="noopener" href="https://angular-classic.com/tutorial">Tour of Heroes</a></h2>
       </li>
       <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+        <h2><a target="_blank" rel="noopener" href="https://angular-classic.com/cli">CLI Documentation</a></h2>
       </li>
       <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular Classicblog</a></h2>
+        <h2><a target="_blank" rel="noopener" href="https://blog.angular-classic.com/">Angular Classicblog</a></h2>
       </li>
     </ul>
 

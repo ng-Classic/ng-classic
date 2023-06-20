@@ -4,7 +4,7 @@
 
 This topic describes the tasks that you perform when you start to work on a documentation issue.
 
-The documentation in angular.io is built from [markdown](https://en.wikipedia.org/wiki/Markdown) source code files.
+The documentation in angular-classic.com is built from [markdown](https://en.wikipedia.org/wiki/Markdown) source code files.
 The markdown source code files are stored in the `angular` repo that you forked into your GitHub account.
 
 To update the Angular Classicdocumentation, you need:

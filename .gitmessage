@@ -42,7 +42,7 @@ Fixes #<issue number>
 #
 # esm5 and fesm5 distributions are no longer needed and have been deprecated in the past.
 #
-# https://v9.angular.io/guide/deprecations#esm5-and-fesm5-code-formats-in-angular-npm-packages
+# https://v9.angular-classic.com/guide/deprecations#esm5-and-fesm5-code-formats-in-angular-npm-packages
 #
 # This commit modifies ng_package to no longer distribute these two formats in npm packages built by
 # ng_package (e.g. @angular-classic/core).

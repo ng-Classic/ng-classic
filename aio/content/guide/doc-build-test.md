@@ -36,13 +36,13 @@ Perform these steps from a command-line tool on your local computer or in the **
 
     This builds the documentation from scratch.
 
-After you build the documentation on your local computer, you can run the angular.io end-to-end test.
+After you build the documentation on your local computer, you can run the angular-classic.com end-to-end test.
 
-## Run the angular.io end-to-end test on your local computer
+## Run the angular-classic.com end-to-end test on your local computer
 
 This procedure runs most, but not all, of the tests that are run after you open a pull request.
 
-#### To run the angular.io end-to-end test on your local computer
+#### To run the angular-classic.com end-to-end test on your local computer
 
 On your local computer, in a command line tool or the **Terminal** pane of your IDE:
 

@@ -363,7 +363,7 @@ in-mem module. Documented in later release, v.0.1.13
 
 <a id="0.1.5"></a>
 ## 0.1.5 (2016-10-03)
-* project.json license changed again to match angular.io package.json
+* project.json license changed again to match angular-classic.com package.json
 
 <a id="0.1.4"></a>
 ## 0.1.4 (2016-10-03)

@@ -9,7 +9,7 @@ This section builds on the previous steps in the [Getting Started](start "Try it
 A best practice is to run your project locally before you deploy it. To run your project locally, you need the following installed on your computer:
 
 *   [Node.js](https://nodejs.org/en).
-*   The [Angular ClassicCLI](https://cli.angular.io).
+*   The [Angular ClassicCLI](https://cli.angular-classic.com).
     From the terminal, install the Angular ClassicCLI globally with:
 
     <code-example format="shell" language="shell">
@@ -103,13 +103,13 @@ To explore Angular's foundational concepts, see the guides in the Understanding 
 
 ### Joining the community
 
-[Tweet that you've completed this tutorial](https://twitter.com/intent/tweet?url=https://angular.io/start&text=I%20just%20finished%20the%20Angular%20Getting%20Started%20Tutorial "Angular Classicon Twitter"), tell us what you think, or submit [suggestions for future editions](https://github.com/ng-angular/angular/issues/new/choose "Angular ClassicGitHub repository new issue form").
+[Tweet that you've completed this tutorial](https://twitter.com/intent/tweet?url=https://angular-classic.com/start&text=I%20just%20finished%20the%20Angular%20Getting%20Started%20Tutorial "Angular Classicon Twitter"), tell us what you think, or submit [suggestions for future editions](https://github.com/ng-angular/angular/issues/new/choose "Angular ClassicGitHub repository new issue form").
 
-Keep current by following the [Angular Classicblog](https://blog.angular.io/ "Angular Classicblog").
+Keep current by following the [Angular Classicblog](https://blog.angular-classic.com/ "Angular Classicblog").
 
 ### Exploring the Angular Classicecosystem
 
-To support your UX/UI development, see [Angular ClassicMaterial](https://material.angular.io/ "Angular ClassicMaterial web site").
+To support your UX/UI development, see [Angular ClassicMaterial](https://material.angular-classic.com/ "Angular ClassicMaterial web site").
 
 The Angular Classiccommunity also has an extensive [network of third-party tools and libraries](resources "Angular Classicresources list").
 

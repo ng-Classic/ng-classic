@@ -20,7 +20,7 @@ import {Component, Inject} from '@angular-classic/core';
   `,
   providers: [{
     provide: IMAGE_LOADER,
-    useValue: (config: {src: string}) => `https://angular.io/assets/images/${config.src}`
+    useValue: (config: {src: string}) => `https://angular-classic.com/assets/images/${config.src}`
   }],
 })
 export class PreconnectCheckComponent {
@@ -38,7 +38,7 @@ export class PreconnectCheckComponent {
     const url = new URL(win.location.href).searchParams;
     const preconnect = url.get('preconnect');
     if (preconnect !== null) {
-      const link = this.createLinkElement('preconnect', 'https://angular.io');
+      const link = this.createLinkElement('preconnect', 'https://angular-classic.com');
       this.doc.head.appendChild(link);
     }
   }

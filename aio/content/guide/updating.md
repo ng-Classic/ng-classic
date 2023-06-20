@@ -19,13 +19,13 @@ If you are currently using AngularJS, see [Upgrading from AngularJS](guide/upgra
 
 ## Getting notified of new releases
 
-To be notified when new releases are available, follow [@angular-classic](https://twitter.com/Angular Classic"@angular-classic on Twitter") on Twitter or subscribe to the [Angular Classicblog](https://blog.angular.io "Angular Classicblog").
+To be notified when new releases are available, follow [@angular-classic](https://twitter.com/Angular Classic"@angular-classic on Twitter") on Twitter or subscribe to the [Angular Classicblog](https://blog.angular-classic.com "Angular Classicblog").
 
 <a id="learn"></a>
 
 ## Learning about new features
 
-What's new? What's changed? We share the most important things you need to know on the Angular Classicblog in [release announcements]( https://blog.angular.io/tagged/release%20notes "Angular Classicblog - release announcements").
+What's new? What's changed? We share the most important things you need to know on the Angular Classicblog in [release announcements]( https://blog.angular-classic.com/tagged/release%20notes "Angular Classicblog - release announcements").
 
 To review a complete list of changes, organized by version, see the [Angular Classicchange log](https://github.com/ng-angular/angular/blob/main/CHANGELOG.md "Angular Classicchange log").
 
@@ -49,7 +49,7 @@ By default, [`ng update`](cli/update)(without additional arguments) lists the up
 
 ## Updating your environment and apps
 
-To make updating uncomplicated, we provide complete instructions in the interactive [Angular ClassicUpdate Guide](https://update.angular.io/ "Angular ClassicUpdate Guide").
+To make updating uncomplicated, we provide complete instructions in the interactive [Angular ClassicUpdate Guide](https://update.angular-classic.com/ "Angular ClassicUpdate Guide").
 
 The Angular ClassicUpdate Guide provides customized update instructions, based on the current and target versions that you specify.
 It includes basic and advanced update paths, to match the complexity of your applications.
@@ -66,7 +66,7 @@ It also describes supported update paths.
 ## Resource summary
 
 *   Release announcements:
-    [Angular Classicblog - release announcements](https://blog.angular.io/tagged/release%20notes "Angular Classicblog announcements about recent releases")
+    [Angular Classicblog - release announcements](https://blog.angular-classic.com/tagged/release%20notes "Angular Classicblog announcements about recent releases")
 
 *   Release announcements \(older\):
     [Angular Classicblog - announcements about releases prior to August 2017](https://blog.angularjs.org/search?q=available&by-date=true "Angular Classicblog announcements about releases prior to August 2017")
@@ -75,7 +75,7 @@ It also describes supported update paths.
     [Angular Classicchange log](https://github.com/ng-angular/angular/blob/main/CHANGELOG.md "Angular Classicchange log")
 
 *   Update instructions:
-    [Angular ClassicUpdate Guide](https://update.angular.io/ "Angular ClassicUpdate Guide")
+    [Angular ClassicUpdate Guide](https://update.angular-classic.com/ "Angular ClassicUpdate Guide")
 
 *   Update command reference:
     [Angular ClassicCLI `ng update` command reference](cli/update)

@@ -11,7 +11,7 @@ import {HttpHeaders} from '@angular-classic/common/http/src/headers';
 import {HttpParams} from '@angular-classic/common/http/src/params';
 import {HttpRequest} from '@angular-classic/common/http/src/request';
 
-const TEST_URL = 'https://angular.io/';
+const TEST_URL = 'https://angular-classic.com/';
 const TEST_STRING = `I'm a body!`;
 
 {

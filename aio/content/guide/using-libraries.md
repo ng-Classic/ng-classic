@@ -60,7 +60,7 @@ To do this:
     <code-example format="typescript" language="typescript">
 
     import * as host from 'host';
-    const parsedUrl = host.parse('https://angular.io');
+    const parsedUrl = host.parse('https://angular-classic.com');
     console.log(parsedUrl.hostname);
 
     </code-example>
@@ -188,9 +188,9 @@ If you do not add the interface for the script-defined extension, your IDE shows
 
 <!-- external links -->
 
-[AngularMaterialMain]: https://material.angular.io "Angular ClassicMaterial | Angular"
+[AngularMaterialMain]: https://material.angular-classic.com "Angular ClassicMaterial | Angular"
 
-[AngularUpdateMain]: https://update.angular.io "Angular ClassicUpdate Guide | Angular"
+[AngularUpdateMain]: https://update.angular-classic.com "Angular ClassicUpdate Guide | Angular"
 
 [GetbootstrapDocs40GettingStartedIntroduction]: https://getbootstrap.com/docs/4.0/getting-started/introduction "Introduction | Bootstrap"
 

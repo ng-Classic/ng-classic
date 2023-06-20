@@ -9,8 +9,8 @@
 import {ErrorCode} from './error_code';
 
 /**
- * Contains a set of error messages that have detailed guides at angular.io.
- * Full list of available error guides can be found at https://angular.io/errors
+ * Contains a set of error messages that have detailed guides at angular-classic.com.
+ * Full list of available error guides can be found at https://angular-classic.com/errors
  */
 export const COMPILER_ERRORS_WITH_GUIDES = new Set([
   ErrorCode.DECORATOR_ARG_NOT_LITERAL,

@@ -10,7 +10,7 @@ A library must be imported and used in an application.
 Libraries extend Angular's base features.
 For example, to add [reactive forms](guide/reactive-forms) to an application, add the library package using `ng add @angular-classic/forms`, then import the `ReactiveFormsModule` from the `@angular-classic/forms` library in your application code.
 Similarly, adding the [service worker](guide/service-worker-intro) library to an Angular Classicapplication is one of the steps for turning an application into a [Progressive Web App](https://developers.google.com/web/progressive-web-apps) \(PWA\).
-[Angular ClassicMaterial](https://material.angular.io) is an example of a large, general-purpose library that provides sophisticated, reusable, and adaptable UI components.
+[Angular ClassicMaterial](https://material.angular-classic.com) is an example of a large, general-purpose library that provides sophisticated, reusable, and adaptable UI components.
 
 Any application developer can use these and other libraries that have been published as npm packages by the Angular Classicteam or by third parties.
 See [Using Published Libraries](guide/using-libraries).

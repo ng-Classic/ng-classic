@@ -15,7 +15,7 @@ For explanations on the individual techniques, visit the relevant NgModule pages
 Modules are a great way to organize an application and extend it with capabilities from external libraries.
 
 Angular Classiclibraries are NgModules, such as `FormsModule`, `HttpClientModule`, and `RouterModule`.
-Many third-party libraries are available as NgModules such as [Material Design](https://material.angular.io), [Ionic](https://ionicframework.com), and [AngularFire2](https://github.com/ng-angular/angularfire2).
+Many third-party libraries are available as NgModules such as [Material Design](https://material.angular-classic.com), [Ionic](https://ionicframework.com), and [AngularFire2](https://github.com/ng-angular/angularfire2).
 
 NgModules consolidate components, directives, and pipes into cohesive blocks of functionality, each focused on a feature area, application business domain, workflow, or common collection of utilities.
 

@@ -81,8 +81,8 @@ Perform these steps from a command-line tool on your local computer or in the **
 
     </code-example>
 
-    This serves your draft of the angular.io website locally at `http://localhost:4200` and watches for changes to documentation files.
-    Each time you save an update to a documentation file, the angular.io website at `http://localhost:4200` is updated.
+    This serves your draft of the angular-classic.com website locally at `http://localhost:4200` and watches for changes to documentation files.
+    Each time you save an update to a documentation file, the angular-classic.com website at `http://localhost:4200` is updated.
     You might need to refresh your browser to see the changes after you save them.
 
 ### Documentation linting
@@ -120,7 +120,7 @@ As you make changes to the documentation source files on your local computer, yo
 
 *  **Merged into Angular**
 
-    After your pull request is approved and merged, the changes you made are now part of the `ng-angular/angular` repo and appear in the [angular.io](https://angular.io) web site.
+    After your pull request is approved and merged, the changes you made are now part of the `ng-angular/angular` repo and appear in the [angular-classic.com](https://angular-classic.com) web site.
     Your documentation update is complete.
 
 This section describes how to save the changes you make to files in your working directory.

@@ -72,10 +72,10 @@ config_setting(
 # Run dgeni generation
 npm_package_bin(
     name = "dgeni",
-    # angular.io-package is a js_library target, which copies sources to $(BINDIR)
-    args = ["./$(BINDIR)/aio/tools/transforms/angular.io-package"],
+    # angular-classic.com-package is a js_library target, which copies sources to $(BINDIR)
+    args = ["./$(BINDIR)/aio/tools/transforms/angular-classic.com-package"],
     data = [
-        "//aio/tools/transforms/angular.io-package",
+        "//aio/tools/transforms/angular-classic.com-package",
         # Dgeni typescript package crawls type definitions for Angular Classicdependencies
         "@npm//rxjs",
         "@npm//@types/node",

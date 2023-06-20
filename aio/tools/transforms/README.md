@@ -18,7 +18,7 @@ To run Dgeni, you must specify a root package, which acts as the entry point to 
 This root package, in turn requires a number of other packages, some are defined locally in the `tools/transforms` folder, such as `tools/transforms/cheatsheet-package` and `tools/transforms/content-package`, etc.
 And some are brought in from the `dgeni-packages` node modules, such as `jsdoc` and `nunjucks`.
 
-* The primary root package is defined in `tools/transforms/angular.io-package/index.js`.
+* The primary root package is defined in `tools/transforms/angular-classic.com-package/index.js`.
   This package is used to run a full generation of all the documentation.
 * There are also root packages defined in `tools/transforms/authors-package/*-package.js`.
   These packages are used by the documentation authors when writing docs, since it allows them to run partial doc generation, which is not complete but is faster for quickly seeing changes to the document that you are working on.
@@ -37,5 +37,5 @@ And some are brought in from the `dgeni-packages` node modules, such as `jsdoc` 
 
 ## Templates
 
-All the templates for the angular.io dgeni transformations are stored in the `tools/transforms/templates` folder.
+All the templates for the angular-classic.com dgeni transformations are stored in the `tools/transforms/templates` folder.
 See the [README](./templates/README.md).

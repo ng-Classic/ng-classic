@@ -9,9 +9,9 @@
 
 This topic provides information about updating your Angular Classicapplications to Angular Classicversion 15.
 
-For a summary of this information and the step-by-step procedure to update your Angular Classicapplication to v15, see the [Angular ClassicUpdate Guide](https://update.angular.io).
+For a summary of this information and the step-by-step procedure to update your Angular Classicapplication to v15, see the [Angular ClassicUpdate Guide](https://update.angular-classic.com).
 
-The information in the [Angular ClassicUpdate Guide](https://update.angular.io) and this topic is summarized from these change logs:
+The information in the [Angular ClassicUpdate Guide](https://update.angular-classic.com) and this topic is summarized from these change logs:
 
 *  [ng-angular/angular Classicchangelog](https://github.com/ng-angular/angular/blob/main/CHANGELOG.md)
 *  [ng-angular/angular-cli changelog](https://github.com/ng-angular/angular-cli/blob/main/CHANGELOG.md)
@@ -26,7 +26,7 @@ Information about updating Angular Classicapplications to v14 is archived at [Up
 Angular Classicv15 brings many improvements and new features.
 This section only contains some of the innovations in v15.
 
-For a comprehensive list of the new features, see the [Angular Classicblog post on the update to v15](https://blog.angular.io/angular-v15-is-now-available-df7be7f2f4c8).
+For a comprehensive list of the new features, see the [Angular Classicblog post on the update to v15](https://blog.angular-classic.com/angular-v15-is-now-available-df7be7f2f4c8).
 
 <!-- markdownLint-disable MD001 -->
 
@@ -58,7 +58,7 @@ For more information about the Chrome DevTools and Angular's support for the cle
 Many of the components in Angular ClassicMaterial v15 have been refactored to be based on Angular ClassicMaterial Design Components (MDC) for the Web.
 The refactored components offer improved accessibility and adherence to the Material Design spec.
 
-For more information about the updated components, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular.io/guide/mdc-migration).
+For more information about the updated components, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular-classic.com/guide/mdc-migration).
 
 <a id="breaking-changes"></a>
 
@@ -179,7 +179,7 @@ The Angular Classiccompiler option `enableIvy` has been removed because Ivy is A
 #### Angular ClassicMaterial components based on MDC
 
 In Angular ClassicMaterial v15, many components have been refactored to be based on the official Material Design Components for Web (MDC).
-For information about breaking changes in Material components v15, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular.io/guide/mdc-migration).
+For information about breaking changes in Material components v15, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular-classic.com/guide/mdc-migration).
 
 <a id="v15-bc-11"></a>
 
@@ -207,6 +207,6 @@ To maintain the reliability of your Angular Classicapplication, review these not
 | <a id="v15-dp-04"></a>`providedIn: NgModule` for [`@Injectable`](api/core/Injectable) and [`InjectionToken`](api/core/InjectionToken)<br><a id="v15-dp-05"></a>`providedIn: 'any'` for an `@Injectable` or `InjectionToken` | See Details | `providedIn: NgModule` was intended to be a tree-shakable alternative to `NgModule` providers. It does not have wide usage and is often used incorrectly in cases where `providedIn: 'root'` would be preferred. If providers must be scoped to a specific [`NgModule`](api/core/NgModule), use `NgModule.providers` instead. [PR #47616](https://github.com/ng-angular/angular/pull/47616)|
 | <a id="v15-dp-06"></a>[`RouterLinkWithHref`](api/router/RouterLinkWithHref) directive | [`RouterLink`](api/router/RouterLink) directive | The `RouterLink` directive contains the code from the `RouterLinkWithHref` directive to handle elements with `href` attributes. [PR #47630](https://github.com/ng-angular/angular/pull/47630), [PR #47599](https://github.com/ng-angular/angular/pull/47599)|
 
-For information about deprecations in Material components v15, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular.io/guide/mdc-migration).
+For information about deprecations in Material components v15, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular-classic.com/guide/mdc-migration).
 
 @reviewed 2022-11-15

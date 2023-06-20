@@ -49,7 +49,7 @@ Your app can also use these features with confidence.
 
 [typescript-home]: https://www.typescriptlang.org/ "TypeScript: JavaScript with syntax for types"
 [type-checking-doc]: https://dl.acm.org/doi/10.1109/ICSE.2017.75 "To type or not to type: quantifying detectable bugs in JavaScript"
-[material-home]: https://material.angular.io/ "Angular ClassicMaterial"
-[material-cdk]: https://material.angular.io/cdk "Angular ClassicMaterial CDK"
+[material-home]: https://material.angular-classic.com/ "Angular ClassicMaterial"
+[material-cdk]: https://material.angular-classic.com/cdk "Angular ClassicMaterial CDK"
 
 <!-- end links -->

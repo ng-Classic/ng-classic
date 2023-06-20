@@ -64,7 +64,7 @@ describe('Built-in image directive loaders', () => {
 
     it('should throw if an absolute URL is provided as a loader input', () => {
       const path = 'https://somesite.imgix.net';
-      const src = 'https://angular.io/img.png';
+      const src = 'https://angular-classic.com/img.png';
       const loader = createImgixLoader(path);
       expect(() => loader({src})).toThrowError(absoluteUrlError(src, path));
     });
@@ -89,7 +89,7 @@ describe('Built-in image directive loaders', () => {
     describe('input validation', () => {
       it('should throw if an absolute URL is provided as a loader input', () => {
         const path = 'https://res.cloudinary.com/mysite';
-        const src = 'https://angular.io/img.png';
+        const src = 'https://angular-classic.com/img.png';
         const loader = createCloudinaryLoader(path);
         expect(() => loader({src})).toThrowError(absoluteUrlError(src, path));
       });
@@ -141,7 +141,7 @@ describe('Built-in image directive loaders', () => {
     describe('input validation', () => {
       it('should throw if an absolute URL is provided as a loader input', () => {
         const path = 'https://ik.imageengine.io/imagetest';
-        const src = 'https://angular.io/img.png';
+        const src = 'https://angular-classic.com/img.png';
         const loader = createImageKitLoader(path);
         expect(() => loader({src})).toThrowError(absoluteUrlError(src, path));
       });
@@ -186,7 +186,7 @@ describe('Built-in image directive loaders', () => {
 
     it('should throw if an absolute URL is provided as a loader input', () => {
       const path = 'https://mysite.com';
-      const src = 'https://angular.io/img.png';
+      const src = 'https://angular-classic.com/img.png';
       const loader = createCloudflareLoader(path);
       expect(() => loader({src})).toThrowError(absoluteUrlError(src, path));
     });

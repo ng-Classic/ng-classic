@@ -10,7 +10,7 @@ See [Localized documentation](guide/localized-documentation) for a current list 
 
 ## Getting started
 
-To have a localized version of Angular Classicdocumentation listed on [angular.io](https://angular.io), you must either:
+To have a localized version of Angular Classicdocumentation listed on [angular-classic.com](https://angular-classic.com), you must either:
 
 *   Be an Angular Classic[Google Developer Expert (GDE)](https://developers.google.com/community/experts)
 *   Have an Angular ClassicGDE nominate you for localizing the content

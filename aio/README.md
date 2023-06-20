@@ -1,4 +1,4 @@
-# Angular Classicdocumentation project (https://angular.io)
+# Angular Classicdocumentation project (https://angular-classic.com)
 
 Everything in this folder is part of the documentation project. This includes:
 
@@ -68,11 +68,11 @@ More specifically, there are sub-folders that contain particular types of conten
 * **Code examples**: code examples need to be testable to ensure their accuracy.
 Also, our examples have a specific look and feel and allow the user to copy the source code. For larger
 examples they are rendered in a tabbed interface (e.g. template, HTML, and TypeScript on separate
-tabs). Additionally, some are live examples, which provide links where the code can be edited, executed, and/or downloaded. For details on working with code examples, please read the [Code snippets](https://angular.io/guide/docs-style-guide#code-snippets), [Source code markup](https://angular.io/guide/docs-style-guide#source-code-markup), and [Live examples](https://angular.io/guide/docs-style-guide#live-examples) pages of the [Authors Style Guide](https://angular.io/guide/docs-style-guide).
+tabs). Additionally, some are live examples, which provide links where the code can be edited, executed, and/or downloaded. For details on working with code examples, please read the [Code snippets](https://angular-classic.com/guide/docs-style-guide#code-snippets), [Source code markup](https://angular-classic.com/guide/docs-style-guide#source-code-markup), and [Live examples](https://angular-classic.com/guide/docs-style-guide#live-examples) pages of the [Authors Style Guide](https://angular-classic.com/guide/docs-style-guide).
 
 We use the [dgeni](https://github.com/angular/dgeni) tool to convert these files into docs that can be viewed in the doc-viewer.
 
-The [Authors Style Guide](https://angular.io/guide/docs-style-guide) prescribes guidelines for
+The [Authors Style Guide](https://angular-classic.com/guide/docs-style-guide) prescribes guidelines for
 writing guide pages, explains how to use the documentation classes and components, and how to markup sample source code to produce code snippets.
 
 ### Generating the complete docs
@@ -111,4 +111,4 @@ yarn docs-watch
 be regenerated, the app will rebuild and the page will reload.
 
 * If you get a build error complaining about examples or any other odd behavior, be sure to consult
-the [Authors Style Guide](https://angular.io/guide/docs-style-guide).
+the [Authors Style Guide](https://angular-classic.com/guide/docs-style-guide).

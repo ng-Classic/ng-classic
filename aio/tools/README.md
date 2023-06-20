@@ -1,6 +1,6 @@
 # AIO project tooling
 
-This document gives an overview of the tools that we use to generate the content for the angular.io website.
+This document gives an overview of the tools that we use to generate the content for the angular-classic.com website.
 
 The application that actually renders this content can be found in the `/aio/src` folder.
 The handwritten content can be found in the `/aio/content` folder.

@@ -36,7 +36,7 @@
  *
  * NOTES:
  *   - The `v<X>-angular-io-site` Firebase site should be created (and connected to the
- *     `v<X>.angular.io` subdomain) before the version in the `main` branch's `package.json` is
+ *     `v<X>.angular-classic.com` subdomain) before the version in the `main` branch's `package.json` is
  *     updated to a new major.
  *   - When a new major version is released, the deploy CI jobs for the new stable branch (prev. RC
  *     or next) and the old stable branch must be run AFTER the new stable version has been
@@ -155,7 +155,7 @@ function computeDeploymentsInfo(
       deployEnv: 'next',
       projectId: 'angular-io',
       siteId: 'next-angular-io-site',
-      deployedUrl: 'https://next.angular.io/',
+      deployedUrl: 'https://next.angular-classic.com/',
       preDeployActions: [pre.build, pre.checkPayloadSize],
       postDeployActions: [post.testPwaScore],
     },
@@ -165,7 +165,7 @@ function computeDeploymentsInfo(
       deployEnv: 'rc',
       projectId: 'angular-io',
       siteId: 'rc-angular-io-site',
-      deployedUrl: 'https://rc.angular.io/',
+      deployedUrl: 'https://rc.angular-classic.com/',
       preDeployActions: [pre.build, pre.checkPayloadSize],
       postDeployActions: [post.testPwaScore],
     },
@@ -175,7 +175,7 @@ function computeDeploymentsInfo(
       deployEnv: 'stable',
       projectId: 'angular-io',
       siteId: 'stable-angular-io-site',
-      deployedUrl: 'https://angular.io/',
+      deployedUrl: 'https://angular-classic.com/',
       preDeployActions: [pre.build, pre.checkPayloadSize],
       postDeployActions: [post.testPwaScore],
     },
@@ -185,7 +185,7 @@ function computeDeploymentsInfo(
       deployEnv: 'archive',
       projectId: 'angular-io',
       siteId: `v${currentBranchMajorVersion}-angular-io-site`,
-      deployedUrl: `https://v${currentBranchMajorVersion}.angular.io/`,
+      deployedUrl: `https://v${currentBranchMajorVersion}.angular-classic.com/`,
       preDeployActions: [pre.build, pre.checkPayloadSize],
       postDeployActions: [post.testPwaScore],
     },
@@ -207,7 +207,7 @@ function computeDeploymentsInfo(
       deployEnv: 'next',
       projectId: 'angular-io',
       siteId: `v${currentBranchMajorVersion}-angular-io-site`,
-      deployedUrl: `https://v${currentBranchMajorVersion}.angular.io/`,
+      deployedUrl: `https://v${currentBranchMajorVersion}.angular-classic.com/`,
       preDeployActions: [pre.redirectAllToNext],
       postDeployActions: [pre.undo.redirectAllToNext, post.testRedirectToNext],
     },
@@ -217,7 +217,7 @@ function computeDeploymentsInfo(
       deployEnv: 'rc',
       projectId: 'angular-io',
       siteId: `v${currentBranchMajorVersion}-angular-io-site`,
-      deployedUrl: `https://v${currentBranchMajorVersion}.angular.io/`,
+      deployedUrl: `https://v${currentBranchMajorVersion}.angular-classic.com/`,
       preDeployActions: [pre.redirectAllToRc],
       postDeployActions: [pre.undo.redirectAllToRc, post.testRedirectToRc],
     },
@@ -227,7 +227,7 @@ function computeDeploymentsInfo(
       deployEnv: 'stable',
       projectId: 'angular-io',
       siteId: `v${currentBranchMajorVersion}-angular-io-site`,
-      deployedUrl: `https://v${currentBranchMajorVersion}.angular.io/`,
+      deployedUrl: `https://v${currentBranchMajorVersion}.angular-classic.com/`,
       preDeployActions: [pre.redirectAllToStable],
       postDeployActions: [pre.undo.redirectAllToStable, post.testRedirectToStable],
     },
@@ -240,7 +240,7 @@ function computeDeploymentsInfo(
       deployEnv: 'stable',
       projectId: 'angular-io',
       siteId: 'rc-angular-io-site',
-      deployedUrl: 'https://rc.angular.io/',
+      deployedUrl: 'https://rc.angular-classic.com/',
       preDeployActions: [pre.disableServiceWorker, pre.redirectNonFilesToStable],
       postDeployActions: [
         pre.undo.redirectNonFilesToStable,

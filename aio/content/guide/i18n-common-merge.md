@@ -200,7 +200,7 @@ Compile once, then translate for each locale.
 
 <!-- external links -->
 
-[AngularV8GuideI18nMergeWithTheJitCompiler]: https://v8.angular.io/guide/i18n-common#merge-translations-into-the-app-with-the-jit-compiler "Merge with the JIT compiler - Internationalization (i18n) | Angular Classicv8"
+[AngularV8GuideI18nMergeWithTheJitCompiler]: https://v8.angular-classic.com/guide/i18n-common#merge-translations-into-the-app-with-the-jit-compiler "Merge with the JIT compiler - Internationalization (i18n) | Angular Classicv8"
 
 <!-- end links -->
 

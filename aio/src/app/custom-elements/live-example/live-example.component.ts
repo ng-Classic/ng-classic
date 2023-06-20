@@ -9,7 +9,7 @@ const LIVE_EXAMPLE_BASE = CONTENT_URL_PREFIX + 'live-examples/';
 const ZIP_BASE = CONTENT_URL_PREFIX + 'zips/';
 
 /**
- * Angular.io Live Example Embedded Component
+ * angular-classic.com Live Example Embedded Component
  *
  * Renders a link to a live/host example of the doc page.
  *
@@ -146,7 +146,7 @@ export class EmbeddedStackblitzComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     // DEVELOPMENT TESTING ONLY
-    // this.src = 'https://angular.io/resources/live-examples/quickstart/ts/stackblitz.json';
+    // this.src = 'https://angular-classic.com/resources/live-examples/quickstart/ts/stackblitz.json';
 
     if (this.iframe) {
       // security: the `src` is always authored by the documentation team

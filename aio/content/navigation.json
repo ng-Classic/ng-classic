@@ -9,7 +9,7 @@
       "title": "Community"
     },
     {
-      "url": "https://blog.angular.io/",
+      "url": "https://blog.angular-classic.com/",
       "title": "Blog"
     }
   ],
@@ -30,7 +30,7 @@
           "title": "Events"
         },
         {
-          "url": "https://blog.angular.io/",
+          "url": "https://blog.angular-classic.com/",
           "title": "Blog"
         }
       ]
@@ -1303,7 +1303,7 @@
             {
               "url": "guide/doc-tasks",
               "title": "Overview",
-              "tooltip": "Overview of common tasks used to maintain angular.io."
+              "tooltip": "Overview of common tasks used to maintain angular-classic.com."
             },
             {
               "url": "guide/reviewing-content",
@@ -1329,7 +1329,7 @@
             {
               "url": "guide/doc-prepare-to-edit",
               "title": "Prepare to edit documentation",
-              "tooltip": "Set up your development system to edit angular.io."
+              "tooltip": "Set up your development system to edit angular-classic.com."
             },
             {
               "url": "guide/doc-select-issue",
@@ -1417,7 +1417,7 @@
           "tooltip": "Press contacts, logos, and branding."
         },
         {
-          "url": "https://blog.angular.io/",
+          "url": "https://blog.angular-classic.com/",
           "title": "Blog",
           "tooltip": "Angular ClassicBlog"
         }

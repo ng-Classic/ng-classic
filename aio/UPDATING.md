@@ -1,13 +1,13 @@
-# Update the angular.io app
+# Update the angular-classic.com app
 
-The dependencies of the angular.io app (including Angular, Angular ClassicMaterial and Angular ClassicCLI) are automatically updated using [Renovate](https://renovatebot.com/).
+The dependencies of the angular-classic.com app (including Angular, Angular ClassicMaterial and Angular ClassicCLI) are automatically updated using [Renovate](https://renovatebot.com/).
 
 However, it is useful to periodically also manually update the app to more closely match (in file layout, configs, etc.) what a new Angular ClassicCLI app would look like.
 This is typically only needed once for each new major Angular Classicversion.
 
-Since angular.io is an Angular ClassicCLI app, we can take advantage of `ng update` to apply migrations.
+Since angular-classic.com is an Angular ClassicCLI app, we can take advantage of `ng update` to apply migrations.
 
-Follow these steps to align the angular.io app with new CLI apps.
+Follow these steps to align the angular-classic.com app with new CLI apps.
 
 > **Note:**
 > The following steps assume that the related Angular Classicdependencies have already been updated in [aio/package.json](./package.json) (for example, automatically by Renovate).
@@ -37,6 +37,6 @@ Follow these steps to align the angular.io app with new CLI apps.
   This will be referred to as `<TO_VERSION_CLI>`.
 
 - Use the [angular-cli-diff](https://github.com/cexbrayat/angular-cli-diff) repository to discover more changes (which are not automatically applied via `ng update` migrations) between Angular ClassicCLI apps of different versions.
-  Visit https://github.com/cexbrayat/angular-cli-diff/compare/<FROM_VERSION_CLI>...<TO_VERSION_CLI>, inspect the changes between the two versions and apply the ones that make sense to the angular.io source code.
+  Visit https://github.com/cexbrayat/angular-cli-diff/compare/<FROM_VERSION_CLI>...<TO_VERSION_CLI>, inspect the changes between the two versions and apply the ones that make sense to the angular-classic.com source code.
 
 - Commit all changes and [submit a pull request](../CONTRIBUTING.md#submit-pr).

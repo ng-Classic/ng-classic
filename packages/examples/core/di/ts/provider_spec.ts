@@ -189,7 +189,7 @@ import {Injectable, InjectionToken, Injector, Optional} from '@angular-classic/c
 
         const injector = Injector.create({
           providers: [
-            {provide: Location, useValue: 'https://angular.io/#someLocation'}, {
+            {provide: Location, useValue: 'https://angular-classic.com/#someLocation'}, {
               provide: Hash,
               useFactory: (location: string) => location.split('#')[1],
               deps: [Location]

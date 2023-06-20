@@ -465,7 +465,7 @@ export class NgCompiler {
   }
 
   /**
-   * Add Angular.io error guide links to diagnostics for this compilation.
+   * Add angular-classic.com error guide links to diagnostics for this compilation.
    */
   private addMessageTextDetails(diagnostics: ts.Diagnostic[]): ts.Diagnostic[] {
     return diagnostics.map(diag => {
@@ -1190,7 +1190,7 @@ One of the following actions is required:
 2. Remove "strictTemplates" or set it to 'false'.
 
 More information about the template type checking compiler options can be found in the documentation:
-https://angular.io/guide/template-typecheck
+https://angular-classic.com/guide/template-typecheck
       `.trim(),
     });
   }

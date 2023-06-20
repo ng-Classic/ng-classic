@@ -79,7 +79,7 @@ function getTestContribs() {
       picture: 'kapunahelewong.jpg',
       website: 'https://github.com/kapunahelewong',
       twitter: 'kapunahele',
-      bio: 'Kapunahele is a front-end developer and contributor to angular.io',
+      bio: 'Kapunahele is a front-end developer and contributor to angular-classic.com',
       groups: ['GDE']
     },
     misko: {

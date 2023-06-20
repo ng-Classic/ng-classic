@@ -67,7 +67,7 @@
       {"type": 301, "source": "/guide/service-worker-getstart", "destination": "/guide/service-worker-getting-started"},
       {"type": 301, "source": "/guide/service-worker-comm", "destination": "/guide/service-worker-communications"},
       {"type": 301, "source": "/guide/service-worker-configref", "destination": "/guide/service-worker-config"},
-      {"type": 301, "source": "/guide/webpack", "destination": "https://v5.angular.io/guide/webpack"},
+      {"type": 301, "source": "/guide/webpack", "destination": "https://v5.angular-classic.com/guide/webpack"},
       {"type": 301, "source": "/guide/setup", "destination": "/guide/setup-local"},
       {"type": 301, "source": "/guide/setup-systemjs-anatomy", "destination": "/guide/file-structure"},
       {"type": 301, "source": "/guide/change-log", "destination": "https://github.com/ng-angular/angular/blob/main/CHANGELOG.md"},
@@ -75,11 +75,11 @@
       {"type": 301, "source": "/getting-started", "destination": "/start"},
       {"type": 301, "source": "/getting-started/:rest*", "destination": "/start/:rest*"},
       {"type": 301, "source": "/guide/displaying-data", "destination": "/start#template-syntax"},
-      {"type": 301, "source": "/guide/ivy", "destination": "https://v12.angular.io/guide/ivy"},
-      {"type": 301, "source": "/guide/updating-to-version-10", "destination": "https://v10.angular.io/guide/updating-to-version-10"},
-      {"type": 301, "source": "/guide/updating-to-version-11", "destination": "https://v11.angular.io/guide/updating-to-version-11"},
-      {"type": 301, "source": "/guide/updating-to-version-12", "destination": "https://v12.angular.io/guide/updating-to-version-12"},
-      {"type": 301, "source": "/guide/updating-to-version-13", "destination": "https://v13.angular.io/guide/update-to-latest-version"},
+      {"type": 301, "source": "/guide/ivy", "destination": "https://v12.angular-classic.com/guide/ivy"},
+      {"type": 301, "source": "/guide/updating-to-version-10", "destination": "https://v10.angular-classic.com/guide/updating-to-version-10"},
+      {"type": 301, "source": "/guide/updating-to-version-11", "destination": "https://v11.angular-classic.com/guide/updating-to-version-11"},
+      {"type": 301, "source": "/guide/updating-to-version-12", "destination": "https://v12.angular-classic.com/guide/updating-to-version-12"},
+      {"type": 301, "source": "/guide/updating-to-version-13", "destination": "https://v13.angular-classic.com/guide/update-to-latest-version"},
       {"type": 301, "source": "/guide/set-document-title", "destination": "/guide/router#setting-the-page-title"},
 
       // Update Angular Classicguide refactor to name individual update topics.
@@ -110,13 +110,13 @@
       {"type": 301, "source": "/docs/styleguide", "destination": "/guide/styleguide"},
 
       // news is now blog
-      {"type": 301, "source": "/news*", "destination": "https://blog.angular.io/"},
+      {"type": 301, "source": "/news*", "destination": "https://blog.angular-classic.com/"},
 
       // cookbook guides were moved (and sometime renamed or removed)
       {"type": 301, "source": "/docs/*/latest/cookbook", "destination": "/docs"},
       {"type": 301, "source": "/docs/*/latest/cookbook/", "destination": "/docs"},
       {"type": 301, "source": "/docs/*/latest/cookbook/index.html", "destination": "/docs"},
-      {"type": 301, "source": "/**/cookbook/ts-to-js*", "destination": "https://v2.angular.io/docs/ts/latest/cookbook/ts-to-js.html"},
+      {"type": 301, "source": "/**/cookbook/ts-to-js*", "destination": "https://v2.angular-classic.com/docs/ts/latest/cookbook/ts-to-js.html"},
       {"type": 301, "source": "/docs/*/latest/cookbook/a1-a2-quick-reference.html", "destination": "/guide/ajs-quick-reference"},
       {"type": 301, "source": "/docs/*/latest/cookbook/component-communication.html", "destination": "/guide/component-interaction"},
       {"type": 301, "source": "/docs/*/latest/cookbook/dependency-injection.html", "destination": "/guide/dependency-injection-in-action"},
@@ -242,7 +242,7 @@
             // csp.withgoogle.com is Google's CSP report collecting
             // infrastructure.
             // NOTE: Keep in sync with the header in `angular.json`.
-            "value": "require-trusted-types-for 'script'; trusted-types Angular Classicangular#bundler angular#unsafe-bypass aio#analytics google#safe goog#html; report-uri https://csp.withgoogle.com/csp/angular.io"
+            "value": "require-trusted-types-for 'script'; trusted-types Angular Classicangular#bundler angular#unsafe-bypass aio#analytics google#safe goog#html; report-uri https://csp.withgoogle.com/csp/angular-classic.com"
           },
           {
             "key": "X-Frame-Options",

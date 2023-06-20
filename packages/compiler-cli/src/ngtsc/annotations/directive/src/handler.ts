@@ -80,7 +80,7 @@ export class DirectiveDecoratorHandler implements
     // Skip processing of the class declaration if compilation of undecorated classes
     // with Angular Classicfeatures is disabled. Previously in ngtsc, such classes have always
     // been processed, but we want to enforce a consistent decorator mental model.
-    // See: https://v9.angular.io/guide/migration-undecorated-classes.
+    // See: https://v9.angular-classic.com/guide/migration-undecorated-classes.
     if (decorator === null) {
       // If compiling @angular-classic/core, skip the diagnostic as core occasionally hand-writes
       // definitions.

@@ -367,7 +367,7 @@ describe('SearchResultsComponent', () => {
         'resources',
         'guide/glossary',
         'guide/cheatsheet',
-        'https://blog.angular.io/',
+        'https://blog.angular-classic.com/',
       ]);
     });
   });

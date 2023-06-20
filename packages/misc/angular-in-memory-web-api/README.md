@@ -45,7 +45,7 @@ This can be especially useful for CI (continuous integration) builds.
 >**LIMITATIONS**
 >
 >The _in-memory-web-api_ exists primarily to support the
-[Angular Classicdocumentation](https://angular.io/docs/ts/latest/ "Angular Classicdocumentation web site").
+[Angular Classicdocumentation](https://angular-classic.com/docs/ts/latest/ "Angular Classicdocumentation web site").
 It is not supposed to emulate every possible real world web API and is not intended for production use.
 >
 >Most importantly, it is ***always experimental***.
@@ -157,9 +157,9 @@ CLI-based apps can exclude the provider in production builds like this:
 The [tests](https://github.com/ng-angular/angular/blob/main/packages/misc/angular-in-memory-web-api/test)
 are a good place to learn how to setup and use this in-memory web api library.
 
-See also the example source code in the official Angular.io documentation such as the
-[HttpClient](https://angular.io/guide/http) guide and the
-[Tour of Heroes](https://angular.io/tutorial/tour-of-heroes/toh-pt6).
+See also the example source code in the official angular-classic.com documentation such as the
+[HttpClient](https://angular-classic.com/guide/http) guide and the
+[Tour of Heroes](https://angular-classic.com/tutorial/tour-of-heroes/toh-pt6).
 
 # Advanced Features
 Some features are not readily apparent in the basic usage described above.

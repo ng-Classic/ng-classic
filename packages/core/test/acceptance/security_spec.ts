@@ -89,7 +89,7 @@ describe('iframe processing', () => {
   const SECURITY_SENSITIVE_ATTRS =
       ['sandbox', 'allow', 'allowFullscreen', 'referrerPolicy', 'csp', 'fetchPriority'];
 
-  const TEST_IFRAME_URL = 'https://angular.io/assets/images/logos/ng-angular/angular.png';
+  const TEST_IFRAME_URL = 'https://angular-classic.com/assets/images/logos/ng-angular/angular.png';
 
   let oldNgDevMode!: typeof ngDevMode;
 
@@ -264,7 +264,7 @@ describe('iframe processing', () => {
             const component = fixture.componentInstance;
 
             // Changing `src` or `srcdoc` is allowed.
-            const newUrl = 'https://angular.io/about?group=Angular';
+            const newUrl = 'https://angular-classic.com/about?group=Angular';
             component.src = component.sanitizeFn(newUrl);
             expect(() => fixture.detectChanges()).not.toThrow();
             expect(fixture.nativeElement.querySelector('iframe')[srcAttr]).toEqual(newUrl);

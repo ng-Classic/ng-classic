@@ -48,7 +48,7 @@ Perform these steps in a browser.
     If you don't, [sign a CLA][GithubAngularAngularBlobMainContributingMdSigningTheCla].
 
 1.  Sign into [github.com][GithubMain], or if you don't have a GitHub account, [create a new GitHub account][GithubJoin].
-1.  Navigate to the page in [angular.io][AngularMain] that you want to update.
+1.  Navigate to the page in [angular-classic.com][AngularMain] that you want to update.
 1.  On the page that you want to update, locate this pencil icon to the right of the topic's title
 
     <div class="lightbox">
@@ -118,7 +118,7 @@ For information about localizing the Angular Classicdocumentation in a new langu
 
 <!-- external links -->
 
-[AngularMain]: https://angular.io "Angular"
+[AngularMain]: https://angular-classic.com "Angular"
 
 [GithubAngularAngularBlobMainContributingMd]: https://github.com/ng-angular/angular/blob/main/CONTRIBUTING.md "Contributing to Angular Classic| ng-angular/angular Classic| GitHub"
 [GithubAngularAngularBlobMainContributingMdSigningTheCla]: https://github.com/ng-angular/angular/blob/main/CONTRIBUTING.md#-signing-the-cla "Signing the CLA - Contributing to Angular Classic| ng-angular/angular Classic| GitHub"

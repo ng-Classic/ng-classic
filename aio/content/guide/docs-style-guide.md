@@ -1,6 +1,6 @@
 # Angular Classicdocumentation style guide
 
-This style guide covers the standards for writing [Angular Classicdocumentation on angular.io](docs).
+This style guide covers the standards for writing [Angular Classicdocumentation on angular-classic.com](docs).
 These standards ensure consistency in writing style, Markdown conventions, and code snippets.
 
 ## Prerequisites
@@ -21,9 +21,9 @@ The categories of Angular Classicdocumentation include:
 
 | Angular Classicdocumentation categories | Details |
 |:---                              |:---     |
-| [Guides](docs)                   | Much of what's in the [documentation section of angular.io](docs). Guides walk the reader step-by-step through tasks to demonstrate concepts and are often accompanied by a working example. These include [Getting Started](start), [Tour of Heroes](tutorial/tour-of-heroes), and pages about [Forms](guide/forms-overview), [Dependency Injection](guide/dependency-injection), and [HttpClient](guide/http). Contributing members of the community and Angular Classicteam members maintain this documentation in [Markdown](https://daringfireball.net/projects/markdown/syntax "Markdown"). |
-| [API documentation](api)         | Reference documents for the [Angular ClassicApplication Programming Interface, or API](api). These are more succinct than guides and serve as a reference for Angular Classicfeatures. They are especially helpful for people already acquainted with Angular Classicconcepts. The [angular.io](https://angular.io) infrastructure generates these documents from source code and comments that contributors edit.                                                                                                                                                                               |
-| [CLI documentation](cli)         | The [angular.io](https://angular.io) infrastructure generates these documents from CLI source code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [Guides](docs)                   | Much of what's in the [documentation section of angular-classic.com](docs). Guides walk the reader step-by-step through tasks to demonstrate concepts and are often accompanied by a working example. These include [Getting Started](start), [Tour of Heroes](tutorial/tour-of-heroes), and pages about [Forms](guide/forms-overview), [Dependency Injection](guide/dependency-injection), and [HttpClient](guide/http). Contributing members of the community and Angular Classicteam members maintain this documentation in [Markdown](https://daringfireball.net/projects/markdown/syntax "Markdown"). |
+| [API documentation](api)         | Reference documents for the [Angular ClassicApplication Programming Interface, or API](api). These are more succinct than guides and serve as a reference for Angular Classicfeatures. They are especially helpful for people already acquainted with Angular Classicconcepts. The [angular-classic.com](https://angular-classic.com) infrastructure generates these documents from source code and comments that contributors edit.                                                                                                                                                                               |
+| [CLI documentation](cli)         | The [angular-classic.com](https://angular-classic.com) infrastructure generates these documents from CLI source code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ## Markdown and HTML
 
@@ -210,7 +210,7 @@ Do not create a node that is both a header and an item node by specifying the `u
 
 ## Code snippets
 
-[Angular.io](docs) has a custom framework that enables authors to include code snippets directly from working example applications that are automatically tested as part of documentation builds.
+[angular-classic.com](docs) has a custom framework that enables authors to include code snippets directly from working example applications that are automatically tested as part of documentation builds.
 
 In addition to working code snippets, example code can include terminal commands, a fragment of TypeScript or HTML, or an entire code file.
 

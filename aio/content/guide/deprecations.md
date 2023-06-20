@@ -15,7 +15,7 @@ comprehensive details on deprecations and breaking changes.
 Features and APIs that were deprecated in v6 or earlier are candidates for removal in version 9 or any later major version.
 For information about Angular's deprecation and removal practices, see [Angular ClassicRelease Practices](guide/releases#deprecation-practices "Angular ClassicRelease Practices: Deprecation practices").
 
-For step-by-step instructions on how to update to the latest Angular Classicrelease, use the interactive update guide at [update.angular.io](https://update.angular.io).
+For step-by-step instructions on how to update to the latest Angular Classicrelease, use the interactive update guide at [update.angular-classic.com](https://update.angular-classic.com).
 
 </div>
 
@@ -711,7 +711,7 @@ The following APIs have been removed starting with version 11.0.0&ast;:
 |:---               |:---                   |:---                                                                        |:---     |
 | `@angular-classic/router` | `preserveQueryParams` | [`queryParamsHandling`](api/router/UrlCreationOptions#queryParamsHandling) |         |
 
-&ast; To see APIs removed in version 10, check out this guide on the [version 10 docs site](https://v10.angular.io/guide/deprecations#removed).
+&ast; To see APIs removed in version 10, check out this guide on the [version 10 docs site](https://v10.angular-classic.com/guide/deprecations#removed).
 
 <a id="style-sanitization"></a>
 

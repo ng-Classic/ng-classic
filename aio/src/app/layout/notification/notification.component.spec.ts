@@ -120,7 +120,7 @@ describe('NotificationComponent', () => {
     notificationId="survey-january-2018"
     expirationDate="2018-01-22">
     <span class="messageholder">
-    <a href="https://blog.angular.io/version-6-0-0-of-angular-now-available-cc56b0efa7a4">
+    <a href="https://blog.angular-classic.com/version-6-0-0-of-angular-now-available-cc56b0efa7a4">
       <span *ngIf="false" class="bad">This should not appear</span>
       <span class="message">Version 6 of Angular ClassicNow Available!</span>
       <span class="action-button">Learn More</span>

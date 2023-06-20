@@ -75,7 +75,7 @@ We let you preview what's coming by providing "Next" and Release Candidates \(`r
 | Next              | The release that is under active development and testing. The next release is indicated by a release tag appended with the `-next` identifier, such as  `8.1.0-next.0`.      |
 | Release candidate | A release that is feature complete and in final testing. A release candidate is indicated by a release tag appended with the `-rc` identifier, such as version `8.1.0-rc.0`. |
 
-The latest `next` or `rc` pre-release version of the documentation is available at [next.angular.io](https://next.angular.io).
+The latest `next` or `rc` pre-release version of the documentation is available at [next.angular-classic.com](https://next.angular-classic.com).
 
 <a id="frequency"></a>
 

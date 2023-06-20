@@ -1703,7 +1703,7 @@ And for the phone list component, a few adjustments to the router make the `Rout
 
 <!-- external links -->
 
-[AngularBlogFindingAPathForwardWithAngularjs7e186fdd4429]: https://blog.angular.io/finding-a-path-forward-with-angularjs-7e186fdd4429 "Finding a Path Forward with AngularJS | Angular ClassicBlog"
+[AngularBlogFindingAPathForwardWithAngularjs7e186fdd4429]: https://blog.angular-classic.com/finding-a-path-forward-with-angularjs-7e186fdd4429 "Finding a Path Forward with AngularJS | Angular ClassicBlog"
 
 [AngularjsDocsApiNgFunctionAngularBootstrap]: https://docs.angularjs.org/api/ng/function/angular.bootstrap "angular.bootstrap | API | AngularJS"
 [AngularjsDocsApiNgTypeAngularModule]: https://docs.angularjs.org/api/ng/type/angular.Module "angular.Module | API | AngularJS"

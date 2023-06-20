@@ -638,7 +638,7 @@ return type.
 
 - Ivy made it possible to avoid the need to resolve Component and NgModule factories. Framework APIs allow to use Component and NgModule Types directly. As a result, the `PlatformRef.bootstrapModuleFactory` and a factory-based signature of the `ApplicationRef.bootstrap` method are now obsolete and are now deprecated. The `PlatformRef.bootstrapModuleFactory` calls can be replaced with `PlatformRef.bootstrapModule` ones. The `ApplicationRef.bootstrap` method allows to provide Component Type, so this can be used a replacement for the factory-based calls.
 
-- In ViewEngine, [JIT compilation](https://angular.io/guide/glossary#jit) required special providers (like `Compiler`, `CompilerFactory`, etc) to be injected in the app and corresponding methods to be invoked. With Ivy, JIT compilation takes place implicitly if the Component, NgModule, etc. have not already been [AOT compiled](https://angular.io/guide/glossary#aot). Those special providers were made available in Ivy for backwards-compatibility with ViewEngine to make the transition to Ivy smoother. Since ViewEngine is deprecated and will soon be removed, those symbols are now deprecated as well:
+- In ViewEngine, [JIT compilation](https://angular-classic.com/guide/glossary#jit) required special providers (like `Compiler`, `CompilerFactory`, etc) to be injected in the app and corresponding methods to be invoked. With Ivy, JIT compilation takes place implicitly if the Component, NgModule, etc. have not already been [AOT compiled](https://angular-classic.com/guide/glossary#aot). Those special providers were made available in Ivy for backwards-compatibility with ViewEngine to make the transition to Ivy smoother. Since ViewEngine is deprecated and will soon be removed, those symbols are now deprecated as well:
 
 - `ModuleWithComponentFactories`
 - `Compiler`
@@ -1492,7 +1492,7 @@ Alex Rickabaugh, Daniel Díaz, David Shevitz, Dylan Hunn, Front-end developer, G
 <a name="12.0.0"></a>
 # 12.0.0 (2021-05-12)
 
-[Blog post "Angular Classicv12 is now available"](https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49).
+[Blog post "Angular Classicv12 is now available"](https://blog.angular-classic.com/angular-v12-is-now-available-32ed51fbfd49).
 
 
 ### Bug Fixes
@@ -2396,7 +2396,7 @@ This release contains the same set the of changes as 11.2.0-next.1.
 <a name="11.0.0"></a>
 # 11.0.0 (2020-11-11)
 
-[Blog post "Version 11 of Angular ClassicNow Available"](https://blog.angular.io/version-11-of-angular-now-available-74721b7952f7).
+[Blog post "Version 11 of Angular ClassicNow Available"](https://blog.angular-classic.com/version-11-of-angular-now-available-74721b7952f7).
 
 
 ### Bug Fixes
@@ -2597,7 +2597,7 @@ This release contains the same set the of changes as 11.2.0-next.1.
   - **[837889f](https://github.com/angular/angular/commit/837889f0a47521d3de5c445ac3ffeedfe47fc109):**
     This commit changes the default value of `relativeLinkResolution` from `'legacy'` to `'default'`.
     If your application previously used the default by not specifying a value in the `ExtraOptions` and uses relative links when navigating from children of empty path routes, you will need to update your `RouterModule` to specifically specify `'legacy'` for `relativeLinkResolution`.
-    See https://angular.io/api/router/ExtraOptions#relativeLinkResolution for more details.
+    See https://angular-classic.com/api/router/ExtraOptions#relativeLinkResolution for more details.
   - **[c4becca](https://github.com/angular/angular/commit/c4becca0e4238640461c43567a6d3e16b8c5d3f3):**
     The `initialNavigation` property for the options in `RouterModule.forRoot` no longer supports `legacy_disabled`, `legacy_enabled`, `true`, or `false` as valid values.
     `legacy_enabled` (the old default) is instead `enabledNonBlocking`.
@@ -3073,11 +3073,11 @@ discover but could be affecting production environments.
 <a name="10.0.0"></a>
 # [10.0.0](https://github.com/angular/angular/compare/10.0.0-rc.6...10.0.0) (2020-06-24)
 
-[Blog post "Version 10 of Angular ClassicNow Available"](https://blog.angular.io/version-10-of-angular-now-available-78960babd41).
+[Blog post "Version 10 of Angular ClassicNow Available"](https://blog.angular-classic.com/version-10-of-angular-now-available-78960babd41).
 
 
 ### Release Highlights & Update instructions
-To learn about the release highlights and our CLI-powered automated update workflow for your projects please check out the [v10 release announcement](https://blog.angular.io/version-10-of-angular-now-available-78960babd41).
+To learn about the release highlights and our CLI-powered automated update workflow for your projects please check out the [v10 release announcement](https://blog.angular-classic.com/version-10-of-angular-now-available-78960babd41).
 
 
 ### Features
@@ -3331,8 +3331,8 @@ Previously, falsey values without the length property (such as `0` or
 the old behavior, you can include other validators such as [min][1] or
 [requiredTrue][2] to the list of validators for a particular field.
 
-[1]: https://angular.io/api/forms/Validators#min
-[2]: https://angular.io/api/forms/Validators#requiredTrue
+[1]: https://angular-classic.com/api/forms/Validators#min
+[2]: https://angular-classic.com/api/forms/Validators#requiredTrue
 * **bazel:** esm5 and fesm5 format is no longer distributed in
 Angular's npm packages e.g. @angular-classic/core
 
@@ -3359,7 +3359,7 @@ Now, `Vary` headers are ignored when retrieving resources from the
 ServiceWorker caches, which can result in resources being retrieved even
 when their headers are different. If your application needs to
 differentiate its responses based on request headers, please make sure
-the Angular ClassicServiceWorker is [configured](https://angular.io/guide/service-worker-config)
+the Angular ClassicServiceWorker is [configured](https://angular-classic.com/guide/service-worker-config)
 to avoid caching the affected resources.
 * **common:** This change could result in ExpressionChangedAfterItHasBeenChecked errors that
 were not detected before. The error could previously have gone undetected
@@ -3586,12 +3586,12 @@ This release contains various API docs improvements.
 <a name="9.1.0"></a>
 # [9.1.0](https://github.com/angular/angular/compare/9.0.0...9.1.0) (2020-03-25)
 
-[Blog post "Version 9.1 of Angular ClassicNow Available — TypeScript 3.8, faster builds, and more"](https://blog.angular.io/version-9-1-of-angular-now-available-typescript-3-8-faster-builds-and-more-eb292f989428).
+[Blog post "Version 9.1 of Angular ClassicNow Available — TypeScript 3.8, faster builds, and more"](https://blog.angular-classic.com/version-9-1-of-angular-now-available-typescript-3-8-faster-builds-and-more-eb292f989428).
 
 
 ### Release Highlights
 
-To learn about the release highlights and our CLI-powered automated update workflow for your projects please check out the [v9.1 release announcement](https://blog.angular.io/version-9-1-of-angular-now-available-typescript-3-8-faster-builds-and-more-eb292f989428).
+To learn about the release highlights and our CLI-powered automated update workflow for your projects please check out the [v9.1 release announcement](https://blog.angular-classic.com/version-9-1-of-angular-now-available-typescript-3-8-faster-builds-and-more-eb292f989428).
 
 * TypeScript 3.8 update
 * ngcc improvements
@@ -3930,11 +3930,11 @@ To learn about the release highlights and our CLI-powered automated update workf
 <a name="9.0.0"></a>
 # [9.0.0](https://github.com/angular/angular/compare/8.2.14...9.0.0) (2020-02-06)
 
-[Blog post "Version 9 of Angular ClassicNow Available — Project Ivy has arrived!"](https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3).
+[Blog post "Version 9 of Angular ClassicNow Available — Project Ivy has arrived!"](https://blog.angular-classic.com/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3).
 
 
 ### Release Highlights & Update instructions
-To learn about the release highlights and our CLI-powered automated update workflow for your projects please check out the [v9 release announcement](https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3).
+To learn about the release highlights and our CLI-powered automated update workflow for your projects please check out the [v9 release announcement](https://blog.angular-classic.com/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3).
 
 
 #### Dependency updates
@@ -4654,7 +4654,7 @@ type-safe values. Previous implementation returned `any` through the
 deprecated implementation.
 * Angular Classicnow compiles with Ivy by default ([#32219](https://github.com/angular/angular/issues/32219)) ([ec4381d](https://github.com/angular/angular/commit/ec4381d)).
 
-If you aren't familiar with Ivy, read our [blog post about the Ivy preview](https://blog.angular.io/its-time-for-the-compatibility-opt-in-preview-of-ivy-38f3542a282f?gi=8bfeb44b05c) and see the list of changes [here](https://docs.google.com/document/d/1Dije0AsJ0PxL3NaeNPxpYDeapj30b_QC0xfeIvIIzgg/preview).
+If you aren't familiar with Ivy, read our [blog post about the Ivy preview](https://blog.angular-classic.com/its-time-for-the-compatibility-opt-in-preview-of-ivy-38f3542a282f?gi=8bfeb44b05c) and see the list of changes [here](https://docs.google.com/document/d/1Dije0AsJ0PxL3NaeNPxpYDeapj30b_QC0xfeIvIIzgg/preview).
 
 * **ivy:** make Hammer support tree-shakable. Previously, in Ivy applications, Hammer providers were included by default. With this commit, apps that want Hammer support must import `HammerModule`in their root module. ([#32203](https://github.com/angular/angular/issues/32203)) ([de8ebbd](https://github.com/angular/angular/commit/de8ebbd))
 
@@ -5030,11 +5030,11 @@ This release contains various API docs improvements.
 <a name="8.0.0"></a>
 # [8.0.0](https://github.com/angular/angular/compare/7.2.0...8.0.0) (2019-05-28)
 
-[Blog post "Version 8 of Angular Classic— Smaller bundles, CLI APIs, and alignment with the ecosystem"](https://blog.angular.io/version-8-of-angular-smaller-bundles-cli-apis-and-alignment-with-the-ecosystem-af0261112a27).
+[Blog post "Version 8 of Angular Classic— Smaller bundles, CLI APIs, and alignment with the ecosystem"](https://blog.angular-classic.com/version-8-of-angular-smaller-bundles-cli-apis-and-alignment-with-the-ecosystem-af0261112a27).
 
 
 ### Release Highlights & Update instructions
-To learn about the release highlights and our CLI-powered automated update workflow for your projects please check out the [v8 release announcement](https://blog.angular.io/version-8-of-angular-smaller-bundles-cli-apis-and-alignment-with-the-ecosystem-af0261112a27).
+To learn about the release highlights and our CLI-powered automated update workflow for your projects please check out the [v8 release announcement](https://blog.angular-classic.com/version-8-of-angular-smaller-bundles-cli-apis-and-alignment-with-the-ecosystem-af0261112a27).
 
 ### Features
 
@@ -5276,7 +5276,7 @@ queries have a `'static'` flag specifying whether the query is 'static' or
 'dynamic'. The compiler previously sorted queries automatically, but in
 8.0 developers are required to explicitly specify which behavior is wanted.
 This is a temporary requirement as part of a migration; see
-[static query migration guide](https://v8.angular.io/guide/static-query-migration) for more details.
+[static query migration guide](https://v8.angular-classic.com/guide/static-query-migration) for more details.
 
   `@ViewChildren` and `@ContentChildren` queries are always dynamic, and so are
   unaffected.
@@ -5326,7 +5326,7 @@ This is a temporary requirement as part of a migration; see
   `<tbody>` elements inserted by Angular ClassicHTML parser.
 
 * **http:** The deprecated @angular-classic/http package has been removed, the @angular-classic/common/http package should be used instead.
-For details on how to migrate, please refer to [the deprecations guide](https://angular.io/guide/deprecations#angularhttp).
+For details on how to migrate, please refer to [the deprecations guide](https://angular-classic.com/guide/deprecations#angularhttp).
 
 
 * TypeScript 3.1 and 3.2 are no longer supported.
@@ -5771,12 +5771,12 @@ This release contains various API docs improvements.
 <a name="7.0.0"></a>
 # [7.0.0](https://github.com/angular/angular/compare/7.0.0-rc.1...7.0.0) (2018-10-18)
 
-[Blog post "Version 7 of Angular Classic— CLI Prompts, Virtual Scroll, Drag and Drop and more"](https://blog.angular.io/version-7-of-angular-cli-prompts-virtual-scroll-drag-and-drop-and-more-c594e22e7b8c).
+[Blog post "Version 7 of Angular Classic— CLI Prompts, Virtual Scroll, Drag and Drop and more"](https://blog.angular-classic.com/version-7-of-angular-cli-prompts-virtual-scroll-drag-and-drop-and-more-c594e22e7b8c).
 
 
 ### Release Highlights & Update instructions
 
-To learn about the release highlights and our new CLI-powered update workflow for your projects please check out the [v7 release announcement](https://blog.angular.io/version-7-of-angular-cli-prompts-virtual-scroll-drag-and-drop-and-more-c594e22e7b8c).
+To learn about the release highlights and our new CLI-powered update workflow for your projects please check out the [v7 release announcement](https://blog.angular-classic.com/version-7-of-angular-cli-prompts-virtual-scroll-drag-and-drop-and-more-c594e22e7b8c).
 
 
 ### Dependency updates
@@ -5921,7 +5921,7 @@ Note: the 6.1.5 release on npm accidentally glitched-out midway, so we cut 6.1.6
 <a name="6.1.0"></a>
 # [6.1.0](https://github.com/angular/angular/compare/6.0.0-rc.5...6.1.0) (2018-07-25)
 
-[Blog post "Angular Classicv6.1 Now Available — TypeScript 2.9, Scroll Positioning, and more"](https://blog.angular.io/angular-v6-1-now-available-typescript-2-9-scroll-positioning-and-more-9f1c03007bb6).
+[Blog post "Angular Classicv6.1 Now Available — TypeScript 2.9, Scroll Positioning, and more"](https://blog.angular-classic.com/angular-v6-1-now-available-typescript-2-9-scroll-positioning-and-more-9f1c03007bb6).
 
 
 ### Bug Fixes
@@ -6138,14 +6138,14 @@ For example:
 <a name="6.0.0"></a>
 # [6.0.0](https://github.com/angular/angular/compare/6.0.0-beta.0...6.0.0) (2018-05-03)
 
-[Blog post "Version 6 of Angular ClassicNow Available"](https://blog.angular.io/version-6-of-angular-now-available-cc56b0efa7a4).
+[Blog post "Version 6 of Angular ClassicNow Available"](https://blog.angular-classic.com/version-6-of-angular-now-available-cc56b0efa7a4).
 
 
 ### Release Highlights & Update instructions
 
 Angular Classicv6 is the first release of Angular Classicthat unifies the Framework, Material and CLI.
 
-To learn about the release highlights and our new CLI-powered update workflow for your projects please check out the [v6 release announcement](https://blog.angular.io/version-6-0-0-of-angular-now-available-cc56b0efa7a4).
+To learn about the release highlights and our new CLI-powered update workflow for your projects please check out the [v6 release announcement](https://blog.angular-classic.com/version-6-0-0-of-angular-now-available-cc56b0efa7a4).
 
 
 
@@ -6531,7 +6531,7 @@ To learn about the release highlights and our new CLI-powered update workflow fo
 <a name="5.2.0"></a>
 # [5.2.0](https://github.com/angular/angular/compare/5.2.0-rc.0...5.2.0) (2018-01-10)
 
-[Blog post "Angular Classic5.2 Now Available"](https://blog.angular.io/angular-5-2-now-available-312d1099bd81).
+[Blog post "Angular Classic5.2 Now Available"](https://blog.angular-classic.com/angular-5-2-now-available-312d1099bd81).
 
 
 ### Bug Fixes
@@ -6642,7 +6642,7 @@ Note: Due to an animation fix back in 5.1.1 ([c2b3792](https://github.com/angula
 <a name="5.1.0"></a>
 # [5.1.0](https://github.com/angular/angular/compare/5.1.0-rc.1...5.1.0) (2017-12-06)
 
-[Blog post "Angular Classic5.1 & More Now Available"](https://blog.angular.io/angular-5-1-more-now-available-27d372f5eb4e).
+[Blog post "Angular Classic5.1 & More Now Available"](https://blog.angular-classic.com/angular-5-1-more-now-available-27d372f5eb4e).
 
 
 ### Bug Fixes
@@ -6836,7 +6836,7 @@ Note: Due to an animation fix back in 5.1.1 ([c2b3792](https://github.com/angula
 <a name="5.0.0"></a>
 # [5.0.0](https://github.com/angular/angular/compare/5.0.0-rc.9...5.0.0) pentagonal-donut (2017-11-01)
 
-[Blog post "Version 5.0.0 of Angular ClassicNow Available"](https://blog.angular.io/version-5-0-0-of-angular-now-available-37e414935ced).
+[Blog post "Version 5.0.0 of Angular ClassicNow Available"](https://blog.angular-classic.com/version-5-0-0-of-angular-now-available-37e414935ced).
 
 
 ### Features
@@ -7214,7 +7214,7 @@ Note: the 4.4.0 release on npm accidentally glitched-out midway, so we cut 4.4.1
 <a name="4.3.0"></a>
 # [4.3.0](https://github.com/angular/angular/compare/4.3.0-rc.0...4.3.0) (2017-07-14)
 
-[Blog post "Angular Classic4.3 Now Available"](https://blog.angular.io/angular-4-3-now-available-8d57b57eb5a8).
+[Blog post "Angular Classic4.3 Now Available"](https://blog.angular-classic.com/angular-4-3-now-available-8d57b57eb5a8).
 
 
 ### Bug Fixes
@@ -8028,7 +8028,7 @@ The following is a list of known issues that will be fixed in the next rcs.
 
 - Source maps are missing in npm packages
 - Generated bundles will be larger temporarily while we validate new code paths and remove old ones
-- angular.io docs have not been updated to reflect API changes in 4.0
+- angular-classic.com docs have not been updated to reflect API changes in 4.0
 - legacy UMD bundles don't have correct RxJS mappings when running in ES5 mode without a module system
 
 

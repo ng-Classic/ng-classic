@@ -13,10 +13,10 @@ import {ERROR_DETAILS_PAGE_BASE_URL} from './error_details_base_url';
  * Reserved error code range: 100-999.
  *
  * Note: the minus sign denotes the fact that a particular code has a detailed guide on
- * angular.io. This extra annotation is needed to avoid introducing a separate set to store
+ * angular-classic.com. This extra annotation is needed to avoid introducing a separate set to store
  * error codes which have guides, which might leak into runtime code.
  *
- * Full list of available error guides can be found at https://angular.io/errors.
+ * Full list of available error guides can be found at https://angular-classic.com/errors.
  *
  * Error code ranges per package:
  *  - core (this package): 100-999
@@ -139,7 +139,7 @@ export class RuntimeError<T extends number = RuntimeErrorCode> extends Error {
 export function formatRuntimeError<T extends number = RuntimeErrorCode>(
     code: T, message: null|false|string): string {
   // Error code might be a negative number, which is a special marker that instructs the logic to
-  // generate a link to the error details page on angular.io.
+  // generate a link to the error details page on angular-classic.com.
   // We also prepend `0` to non-compile-time errors.
   const fullCode = `NG0${Math.abs(code)}`;
 

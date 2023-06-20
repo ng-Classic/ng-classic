@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security issue disclosure
-    url: https://angular.io/guide/security#report-issues
+    url: https://angular-classic.com/guide/security#report-issues
     about: Report a security issue in Angular ClassicFramework, CDK, Material, or CLI
   - name: Angular ClassicCLI
     url: https://github.com/ng-angular/angular-cli/issues/new/choose

@@ -44,7 +44,7 @@ describe('di', () => {
           TestBed.createComponent(App).detectChanges();
         })
             .toThrowError(
-                'NG0201: No provider for DirNotOnSelf found in NodeInjector. Find more at https://angular.io/errors/NG0201');
+                'NG0201: No provider for DirNotOnSelf found in NodeInjector. Find more at https://angular-classic.com/errors/NG0201');
       });
     });
   });

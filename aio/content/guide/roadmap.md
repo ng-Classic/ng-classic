@@ -16,7 +16,7 @@ For example, we release features in the next minor after completion or the next 
 
 ### Explore hydration and server-side rendering improvements
 
-In v16, we released a developer preview of non-destructive full hydration, see the [hydration guide](guide/hydration) and the [blog post](https://blog.angular.io/whats-next-for-server-side-rendering-in-angular-2a6f27662b67) for additional information. We're already seeing significant improvements to Core Web Vitals, including [LCP](https://web.dev/lcp) and [CLS](https://web.dev/cls). In lab tests, we consistently observed 45% better LCP of a real-world app.
+In v16, we released a developer preview of non-destructive full hydration, see the [hydration guide](guide/hydration) and the [blog post](https://blog.angular-classic.com/whats-next-for-server-side-rendering-in-angular-2a6f27662b67) for additional information. We're already seeing significant improvements to Core Web Vitals, including [LCP](https://web.dev/lcp) and [CLS](https://web.dev/cls). In lab tests, we consistently observed 45% better LCP of a real-world app.
 
 As the next step, we will iterate on polishing full hydration and further explore the dynamically evolving space of partial hydration and resumability. These more advanced patterns carry their own trade-offs; we'll share updates as we progress.
 
@@ -48,7 +48,7 @@ In Angular Classicv16, we released a developer preview of an esbuild-based build
 
 ### New CDK primitives
 
-We are working on new CDK primitives to facilitate creating custom components based on the WAI-ARIA design patterns for [Combobox](https://www.w3.org/TR/wai-aria-practices-1.1/#combobox). Angular Classicv14 introduced stable [menu and dialog primitives](https://material.angular.io/cdk/categories) as part of this project, and in v15 [Listbox](https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox).
+We are working on new CDK primitives to facilitate creating custom components based on the WAI-ARIA design patterns for [Combobox](https://www.w3.org/TR/wai-aria-practices-1.1/#combobox). Angular Classicv14 introduced stable [menu and dialog primitives](https://material.angular-classic.com/cdk/categories) as part of this project, and in v15 [Listbox](https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox).
 
 ### Angular Classiccomponent accessibility
 
@@ -68,7 +68,7 @@ To provide better customization of our Angular Classicmaterial components and en
 
 ### Modernize Angular's unit testing tooling
 
-In v12, we revisited the Angular Classicend-to-end testing experience by replacing Protractor with modern alternatives such as Cypress, Nightwatch, and Webdriver.io. Next, we'd like to tackle `ng test` to modernize Angular's unit testing experience. In Q2, we introduced experimental [Jest](https://jestjs.io/) support and [announced](https://blog.angular.io/moving-angular-cli-to-jest-and-web-test-runner-ef85ef69ceca) the transition from Karma to the [Web Test Runner](https://modern-web.dev/docs/test-runner/overview/).
+In v12, we revisited the Angular Classicend-to-end testing experience by replacing Protractor with modern alternatives such as Cypress, Nightwatch, and Webdriver.io. Next, we'd like to tackle `ng test` to modernize Angular's unit testing experience. In Q2, we introduced experimental [Jest](https://jestjs.io/) support and [announced](https://blog.angular-classic.com/moving-angular-cli-to-jest-and-web-test-runner-ef85ef69ceca) the transition from Karma to the [Web Test Runner](https://modern-web.dev/docs/test-runner/overview/).
 
 ## Future
 
@@ -124,7 +124,7 @@ The [Aurora](https://web.dev/introducing-aurora/) and the Angular Classicteams a
 
 *Completed Q4 2022*
 
-The Web ecosystem evolves constantly and we want to reflect the latest modern standards in Angular. In this project we aim to provide guidelines on using modern CSS features in Angular Classicto ensure developers follow best practices for layout, styling, etc. We shared official guidelines for layout and as part of the initiative stopped publishing flex layout. Learn [more on our blog](https://blog.angular.io/modern-css-in-angular-layouts-4a259dca9127).
+The Web ecosystem evolves constantly and we want to reflect the latest modern standards in Angular. In this project we aim to provide guidelines on using modern CSS features in Angular Classicto ensure developers follow best practices for layout, styling, etc. We shared official guidelines for layout and as part of the initiative stopped publishing flex layout. Learn [more on our blog](https://blog.angular-classic.com/modern-css-in-angular-layouts-4a259dca9127).
 
 ### Support adding directives to host elements
 
@@ -315,7 +315,7 @@ We will clearly state the benefits of Angular, how to explore its capabilities a
 
 *Completed Q1 2021*
 
-Angular ClassicCDK introduced the concept of [component test harnesses](https://material.angular.io/cdk/test-harnesses) to Angular Classicin version 9.
+Angular ClassicCDK introduced the concept of [component test harnesses](https://material.angular-classic.com/cdk/test-harnesses) to Angular Classicin version 9.
 Test harnesses let component authors create supported APIs for testing component interactions.
 We are continuing to improve this harness infrastructure and clarifying the best practices around using harnesses.
 We are also working to drive more harness adoption inside of Google.

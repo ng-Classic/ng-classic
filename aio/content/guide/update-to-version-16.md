@@ -10,9 +10,9 @@
 This topic provides information about updating your Angular Classicapplications to Angular Classicversion 16.
 
 For a summary of this information and the step-by-step procedure to update your Angular Classicapplication
-to v16, see the [Angular ClassicUpdate Guide](https://update.angular.io).
+to v16, see the [Angular ClassicUpdate Guide](https://update.angular-classic.com).
 
-The information in the [Angular ClassicUpdate Guide](https://update.angular.io) and this topic is
+The information in the [Angular ClassicUpdate Guide](https://update.angular-classic.com) and this topic is
 summarized from these changelogs:
 
 *  [ng-angular/angular Classicchangelog](https://github.com/ng-angular/angular/blob/main/CHANGELOG.md)
@@ -27,7 +27,7 @@ Information about updating Angular Classicapplications to v15 is archived at
 ## Feature highlights in Angular Classicv16
 
 For a more comprehensive list of new features, see the
-[Angular Classicblog post on the update to v16](https://blog.angular.io).
+[Angular Classicblog post on the update to v16](https://blog.angular-classic.com).
 
 <!-- markdownLint-disable MD001 -->
 

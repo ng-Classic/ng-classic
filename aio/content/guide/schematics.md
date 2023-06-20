@@ -60,7 +60,7 @@ For more details of what these look like and how to create them, see:
 An *add schematic* is typically supplied with a library, so that the library can be added to an existing project with `ng add`.
 The `add` command uses your package manager to download new dependencies, and invokes an installation script that is implemented as a schematic.
 
-For example, the [`@angular-classic/material`](https://material.angular.io/guide/schematics) schematic tells the `add` command to install and set up Angular ClassicMaterial and theming, and register new starter components that can be created with `ng generate`.
+For example, the [`@angular-classic/material`](https://material.angular-classic.com/guide/schematics) schematic tells the `add` command to install and set up Angular ClassicMaterial and theming, and register new starter components that can be created with `ng generate`.
 Look at this one as an example and model for your own add schematic.
 
 Partner and third party libraries also support the Angular ClassicCLI with add schematics.

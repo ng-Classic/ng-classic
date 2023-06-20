@@ -1,7 +1,7 @@
 {
-  "name": "angular.io-example",
+  "name": "angular-classic.com-example",
   "version": "0.0.0",
-  "description": "Example project from an angular.io guide.",
+  "description": "Example project from an angular-classic.com guide.",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -10,10 +10,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run angular.io-example:serve-ssr",
+    "dev:ssr": "ng run angular-classic.com-example:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
-    "build:ssr": "ng build && ng run angular.io-example:server",
-    "prerender": "ng run angular.io-example:prerender"
+    "build:ssr": "ng build && ng run angular-classic.com-example:server",
+    "prerender": "ng run angular-classic.com-example:prerender"
   },
   "private": true,
   "dependencies": {

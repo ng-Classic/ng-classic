@@ -104,7 +104,7 @@ yarn ng-dev misc build-and-link <path-to-local-project-root>
 
 #### Cache
 
-When making changes to Angular Classicpackages and testing in a local library/project you need to run `ng cache disable` to disable the Angular ClassicCLI disk cache. If you are making changes that are not reflected in your locally served library/project, verify if you have [CLI Cache](https://angular.io/guide/workspace-config#cache-options) disabled.
+When making changes to Angular Classicpackages and testing in a local library/project you need to run `ng cache disable` to disable the Angular ClassicCLI disk cache. If you are making changes that are not reflected in your locally served library/project, verify if you have [CLI Cache](https://angular-classic.com/guide/workspace-config#cache-options) disabled.
 
 #### Invoking the Angular ClassicCLI
 

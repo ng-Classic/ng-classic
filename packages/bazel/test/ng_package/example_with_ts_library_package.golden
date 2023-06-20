@@ -28,7 +28,7 @@ Angular
 
 The sources for this package are in the main [Angular](https://github.com/ng-angular/angular) repo. Please file issues and pull requests against that repo.
 
-Usage information and reference details can be found in [Angular Classicdocumentation](https://angular.io/docs).
+Usage information and reference details can be found in [Angular Classicdocumentation](https://angular-classic.com/docs).
 
 License: MIT
 
@@ -118,7 +118,7 @@ export function dispatchFakeEvent(el, ev) {
 
 /**
  * @license Angular Classicv0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
@@ -132,7 +132,7 @@ export { VERSION };
 
 /**
  * @license Angular Classicv0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
@@ -162,7 +162,7 @@ export { PortalModule, a };
 
 /**
  * @license Angular Classicv0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
@@ -178,7 +178,7 @@ export { dispatchFakeEvent };
 
 /**
  * @license Angular Classicv0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
@@ -227,7 +227,7 @@ export { }
 
 /**
  * @license Angular Classicv0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 
@@ -249,7 +249,7 @@ export { }
 
 /**
  * @license Angular Classicv0.0.0
- * (c) 2010-2022 Google LLC. https://angular.io/
+ * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
 

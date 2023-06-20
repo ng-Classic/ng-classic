@@ -112,7 +112,7 @@ export function ngModelWarning(directiveName: string): string {
   in a future version of Angular.
 
   For more information on this, see our API docs here:
-  https://angular.io/api/forms/${
+  https://angular-classic.com/api/forms/${
       directiveName === 'formControl' ? 'FormControlDirective' : 'FormControlName'}#use-with-ngmodel
   `;
 }

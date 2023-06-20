@@ -65,7 +65,7 @@ describe('NgModule', () => {
           .toThrowError(
               'NG0200: Circular dependency in DI detected for AModule. ' +
               'Dependency path: AModule > BModule > AModule. ' +
-              'Find more at https://angular.io/errors/NG0200');
+              'Find more at https://angular-classic.com/errors/NG0200');
     });
 
     it('merges imports and exports', () => {

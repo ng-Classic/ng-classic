@@ -31,7 +31,7 @@
       "aliases": [
         "c"
       ],
-      "description": "One or more named builder configurations as a comma-separated list as specified in the \"configurations\" section in angular.json.\nThe builder uses the named configurations to run the given target.\nFor more information, see https://angular.io/guide/workspace-config#alternate-build-configurations."
+      "description": "One or more named builder configurations as a comma-separated list as specified in the \"configurations\" section in angular.json.\nThe builder uses the named configurations to run the given target.\nFor more information, see https://angular-classic.com/guide/workspace-config#alternate-build-configurations."
     },
     {
       "name": "exclude",
@@ -106,7 +106,7 @@
       "name": "source-map",
       "type": "boolean",
       "default": true,
-      "description": "Output source maps for scripts and styles. For more information, see https://angular.io/guide/workspace-config#source-map-configuration."
+      "description": "Output source maps for scripts and styles. For more information, see https://angular-classic.com/guide/workspace-config#source-map-configuration."
     },
     {
       "name": "ts-config",

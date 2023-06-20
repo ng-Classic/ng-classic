@@ -14,7 +14,7 @@ const extendedDiagnosticsPackage = require('../angular-extended-diagnostics-pack
 const cliDocsPackage = require('../cli-docs-package');
 
 module.exports = new Package(
-    'angular.io',
+    'angular-classic.com',
     [gitPackage, apiPackage, contentPackage, cliDocsPackage, errorsPackage, extendedDiagnosticsPackage])
 
   // This processor relies upon the versionInfo. See below...

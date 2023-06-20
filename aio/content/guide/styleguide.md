@@ -1596,7 +1596,7 @@ It is easier to recognize that a symbol is a component by looking at the templat
 <div class="alert is-helpful">
 
 There are a few cases where you give a component an attribute, such as when you want to augment a built-in element.
-For example, [Material Design](https://material.angular.io/components/button/overview) uses this technique with `<button mat-button>`.
+For example, [Material Design](https://material.angular-classic.com/components/button/overview) uses this technique with `<button mat-button>`.
 However, you wouldn't use this technique on a custom element.
 
 </div>

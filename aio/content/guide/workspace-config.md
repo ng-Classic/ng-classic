@@ -215,7 +215,7 @@ By default, the `ng build` command uses the `production` configuration, which ap
 *   Rewriting code to use short, mangled names, also known as minification
 
 You can define and name extra alternate configurations \(such as `stage`, for instance\) appropriate to your development process.
-Some examples of different build configurations are `stable`, `archive`, and `next` used by Angular.io itself, and the individual locale-specific configurations required for building localized versions of an application.
+Some examples of different build configurations are `stable`, `archive`, and `next` used by angular-classic.com itself, and the individual locale-specific configurations required for building localized versions of an application.
 For details, see [Internationalization (i18n)][AioGuideI18nCommonMerge].
 
 You can select an alternate configuration by passing its name to the `--configuration` command line flag.

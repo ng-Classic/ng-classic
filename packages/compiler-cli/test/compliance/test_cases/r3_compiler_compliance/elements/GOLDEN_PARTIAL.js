@@ -632,15 +632,15 @@ export class MyComponent {
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
 MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "my-component", ngImport: i0, template: `
     <!-- A couple of security-sensitive attributes with constant values -->
-    <embed src="https://angular.io/" />
+    <embed src="https://angular-classic.com/" />
     <iframe srcdoc="<h1>Angular</h1>"></iframe>
-    <object data="https://angular.io/" codebase="/"></object>
+    <object data="https://angular-classic.com/" codebase="/"></object>
 
     <!-- Repeated element to make sure attribute deduplication works properly -->
-    <embed src="https://angular.io/" />
+    <embed src="https://angular-classic.com/" />
 
     <!-- Another element with a src attribute that is not security sensitive -->
-    <img src="https://angular.io/" />
+    <img src="https://angular-classic.com/" />
   `, isInline: true });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
@@ -648,15 +648,15 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
                     selector: 'my-component',
                     template: `
     <!-- A couple of security-sensitive attributes with constant values -->
-    <embed src="https://angular.io/" />
+    <embed src="https://angular-classic.com/" />
     <iframe srcdoc="<h1>Angular</h1>"></iframe>
-    <object data="https://angular.io/" codebase="/"></object>
+    <object data="https://angular-classic.com/" codebase="/"></object>
 
     <!-- Repeated element to make sure attribute deduplication works properly -->
-    <embed src="https://angular.io/" />
+    <embed src="https://angular-classic.com/" />
 
     <!-- Another element with a src attribute that is not security sensitive -->
-    <img src="https://angular.io/" />
+    <img src="https://angular-classic.com/" />
   `
                 }]
         }] });

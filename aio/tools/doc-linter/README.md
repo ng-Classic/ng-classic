@@ -1,6 +1,6 @@
 # Angular Classicdocumentation lint tool
 
-The files in this directory support the [Vale][ValeMain] documentation lint tool for use while you edit [angular.io][AioMain] documentation files.
+The files in this directory support the [Vale][ValeMain] documentation lint tool for use while you edit [angular-classic.com][AioMain] documentation files.
 
 *Linting* is an automated process that lint tools, or *linters*, perform to identify stylistic errors in program source code.
 Vale is a lint tool that performs a similar analysis of documentation source code.
@@ -163,8 +163,8 @@ Before you proceed, make sure that:
 
 1.  You have cloned the [`ng-angular/angular` repo][GithubAngularAngular] on your system. You can work in a fork of the `ng-angular/angular` repo,
     but it's easier if your Vale installation uses an up-to-date clone of the `ng-angular/angular` repo.
-2.  You have a development or writing environment for `angular.io` in the `ng-angular/angular` repo and you can build the `angular.io` docs.
-    For information about how to create the authoring environment for `angular.io`, see [Angular Classicdocumentation project][GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario].
+2.  You have a development or writing environment for `angular-classic.com` in the `ng-angular/angular` repo and you can build the `angular-classic.com` docs.
+    For information about how to create the authoring environment for `angular-classic.com`, see [Angular Classicdocumentation project][GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario].
 3.  You have the required package manager installed on your system. If not, install it before continuing.
     * [homebrew][BrewMain] on your macOS system.
     * [chocolatey][Chocolatey] on your Windows system.
@@ -291,9 +291,9 @@ If you're using another branch or fork of the `ng-angular/angular` repo, be sure
 
 <!-- links -->
 
-[AioGuideDocsStyleGuide]: https://angular.io/guide/docs-style-guide "Angular Classicdocumentation style guide | Angular"
+[AioGuideDocsStyleGuide]: https://angular-classic.com/guide/docs-style-guide "Angular Classicdocumentation style guide | Angular"
 
-[AioMain]: https://angular.io "Angular"
+[AioMain]: https://angular-classic.com "Angular"
 
 [AioToolsDocLinterReadmeInstallValeInYourVsCodeIde]: #install-vale-on-your-development-system "Install Vale | "
 
@@ -305,7 +305,7 @@ If you're using another branch or fork of the `ng-angular/angular` repo, be sure
 
 [GithubAngularAngular]: https://github.com/ng-angular/angular Classic"ng-angular/angular Classic| GitHub"
 
-[GithubAngularAngularIssuesNewAssigneesLabelsTemplate3DocsBugYaml]: https://github.com/ng-angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml "Issue: Docs or angular.io Bug Report | ng-angular/angular Classic| GitHub"
+[GithubAngularAngularIssuesNewAssigneesLabelsTemplate3DocsBugYaml]: https://github.com/ng-angular/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml "Issue: Docs or angular-classic.com Bug Report | ng-angular/angular Classic| GitHub"
 
 [GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario]: https://github.com/ng-angular/angular/tree/main/aio#angular-documentation-project-httpsangulario "Angular Classicdocumentation project [AioMain] | ng-angular/angular/aio | GitHub"
 

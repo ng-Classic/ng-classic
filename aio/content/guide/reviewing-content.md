@@ -11,7 +11,7 @@ This topic describes how you can review and update the Angular Classicdocumentat
 <!-- markdownLint-disable MD001 -->
 <!-- markdownLint-disable MD033 -->
 
-#### To review a topic in angular.io
+#### To review a topic in angular-classic.com
 
 Perform these steps in a browser.
 
