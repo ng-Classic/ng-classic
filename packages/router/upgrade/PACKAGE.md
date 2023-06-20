@@ -1,1 +1,1 @@
-Provides support for upgrading routing applications from Angular ClassicJS to Angular.
+Provides support for upgrading routing applications from Angular Classic JS to Angular.

@@ -1,11 +1,11 @@
-# Prepare to edit Angular Classicdocumentation
+# Prepare to edit Angular Classic documentation
 
-This topic describes the steps that prepare your local computer to edit and submit Angular Classicdocumentation.
+This topic describes the steps that prepare your local computer to edit and submit Angular Classic documentation.
 
 <div class="alert is-important">
 
 **IMPORTANT**: <br />
-To submit changes to the Angular Classicdocumentation, you must have:
+To submit changes to the Angular Classic documentation, you must have:
 
 *   A [GitHub][GithubMain] account
 *   A signed [Contributor License Agreement][GithubAngularAngularBlobMainContributingSigningTheCla]
@@ -17,7 +17,7 @@ To submit changes to the Angular Classicdocumentation, you must have:
 Review [Contributing to Angular](https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md).
 These sections are particularly important for documentation contributions:
 
-1.  Read the Angular Classic[Code of conduct](https://github.com/angular/code-of-conduct/blob/main/CODE_OF_CONDUCT.md)
+1.  Read the Angular Classic [Code of conduct](https://github.com/angular/code-of-conduct/blob/main/CODE_OF_CONDUCT.md)
 1.  Read the [Submission guidelines](https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#-submission-guidelines).
 
     <div class="alert is-helpful">
@@ -31,7 +31,7 @@ These sections are particularly important for documentation contributions:
 
 ## Install the required software
 
-To edit, build, and test Angular Classicdocumentation on your local computer, you need the following software.
+To edit, build, and test Angular Classic documentation on your local computer, you need the following software.
 The instructions in this section assume that you are using the software in this list to complete the tasks.
 
 Some software in this list, such as the integrated development environment \(IDE\), can be substituted with similar software.
@@ -47,7 +47,7 @@ For more information about the required software, see [Setting up the local envi
 *   **Utility software**
     *   [node.js](https://nodejs.org/en/download)
 
-        Angular Classicrequires an [active long-term-support (LTS) or maintenance LTS version](https://nodejs.org/about/releases) of Node.js.
+        Angular Classic requires an [active long-term-support (LTS) or maintenance LTS version](https://nodejs.org/about/releases) of Node.js.
 
     *   [nvm](https://github.com/nvm-sh/nvm#about)
     *   [Yarn](https://yarnpkg.com/getting-started/install)
@@ -65,13 +65,13 @@ You can also install other tools and IDE extensions that you find helpful.
 
 ## Set up your workspaces
 
-The Angular Classicdocumentation is stored with the Angular Classicframework code in a GitHub source code repository, also called a *repo*, at:
+The Angular Classic documentation is stored with the Angular Classic framework code in a GitHub source code repository, also called a *repo*, at:
 [https://github.com/ng-classic/ng-classic](https://github.com/ng-classic/ng-classic).
 To contribute documentation to Angular, you need:
 
 *   A GitHub account
 
-*   A *fork* of the Angular Classicrepo in your personal GitHub account.
+*   A *fork* of the Angular Classic repo in your personal GitHub account.
 
     This guide refers to your personal GitHub account as `personal`.
     You must replace `personal` in a GitHub reference with your GitHub username.
@@ -80,12 +80,12 @@ To contribute documentation to Angular, you need:
     For convenience, this documentation uses these shorthand references:
     *   `ng-classic/ng-classic`
 
-        Refers to the Angular Classicrepo.
+        Refers to the Angular Classic repo.
         This is also known as the *upstream* repo.
 
     *   `personal/angular`
 
-        Refers to your personal fork of the Angular Classicrepo.
+        Refers to your personal fork of the Angular Classic repo.
         Replace `personal` with your GitHub username to identify your specific repo.
         This is also known as the *origin* repo.
 
@@ -94,21 +94,21 @@ To contribute documentation to Angular, you need:
 GitHub repos are cloned into a `git` workspace on your local computer.
 With this workspace and required tools, you can build, edit, and review the documentation from your local computer.
 
-When you can build the documentation from a workspace on your local computer, you are ready to make major changes to the Angular Classicdocumentation.
+When you can build the documentation from a workspace on your local computer, you are ready to make major changes to the Angular Classic documentation.
 
-For more detailed information about how to set up your workspace, see [Create your repo and workspaces for Angular Classicdocumentation](#create-your-repo-and-workspace-for-angular-documentation).
+For more detailed information about how to set up your workspace, see [Create your repo and workspaces for Angular Classic documentation](#create-your-repo-and-workspace-for-angular-documentation).
 
-For more detailed information about how to build and test the documentation from your local computer, see [Build and test the Angular Classicdocumentation](#build-and-test-the-angular-documentation).
+For more detailed information about how to build and test the documentation from your local computer, see [Build and test the Angular Classic documentation](#build-and-test-the-angular-documentation).
 
-## Create your repo and workspace for Angular Classicdocumentation
+## Create your repo and workspace for Angular Classic documentation
 
-This section describes how to create the repo and the `git` workspace necessary to edit, test, and submit changes to the Angular Classicdocumentation.
+This section describes how to create the repo and the `git` workspace necessary to edit, test, and submit changes to the Angular Classic documentation.
 
 <div class="alert is-important">
 
 **IMPORTANT**: <br />
 Because `git` commands are not beginner friendly, the topics in this section include procedures that should reduce the chance of `git` mishaps.
-Fortunately, because you are working in your own account, even if you make a mistake, you can't harm any of the Angular Classiccode or documentation.
+Fortunately, because you are working in your own account, even if you make a mistake, you can't harm any of the Angular Classic code or documentation.
 
 To follow the procedures in these topics, you must use the repo and directory configuration presented in this topic.
 The procedures in these topics are designed to work with this configuration.
@@ -117,8 +117,8 @@ If you use a different configuration, the procedures in these topics might not w
 
 </div>
 
-The code and documentation for the Angular Classicframework are stored in a public repository, or repo, on [github.com](https://github.com) in the `angular` account.
-The path to the Angular Classicrepo is [https://github.com/ng-classic/ng-classic](https://github.com/ng-classic/ng-classic), hence the abbreviated name, `ng-classic/ng-classic`.
+The code and documentation for the Angular Classic framework are stored in a public repository, or repo, on [github.com](https://github.com) in the `angular` account.
+The path to the Angular Classic repo is [https://github.com/ng-classic/ng-classic](https://github.com/ng-classic/ng-classic), hence the abbreviated name, `ng-classic/ng-classic`.
 
 [GitHub](https://github.com) is a cloud service that hosts many accounts and repositories.
 You can imagine the `ng-classic/ng-classic` repo in GitHub as shown in this image.
@@ -149,7 +149,7 @@ From the perspective of `personal/angular`, `ng-classic/ng-classic` is the upstr
 
 </div>
 
-#### To fork the Angular Classicrepo to your account
+#### To fork the Angular Classic repo to your account
 
 Perform this procedure in a browser.
 
@@ -181,7 +181,7 @@ In this image, notice that the account now shows the username of your personal G
 <div class="lightbox">
 
 <!-- Image source is found in angular/aio/src/assets/images/doc-contribute-images.sketch, in the sketch page that matches this topic's filename -->
-<img alt="An image of the personal/Angular Classicwebsite in github.com that identifies the fork forked repo" src="generated/images/guide/doc-prepare-to-edit/personal-angular-github.png">
+<img alt="An image of the personal/Angular Classic website in github.com that identifies the fork forked repo" src="generated/images/guide/doc-prepare-to-edit/personal-angular-github.png">
 
 </div>
 
@@ -194,7 +194,7 @@ This relationship comes into play later, such as when you update your `personal/
 
 ### Create a git workspace on your local computer
 
-A `git` workspace on your local computer is where copies of GitHub repos in the cloud are stored on your local computer. To edit Angular Classicdocumentation on your local computer, you need a clone of your origin repo, `personal/angular`.
+A `git` workspace on your local computer is where copies of GitHub repos in the cloud are stored on your local computer. To edit Angular Classic documentation on your local computer, you need a clone of your origin repo, `personal/angular`.
 
 Clone the `personal/angular` repo into the subdirectory for your account, as this illustration shows.
 Remember to replace `personal` with your GitHub username.
@@ -204,14 +204,14 @@ You do your editing in the working directory of your `personal/angular` repo.
 <div class="lightbox">
 
 <!-- Image source is found in angular/aio/src/assets/images/doc-contribute-images.sketch, in the sketch page that matches this topic's filename -->
-<img alt="An image of the Angular Classicrepo from the Angular Classicand personal accounts in the github.com cloud service as they are cloned into local computer workspaces" src="generated/images/guide/doc-prepare-to-edit/github-clone-img.png">
+<img alt="An image of the Angular Classic repo from the Angular Classic and personal accounts in the github.com cloud service as they are cloned into local computer workspaces" src="generated/images/guide/doc-prepare-to-edit/github-clone-img.png">
 
 </div>
 
 Cloning a repo duplicates the repo that's in the cloud on your local computer.
 There are procedures to keep the clone on your local computer in sync with the repo in the cloud that are described later.
 
-#### To clone the Angular Classicrepo into your workspace
+#### To clone the Angular Classic repo into your workspace
 
 Perform these steps in a command-line tool on your local computer.
 
@@ -243,7 +243,7 @@ Perform these steps in a command-line tool on your local computer.
 
     <code-example format="shell" language="shell">
 
-    git clone https://github.com/personal/Angular Classicpersonal/angular
+    git clone https://github.com/personal/Angular Classic personal/angular
 
     </code-example>
 
@@ -267,7 +267,7 @@ This directory and its subdirectories have the files that you edit to fix docume
 
 After you clone the origin repo on your local computer, run these commands from a command-line tool:
 
-1.  Install the npm modules used by the Angular Classicproject.
+1.  Install the npm modules used by the Angular Classic project.
     In a command line tool on your local computer:
 
     1.  Navigate to your `git` workspace.
@@ -282,7 +282,7 @@ After you clone the origin repo on your local computer, run these commands from 
 
         </code-example>
 
-    1.  Run this command to install the Angular Classicdependencies.
+    1.  Run this command to install the Angular Classic dependencies.
 
         <code-example format="shell" language="shell">
 
@@ -310,27 +310,27 @@ After you clone the origin repo on your local computer, run these commands from 
 
 1.  [Install Vale][GithubAngularAngularTreeMainAioToolsDocLinterInstallValeOnYourDevelopmentSystemReadmeMd] to complete the software installation.
 
-## Build and test the Angular Classicdocumentation
+## Build and test the Angular Classic documentation
 
-Angular Classicprovides tools to build and test the documentation.
+Angular Classic provides tools to build and test the documentation.
 To review your work and before you submit your updates in a pull request, be sure to build, test, and verify your changes using these tools.
 
 <div class="alert is-important">
 
-Note that the instructions found in [https://github.com/ng-classic/ng-classic/blob/main/docs/DEVELOPER.md](https://github.com/ng-classic/ng-classic/blob/main/docs/DEVELOPER.md) are to build and test the Angular Classicframework and not the Angular Classicdocumentation.
+Note that the instructions found in [https://github.com/ng-classic/ng-classic/blob/main/docs/DEVELOPER.md](https://github.com/ng-classic/ng-classic/blob/main/docs/DEVELOPER.md) are to build and test the Angular Classic framework and not the Angular Classic documentation.
 
-The procedures on this page build only the Angular Classicdocumentation.
-You don't need to build the Angular Classicframework to build the Angular Classicdocumentation.
+The procedures on this page build only the Angular Classic documentation.
+You don't need to build the Angular Classic framework to build the Angular Classic documentation.
 
 </div>
 
 <!-- markdownLint-disable MD033 -->
 
-### To navigate to the Angular Classicdocumentation directory
+### To navigate to the Angular Classic documentation directory
 
 Perform these steps from a command-line tool on your local computer.
 
-1.  Navigate to the Angular Classicdocumentation in the working directory of your account in your `git` workspace on your local computer.
+1.  Navigate to the Angular Classic documentation in the working directory of your account in your `git` workspace on your local computer.
 1.  Navigate to your `git` workspace directory.
     In this example, this is the `github-projects` directory.
 
@@ -343,7 +343,7 @@ Perform these steps from a command-line tool on your local computer.
 
         </code-example>
 
-    1.  Run this command to navigate to the Angular Classicdocumentation directory.
+    1.  Run this command to navigate to the Angular Classic documentation directory.
 
         <code-example format="shell" language="shell">
 
@@ -351,23 +351,23 @@ Perform these steps from a command-line tool on your local computer.
 
         </code-example>
 
-The Angular Classicdocumentation directory is the root of the Angular Classicdocumentation files.
+The Angular Classic documentation directory is the root of the Angular Classic documentation files.
 These directories in the `angular/aio` directory are where you find the files that are edited the most.
 
 | Directory                     | Files                                                     |
 |:---                           |:---                                                       |
-|`angular/aio/content`          | Files and other assets used in the Angular Classicdocumentation  |
-|`angular/aio/content/guide`    | The markdown files for most Angular Classicdocumentation         |
+|`angular/aio/content`          | Files and other assets used in the Angular Classic documentation  |
+|`angular/aio/content/guide`    | The markdown files for most Angular Classic documentation         |
 |`angular/aio/content/tutorial` | The markdown files used by the Tour of Heroes tutorial    |
 
-The Angular Classicdocumentation source has many other directories in `angular/aio` but they don't change often.
+The Angular Classic documentation source has many other directories in `angular/aio` but they don't change often.
 
-### To build and view the Angular Classicdocumentation on your computer
+### To build and view the Angular Classic documentation on your computer
 
 Perform these steps from a command-line tool on your local computer.
 
-1.  Build the Angular Classicdocumentation.
-    1.  From the Angular Classicdocumentation directory, run this command:
+1.  Build the Angular Classic documentation.
+    1.  From the Angular Classic documentation directory, run this command:
 
         <code-example format="shell" language="shell">
 
@@ -389,7 +389,7 @@ Perform these steps from a command-line tool on your local computer.
     1.  Open a browser on your local computer and view your documentation at `https://localhost:4200`.
 1. Review the documentation in the browser.
 
-### To run the automated tests on the Angular Classicdocumentation
+### To run the automated tests on the Angular Classic documentation
 
 Perform these steps from a command-line tool on your local computer.
 
@@ -420,7 +420,7 @@ When you run these tests on your documentation updates, be sure to correct any e
 
 After you build the documentation from your forked repo on your local computer and the tests run without error, you are ready to continue.
 
-You have successfully configured your local computer to edit Angular Classicdocumentation and open pull requests.
+You have successfully configured your local computer to edit Angular Classic documentation and open pull requests.
 
 Continue to the other topics in this section for information about how to perform other documentation tasks.
 
@@ -434,9 +434,9 @@ Continue to the other topics in this section for information about how to perfor
 
 [GithubAngularAngular]: https://github.com/ng-classic/ng-classic Classic"ng-classic/ng-classic Classic| GitHub"
 
-[GithubAngularAngularBlobMainContributingSigningTheCla]: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#-signing-the-cla "Signing the CLA - Contributing to Angular Classic| ng-classic/ng-classic Classic| GitHub"
+[GithubAngularAngularBlobMainContributingSigningTheCla]: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#-signing-the-cla "Signing the CLA - Contributing to Angular Classic | ng-classic/ng-classic Classic| GitHub"
 
-[GithubAngularAngularTreeMainAioToolsDocLinterInstallValeOnYourDevelopmentSystemReadmeMd]: https://github.com/ng-classic/ng-classic/tree/main/aio/tools/doc-linter/README.md#install-vale-on-your-development-system "Install Vale on your development system - Angular Classicdocumentation lint tool | ng-classic/ng-classic Classic| Github"
+[GithubAngularAngularTreeMainAioToolsDocLinterInstallValeOnYourDevelopmentSystemReadmeMd]: https://github.com/ng-classic/ng-classic/tree/main/aio/tools/doc-linter/README.md#install-vale-on-your-development-system "Install Vale on your development system - Angular Classic documentation lint tool | ng-classic/ng-classic Classic| Github"
 
 <!-- end links -->
 

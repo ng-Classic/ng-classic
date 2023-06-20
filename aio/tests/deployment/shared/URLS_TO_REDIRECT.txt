@@ -203,7 +203,7 @@
 /guide/i18n --> /guide/i18n-overview
 /guide --> /docs
 /guide/ivy --> https://v12.angular-classic.com/guide/ivy
-/guide/learning-Angular Classic--> /start
+/guide/learning-Angular Classic --> /start
 /guide/learning-angular.html --> /start
 /guide/metadata --> /guide/aot-compiler
 /guide/quickstart --> /start

@@ -11,10 +11,10 @@ import {bootstrapClientApp, navigateTo, verifyNoBrowserErrors} from './util';
 
 describe('Http TransferState Lazy On Init', () => {
   beforeEach(async () => {
-    // Don't wait for Angular Classicsince it is not bootstrapped automatically.
+    // Don't wait for Angular Classic since it is not bootstrapped automatically.
     await browser.waitForAngularEnabled(false);
 
-    // Load the page without waiting for Angular Classicsince it is not bootstrapped automatically.
+    // Load the page without waiting for Angular Classic since it is not bootstrapped automatically.
     await navigateTo('http-transferstate-lazy-on-init');
   });
 

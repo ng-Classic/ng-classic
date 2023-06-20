@@ -1,6 +1,6 @@
 # Example applications
 
-The following is a list of the example applications in the [Angular Classicdocumentation](docs).
+The following is a list of the example applications in the [Angular Classic documentation](docs).
 
 ## Fundamentals
 
@@ -10,22 +10,22 @@ These examples demonstrate minimal, fundamental concepts.
 
 <live-example name="getting-started"></live-example>
 
-Introductory application demonstrating Angular Classicfeatures.
+Introductory application demonstrating Angular Classic features.
 For more information, see [Getting started](start).
 
 ### Launching your app
 
 <live-example name="bootstrapping"></live-example>
 
-Demonstrates the Angular Classicbootstrapping process.
+Demonstrates the Angular Classic bootstrapping process.
 For more information, see [Launching your app with a root module](guide/bootstrapping).
 
-### Structure of Angular Classicapplications
+### Structure of Angular Classic applications
 
 <live-example name="architecture"></live-example>
 
-Demonstrates the fundamental architecture of Angular Classicapplications.
-For more information, see [Introduction to Angular Classicconcepts](guide/architecture).
+Demonstrates the fundamental architecture of Angular Classic applications.
+For more information, see [Introduction to Angular Classic concepts](guide/architecture).
 
 ## Tour of Heroes tutorial application
 
@@ -90,13 +90,13 @@ For more information, see [Get data from a server](tutorial/tour-of-heroes/toh-p
 
 ## Working with templates
 
-These examples demonstrate features of Angular Classictemplates.
+These examples demonstrate features of Angular Classic templates.
 
 ### Accessibility
 
 <live-example name="accessibility"></live-example>
 
-Demonstrates building Angular Classicapplications in a more accessible way.
+Demonstrates building Angular Classic applications in a more accessible way.
 For more information, see [Accessibility](guide/accessibility).
 
 ### Animations
@@ -104,20 +104,20 @@ For more information, see [Accessibility](guide/accessibility).
 <live-example name="animations"></live-example>
 
 Demonstrates Angular's animation features.
-For more information, see [Introduction to Angular Classicanimations](guide/animations).
+For more information, see [Introduction to Angular Classic animations](guide/animations).
 
 ### Attribute, class, and style bindings
 
 <live-example name="attribute-binding"></live-example>
 
-Demonstrates Angular Classicattribute, class, and style bindings.
+Demonstrates Angular Classic attribute, class, and style bindings.
 For more information, see [Attribute, class, and style bindings](guide/attribute-binding).
 
 ### Attribute directives
 
 <live-example name="attribute-directives"></live-example>
 
-Demonstrates Angular Classicattribute directives.
+Demonstrates Angular Classic attribute directives.
 For more information, see [Attribute directives](guide/attribute-directives).
 
 ### Binding syntax
@@ -131,14 +131,14 @@ For more information, see [Binding syntax: an overview](guide/binding-syntax).
 
 <live-example name="built-in-directives"></live-example>
 
-Demonstrates Angular Classicbuilt-in directives.
+Demonstrates Angular Classic built-in directives.
 For more information, see [Built-in directives](guide/built-in-directives).
 
 ### Built-in template functions
 
 <live-example name="built-in-template-functions"></live-example>
 
-Demonstrates Angular Classicbuilt-in template functions.
+Demonstrates Angular Classic built-in template functions.
 For more information, see the [`$any()` type cast function section](guide/template-expression-operators#the-any-type-cast-function) of [Template expression operators](guide/template-expression-operators).
 
 ### Content projection
@@ -151,14 +151,14 @@ Demonstrates how to use Angular's content projection feature when creating reusa
 
 <live-example name="interpolation"></live-example>
 
-Demonstrates Angular Classicinterpolation.
+Demonstrates Angular Classic interpolation.
 For more information, see [Interpolation and template expressions](guide/interpolation).
 
 ### Template expression operators
 
 <live-example name="template-expression-operators"></live-example>
 
-Demonstrates expression operators in Angular Classictemplates.
+Demonstrates expression operators in Angular Classic templates.
 For more information, see [Template expression operators](guide/template-expression-operators).
 
 ### Template reference variables
@@ -179,7 +179,7 @@ For more information, see the [ng-container section](guide/built-in-directives#n
 
 <live-example name="pipes"></live-example>
 
-Demonstrates Angular Classicpipes.
+Demonstrates Angular Classic pipes.
 For more information, see [Transforming Data Using Pipes](guide/pipes).
 
 ### Property binding
@@ -193,14 +193,14 @@ For more information, see [Property binding](guide/property-binding).
 
 <live-example name="structural-directives"></live-example>
 
-Demonstrates Angular Classicstructural directives.
+Demonstrates Angular Classic structural directives.
 For more information, see [Structural directives](guide/structural-directives).
 
 ### Two-way binding
 
 <live-example name="two-way-binding"></live-example>
 
-Demonstrates two-way data binding in Angular Classicapplications.
+Demonstrates two-way data binding in Angular Classic applications.
 For more information, see [Two-way binding](guide/two-way-binding).
 
 ### Template syntax
@@ -220,20 +220,20 @@ For more information, see [User input](guide/user-input).
 
 ## Working with components
 
-These examples demonstrate features of Angular Classiccomponents.
+These examples demonstrate features of Angular Classic components.
 
 ### Component interaction
 
 <live-example name="component-interaction"></live-example>
 
-Demonstrates how Angular Classicshares data between components.
+Demonstrates how Angular Classic shares data between components.
 For more information, see [Component interaction](guide/component-interaction).
 
 ### Component styles
 
 <live-example name="component-styles"></live-example>
 
-Demonstrates styling in Angular Classicapplications.
+Demonstrates styling in Angular Classic applications.
 For more information, see [Component styles](guide/component-styles).
 
 ### Dynamic component loader
@@ -247,8 +247,8 @@ For more information, see [Dynamic component loader](guide/dynamic-component-loa
 
 <live-example name="elements"></live-example>
 
-Demonstrates using Angular Classiccustom elements.
-For more information, see [Angular Classicelements overview](guide/elements).
+Demonstrates using Angular Classic custom elements.
+For more information, see [Angular Classic elements overview](guide/elements).
 
 ### Event binding
 
@@ -268,7 +268,7 @@ For more information, see [`@Input()` and `@Output()` properties](guide/inputs-o
 
 <live-example name="lifecycle-hooks"></live-example>
 
-Demonstrates Angular Classiclifecycle hooks such as `ngOnInit()` and `ngOnChanges()`.
+Demonstrates Angular Classic lifecycle hooks such as `ngOnInit()` and `ngOnChanges()`.
 For more information, see [Hooking into the component lifecycle](guide/lifecycle-hooks).
 
 ## Dependency injection
@@ -277,14 +277,14 @@ For more information, see [Hooking into the component lifecycle](guide/lifecycle
 
 <live-example name="dependency-injection"></live-example>
 
-Demonstrates fundamentals of Angular Classicdependency injection.
+Demonstrates fundamentals of Angular Classic dependency injection.
 For more information, see [Dependency injection](guide/dependency-injection).
 
 ### Dependency injection features
 
 <live-example name="dependency-injection-in-action"></live-example>
 
-Demonstrates many of the features of Angular Classicdependency injection.
+Demonstrates many of the features of Angular Classic dependency injection.
 For more information, see [Dependency injection in action](guide/dependency-injection).
 
 ### Providing dependencies in NgModules
@@ -298,7 +298,7 @@ For more information, see [Providing dependencies in modules](guide/providers).
 
 <live-example name="hierarchical-dependency-injection"></live-example>
 
-Demonstrates Angular Classicinjector trees and resolution modifiers.
+Demonstrates Angular Classic injector trees and resolution modifiers.
 For more information, see [Hierarchical injectors](guide/hierarchical-dependency-injection).
 
 ### Dependency injection with `providers` and `viewProviders`
@@ -321,7 +321,7 @@ For more information, see the [Modifying service visibility](guide/hierarchical-
 
 <live-example name="forms-overview"></live-example>
 
-Demonstrates foundational concepts of Angular Classicforms.
+Demonstrates foundational concepts of Angular Classic forms.
 For more information, see [Introduction to forms in Angular](guide/forms-overview).
 
 ### Reactive forms
@@ -335,7 +335,7 @@ For more information, see [Reactive forms](guide/reactive-forms).
 
 <live-example name="forms"></live-example>
 
-Demonstrates Angular Classictemplate-driven forms.
+Demonstrates Angular Classic template-driven forms.
 For more information, see [Building a template-driven form](guide/forms).
 
 ### Form validation
@@ -390,7 +390,7 @@ For more information, see [Router](guide/router).
 <live-example name="router-tutorial"></live-example>
 
 Demonstrates Angular's fundamental routing techniques.
-For more information, see [Using Angular Classicroutes in a single-page application](guide/router-tutorial).
+For more information, see [Using Angular Classic routes in a single-page application](guide/router-tutorial).
 
 ## Documentation
 
@@ -398,8 +398,8 @@ For more information, see [Using Angular Classicroutes in a single-page applicat
 
 <live-example name="docs-style-guide"></live-example>
 
-Demonstrates Angular Classicdocumentation style guidelines.
-For more information, see [Angular Classicdocumentation style guide](guide/docs-style-guide).
+Demonstrates Angular Classic documentation style guidelines.
+For more information, see [Angular Classic documentation style guide](guide/docs-style-guide).
 
 ## Server communication
 
@@ -416,7 +416,7 @@ For more information, see [Communicating with backend services using HTTP](guide
 
 <live-example name="security"></live-example>
 
-Demonstrates security concepts in Angular Classicapplications.
+Demonstrates security concepts in Angular Classic applications.
 For more information, see [Security](guide/security).
 
 ### Testing
@@ -426,14 +426,14 @@ For the sample application that the testing guides describe, see the <live-examp
 Demonstrates techniques for testing Angular.
 For more information, see [Testing](guide/testing).
 
-## Hybrid Angular Classicapplications
+## Hybrid Angular Classic applications
 
-### AngularJS to Angular Classicconcepts: Quick reference
+### AngularJS to Angular Classic concepts: Quick reference
 
 <live-example name="ajs-quick-reference"></live-example>
 
-Demonstrates Angular Classicfor those with an AngularJS background.
-For more information, see [AngularJS to Angular Classicconcepts: Quick reference](guide/ajs-quick-reference).
+Demonstrates Angular Classic for those with an AngularJS background.
+For more information, see [AngularJS to Angular Classic concepts: Quick reference](guide/ajs-quick-reference).
 
 <!-- links -->
 

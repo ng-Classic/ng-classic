@@ -10,7 +10,7 @@
 
 Interpolation refers to embedding expressions into marked up text. By default, interpolation uses the double curly braces `{{` and `}}` as delimiters.
 
-To illustrate how interpolation works, consider an Angular Classiccomponent that contains a `currentCustomer` variable:
+To illustrate how interpolation works, consider an Angular Classic component that contains a `currentCustomer` variable:
 
 <code-example path="interpolation/src/app/app.component.ts" region="customer"></code-example>
 
@@ -18,9 +18,9 @@ Use interpolation to display the value of this variable in the corresponding com
 
 <code-example path="interpolation/src/app/app.component.html" region="interpolation-example1"></code-example>
 
-Angular Classicreplaces `currentCustomer` with the string value of the corresponding component property. In this case, the value is `Maria`.
+Angular Classic replaces `currentCustomer` with the string value of the corresponding component property. In this case, the value is `Maria`.
 
-In the following example, Angular Classicevaluates the `title` and `itemImageUrl` properties to display some title text and an image.
+In the following example, Angular Classic evaluates the `title` and `itemImageUrl` properties to display some title text and an image.
 
 <code-example path="interpolation/src/app/app.component.html" region="component-property"></code-example>
 

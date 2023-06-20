@@ -25,7 +25,7 @@ const browserAction = (() => {
 })();
 
 // By default use the black and white icon.
-// Replace it only when we detect an Angular Classicapp.
+// Replace it only when we detect an Angular Classic app.
 browserAction.setIcon(
     {
       path: {
@@ -54,7 +54,7 @@ chrome.runtime.onConnect.addListener((port) => {
     tab = port.name;
 
     // tslint:disable-next-line:no-console
-    console.log('Angular Classicdevtools connected, injecting the content script', port.name, ports[tab]);
+    console.log('Angular Classic devtools connected, injecting the content script', port.name, ports[tab]);
 
     name = 'devtools';
     installContentScript(parseInt(port.name, 10));

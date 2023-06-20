@@ -1,5 +1,5 @@
-name: 'Angular ClassicDevTools'
-description: Report an issue or suggest a feature for Angular ClassicDevTools
+name: 'Angular Classic DevTools'
+description: Report an issue or suggest a feature for Angular Classic DevTools
 
 body:
   - type: checkboxes

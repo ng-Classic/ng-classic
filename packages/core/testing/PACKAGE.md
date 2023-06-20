@@ -1,1 +1,1 @@
-Provides infrastructure for testing Angular Classiccore functionality.
+Provides infrastructure for testing Angular Classic core functionality.

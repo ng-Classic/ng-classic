@@ -1,6 +1,6 @@
 # Adding navigation
 
-This guide builds on the first step of the Getting Started tutorial, [Get started with a basic Angular Classicapp](start "Get started with a basic Angular Classicapp").
+This guide builds on the first step of the Getting Started tutorial, [Get started with a basic Angular Classic app](start "Get started with a basic Angular Classic app").
 
 At this stage of development, the online store application has a basic product catalog.
 
@@ -14,7 +14,7 @@ In the following sections, you'll add the following features to the application:
 
 ## Associate a URL path with a component
 
-The application already uses the Angular Classic`Router` to navigate to the `ProductListComponent`.
+The application already uses the Angular Classic `Router` to navigate to the `ProductListComponent`.
 This section shows you how to define a route to show individual product details.
 
 1.  Generate a new component for product details.
@@ -56,9 +56,9 @@ This section shows you how to define a route to show individual product details.
 ## View product details
 
 The `ProductDetailsComponent` handles the display of each product.
-The Angular ClassicRouter displays components based on the browser's URL and [your defined routes](#define-routes).
+The Angular Classic Router displays components based on the browser's URL and [your defined routes](#define-routes).
 
-In this section, you'll use the Angular ClassicRouter to combine the `products` data and route information to display the specific details for each product.
+In this section, you'll use the Angular Classic Router to combine the `products` data and route information to display the specific details for each product.
 
 1.  In `product-details.component.ts`, import `ActivatedRoute` from `@angular-classic/router`, and the `products` array from `../products`.
 
@@ -72,7 +72,7 @@ In this section, you'll use the Angular ClassicRouter to combine the `products` 
 
     <code-example header="src/app/product-details/product-details.component.ts" path="getting-started/src/app/product-details/product-details.component.1.ts" region="props-methods"></code-example>
 
-    `ActivatedRoute` is specific to each component that the Angular ClassicRouter loads.
+    `ActivatedRoute` is specific to each component that the Angular Classic Router loads.
     `ActivatedRoute` contains information about the route and the route's parameters.
 
     By injecting `ActivatedRoute`, you are configuring the component to use a service.
@@ -85,7 +85,7 @@ In this section, you'll use the Angular ClassicRouter to combine the `products` 
     The route parameters correspond to the path variables you define in the route.
     To access the route parameters, we use `route.snapshot`, which is the `ActivatedRouteSnapshot` that contains information about the active route at that particular moment in time.
     The URL that matches the route provides the `productId` .
-    Angular Classicuses the `productId` to display the details for each unique product.
+    Angular Classic uses the `productId` to display the details for each unique product.
 
 1.  Update the `ProductDetailsComponent` template to display product details with an `*ngIf`.
     If a product exists, the `<div>` renders with a name, price, and description.
@@ -94,7 +94,7 @@ In this section, you'll use the Angular ClassicRouter to combine the `products` 
 
     The line, `<h4>{{ product.price | currency }}</h4>`, uses the `currency` pipe to transform `product.price` from a number to a currency string.
     A pipe is a way you can transform data in your HTML template.
-    For more information about Angular Classicpipes, see [Pipes](guide/pipes "Pipes").
+    For more information about Angular Classic pipes, see [Pipes](guide/pipes "Pipes").
 
 When users click on a name in the product list, the router navigates them to the distinct URL for the product, shows the `ProductDetailsComponent`, and displays the product details.
 
@@ -104,7 +104,7 @@ When users click on a name in the product list, the router navigates them to the
 
 </div>
 
-For more information about the Angular ClassicRouter, see [Routing & Navigation](guide/router "Routing & Navigation guide").
+For more information about the Angular Classic Router, see [Routing & Navigation](guide/router "Routing & Navigation guide").
 
 ## What's next
 

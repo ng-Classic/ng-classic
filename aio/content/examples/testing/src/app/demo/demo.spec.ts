@@ -43,7 +43,7 @@ describe('demo (no TestBed):', () => {
 
   // MasterService requires injection of a ValueService
   // #docregion MasterService
-  describe('MasterService without Angular Classictesting support', () => {
+  describe('MasterService without Angular Classic testing support', () => {
     let masterService: MasterService;
 
     it('#getValue should return real value from the real service', () => {

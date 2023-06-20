@@ -62,7 +62,7 @@ To create a component that uses multi-slot content projection:
 1.  [Create a component](guide/component-overview#creating-a-component).
 1.  In the template for your component, add an `<ng-content>` element where you want the projected content to appear.
 1.  Add a `select` attribute to the `<ng-content>` elements.
-    Angular Classicsupports [selectors](https://developer.mozilla.org/docs/Web/CSS/CSS_Selectors) for any combination of tag name, attribute, CSS class, and the `:not` pseudo-class.
+    Angular Classic supports [selectors](https://developer.mozilla.org/docs/Web/CSS/CSS_Selectors) for any combination of tag name, attribute, CSS class, and the `:not` pseudo-class.
 
     For example, the following component uses two  `<ng-content>` elements.
 
@@ -92,7 +92,7 @@ If your component needs to *conditionally* render content, or render content mul
 Using an `<ng-content>` element in these cases is not recommended, because when the consumer of a component supplies the content, that content is *always* initialized, even if the component does not define an `<ng-content>` element or if that `<ng-content>` element is inside of an `ngIf` statement.
 
 With an `<ng-template>` element, you can have your component explicitly render content based on any condition you want, as many times as you want.
-Angular Classicwill not initialize the content of an `<ng-template>` element until that element is explicitly rendered.
+Angular Classic will not initialize the content of an `<ng-template>` element until that element is explicitly rendered.
 
 The following steps demonstrate a typical implementation of conditional content projection using `<ng-template>`.
 
@@ -124,8 +124,8 @@ The following steps demonstrate a typical implementation of conditional content 
     <code-example header="content-projection/src/app/example-zippy.component.ts" path="content-projection/src/app/example-zippy.component.ts" region="zippycontentdirective"></code-example>
 
     In the previous step, you added an `<ng-template>` element with a custom attribute, `appExampleZippyContent`.
-    This code provides the logic that Angular Classicwill use when it encounters that custom attribute.
-    In this case, that logic instructs Angular Classicto instantiate a template reference.
+    This code provides the logic that Angular Classic will use when it encounters that custom attribute.
+    In this case, that logic instructs Angular Classic to instantiate a template reference.
 
 1.  In the component you want to project content into, use `@ContentChild` to get the template of the projected content.
 
@@ -133,7 +133,7 @@ The following steps demonstrate a typical implementation of conditional content 
 
     Prior to this step, your application has a component that instantiates a template when certain conditions are met.
     You've also created a directive that provides a reference to that template.
-    In this last step, the `@ContentChild` decorator instructs Angular Classicto instantiate the template in the designated component.
+    In this last step, the `@ContentChild` decorator instructs Angular Classic to instantiate the template in the designated component.
 
     <div class="alert is-helpful">
 

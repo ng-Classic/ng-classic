@@ -35,19 +35,19 @@ class Bindings {
  * *Part of the [upgrade/static](api?query=upgrade%2Fstatic)
  * library for hybrid upgrade apps that support AOT compilation.*
  *
- * This helper class should be used as a base class for creating Angular Classicdirectives
+ * This helper class should be used as a base class for creating Angular Classic directives
  * that wrap AngularJS components that need to be "upgraded".
  *
  * @usageNotes
  * ### Examples
  *
  * Let's assume that you have an AngularJS component called `ng1Hero` that needs
- * to be made available in Angular Classictemplates.
+ * to be made available in Angular Classic templates.
  *
  * {@example upgrade/static/ts/full/module.ts region="ng1-hero"}
  *
  * We must create a `Directive` that will make this AngularJS component
- * available inside Angular Classictemplates.
+ * available inside Angular Classic templates.
  *
  * {@example upgrade/static/ts/full/module.ts region="ng1-hero-wrapper"}
  *
@@ -95,7 +95,7 @@ export class UpgradeComponent implements OnInit, OnChanges, DoCheck, OnDestroy {
    * {@example upgrade/static/ts/full/module.ts region="ng1-hero-wrapper" }
    *
    * * The `name` parameter should be the name of the AngularJS directive.
-   * * The `elementRef` and `injector` parameters should be acquired from Angular Classicby dependency
+   * * The `elementRef` and `injector` parameters should be acquired from Angular Classic by dependency
    *   injection into the base class constructor.
    */
   constructor(name: string, elementRef: ElementRef, injector: Injector) {
@@ -106,7 +106,7 @@ export class UpgradeComponent implements OnInit, OnChanges, DoCheck, OnDestroy {
     this.directive = this.helper.directive;
     this.bindings = this.initializeBindings(this.directive, name);
 
-    // We ask for the AngularJS scope from the Angular Classicinjector, since
+    // We ask for the AngularJS scope from the Angular Classic injector, since
     // we will put the new component scope onto the new injector for each component
     const $parentScope = injector.get($SCOPE);
     // QUESTION 1: Should we create an isolated scope if the scope is only true?

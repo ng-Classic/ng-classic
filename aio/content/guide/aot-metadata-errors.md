@@ -21,7 +21,7 @@ The following are metadata errors you may encounter, with explanations and sugge
 
 <div class="alert is-helpful">
 
-*The compiler encountered an expression it didn't understand while evaluating Angular Classicmetadata.*
+*The compiler encountered an expression it didn't understand while evaluating Angular Classic metadata.*
 
 </div>
 
@@ -42,10 +42,10 @@ const prop = typeof Fooish; // typeof is not valid in metadata
 </code-example>
 
 You can use `typeof` and bracket notation in normal application code.
-You just can't use those features within expressions that define Angular Classicmetadata.
+You just can't use those features within expressions that define Angular Classic metadata.
 
 Avoid this error by sticking to the compiler's [restricted expression syntax](guide/aot-compiler#expression-syntax)
-when writing Angular Classicmetadata
+when writing Angular Classic metadata
 and be wary of new or unusual TypeScript features.
 
 <a id="reference-to-a-local-symbol"></a>
@@ -228,7 +228,7 @@ abstract class MyStrategy { }
 
 </code-example>
 
-Angular Classicgenerates a class factory in a separate module and that factory [can only access exported classes](guide/aot-compiler#exported-symbols).
+Angular Classic generates a class factory in a separate module and that factory [can only access exported classes](guide/aot-compiler#exported-symbols).
 To correct this error, export the referenced class.
 
 <code-example format="typescript" language="typescript">
@@ -269,7 +269,7 @@ function myStrategy() { &hellip; }
 
 </code-example>
 
-Angular Classicgenerates a class factory in a separate module and that factory [can only access exported functions](guide/aot-compiler#exported-symbols).
+Angular Classic generates a class factory in a separate module and that factory [can only access exported functions](guide/aot-compiler#exported-symbols).
 To correct this error, export the function.
 
 <code-example format="typescript" language="typescript">
@@ -418,7 +418,7 @@ export class MyComponent {
 </code-example>
 
 TypeScript understands ambient types so you don't import them.
-The Angular Classiccompiler does not understand a type that you neglect to export or import.
+The Angular Classic compiler does not understand a type that you neglect to export or import.
 
 In this case, the compiler doesn't understand how to inject something with the `Window` token.
 
@@ -457,7 +457,7 @@ export class MyComponent {
 The `Window` type in the constructor is no longer a problem for the compiler because it
 uses the `@Inject(WINDOW)` to generate the injection code.
 
-Angular Classicdoes something similar with the `DOCUMENT` token so you can inject the browser's `document` object \(or an abstraction of it, depending upon the platform in which the application runs\).
+Angular Classic does something similar with the `DOCUMENT` token so you can inject the browser's `document` object \(or an abstraction of it, depending upon the platform in which the application runs\).
 
 <code-example format="typescript" language="typescript">
 
@@ -505,7 +505,7 @@ provider: [{ provide: Foo, useValue: { '0': 'test' } }]
 
 <div class="alert is-helpful">
 
-*Angular Classiccouldn't determine the value of the [enum member](https://www.typescriptlang.org/docs/handbook/enums.html) that you referenced in metadata.*
+*Angular Classic couldn't determine the value of the [enum member](https://www.typescriptlang.org/docs/handbook/enums.html) that you referenced in metadata.*
 
 </div>
 

@@ -1,6 +1,6 @@
 # Browser support
 
-Angular Classicsupports most recent browsers.
+Angular Classic supports most recent browsers.
 This includes the following specific versions:
 
 | Browser | Supported versions |
@@ -20,14 +20,14 @@ Angular's continuous integration process runs unit tests of the framework on all
 
 ## Polyfills
 
-Angular Classicis built on the latest standards of the web platform.
+Angular Classic is built on the latest standards of the web platform.
 Targeting such a wide range of browsers is challenging because they do not support all features of modern browsers.
 You compensate by loading polyfill scripts \("polyfills"\) for the browsers that you must support.
 See instructions on how to include polyfills into your project below.
 
 <div class="alert is-important">
 
-The suggested polyfills are the ones that run full Angular Classicapplications.
+The suggested polyfills are the ones that run full Angular Classic applications.
 You might need additional polyfills to support features not covered by this list.
 
 </div>
@@ -41,7 +41,7 @@ Polyfills cannot magically transform an old, slow browser into a modern, fast on
 
 ## Enabling polyfills with CLI projects
 
-The [Angular ClassicCLI](cli) provides support for polyfills.
+The [Angular Classic CLI](cli) provides support for polyfills.
 If you are not using the CLI to create your projects, see [Polyfill instructions for non-CLI users](#non-cli).
 
 The `polyfills` options of the [browser](cli/build) and [test](cli/test) builder can be a full path for a file \(Example: `src/polyfills.ts`\) or,
@@ -93,7 +93,7 @@ For example:
    */
   // &lowbar;&lowbar;Zone_enable_cross_context_check = true;
 &lt;/script&gt;
-&lt;!-- zone.js required by Angular Classic--&gt;
+&lt;!-- zone.js required by Angular Classic --&gt;
 &lt;script src="node_modules/zone.js/bundles/zone.umd.js"&gt;&lt;/script&gt;
 &lt;!-- application polyfills --&gt;
 

@@ -15,7 +15,7 @@ import {downgradeComponent, downgradeInjectable, downgradeModule, UpgradeCompone
 
 declare var angular: ng.IAngularStatic;
 
-// An Angular Classicmodule that declares an Angular Classicservice and a component,
+// An Angular Classic module that declares an Angular Classic service and a component,
 // which in turn uses an upgraded AngularJS component.
 @Component({
   selector: 'ng2A',
@@ -50,7 +50,7 @@ export class Ng2AModule {
 }
 
 
-// Another Angular Classicmodule that declares an Angular Classiccomponent.
+// Another Angular Classic module that declares an Angular Classic component.
 @Component({
   selector: 'ng2B',
   template: 'Component B',
@@ -67,7 +67,7 @@ export class Ng2BModule {
 }
 
 
-// The downgraded Angular Classicmodules.
+// The downgraded Angular Classic modules.
 const downgradedNg2AModule = downgradeModule(
     (extraProviders: StaticProvider[]) =>
         (getPlatform() || platformBrowserDynamic(extraProviders)).bootstrapModule(Ng2AModule));
@@ -109,14 +109,14 @@ const appModule =
         })
         .directive('ng2A', downgradeComponent({
                      component: Ng2AComponent,
-                     // Since there is more than one downgraded Angular Classicmodule,
+                     // Since there is more than one downgraded Angular Classic module,
                      // specify which module this component belongs to.
                      downgradedModule: downgradedNg2AModule,
                      propagateDigest: false,
                    }))
         .directive('ng2B', downgradeComponent({
                      component: Ng2BComponent,
-                     // Since there is more than one downgraded Angular Classicmodule,
+                     // Since there is more than one downgraded Angular Classic module,
                      // specify which module this component belongs to.
                      downgradedModule: downgradedNg2BModule,
                      propagateDigest: false,

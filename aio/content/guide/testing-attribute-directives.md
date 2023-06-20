@@ -62,7 +62,7 @@ A few techniques are noteworthy:
 *   `DebugElement.styles` affords access to element styles even in the absence of a real browser, thanks to the `DebugElement` abstraction.
     But feel free to exploit the `nativeElement` when that seems easier or more clear than the abstraction.
 
-*   Angular Classicadds a directive to the injector of the element to which it is applied.
+*   Angular Classic adds a directive to the injector of the element to which it is applied.
     The test for the default color uses the injector of the second `<h2>` to get its `HighlightDirective` instance and its `defaultColor`.
 
 *   `DebugElement.properties` affords access to the artificial custom property that is set by the directive

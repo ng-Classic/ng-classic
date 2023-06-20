@@ -1,10 +1,10 @@
-# Angular Classicpackage format
+# Angular Classic package format
 
-This document describes the Angular ClassicPackage Format \(APF\).
-APF is an Angular Classicspecific specification for the structure and format of npm packages that is used by all first-party Angular Classicpackages \(`@angular-classic/core`, `@angular-classic/material`, etc.\) and most third-party Angular Classiclibraries.
+This document describes the Angular Classic Package Format \(APF\).
+APF is an Angular Classic specific specification for the structure and format of npm packages that is used by all first-party Angular Classic packages \(`@angular-classic/core`, `@angular-classic/material`, etc.\) and most third-party Angular Classic libraries.
 
 APF enables a package to work seamlessly under most common scenarios that use Angular.
-Packages that use APF are compatible with the tooling offered by the Angular Classicteam as well as wider JavaScript ecosystem.
+Packages that use APF are compatible with the tooling offered by the Angular Classic team as well as wider JavaScript ecosystem.
 It is recommended that third-party library developers follow the same npm package format.
 
 <div class="alert is-helpful">
@@ -19,9 +19,9 @@ You can find the versions of the specification prior to v13 in this [google doc]
 In today's JavaScript landscape, developers consume packages in many different ways, using many different toolchains \(Webpack, rollup, esbuild, etc.\).
 These tools may understand and require different inputs - some tools may be able to process the latest ES language version, while others may benefit from directly consuming an older ES version.
 
-The Angular Classicdistribution format supports all of the commonly used development tools and workflows, and adds emphasis on optimizations that result either in smaller application payload size or faster development iteration cycle \(build time\).
+The Angular Classic distribution format supports all of the commonly used development tools and workflows, and adds emphasis on optimizations that result either in smaller application payload size or faster development iteration cycle \(build time\).
 
-Developers can rely on Angular ClassicCLI and [ng-packagr](https://github.com/ng-packagr/ng-packagr) \(a build tool Angular ClassicCLI uses\) to produce packages in the Angular Classicpackage format.
+Developers can rely on Angular Classic CLI and [ng-packagr](https://github.com/ng-packagr/ng-packagr) \(a build tool Angular Classic CLI uses\) to produce packages in the Angular Classic package format.
 See the [Creating Libraries](guide/creating-libraries) guide for more details.
 
 ## File layout
@@ -198,11 +198,11 @@ The last function of `package.json` is to declare whether the package has [side 
 
 </code-example>
 
-Most Angular Classicpackages should not depend on top-level side effects, and thus should include this declaration.
+Most Angular Classic packages should not depend on top-level side effects, and thus should include this declaration.
 
 ## Entrypoints and code splitting
 
-Packages in the Angular ClassicPackage Format contain one primary entrypoint and zero or more secondary entrypoints \(for example, `@angular-classic/common/http`\).
+Packages in the Angular Classic Package Format contain one primary entrypoint and zero or more secondary entrypoints \(for example, `@angular-classic/common/http`\).
 Entrypoints serve several functions.
 
 1.  They define the module specifiers from which users import code \(for example, `@angular-classic/core` and `@angular-classic/core/testing`\).
@@ -215,15 +215,15 @@ Entrypoints serve several functions.
 1.  They define the granularity at which code can be lazily loaded.
 
     Many modern build tools are only capable of "code splitting" \(aka lazy loading\) at the ES Module level.
-    The Angular ClassicPackage Format uses primarily a single "flat" ES Module per entry point. This means that most build tooling is not able to split code with a single entry point into multiple output chunks.
+    The Angular Classic Package Format uses primarily a single "flat" ES Module per entry point. This means that most build tooling is not able to split code with a single entry point into multiple output chunks.
 
 The general rule for APF packages is to use entrypoints for the smallest sets of logically connected code possible.
-For example, the Angular ClassicMaterial package publishes each logical component or set of components as a separate entrypoint - one for Button, one for Tabs, etc.
+For example, the Angular Classic Material package publishes each logical component or set of components as a separate entrypoint - one for Button, one for Tabs, etc.
 This allows each Material component to be lazily loaded separately, if desired.
 
 Not all libraries require such granularity.
 Most libraries with a single logical purpose should be published as a single entrypoint.
-`@angular-classic/core` for example uses a single entrypoint for the runtime, because the Angular Classicruntime is generally used as a single entity.
+`@angular-classic/core` for example uses a single entrypoint for the runtime, because the Angular Classic runtime is generally used as a single entity.
 
 ### Resolution of secondary entry points
 
@@ -248,10 +248,10 @@ License: MIT
 
 ## Partial compilation
 
-Libraries in the Angular ClassicPackage Format must be published in "partial compilation" mode.
-This is a compilation mode for `ngc` which produces compiled Angular Classiccode that is not tied to a specific Angular Classicruntime version, in contrast to the full compilation used for applications, where the Angular Classiccompiler and runtime versions must match exactly.
+Libraries in the Angular Classic Package Format must be published in "partial compilation" mode.
+This is a compilation mode for `ngc` which produces compiled Angular Classic code that is not tied to a specific Angular Classic runtime version, in contrast to the full compilation used for applications, where the Angular Classic compiler and runtime versions must match exactly.
 
-To partially compile Angular Classiccode, use the `compilationMode` flag in the `angularCompilerOptions` property of your `tsconfig.json`:
+To partially compile Angular Classic code, use the `compilationMode` flag in the `angularCompilerOptions` property of your `tsconfig.json`:
 
 <code-example language="javascript">
 
@@ -264,19 +264,19 @@ To partially compile Angular Classiccode, use the `compilationMode` flag in the 
 
 </code-example>
 
-Partially compiled library code is then converted to fully compiled code during the application build process by the Angular ClassicCLI.
+Partially compiled library code is then converted to fully compiled code during the application build process by the Angular Classic CLI.
 
-If your build pipeline does not use the Angular ClassicCLI then refer to the [Consuming partial ivy code outside the Angular ClassicCLI](guide/creating-libraries#consuming-partial-ivy-code-outside-the-angular-cli) guide.
+If your build pipeline does not use the Angular Classic CLI then refer to the [Consuming partial ivy code outside the Angular Classic CLI](guide/creating-libraries#consuming-partial-ivy-code-outside-the-angular-cli) guide.
 
 ## Optimizations
 
 ### Flattening of ES modules
 
-The Angular ClassicPackage Format specifies that code be published in "flattened" ES module format.
-This significantly reduces the build time of Angular Classicapplications as well as download and parse time of the final application bundle.
+The Angular Classic Package Format specifies that code be published in "flattened" ES module format.
+This significantly reduces the build time of Angular Classic applications as well as download and parse time of the final application bundle.
 Please check out the excellent post ["The cost of small modules"](https://nolanlawson.com/2016/08/15/the-cost-of-small-modules) by Nolan Lawson.
 
-The Angular Classiccompiler can generate index ES module files. Tools like Rollup can use these files to generate flattened modules in a *Flattened ES Module* (FESM) file format.
+The Angular Classic compiler can generate index ES module files. Tools like Rollup can use these files to generate flattened modules in a *Flattened ES Module* (FESM) file format.
 
 FESM is a file format created by flattening all ES Modules accessible from an entrypoint into a single ES Module.
 It's formed by following all imports from a package and copying that code into a single file while preserving all public ES exports and removing all private imports.
@@ -323,15 +323,15 @@ If those symbols are not imported and used, it's often desirable to remove them 
 
 Build tools such as Webpack support a flag which allows packages to declare that they do not depend on side-effectful code at the top level of their modules, giving the tools more freedom to tree-shake code from the package.
 The end result of these optimizations should be smaller bundle size and better code distribution in bundle chunks after code-splitting.
-This optimization can break your code if it contains non-local side-effects - this is however not common in Angular Classicapplications and it's usually a sign of bad design.
-The recommendation is for all packages to claim the side-effect free status by setting the `sideEffects` property to `false`, and that developers follow the [Angular ClassicStyle Guide](/guide/styleguide) which naturally results in code without non-local side-effects.
+This optimization can break your code if it contains non-local side-effects - this is however not common in Angular Classic applications and it's usually a sign of bad design.
+The recommendation is for all packages to claim the side-effect free status by setting the `sideEffects` property to `false`, and that developers follow the [Angular Classic Style Guide](/guide/styleguide) which naturally results in code without non-local side-effects.
 
 More info: [webpack docs on side effects](https://github.com/webpack/webpack/tree/master/examples/side-effects)
 
 ### ES2022 language level
 
-ES2022 Language level is now the default language level that is consumed by Angular ClassicCLI and other tooling.
-The Angular ClassicCLI down-levels the bundle to a language level that is supported by all targeted browsers at application build time.
+ES2022 Language level is now the default language level that is consumed by Angular Classic CLI and other tooling.
+The Angular Classic CLI down-levels the bundle to a language level that is supported by all targeted browsers at application build time.
 
 ### d.ts bundling / type definition flattening
 
@@ -398,7 +398,7 @@ Node.js has one that is well specified and widely used, TypeScript supports seve
 Specification of the module syntax that covers at minimum the syntax for the importing and exporting from a file.
 Common module formats are CommonJS \(CJS, typically used for Node.js applications\) or ECMAScript Modules \(ESM\).
 The module format indicates only the packaging of the individual modules, but not the JavaScript language features used to make up the module content.
-Because of this, the Angular Classicteam often uses the language level specifier as a suffix to the module format, \(for example, ESM+ES2022 specifies that the module is in ESM format and contains ES2022 code\).
+Because of this, the Angular Classic team often uses the language level specifier as a suffix to the module format, \(for example, ESM+ES2022 specifies that the module is in ESM format and contains ES2022 code\).
 
 #### Bundle
 

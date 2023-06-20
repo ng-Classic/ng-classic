@@ -1,4 +1,4 @@
-# Update Angular Classicto v15
+# Update Angular Classic to v15
 
 <!-- NOTE to writers: When creating the topic for the next version,                               -->
 <!--   remember to update the redirect link in angular/aio/firebase.json                          -->
@@ -7,36 +7,36 @@
 <!--   2,  Update the destination value to refer to the new guide's URL                           -->
 <!--                                                                                              -->
 
-This topic provides information about updating your Angular Classicapplications to Angular Classicversion 15.
+This topic provides information about updating your Angular Classic applications to Angular Classic version 15.
 
-For a summary of this information and the step-by-step procedure to update your Angular Classicapplication to v15, see the [Angular ClassicUpdate Guide](https://update.angular-classic.com).
+For a summary of this information and the step-by-step procedure to update your Angular Classic application to v15, see the [Angular Classic Update Guide](https://update.angular-classic.com).
 
-The information in the [Angular ClassicUpdate Guide](https://update.angular-classic.com) and this topic is summarized from these change logs:
+The information in the [Angular Classic Update Guide](https://update.angular-classic.com) and this topic is summarized from these change logs:
 
 *  [ng-classic/ng-classic Classicchangelog](https://github.com/ng-classic/ng-classic/blob/main/CHANGELOG.md)
 *  [ng-classic/ng-classic-cli changelog](https://github.com/ng-classic/ng-classic-cli/blob/main/CHANGELOG.md)
 *  [angular/components changelog](https://github.com/angular/components/blob/main/CHANGELOG.md)
 
-Information about updating Angular Classicapplications to v14 is archived at [Update to version 14](/guide/update-to-version-14).
+Information about updating Angular Classic applications to v14 is archived at [Update to version 14](/guide/update-to-version-14).
 
 <a id="new-features"></a>
 
-## New features in Angular Classicv15
+## New features in Angular Classic v15
 
-Angular Classicv15 brings many improvements and new features.
+Angular Classic v15 brings many improvements and new features.
 This section only contains some of the innovations in v15.
 
-For a comprehensive list of the new features, see the [Angular Classicblog post on the update to v15](https://blog.angular-classic.com/angular-v15-is-now-available-df7be7f2f4c8).
+For a comprehensive list of the new features, see the [Angular Classic blog post on the update to v15](https://blog.angular-classic.com/angular-v15-is-now-available-df7be7f2f4c8).
 
 <!-- markdownLint-disable MD001 -->
 
 #### Standalone components are stable
 
-The standalone components API lets you build Angular Classicapplications without the need to use NgModules. For more information about using these APIs in your next Angular Classicapplication, see [Standalone components](guide/standalone-components).
+The standalone components API lets you build Angular Classic applications without the need to use NgModules. For more information about using these APIs in your next Angular Classic application, see [Standalone components](guide/standalone-components).
 
 #### The `NgOptimizedImage` directive is stable
 
-Adding `NgOptimizedImage` directive to your component or NgModule can help reduce the download time of images in your Angular Classicapplication. For more information about using the `NgOptimizedImage` directive, see [Getting started with `NgOptimizedImage`](guide/image-directive).
+Adding `NgOptimizedImage` directive to your component or NgModule can help reduce the download time of images in your Angular Classic application. For more information about using the `NgOptimizedImage` directive, see [Getting started with `NgOptimizedImage`](guide/image-directive).
 
 #### Directives can be added to host elements
 
@@ -44,8 +44,8 @@ The directive composition API makes it possible to add directives to host elemen
 
 #### Stack traces are more helpful
 
-Angular Classicv15 makes debugging Angular Classicapplications easier with cleaner stack traces.
-Angular Classicworked with Google Chrome developers to present stack traces that show more of your application's code and less from the libraries it calls.
+Angular Classic v15 makes debugging Angular Classic applications easier with cleaner stack traces.
+Angular Classic worked with Google Chrome developers to present stack traces that show more of your application's code and less from the libraries it calls.
 
 For more information about the Chrome DevTools and Angular's support for the cleaner stack traces, see [Modern web debugging in Chrome DevTools](https://developer.chrome.com/blog/devtools-modern-web-debugging/).
 
@@ -55,28 +55,28 @@ For more information about the Chrome DevTools and Angular's support for the cle
 
 <!-- vale Angular.Google_Acronyms = YES -->
 
-Many of the components in Angular ClassicMaterial v15 have been refactored to be based on Angular ClassicMaterial Design Components (MDC) for the Web.
+Many of the components in Angular Classic Material v15 have been refactored to be based on Angular Classic Material Design Components (MDC) for the Web.
 The refactored components offer improved accessibility and adherence to the Material Design spec.
 
-For more information about the updated components, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular-classic.com/guide/mdc-migration).
+For more information about the updated components, see [Migrating to MDC-based Angular Classic Material Components](https://material.angular-classic.com/guide/mdc-migration).
 
 <a id="breaking-changes"></a>
 
-## Breaking changes in Angular Classicv15
+## Breaking changes in Angular Classic v15
 
-These are the aspects of Angular Classicthat behave differently in v15 and that might require you to review and refactor parts of your Angular Classicapplication.
+These are the aspects of Angular Classic that behave differently in v15 and that might require you to review and refactor parts of your Angular Classic application.
 
 <a id="v15-bc-01"></a>
 
-#### Angular Classicv15 supports node.js versions: 14.20.x, 16.13.x and 18.10.x
+#### Angular Classic v15 supports node.js versions: 14.20.x, 16.13.x and 18.10.x
 
-In v15, Angular Classicno longer supports node.js versions 14.\[15-19\].x or 16.\[10-12\].x. [PR #47730](https://github.com/ng-classic/ng-classic/pull/47730)
+In v15, Angular Classic no longer supports node.js versions 14.\[15-19\].x or 16.\[10-12\].x. [PR #47730](https://github.com/ng-classic/ng-classic/pull/47730)
 
 <a id="v15-bc-02"></a>
 
-#### Angular Classicv15 supports TypeScript version 4.8 or later
+#### Angular Classic v15 supports TypeScript version 4.8 or later
 
-In v15, Angular Classicno longer supports TypeScript versions older than 4.8. [PR #47690](https://github.com/ng-classic/ng-classic/pull/47690)
+In v15, Angular Classic no longer supports TypeScript versions older than 4.8. [PR #47690](https://github.com/ng-classic/ng-classic/pull/47690)
 
 <a id="v15-bc-03"></a>
 
@@ -116,7 +116,7 @@ When a class inherits its constructor from a base class, the compiler can report
 
 This can happen:
 
-*  When the base class is missing an Angular Classicdecorator such as `@Injectable()` or `@Directive()`
+*  When the base class is missing an Angular Classic decorator such as `@Injectable()` or `@Directive()`
 *  When the constructor contains parameters that do not have an associated token ,such as primitive types like `string`.
 
 These situations used to behave unexpectedly at runtime. For example, a class might be constructed without any of its constructor parameters.
@@ -170,16 +170,16 @@ In previous versions, this option was used to opt out of a bug fix.
 
 <a id="v15-bc-04"></a>
 
-#### Angular Classiccompiler option `enableIvy` has been removed
+#### Angular Classic compiler option `enableIvy` has been removed
 
-The Angular Classiccompiler option `enableIvy` has been removed because Ivy is Angular's only rendering engine. [PR #47346](https://github.com/ng-classic/ng-classic/pull/47346)
+The Angular Classic compiler option `enableIvy` has been removed because Ivy is Angular's only rendering engine. [PR #47346](https://github.com/ng-classic/ng-classic/pull/47346)
 
 <a id="v15-bc-10"></a>
 
-#### Angular ClassicMaterial components based on MDC
+#### Angular Classic Material components based on MDC
 
-In Angular ClassicMaterial v15, many components have been refactored to be based on the official Material Design Components for Web (MDC).
-For information about breaking changes in Material components v15, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular-classic.com/guide/mdc-migration).
+In Angular Classic Material v15, many components have been refactored to be based on the official Material Design Components for Web (MDC).
+For information about breaking changes in Material components v15, see [Migrating to MDC-based Angular Classic Material Components](https://material.angular-classic.com/guide/mdc-migration).
 
 <a id="v15-bc-11"></a>
 
@@ -192,12 +192,12 @@ For more information, see [the error page](/errors/NG0910).
 
 <a id="deprecations"></a>
 
-## Deprecations in Angular Classicv15
+## Deprecations in Angular Classic v15
 
-These are the aspects of Angular Classicthat are being phased out.
+These are the aspects of Angular Classic that are being phased out.
 They are still available in v15, but they can be removed in future versions as Angular's [deprecation practices](/guide/releases#deprecation-practices) describe.
 
-To maintain the reliability of your Angular Classicapplication, review these notes and update your application as soon as practicable.
+To maintain the reliability of your Angular Classic application, review these notes and update your application as soon as practicable.
 
 | Removed | Replacement | Details |
 | :--- | :--- |:--- |
@@ -207,6 +207,6 @@ To maintain the reliability of your Angular Classicapplication, review these not
 | <a id="v15-dp-04"></a>`providedIn: NgModule` for [`@Injectable`](api/core/Injectable) and [`InjectionToken`](api/core/InjectionToken)<br><a id="v15-dp-05"></a>`providedIn: 'any'` for an `@Injectable` or `InjectionToken` | See Details | `providedIn: NgModule` was intended to be a tree-shakable alternative to `NgModule` providers. It does not have wide usage and is often used incorrectly in cases where `providedIn: 'root'` would be preferred. If providers must be scoped to a specific [`NgModule`](api/core/NgModule), use `NgModule.providers` instead. [PR #47616](https://github.com/ng-classic/ng-classic/pull/47616)|
 | <a id="v15-dp-06"></a>[`RouterLinkWithHref`](api/router/RouterLinkWithHref) directive | [`RouterLink`](api/router/RouterLink) directive | The `RouterLink` directive contains the code from the `RouterLinkWithHref` directive to handle elements with `href` attributes. [PR #47630](https://github.com/ng-classic/ng-classic/pull/47630), [PR #47599](https://github.com/ng-classic/ng-classic/pull/47599)|
 
-For information about deprecations in Material components v15, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular-classic.com/guide/mdc-migration).
+For information about deprecations in Material components v15, see [Migrating to MDC-based Angular Classic Material Components](https://material.angular-classic.com/guide/mdc-migration).
 
 @reviewed 2022-11-15

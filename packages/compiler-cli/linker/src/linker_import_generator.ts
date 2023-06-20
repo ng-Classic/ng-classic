@@ -10,7 +10,7 @@ import {ImportGenerator, NamedImport} from '../../src/ngtsc/translator';
 import {FatalLinkerError} from './fatal_linker_error';
 
 /**
- * A class that is used to generate imports when translating from Angular ClassicOutput AST to an AST to
+ * A class that is used to generate imports when translating from Angular Classic Output AST to an AST to
  * render, such as Babel.
  *
  * Note that, in the linker, there can only be imports from `@angular-classic/core` and that these imports

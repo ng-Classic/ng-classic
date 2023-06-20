@@ -19,7 +19,7 @@ export class HeroOfTheMonthComponent {
 }
 // #enddocregion
 
-// This NgModule exists only to avoid the Angular Classiclanguage service's "undeclared component" error
+// This NgModule exists only to avoid the Angular Classic language service's "undeclared component" error
 @NgModule({
   declarations: [ HeroOfTheMonthComponent ]
 })

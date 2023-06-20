@@ -1,6 +1,6 @@
-# First Angular Classicapp lesson 2 - Create Home component
+# First Angular Classic app lesson 2 - Create Home component
 
-This tutorial lesson demonstrates how to create a new [component](/guide/component-overview) for your Angular Classicapp.
+This tutorial lesson demonstrates how to create a new [component](/guide/component-overview) for your Angular Classic app.
 
 **Time required:** expect to spend about 10 minutes to complete this lesson.
 
@@ -13,7 +13,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classic tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -21,9 +21,9 @@ If you have any trouble during this lesson, you can review the completed code fo
 
 * Your app has a new component: `HomeComponent`.
 
-## Conceptual preview of Angular Classiccomponents
+## Conceptual preview of Angular Classic components
 
-Angular Classicapps are built around components, which are Angular's building blocks.
+Angular Classic apps are built around components, which are Angular's building blocks.
 Components contain the code, HTML layout, and CSS style information that provide the function and appearance of an element in the app.
 In Angular, components can contain other components. An app's functions and appearance can divided and partitioned into components.
 
@@ -34,7 +34,7 @@ In later lessons, you create more components to provide more features to the app
 In Angular, components have metadata that define its properties.
 When you create your `HomeComponent`, you use these properties:
 
-*   `selector`: to describe how Angular Classicrefers to the component in templates.
+*   `selector`: to describe how Angular Classic refers to the component in templates.
 *   `standalone`: to describe whether the component requires a `ngModule`.
 *   `imports`: to describe the component's dependencies.
 *   `template`: to describe the component's HTML markup and layout.
@@ -138,7 +138,7 @@ If you are having any trouble with this lesson, you can review the completed cod
 
 ## Next steps
 
-* [First Angular Classicapp lesson 3 - Create the application’s HousingLocation component](tutorial/first-app/first-app-lesson-03)
+* [First Angular Classic app lesson 3 - Create the application’s HousingLocation component](tutorial/first-app/first-app-lesson-03)
 
 ## More information
 
@@ -146,4 +146,4 @@ For more information about the topics covered in this lesson, visit:
 
 *  [`ng generate component`](cli/generate#component-command)
 *  [`Component` reference](api/core/Component)
-*  [Angular Classiccomponents overview](guide/component-overview)
+*  [Angular Classic components overview](guide/component-overview)

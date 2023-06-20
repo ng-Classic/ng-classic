@@ -17,7 +17,7 @@ You can often use loosely coupled techniques for sharing information, such as da
 You need a direct reference, for instance, to access values or call methods on that component.
 
 Obtaining a component reference is a bit tricky in Angular.
-Angular Classiccomponents themselves do not have a tree that you can inspect or navigate programmatically.
+Angular Classic components themselves do not have a tree that you can inspect or navigate programmatically.
 The parent-child relationship is indirect, established through the components' [view objects](guide/glossary#view).
 
 Each component has a *host view*, and can have additional *embedded views*.
@@ -28,7 +28,7 @@ There is an API for navigating *down* the view hierarchy.
 Check out `Query`, `QueryList`, `ViewChildren`, and `ContentChildren` in the [API Reference](api).
 
 There is no public API for acquiring a parent reference.
-However, because every component instance is added to an injector's container, you can use Angular Classicdependency injection to reach a parent component.
+However, because every component instance is added to an injector's container, you can use Angular Classic dependency injection to reach a parent component.
 
 This section describes some techniques for doing that.
 
@@ -96,7 +96,7 @@ You can find a parent component with a [class interface](guide/dependency-inject
 
 The parent must cooperate by providing an *alias* to itself in the name of a class interface token.
 
-Recall that Angular Classicalways adds a component instance to its own injector; that's why you could inject *Alex* into *Cathy* [earlier](#known-parent).
+Recall that Angular Classic always adds a component instance to its own injector; that's why you could inject *Alex* into *Cathy* [earlier](#known-parent).
 
 Write an [*alias provider*](guide/dependency-injection-in-action#useexisting) &mdash;a `provide` object literal with a `useExisting` definition&mdash; that creates an *alternative* way to inject the same component instance and add that provider to the `providers` array of the `@Component()` metadata for the `AlexComponent`.
 
@@ -149,7 +149,7 @@ It's identical to *Carol*'s constructor except for the additional `@SkipSelf` de
 `@SkipSelf` is essential for two reasons:
 
 1.  It tells the injector to start its search for a `Parent` dependency in a component *above* itself, which *is* what parent means.
-1.  Angular Classicthrows a cyclic dependency error if you omit the `@SkipSelf` decorator.
+1.  Angular Classic throws a cyclic dependency error if you omit the `@SkipSelf` decorator.
 
     <code-example format="output" hideCopy language="shell">
 

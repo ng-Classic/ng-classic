@@ -61,7 +61,7 @@ interface TypeCheckAndEmitPhase {
 type Phase = AnalysisPhase|TypeCheckAndEmitPhase;
 
 /**
- * Manages the incremental portion of an Angular Classiccompilation, allowing for reuse of a prior
+ * Manages the incremental portion of an Angular Classic compilation, allowing for reuse of a prior
  * compilation if available, and producing an output state for reuse of the current compilation in a
  * future one.
  */

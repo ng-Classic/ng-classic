@@ -27,11 +27,11 @@ export class TextFormatter {
 
 // #enddocregion
 // #docregion ng2-heroes
-// This Angular Classiccomponent will be "downgraded" to be used in AngularJS
+// This Angular Classic component will be "downgraded" to be used in AngularJS
 @Component({
   selector: 'ng2-heroes',
   // This template uses the upgraded `ng1-hero` component
-  // Note that because its element is compiled by Angular Classicwe must use camelCased attribute names
+  // Note that because its element is compiled by Angular Classic we must use camelCased attribute names
   template: `<header><ng-content selector="h1"></ng-content></header>
              <ng-content selector=".extra"></ng-content>
              <div *ngFor="let hero of heroes">
@@ -47,7 +47,7 @@ export class Ng2HeroesComponent {
 // #enddocregion
 
 // #docregion ng2-heroes-service
-// This Angular Classicservice will be "downgraded" to be used in AngularJS
+// This Angular Classic service will be "downgraded" to be used in AngularJS
 @Injectable()
 export class HeroesService {
   heroes: Hero[] = [
@@ -75,7 +75,7 @@ export class HeroesService {
 // #enddocregion
 
 // #docregion ng1-hero-wrapper
-// This Angular Classicdirective will act as an interface to the "upgraded" AngularJS component
+// This Angular Classic directive will act as an interface to the "upgraded" AngularJS component
 @Directive({selector: 'ng1-hero'})
 export class Ng1HeroComponentWrapper extends UpgradeComponent {
   // The names of the input and output properties here must match the names of the
@@ -91,13 +91,13 @@ export class Ng1HeroComponentWrapper extends UpgradeComponent {
 // #enddocregion
 
 // #docregion ng2-module
-// This NgModule represents the Angular Classicpieces of the application
+// This NgModule represents the Angular Classic pieces of the application
 @NgModule({
   declarations: [Ng2HeroesComponent, Ng1HeroComponentWrapper],
   providers: [
     HeroesService,
     // #docregion upgrade-ng1-service
-    // Register an Angular Classicprovider whose value is the "upgraded" AngularJS service
+    // Register an Angular Classic provider whose value is the "upgraded" AngularJS service
     {provide: TextFormatter, useFactory: (i: any) => i.get('textFormatter'), deps: ['$injector']}
     // #enddocregion
   ],
@@ -119,7 +119,7 @@ export class Ng2AppModule {
 // #enddocregion ng2-module
 
 
-// This Angular Classic1 module represents the AngularJS pieces of the application
+// This Angular Classic 1 module represents the AngularJS pieces of the application
 export const ng1AppModule: ng.IModule = angular.module('ng1AppModule', []);
 
 // #docregion ng1-hero
@@ -140,12 +140,12 @@ ng1AppModule.service('textFormatter', [TextFormatter]);
 // #enddocregion
 
 // #docregion downgrade-ng2-heroes-service
-// Register an AngularJS service, whose value is the "downgraded" Angular Classicinjectable.
+// Register an AngularJS service, whose value is the "downgraded" Angular Classic injectable.
 ng1AppModule.factory('heroesService', downgradeInjectable(HeroesService) as any);
 // #enddocregion
 
 // #docregion ng2-heroes-wrapper
-// This directive will act as the interface to the "downgraded" Angular Classiccomponent
+// This directive will act as the interface to the "downgraded" Angular Classic component
 ng1AppModule.directive('ng2Heroes', downgradeComponent({component: Ng2HeroesComponent}));
 // #enddocregion
 
@@ -174,7 +174,7 @@ ng1AppModule.component('exampleApp', {
 
 
 // #docregion bootstrap-ng2
-// We bootstrap the Angular Classicmodule as we would do in a normal Angular Classicapp.
+// We bootstrap the Angular Classic module as we would do in a normal Angular Classic app.
 // (We are using the dynamic browser platform as this example has not been compiled AOT.)
 platformBrowserDynamic().bootstrapModule(Ng2AppModule);
 // #enddocregion

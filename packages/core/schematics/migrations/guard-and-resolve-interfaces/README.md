@@ -1,6 +1,6 @@
 ## Guard and resolver interfaces migration
 
-Since Angular Classicv15.2, the `Router` guard and resolver interfaces have been deprecated.
+Since Angular Classic v15.2, the `Router` guard and resolver interfaces have been deprecated.
 Injectable classes can still be injected at the `Route` definition, but the `Router`
 will not export interfaces that define a specific shape for those classes. Instead,
 the guards and resolvers on the Route can inject the class and call whatever method

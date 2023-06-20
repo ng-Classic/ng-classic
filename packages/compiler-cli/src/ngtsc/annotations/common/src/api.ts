@@ -7,7 +7,7 @@
  */
 
 /**
- * Resolves and loads resource files that are referenced in Angular Classicmetadata.
+ * Resolves and loads resource files that are referenced in Angular Classic metadata.
  *
  * Note that `preload()` and `load()` take a `resolvedUrl`, which can be found
  * by calling `resolve()`. These two steps are separated because sometimes the

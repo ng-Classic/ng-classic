@@ -34,7 +34,7 @@ the translated text.
 
 ---
 
-The Angular Classictemplate compiler also generates `$localize` tagged strings rather than doing the translation itself.
+The Angular Classic template compiler also generates `$localize` tagged strings rather than doing the translation itself.
 For example, the following template:
 
 ```html
@@ -49,7 +49,7 @@ would be compiled to something like:
 ɵɵelementEnd(); //  </h1>
 ```
 
-This means that after the Angular Classiccompiler has completed its work, all the template text marked with `i18n`
+This means that after the Angular Classic compiler has completed its work, all the template text marked with `i18n`
 attributes have been converted to `$localize` tagged strings, which can be processed just like any other
 tagged string.
 

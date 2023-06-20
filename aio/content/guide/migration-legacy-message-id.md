@@ -2,7 +2,7 @@
 
 ## Why this migration is necessary
 
-The Angular Classictranslation system works by matching a message ID to a translated message in a different language.
+The Angular Classic translation system works by matching a message ID to a translated message in a different language.
 One option for creating these IDs is to have the translation system generate them for you.
 Previously, the format for these IDs are not stable when there are insignificant changes, such as to whitespace.
 The new format is much more robust.
@@ -11,7 +11,7 @@ This topic describes how to migrate old localization IDs to help you future-proo
 
 ## What this migration does
 
-Angular Classicversion 11 introduced a new format for generating localization IDs.
+Angular Classic version 11 introduced a new format for generating localization IDs.
 These new IDs are more robust than the previous legacy format.
 However, applications created before version 11 still used the legacy format for their IDs.
 
@@ -21,10 +21,10 @@ You do not need to migrate custom localization IDs to new IDs.
 
 </div>
 
-With the release of Angular Classicversion 12, you now have how tools available to help you migrate any legacy localization IDs to IDs that use the latest algorithms.
+With the release of Angular Classic version 12, you now have how tools available to help you migrate any legacy localization IDs to IDs that use the latest algorithms.
 
 You have two options for migrating legacy IDs.
-The first method uses the Angular ClassicCLI to locate legacy IDs in your application.
+The first method uses the Angular Classic CLI to locate legacy IDs in your application.
 The second method uses a standalone script, `localize-extract`, to locate the legacy IDs.
 
 ## Migrating legacy IDs using the CLI
@@ -57,12 +57,12 @@ To migrate legacy localization IDs using the CLI:
 
 1.  Commit the updated files to your source control system.
 
-After you complete the migration, set the Angular ClassicCompiler option, `enableI18nLegacyMessageIdFormat`, to `false`.
-For more information about this option, see [Angular ClassicCompiler Options](guide/angular-compiler-options#enablei18nlegacymessageidformat).
+After you complete the migration, set the Angular Classic Compiler option, `enableI18nLegacyMessageIdFormat`, to `false`.
+For more information about this option, see [Angular Classic Compiler Options](guide/angular-compiler-options#enablei18nlegacymessageidformat).
 
 ## Migrate legacy IDs using `localize-extract`
 
-If you are not using the Angular ClassicCLI, you can migrate legacy localization IDs using `localize-extract`:
+If you are not using the Angular Classic CLI, you can migrate legacy localization IDs using `localize-extract`:
 
 1.  Run the `npx localize-extract` command.
 
@@ -97,8 +97,8 @@ If you are not using the Angular ClassicCLI, you can migrate legacy localization
 
     </div>
 
-After you complete the migration, set the Angular ClassicCompiler option, `enableI18nLegacyMessageIdFormat`, to `false`.
-For more information about this option, see [Angular ClassicCompiler Options](guide/angular-compiler-options#enablei18nlegacymessageidformat).
+After you complete the migration, set the Angular Classic Compiler option, `enableI18nLegacyMessageIdFormat`, to `false`.
+For more information about this option, see [Angular Classic Compiler Options](guide/angular-compiler-options#enablei18nlegacymessageidformat).
 
 {@searchKeywords i18n}
 

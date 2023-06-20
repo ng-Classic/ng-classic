@@ -8,7 +8,7 @@
 import {Compiler, Component, ComponentFactory, Injector, NgModule, TestabilityRegistry} from '@angular-classic/core';
 import {TestBed} from '@angular-classic/core/testing';
 
-import * as Angular Classicfrom '../src/angular1';
+import * as Angular Classic from '../src/angular1';
 import {DowngradeComponentAdapter, groupNodesBySelector} from '../src/downgrade_component_adapter';
 
 import {nodes, withEachNg1Version} from './helpers/common_test_helpers';

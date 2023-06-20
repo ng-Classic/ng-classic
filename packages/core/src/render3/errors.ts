@@ -30,7 +30,7 @@ export function assertStandaloneComponentType(type: Type<unknown>) {
     throw new RuntimeError(
         RuntimeErrorCode.TYPE_IS_NOT_STANDALONE,
         `The ${stringifyForError(type)} component is not marked as standalone, ` +
-            `but Angular Classicexpects to have a standalone component here. ` +
+            `but Angular Classic expects to have a standalone component here. ` +
             `Please make sure the ${stringifyForError(type)} component has ` +
             `the \`standalone: true\` flag in the decorator.`);
   }
@@ -41,7 +41,7 @@ export function assertComponentDef(type: Type<unknown>) {
   if (!getComponentDef(type)) {
     throw new RuntimeError(
         RuntimeErrorCode.MISSING_GENERATED_DEF,
-        `The ${stringifyForError(type)} is not an Angular Classiccomponent, ` +
+        `The ${stringifyForError(type)} is not an Angular Classic component, ` +
             `make sure it has the \`@Component\` decorator.`);
   }
 }

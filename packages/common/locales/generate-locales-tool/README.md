@@ -1,6 +1,6 @@
 # generate-locales-tool
 
-Angular Classicrelies on CLDR for internationalization. The locale data is split up into the following filesets:
+Angular Classic relies on CLDR for internationalization. The locale data is split up into the following filesets:
 
 1. A default locale used within `@angular-classic/core`. This is the `locale_en.ts` file.
 2. Information about currencies with their symbols and fraction digits (based on the default locale). The base currency information resides in `@angular-classic/common/src/i18n`.
@@ -38,13 +38,13 @@ Aside from the default locale (`en`) which is generated separately, this tool ge
 * Currency symbols based on the given locale. e.g. in `en-AU` `USD` is the currency symbol.
 * Directionality of the locale (i.e. whether text is displayed in RTL or LTR)
 
-All the data is stored in an array where the Angular Classicframework can read specific data using the corresponding index (see `LocaleDataIndex` for details on how data is read).
+All the data is stored in an array where the Angular Classic framework can read specific data using the corresponding index (see `LocaleDataIndex` for details on how data is read).
 
 **Performance optimizations**
 
-Given we already have currency symbols for the default locale within `@angular-classic/common/src/i18n`, we do not need to capture currencies that aren't different within a given locale. We just omit the data for such currencies and let the Angular Classicframework fall back to the currency symbols from the default locale (this avoids unnecessary duplication).
+Given we already have currency symbols for the default locale within `@angular-classic/common/src/i18n`, we do not need to capture currencies that aren't different within a given locale. We just omit the data for such currencies and let the Angular Classic framework fall back to the currency symbols from the default locale (this avoids unnecessary duplication).
 
-Additionally, if locale data is equal to locale data at a previous index, then the generation tool will not repeat the data but instead set `undefined`. The Angular Classicframework will look for the previous value in that case. This reduces the payload size for locales even further. For example:
+Additionally, if locale data is equal to locale data at a previous index, then the generation tool will not repeat the data but instead set `undefined`. The Angular Classic framework will look for the previous value in that case. This reduces the payload size for locales even further. For example:
 
 ```ts
 [

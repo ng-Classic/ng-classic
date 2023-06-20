@@ -14,14 +14,14 @@ Zone.__load_patch('jest', (context: any, Zone: ZoneType, api: _ZonePrivate) => {
   }
 
 
-  // From jest 29 and jest-preset-Angular Classicv13, the module transform logic
-  // changed, and now jest-preset-Angular Classicuse the use the tsconfig target
+  // From jest 29 and jest-preset-Angular Classic v13, the module transform logic
+  // changed, and now jest-preset-Angular Classic use the use the tsconfig target
   // other than the hardcoded one, https://github.com/thymikee/jest-preset-angular/issues/2010
   // But jest-angular-preset doesn't introduce the @babel/plugin-transform-async-to-generator
-  // which is needed by Angular Classicsince `async/await` still need to be transformed
+  // which is needed by Angular Classic since `async/await` still need to be transformed
   // to promise for ES2017+ target.
   // So for now, we disable to output the uncaught error console log for a temp solution,
-  // until jest-preset-Angular Classicfind a proper solution.
+  // until jest-preset-Angular Classic find a proper solution.
   (Zone as any)[api.symbol('ignoreConsoleErrorUncaughtError')] = true;
   jest['__zone_patch__'] = true;
 

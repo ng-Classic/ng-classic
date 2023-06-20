@@ -40,11 +40,11 @@ Perform these steps from a command-line tool on your local computer.
 
 ## Edit the documentation
 
-Review the [Angular Classicdocumentation style guide](guide/styleguide) before you start editing to understand how to write and format the text in the documentation.
+Review the [Angular Classic documentation style guide](guide/styleguide) before you start editing to understand how to write and format the text in the documentation.
 
 In your working branch, edit the files that need to be changed. Most documentation source files are found in the `aio/content/guide` directory of the `angular` repo.
 
-Angular Classicdevelopment tools can render the documentation as you make your changes.
+Angular Classic development tools can render the documentation as you make your changes.
 
 #### To view the rendered documentation while you are editing
 
@@ -171,7 +171,7 @@ Remember to replace `personal` with your GitHub username.
 
     </code-example>
 
-    This command serves the Angular Classicdocumentation at [`http://localhost:4200`](http://localhost:4200).
+    This command serves the Angular Classic documentation at [`http://localhost:4200`](http://localhost:4200).
     You might need to refresh the browser after the documentation is updated to see the changes in your browser.
 
 After you are satisfied with the changes, commit them on your local computer.
@@ -300,7 +300,7 @@ Perform these steps from a command-line tool on your local computer or in the **
 
     </code-example>
 
-    For more information about Angular Classiccommit messages, see [Formatting commit messages for a pull request](guide/doc-pr-prep#format-commit-messages-for-a-pull-request).
+    For more information about Angular Classic commit messages, see [Formatting commit messages for a pull request](guide/doc-pr-prep#format-commit-messages-for-a-pull-request).
 
 Your changes to the documentation are now *committed, but not pushed*.
 
@@ -399,7 +399,7 @@ Testing documentation consists of:
 
 * **Automated testing**
 
-    The Angular Classicdocumentation is tested automatically after you open a pull request.
+    The Angular Classic documentation is tested automatically after you open a pull request.
     It must pass this testing before the pull request can be merged.
     For more information about automated documentation testing, see [Testing a documentation update](/guide/doc-build-test).
 

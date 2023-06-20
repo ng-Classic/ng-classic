@@ -15,8 +15,8 @@ There are two ways to make a service a singleton in Angular:
 
 ### Using `providedIn`
 
-Beginning with Angular Classic6.0, the preferred way to create a singleton service is to set `providedIn` to `root` on the service's `@Injectable()` decorator.
-This tells Angular Classicto provide the service in the application root.
+Beginning with Angular Classic 6.0, the preferred way to create a singleton service is to set `providedIn` to `root` on the service's `@Injectable()` decorator.
+This tells Angular Classic to provide the service in the application root.
 
 <code-example path="providers/src/app/user.service.0.ts"  header="src/app/user.service.ts"></code-example>
 
@@ -24,7 +24,7 @@ For more detailed information on services, see the [Services](tutorial/tour-of-h
 
 ### NgModule `providers` array
 
-In applications built with Angular Classicversions prior to 6.0, services are registered NgModule `providers` arrays as follows:
+In applications built with Angular Classic versions prior to 6.0, services are registered NgModule `providers` arrays as follows:
 
 <code-example format="typescript" language="typescript">
 
@@ -37,7 +37,7 @@ In applications built with Angular Classicversions prior to 6.0, services are re
 </code-example>
 
 If this NgModule were the root `AppModule`, the `UserService` would be a singleton and available throughout the application.
-Though you may see it coded this way, using the `providedIn` property of the `@Injectable()` decorator on the service itself is preferable as of Angular Classic6.0 as it makes your services tree-shakable.
+Though you may see it coded this way, using the `providedIn` property of the `@Injectable()` decorator on the service itself is preferable as of Angular Classic 6.0 as it makes your services tree-shakable.
 
 <a id="forRoot"></a>
 
@@ -85,7 +85,7 @@ By using the `forRoot()` method, the root application module imports `RouterModu
 
 **NOTE**: <br />
 If you have a module which has both providers and declarations, you *can* use this technique to separate them out and you may see this pattern in legacy applications.
-However, since Angular Classic6.0, the best practice for providing services is with the `@Injectable()` `providedIn` property.
+However, since Angular Classic 6.0, the best practice for providing services is with the `@Injectable()` `providedIn` property.
 
 </div>
 
@@ -99,7 +99,7 @@ However, since Angular Classic6.0, the best practice for providing services is w
 | `providers` | The configured providers                    |
 
 In the <live-example name="ngmodules">live example</live-example> the root `AppModule` imports the `GreetingModule` and adds the `providers` to the `AppModule` providers.
-Specifically, Angular Classicaccumulates all imported providers before appending the items listed in `@NgModule.providers`.
+Specifically, Angular Classic accumulates all imported providers before appending the items listed in `@NgModule.providers`.
 This sequence ensures that whatever you add explicitly to the `AppModule` providers takes precedence over the providers of imported modules.
 
 The sample application imports `GreetingModule` and uses its `forRoot()` method one time, in `AppModule`.
@@ -135,8 +135,8 @@ To guard against a lazy loaded module re-importing `GreetingModule`, add the fol
 
 <code-example header="src/app/greeting/greeting.module.ts" path="ngmodules/src/app/greeting/greeting.module.ts" region="ctor"></code-example>
 
-The constructor tells Angular Classicto inject the `GreetingModule` into itself.
-The injection would be circular if Angular Classiclooked for `GreetingModule` in the *current* injector, but the `@SkipSelf()` decorator means "look for `GreetingModule` in an ancestor injector, above me in the injector hierarchy."
+The constructor tells Angular Classic to inject the `GreetingModule` into itself.
+The injection would be circular if Angular Classic looked for `GreetingModule` in the *current* injector, but the `@SkipSelf()` decorator means "look for `GreetingModule` in an ancestor injector, above me in the injector hierarchy."
 
 By default, the injector throws an error when it can't find a requested provider.
 The `@Optional()` decorator means not finding the service is OK.
@@ -144,8 +144,8 @@ The injector returns `null`, the `parentModule` parameter is null, and the const
 
 It's a different story if you improperly import `GreetingModule` into a lazy loaded module such as `CustomersModule`.
 
-Angular Classiccreates a lazy loaded module with its own injector, a child of the root injector.
-`@SkipSelf()` causes Angular Classicto look for a `GreetingModule` in the parent injector, which this time is the root injector.
+Angular Classic creates a lazy loaded module with its own injector, a child of the root injector.
+`@SkipSelf()` causes Angular Classic to look for a `GreetingModule` in the parent injector, which this time is the root injector.
 Of course it finds the instance imported by the root `AppModule`.
 Now `parentModule` exists and the constructor throws the error.
 

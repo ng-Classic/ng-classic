@@ -10,14 +10,14 @@ To mark a class as a pipe and supply configuration metadata, apply the [`@Pipe`]
 Use [UpperCamelCase](guide/glossary#case-types "Definition of case types") (the general convention for class names) for the pipe class name, and [camelCase](guide/glossary#case-types "Definition of case types") for the corresponding `name` string.
 Do not use hyphens in the `name`.
 
-For details and more examples, see [Pipe names](guide/styleguide#pipe-names "Pipe names in the Angular Classiccoding style guide").
+For details and more examples, see [Pipe names](guide/styleguide#pipe-names "Pipe names in the Angular Classic coding style guide").
 
 Use `name` in template expressions as you would for a built-in pipe.
 
 <div class="alert is-important">
 
 *   Include your pipe in the `declarations` field of the `NgModule` metadata in order for it to be available to a template. See the `app.module.ts` file in the example application (<live-example></live-example>). For details, see [NgModules](guide/ngmodules "NgModules introduction").
-*   Register your custom pipes. The [Angular ClassicCLI](cli "CLI Overview and Command Reference") [`ng generate pipe`](cli/generate#pipe "ng generate pipe in the CLI Command Reference") command registers the pipe automatically.
+*   Register your custom pipes. The [Angular Classic CLI](cli "CLI Overview and Command Reference") [`ng generate pipe`](cli/generate#pipe "ng generate pipe in the CLI Command Reference") command registers the pipe automatically.
 
 </div>
 
@@ -25,7 +25,7 @@ Use `name` in template expressions as you would for a built-in pipe.
 
 Implement the [`PipeTransform`](/api/core/PipeTransform "API reference for PipeTransform") interface in your custom pipe class to perform the transformation.
 
-Angular Classicinvokes the `transform` method with the value of a binding as the first argument, and any parameters as the second argument in list form, and returns the transformed value.
+Angular Classic invokes the `transform` method with the value of a binding as the first argument, and any parameters as the second argument in list form, and returns the transformed value.
 
 ## Example: Transforming a value exponentially
 

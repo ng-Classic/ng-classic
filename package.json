@@ -2,7 +2,7 @@
   "name": "angular-srcs",
   "version": "16.2.0-next.0",
   "private": true,
-  "description": "Angular Classic- a web framework for modern web apps",
+  "description": "Angular Classic - a web framework for modern web apps",
   "homepage": "https://github.com/ng-classic/ng-classic",
   "bugs": "https://github.com/ng-classic/ng-classic/issues",
   "license": "MIT",

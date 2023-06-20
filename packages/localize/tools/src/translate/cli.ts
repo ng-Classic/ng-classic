@@ -14,7 +14,7 @@ import {DiagnosticHandlingStrategy, Diagnostics} from '../diagnostics';
 import {getOutputPathFn} from './output_path';
 import {translateFiles} from './index';
 
-process.title = 'Angular ClassicLocalization Message Translator (localize-translate)';
+process.title = 'Angular Classic Localization Message Translator (localize-translate)';
 const args = process.argv.slice(2);
 const options =
     yargs(args)

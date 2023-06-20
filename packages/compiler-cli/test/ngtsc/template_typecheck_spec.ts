@@ -2599,7 +2599,7 @@ export declare class AnimationEvent {
         const diags = env.driveDiagnostics();
         expect(diags.length).toBe(1);
         expect(diags[0].messageText).toBe(`'foo' is not a known element:
-1. If 'foo' is an Angular Classiccomponent, then verify that it is part of this module.
+1. If 'foo' is an Angular Classic component, then verify that it is part of this module.
 2. To allow any element add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.`);
       });
 
@@ -2620,7 +2620,7 @@ export declare class AnimationEvent {
         const diags = env.driveDiagnostics();
         expect(diags.length).toBe(1);
         expect(diags[0].messageText).toBe(`'foo' is not a known element:
-1. If 'foo' is an Angular Classiccomponent, then verify that it is included in the '@Component.imports' of this component.
+1. If 'foo' is an Angular Classic component, then verify that it is included in the '@Component.imports' of this component.
 2. To allow any element add 'NO_ERRORS_SCHEMA' to the '@Component.schemas' of this component.`);
       });
 
@@ -2646,7 +2646,7 @@ export declare class AnimationEvent {
         expect(diags.length).toBe(1);
         expect(diags[0].messageText)
             .toMatch(`Can't bind to 'foo' since it isn't a known property of 'my-comp'.
-1. If 'my-comp' is an Angular Classiccomponent and it has 'foo' input, then verify that it is included in the '@Component.imports' of this component.
+1. If 'my-comp' is an Angular Classic component and it has 'foo' input, then verify that it is included in the '@Component.imports' of this component.
 2. If 'my-comp' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@Component.schemas' of this component to suppress this message.
 3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@Component.schemas' of this component.`);
       });
@@ -2667,7 +2667,7 @@ export declare class AnimationEvent {
         const diags = env.driveDiagnostics();
         expect(diags.length).toBe(1);
         expect(diags[0].messageText).toBe(`'my-foo' is not a known element:
-1. If 'my-foo' is an Angular Classiccomponent, then verify that it is part of this module.
+1. If 'my-foo' is an Angular Classic component, then verify that it is part of this module.
 2. If 'my-foo' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.`);
       });
 
@@ -2689,7 +2689,7 @@ export declare class AnimationEvent {
            const diags = env.driveDiagnostics();
            expect(diags.length).toBe(1);
            expect(diags[0].messageText).toBe(`'my-foo' is not a known element:
-1. If 'my-foo' is an Angular Classiccomponent, then verify that it is included in the '@Component.imports' of this component.
+1. If 'my-foo' is an Angular Classic component, then verify that it is included in the '@Component.imports' of this component.
 2. If 'my-foo' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@Component.schemas' of this component to suppress this message.`);
          });
 
@@ -2769,11 +2769,11 @@ export declare class AnimationEvent {
            const diags = env.driveDiagnostics();
            expect(diags.length).toBe(2);
            expect(diags[0].messageText).toBe(`'custom-element' is not a known element:
-1. If 'custom-element' is an Angular Classiccomponent, then verify that it is part of this module.
+1. If 'custom-element' is an Angular Classic component, then verify that it is part of this module.
 2. If 'custom-element' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.`);
            expect(diags[1].messageText)
                .toBe(`Can't bind to 'foo' since it isn't a known property of 'custom-element'.
-1. If 'custom-element' is an Angular Classiccomponent and it has 'foo' input, then verify that it is part of this module.
+1. If 'custom-element' is an Angular Classic component and it has 'foo' input, then verify that it is part of this module.
 2. If 'custom-element' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
 3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.`);
          });
@@ -2886,7 +2886,7 @@ export declare class AnimationEvent {
         const diags = env.driveDiagnostics();
         expect(diags.length).toBe(1);
         expect(diags[0].messageText).toBe(`'foo' is not a known element:
-1. If 'foo' is an Angular Classiccomponent, then verify that it is part of this module.
+1. If 'foo' is an Angular Classic component, then verify that it is part of this module.
 2. To allow any element add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.`);
       });
 
@@ -2913,7 +2913,7 @@ export declare class AnimationEvent {
            const diags = env.driveDiagnostics();
            expect(diags.length).toBe(1);
            expect(diags[0].messageText).toBe(`'foo' is not a known element:
-1. If 'foo' is an Angular Classiccomponent, then verify that it is part of this module.
+1. If 'foo' is an Angular Classic component, then verify that it is part of this module.
 2. To allow any element add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.`);
          });
     });
@@ -3010,7 +3010,7 @@ export declare class AnimationEvent {
         expect(diags.length).toBe(1);
         expect(diags[0].messageText)
             .toContain(
-                'Angular Classiccompiler option "strictTemplates" is enabled, however "fullTemplateTypeCheck" is disabled.');
+                'Angular Classic compiler option "strictTemplates" is enabled, however "fullTemplateTypeCheck" is disabled.');
       });
       it('should not error if "fullTemplateTypeCheck" is false when "strictTemplates" is false',
          () => {
@@ -3041,7 +3041,7 @@ export declare class AnimationEvent {
         expect(diags.length).toBe(1);
         expect(diags[0].messageText)
             .toContain(
-                'Angular Classiccompiler option "extendedDiagnostics" is configured, however "strictTemplates" is disabled.');
+                'Angular Classic compiler option "extendedDiagnostics" is configured, however "strictTemplates" is disabled.');
       });
       it('should not error if "strictTemplates" is true when "extendedDiagnostics" is configured',
          () => {
@@ -3069,7 +3069,7 @@ export declare class AnimationEvent {
         expect(diags.length).toBe(1);
         expect(diags[0].messageText)
             .toContain(
-                'Angular Classiccompiler option "extendedDiagnostics.defaultCategory" has an unknown diagnostic category: "does-not-exist".');
+                'Angular Classic compiler option "extendedDiagnostics.defaultCategory" has an unknown diagnostic category: "does-not-exist".');
         expect(diags[0].messageText).toContain(`
 Allowed diagnostic categories are:
 warning
@@ -3102,7 +3102,7 @@ suppress
         expect(diags.length).toBe(1);
         expect(diags[0].messageText)
             .toContain(
-                'Angular Classiccompiler option "extendedDiagnostics.checks" has an unknown check: "doesNotExist".');
+                'Angular Classic compiler option "extendedDiagnostics.checks" has an unknown check: "doesNotExist".');
       });
       it('should not error if "extendedDiagnostics.checks" contains all known checks', () => {
         env.tsconfig({
@@ -3130,7 +3130,7 @@ suppress
            const diags = env.driveDiagnostics();
            expect(diags.length).toBe(1);
            expect(diags[0].messageText)
-               .toContain(`Angular Classiccompiler option "extendedDiagnostics.checks['${
+               .toContain(`Angular Classic compiler option "extendedDiagnostics.checks['${
                    invalidBananaInBoxFactory
                        .name}']" has an unknown diagnostic category: "does-not-exist".`);
            expect(diags[0].messageText).toContain(`

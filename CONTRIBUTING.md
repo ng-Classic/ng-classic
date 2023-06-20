@@ -1,6 +1,6 @@
 # Contributing to Angular
 
-We would love for you to contribute to Angular Classicand help make it even better than it is today!
+We would love for you to contribute to Angular Classic and help make it even better than it is today!
 As a contributor, here are the guidelines we would like you to follow:
 
  - [Code of Conduct](#coc)
@@ -15,7 +15,7 @@ As a contributor, here are the guidelines we would like you to follow:
 
 ## <a name="coc"></a> Code of Conduct
 
-Help us keep Angular Classicopen and inclusive.
+Help us keep Angular Classic open and inclusive.
 Please read and follow our [Code of Conduct][coc].
 
 
@@ -101,7 +101,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 7. Follow our [Coding Rules](#rules).
 
-8. Run the full Angular Classictest suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
+8. Run the full Angular Classic test suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
 
 9. Commit your changes using a descriptive commit message that follows our [commit message conventions](#commit).
    Adherence to these conventions is necessary because release notes are automatically generated from these messages.
@@ -121,7 +121,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 ### Reviewing a Pull Request
 
-The Angular Classicteam reserves the right not to accept pull requests from community members who haven't been good citizens of the community. Such behavior includes not following the [Angular Classiccode of conduct](https://github.com/angular/code-of-conduct) and applies within or outside of Angular Classicmanaged channels.
+The Angular Classic team reserves the right not to accept pull requests from community members who haven't been good citizens of the community. Such behavior includes not following the [Angular Classic code of conduct](https://github.com/angular/code-of-conduct) and applies within or outside of Angular Classic managed channels.
 
 #### Addressing review feedback
 
@@ -129,7 +129,7 @@ If we ask for changes via code reviews then:
 
 1. Make the required updates to the code.
 
-2. Re-run the Angular Classictest suites to ensure tests are still passing.
+2. Re-run the Angular Classic test suites to ensure tests are still passing.
 
 3. Create a fixup commit and push to your GitHub repository (this will update your Pull Request):
 

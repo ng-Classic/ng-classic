@@ -1,6 +1,6 @@
-# Angular ClassicDevTools Communication Protocol
+# Angular Classic DevTools Communication Protocol
 
-Angular ClassicDevTools injects scripts in the user application page that interact with the framework debugging APIs. The injected scripts interact with the extension via message passing using a statically typed protocol.
+Angular Classic DevTools injects scripts in the user application page that interact with the framework debugging APIs. The injected scripts interact with the extension via message passing using a statically typed protocol.
 
 This subdirectory contains:
 - Declaration of a statically typed message bus

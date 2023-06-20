@@ -2,14 +2,14 @@
 #
 # Use of this source code is governed by an MIT-style license that can be
 # found in the LICENSE file at https://angular.io/license
-"""Package Angular Classiclibraries for npm distribution
+"""Package Angular Classic libraries for npm distribution
 
-If all users of an Angular Classiclibrary use Bazel (e.g. internal usage in your company)
+If all users of an Angular Classic library use Bazel (e.g. internal usage in your company)
 then you should simply add your library to the `deps` of the consuming application.
 
 These rules exist for compatibility with non-Bazel consumers of your library.
 
-It packages your library following the Angular ClassicPackage Format, see the
+It packages your library following the Angular Classic Package Format, see the
 specification of this format at https://goo.gl/jB3GVv
 """
 
@@ -187,7 +187,7 @@ def _run_rollup(ctx, bundle_name, rollup_config, entry_point, inputs, js_output,
 
     # After updating to build_bazel_rules_nodejs 0.27.0+, rollup has been updated to v1.3.1
     # which tree shakes @__PURE__ annotations and const variables which are later amended by NGCC.
-    # We turn this feature off for ng_package as Angular Classicbundles contain these and there are
+    # We turn this feature off for ng_package as Angular Classic bundles contain these and there are
     # test failures if they are removed.
     # See comments in:
     # https://github.com/ng-classic/ng-classic/pull/29210
@@ -284,7 +284,7 @@ def _ng_package_impl(ctx):
             static_files.append(file)
 
     # These accumulators match the directory names where the files live in the
-    # Angular Classicpackage format.
+    # Angular Classic package format.
     fesm2022 = []
     type_files = []
 
@@ -481,7 +481,7 @@ def _ng_package_impl(ctx):
     packager_args.add(_serialize_files_for_arg(type_files))
 
     ctx.actions.run(
-        progress_message = "Angular ClassicPackaging: building npm package %s" % str(ctx.label),
+        progress_message = "Angular Classic Packaging: building npm package %s" % str(ctx.label),
         mnemonic = "AngularPackage",
         inputs = packager_inputs,
         outputs = [npm_package_directory],
@@ -605,7 +605,7 @@ ng_package = rule(
 )
 
 def ng_package_macro(name, **kwargs):
-    """ng_package produces an npm-ready APF package for an Angular Classiclibrary."""
+    """ng_package produces an npm-ready APF package for an Angular Classic library."""
     ng_package(
         name = name,
         **kwargs

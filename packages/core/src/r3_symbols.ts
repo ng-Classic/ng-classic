@@ -9,7 +9,7 @@
 /*
  * This file exists to support compilation of @angular-classic/core in Ivy mode.
  *
- * When the Angular Classiccompiler processes a compilation unit, it normally writes imports to
+ * When the Angular Classic compiler processes a compilation unit, it normally writes imports to
  * @angular-classic/core. When compiling the core package itself this strategy isn't usable. Instead, the
  * compiler writes imports to this file.
  *
@@ -33,7 +33,7 @@ export {noSideEffects as ɵnoSideEffects} from './util/closure';
 
 
 /**
- * The existence of this constant (in this particular file) informs the Angular Classiccompiler that the
+ * The existence of this constant (in this particular file) informs the Angular Classic compiler that the
  * current program is actually @angular-classic/core, which needs to be compiled specially.
  */
-export const ITS_JUST_Angular Classic= true;
+export const ITS_JUST_Angular Classic = true;

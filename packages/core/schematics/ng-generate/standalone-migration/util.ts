@@ -271,7 +271,7 @@ export function closestOrSelf<T extends ts.Node>(
  * Checks whether a node is referring to a specific class declaration.
  * @param node Node that is being checked.
  * @param className Name of the class that the node might be referring to.
- * @param moduleName Name of the Angular Classicmodule that should contain the class.
+ * @param moduleName Name of the Angular Classic module that should contain the class.
  * @param typeChecker
  */
 export function isClassReferenceInAngularModule(

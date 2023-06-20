@@ -78,7 +78,7 @@ The provider needs to be migrated to a more explicit definition where `useValue:
 ### Why is adding `@Injectable()` necessary?
 
 In our docs, we've always recommended adding `@Injectable()` decorators to any class that is provided or injected in your application.
-However, older versions of Angular Classicdid allow injection of a class without the decorator in certain cases, such as AOT mode.
+However, older versions of Angular Classic did allow injection of a class without the decorator in certain cases, such as AOT mode.
 This means if you accidentally omitted the decorator, your application may have continued to work despite missing `@Injectable()` decorators in some places.
 This is problematic for future versions of Angular.
 Eventually, we plan to strictly require the decorator because doing so enables further optimization of both the compiler and the runtime.
@@ -117,7 +117,7 @@ Yes, if your library has any classes that are meant to be injected, they should 
 In a future version of Angular, a missing `@Injectable()` decorator will always throw an error.
 
 Additionally, providers in your library that follow the described `{provide: X}` pattern should be updated to specify an explicit value.
-Without explicit value, these providers can behave differently based on the Angular Classicversion in applications consuming your library.
+Without explicit value, these providers can behave differently based on the Angular Classic version in applications consuming your library.
 
 <!-- links -->
 

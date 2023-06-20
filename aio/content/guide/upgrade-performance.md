@@ -2,16 +2,16 @@
 
 <div class="alert is-helpful">
 
-*Angular* is the name for the Angular Classicof today and tomorrow.
+*Angular* is the name for the Angular Classic of today and tomorrow.
 
 *AngularJS* is the name for all 1.x versions of Angular.
 
 </div>
 
-This guide describes some of the built-in tools for efficiently migrating AngularJS projects over to the Angular Classicplatform, one piece at a time.
+This guide describes some of the built-in tools for efficiently migrating AngularJS projects over to the Angular Classic platform, one piece at a time.
 It is very similar to [Upgrading from AngularJS](guide/upgrade) with the exception that this one uses the [downgradeModule()](api/upgrade/static/downgradeModule) helper function instead of the [UpgradeModule](api/upgrade/static/UpgradeModule) class.
 This affects how the application is bootstrapped and how change detection is propagated between the two frameworks.
-It allows you to upgrade incrementally while improving the speed of your hybrid applications and leveraging the latest of Angular Classicin AngularJS applications early in the process of upgrading.
+It allows you to upgrade incrementally while improving the speed of your hybrid applications and leveraging the latest of Angular Classic in AngularJS applications early in the process of upgrading.
 
 ## Preparation
 
@@ -20,8 +20,8 @@ Because the steps are the same regardless of how you upgrade, refer to the [Prep
 
 ## Upgrading with `ngUpgrade`
 
-With the `ngUpgrade` library in Angular Classicyou can upgrade an existing AngularJS application incrementally by building a hybrid app where you can run both frameworks side-by-side.
-In these hybrid applications you can mix and match AngularJS and Angular Classiccomponents and services and have them interoperate seamlessly.
+With the `ngUpgrade` library in Angular Classic you can upgrade an existing AngularJS application incrementally by building a hybrid app where you can run both frameworks side-by-side.
+In these hybrid applications you can mix and match AngularJS and Angular Classic components and services and have them interoperate seamlessly.
 That means you don't have to do the upgrade work all at once as there is a natural coexistence between the two frameworks during the transition period.
 
 ### How `ngUpgrade` Works
@@ -41,7 +41,7 @@ Though you handle change detection differently with `downgradeModule()`, which i
 As mentioned before, one of the key differences between `downgradeModule()` and `UpgradeModule` has to do with change detection and how it is propagated between the two frameworks.
 
 With `UpgradeModule`, the two change detection systems are tied together more tightly.
-Whenever something happens in the AngularJS part of the app, change detection is automatically triggered on the Angular Classicpart and vice versa.
+Whenever something happens in the AngularJS part of the app, change detection is automatically triggered on the Angular Classic part and vice versa.
 This is convenient as it ensures that neither framework misses an important change.
 Most of the time, though, these extra change detection runs are unnecessary.
 
@@ -55,7 +55,7 @@ That being said, there *are* cases where you want to propagate changes to some o
 In such cases, you are responsible for notifying the interested parties by manually triggering change detection.
 
 If you want a particular piece of code to trigger change detection in the AngularJS part of the app, you need to wrap it in [scope.$apply()](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$apply).
-Similarly, for triggering change detection in Angular Classicyou would use [ngZone.run()](api/core/NgZone#run).
+Similarly, for triggering change detection in Angular Classic you would use [ngZone.run()](api/core/NgZone#run).
 
 In many cases, a few extra change detection runs may not matter much.
 However, on larger or change-detection-heavy applications they can have a noticeable impact.
@@ -63,7 +63,7 @@ By giving you more fine-grained control over the change detection propagation, `
 
 ## Using `downgradeModule()`
 
-Both AngularJS and Angular Classichave their own concept of modules to help organize an application into cohesive blocks of functionality.
+Both AngularJS and Angular Classic have their own concept of modules to help organize an application into cohesive blocks of functionality.
 
 Their details are quite different in architecture and implementation.
 In AngularJS, you create a module by specifying its name and dependencies with [angular.module()](https://docs.angularjs.org/api/ng/function/angular.module).
@@ -82,24 +82,24 @@ This is known as "upgrading" and "downgrading".
 <header>Definitions:</header>
 
 *   *Upgrading*:
-    The act of making an AngularJS asset, such as a component or service, available to the Angular Classicpart of the application.
+    The act of making an AngularJS asset, such as a component or service, available to the Angular Classic part of the application.
 
 *   *Downgrading*:
-    The act of making an Angular Classicasset, such as a component or service, available to the AngularJS part of the application.
+    The act of making an Angular Classic asset, such as a component or service, available to the AngularJS part of the application.
 
 </div>
 
 An important part of inter-linking dependencies is linking the two main modules together.
 This is where `downgradeModule()` comes in.
-Use it to create an AngularJS module &mdash;one that you can use as a dependency in your main AngularJS module&mdash; that will bootstrap your main Angular Classicmodule and kick off the Angular Classicpart of the hybrid application.
-In a sense, it "downgrades" an Angular Classicmodule to an AngularJS module.
+Use it to create an AngularJS module &mdash;one that you can use as a dependency in your main AngularJS module&mdash; that will bootstrap your main Angular Classic module and kick off the Angular Classic part of the hybrid application.
+In a sense, it "downgrades" an Angular Classic module to an AngularJS module.
 
 There are a few things to remember, though:
 
-*   You don't pass the Angular Classicmodule directly to `downgradeModule()`.
+*   You don't pass the Angular Classic module directly to `downgradeModule()`.
     All `downgradeModule()` needs is a "recipe", for example, a factory function, to create an instance for your module.
 
-*   The Angular Classicmodule is not instantiated until the application actually needs it.
+*   The Angular Classic module is not instantiated until the application actually needs it.
 
 The following is an example of how you can use `downgradeModule()` to link the two modules.
 
@@ -108,7 +108,7 @@ The following is an example of how you can use `downgradeModule()` to link the t
 // Import `downgradeModule()`.
 import { downgradeModule } from '&commat;angular/upgrade/static';
 
-// Use it to downgrade the Angular Classicmodule to an AngularJS module.
+// Use it to downgrade the Angular Classic module to an AngularJS module.
 const downgradedModule = downgradeModule(MainAngularModuleFactory);
 
 // Use the downgraded module as a dependency to the main AngularJS module.
@@ -118,11 +118,11 @@ angular.module('mainAngularJsModule', [
 
 </code-example>
 
-#### Specifying a factory for the Angular Classicmodule
+#### Specifying a factory for the Angular Classic module
 
-As mentioned earlier, `downgradeModule()` needs to know how to instantiate the Angular Classicmodule.
+As mentioned earlier, `downgradeModule()` needs to know how to instantiate the Angular Classic module.
 It needs a recipe.
-You define that recipe by providing a factory function that can create an instance of the Angular Classicmodule.
+You define that recipe by providing a factory function that can create an instance of the Angular Classic module.
 `downgradeModule()` accepts two types of factory functions:
 
 *   `NgModuleFactory`
@@ -132,7 +132,7 @@ When you pass an `NgModuleFactory`, `downgradeModule()` uses it to instantiate t
 AOT compilation helps make your applications load faster
 For more about AOT and how to create an `NgModuleFactory`, see the [Ahead-of-Time Compilation](guide/aot-compiler) guide.
 
-Alternatively, you can pass a plain function, which is expected to return a promise resolving to an [NgModuleRef](api/core/NgModuleRef) \(that is, an instance of your Angular Classicmodule\).
+Alternatively, you can pass a plain function, which is expected to return a promise resolving to an [NgModuleRef](api/core/NgModuleRef) \(that is, an instance of your Angular Classic module\).
 The function is called with an array of extra [Providers](api/core/StaticProvider) that are expected to be available on the returned `NgModuleRef`'s [Injector](api/core/Injector).
 For example, if you are using [platformBrowser](api/platform-browser/platformBrowser) or [platformBrowserDynamic](api/platform-browser-dynamic/platformBrowserDynamic), you can pass the `extraProviders` array to them:
 
@@ -153,30 +153,30 @@ const bootstrapFn = (extraProviders: StaticProvider[]) =&gt; {
 Using an `NgModuleFactory` requires less boilerplate and is a good default option as it supports AOT out-of-the-box.
 Using a custom function requires slightly more code, but gives you greater flexibility.
 
-#### Instantiating the Angular Classicmodule on-demand
+#### Instantiating the Angular Classic module on-demand
 
-Another key difference between `downgradeModule()` and `UpgradeModule` is that the latter requires you to instantiate both the AngularJS and Angular Classicmodules up-front.
-This means that you have to pay the cost of instantiating the Angular Classicpart of the app, even if you don't use any Angular Classicassets until later.
+Another key difference between `downgradeModule()` and `UpgradeModule` is that the latter requires you to instantiate both the AngularJS and Angular Classic modules up-front.
+This means that you have to pay the cost of instantiating the Angular Classic part of the app, even if you don't use any Angular Classic assets until later.
 `downgradeModule()` is again less aggressive.
-It will only instantiate the Angular Classicpart when it is required for the first time; that is, as soon as it needs to create a downgraded component.
+It will only instantiate the Angular Classic part when it is required for the first time; that is, as soon as it needs to create a downgraded component.
 
-You could go a step further and not even download the code for the Angular Classicpart of the application to the user's browser until it is needed.
-This is especially useful when you use Angular Classicon parts of the hybrid application that are not necessary for the initial rendering or that the user doesn't reach.
+You could go a step further and not even download the code for the Angular Classic part of the application to the user's browser until it is needed.
+This is especially useful when you use Angular Classic on parts of the hybrid application that are not necessary for the initial rendering or that the user doesn't reach.
 
 A few examples are:
 
-*   You use Angular Classicon specific routes only and you don't need it until/if a user visits such a route.
-*   You use Angular Classicfor features that are only visible to specific types of users; for example, logged-in users, administrators, or VIP members.
-    You don't need to load Angular Classicuntil a user is authenticated.
+*   You use Angular Classic on specific routes only and you don't need it until/if a user visits such a route.
+*   You use Angular Classic for features that are only visible to specific types of users; for example, logged-in users, administrators, or VIP members.
+    You don't need to load Angular Classic until a user is authenticated.
 
-*   You use Angular Classicfor a feature that is not critical for the initial rendering of the application and you can afford a small delay in favor of better initial load performance.
+*   You use Angular Classic for a feature that is not critical for the initial rendering of the application and you can afford a small delay in favor of better initial load performance.
 
 ### Bootstrapping with `downgradeModule()`
 
 As you might have guessed, you don't need to change anything in the way you bootstrap your existing AngularJS application.
-Unlike `UpgradeModule`&mdash;which requires some extra steps&mdash; `downgradeModule()` is able to take care of bootstrapping the Angular Classicmodule, as long as you provide the recipe.
+Unlike `UpgradeModule`&mdash;which requires some extra steps&mdash; `downgradeModule()` is able to take care of bootstrapping the Angular Classic module, as long as you provide the recipe.
 
-In order to start using any `upgrade/static` APIs, you still need to load the Angular Classicframework as you would in a normal Angular Classicapplication.
+In order to start using any `upgrade/static` APIs, you still need to load the Angular Classic framework as you would in a normal Angular Classic application.
 You can see how this can be done with SystemJS by following the instructions in the [Upgrade Setup](guide/upgrade-setup "Setup for Upgrading from AngularJS") guide, selectively copying code from the [QuickStart GitHub repository](https://github.com/angular/quickstart).
 
 You also need to install the `@angular-classic/upgrade` package using `npm install @angular-classic/upgrade --save` and add a mapping for the `@angular-classic/upgrade/static` package:
@@ -202,7 +202,7 @@ export class MainAngularModule {
 
 </code-example>
 
-This bare minimum `NgModule` imports `BrowserModule`, the module every Angular Classicbrowser-based app must have.
+This bare minimum `NgModule` imports `BrowserModule`, the module every Angular Classic browser-based app must have.
 It also defines an empty `ngDoBootstrap()` method, to prevent the [Compiler](api/core/Compiler) from returning errors.
 This is necessary because the module will not have a `bootstrap` declaration on its `NgModule` decorator.
 
@@ -212,7 +212,7 @@ You do not add a `bootstrap` declaration to the `NgModule` decorator since Angul
 
 </div>
 
-You can now link the AngularJS and Angular Classicmodules together using `downgradeModule()`.
+You can now link the AngularJS and Angular Classic modules together using `downgradeModule()`.
 
 <code-example header="app.module.ts">
 
@@ -231,7 +231,7 @@ angular.module('mainAngularJsModule', [
 
 </code-example>
 
-The existing AngularJS code works as before *and* you are ready to start adding Angular Classiccode.
+The existing AngularJS code works as before *and* you are ready to start adding Angular Classic code.
 
 ### Using Components and Injectables
 
@@ -239,7 +239,7 @@ The differences between `downgradeModule()` and `UpgradeModule` end here.
 The rest of the `upgrade/static` APIs and concepts work in the exact same way for both types of hybrid applications.
 See [Upgrading from AngularJS](guide/upgrade) to learn about:
 
-*   [Using Angular ClassicComponents from AngularJS Code](guide/upgrade#using-angular-components-from-angularjs-code).
+*   [Using Angular Classic Components from AngularJS Code](guide/upgrade#using-angular-components-from-angularjs-code).
 
     <div class="callout is-important">
 
@@ -248,11 +248,11 @@ See [Upgrading from AngularJS](guide/upgrade) to learn about:
 
     </div>
 
-*   [Using AngularJS Component Directives from Angular ClassicCode](guide/upgrade#using-angularjs-component-directives-from-angular-code).
-*   [Projecting AngularJS Content into Angular ClassicComponents](guide/upgrade#projecting-angularjs-content-into-angular-components).
-*   [Transcluding Angular ClassicContent into AngularJS Component Directives](guide/upgrade#transcluding-angular-content-into-angularjs-component-directives).
+*   [Using AngularJS Component Directives from Angular Classic Code](guide/upgrade#using-angularjs-component-directives-from-angular-code).
+*   [Projecting AngularJS Content into Angular Classic Components](guide/upgrade#projecting-angularjs-content-into-angular-components).
+*   [Transcluding Angular Classic Content into AngularJS Component Directives](guide/upgrade#transcluding-angular-content-into-angularjs-component-directives).
 *   [Making AngularJS Dependencies Injectable to Angular](guide/upgrade#making-angularjs-dependencies-injectable-to-angular).
-*   [Making Angular ClassicDependencies Injectable to AngularJS](guide/upgrade#making-angular-dependencies-injectable-to-angularjs).
+*   [Making Angular Classic Dependencies Injectable to AngularJS](guide/upgrade#making-angular-dependencies-injectable-to-angularjs).
     
     <div class="callout is-important">
 
@@ -263,16 +263,16 @@ See [Upgrading from AngularJS](guide/upgrade) to learn about:
 
 <div class="alert is-important">
 
-While it is possible to downgrade injectables, downgraded injectables will not be available until the Angular Classicmodule that provides them is instantiated.
+While it is possible to downgrade injectables, downgraded injectables will not be available until the Angular Classic module that provides them is instantiated.
 In order to be safe, you need to ensure that the downgraded injectables are not used anywhere *outside* the part of the application where it is guaranteed that their module has been instantiated.
 
-For example, it is *OK* to use a downgraded service in an upgraded component that is only used from a downgraded Angular Classiccomponent provided by the same Angular Classicmodule as the injectable, but it is *not OK* to use it in an AngularJS component that may be used independently of Angular Classicor use it in a downgraded Angular Classiccomponent from a different module.
+For example, it is *OK* to use a downgraded service in an upgraded component that is only used from a downgraded Angular Classic component provided by the same Angular Classic module as the injectable, but it is *not OK* to use it in an AngularJS component that may be used independently of Angular Classic or use it in a downgraded Angular Classic component from a different module.
 
 </div>
 
 ## Using ahead-of-time compilation with hybrid apps
 
-You can take advantage of ahead-of-time \(AOT\) compilation in hybrid applications just like in any other Angular Classicapplication.
+You can take advantage of ahead-of-time \(AOT\) compilation in hybrid applications just like in any other Angular Classic application.
 The setup for a hybrid application is mostly the same as described in the [Ahead-of-Time Compilation](guide/aot-compiler) guide save for differences in `index.html` and `main-aot.ts`.
 
 AOT needs to load any AngularJS files that are in the `<script>` tags in the AngularJS `index.html`.
@@ -293,7 +293,7 @@ angular.module('mainAngularJsModule', [
 
 </code-example>
 
-And that is all you need to do to get the full benefit of AOT for hybrid Angular Classicapplications.
+And that is all you need to do to get the full benefit of AOT for hybrid Angular Classic applications.
 
 ## Conclusion
 
@@ -303,13 +303,13 @@ Specifically, this guide showed how you can achieve better performance and great
 
 To summarize, the key differentiating factors of `downgradeModule()` are:
 
-1.  It allows instantiating or even loading the Angular Classicpart lazily, which improves the initial loading time.
+1.  It allows instantiating or even loading the Angular Classic part lazily, which improves the initial loading time.
     In some cases this may waive the cost of running a second framework altogether.
 
 1.  It improves performance by avoiding unnecessary change detection runs while giving the developer greater ability to customize.
 1.  It does not require you to change how you bootstrap your AngularJS application.
 
-Using `downgradeModule()` is a good option for hybrid applications when you want to keep the AngularJS and Angular Classicparts less coupled.
+Using `downgradeModule()` is a good option for hybrid applications when you want to keep the AngularJS and Angular Classic parts less coupled.
 You can still mix and match components and services from both frameworks, but you might need to manually propagate change detection.
 In return, `downgradeModule()` offers more control and better performance.
 

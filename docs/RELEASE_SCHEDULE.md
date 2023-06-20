@@ -1,6 +1,6 @@
-# Angular ClassicRelease Schedule
+# Angular Classic Release Schedule
 
-The Angular Classicrelease schedule has moved. 
+The Angular Classic release schedule has moved. 
 
-See [Angular Classicreleases](https://angular-classic.com/guide/releases "Angular Classicreleases") for information about release policies and practices&mdash;including deprecation and support practices&mdash;as well as estimated dates for our next major releases. 
+See [Angular Classic releases](https://angular-classic.com/guide/releases "Angular Classic releases") for information about release policies and practices&mdash;including deprecation and support practices&mdash;as well as estimated dates for our next major releases. 
 

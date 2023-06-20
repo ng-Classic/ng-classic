@@ -23,8 +23,8 @@ declare const $localize: {locale?: string};
 export function getGlobalLocale(): string {
   if (typeof ngI18nClosureMode !== 'undefined' && ngI18nClosureMode &&
       typeof goog !== 'undefined' && goog.LOCALE !== 'en') {
-    // * The default `goog.LOCALE` value is `en`, while Angular Classicused `en-US`.
-    // * In order to preserve backwards compatibility, we use Angular Classicdefault value over
+    // * The default `goog.LOCALE` value is `en`, while Angular Classic used `en-US`.
+    // * In order to preserve backwards compatibility, we use Angular Classic default value over
     //   Closure Compiler's one.
     return goog.LOCALE;
   } else {

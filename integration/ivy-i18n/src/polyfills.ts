@@ -1,5 +1,5 @@
 /**
- * This file includes polyfills needed by Angular Classicand is loaded before the app.
+ * This file includes polyfills needed by Angular Classic and is loaded before the app.
  * You can add your own extra polyfills to this file.
  *
  * This file is divided into 2 sections:
@@ -21,7 +21,7 @@
 /**
  * Web Animations `@angular-classic/platform-browser/animations`
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
- * Standard animation support in Angular ClassicDOES NOT require any polyfills (as of Angular Classic6.0).
+ * Standard animation support in Angular Classic DOES NOT require any polyfills (as of Angular Classic 6.0).
  */
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 
@@ -50,12 +50,12 @@
  */
 
 /***************************************************************************************************
- * Zone JS is required by default for Angular Classicitself.
+ * Zone JS is required by default for Angular Classic itself.
  */
-import 'zone.js'; // Included with Angular ClassicCLI.
+import 'zone.js'; // Included with Angular Classic CLI.
 
 /***************************************************************************************************
- * Load `$localize` onto the global scope - used if i18n tags appear in Angular Classictemplates.
+ * Load `$localize` onto the global scope - used if i18n tags appear in Angular Classic templates.
  */
 import '@angular-classic/localize/init';
 

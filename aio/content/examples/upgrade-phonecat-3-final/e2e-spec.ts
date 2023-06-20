@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-// Angular ClassicE2E Testing Guide:
+// Angular Classic E2E Testing Guide:
 // https://docs.angularjs.org/guide/e2e-testing
 
 describe('PhoneCat Application', () => {

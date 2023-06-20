@@ -74,7 +74,7 @@ export interface DomAttributeCompletion {
 
   /**
    * Whether this attribute is also a DOM property. Note that this is required to be `true` because
-   * we only want to provide DOM attributes when there is an Angular Classicsyntax associated with them
+   * we only want to provide DOM attributes when there is an Angular Classic syntax associated with them
    * (`[propertyName]=""`).
    */
   isAlsoProperty: true;
@@ -398,7 +398,7 @@ function buildSnippet(insertSnippet: true|undefined, text: string): string|undef
 }
 
 /**
- * Used to ensure Angular Classiccompletions appear before DOM completions. Inputs and Outputs are
+ * Used to ensure Angular Classic completions appear before DOM completions. Inputs and Outputs are
  * prioritized first while attributes which would match an additional directive are prioritized
  * second.
  *

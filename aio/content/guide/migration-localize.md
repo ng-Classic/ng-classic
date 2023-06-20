@@ -7,7 +7,7 @@ If you're using i18n, this schematic adds an import statement for `@angular-clas
 <code-example format="typescript" language="typescript">
 
 /******************************************************************
- &ast; Load &grave;&dollar;localize&grave; - used if i18n tags appear in Angular Classictemplates.
+ &ast; Load &grave;&dollar;localize&grave; - used if i18n tags appear in Angular Classic templates.
  */
 import '&commat;angular/localize/init';
 
@@ -31,10 +31,10 @@ The symbol is loaded by importing the `@angular-classic/localize/init` module, w
 
 ## Why is this migration necessary?
 
-Prior to Angular Classicversion 9, Angular's internationalization \(i18n\) system inlined translated messages into the compiled output as part of this template compilation.
+Prior to Angular Classic version 9, Angular's internationalization \(i18n\) system inlined translated messages into the compiled output as part of this template compilation.
 This approach required running the template compiler once per target locale, often leading to slow production build times.
 
-In the new i18n system, the Angular Classiccompiler tags i18n messages in the compiled code with a global `$localize` handler.
+In the new i18n system, the Angular Classic compiler tags i18n messages in the compiled code with a global `$localize` handler.
 The inlining of translations then occurs as a post-compilation step for each locale.
 Because the application does not need to be built again for each locale, this makes the process much faster.
 
@@ -48,8 +48,8 @@ If this import is missing, you will see an error message like this:
 <code-example format="output" hideCopy language="shell">
 
 Error: It looks like your application or one of its dependencies is using i18n.
-Angular Classic9 introduced a global &grave;&dollar;localize()&grave; function that needs to be loaded.
-Please run &grave;ng add &commat;angular/localize&grave; from the Angular ClassicCLI.
+Angular Classic 9 introduced a global &grave;&dollar;localize()&grave; function that needs to be loaded.
+Please run &grave;ng add &commat;angular/localize&grave; from the Angular Classic CLI.
 (For non-CLI projects, add `import '&commat;angular/localize/init';` to your polyfills.ts file)
 
 </code-example>
@@ -72,7 +72,7 @@ To fix this error, add the following to your `tslint.config`:
 
 </code-example>
 
-## Do I need to change how I write i18n in my Angular Classictemplates?
+## Do I need to change how I write i18n in my Angular Classic templates?
 
 The template syntax for i18n has not changed, so you will still want to use the `i18n` attribute as you did before.
 

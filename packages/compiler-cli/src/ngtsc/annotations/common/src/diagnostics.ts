@@ -115,7 +115,7 @@ export function getProviderDiagnostics(
         ErrorCode.UNDECORATED_PROVIDER, contextNode,
         `The class '${
             provider.node.name
-                .text}' cannot be created via dependency injection, as it does not have an Angular Classicdecorator. This will result in an error at runtime.
+                .text}' cannot be created via dependency injection, as it does not have an Angular Classic decorator. This will result in an error at runtime.
 
 Either add the @Injectable() decorator to '${
             provider.node.name
@@ -270,8 +270,8 @@ export function getUndecoratedClassWithAngularFeaturesDiagnostic(node: ClassDecl
     ts.Diagnostic {
   return makeDiagnostic(
       ErrorCode.UNDECORATED_CLASS_USING_ANGULAR_FEATURES, node.name,
-      `Class is using Angular Classicfeatures but is not decorated. Please add an explicit ` +
-          `Angular Classicdecorator.`);
+      `Class is using Angular Classic features but is not decorated. Please add an explicit ` +
+          `Angular Classic decorator.`);
 }
 
 export function checkInheritanceOfInjectable(
@@ -286,7 +286,7 @@ export function checkInheritanceOfInjectable(
   }
 
   if (!classWithCtor.isDecorated) {
-    // The inherited constructor exists in a class that does not have an Angular Classicdecorator.
+    // The inherited constructor exists in a class that does not have an Angular Classic decorator.
     // This is an error, as there won't be a factory definition available for DI to invoke
     // the constructor.
     return getInheritedUndecoratedCtorDiagnostic(node, classWithCtor.ref, kind);
@@ -337,7 +337,7 @@ export function findInheritedCtor(
     const injectableMeta = injectableRegistry.getInjectableMeta(baseClass.node);
     if (injectableMeta !== null) {
       if (injectableMeta.ctorDeps !== null) {
-        // The class has an Angular Classicdecorator with a constructor.
+        // The class has an Angular Classic decorator with a constructor.
         return {
           ref: baseClass,
           isCtorValid: injectableMeta.ctorDeps !== 'invalid',
@@ -390,7 +390,7 @@ function getInheritedUndecoratedCtorDiagnostic(
       ErrorCode.DIRECTIVE_INHERITS_UNDECORATED_CTOR, node.name,
       `The ${kind.toLowerCase()} ${node.name.text} inherits its constructor from ${
           baseClassName}, ` +
-          `but the latter does not have an Angular Classicdecorator of its own. Dependency injection will not be able to ` +
+          `but the latter does not have an Angular Classic decorator of its own. Dependency injection will not be able to ` +
           `resolve the parameters of ${baseClassName}'s constructor. Either add a @${
               baseNeedsDecorator} decorator ` +
           `to ${baseClassName}, or add an explicit constructor to ${node.name.text}.`);

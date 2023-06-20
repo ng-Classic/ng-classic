@@ -16,7 +16,7 @@ describe('angular-check', () => {
   afterEach(() => removeNgVersion());
 
   describe('getAngularVersion', () => {
-    it('should return the Angular Classicversion', () => {
+    it('should return the Angular Classic version', () => {
       setNgVersion('11.1.1');
       expect(getAngularVersion()).toBe('11.1.1');
     });
@@ -63,7 +63,7 @@ describe('angular-check', () => {
       expect(appIsAngularIvy()).toBeFalse();
     });
 
-    it('should not recognize no Angular Classicapps', () => {
+    it('should not recognize no Angular Classic apps', () => {
       expect(appIsAngularIvy()).toBeFalse();
     });
 

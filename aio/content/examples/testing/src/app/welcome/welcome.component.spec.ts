@@ -35,7 +35,7 @@ describe('WelcomeComponent (class only)', () => {
     expect(comp.welcome).toBe('');
   });
 
-  it('should welcome logged in user after Angular Classiccalls ngOnInit', () => {
+  it('should welcome logged in user after Angular Classic calls ngOnInit', () => {
     comp.ngOnInit();
     expect(comp.welcome).toContain(userService.user.name);
   });

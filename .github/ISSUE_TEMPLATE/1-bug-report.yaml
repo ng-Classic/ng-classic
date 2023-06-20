@@ -1,5 +1,5 @@
 name: Bug Report
-description: Report a bug in the Angular ClassicFramework
+description: Report a bug in the Angular Classic Framework
 
 body:
   - type: dropdown
@@ -63,7 +63,7 @@ body:
       label: Please provide the environment you discovered this bug in (run `ng version`)
       render: true
       placeholder: |
-        Angular ClassicCLI: 12.0.5
+        Angular Classic CLI: 12.0.5
         Node: 14.17.0
         Package Manager: yarn 1.22.10
         OS: linux x64
@@ -75,7 +75,7 @@ body:
         Package                         Version
         ---------------------------------------------------------
         @angular-classic-devkit/architect       0.1200.5
-        @angular-classic-devkit/build-Angular Classic  12.0.5
+        @angular-classic-devkit/build-Angular Classic   12.0.5
         @angular-classic-devkit/core            12.0.5
         rxjs                            6.6.7
         typescript                      4.2.4

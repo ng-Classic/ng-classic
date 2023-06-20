@@ -31,7 +31,7 @@ import {PendingTrait, Trait, TraitState} from './trait';
  */
 export interface ClassRecord {
   /**
-   * The `ClassDeclaration` of the class which has Angular Classictraits applied.
+   * The `ClassDeclaration` of the class which has Angular Classic traits applied.
    */
   node: ClassDeclaration;
 
@@ -42,7 +42,7 @@ export interface ClassRecord {
 
   /**
    * Meta-diagnostics about the class, which are usually related to whether certain combinations of
-   * Angular Classicdecorators are not permitted.
+   * Angular Classic decorators are not permitted.
    */
   metaDiagnostics: ts.Diagnostic[]|null;
 
@@ -61,10 +61,10 @@ export interface ClassRecord {
 }
 
 /**
- * The heart of Angular Classiccompilation.
+ * The heart of Angular Classic compilation.
  *
  * The `TraitCompiler` is responsible for processing all classes in the program. Any time a
- * `DecoratorHandler` matches a class, a "trait" is created to represent that Angular Classicaspect of the
+ * `DecoratorHandler` matches a class, a "trait" is created to represent that Angular Classic aspect of the
  * class (such as the class having a component definition).
  *
  * The `TraitCompiler` transitions each trait through the various phases of compilation, culminating

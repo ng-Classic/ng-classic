@@ -44,7 +44,7 @@ import {isModuleWithProviders} from './util';
 let compilationDepth = 0;
 
 /**
- * Compile an Angular Classiccomponent according to its decorator metadata, and patch the resulting
+ * Compile an Angular Classic component according to its decorator metadata, and patch the resulting
  * component def (ɵcmp) onto the component type.
  *
  * Compilation may be asynchronous (due to the need to resolve URLs for the component template or
@@ -320,7 +320,7 @@ function hasSelectorScope<T>(component: Type<T>): component is Type<T>&
 }
 
 /**
- * Compile an Angular Classicdirective according to its decorator metadata, and patch the resulting
+ * Compile an Angular Classic directive according to its decorator metadata, and patch the resulting
  * directive def onto the component type.
  *
  * In the event that compilation is not immediate, `compileDirective` will return a `Promise` which
@@ -423,7 +423,7 @@ export function directiveMetadata(type: Type<any>, metadata: Directive): R3Direc
 }
 
 /**
- * Adds a directive definition to all parent classes of a type that don't have an Angular Classicdecorator.
+ * Adds a directive definition to all parent classes of a type that don't have an Angular Classic decorator.
  */
 function addDirectiveDefToUndecoratedParents(type: Type<any>) {
   const objPrototype = Object.prototype;

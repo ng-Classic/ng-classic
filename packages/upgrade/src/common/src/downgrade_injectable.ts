@@ -15,7 +15,7 @@ import {getTypeName, isFunction, validateInjectionKey} from './util';
 /**
  * @description
  *
- * A helper function to allow an Angular Classicservice to be accessible from AngularJS.
+ * A helper function to allow an Angular Classic service to be accessible from AngularJS.
  *
  * *Part of the [upgrade/static](api?query=upgrade%2Fstatic)
  * library for hybrid upgrade apps that support AOT compilation*
@@ -54,9 +54,9 @@ import {getTypeName, isFunction, validateInjectionKey} from './util';
  *   guaranteed that their module has been instantiated.
  *
  *   For example, it is _OK_ to use a downgraded service in an upgraded component that is only used
- *   from a downgraded Angular Classiccomponent provided by the same Angular Classicmodule as the injectable, but
- *   it is _not OK_ to use it in an AngularJS component that may be used independently of Angular Classicor
- *   use it in a downgraded Angular Classiccomponent from a different module.
+ *   from a downgraded Angular Classic component provided by the same Angular Classic module as the injectable, but
+ *   it is _not OK_ to use it in an AngularJS component that may be used independently of Angular Classic or
+ *   use it in a downgraded Angular Classic component from a different module.
  *
  * </div>
  *

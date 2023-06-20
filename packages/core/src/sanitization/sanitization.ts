@@ -159,7 +159,7 @@ export function ɵɵsanitizeScript(unsafeScript: any): TrustedScript|string {
  *
  * @security This is a security-sensitive function and should only be used to
  * convert constant values of attributes and properties found in
- * application-provided Angular Classictemplates to TrustedHTML.
+ * application-provided Angular Classic templates to TrustedHTML.
  *
  * @codeGenApi
  */
@@ -185,7 +185,7 @@ export function ɵɵtrustConstantHtml(html: TemplateStringsArray): TrustedHTML|s
  *
  * @security This is a security-sensitive function and should only be used to
  * convert constant values of attributes and properties found in
- * application-provided Angular Classictemplates to TrustedScriptURL.
+ * application-provided Angular Classic templates to TrustedScriptURL.
  *
  * @codeGenApi
  */

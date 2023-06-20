@@ -68,7 +68,7 @@ Since `app-routing.module.ts` already imports `HeroesComponent`, you can use it 
 
 <code-example header="src/app/app-routing.module.ts" path="toh-pt5/src/app/app-routing.module.ts" region="heroes-route"></code-example>
 
-A typical Angular Classic`Route` has two properties:
+A typical Angular Classic `Route` has two properties:
 
 | Properties  | Details |
 |:---         |:---     |
@@ -195,7 +195,7 @@ The  *template* presents a grid of hero name links.
 The *class* is like the `HeroesComponent` class.
 
 *   It defines a `heroes` array property
-*   The constructor expects Angular Classicto inject the `HeroService` into a private `heroService` property
+*   The constructor expects Angular Classic to inject the `HeroService` into a private `heroService` property
 *   The `ngOnInit()` lifecycle hook calls `getHeroes()`
 
 This `getHeroes()` returns the sliced list of heroes at positions 1 and 5, returning only Heroes two, three, four, and five.
@@ -289,7 +289,7 @@ Now that the router has a route to `HeroDetailComponent`, fix the dashboard hero
 
 <code-example header="src/app/dashboard/dashboard.component.html (hero links)" path="toh-pt5/src/app/dashboard/dashboard.component.html" region="click"></code-example>
 
-You're using Angular Classic[interpolation binding](guide/interpolation) within the `*ngFor` repeater to insert the current iteration's `hero.id` into each [`routerLink`](#routerlink).
+You're using Angular Classic [interpolation binding](guide/interpolation) within the `*ngFor` repeater to insert the current iteration's `hero.id` into each [`routerLink`](#routerlink).
 
 <a id="heroes-component-links"></a>
 
@@ -347,7 +347,7 @@ The "id" parameter is the `id` of the hero to display.
 
 The [`HeroService`](tutorial/tour-of-heroes/toh-pt4) gets hero data from the remote server and this component uses it to get the hero-to-display.
 
-The [`location`](api/common/Location) is an Angular Classicservice for interacting with the browser.
+The [`location`](api/common/Location) is an Angular Classic service for interacting with the browser.
 This service lets you navigate back to the previous view.
 
 ### Extract the `id` route parameter
@@ -481,7 +481,7 @@ Here are the code files discussed on this page.
 
 ## Summary
 
-*   You added the Angular Classicrouter to navigate among different components
+*   You added the Angular Classic router to navigate among different components
 *   You turned the `AppComponent` into a navigation shell with `<a>` links and a `<router-outlet>`
 *   You configured the router in an `AppRoutingModule`
 *   You defined routes, a redirect route, and a parameterized route

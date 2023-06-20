@@ -1,6 +1,6 @@
 # Attribute binding
 
-Attribute binding in Angular Classichelps you set values for attributes directly.
+Attribute binding in Angular Classic helps you set values for attributes directly.
 With attribute binding, you can improve accessibility, style your application dynamically, and manage multiple CSS classes or styles simultaneously.
 
 <div class="alert is-helpful">
@@ -26,7 +26,7 @@ Then, you set the attribute value with an expression that resolves to a string.
 
 <div class="alert is-helpful">
 
-When the expression resolves to `null` or `undefined`, Angular Classicremoves the attribute altogether.
+When the expression resolves to `null` or `undefined`, Angular Classic removes the attribute altogether.
 
 </div>
 

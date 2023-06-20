@@ -16,7 +16,7 @@ import {URL} from 'url';
  * this, a Function constructor is used to prevent TypeScript from changing the dynamic import.
  * Once TypeScript provides support for keeping the dynamic import this workaround can
  * be dropped.
- * This is only intended to be used with Angular Classicframework packages.
+ * This is only intended to be used with Angular Classic framework packages.
  *
  * @param modulePath The path of the module to load.
  * @returns A Promise that resolves to the dynamically imported module.

@@ -309,13 +309,13 @@ export function defaultGatherDiagnostics(program: api.Program): ReadonlyArray<ts
   checkOtherDiagnostics =
       checkOtherDiagnostics && checkDiagnostics(program.getTsSyntacticDiagnostics());
 
-  // Check TypeScript semantic and Angular Classicstructure diagnostics
+  // Check TypeScript semantic and Angular Classic structure diagnostics
   checkOtherDiagnostics =
       checkOtherDiagnostics &&
       checkDiagnostics(
           [...program.getTsSemanticDiagnostics(), ...program.getNgStructuralDiagnostics()]);
 
-  // Check Angular Classicsemantic diagnostics
+  // Check Angular Classic semantic diagnostics
   checkOtherDiagnostics =
       checkOtherDiagnostics && checkDiagnostics(program.getNgSemanticDiagnostics());
 

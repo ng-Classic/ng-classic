@@ -1,6 +1,6 @@
 # PlatformServer
 
-This project was generated with [Angular ClassicCLI](https://github.com/ng-classic/ng-classic-cli) version 16.0.0-rc.0.
+This project was generated with [Angular Classic CLI](https://github.com/ng-classic/ng-classic-cli) version 16.0.0-rc.0.
 
 ## Development server
 
@@ -24,4 +24,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular ClassicCLI use `ng help` or go check out the [Angular ClassicCLI Overview and Command Reference](https://angular-classic.com/cli) page.
+To get more help on the Angular Classic CLI use `ng help` or go check out the [Angular Classic CLI Overview and Command Reference](https://angular-classic.com/cli) page.

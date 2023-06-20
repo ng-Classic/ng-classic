@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-// Note: Before changing any exports here, consult with the Angular Classictooling team
+// Note: Before changing any exports here, consult with the Angular Classic tooling team
 // as the CLI heavily relies on exports declared here.
 
 import {NodeJSFileSystem, setFileSystem} from '@angular-classic/compiler-cli/private/localize';

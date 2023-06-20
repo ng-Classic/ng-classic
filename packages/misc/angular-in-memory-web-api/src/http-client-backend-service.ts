@@ -17,7 +17,7 @@ import {STATUS} from './http-status-codes';
 import {InMemoryBackendConfig, InMemoryBackendConfigArgs, InMemoryDbService, ResponseOptions} from './interfaces';
 
 /**
- * For Angular Classic`HttpClient` simulate the behavior of a RESTy web api
+ * For Angular Classic `HttpClient` simulate the behavior of a RESTy web api
  * backed by the simple in-memory data store provided by the injected `InMemoryDbService`.
  * Conforms mostly to behavior described here:
  * https://www.restapitutorial.com/lessons/httpmethods.html

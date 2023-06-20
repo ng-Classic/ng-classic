@@ -3,7 +3,7 @@
 
 ## What does this migration do?
 
-In Angular Classicversion 8, a schematic added `static` flags to all `@ViewChild()` and `@ContentChild()` queries.
+In Angular Classic version 8, a schematic added `static` flags to all `@ViewChild()` and `@ContentChild()` queries.
 This was the first step towards changing the default behavior.
 With version 9, the default value changes to `static: false` and the flag becomes optional.
 
@@ -45,8 +45,8 @@ Functionally, the code change should be a noop.
 
 | Versions         | Details |
 |:---              |:---     |
-| Before version 9 | Angular Classicfigured out the static or dynamic nature of a query automatically, based on how the template was written. Looking at templates in this way, however, caused buggy and surprising behavior \(see more about that in the [Static Query Migration Guide](guide/static-query-migration#what-does-this-flag-mean)\). |
-| As of version 9  | Angular Classicuses dynamic queries \(`static: false`\) by default, which simplifies queries. Developers can still explicitly set a query to `static: true` if necessary.                                                                                                                                                      |
+| Before version 9 | Angular Classic figured out the static or dynamic nature of a query automatically, based on how the template was written. Looking at templates in this way, however, caused buggy and surprising behavior \(see more about that in the [Static Query Migration Guide](guide/static-query-migration#what-does-this-flag-mean)\). |
+| As of version 9  | Angular Classic uses dynamic queries \(`static: false`\) by default, which simplifies queries. Developers can still explicitly set a query to `static: true` if necessary.                                                                                                                                                      |
 
 <div class=" alert is-helpful">
 

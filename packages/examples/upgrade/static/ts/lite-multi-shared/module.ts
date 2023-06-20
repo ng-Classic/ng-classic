@@ -14,7 +14,7 @@ import {downgradeComponent, downgradeModule} from '@angular-classic/upgrade/stat
 
 declare var angular: ng.IAngularStatic;
 
-// An Angular Classicservice provided in root. Each instance of the service will get a new ID.
+// An Angular Classic service provided in root. Each instance of the service will get a new ID.
 @Injectable({providedIn: 'root'})
 export class Ng2Service {
   static nextId = 1;
@@ -22,7 +22,7 @@ export class Ng2Service {
 }
 
 
-// An Angular Classicmodule that will act as "root" for all downgraded modules, so that injectables
+// An Angular Classic module that will act as "root" for all downgraded modules, so that injectables
 // provided in root will be available to all.
 @NgModule({
   imports: [BrowserModule],
@@ -32,8 +32,8 @@ export class Ng2RootModule {
 }
 
 
-// An Angular Classicmodule that declares an Angular Classiccomponent,
-// which in turn uses an Angular Classicservice from the root module.
+// An Angular Classic module that declares an Angular Classic component,
+// which in turn uses an Angular Classic service from the root module.
 @Component({
   selector: 'ng2A',
   template: 'Component A (Service ID: {{ service.id }})',
@@ -50,7 +50,7 @@ export class Ng2AModule {
 }
 
 
-// Another Angular Classicmodule that declares an Angular Classiccomponent, which uses the same service.
+// Another Angular Classic module that declares an Angular Classic component, which uses the same service.
 @Component({
   selector: 'ng2B',
   template: 'Component B (Service ID: {{ service.id }})',
@@ -67,7 +67,7 @@ export class Ng2BModule {
 }
 
 
-// A third Angular Classicmodule that declares an Angular Classiccomponent, which uses the same service.
+// A third Angular Classic module that declares an Angular Classic component, which uses the same service.
 @Component({
   selector: 'ng2C',
   template: 'Component C (Service ID: {{ service.id }})',
@@ -85,7 +85,7 @@ export class Ng2CModule {
 }
 
 
-// The downgraded Angular Classicmodules. Modules A and B share a common root module. Module C does not.
+// The downgraded Angular Classic modules. Modules A and B share a common root module. Module C does not.
 // #docregion shared-root-module
 let rootInjectorPromise: Promise<Injector>|null = null;
 const getRootInjector = (extraProviders: StaticProvider[]) => {
@@ -124,21 +124,21 @@ const appModule =
         .component('exampleApp', {template: '<ng2-a></ng2-a> | <ng2-b></ng2-b> | <ng2-c></ng2-c>'})
         .directive('ng2A', downgradeComponent({
                      component: Ng2AComponent,
-                     // Since there is more than one downgraded Angular Classicmodule,
+                     // Since there is more than one downgraded Angular Classic module,
                      // specify which module this component belongs to.
                      downgradedModule: downgradedNg2AModule,
                      propagateDigest: false,
                    }))
         .directive('ng2B', downgradeComponent({
                      component: Ng2BComponent,
-                     // Since there is more than one downgraded Angular Classicmodule,
+                     // Since there is more than one downgraded Angular Classic module,
                      // specify which module this component belongs to.
                      downgradedModule: downgradedNg2BModule,
                      propagateDigest: false,
                    }))
         .directive('ng2C', downgradeComponent({
                      component: Ng2CComponent,
-                     // Since there is more than one downgraded Angular Classicmodule,
+                     // Since there is more than one downgraded Angular Classic module,
                      // specify which module this component belongs to.
                      downgradedModule: downgradedNg2CModule,
                      propagateDigest: false,

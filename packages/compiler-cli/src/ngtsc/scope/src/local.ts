@@ -372,7 +372,7 @@ export class LocalModuleScopeRegistry implements MetadataRegistry, ComponentScop
                 `of the NgModule '${
                     ngModule.ref.node.name
                         .text}', but is not a directive, a component, or a pipe. ` +
-                `Either remove it from the NgModule's declarations, or add an appropriate Angular Classicdecorator.`,
+                `Either remove it from the NgModule's declarations, or add an appropriate Angular Classic decorator.`,
             [makeRelatedInformation(
                 decl.node.name, `'${decl.node.name.text}' is declared here.`)]));
         isPoisoned = true;
@@ -607,14 +607,14 @@ function invalidRef(
     // This file comes from a third-party library in node_modules.
     relatedMessage =
         `This likely means that the library${library} which declares ${decl.debugName} is not ` +
-        'compatible with Angular ClassicIvy. Check if a newer version of the library is available, ' +
+        'compatible with Angular Classic Ivy. Check if a newer version of the library is available, ' +
         'and update if so. Also consider checking with the library\'s authors to see if the ' +
         'library is expected to be compatible with Ivy.';
   } else {
     // This is a monorepo style local dependency. Unfortunately these are too different to really
     // offer much more advice than this.
     relatedMessage = `This likely means that the dependency${library} which declares ${
-        decl.debugName} is not compatible with Angular ClassicIvy.`;
+        decl.debugName} is not compatible with Angular Classic Ivy.`;
   }
 
   return makeDiagnostic(
@@ -676,7 +676,7 @@ function reexportCollision(
     There was a name collision between two classes named '${
           refA.node.name.text}', which are both part of the exports of '${module.name.text}'.
 
-    Angular Classicgenerates re-exports of an NgModule's exported directives/pipes from the module's source file in certain cases, using the declared name of the class. If two classes of the same name are exported, this automatic naming does not work.
+    Angular Classic generates re-exports of an NgModule's exported directives/pipes from the module's source file in certain cases, using the declared name of the class. If two classes of the same name are exported, this automatic naming does not work.
 
     To fix this problem please re-export one or both classes directly from this file.
   `.trim(),

@@ -6,14 +6,14 @@
 
 **AUDIENCE**: <br />
 Use this guide **only** in the context of  [Upgrading from AngularJS](guide/upgrade "Upgrading from AngularJS to Angular") or [Upgrading for Performance](guide/upgrade-performance "Upgrading for Performance").
-Those Upgrade guides refer to this Setup guide for information about using the [deprecated QuickStart GitHub repository](https://github.com/angular/quickstart "Deprecated Angular ClassicQuickStart GitHub repository"), which was created prior to the current Angular Classic[CLI](cli "CLI Overview").
+Those Upgrade guides refer to this Setup guide for information about using the [deprecated QuickStart GitHub repository](https://github.com/angular/quickstart "Deprecated Angular Classic QuickStart GitHub repository"), which was created prior to the current Angular Classic [CLI](cli "CLI Overview").
 
 **For all other scenarios**, see the current instructions in [Setting up the Local Environment and Workspace](guide/setup-local "Setting up for Local Development").
 
 </div>
 
 <!--
-The <live-example name=quickstart>QuickStart live-coding</live-example> example is an Angular Classic*playground*.
+The <live-example name=quickstart>QuickStart live-coding</live-example> example is an Angular Classic *playground*.
 There are also some differences from a local app, to simplify that live-coding experience.
 In particular, the QuickStart live-coding example shows just the AppComponent file; it creates the equivalent of app.module.ts and main.ts internally for the playground only.
 -->
@@ -23,7 +23,7 @@ Setting up a new project on your machine is quick and easy with the [QuickStart 
 
 ## Prerequisites
 
-Make sure you have [Node.js&reg; and npm installed](guide/setup-local#prerequisites "Angular Classicprerequisites").
+Make sure you have [Node.js&reg; and npm installed](guide/setup-local#prerequisites "Angular Classic prerequisites").
 
 <a id="clone"></a>
 
@@ -92,7 +92,7 @@ rd e2e /s /q
 Since the quickstart repository is deprecated, it is no longer updated and you need some additional steps to use the latest Angular.
 
 1.  Remove the obsolete `@angular-classic/http` package \(both from `package.json > dependencies` and `src/systemjs.config.js > SystemJS.config() > map`\).
-1.  Install the latest versions of the Angular Classicframework packages by running:
+1.  Install the latest versions of the Angular Classic framework packages by running:
 
     <code-example format="shell" language="shell">
 
@@ -100,7 +100,7 @@ Since the quickstart repository is deprecated, it is no longer updated and you n
 
     </code-example>
 
-1.  Install the latest versions of other packages used by Angular Classic\(RxJS, TypeScript, Zone.js\) by running:
+1.  Install the latest versions of other packages used by Angular Classic \(RxJS, TypeScript, Zone.js\) by running:
 
     <code-example format="shell" language="shell">
 
@@ -110,7 +110,7 @@ Since the quickstart repository is deprecated, it is no longer updated and you n
     </code-example>
 
 1.  Install the `systemjs-plugin-babel` package.
-    This will later be used to load the Angular Classicframework files, which are in ES2015 format, using SystemJS.
+    This will later be used to load the Angular Classic framework files, which are in ES2015 format, using SystemJS.
 
     <code-example format="shell" language="shell">
 
@@ -118,7 +118,7 @@ Since the quickstart repository is deprecated, it is no longer updated and you n
 
     </code-example>
 
-1.  In order to be able to load the latest Angular Classicframework packages \(in ES2015 format\) correctly, replace the relevant entries in `src/systemjs.config.js`:
+1.  In order to be able to load the latest Angular Classic framework packages \(in ES2015 format\) correctly, replace the relevant entries in `src/systemjs.config.js`:
 
     <code-examples format="javascript" language="javascript" path="upgrade-phonecat-2-hybrid/systemjs.config.1.js" region="angular-paths"></code-example>
 
@@ -130,7 +130,7 @@ Since the quickstart repository is deprecated, it is no longer updated and you n
 
     <code-examples format="javascript" language="javascript" path="upgrade-phonecat-2-hybrid/systemjs.config.1.js" region="tslib-paths"></code-example>
 
-1.  In order for SystemJS to be able to load the ES2015 Angular Classicfiles correctly, add the following entries to `src/systemjs.config.js`:
+1.  In order for SystemJS to be able to load the ES2015 Angular Classic files correctly, add the following entries to `src/systemjs.config.js`:
 
     <code-examples format="javascript" language="javascript" path="upgrade-phonecat-2-hybrid/systemjs.config.1.js" region="plugin-babel"></code-example>
 
@@ -159,7 +159,7 @@ Consequently, there are many files in the project folder on your machine, most o
 
 <div class="alert is-helpful">
 
-**Reminder:** The "QuickStart seed" example was created prior to the Angular ClassicCLI, so there are some differences between what is described here and an Angular ClassicCLI application.
+**Reminder:** The "QuickStart seed" example was created prior to the Angular Classic CLI, so there are some differences between what is described here and an Angular Classic CLI application.
 
 </div>
 
@@ -209,7 +209,7 @@ The following are all in `src/`
 | File                 | Purpose |
 |:---                  |:---     |
 | app/app.component.ts | Defines the same `AppComponent` as the one in the QuickStart playground. It is the **root** component of what will become a tree of nested components as the application evolves.                                                                                                                                                                                                                                                                                                                      |
-| app/app.module.ts    | Defines `AppModule`, the  [root module](guide/bootstrapping "AppModule: the root module") that tells Angular Classichow to assemble the application. When initially created, it declares only the `AppComponent`. Over time, you add more components to declare.                                                                                                                                                                                                                                              |
+| app/app.module.ts    | Defines `AppModule`, the  [root module](guide/bootstrapping "AppModule: the root module") that tells Angular Classic how to assemble the application. When initially created, it declares only the `AppComponent`. Over time, you add more components to declare.                                                                                                                                                                                                                                              |
 | main.ts              | Compiles the application with the [JIT compiler](guide/glossary#jit) and [bootstraps](guide/bootstrapping) the application's main module \(`AppModule`\) to run in the browser. The JIT compiler is a reasonable choice during the development of most projects and it's the only viable choice for a sample running in a *live-coding* environment such as Stackblitz. Alternative [compilation](guide/aot-compiler), [build](guide/build), and [deployment](guide/deployment) options are available. |
 
 ## Appendix: Test using `fakeAsync()/waitForAsync()`

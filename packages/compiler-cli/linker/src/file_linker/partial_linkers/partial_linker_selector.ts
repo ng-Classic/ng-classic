@@ -157,8 +157,8 @@ export class PartialLinkerSelector<TExpression> {
     }
 
     const message =
-        `This application depends upon a library published using Angular Classicversion ${version}, ` +
-        `which requires Angular Classicversion ${minVersion} or newer to work correctly.\n` +
+        `This application depends upon a library published using Angular Classic version ${version}, ` +
+        `which requires Angular Classic version ${minVersion} or newer to work correctly.\n` +
         `Consider upgrading your application to use a more recent version of Angular.`;
 
     if (this.unknownDeclarationVersionHandling === 'error') {

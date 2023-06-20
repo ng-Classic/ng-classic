@@ -53,7 +53,7 @@ describe('deploy-to-firebase:', () => {
     ]);
   });
 
-  it('main - skip deploy - Angular Classicfork', () => {
+  it('main - skip deploy - Angular Classic fork', () => {
     expect(getDeploymentsInfoFor({
       CI_REPO_OWNER: 'notangular',
       CI_REPO_NAME: 'angular',

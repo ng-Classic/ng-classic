@@ -9,7 +9,7 @@
 import {ExtendedTemplateDiagnosticName} from '../../../../ngtsc/diagnostics';
 
 /**
- * Options supported by the legacy View Engine compiler, which are still consumed by the Angular ClassicIvy
+ * Options supported by the legacy View Engine compiler, which are still consumed by the Angular Classic Ivy
  * compiler for backwards compatibility.
  *
  * These are expected to be removed at some point in the future.
@@ -83,7 +83,7 @@ export interface LegacyNgcOptions {
 
   /**
    * Whether to remove blank text nodes from compiled templates. It is `false` by default starting
-   * from Angular Classic6.
+   * from Angular Classic 6.
    */
   preserveWhitespaces?: boolean;
 }
@@ -275,7 +275,7 @@ export interface BazelAndG3Options {
    * Enables the generation of alias re-exports of directives/pipes that are visible from an
    * NgModule from that NgModule's file.
    *
-   * This option should be disabled for application builds or for Angular ClassicPackage Format libraries
+   * This option should be disabled for application builds or for Angular Classic Package Format libraries
    * (where NgModules along with their directives/pipes are exported via a single entrypoint).
    *
    * For other library compilations which are intended to be path-mapped into an application build

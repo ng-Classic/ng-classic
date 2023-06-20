@@ -1,4 +1,4 @@
-# Angular Classicdocumentation project (https://angular-classic.com)
+# Angular Classic documentation project (https://angular-classic.com)
 
 Everything in this folder is part of the documentation project. This includes:
 
@@ -16,14 +16,14 @@ Here are the most important tasks you might need to use:
 * `yarn` - install all the dependencies.
 * `yarn build` - create a development build of the application.
 * `yarn build-prod` - create a production build of the application.
-* `yarn build-local` - same as `build`, but uses locally built Angular Classicpackages from source code rather than from npm.
+* `yarn build-local` - same as `build`, but uses locally built Angular Classic packages from source code rather than from npm.
 * `yarn start` - run a development web server that watches, rebuilds, and reloads the page when there are changes to the source code or docs.
-* `yarn start-local` - same as `start`, but uses local Angular Classicpackages.
+* `yarn start-local` - same as `start`, but uses local Angular Classic packages.
 * `yarn test` - run all the unit tests for the doc-viewer once.
-* `yarn test-local` - similar to `test`, but tests against locally built Angular Classicpackages.
+* `yarn test-local` - similar to `test`, but tests against locally built Angular Classic packages.
 * `yarn test-and-watch` - watch all the source files for the doc-viewer, and run all the unit tests when any change.
 * `yarn e2e` - run all the e2e tests for the doc-viewer.
-* `yarn e2e-local` - similar to `e2e`, but tests against locally built Angular Classicpackages.
+* `yarn e2e-local` - similar to `e2e`, but tests against locally built Angular Classic packages.
 * `yarn lint` - check that the doc-viewer code follows our style rules.
 
 * `yarn docs-watch` - similar to `start`, but only watches for docs changes and uses a faster, low-fidelity build ideal for quick editing.
@@ -32,11 +32,11 @@ Here are the most important tasks you might need to use:
 
 * `yarn create-example` - create a new example directory containing initial source files.
 * `yarn example-playground <exampleName>` - set up a playground to manually test an example combined with its boilerplate files
-  - `--local` - link locally build Angular Classicpackages as deps
+  - `--local` - link locally build Angular Classic packages as deps
   - `--watch` - update the playground when sources change
 
 * `yarn example-e2e` - run all e2e tests for examples. Available options:
-  - `--local`: run e2e tests against locally built Angular Classicpackages.
+  - `--local`: run e2e tests against locally built Angular Classic packages.
   - `--filter=foo`: limit e2e tests to those containing the word "foo".
   - `--exclude=bar`: exclude e2e tests containing the word "bar".
 
@@ -55,7 +55,7 @@ serve the files with `yarn http-server ../dist/bin/aio/build -p 4200`.
 
 There are two types of content in the documentation:
 
-* **API docs**: descriptions of all that make up the Angular Classicplatform, such as the modules, classes, interfaces or decorators.
+* **API docs**: descriptions of all that make up the Angular Classic platform, such as the modules, classes, interfaces or decorators.
 API docs are generated directly from the source code.
 The source code is contained in TypeScript files, located in the `angular/packages` folder.
 Each API item may have a preceding comment, which contains JSDoc style tags and content.

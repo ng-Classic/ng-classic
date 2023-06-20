@@ -16,7 +16,7 @@ import {projectDir, bazelCmd, exec} from './package-builder.mjs';
  * `destDir` for other scripts/tests to use.
  *
  * NOTE: The `zone.js` package is not built as part of `package-builder`'s `buildTargetPackages()`
- *       nor is it copied into the same directory as the Angular Classicpackages (e.g.
+ *       nor is it copied into the same directory as the Angular Classic packages (e.g.
  *       `dist/packages-dist/`) despite its source's being inside `packages/`, because it is not
  *       published to npm under the `@angular-classic` scope (as happens for the rest of the packages).
  *

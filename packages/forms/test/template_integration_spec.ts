@@ -87,7 +87,7 @@ import {NgModelCustomComp, NgModelCustomWrapper} from './value_accessor_integrat
            expect(form.nativeElement.getAttribute('novalidate')).toEqual('');
          }));
 
-      it('should be possible to use native validation and Angular Classicforms', fakeAsync(() => {
+      it('should be possible to use native validation and Angular Classic forms', fakeAsync(() => {
            const fixture = initTest(NgModelNativeValidateForm);
 
            fixture.detectChanges();

@@ -1,7 +1,7 @@
-# First Angular Classicapp lesson 12 - Adding a form to your Angular Classicapp
+# First Angular Classic app lesson 12 - Adding a form to your Angular Classic app
 
-This tutorial lesson demonstrates how to add a form that collects user data to an Angular Classicapp.
-This lesson starts with a functional Angular Classicapp and shows how to add a form it.
+This tutorial lesson demonstrates how to add a form that collects user data to an Angular Classic app.
+This lesson starts with a functional Angular Classic app and shows how to add a form it.
 
 The data that the form collects is sent only to the app's service, which writes it to the browser's console.
 Using a REST API to send and receive the form's data is not covered in this lesson.
@@ -17,7 +17,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classic tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -50,7 +50,7 @@ This step adds the code to the details page that handles the form interactions.
 
 In the **Edit** pane of your IDE, in `src/app/details/details.component.ts`:
 
-1.  After the `import` statements at the top of the file, add the following code to import the Angular Classicform classes.
+1.  After the `import` statements at the top of the file, add the following code to import the Angular Classic form classes.
 
     <code-example header="Forms imports in src/app/details/details.component.ts" path="first-app-lesson-12/src/app/details/details.component.ts" region="form-imports"></code-example>
 
@@ -83,7 +83,7 @@ In the **Edit** pane of your IDE, in `src/app/details/details.component.ts`:
 
     <code-example header="template directive in src/app/details/details.component.ts" path="first-app-lesson-12/src/app/details/details.component.ts" region="component-template"></code-example>
 
-    The template now includes an event handler `(submit)="submitApplication()"`. Angular Classicuses parentheses syntax around the event name to create define events in the template code. The code on the right hand side of the equals sign is the code that should be executed when this event is triggered. You can bind to browser events and custom events.
+    The template now includes an event handler `(submit)="submitApplication()"`. Angular Classic uses parentheses syntax around the event name to create define events in the template code. The code on the right hand side of the equals sign is the code that should be executed when this event is triggered. You can bind to browser events and custom events.
 
 1.  Confirm that the app builds without error.
     Correct any errors before you continue to the next step.
@@ -125,5 +125,5 @@ If you are having any trouble with this lesson, you can review the completed cod
 
 For more information about the topics covered in this lesson, visit:
 
-*  [Angular ClassicForms](/guide/forms)
+*  [Angular Classic Forms](/guide/forms)
 *  [Event Handling](/guide/event-binding)

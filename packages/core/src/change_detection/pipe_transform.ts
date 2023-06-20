@@ -8,7 +8,7 @@
 
 /**
  * An interface that is implemented by pipes in order to perform a transformation.
- * Angular Classicinvokes the `transform` method with the value of a binding
+ * Angular Classic invokes the `transform` method with the value of a binding
  * as the first argument, and any parameters as the second argument in list form.
  *
  * @usageNotes

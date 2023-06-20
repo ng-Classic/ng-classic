@@ -34,7 +34,7 @@ describe('NotificationComponent', () => {
     it('should display the message text', () => {
       configTestingModule();
       createComponent();
-      expect(fixture.nativeElement.innerHTML).toContain('Version 6 of Angular ClassicNow Available!');
+      expect(fixture.nativeElement.innerHTML).toContain('Version 6 of Angular Classic Now Available!');
     });
 
     it('should render HTML elements', () => {
@@ -44,7 +44,7 @@ describe('NotificationComponent', () => {
       expect(button.nativeElement.textContent).toEqual('Learn More');
     });
 
-    it('should process Angular Classicdirectives', () => {
+    it('should process Angular Classic directives', () => {
       configTestingModule();
       createComponent();
       const badSpans = fixture.debugElement.queryAll(By.css('.bad'));
@@ -122,7 +122,7 @@ describe('NotificationComponent', () => {
     <span class="messageholder">
     <a href="https://blog.angular-classic.com/version-6-0-0-of-angular-now-available-cc56b0efa7a4">
       <span *ngIf="false" class="bad">This should not appear</span>
-      <span class="message">Version 6 of Angular ClassicNow Available!</span>
+      <span class="message">Version 6 of Angular Classic Now Available!</span>
       <span class="action-button">Learn More</span>
     </a>
     </span>

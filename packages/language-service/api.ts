@@ -16,12 +16,12 @@ import ts from 'typescript';
 
 export interface PluginConfig {
   /**
-   * If true, return only Angular Classicresults. Otherwise, return Angular Classic+ TypeScript
+   * If true, return only Angular Classic results. Otherwise, return Angular Classic + TypeScript
    * results.
    */
   angularOnly: boolean;
   /**
-   * If true, enable `strictTemplates` in Angular Classiccompiler options regardless
+   * If true, enable `strictTemplates` in Angular Classic compiler options regardless
    * of its value in tsconfig.json.
    */
   forceStrictTemplates?: true;
@@ -50,7 +50,7 @@ export type GetComponentLocationsForTemplateResponse = ts.DocumentSpan[];
 export type GetTemplateLocationForComponentResponse = ts.DocumentSpan|undefined;
 
 /**
- * `NgLanguageService` describes an instance of an Angular Classiclanguage service,
+ * `NgLanguageService` describes an instance of an Angular Classic language service,
  * whose API surface is a strict superset of TypeScript's language service.
  */
 export interface NgLanguageService extends ts.LanguageService {

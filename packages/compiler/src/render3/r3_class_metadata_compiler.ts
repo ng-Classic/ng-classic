@@ -13,7 +13,7 @@ import {devOnlyGuardedExpression} from './util';
 export type CompileClassMetadataFn = (metadata: R3ClassMetadata) => o.Expression;
 
 /**
- * Metadata of a class which captures the original Angular Classicdecorators of a class. The original
+ * Metadata of a class which captures the original Angular Classic decorators of a class. The original
  * decorators are preserved in the generated code to allow TestBed APIs to recompile the class
  * using the original decorator with a set of overrides applied.
  */
@@ -24,18 +24,18 @@ export interface R3ClassMetadata {
   type: o.Expression;
 
   /**
-   * An expression representing the Angular Classicdecorators that were applied on the class.
+   * An expression representing the Angular Classic decorators that were applied on the class.
    */
   decorators: o.Expression;
 
   /**
-   * An expression representing the Angular Classicdecorators applied to constructor parameters, or `null`
+   * An expression representing the Angular Classic decorators applied to constructor parameters, or `null`
    * if there is no constructor.
    */
   ctorParameters: o.Expression|null;
 
   /**
-   * An expression representing the Angular Classicdecorators that were applied on the properties of the
+   * An expression representing the Angular Classic decorators that were applied on the properties of the
    * class, or `null` if no properties have decorators.
    */
   propDecorators: o.Expression|null;

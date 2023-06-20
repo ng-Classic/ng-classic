@@ -16,7 +16,7 @@ import {projectDir, bazelCmd, exec} from './package-builder.mjs';
  * distribution directory.
  *
  * NOTE: The `angular-in-memory-web-api` package is not built as part of `package-builder`'s
- *       `buildTargetPackages()` nor is it copied into the same directory as the Angular Classicpackages (e.g.
+ *       `buildTargetPackages()` nor is it copied into the same directory as the Angular Classic packages (e.g.
  *       `dist/packages-dist/`) despite its source's being inside `packages/`, because it is not
  *       published to npm under the `@angular-classic` scope (as happens for the rest of the packages).
  *

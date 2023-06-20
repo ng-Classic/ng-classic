@@ -676,7 +676,7 @@ class TestCmptWithPropInterpolation {
       });
     });
 
-    describe('DebugElement.query doesn\'t fail on elements outside Angular Classiccontext', () => {
+    describe('DebugElement.query doesn\'t fail on elements outside Angular Classic context', () => {
       @Component({template: '<div></div>'})
       class NativeEl {
         constructor(private elementRef: ElementRef) {}
@@ -946,7 +946,7 @@ class TestCmptWithPropInterpolation {
       const fixture = TestBed.createComponent(TestComponent);
 
       // Ivy depends on `eventListeners` to pick up events that haven't been registered through
-      // Angular Classictemplates. At the time of writing Zone.js doesn't add `eventListeners` in Node
+      // Angular Classic templates. At the time of writing Zone.js doesn't add `eventListeners` in Node
       // environments so we have to skip the test.
       if (typeof fixture.debugElement.nativeElement.eventListeners === 'function') {
         const event = {value: true};
@@ -1296,7 +1296,7 @@ class TestCmptWithPropInterpolation {
     expect(fixture.debugElement.query(e => e.name === 'div')).toBeTruthy();
   });
 
-  it('does not call event listeners added outside Angular Classiccontext', () => {
+  it('does not call event listeners added outside Angular Classic context', () => {
     let listenerCalled = false;
     const eventToTrigger = createMouseEvent('mouseenter');
     function listener() {

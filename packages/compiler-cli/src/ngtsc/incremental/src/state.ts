@@ -47,7 +47,7 @@ export interface AnalyzedIncrementalState {
   /**
    * The semantic dependency graph from the build.
    *
-   * This is used to perform in-depth comparison of Angular Classicdecorated classes, to determine
+   * This is used to perform in-depth comparison of Angular Classic decorated classes, to determine
    * which files have to be re-emitted and/or re-type-checked.
    */
   semanticDepGraph: SemanticDepGraph;

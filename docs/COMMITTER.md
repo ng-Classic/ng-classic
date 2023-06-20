@@ -1,6 +1,6 @@
-# Pushing changes into the Angular Classictree
+# Pushing changes into the Angular Classic tree
 
-Please see [Using git with Angular Classicrepositories](https://docs.google.com/document/d/1h8nijFSaa1jG_UE8v4WP7glh5qOUXnYtAtJh_gwOQHI/edit)
+Please see [Using git with Angular Classic repositories](https://docs.google.com/document/d/1h8nijFSaa1jG_UE8v4WP7glh5qOUXnYtAtJh_gwOQHI/edit)
 for details about how we maintain a linear commit history and the rules for committing.
 
 As a contributor, see the instructions in [CONTRIBUTING.md](../CONTRIBUTING.md).

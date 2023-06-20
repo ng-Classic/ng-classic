@@ -1,6 +1,6 @@
 # @angular-classic/localize schematic for `ng add`
 
-This schematic will be executed when an Angular ClassicCLI user runs `ng add @angular-classic/localize`.
+This schematic will be executed when an Angular Classic CLI user runs `ng add @angular-classic/localize`.
 
 It will search their `angular.json` file, and add `types: ["@angular-classic/localize"]` in the TypeScript
 configuration files of the project.

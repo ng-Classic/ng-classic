@@ -3,11 +3,11 @@
 Push notifications are a compelling way to engage users.
 Through the power of service workers, notifications can be delivered to a device even when your application is not in focus.
 
-The Angular Classicservice worker enables the display of push notifications and the handling of notification click events.
+The Angular Classic service worker enables the display of push notifications and the handling of notification click events.
 
 <div class="alert is-helpful">
 
-When using the Angular Classicservice worker, push notification interactions are handled using the `SwPush` service.
+When using the Angular Classic service worker, push notification interactions are handled using the `SwPush` service.
 To learn more about the browser APIs involved see [Push API](https://developer.mozilla.org/docs/Web/API/Push_API) and [Using the Notifications API](https://developer.mozilla.org/docs/Web/API/Notifications_API/Using_the_Notifications_API).
 
 </div>
@@ -54,7 +54,7 @@ This is especially useful for when there are no open clients when a notification
 
 ### Operations
 
-The Angular Classicservice worker supports the following operations:
+The Angular Classic service worker supports the following operations:
 
 | Operations                  | Details |
 |:---                         |:---     |
@@ -111,7 +111,7 @@ If an action does not have a corresponding `onActionClick` entry, then the notif
 
 </div>
 
-## More on Angular Classicservice workers
+## More on Angular Classic service workers
 
 You might also be interested in the following:
 

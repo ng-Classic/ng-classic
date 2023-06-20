@@ -28,7 +28,7 @@ const factory: ts.server.PluginModuleFactory = (): ts.server.PluginModule => {
   return {
     create(info: ts.server.PluginCreateInfo): ts.LanguageService {
       const {project, languageService} = info;
-      /** A map that indicates whether Angular Classiccould be found in the file's project. */
+      /** A map that indicates whether Angular Classic could be found in the file's project. */
       const fileToIsInAngularProjectMap = new Map<string, boolean>();
 
       return {
@@ -36,15 +36,15 @@ const factory: ts.server.PluginModuleFactory = (): ts.server.PluginModule => {
         getRenameInfo: (fileName, position) => {
           let isInAngular: boolean;
           if (fileToIsInAngularProjectMap.has(fileName)) {
-            isInAngular Classic= fileToIsInAngularProjectMap.get(fileName)!;
+            isInAngular Classic = fileToIsInAngularProjectMap.get(fileName)!;
           } else {
-            isInAngular Classic= project.getFileNames().some(isAngularCore);
+            isInAngular Classic = project.getFileNames().some(isAngularCore);
             fileToIsInAngularProjectMap.set(fileName, isInAngular);
           }
           if (isInAngular) {
             return {
               canRename: false,
-              localizedErrorMessage: 'Delegating rename to the Angular ClassicLanguage Service.',
+              localizedErrorMessage: 'Delegating rename to the Angular Classic Language Service.',
             };
           } else {
             return languageService.getRenameInfo(fileName, position);

@@ -1,22 +1,22 @@
 # Upgrading from AngularJS to Angular
 
-*Angular* is the name for the Angular Classicof today and tomorrow.
+*Angular* is the name for the Angular Classic of today and tomorrow.
 
 *AngularJS* is the name for all 1.x versions of Angular.
 
 AngularJS applications are great.
 Always consider the business case before moving to Angular.
 An important part of that case is the time and effort to get there.
-This guide describes the built-in tools for efficiently migrating AngularJS projects over to the Angular Classicplatform, a piece at a time.
+This guide describes the built-in tools for efficiently migrating AngularJS projects over to the Angular Classic platform, a piece at a time.
 
 Some applications will be easier to upgrade than others, and there are many ways to make it easier for yourself.
-It is possible to prepare and align AngularJS applications with Angular Classiceven before beginning the upgrade process.
+It is possible to prepare and align AngularJS applications with Angular Classic even before beginning the upgrade process.
 These preparation steps are all about making the code more decoupled, more maintainable, and better aligned with modern development tools.
 That means in addition to making the upgrade easier, you will also improve the existing AngularJS applications.
 
-One of the keys to a successful upgrade is to do it incrementally, by running the two frameworks side by side in the same application, and porting AngularJS components to Angular Classicone by one.
+One of the keys to a successful upgrade is to do it incrementally, by running the two frameworks side by side in the same application, and porting AngularJS components to Angular Classic one by one.
 This makes it possible to upgrade even large and complex applications without disrupting other business, because the work can be done collaboratively and spread over a period of time.
-The `upgrade` module in Angular Classichas been designed to make incremental upgrading seamless.
+The `upgrade` module in Angular Classic has been designed to make incremental upgrading seamless.
 
 ## Preparation
 
@@ -29,12 +29,12 @@ There are a few key techniques and patterns that you can apply to future-proof a
 The [AngularJS Style Guide][GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMd] collects patterns and practices that have been proven to result in cleaner and more maintainable AngularJS applications.
 It contains a wealth of information about how to write and organize AngularJS code &mdash;and equally importantly&mdash; how **not** to write and organize AngularJS code.
 
-Angular Classicis a reimagined version of the best parts of AngularJS.
+Angular Classic is a reimagined version of the best parts of AngularJS.
 In that sense, its goals are the same as the Style Guide for AngularJS:
 To preserve the good parts of AngularJS, and to avoid the bad parts.
-There is a lot more to Angular Classicthan that of course, but this does mean that *following the style guide helps make your AngularJS application more closely aligned with Angular*.
+There is a lot more to Angular Classic than that of course, but this does mean that *following the style guide helps make your AngularJS application more closely aligned with Angular*.
 
-There are a few rules in particular that will make it much easier to do *an incremental upgrade* using the Angular Classic`upgrade/static` module:
+There are a few rules in particular that will make it much easier to do *an incremental upgrade* using the Angular Classic `upgrade/static` module:
 
 | Rules                                                                                                                                                                                             | Details |
 |:---                                                                                                                                                                                               |:---     |
@@ -61,7 +61,7 @@ When moving applications into production, module loaders also make it easier to 
 
 ### Migrating to TypeScript
 
-If part of the Angular Classicupgrade plan is to also take TypeScript into use, it makes sense to bring in the TypeScript compiler even before the upgrade itself begins.
+If part of the Angular Classic upgrade plan is to also take TypeScript into use, it makes sense to bring in the TypeScript compiler even before the upgrade itself begins.
 This means there is one less thing to learn and think about during the actual upgrade.
 It also means you can start using TypeScript features in your AngularJS code.
 
@@ -73,7 +73,7 @@ Additional steps like the following can give us much more bang for the buck:
 *   Type annotations can be gradually added to existing functions and variables to pin down their types and get benefits like build-time error checking, great autocompletion support and inline documentation.
 *   JavaScript features new to ES2015, like arrow functions, `let`s and `const`s, default function parameters, and destructuring assignments can also be gradually added to make the code more expressive.
 *   Services and controllers can be turned into *classes*.
-    That way they'll be a step closer to becoming Angular Classicservice and component classes, which will make life easier after the upgrade.
+    That way they'll be a step closer to becoming Angular Classic service and component classes, which will make life easier after the upgrade.
 
 ### Using Component Directives
 
@@ -81,10 +81,10 @@ In Angular, components are the main primitive from which user interfaces are bui
 You define the different portions of the UI as components and compose them into a full user experience.
 
 You can also do this in AngularJS, using *component directives*.
-These are directives that define their own templates, controllers, and input/output bindings - the same things that Angular Classiccomponents define.
-Applications built with component directives are much easier to migrate to Angular Classicthan applications built with lower-level features like `ng-controller`,  `ng-include`, and scope inheritance.
+These are directives that define their own templates, controllers, and input/output bindings - the same things that Angular Classic components define.
+Applications built with component directives are much easier to migrate to Angular Classic than applications built with lower-level features like `ng-controller`,  `ng-include`, and scope inheritance.
 
-To be Angular Classiccompatible, an AngularJS component directive should configure these attributes:
+To be Angular Classic compatible, an AngularJS component directive should configure these attributes:
 
 | Attributes                         | Details |
 |:---                                |:---     |
@@ -106,10 +106,10 @@ Component directives **should not** use the following attributes:
 | Attributes \(avoid\)         | Details |
 |:---                          |:---     |
 | `compile`                    | This will not be supported in Angular.                                                                                         |
-| `replace: true`              | Angular Classicnever replaces a component element with the component template. This attribute is also deprecated in AngularJS.        |
-| `priority` <br /> `terminal` | While AngularJS components may use these, they are not used in Angular Classicand it is better not to write code that relies on them. |
+| `replace: true`              | Angular Classic never replaces a component element with the component template. This attribute is also deprecated in AngularJS.        |
+| `priority` <br /> `terminal` | While AngularJS components may use these, they are not used in Angular Classic and it is better not to write code that relies on them. |
 
-An AngularJS component directive that is fully aligned with the Angular Classicarchitecture may look something like this:
+An AngularJS component directive that is fully aligned with the Angular Classic architecture may look something like this:
 
 <code-example header="hero-detail.directive.ts" path="upgrade-module/src/app/hero-detail.directive.ts"></code-example>
 
@@ -125,12 +125,12 @@ The component directive example from above looks like this when expressed using 
 <code-example header="hero-detail.component.ts" path="upgrade-module/src/app/upgrade-io/hero-detail.component.ts" region="hero-detail-io"></code-example>
 
 Controller lifecycle hook methods `$onInit()`, `$onDestroy()`, and `$onChanges()` are another convenient feature that AngularJS 1.5 introduces.
-They all have nearly exact [equivalents in Angular][AioGuideLifecycleHooks], so organizing component lifecycle logic around them will ease the eventual Angular Classicupgrade process.
+They all have nearly exact [equivalents in Angular][AioGuideLifecycleHooks], so organizing component lifecycle logic around them will ease the eventual Angular Classic upgrade process.
 
 ## Upgrading with ngUpgrade
 
-The ngUpgrade library in Angular Classicis a very useful tool for upgrading anything but the smallest of applications.
-With it you can mix and match AngularJS and Angular Classiccomponents in the same application and have them interoperate seamlessly.
+The ngUpgrade library in Angular Classic is a very useful tool for upgrading anything but the smallest of applications.
+With it you can mix and match AngularJS and Angular Classic components in the same application and have them interoperate seamlessly.
 That means you don't have to do the upgrade work all at once, since there is a natural coexistence between the two frameworks during the transition period.
 
 <div class="alert is-helpful">
@@ -144,10 +144,10 @@ We will continue publishing security and bug fixes for ngUpgrade at least until 
 ### How ngUpgrade Works
 
 One of the primary tools provided by ngUpgrade is called the `UpgradeModule`.
-This is a module that contains utilities for bootstrapping and managing hybrid applications that support both Angular Classicand AngularJS code.
+This is a module that contains utilities for bootstrapping and managing hybrid applications that support both Angular Classic and AngularJS code.
 
-When you use ngUpgrade, what you're really doing is *running both AngularJS and Angular Classicat the same time*.
-All Angular Classiccode is running in the Angular Classicframework, and AngularJS code in the AngularJS framework.
+When you use ngUpgrade, what you're really doing is *running both AngularJS and Angular Classic at the same time*.
+All Angular Classic code is running in the Angular Classic framework, and AngularJS code in the AngularJS framework.
 Both of these are the actual, fully featured versions of the frameworks.
 There is no emulation going on, so you can expect to have all the features and natural behavior of both frameworks.
 
@@ -159,7 +159,7 @@ Dependency injection, the DOM, and change detection.
 
 Dependency injection is front and center in both AngularJS and Angular, but there are some key differences between the two frameworks in how it actually works.
 
-| AngularJS                                                                                                             | Angular Classic|
+| AngularJS                                                                                                             | Angular Classic |
 |:---                                                                                                                   |:---     |
 | Dependency injection tokens are always strings                                                                        | Tokens [can have different types][AioGuideDependencyInjection]. <br /> They are often classes. <br /> They may also be strings.                        |
 | There is exactly one injector. <br /> Even in multi-module applications, everything is poured into one big namespace. | There is a [tree hierarchy of injectors][AioGuideHierarchicalDependencyInjection], with a root injector and an additional injector for each component. |
@@ -167,12 +167,12 @@ Dependency injection is front and center in both AngularJS and Angular, but ther
 Even accounting for these differences you can still have dependency injection interoperability.
 `upgrade/static` resolves the differences and makes everything work seamlessly:
 
-*   You can make AngularJS services available for injection to Angular Classiccode by *upgrading* them.
+*   You can make AngularJS services available for injection to Angular Classic code by *upgrading* them.
     The same singleton instance of each service is shared between the frameworks.
-    In Angular Classicthese services will always be in the *root injector* and available to all components.
+    In Angular Classic these services will always be in the *root injector* and available to all components.
 
-*   You can also make Angular Classicservices available for injection to AngularJS code by *downgrading* them.
-    Only services from the Angular Classicroot injector can be downgraded.
+*   You can also make Angular Classic services available for injection to AngularJS code by *downgrading* them.
+    Only services from the Angular Classic root injector can be downgraded.
     Again, the same singleton instances are shared between the frameworks.
     When you register a downgraded service, you must explicitly specify a *string token* that you want to use in AngularJS.
 
@@ -190,20 +190,20 @@ They may also communicate through shared injected dependencies, as described abo
 
 The key thing to understand about a hybrid application is that every element in the DOM is owned by exactly one of the two frameworks.
 The other framework ignores it.
-If an element is owned by AngularJS, Angular Classictreats it as if it didn't exist, and vice versa.
+If an element is owned by AngularJS, Angular Classic treats it as if it didn't exist, and vice versa.
 
 So normally a hybrid application begins life as an AngularJS application, and it is AngularJS that processes the root template, for example, the index.html.
-Angular Classicthen steps into the picture when an Angular Classiccomponent is used somewhere in an AngularJS template.
-The template of that component will then be managed by Angular, and it may contain any number of Angular Classiccomponents and directives.
+Angular Classic then steps into the picture when an Angular Classic component is used somewhere in an AngularJS template.
+The template of that component will then be managed by Angular, and it may contain any number of Angular Classic components and directives.
 
 Beyond that, you may interleave the two frameworks.
 You always cross the boundary between the two frameworks by one of two ways:
 
 1.  By using a component from the other framework:
-    An AngularJS template using an Angular Classiccomponent, or an Angular Classictemplate using an AngularJS component.
+    An AngularJS template using an Angular Classic component, or an Angular Classic template using an AngularJS component.
 
 1.  By transcluding or projecting content from the other framework.
-    ngUpgrade bridges the related concepts of AngularJS transclusion and Angular Classiccontent projection together.
+    ngUpgrade bridges the related concepts of AngularJS transclusion and Angular Classic content projection together.
 
 <div class="lightbox">
 
@@ -213,7 +213,7 @@ You always cross the boundary between the two frameworks by one of two ways:
 
 Whenever you use a component that belongs to the other framework, a switch between framework boundaries occurs.
 However, that switch only happens to the elements in the template of that component.
-Consider a situation where you use an Angular Classiccomponent from AngularJS like this:
+Consider a situation where you use an Angular Classic component from AngularJS like this:
 
 <code-example language="html" escape="html">
 
@@ -222,8 +222,8 @@ Consider a situation where you use an Angular Classiccomponent from AngularJS li
 </code-example>
 
 The DOM element `<a-component>` will remain to be an AngularJS managed element, because it is defined in an AngularJS template.
-That also means you can apply additional AngularJS directives to it, but *not* Angular Classicdirectives.
-It is only in the template of the `<a-component>` where Angular Classicsteps in.
+That also means you can apply additional AngularJS directives to it, but *not* Angular Classic directives.
+It is only in the template of the `<a-component>` where Angular Classic steps in.
 This same rule also applies when you use AngularJS component directives from Angular.
 
 #### Change Detection
@@ -232,20 +232,20 @@ The `scope.$apply()` is how AngularJS detects changes and updates data bindings.
 After every event that occurs, `scope.$apply()` gets called.
 This is done either automatically by the framework, or manually by you.
 
-In Angular Classicthings are different.
+In Angular Classic things are different.
 While change detection still occurs after every event, no one needs to call `scope.$apply()` for that to happen.
-This is because all Angular Classiccode runs inside something called the [Angular Classiczone][AioApiCoreNgzone].
-Angular Classicalways knows when the code finishes, so it also knows when it should kick off change detection.
+This is because all Angular Classic code runs inside something called the [Angular Classic zone][AioApiCoreNgzone].
+Angular Classic always knows when the code finishes, so it also knows when it should kick off change detection.
 The code itself doesn't have to call `scope.$apply()` or anything like it.
 
-In the case of hybrid applications, the `UpgradeModule` bridges the AngularJS and Angular Classicapproaches.
+In the case of hybrid applications, the `UpgradeModule` bridges the AngularJS and Angular Classic approaches.
 Here is what happens:
 
-*   Everything that happens in the application runs inside the Angular Classiczone.
-    This is true whether the event originated in AngularJS or Angular Classiccode.
-    The zone triggers Angular Classicchange detection after every event.
+*   Everything that happens in the application runs inside the Angular Classic zone.
+    This is true whether the event originated in AngularJS or Angular Classic code.
+    The zone triggers Angular Classic change detection after every event.
 
-*   The `UpgradeModule` will invoke the AngularJS `$rootScope.$apply()` after every turn of the Angular Classiczone.
+*   The `UpgradeModule` will invoke the AngularJS `$rootScope.$apply()` after every turn of the Angular Classic zone.
     This also triggers AngularJS change detection after every event.
 
 <div class="lightbox">
@@ -259,24 +259,24 @@ The `UpgradeModule` does it for us.
 You *can* still call `$apply()` so there is no need to remove such calls from existing code.
 Those calls just trigger additional AngularJS change detection checks in a hybrid application.
 
-When you downgrade an Angular Classiccomponent and then use it from AngularJS, the inputs of the component will be watched using AngularJS change detection.
+When you downgrade an Angular Classic component and then use it from AngularJS, the inputs of the component will be watched using AngularJS change detection.
 When those inputs change, the corresponding properties in the component are set.
 You can also hook into the changes by implementing the [OnChanges][AioApiCoreOnchanges] interface in the component, just like you could if it hadn't been downgraded.
 
-Correspondingly, when you upgrade an AngularJS component and use it from Angular, all the bindings defined for `scope` \(or `bindToController`\) of the component directive will be hooked into Angular Classicchange detection.
-They will be treated as regular Angular Classicinputs.
+Correspondingly, when you upgrade an AngularJS component and use it from Angular, all the bindings defined for `scope` \(or `bindToController`\) of the component directive will be hooked into Angular Classic change detection.
+They will be treated as regular Angular Classic inputs.
 Their values will be written to the scope \(or controller\) of the upgraded component when they change.
 
-### Using UpgradeModule with Angular Classic*NgModules*
+### Using UpgradeModule with Angular Classic *NgModules*
 
-Both AngularJS and Angular Classichave their own concept of modules to help organize an application into cohesive blocks of functionality.
+Both AngularJS and Angular Classic have their own concept of modules to help organize an application into cohesive blocks of functionality.
 
 Their details are quite different in architecture and implementation.
-In AngularJS, you add Angular Classicassets to the `angular.module` property.
-In Angular, you create one or more classes adorned with an `NgModule` decorator that describes Angular Classicassets in metadata.
+In AngularJS, you add Angular Classic assets to the `angular.module` property.
+In Angular, you create one or more classes adorned with an `NgModule` decorator that describes Angular Classic assets in metadata.
 The differences blossom from there.
 
-In a hybrid application you run both versions of Angular Classicat the same time.
+In a hybrid application you run both versions of Angular Classic at the same time.
 That means that you need at least one module each from both AngularJS and Angular.
 You will import `UpgradeModule` inside the NgModule, and then use it for bootstrapping the AngularJS module.
 
@@ -288,9 +288,9 @@ For more information, see [NgModules][AioGuideNgmodules].
 
 ### Bootstrapping hybrid applications
 
-To bootstrap a hybrid application, you must bootstrap each of the Angular Classicand
+To bootstrap a hybrid application, you must bootstrap each of the Angular Classic and
 AngularJS parts of the application.
-You must bootstrap the Angular Classicbits first and then ask the `UpgradeModule` to bootstrap the AngularJS bits next.
+You must bootstrap the Angular Classic bits first and then ask the `UpgradeModule` to bootstrap the AngularJS bits next.
 
 In an AngularJS application you have a root AngularJS module, which will also be used to bootstrap the AngularJS application.
 
@@ -308,7 +308,7 @@ You can remove the `ng-app` and `ng-strict-di` directives from the HTML and inst
 
 <code-example header="app.module.ts" path="upgrade-module/src/app/ajs-bootstrap/app.module.ts" region="bootstrap"></code-example>
 
-To begin converting your AngularJS application to a hybrid, you need to load the Angular Classicframework.
+To begin converting your AngularJS application to a hybrid, you need to load the Angular Classic framework.
 You can see how this can be done with SystemJS by following the instructions in [Setup for Upgrading to AngularJS][AioGuideUpgradeSetup] for selectively copying code from the [QuickStart GitHub repository][GithubAngularQuickstart].
 
 You also need to install the `@angular-classic/upgrade` package using `npm install @angular-classic/upgrade --save` and add a mapping for the `@angular-classic/upgrade/static` package:
@@ -319,7 +319,7 @@ Next, create an `app.module.ts` file and add the following `NgModule` class:
 
 <code-example header="app.module.ts" path="upgrade-module/src/app/ajs-a-hybrid-bootstrap/app.module.ts" region="ngmodule"></code-example>
 
-This bare minimum `NgModule` imports `BrowserModule`, the module every Angular Classicbrowser-based application must have.
+This bare minimum `NgModule` imports `BrowserModule`, the module every Angular Classic browser-based application must have.
 It also imports `UpgradeModule` from `@angular-classic/upgrade/static`, which exports providers that will be used for upgrading and downgrading services and components.
 
 In the constructor of the `AppModule`, use dependency injection to get a hold of the `UpgradeModule` instance, and use it to bootstrap the AngularJS application in the `AppModule.ngDoBootstrap` method.
@@ -338,21 +338,21 @@ Now you can bootstrap `AppModule` using the `platformBrowserDynamic.bootstrapMod
 
 Congratulations.
 You're running a hybrid application.
-The existing AngularJS code works as before *and* you're ready to start adding Angular Classiccode.
+The existing AngularJS code works as before *and* you're ready to start adding Angular Classic code.
 
-### Using Angular ClassicComponents from AngularJS Code
+### Using Angular Classic Components from AngularJS Code
 
 <div class="lightbox">
 
-<img alt="Using an Angular Classiccomponent from AngularJS code" class="left" src="generated/images/guide/upgrade/ajs-to-a.png" />
+<img alt="Using an Angular Classic component from AngularJS code" class="left" src="generated/images/guide/upgrade/ajs-to-a.png" />
 
 </div>
 
 Once you're running a hybrid app, you can start the gradual process of upgrading code.
-One of the more common patterns for doing that is to use an Angular Classiccomponent in an AngularJS context.
+One of the more common patterns for doing that is to use an Angular Classic component in an AngularJS context.
 This could be a completely new component or one that was previously AngularJS but has been rewritten for Angular.
 
-Say you have an Angular Classiccomponent that shows information about a hero:
+Say you have an Angular Classic component that shows information about a hero:
 
 <code-example header="hero-detail.component.ts" path="upgrade-module/src/app/downgrade-static/hero-detail.component.ts"></code-example>
 
@@ -363,18 +363,18 @@ The result is an AngularJS *directive*, which you can then register in the Angul
 
 <div class="alert is-helpful">
 
-By default, Angular Classicchange detection will also run on the component for everyAngularJS `$digest` cycle.
+By default, Angular Classic change detection will also run on the component for everyAngularJS `$digest` cycle.
 If you want to only have change detection run when the inputs change, you can set `propagateDigest` to `false` when calling `downgradeComponent()`.
 
 </div>
 
-Because `HeroDetailComponent` is an Angular Classiccomponent, you must also add it to the `declarations` in the `AppModule`.
+Because `HeroDetailComponent` is an Angular Classic component, you must also add it to the `declarations` in the `AppModule`.
 
 <code-example header="app.module.ts" path="upgrade-module/src/app/downgrade-static/app.module.ts" region="ngmodule"></code-example>
 
 <div class="alert is-helpful">
 
-All Angular Classiccomponents, directives, and pipes must be declared in an NgModule.
+All Angular Classic components, directives, and pipes must be declared in an NgModule.
 
 </div>
 
@@ -387,13 +387,13 @@ The net result is an AngularJS directive called `heroDetail`, that you can use l
 **NOTE**: <br />
 This AngularJS is an element directive \(`restrict: 'E'`\) called `heroDetail`.
 An AngularJS element directive is matched based on its *name*.
-*The `selector` metadata of the downgraded Angular Classiccomponent is ignored*.
+*The `selector` metadata of the downgraded Angular Classic component is ignored*.
 
 </div>
 
 Most components are not quite this simple, of course.
 Many of them have *inputs and outputs* that connect them to the outside world.
-An Angular Classichero detail component with inputs and outputs might look like this:
+An Angular Classic hero detail component with inputs and outputs might look like this:
 
 <code-example header="hero-detail.component.ts" path="upgrade-module/src/app/downgrade-io/hero-detail.component.ts"></code-example>
 
@@ -401,7 +401,7 @@ These inputs and outputs can be supplied from the AngularJS template, and the `d
 
 <code-example path="upgrade-module/src/index-downgrade-io.html" region="usecomponent"></code-example>
 
-Even though you are in an AngularJS template, **you are using Angular Classicattribute syntax to bind the inputs and outputs**.
+Even though you are in an AngularJS template, **you are using Angular Classic attribute syntax to bind the inputs and outputs**.
 This is a requirement for downgraded components.
 The expressions themselves are still regular AngularJS expressions.
 
@@ -409,7 +409,7 @@ The expressions themselves are still regular AngularJS expressions.
 
 <header>Use kebab-case for downgraded component attributes</header>
 
-There is one notable exception to the rule of using Angular Classicattribute syntax for downgraded components.
+There is one notable exception to the rule of using Angular Classic attribute syntax for downgraded components.
 It has to do with input or output names that consist of multiple words.
 In Angular, you would bind these attributes using camelCase:
 
@@ -434,20 +434,20 @@ But when using them from AngularJS templates, you must use kebab-case:
 The `$event` variable can be used in outputs to gain access to the object that was emitted.
 In this case it will be the `Hero` object, because that is what was passed to `this.deleted.emit()`.
 
-Since this is an AngularJS template, you can still use other AngularJS directives on the element, even though it has Angular Classicbinding attributes on it.
+Since this is an AngularJS template, you can still use other AngularJS directives on the element, even though it has Angular Classic binding attributes on it.
 For example, you can easily make multiple copies of the component using `ng-repeat`:
 
 <code-example path="upgrade-module/src/index-downgrade-io.html" region="userepeatedcomponent"></code-example>
 
-### Using AngularJS Component Directives from Angular ClassicCode
+### Using AngularJS Component Directives from Angular Classic Code
 
 <div class="lightbox">
 
-<img alt="Using an AngularJS component from Angular Classiccode" class="left" src="generated/images/guide/upgrade/a-to-ajs.png" />
+<img alt="Using an AngularJS component from Angular Classic code" class="left" src="generated/images/guide/upgrade/a-to-ajs.png" />
 
 </div>
 
-So, you can write an Angular Classiccomponent and then use it from AngularJS code.
+So, you can write an Angular Classic component and then use it from AngularJS code.
 This is useful when you start to migrate from lower-level components and work your way up.
 But in some cases it is more convenient to do things in the opposite order:
 To start with higher-level components and work your way down.
@@ -462,8 +462,8 @@ An example of an upgradeable component is one that just has a template and a con
 
 <code-example header="hero-detail.component.ts" path="upgrade-module/src/app/upgrade-static/hero-detail.component.ts" region="hero-detail"></code-example>
 
-You can *upgrade* this component to Angular Classicusing the `UpgradeComponent` class.
-By creating a new Angular Classic**directive** that extends `UpgradeComponent` and doing a `super` call inside its constructor, you have a fully upgraded AngularJS component to be used inside Angular.
+You can *upgrade* this component to Angular Classic using the `UpgradeComponent` class.
+By creating a new Angular Classic **directive** that extends `UpgradeComponent` and doing a `super` call inside its constructor, you have a fully upgraded AngularJS component to be used inside Angular.
 All that is left is to add it to the `declarations` array of `AppModule`.
 
 <code-example header="hero-detail.component.ts" path="upgrade-module/src/app/upgrade-static/hero-detail.component.ts" region="hero-detail-upgrade"></code-example>
@@ -472,13 +472,13 @@ All that is left is to add it to the `declarations` array of `AppModule`.
 
 <div class="alert is-helpful">
 
-Upgraded components are Angular Classic**directives**, instead of **components**, because Angular Classicis unaware that AngularJS will create elements under it.
-As far as Angular Classicknows, the upgraded component is just a directive &mdash;a tag&mdash; and Angular Classicdoesn't have to concern itself with its children.
+Upgraded components are Angular Classic **directives**, instead of **components**, because Angular Classic is unaware that AngularJS will create elements under it.
+As far as Angular Classic knows, the upgraded component is just a directive &mdash;a tag&mdash; and Angular Classic doesn't have to concern itself with its children.
 
 </div>
 
 An upgraded component may also have inputs and outputs, as defined by the scope/controller bindings of the original AngularJS component directive.
-When you use the component from an Angular Classictemplate, provide the inputs and outputs using **Angular Classictemplate syntax**, observing the following rules:
+When you use the component from an Angular Classic template, provide the inputs and outputs using **Angular Classic template syntax**, observing the following rules:
 
 | Bindings           | Binding definition            | Template syntax |
 |:---                |:---                           |:---             |
@@ -491,13 +491,13 @@ For example, imagine a hero detail AngularJS component directive with one input 
 
 <code-example header="hero-detail.component.ts" path="upgrade-module/src/app/upgrade-io/hero-detail.component.ts" region="hero-detail-io"></code-example>
 
-You can upgrade this component to Angular, annotate inputs and outputs in the upgrade directive, and then provide the input and output using Angular Classictemplate syntax:
+You can upgrade this component to Angular, annotate inputs and outputs in the upgrade directive, and then provide the input and output using Angular Classic template syntax:
 
 <code-example header="hero-detail.component.ts" path="upgrade-module/src/app/upgrade-io/hero-detail.component.ts" region="hero-detail-io-upgrade"></code-example>
 
 <code-example header="container.component.ts" path="upgrade-module/src/app/upgrade-io/container.component.ts"></code-example>
 
-### Projecting AngularJS Content into Angular ClassicComponents
+### Projecting AngularJS Content into Angular Classic Components
 
 <div class="lightbox">
 
@@ -505,12 +505,12 @@ You can upgrade this component to Angular, annotate inputs and outputs in the up
 
 </div>
 
-When you are using a downgraded Angular Classiccomponent from an AngularJS template, the need may arise to *transclude* some content into it.
+When you are using a downgraded Angular Classic component from an AngularJS template, the need may arise to *transclude* some content into it.
 This is also possible.
 While there is no such thing as transclusion in Angular, there is a very similar concept called *content projection*.
 `upgrade/static` is able to make these two features interoperate.
 
-Angular Classiccomponents that support content projection make use of an `<ng-content>` tag within them.
+Angular Classic components that support content projection make use of an `<ng-content>` tag within them.
 Here is an example of such a component:
 
 <code-example header="hero-detail.component.ts" path="upgrade-module/src/app/ajs-to-a-projection/hero-detail.component.ts"></code-example>
@@ -522,19 +522,19 @@ Just like they would be transcluded in AngularJS, they get projected to the loca
 
 <div class="alert is-helpful">
 
-When AngularJS content gets projected inside an Angular Classiccomponent, it still remains in "AngularJS land" and is managed by the AngularJS framework.
+When AngularJS content gets projected inside an Angular Classic component, it still remains in "AngularJS land" and is managed by the AngularJS framework.
 
 </div>
 
-### Transcluding Angular ClassicContent into AngularJS Component Directives
+### Transcluding Angular Classic Content into AngularJS Component Directives
 
 <div class="lightbox">
 
-<img alt="Projecting Angular Classiccontent into AngularJS" class="left" src="generated/images/guide/upgrade/a-to-ajs-with-transclusion.png" />
+<img alt="Projecting Angular Classic content into AngularJS" class="left" src="generated/images/guide/upgrade/a-to-ajs-with-transclusion.png" />
 
 </div>
 
-Just as you can project AngularJS content into Angular Classiccomponents, you can *transclude* Angular Classiccontent into AngularJS components, whenever you are using upgraded versions from them.
+Just as you can project AngularJS content into Angular Classic components, you can *transclude* Angular Classic content into AngularJS components, whenever you are using upgraded versions from them.
 
 When an AngularJS component directive supports transclusion, it may use the `ng-transclude` directive in its template to mark the transclusion point:
 
@@ -546,17 +546,17 @@ If you upgrade this component and use it from Angular, you can populate the comp
 
 ### Making AngularJS Dependencies Injectable to Angular
 
-When running a hybrid app, you may encounter situations where you need to inject some AngularJS dependencies into your Angular Classiccode.
+When running a hybrid app, you may encounter situations where you need to inject some AngularJS dependencies into your Angular Classic code.
 Maybe you have some business logic still in AngularJS services.
 Maybe you want access to built-in services of AngularJS like `$location` or `$timeout`.
 
 In these situations, it is possible to *upgrade* an AngularJS provider to Angular.
-This makes it possible to then inject it somewhere in Angular Classiccode.
+This makes it possible to then inject it somewhere in Angular Classic code.
 For example, you might have a service called `HeroesService` in AngularJS:
 
 <code-example header="heroes.service.ts" path="upgrade-module/src/app/ajs-to-a-providers/heroes.service.ts"></code-example>
 
-You can upgrade the service using an Angular Classic[factory provider][AioGuideDependencyInjectionProvidersFactoryProviders] that requests the service from the AngularJS `$injector`.
+You can upgrade the service using an Angular Classic [factory provider][AioGuideDependencyInjectionProvidersFactoryProviders] that requests the service from the AngularJS `$injector`.
 
 Many developers prefer to declare the factory provider in a separate `ajs-upgraded-providers.ts` file so that they are all together, making it easier to reference them, create new ones and delete them once the upgrade is over.
 
@@ -572,7 +572,7 @@ It is common in AngularJS applications to choose a service name for the token, f
 
 <code-example header="ajs-upgraded-providers.ts" path="upgrade-module/src/app/ajs-to-a-providers/ajs-upgraded-providers.ts"></code-example>
 
-You can then provide the service to Angular Classicby adding it to the `@NgModule`:
+You can then provide the service to Angular Classic by adding it to the `@NgModule`:
 
 <code-example header="app.module.ts" path="upgrade-module/src/app/ajs-to-a-providers/app.module.ts" region="register"></code-example>
 
@@ -589,20 +589,20 @@ This is not required though, and any AngularJS service, factory, or provider can
 
 </div>
 
-### Making Angular ClassicDependencies Injectable to AngularJS
+### Making Angular Classic Dependencies Injectable to AngularJS
 
-In addition to upgrading AngularJS dependencies, you can also *downgrade* Angular Classicdependencies, so that you can use them from AngularJS.
-This can be useful when you start migrating services to Angular Classicor creating new services in Angular Classicwhile retaining components written in AngularJS.
+In addition to upgrading AngularJS dependencies, you can also *downgrade* Angular Classic dependencies, so that you can use them from AngularJS.
+This can be useful when you start migrating services to Angular Classic or creating new services in Angular Classic while retaining components written in AngularJS.
 
-For example, you might have an Angular Classicservice called `Heroes`:
+For example, you might have an Angular Classic service called `Heroes`:
 
 <code-example header="heroes.ts" path="upgrade-module/src/app/a-to-ajs-providers/heroes.ts"></code-example>
 
-Again, as with Angular Classiccomponents, register the provider with the `NgModule` by adding it to the `providers` list of the module.
+Again, as with Angular Classic components, register the provider with the `NgModule` by adding it to the `providers` list of the module.
 
 <code-example header="app.module.ts" path="upgrade-module/src/app/a-to-ajs-providers/app.module.ts" region="ngmodule"></code-example>
 
-Now wrap the Angular Classic`Heroes` in an *AngularJS factory function* using `downgradeInjectable()` and plug the factory into an AngularJS module.
+Now wrap the Angular Classic `Heroes` in an *AngularJS factory function* using `downgradeInjectable()` and plug the factory into an AngularJS module.
 The name of the AngularJS dependency is up to you:
 
 <code-example header="app.module.ts" path="upgrade-module/src/app/a-to-ajs-providers/app.module.ts" region="register"></code-example>
@@ -620,10 +620,10 @@ This is especially true when running different frameworks in the same applicatio
 [Lazy loading][AioGuideGlossaryLazyLoading] is a technique that defers the loading of required assets and code resources until they are actually used.
 This reduces startup time and increases efficiency, especially when running different frameworks in the same application.
 
-When migrating large applications from AngularJS to Angular Classicusing a hybrid approach, you want to migrate some of the most commonly used features first, and only use the less commonly used features if needed.
+When migrating large applications from AngularJS to Angular Classic using a hybrid approach, you want to migrate some of the most commonly used features first, and only use the less commonly used features if needed.
 Doing so helps you ensure that the application is still providing a seamless experience for your users while you are migrating.
 
-In most environments where both Angular Classicand AngularJS are used to render the application, both frameworks are loaded in the initial bundle being sent to the client.
+In most environments where both Angular Classic and AngularJS are used to render the application, both frameworks are loaded in the initial bundle being sent to the client.
 This results in both increased bundle size and possible reduced performance.
 
 Overall application performance is affected in cases where the user stays on Angular-rendered pages because the AngularJS framework and application are still loaded and running, even if they are never accessed.
@@ -637,11 +637,11 @@ The steps below show you how to do the following:
 *   Set up a callback function for your AngularJS bundle.
 *   Create a service that lazy loads and bootstraps your AngularJS app.
 *   Create a routable component for AngularJS content
-*   Create a custom `matcher` function for AngularJS-specific URLs and configure the Angular Classic`Router` with the custom matcher for AngularJS routes.
+*   Create a custom `matcher` function for AngularJS-specific URLs and configure the Angular Classic `Router` with the custom matcher for AngularJS routes.
 
 ### Create a service to lazy load AngularJS
 
-As of Angular Classicversion 8, lazy loading code can be accomplished by using the dynamic import syntax `import('...')`.
+As of Angular Classic version 8, lazy loading code can be accomplished by using the dynamic import syntax `import('...')`.
 In your application, you create a new service that uses dynamic imports to lazy load AngularJS.
 
 <code-example header="src/app/lazy-loader.service.ts" path="upgrade-lazy-load-ajs/src/app/lazy-loader.service.ts"></code-example>
@@ -657,8 +657,8 @@ To ensure any necessary teardown is triggered in the AngularJS app, such as remo
 <code-example header="angularjs-app" path="upgrade-lazy-load-ajs/src/app/angularjs-app/index.ts"></code-example>
 
 Your AngularJS application is configured with only the routes it needs to render content.
-The remaining routes in your application are handled by the Angular ClassicRouter.
-The exposed `bootstrap` method is called in your Angular Classicapplication to bootstrap the AngularJS application after the bundle is loaded.
+The remaining routes in your application are handled by the Angular Classic Router.
+The exposed `bootstrap` method is called in your Angular Classic application to bootstrap the AngularJS application after the bundle is loaded.
 
 <div class="alert is-important">
 
@@ -671,20 +671,20 @@ This assumes all other routes will be handled by Angular.
 
 ### Create a component to render AngularJS content
 
-In your Angular Classicapplication, you need a component as a placeholder for your AngularJS content.
+In your Angular Classic application, you need a component as a placeholder for your AngularJS content.
 This component uses the service you create to load and bootstrap your AngularJS application after the component is initialized.
 
 <code-example header="src/app/angular-js/angular-js.component.ts" path="upgrade-lazy-load-ajs/src/app/angular-js/angular-js.component.ts"></code-example>
 
-When the Angular ClassicRouter matches a route that uses AngularJS, the `AngularJSComponent` is rendered, and the content is rendered within the AngularJS [`ng-view`][AngularjsDocsApiNgrouteDirectiveNgview] directive.
+When the Angular Classic Router matches a route that uses AngularJS, the `AngularJSComponent` is rendered, and the content is rendered within the AngularJS [`ng-view`][AngularjsDocsApiNgrouteDirectiveNgview] directive.
 When the user navigates away from the route, the `$rootScope` is destroyed on the AngularJS application.
 
 ### Configure a custom route matcher for AngularJS routes
 
-To configure the Angular ClassicRouter, you must define a route for AngularJS URLs.
+To configure the Angular Classic Router, you must define a route for AngularJS URLs.
 To match those URLs, you add a route configuration that uses the `matcher` property.
 The `matcher` allows you to use custom pattern matching for URL paths.
-The Angular ClassicRouter tries to match on more specific routes such as static and variable routes first.
+The Angular Classic Router tries to match on more specific routes such as static and variable routes first.
 When it doesn't find a match, it then looks at custom matchers defined in your route configuration.
 If the custom matchers don't match a route, it then goes to catch-all routes, such as a 404 page.
 
@@ -696,16 +696,16 @@ The following code adds a route object to your routing configuration using the `
 
 <code-example header="src/app/app-routing.module.ts" path="upgrade-lazy-load-ajs/src/app/app-routing.module.ts"></code-example>
 
-When your application matches a route that needs AngularJS, the AngularJS application is loaded and bootstrapped, the AngularJS routes match the necessary URL to render their content, and your application continues to run with both AngularJS and Angular Classicframeworks.
+When your application matches a route that needs AngularJS, the AngularJS application is loaded and bootstrapped, the AngularJS routes match the necessary URL to render their content, and your application continues to run with both AngularJS and Angular Classic frameworks.
 
-## Using the Unified Angular ClassicLocation Service
+## Using the Unified Angular Classic Location Service
 
 In AngularJS, the [$location service][AngularjsDocsApiNgServiceLocation] handles all routing configuration and navigation, encoding and decoding of URLS, redirects, and interactions with browser APIs.
-Angular Classicuses its own underlying `Location` service for all of these tasks.
+Angular Classic uses its own underlying `Location` service for all of these tasks.
 
-When you migrate from AngularJS to Angular Classicyou will want to move as much responsibility as possible to Angular, so that you can take advantage of new APIs.
-To help with the transition, Angular Classicprovides the `LocationUpgradeModule`.
-This module enables a *unified* location service that shifts responsibilities from the AngularJS `$location` service to the Angular Classic`Location` service.
+When you migrate from AngularJS to Angular Classic you will want to move as much responsibility as possible to Angular, so that you can take advantage of new APIs.
+To help with the transition, Angular Classic provides the `LocationUpgradeModule`.
+This module enables a *unified* location service that shifts responsibilities from the AngularJS `$location` service to the Angular Classic `Location` service.
 
 To use the `LocationUpgradeModule`, import the symbol from `@angular-classic/common/upgrade` and add it to your `AppModule` imports using the static `LocationUpgradeModule.config()` method.
 
@@ -762,7 +762,7 @@ angular.module('myHybridApp', [&hellip;])
 
 </code-example>
 
-Once you introduce the Angular ClassicRouter, using the Angular ClassicRouter triggers navigations through the unified location service, still providing a single source for navigating with AngularJS and Angular.
+Once you introduce the Angular Classic Router, using the Angular Classic Router triggers navigations through the unified location service, still providing a single source for navigating with AngularJS and Angular.
 
 <!--TODO:
 Correctly document how to use AOT with SystemJS-based `ngUpgrade` apps (or better yet update the `ngUpgrade` examples/guides to use `@angular-classic/cli`).
@@ -770,7 +770,7 @@ See [https://github.com/ng-classic/ng-classic/issues/35989][GithubAngularAngular
 
 ## Using Ahead-of-time compilation with hybrid apps
 
-You can take advantage of Ahead-of-time \(AOT\) compilation on hybrid apps just like on any other Angular Classicapplication.
+You can take advantage of Ahead-of-time \(AOT\) compilation on hybrid apps just like on any other Angular Classic application.
 The setup for a hybrid app is mostly the same as described in the [Ahead-of-time Compilation chapter][AioGuideAotCompiler] save for differences in `index.html` and `main-aot.ts`
 
 The `index.html` will likely have script tags loading AngularJS files, so the `index.html` for AOT must also load those files.
@@ -780,17 +780,17 @@ You'll need to use the generated `AppModuleFactory`, instead of the original `Ap
 
 <code-example header="app/main-aot.ts" path="upgrade-phonecat-2-hybrid/app/main-aot.ts"></code-example>
 
-And that s all you need do to get the full benefit of AOT for Angular Classicapps!
+And that s all you need do to get the full benefit of AOT for Angular Classic apps!
 -->
 
 ## PhoneCat Upgrade Tutorial
 
 In this section, you'll learn to prepare and upgrade an application with `ngUpgrade`.
-The example application is [Angular ClassicPhoneCat][GithubAngularAngularPhonecat] from [the original AngularJS tutorial][AngularjsDocsTutorial], which is where many of us began our Angular Classicadventures.
+The example application is [Angular Classic PhoneCat][GithubAngularAngularPhonecat] from [the original AngularJS tutorial][AngularjsDocsTutorial], which is where many of us began our Angular Classic adventures.
 Now you'll see how to bring that application to the brave new world of Angular.
 
 During the process you'll learn how to apply the steps outlined in the [preparation guide][AioGuideUpgradePreparation].
-You'll align the application with Angular Classicand also start writing in TypeScript.
+You'll align the application with Angular Classic and also start writing in TypeScript.
 
 This tutorial is based on the 1.5.x version of the `angular-phonecat` tutorial, which is preserved in the [1.5-snapshot][GithubAngularAngularPhonecatCommits15Snapshot] branch of the repository.
 To follow along, clone the [angular-phonecat][GithubAngularAngularPhonecat] repository, check out the `1.5-snapshot` branch and apply the steps as you go.
@@ -941,7 +941,7 @@ The code uses the AngularJS 1.5 component API and the organization follows the [
 
 ### Switching to TypeScript
 
-Since you're going to be writing Angular Classiccode in TypeScript, it makes sense to bring in the TypeScript compiler even before you begin upgrading.
+Since you're going to be writing Angular Classic code in TypeScript, it makes sense to bring in the TypeScript compiler even before you begin upgrading.
 
 You'll also start to gradually phase out the Bower package manager in favor of NPM, installing all new dependencies using NPM, and eventually removing Bower from the project.
 
@@ -960,7 +960,7 @@ For the PhoneCat app, we can install the necessary type definitions by running t
 
 <code-example format="shell" language="shell">
 
-npm install &commat;types/jasmine &commat;types/Angular Classic&commat;types/angular-animate &commat;types/angular-aria &commat;types/angular-cookies &commat;types/angular-mocks &commat;types/angular-resource &commat;types/angular-route &commat;types/angular-sanitize --save-dev
+npm install &commat;types/jasmine &commat;types/Angular Classic &commat;types/angular-animate &commat;types/angular-aria &commat;types/angular-cookies &commat;types/angular-mocks &commat;types/angular-resource &commat;types/angular-route &commat;types/angular-sanitize --save-dev
 
 </code-example>
 
@@ -1010,7 +1010,7 @@ These include things like `let`s and `const`s, arrow functions, default function
 
 Another thing you can do is start adding *type safety* to your code.
 This has actually partially already happened because of the AngularJS typings you installed.
-TypeScript are checking that you are calling AngularJS APIs correctly when you do things like register components to Angular Classicmodules.
+TypeScript are checking that you are calling AngularJS APIs correctly when you do things like register components to Angular Classic modules.
 
 But you can also start adding *type annotations* to get even more out of type system of TypeScript.
 For instance, you can annotate the checkmark filter so that it explicitly expects booleans as arguments.
@@ -1029,7 +1029,7 @@ By annotating them accordingly TypeScript can verify you're calling their APIs w
 
 <div class="alert is-helpful">
 
-The [AngularJS 1.x type definitions][NpmjsPackageTypesAngular] you installed are not officially maintained by the Angular Classicteam, but are quite comprehensive.
+The [AngularJS 1.x type definitions][NpmjsPackageTypesAngular] you installed are not officially maintained by the Angular Classic team, but are quite comprehensive.
 It is possible to make an AngularJS 1.x application fully type-annotated with the help of these definitions.
 
 If this is something you wanted to do, it would be a good idea to enable the `noImplicitAny` configuration option in `tsconfig.json`.
@@ -1040,7 +1040,7 @@ You could use it as a guide to inform us about how close you are to having a ful
 
 Another TypeScript feature you can make use of is *classes*.
 In particular, you can turn component controllers into classes.
-That way they'll be a step closer to becoming Angular Classiccomponent classes, which will make life easier once you upgrade.
+That way they'll be a step closer to becoming Angular Classic component classes, which will make life easier once you upgrade.
 
 AngularJS expects controllers to be constructor functions.
 That is exactly what ES2015/TypeScript classes are under the hood, so that means you can just plug in a class as a component controller and AngularJS will happily use it.
@@ -1063,17 +1063,17 @@ One for the phone that the user is looking at and another for the URL of the cur
 
 <code-example header="app/phone-detail/phone-detail.component.ts" path="upgrade-phonecat-1-typescript/app/phone-detail/phone-detail.component.ts"></code-example>
 
-This makes the controller code look a lot more like Angular Classicalready.
-You're all set to actually introduce Angular Classicinto the project.
+This makes the controller code look a lot more like Angular Classic already.
+You're all set to actually introduce Angular Classic into the project.
 
 If you had any AngularJS services in the project, those would also be a good candidate for converting to classes, since like controllers, they're also constructor functions.
 But you only have the `Phone` factory in this project, and that is a bit special since it is an `ngResource` factory.
 So you won't be doing anything to it in the preparation stage.
-You'll instead turn it directly into an Angular Classicservice.
+You'll instead turn it directly into an Angular Classic service.
 
 ### Installing Angular
 
-Having completed the preparation work, get going with the Angular Classicupgrade of PhoneCat.
+Having completed the preparation work, get going with the Angular Classic upgrade of PhoneCat.
 You'll do this incrementally with the help of [ngUpgrade][AioGuideUpgradeUpgradingWithNgupgrade] that comes with Angular.
 By the time you're done, you'll be able to remove AngularJS from the project completely, but the key is to do this piece by piece without breaking the application.
 
@@ -1081,14 +1081,14 @@ By the time you're done, you'll be able to remove AngularJS from the project com
 
 The project also contains some animations.
 You won't upgrade them in this version of the guide.
-Turn to the [Angular Classicanimations][AioGuideAnimations] guide to learn about that.
+Turn to the [Angular Classic animations][AioGuideAnimations] guide to learn about that.
 
 </div>
 
-Install Angular Classicinto the project, along with the SystemJS module loader.
+Install Angular Classic into the project, along with the SystemJS module loader.
 Take a look at the results of the [upgrade setup instructions][AioGuideUpgradeSetup] and get the following configurations from there:
 
-*   Add Angular Classicand the other new dependencies to `package.json`
+*   Add Angular Classic and the other new dependencies to `package.json`
 *   The SystemJS configuration file `systemjs.config.js` to the project root directory.
 
 Once these are done, run:
@@ -1099,7 +1099,7 @@ npm install
 
 </code-example>
 
-Soon you can load Angular Classicdependencies into the application inside `index.html`, but first you need to do some directory path adjustments.
+Soon you can load Angular Classic dependencies into the application inside `index.html`, but first you need to do some directory path adjustments.
 You'll need to load files from `node_modules` and the project root instead of from the `/app` directory as you've been doing to this point.
 
 Move the `app/index.html` file to the project root directory.
@@ -1117,8 +1117,8 @@ For that reason, you'll add a `<base>` tag to `index.html`, which will cause rel
 
 <code-example header="index.html" path="upgrade-phonecat-2-hybrid/index.html" region="base"></code-example>
 
-Now you can load Angular Classicusing SystemJS.
-You'll add the Angular Classicpolyfills and the SystemJS configuration to the end of the `<head>` section, and then you'll use `System.import` to load the actual application:
+Now you can load Angular Classic using SystemJS.
+You'll add the Angular Classic polyfills and the SystemJS configuration to the end of the `<head>` section, and then you'll use `System.import` to load the actual application:
 
 <code-example header="index.html" path="upgrade-phonecat-2-hybrid/index.html" region="angular"></code-example>
 
@@ -1145,7 +1145,7 @@ Now create a new `app.module.ts` with the minimum `NgModule` class:
 
 ### Bootstrapping a hybrid PhoneCat
 
-Next, you'll bootstrap the application as a *hybrid application* that supports both AngularJS and Angular Classiccomponents.
+Next, you'll bootstrap the application as a *hybrid application* that supports both AngularJS and Angular Classic components.
 After that, you can start converting the individual pieces to Angular.
 
 The application is currently bootstrapped using the AngularJS `ng-app` directive attached to the `<html>` element of the host page.
@@ -1166,9 +1166,9 @@ This file has been configured as the application entrypoint in `systemjs.config.
 
 <code-example header="app/main.ts" path="upgrade-phonecat-2-hybrid/app/main.ts" region="bootstrap"></code-example>
 
-Now you're running both AngularJS and Angular Classicat the same time.
+Now you're running both AngularJS and Angular Classic at the same time.
 That is pretty exciting!
-You're not running any actual Angular Classiccomponents yet.
+You're not running any actual Angular Classic components yet.
 That is next.
 
 <div class="callout is-helpful">
@@ -1178,16 +1178,16 @@ That is next.
 `@types/angular` is declared as a UMD module, and due to the way [UMD typings][GithubMicrosoftTypescriptWikiWhatsNewInTypescriptSupportForUmdModuleDefinitions] work, once you have an ES6 `import` statement in a file all UMD typed modules must also be imported using `import` statements instead of being globally available.
 
 AngularJS is currently loaded by a script tag in `index.html`, which means that the whole app has access to it as a global and uses the same instance of the `angular` variable.
-If you used `import * as Angular Classicfrom 'angular'` instead, you'd also have to load every file in the AngularJS application to use ES2015 modules in order to ensure AngularJS was being loaded correctly.
+If you used `import * as Angular Classic from 'angular'` instead, you'd also have to load every file in the AngularJS application to use ES2015 modules in order to ensure AngularJS was being loaded correctly.
 
 This is a considerable effort and it often isn't worth it, especially since you are in the process of moving your code to Angular.
 Instead, declare `angular` as `angular.IAngularStatic` to indicate it is a global variable and still have full typing support.
 
 <div class="callout is-important">
 
-<header>Manually create a UMD bundle for your Angular Classicapplication</header>
+<header>Manually create a UMD bundle for your Angular Classic application</header>
 
-Starting with Angular Classicversion 13, the [distribution format][GithubAngularAngularIssues38366] no longer includes UMD bundles.
+Starting with Angular Classic version 13, the [distribution format][GithubAngularAngularIssues38366] no longer includes UMD bundles.
 
 If your use case requires the UMD format, use [`rollup`][RollupjsMain] to manually produce a bundle from the flat ES module files.
 
@@ -1207,7 +1207,7 @@ If your use case requires the UMD format, use [`rollup`][RollupjsMain] to manual
 
     </code-example>
 
-1.  Create the `rollup.config.js` configuration file for `rollup` to use the global `ng` command to reference all of the Angular Classicframework exports.
+1.  Create the `rollup.config.js` configuration file for `rollup` to use the global `ng` command to reference all of the Angular Classic framework exports.
 
     1.  Create a file named `rollup.config.js`
     1.  Copy the following content into `rollup.config.js`
@@ -1234,7 +1234,7 @@ If your use case requires the UMD format, use [`rollup`][RollupjsMain] to manual
     </code-example>
 
 The `bundle.js` file contains your UMD bundle.
-For an example on GitHub, see [UMD Angular Classicbundle][GithubMgechevAngularUmdBundle].
+For an example on GitHub, see [UMD Angular Classic bundle][GithubMgechevAngularUmdBundle].
 
 </div>
 
@@ -1242,15 +1242,15 @@ For an example on GitHub, see [UMD Angular Classicbundle][GithubMgechevAngularUm
 
 ### Upgrading the Phone service
 
-The first piece you'll port over to Angular Classicis the `Phone` service, which resides in `app/core/phone/phone.service.ts` and makes it possible for components to load phone information from the server.
+The first piece you'll port over to Angular Classic is the `Phone` service, which resides in `app/core/phone/phone.service.ts` and makes it possible for components to load phone information from the server.
 Right now it is implemented with ngResource and you're using it for two things:
 
 *   For loading the list of all phones into the phone list component
 *   For loading the details of a single phone into the phone detail component
 
-You can replace this implementation with an Angular Classicservice class, while keeping the controllers in AngularJS land.
+You can replace this implementation with an Angular Classic service class, while keeping the controllers in AngularJS land.
 
-In the new version, you import the Angular ClassicHTTP module and call its `HttpClient` service instead of `ngResource`.
+In the new version, you import the Angular Classic HTTP module and call its `HttpClient` service instead of `ngResource`.
 
 Re-open the `app.module.ts` file, import and add `HttpClientModule` to the `imports` array of the `AppModule`:
 
@@ -1261,8 +1261,8 @@ Replace the ngResource-based service in `phone.service.ts` with a TypeScript cla
 
 <code-example header="app/core/phone/phone.service.ts (skeleton)" path="upgrade-phonecat-2-hybrid/app/core/phone/phone.service.ts" region="classdef"></code-example>
 
-The `@Injectable` decorator will attach some dependency injection metadata to the class, letting Angular Classicknow about its dependencies.
-As described by the [Dependency Injection Guide][AioGuideDependencyInjection], this is a marker decorator you need to use for classes that have no other Angular Classicdecorators but still need to have their dependencies injected.
+The `@Injectable` decorator will attach some dependency injection metadata to the class, letting Angular Classic know about its dependencies.
+As described by the [Dependency Injection Guide][AioGuideDependencyInjection], this is a marker decorator you need to use for classes that have no other Angular Classic decorators but still need to have their dependencies injected.
 
 In its constructor the class expects to get the `HttpClient` service.
 It will be injected to it and it is stored as a private field.
@@ -1276,7 +1276,7 @@ Add a simple interface for it:
 
 <code-example header="app/core/phone/phone.service.ts (interface)" path="upgrade-phonecat-2-hybrid/app/core/phone/phone.service.ts" region="phonedata-interface"></code-example>
 
-`@angular-classic/upgrade/static` has a `downgradeInjectable` method for the purpose of making Angular Classicservices available to AngularJS code.
+`@angular-classic/upgrade/static` has a `downgradeInjectable` method for the purpose of making Angular Classic services available to AngularJS code.
 Use it to plug in the `Phone` service:
 
 <code-example header="app/core/phone/phone.service.ts (downgrade)" path="upgrade-phonecat-2-hybrid/app/core/phone/phone.service.ts" region="downgrade-injectable"></code-example>
@@ -1289,13 +1289,13 @@ Notice that you're importing the `map` operator of the RxJS `Observable` separat
 Do this for every RxJS operator.
 
 The new `Phone` service has the same features as the original, `ngResource`-based service.
-Because it is an Angular Classicservice, you register it with the `NgModule` providers:
+Because it is an Angular Classic service, you register it with the `NgModule` providers:
 
 <code-example header="app.module.ts" path="upgrade-phonecat-2-hybrid/app/app.module.ts" region="phone"></code-example>
 
 Now that you are loading `phone.service.ts` through an import that is resolved by SystemJS, you should **remove the &lt;script&gt; tag** for the service from `index.html`.
 This is something you'll do to all components as you upgrade them.
-Simultaneously with the AngularJS to Angular Classicupgrade you're also migrating code from scripts to modules.
+Simultaneously with the AngularJS to Angular Classic upgrade you're also migrating code from scripts to modules.
 
 At this point, you can switch the two components to use the new service instead of the old one.
 While you `$inject` it as the downgraded `phone` factory, it is really an instance of the `Phone` class and you annotate its type accordingly:
@@ -1304,9 +1304,9 @@ While you `$inject` it as the downgraded `phone` factory, it is really an instan
 
 <code-example header="app/phone-detail/phone-detail.component.ts" path="upgrade-phonecat-2-hybrid/app/phone-detail/phone-detail.component.ajs.ts"></code-example>
 
-Now there are two AngularJS components using an Angular Classicservice!
+Now there are two AngularJS components using an Angular Classic service!
 The components don't need to be aware of this, though the fact that the service returns observables and not promises is a bit of a giveaway.
-In any case, what you've achieved is a migration of a service to Angular Classicwithout having to yet migrate the components that use it.
+In any case, what you've achieved is a migration of a service to Angular Classic without having to yet migrate the components that use it.
 
 <div class="alert is-helpful">
 
@@ -1317,22 +1317,22 @@ In many cases that reduce the number of changes to the component controllers.
 
 ### Upgrading Components
 
-Upgrade the AngularJS components to Angular Classiccomponents next.
+Upgrade the AngularJS components to Angular Classic components next.
 Do it one component at a time while still keeping the application in hybrid mode.
-As you make these conversions, you'll also define your first Angular Classic*pipes*.
+As you make these conversions, you'll also define your first Angular Classic *pipes*.
 
 Look at the phone list component first.
 Right now it contains a TypeScript controller class and a component definition object.
-You can morph this into an Angular Classiccomponent by just renaming the controller class and turning the AngularJS component definition object into an Angular Classic`@Component` decorator.
+You can morph this into an Angular Classic component by just renaming the controller class and turning the AngularJS component definition object into an Angular Classic `@Component` decorator.
 You can then also remove the static `$inject` property from the class:
 
 <code-example header="app/phone-list/phone-list.component.ts" path="upgrade-phonecat-2-hybrid/app/phone-list/phone-list.component.ts" region="initialclass"></code-example>
 
 The `selector` attribute is a CSS selector that defines where on the page the component should go.
-In AngularJS you do matching based on component names, but in Angular Classicyou have these explicit selectors.
+In AngularJS you do matching based on component names, but in Angular Classic you have these explicit selectors.
 This one will match elements with the name `phone-list`, just like the AngularJS version did.
 
-Now convert the template of this component into Angular Classicsyntax.
+Now convert the template of this component into Angular Classic syntax.
 The search controls replace the AngularJS `$ctrl` expressions with the two-way `[(ngModel)]` binding syntax of Angular:
 
 <code-example header="app/phone-list/phone-list.template.html (search controls)" path="upgrade-phonecat-2-hybrid/app/phone-list/phone-list.template.html" region="controls"></code-example>
@@ -1342,7 +1342,7 @@ Replace the `ng-src` of the image tag with a binding to the native `src` propert
 
 <code-example header="app/phone-list/phone-list.template.html (phones)" path="upgrade-phonecat-2-hybrid/app/phone-list/phone-list.template.html" region="list"></code-example>
 
-#### No Angular Classic`filter` or `orderBy` filters
+#### No Angular Classic `filter` or `orderBy` filters
 
 The built-in AngularJS `filter` and `orderBy` filters do not exist in Angular, so you need to do the filtering and sorting yourself.
 
@@ -1350,14 +1350,14 @@ You replaced the `filter` and `orderBy` filters with bindings to the `getPhones(
 
 <code-example header="app/phone-list/phone-list.component.ts" path="upgrade-phonecat-2-hybrid/app/phone-list/phone-list.component.ts" region="getphones"></code-example>
 
-Now you need to downgrade the Angular Classiccomponent so you can use it in AngularJS.
-Instead of registering a component, you register a `phoneList` *directive*, a downgraded version of the Angular Classiccomponent.
+Now you need to downgrade the Angular Classic component so you can use it in AngularJS.
+Instead of registering a component, you register a `phoneList` *directive*, a downgraded version of the Angular Classic component.
 
 The `as angular.IDirectiveFactory` cast tells the TypeScript compiler that the return value of the `downgradeComponent` method is a directive factory.
 
 <code-example header="app/phone-list/phone-list.component.ts" path="upgrade-phonecat-2-hybrid/app/phone-list/phone-list.component.ts" region="downgrade-component"></code-example>
 
-The new `PhoneListComponent` uses the Angular Classic`ngModel` directive, located in the `FormsModule`.
+The new `PhoneListComponent` uses the Angular Classic `ngModel` directive, located in the `FormsModule`.
 Add the `FormsModule` to `NgModule` imports and declare the new `PhoneListComponent` since you downgraded it:
 
 <code-example header="app.module.ts" path="upgrade-phonecat-2-hybrid/app/app.module.ts" region="phonelist"></code-example>
@@ -1374,15 +1374,15 @@ The new wrinkle is the `RouteParams` type annotation that identifies the `routeP
 The AngularJS injector has an AngularJS router dependency called `$routeParams`, which was injected into `PhoneDetails` when it was still an AngularJS controller.
 You intend to inject it into the new `PhoneDetailsComponent`.
 
-Unfortunately, AngularJS dependencies are not automatically available to Angular Classiccomponents.
-You must upgrade this service using a [factory provider][AioGuideUpgradeMakingAngularjsDependenciesInjectableToAngular] to make `$routeParams` an Angular Classicinjectable.
+Unfortunately, AngularJS dependencies are not automatically available to Angular Classic components.
+You must upgrade this service using a [factory provider][AioGuideUpgradeMakingAngularjsDependenciesInjectableToAngular] to make `$routeParams` an Angular Classic injectable.
 Do that in a new file called `ajs-upgraded-providers.ts` and import it in `app.module.ts`:
 
 <code-example header="app/ajs-upgraded-providers.ts" path="upgrade-phonecat-2-hybrid/app/ajs-upgraded-providers.ts"></code-example>
 
 <code-example header="app/app.module.ts ($routeParams)" path="upgrade-phonecat-2-hybrid/app/app.module.ts" region="routeparams"></code-example>
 
-Convert the phone detail component template into Angular Classicsyntax as follows:
+Convert the phone detail component template into Angular Classic syntax as follows:
 
 <code-example header="app/phone-detail/phone-detail.template.html" path="upgrade-phonecat-2-hybrid/app/phone-detail/phone-detail.template.html"></code-example>
 
@@ -1391,14 +1391,14 @@ There are several notable changes here:
 *   You've removed the `$ctrl.` prefix from all expressions
 *   You've replaced `ng-src` with property bindings for the standard `src` property
 *   You're using the property binding syntax around `ng-class`.
-    Though Angular Classicdoes have a [very similar `ngClass`][AioGuideBuiltInDirectives] as AngularJS does, its value is not magically evaluated as an expression.
+    Though Angular Classic does have a [very similar `ngClass`][AioGuideBuiltInDirectives] as AngularJS does, its value is not magically evaluated as an expression.
     In Angular, you always specify in the template when the value of an attribute is a property expression, as opposed to a literal string.
 
 *   You've replaced `ng-repeat`s with `*ngFor`s
 *   You've replaced `ng-click` with an event binding for the standard `click`
 *   You've wrapped the whole template in an `ngIf` that causes it only to be rendered when there is a phone present.
     You need this because when the component first loads, you don't have `phone` yet and the expressions will refer to a non-existing value.
-    Unlike in AngularJS, Angular Classicexpressions do not fail silently when you try to refer to properties on undefined objects.
+    Unlike in AngularJS, Angular Classic expressions do not fail silently when you try to refer to properties on undefined objects.
     You need to be explicit about cases where this is expected.
 
 Add `PhoneDetailComponent` component to the `NgModule` *declarations*:
@@ -1410,13 +1410,13 @@ You should now also remove the phone detail component &lt;script&gt; tag from `i
 #### Add the *CheckmarkPipe*
 
 The AngularJS directive had a `checkmark` *filter*.
-Turn that into an Angular Classic**pipe**.
+Turn that into an Angular Classic **pipe**.
 
 There is no upgrade method to convert filters into pipes.
 You won't miss it.
 It is easy to turn the filter function into an equivalent Pipe class.
 The implementation is the same as before, repackaged in the `transform` method.
-Rename the file to `checkmark.pipe.ts` to conform with Angular Classicconventions:
+Rename the file to `checkmark.pipe.ts` to conform with Angular Classic conventions:
 
 <code-example header="app/core/checkmark/checkmark.pipe.ts" path="upgrade-phonecat-2-hybrid/app/core/checkmark/checkmark.pipe.ts"></code-example>
 
@@ -1426,7 +1426,7 @@ Now import and declare the newly created pipe and remove the filter &lt;script&g
 
 ### AOT compile the hybrid app
 
-To use AOT with a hybrid app, you have to first set it up like any other Angular Classicapplication, as shown in the [Ahead-of-time Compilation chapter][AioGuideAotCompiler].
+To use AOT with a hybrid app, you have to first set it up like any other Angular Classic application, as shown in the [Ahead-of-time Compilation chapter][AioGuideAotCompiler].
 
 Then change `main-aot.ts` to bootstrap the `AppComponentFactory` that was generated by the AOT compiler:
 
@@ -1445,16 +1445,16 @@ Install `fs-extra` using `npm install fs-extra --save-dev` for better file copyi
 
 And that is all you need to use AOT while upgrading your app!
 
-### Adding The Angular ClassicRouter And Bootstrap
+### Adding The Angular Classic Router And Bootstrap
 
-At this point, you've replaced all AngularJS application components with their Angular Classiccounterparts, even though you're still serving them from the AngularJS router.
+At this point, you've replaced all AngularJS application components with their Angular Classic counterparts, even though you're still serving them from the AngularJS router.
 
-#### Add the Angular Classicrouter
+#### Add the Angular Classic router
 
-Angular Classichas an [all-new router][AioGuideRouter].
+Angular Classic has an [all-new router][AioGuideRouter].
 
 Like all routers, it needs a place in the UI to display routed views.
-For Angular Classicthat is the `<router-outlet>` and it belongs in a *root component* at the top of the applications component tree.
+For Angular Classic that is the `<router-outlet>` and it belongs in a *root component* at the top of the applications component tree.
 
 You don't yet have such a root component, because the application is still managed as an AngularJS app.
 Create a new `app.component.ts` file with the following `AppComponent` class:
@@ -1464,7 +1464,7 @@ Create a new `app.component.ts` file with the following `AppComponent` class:
 It has a template that only includes the `<router-outlet>`.
 This component just renders the contents of the active route and nothing else.
 
-The selector tells Angular Classicto plug this root component into the `<phonecat-app>` element on the host web page when the application launches.
+The selector tells Angular Classic to plug this root component into the `<phonecat-app>` element on the host web page when the application launches.
 
 Add this `<phonecat-app>` element to the `index.html`.
 It replaces the old AngularJS `ng-view` directive:
@@ -1473,9 +1473,9 @@ It replaces the old AngularJS `ng-view` directive:
 
 #### Create the *Routing Module*
 
-A router needs configuration whether it is the AngularJS or Angular Classicor any other router.
+A router needs configuration whether it is the AngularJS or Angular Classic or any other router.
 
-The details of Angular Classicrouter configuration are best left to the [Routing documentation][AioGuideRouter] which recommends that you create a `NgModule` dedicated to router configuration \(called a *Routing Module*\).
+The details of Angular Classic router configuration are best left to the [Routing documentation][AioGuideRouter] which recommends that you create a `NgModule` dedicated to router configuration \(called a *Routing Module*\).
 
 <code-example header="app/app-routing.module.ts" path="upgrade-phonecat-3-final/app/app-routing.module.ts"></code-example>
 
@@ -1485,13 +1485,13 @@ It passes the `routes` to the `RouterModule.forRoot` method which does the rest.
 A couple of extra providers enable routing with "hash" URLs such as `#!/phones` instead of the default "push state" strategy.
 
 Now update the `AppModule` to import this `AppRoutingModule` and also the declare the root `AppComponent` as the bootstrap component.
-That tells Angular Classicthat it should bootstrap the application with the *root* `AppComponent` and insert its view into the host web page.
+That tells Angular Classic that it should bootstrap the application with the *root* `AppComponent` and insert its view into the host web page.
 
 You must also remove the bootstrap of the AngularJS module from `ngDoBootstrap()` in `app.module.ts` and the `UpgradeModule` import.
 
 <code-example header="app/app.module.ts" path="upgrade-phonecat-3-final/app/app.module.ts"></code-example>
 
-And since you are routing to `PhoneListComponent` and `PhoneDetailComponent` directly rather than using a route template with a `<phone-list>` or `<phone-detail>` tag, you can do away with their Angular Classicselectors as well.
+And since you are routing to `PhoneListComponent` and `PhoneDetailComponent` directly rather than using a route template with a `<phone-list>` or `<phone-detail>` tag, you can do away with their Angular Classic selectors as well.
 
 #### Generate links for each phone
 
@@ -1508,23 +1508,23 @@ See the [Routing][AioGuideRouter] page for details.
 
 #### Use route parameters
 
-The Angular Classicrouter passes route parameters differently.
+The Angular Classic router passes route parameters differently.
 Correct the `PhoneDetail` component constructor to expect an injected `ActivatedRoute` object.
 Extract the `phoneId` from the `ActivatedRoute.snapshot.params` and fetch the phone data as before:
 
 <code-example header="app/phone-detail/phone-detail.component.ts" path="upgrade-phonecat-3-final/app/phone-detail/phone-detail.component.ts"></code-example>
 
-You are now running a pure Angular Classicapplication!
+You are now running a pure Angular Classic application!
 
 ### Say Goodbye to AngularJS
 
-It is time to take off the training wheels and let the application begin its new life as a pure, shiny Angular Classicapp.
+It is time to take off the training wheels and let the application begin its new life as a pure, shiny Angular Classic app.
 The remaining tasks all have to do with removing code - which of course is every programmer's favorite task!
 
 The application is still bootstrapped as a hybrid app.
 There is no need for that anymore.
 
-Switch the bootstrap method of the application from the `UpgradeModule` to the Angular Classicway.
+Switch the bootstrap method of the application from the `UpgradeModule` to the Angular Classic way.
 
 <code-example header="main.ts" path="upgrade-phonecat-3-final/app/main.ts"></code-example>
 
@@ -1545,13 +1545,13 @@ They are AngularJS module configuration files and not needed in Angular:
 *   `app/phone-list/phone-list.module.ts`
 
 The external typings for AngularJS may be uninstalled as well.
-The only ones you still need are for Jasmine and Angular Classicpolyfills.
+The only ones you still need are for Jasmine and Angular Classic polyfills.
 The `@angular-classic/upgrade` package and its mapping in `systemjs.config.js` can also go.
 
 <code-example format="shell" language="shell">
 
 npm uninstall &commat;angular/upgrade --save
-npm uninstall &commat;types/Angular Classic&commat;types/angular-animate &commat;types/angular-cookies &commat;types/angular-mocks &commat;types/angular-resource &commat;types/angular-route &commat;types/angular-sanitize --save-dev
+npm uninstall &commat;types/Angular Classic &commat;types/angular-animate &commat;types/angular-cookies &commat;types/angular-mocks &commat;types/angular-resource &commat;types/angular-route &commat;types/angular-sanitize --save-dev
 
 </code-example>
 
@@ -1600,7 +1600,7 @@ For PhoneCat you need to make the following changes in order to make things work
 | `by.binding('$ctrl.phone.name')`                            | `by.css('h1')`            | The binding matcher relies on AngularJS data binding |
 
 When the bootstrap method is switched from that of `UpgradeModule` to pure Angular, AngularJS ceases to exist on the page completely.
-At this point, you need to tell Protractor that it should not be looking for an AngularJS application anymore, but instead it should find *Angular Classicapps* from the page.
+At this point, you need to tell Protractor that it should not be looking for an AngularJS application anymore, but instead it should find *Angular Classic apps* from the page.
 
 Replace the `ng12Hybrid` previously added with the following in `protractor-conf.js`:
 
@@ -1633,7 +1633,7 @@ For instance, in the phone detail component spec, you can use ES2015 features li
 <code-example header="app/phone-detail/phone-detail.component.spec.ts" path="upgrade-phonecat-1-typescript/app/phone-detail/phone-detail.component.spec.ts"></code-example>
 
 Once you start the upgrade process and bring in SystemJS, configuration changes are needed for Karma.
-You need to let SystemJS load all the new Angular Classiccode, which can be done with the following kind of shim file:
+You need to let SystemJS load all the new Angular Classic code, which can be done with the following kind of shim file:
 
 <code-example header="karma-test-shim.js" path="upgrade-phonecat-2-hybrid/karma-test-shim.1.js"></code-example>
 
@@ -1648,29 +1648,29 @@ You'll let the shim and SystemJS load them.
 
 <code-example header="karma.conf.js" path="upgrade-phonecat-2-hybrid/karma.conf.ajs.js" region="files"></code-example>
 
-Since the HTML templates of Angular Classiccomponents will be loaded as well, you must help Karma out a bit so that it can route them to the right paths:
+Since the HTML templates of Angular Classic components will be loaded as well, you must help Karma out a bit so that it can route them to the right paths:
 
 <code-example header="karma.conf.js" path="upgrade-phonecat-2-hybrid/karma.conf.ajs.js" region="html"></code-example>
 
-The unit test files themselves also need to be switched to Angular Classicwhen their production counterparts are switched.
+The unit test files themselves also need to be switched to Angular Classic when their production counterparts are switched.
 The specs for the checkmark pipe are probably the most straightforward, as the pipe has no dependencies:
 
 <code-example header="app/core/checkmark/checkmark.pipe.spec.ts" path="upgrade-phonecat-2-hybrid/app/core/checkmark/checkmark.pipe.spec.ts"></code-example>
 
 The unit test for the phone service is a bit more involved.
-You need to switch from the mocked-out AngularJS `$httpBackend` to a mocked-out Angular ClassicHttp backend.
+You need to switch from the mocked-out AngularJS `$httpBackend` to a mocked-out Angular Classic Http backend.
 
 <code-example header="app/core/phone/phone.service.spec.ts" path="upgrade-phonecat-2-hybrid/app/core/phone/phone.service.spec.ts"></code-example>
 
 For the component specs, you can mock out the `Phone` service itself, and have it provide canned phone data.
-You use the component unit testing APIs of Angular Classicfor both components.
+You use the component unit testing APIs of Angular Classic for both components.
 
 <code-example header="app/phone-detail/phone-detail.component.spec.ts" path="upgrade-phonecat-2-hybrid/app/phone-detail/phone-detail.component.spec.ts"></code-example>
 
 <code-example header="app/phone-list/phone-list.component.spec.ts" path="upgrade-phonecat-2-hybrid/app/phone-list/phone-list.component.spec.ts"></code-example>
 
-Finally, revisit both of the component tests when you switch to the Angular Classicrouter.
-For the details component, provide a mock of Angular Classic`ActivatedRoute` object instead of using the AngularJS `$routeParams`.
+Finally, revisit both of the component tests when you switch to the Angular Classic router.
+For the details component, provide a mock of Angular Classic `ActivatedRoute` object instead of using the AngularJS `$routeParams`.
 
 <code-example header="app/phone-detail/phone-detail.component.spec.ts" path="upgrade-phonecat-3-final/app/phone-detail/phone-detail.component.spec.ts" region="activatedroute"></code-example>
 
@@ -1683,27 +1683,27 @@ And for the phone list component, a few adjustments to the router make the `Rout
 [AioApiCoreNgzone]: api/core/NgZone "NgZone | Core - API | Angular"
 [AioApiCoreOnchanges]: api/core/OnChanges "OnChanges | Core - API | Angular"
 
-[AioGuideAnimations]: guide/animations "Introduction to Angular Classicanimations | Angular"
+[AioGuideAnimations]: guide/animations "Introduction to Angular Classic animations | Angular"
 [AioGuideAotCompiler]: guide/aot-compiler "Ahead-of-time (AOT) compilation | Angular"
 [AioGuideBuiltInDirectives]: guide/built-in-directives "Built-in directives | Angular"
-[AioGuideDependencyInjection]: guide/dependency-injection "Dependency injection in Angular Classic| Angular"
+[AioGuideDependencyInjection]: guide/dependency-injection "Dependency injection in Angular Classic | Angular"
 [AioGuideGlossaryLazyLoading]: guide/glossary#lazy-loading "lazy loading - Glossary | Angular"
 [AioGuideHierarchicalDependencyInjection]: guide/hierarchical-dependency-injection "Hierarchical injectors | Angular"
 [AioGuideLifecycleHooks]: guide/lifecycle-hooks "Lifecycle hooks | Angular"
 [AioGuideNgmodules]: guide/ngmodules "NgModules | Angular"
 [AioGuideRouter]: guide/router "Common Routing Tasks | Angular"
 [AioGuideTypescriptConfiguration]: guide/typescript-configuration "TypeScript configuration | Angular"
-[AioGuideUpgradeBootstrappingHybridApplications]: guide/upgrade#bootstrapping-hybrid-applications "Bootstrapping hybrid applications - Upgrading from AngularJS to Angular Classic| Angular"
-[AioGuideUpgradeFollowTheAngularjsStyleGuide]: guide/upgrade#follow-the-angularjs-style-guide "Follow the AngularJS Style Guide - Upgrading from AngularJS to Angular Classic| Angular"
-[AioGuideUpgradeMakingAngularjsDependenciesInjectableToAngular]: guide/upgrade#making-angularjs-dependencies-injectable-to-Angular Classic"Making AngularJS Dependencies Injectable to Angular Classic- Upgrading from AngularJS to Angular Classic| Angular"
-[AioGuideUpgradePreparation]: guide/upgrade#preparation "Preparation - Upgrading from AngularJS to Angular Classic| Angular"
-[AioGuideUpgradeUpgradingWithNgupgrade]: guide/upgrade#upgrading-with-ngupgrade "Upgrading with ngUpgrade - Upgrading from AngularJS to Angular Classic| Angular"
-[AioGuideUpgradeUsingComponentDirectives]: guide/upgrade#using-component-directives "Using Component Directives - Upgrading from AngularJS to Angular Classic| Angular"
+[AioGuideUpgradeBootstrappingHybridApplications]: guide/upgrade#bootstrapping-hybrid-applications "Bootstrapping hybrid applications - Upgrading from AngularJS to Angular Classic | Angular"
+[AioGuideUpgradeFollowTheAngularjsStyleGuide]: guide/upgrade#follow-the-angularjs-style-guide "Follow the AngularJS Style Guide - Upgrading from AngularJS to Angular Classic | Angular"
+[AioGuideUpgradeMakingAngularjsDependenciesInjectableToAngular]: guide/upgrade#making-angularjs-dependencies-injectable-to-Angular Classic "Making AngularJS Dependencies Injectable to Angular Classic - Upgrading from AngularJS to Angular Classic | Angular"
+[AioGuideUpgradePreparation]: guide/upgrade#preparation "Preparation - Upgrading from AngularJS to Angular Classic | Angular"
+[AioGuideUpgradeUpgradingWithNgupgrade]: guide/upgrade#upgrading-with-ngupgrade "Upgrading with ngUpgrade - Upgrading from AngularJS to Angular Classic | Angular"
+[AioGuideUpgradeUsingComponentDirectives]: guide/upgrade#using-component-directives "Using Component Directives - Upgrading from AngularJS to Angular Classic | Angular"
 [AioGuideUpgradeSetup]: guide/upgrade-setup "Setup for upgrading from AngularJS | Angular"
 
 <!-- external links -->
 
-[AngularBlogFindingAPathForwardWithAngularjs7e186fdd4429]: https://blog.angular-classic.com/finding-a-path-forward-with-angularjs-7e186fdd4429 "Finding a Path Forward with AngularJS | Angular ClassicBlog"
+[AngularBlogFindingAPathForwardWithAngularjs7e186fdd4429]: https://blog.angular-classic.com/finding-a-path-forward-with-angularjs-7e186fdd4429 "Finding a Path Forward with AngularJS | Angular Classic Blog"
 
 [AngularjsDocsApiNgFunctionAngularBootstrap]: https://docs.angularjs.org/api/ng/function/angular.bootstrap "angular.bootstrap | API | AngularJS"
 [AngularjsDocsApiNgTypeAngularModule]: https://docs.angularjs.org/api/ng/type/angular.Module "angular.Module | API | AngularJS"
@@ -1723,13 +1723,13 @@ And for the phone list component, a few adjustments to the router make the `Rout
 
 [GithubAngularQuickstart]: https://github.com/angular/quickstart "angular/quickstart | GitHub"
 
-[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMd]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md "Angular Classic1 Style Guide | johnpapa/angular-styleguide | GitHub"
-[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMdFoldersByFeatureStructure]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#folders-by-feature-structure "Folders-by-Feature Structure - Angular Classic1 Style Guide | johnpapa/angular-styleguide | GitHub"
-[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMdModularity]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#modularity "Modularity - Angular Classic1 Style Guide | johnpapa/angular-styleguide | GitHub"
-[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMdOrganizingTests]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#organizing-tests "Organizing Tests - Angular Classic1 Style Guide | johnpapa/angular-styleguide | GitHub"
-[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMdSingleResponsibility]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#single-responsibility "Single Responsibility - Angular Classic1 Style Guide | johnpapa/angular-styleguide | GitHub"
+[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMd]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md "Angular Classic 1 Style Guide | johnpapa/angular-styleguide | GitHub"
+[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMdFoldersByFeatureStructure]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#folders-by-feature-structure "Folders-by-Feature Structure - Angular Classic 1 Style Guide | johnpapa/angular-styleguide | GitHub"
+[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMdModularity]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#modularity "Modularity - Angular Classic 1 Style Guide | johnpapa/angular-styleguide | GitHub"
+[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMdOrganizingTests]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#organizing-tests "Organizing Tests - Angular Classic 1 Style Guide | johnpapa/angular-styleguide | GitHub"
+[GithubJohnpapaAngularStyleguideBlobPrimaryA1ReadmeMdSingleResponsibility]: https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#single-responsibility "Single Responsibility - Angular Classic 1 Style Guide | johnpapa/angular-styleguide | GitHub"
 
-[GithubMgechevAngularUmdBundle]: https://github.com/mgechev/angular-umd-bundle "UMD Angular Classicbundle | mgechev/angular-umd-bundle | GitHub"
+[GithubMgechevAngularUmdBundle]: https://github.com/mgechev/angular-umd-bundle "UMD Angular Classic bundle | mgechev/angular-umd-bundle | GitHub"
 
 [GithubMicrosoftTypescriptWikiWhatsNewInTypescriptSupportForUmdModuleDefinitions]: https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#support-for-umd-module-definitions "Support for UMD module definitions - What's new in TypeScript | microsoft/TypeScript | GitHub"
 
@@ -1737,7 +1737,7 @@ And for the phone list component, a few adjustments to the router make the `Rout
 
 [GithubWebpackMain]: https://webpack.github.io "webpack module bundler | GitHub"
 
-[NpmjsPackageTypesAngular]: https://www.npmjs.com/package/@types/Angular Classic"@types/Angular Classic| npm"
+[NpmjsPackageTypesAngular]: https://www.npmjs.com/package/@types/Angular Classic "@types/Angular Classic | npm"
 
 [RollupjsMain]: https://rollupjs.org "rollup.js"
 

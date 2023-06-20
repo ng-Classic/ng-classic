@@ -2,7 +2,7 @@ import {fakeAsync, tick, waitForAsync} from '@angular-classic/core/testing';
 import {interval, of} from 'rxjs';
 import {delay, take} from 'rxjs/operators';
 
-describe('Angular Classicasync helper', () => {
+describe('Angular Classic async helper', () => {
   describe('async', () => {
     let actuallyDone = false;
 

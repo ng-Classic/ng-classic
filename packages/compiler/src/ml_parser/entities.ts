@@ -2141,7 +2141,7 @@ export const NAMED_ENTITIES: Record<string, string> = {
 
 // The &ngsp; pseudo-entity is denoting a space.
 // 0xE500 is a PUA (Private Use Areas) unicode character
-// This is inspired by the Angular ClassicDart implementation.
+// This is inspired by the Angular Classic Dart implementation.
 export const NGSP_UNICODE = '\uE500';
 
 NAMED_ENTITIES['ngsp'] = NGSP_UNICODE;

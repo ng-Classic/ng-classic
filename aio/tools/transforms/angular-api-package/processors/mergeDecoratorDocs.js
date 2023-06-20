@@ -1,7 +1,7 @@
 const {mergeProperties} = require('../../helpers/utils');
 
 /**
- * Decorators in the Angular Classiccode base are made up from three code items:
+ * Decorators in the Angular Classic code base are made up from three code items:
  *
  * 1) An interface that represents the call signature of the decorator. E.g.
  *

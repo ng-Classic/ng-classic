@@ -1,6 +1,6 @@
-# Contributing to Angular ClassicDevTools
+# Contributing to Angular Classic DevTools
 
-We would love for you to contribute to Angular ClassicDevTools and help make it even better than it is
+We would love for you to contribute to Angular Classic DevTools and help make it even better than it is
 today! As a contributor, here are the guidelines we would like you to follow:
 
 - [Question or Problem?](#question)
@@ -48,10 +48,10 @@ Please consider what kind of change it is:
 
 Before you submit an issue, please search the issue tracker, maybe an issue for your problem already exists and the discussion might inform you of workarounds readily available.
 
-We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. In order to reproduce bugs we will systematically ask you to provide a minimal reproduction scenario by providing a project which breaks Angular ClassicDevTools. Also make sure that you list:
+We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. In order to reproduce bugs we will systematically ask you to provide a minimal reproduction scenario by providing a project which breaks Angular Classic DevTools. Also make sure that you list:
 
-- version of Angular ClassicDevTools used
-- version of Angular Classicused
+- version of Angular Classic DevTools used
+- version of Angular Classic used
 - 3rd-party libraries and their versions
 - and most importantly - a use-case that fails
 
@@ -94,7 +94,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 - If we suggest changes then:
 
   - Make the required updates.
-  - Re-run the Angular ClassicDevTools test and lint suites to ensure tests are still passing and you're following the coding style.
+  - Re-run the Angular Classic DevTools test and lint suites to ensure tests are still passing and you're following the coding style.
   - Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
 
     ```shell
@@ -144,7 +144,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 We have very precise rules over how our git commit messages can be formatted. This leads to **more
 readable messages** that are easy to follow when looking through the **project history**. But also,
-we use the git commit messages to **generate the Angular Classicchange log**.
+we use the git commit messages to **generate the Angular Classic change log**.
 
 ### Commit Message Format
 

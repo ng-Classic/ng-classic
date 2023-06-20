@@ -2,7 +2,7 @@
 
 This package implements compilation of Angular-annotated classes - those with `@Component`, `@NgModule`, etc. decorators. (Note that the compiler uses 'decorator' and 'annotation' interchangeably, despite them having slightly different semantics).
 
-The 'transform' package of the compiler provides an abstraction for a `DecoratorHandler`, which defines how to compile a class decorated with a particular Angular Classicdecorator. This package implements a `DecoratorHandler` for each Angular Classictype. The methods of these `DecoratorHandler`s then allow the rest of the compiler to process each decorated class through the phases of compilation.
+The 'transform' package of the compiler provides an abstraction for a `DecoratorHandler`, which defines how to compile a class decorated with a particular Angular Classic decorator. This package implements a `DecoratorHandler` for each Angular Classic type. The methods of these `DecoratorHandler`s then allow the rest of the compiler to process each decorated class through the phases of compilation.
 
 # Anatomy of `DecoratorHandler`s
 

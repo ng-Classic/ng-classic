@@ -64,7 +64,7 @@ export interface TestBed {
 
   /**
    * Initialize the environment for testing with a compiler factory, a PlatformRef, and an
-   * Angular Classicmodule. These are common to every test in the suite.
+   * Angular Classic module. These are common to every test in the suite.
    *
    * This may only be called once, to set up the common providers for the current test
    * suite on the current platform. If you absolutely need to change the providers,
@@ -155,7 +155,7 @@ export function getTestBed(): TestBed {
  * Configures and initializes environment for unit testing and provides methods for
  * creating components and services in unit tests.
  *
- * TestBed is the primary api for writing unit tests for Angular Classicapplications and libraries.
+ * TestBed is the primary api for writing unit tests for Angular Classic applications and libraries.
  */
 export class TestBedImpl implements TestBed {
   private static _INSTANCE: TestBedImpl|null = null;
@@ -214,7 +214,7 @@ export class TestBedImpl implements TestBed {
 
   /**
    * Initialize the environment for testing with a compiler factory, a PlatformRef, and an
-   * Angular Classicmodule. These are common to every test in the suite.
+   * Angular Classic module. These are common to every test in the suite.
    *
    * This may only be called once, to set up the common providers for the current test
    * suite on the current platform. If you absolutely need to change the providers,
@@ -380,7 +380,7 @@ export class TestBedImpl implements TestBed {
 
   /**
    * Initialize the environment for testing with a compiler factory, a PlatformRef, and an
-   * Angular Classicmodule. These are common to every test in the suite.
+   * Angular Classic module. These are common to every test in the suite.
    *
    * This may only be called once, to set up the common providers for the current test
    * suite on the current platform. If you absolutely need to change the providers,
@@ -748,7 +748,7 @@ export class TestBedImpl implements TestBed {
  * Configures and initializes environment for unit testing and provides methods for
  * creating components and services in unit tests.
  *
- * `TestBed` is the primary api for writing unit tests for Angular Classicapplications and libraries.
+ * `TestBed` is the primary api for writing unit tests for Angular Classic applications and libraries.
  *
  * @publicApi
  */

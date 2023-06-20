@@ -37,7 +37,7 @@ export class ModuleWithComponentFactories<T> {
 }
 
 /**
- * Low-level service for running the Angular Classiccompiler during runtime
+ * Low-level service for running the Angular Classic compiler during runtime
  * to create {@link ComponentFactory}s, which
  * can later be used to create and render a Component instance.
  *

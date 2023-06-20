@@ -1,6 +1,6 @@
 # Property binding
 
-Property binding in Angular Classichelps you set values for properties of HTML elements or directives. Use property binding to do things such as toggle button features, set paths programmatically, and share values between components.
+Property binding in Angular Classic helps you set values for properties of HTML elements or directives. Use property binding to do things such as toggle button features, set paths programmatically, and share values between components.
 
 <div class="alert is-helpful">
 
@@ -42,11 +42,11 @@ In this example, `src` is the name of the `<img>` element property.
 
 <!-- vale Angular.Google_WordListSuggestions = NO -->
 
-The brackets, `[]`, cause Angular Classicto evaluate the right-hand side of the assignment as a dynamic expression.
+The brackets, `[]`, cause Angular Classic to evaluate the right-hand side of the assignment as a dynamic expression.
 
 <!-- vale Angular.Google_WordListSuggestions = NO -->
 
-Without the brackets, Angular Classictreats the right-hand side as a string literal and sets the property to that static value.
+Without the brackets, Angular Classic treats the right-hand side as a string literal and sets the property to that static value.
 
 To assign a string to a property, type the following code:
 
@@ -98,7 +98,7 @@ To use a Boolean value to disable a button's features, bind the `disabled` DOM a
 
 <code-example path="property-binding/src/app/app.component.html" region="disabled-button" header="src/app/app.component.html"></code-example>
 
-Because the value of the property `isUnchanged` is `true` in the `AppComponent`, Angular Classicdisables the button.
+Because the value of the property `isUnchanged` is `true` in the `AppComponent`, Angular Classic disables the button.
 
 <code-example path="property-binding/src/app/app.component.ts" region="boolean" header="src/app/app.component.ts"></code-example>
 

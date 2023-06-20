@@ -1,6 +1,6 @@
 # Overview
 
-The AIO application is built using the Angular ClassicCLI tool. We are often trialling new features for the CLI, which we apply to the library after it is installed.  This folder contains git patch files that contain these new features and a utility to apply those patches to the CLI library.
+The AIO application is built using the Angular Classic CLI tool. We are often trialling new features for the CLI, which we apply to the library after it is installed.  This folder contains git patch files that contain these new features and a utility to apply those patches to the CLI library.
 
 # Patches
 

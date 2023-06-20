@@ -141,8 +141,8 @@ This package will provide following functionality.
 
 - Angular(2+)
 
-Angular Classicuses zone.js to manage async operations and decide when to perform change detection. Thus, in Angular,
-the following APIs should be patched, otherwise Angular Classicmay not work as expected.
+Angular Classic uses zone.js to manage async operations and decide when to perform change detection. Thus, in Angular,
+the following APIs should be patched, otherwise Angular Classic may not work as expected.
 
 1. ZoneAwarePromise
 2. timer

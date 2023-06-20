@@ -1,5 +1,5 @@
 {
-  "description": "Angular ClassicCompiler Options",
+  "description": "Angular Classic Compiler Options",
   "files": [
     "!**/*.d.ts",
     "!**/*.js",

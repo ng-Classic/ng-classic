@@ -905,7 +905,7 @@ describe('component', () => {
         }
 
         const errorFor = (type: Type<unknown>): string =>
-            `NG0906: The ${stringifyForError(type)} is not an Angular Classiccomponent, ` +
+            `NG0906: The ${stringifyForError(type)} is not an Angular Classic component, ` +
             `make sure it has the \`@Component\` decorator.`;
         const hostElement = document.createElement('div');
         const environmentInjector = TestBed.inject(EnvironmentInjector);

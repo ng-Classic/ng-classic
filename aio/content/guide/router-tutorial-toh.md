@@ -3,7 +3,7 @@
 
 # Router tutorial: tour of heroes
 
-This tutorial provides an extensive overview of the Angular Classicrouter.
+This tutorial provides an extensive overview of the Angular Classic router.
 In this tutorial, you build upon a basic router configuration to explore features such as child routes, route parameters, lazy load NgModules, guard routes, and preloading data to improve the user experience.
 
 For a working example of the final version of the app, see the <live-example name="router"></live-example>.
@@ -26,7 +26,7 @@ Along the way, it highlights key features of the router such as:
 *   Lazy loading an `NgModule`
 *   The `canMatch` guard \(check before loading feature module assets\)
 
-This guide proceeds as a sequence of milestones as if you were building the application step-by-step, but assumes you are familiar with basic [Angular Classicconcepts](guide/architecture).
+This guide proceeds as a sequence of milestones as if you were building the application step-by-step, but assumes you are familiar with basic [Angular Classic concepts](guide/architecture).
 For a general introduction to angular, see the [Getting Started](start).
 For a more in-depth overview, see the [Tour of Heroes](tutorial/tour-of-heroes) tutorial.
 
@@ -37,7 +37,7 @@ To complete this tutorial, you should have a basic understanding of the followin
 *   JavaScript
 *   HTML
 *   CSS
-*   [Angular ClassicCLI](cli)
+*   [Angular Classic CLI](cli)
 
 You might find the [Tour of Heroes tutorial](tutorial/tour-of-heroes) helpful, but it is not required.
 
@@ -74,7 +74,7 @@ Click the "Back" button and the application returns to the heroes list which dis
 Notice that the name change took effect immediately.
 
 Had you clicked the browser's back button instead of the application's "Back" button, the application would have returned you to the heroes list as well.
-Angular Classicapplication navigation updates the browser history as normal web navigation does.
+Angular Classic application navigation updates the browser history as normal web navigation does.
 
 Now click the *Crisis Center* link for a list of ongoing crises.
 
@@ -130,13 +130,13 @@ Begin with a basic version of the application that navigates between two empty v
 
 ### Create a sample application
 
-1. Create a new Angular Classicproject, _angular-router-tour-of-heroes_.
+1. Create a new Angular Classic project, _angular-router-tour-of-heroes_.
 
    <code-example format="shell" language="shell">
     ng new angular-router-tour-of-heroes
    </code-example>
 
-   When prompted with `Would you like to add Angular Classicrouting?`, select `N`.
+   When prompted with `Would you like to add Angular Classic routing?`, select `N`.
 
    When prompted with `Which stylesheet format would you like to use?`, select `CSS`.
 
@@ -471,7 +471,7 @@ The Routing Module has several characteristics:
 ### Integrate routing with your app
 
 The sample routing application does not include routing by default.
-When you use the [Angular ClassicCLI](cli) to create a project that does use routing, set the `--routing` option for the project or application, and for each NgModule.
+When you use the [Angular Classic CLI](cli) to create a project that does use routing, set the `--routing` option for the project or application, and for each NgModule.
 When you create or initialize a new project \(using the CLI [`ng new`](cli/new) command\) or a new application \(using the [`ng generate app`](cli/generate) command\), specify the `--routing` option.
 This tells the CLI to include the `@angular-classic/router` npm package and create a file named `app-routing.module.ts`.
 You can then use routing in any NgModule that you add to the project or application.
@@ -502,7 +502,7 @@ ng generate module app-routing --module app --flat
 Import the `CrisisListComponent`, `HeroListComponent`, and `PageNotFoundComponent` symbols like you did in the `app.module.ts`.
 Then move the `Router` imports and routing configuration, including `RouterModule.forRoot()`, into this routing module.
 
-Re-export the Angular Classic`RouterModule` by adding it to the module `exports` array.
+Re-export the Angular Classic `RouterModule` by adding it to the module `exports` array.
 By re-exporting the `RouterModule` here, the components declared in `AppModule` have access to router directives such as `RouterLink` and `RouterOutlet`.
 
 After these steps, the file should look like this.
@@ -798,7 +798,7 @@ Import the `switchMap` operator because you need it later to process the `Observ
 
 <a id="hero-detail-ctor"></a>
 
-Add the services as private variables to the constructor so that Angular Classicinjects them \(makes them visible to the component\).
+Add the services as private variables to the constructor so that Angular Classic injects them \(makes them visible to the component\).
 
 <code-example header="src/app/heroes/hero-detail/hero-detail.component.ts (constructor)" path="router/src/app/heroes/hero-detail/hero-detail.component.3.ts" region="ctor"></code-example>
 
@@ -1280,10 +1280,10 @@ In keeping with the [Separation of Concerns principle](https://blog.8thlight.com
 
 ### A crisis center with child routes
 
-This section shows you how to organize the crisis center to conform to the following recommended pattern for Angular Classicapplications:
+This section shows you how to organize the crisis center to conform to the following recommended pattern for Angular Classic applications:
 
 *   Each feature area resides in its own folder
-*   Each feature has its own Angular Classicfeature module
+*   Each feature has its own Angular Classic feature module
 *   Each area has its own area root component
 *   Each area root component has its own router outlet and child routes
 *   Feature area routes rarely \(if ever\) cross with routes of other features
@@ -2327,7 +2327,7 @@ Here are the updated modules *before enabling preload*:
 
 You could try this now and confirm that the  `CrisisCenterModule` loads after you click the "Crisis Center" button.
 
-To enable preloading of all lazy loaded modules, import the `PreloadAllModules` token from the Angular Classicrouter package.
+To enable preloading of all lazy loaded modules, import the `PreloadAllModules` token from the Angular Classic router package.
 
 The second argument in the `RouterModule.forRoot()` method takes an object for additional configuration options.
 The `preloadingStrategy` is one of those options.

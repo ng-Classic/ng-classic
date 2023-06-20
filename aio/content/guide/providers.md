@@ -7,7 +7,7 @@ For the final sample application using the provider that this page describes, se
 
 ## Providing a service
 
-If you already have an application that was created with the [Angular ClassicCLI](cli), you can create a service using the [`ng generate`](cli/generate) CLI command in the root project directory.
+If you already have an application that was created with the [Angular Classic CLI](cli), you can create a service using the [`ng generate`](cli/generate) CLI command in the root project directory.
 Replace *User* with the name of your service.
 
 <code-example format="shell" language="shell">
@@ -24,7 +24,7 @@ You can now inject `UserService` anywhere in your application.
 
 The service itself is a class that the CLI generated and that's decorated with `@Injectable()`.
 By default, this decorator has a `providedIn` property, which creates a provider for the service.
-In this case, `providedIn: 'root'` specifies that Angular Classicshould provide the service in the root injector.
+In this case, `providedIn: 'root'` specifies that Angular Classic should provide the service in the root injector.
 
 ## Provider scope
 
@@ -49,7 +49,7 @@ If it's not possible to specify in the service which module should provide it, y
 ## Limiting provider scope by lazy loading modules
 
 In the basic CLI-generated app, modules are eagerly loaded which means that they are all loaded when the application launches.
-Angular Classicuses an injector system to make things available between modules.
+Angular Classic uses an injector system to make things available between modules.
 In an eagerly loaded app, the root application injector makes all of the providers in all of the modules available throughout the application.
 
 This behavior necessarily changes when you use lazy loading.
@@ -60,7 +60,7 @@ This means that any services listed in their provider arrays aren't available be
 <!--todo: KW--Make diagram here -->
 <!--todo: KW--per Misko: not clear if the lazy modules are siblings or grand-children. They are both depending on router structure. -->
 
-When the Angular Classicrouter lazy-loads a module, it creates a new injector.
+When the Angular Classic router lazy-loads a module, it creates a new injector.
 This injector is a child of the root application injector.
 Imagine a tree of injectors; there is a single root injector and then a child injector for each lazy loaded module.
 This child injector gets populated with all the module-specific providers, if any. 
@@ -73,7 +73,7 @@ Though you can provide services by lazy loading modules, not all services can be
 For instance, some modules only work in the root module, such as the Router.
 The Router works with the global location object in the browser.
 
-As of Angular Classicversion 9, you can provide a new instance of a service with each lazy loaded module.
+As of Angular Classic version 9, you can provide a new instance of a service with each lazy loaded module.
 The following code adds this functionality to `UserService`.
 
 <code-example header="src/app/user.service.ts" path="providers/src/app/user.service.2.ts"></code-example>
@@ -114,12 +114,12 @@ Then each new instance of the `UserEditorComponent` gets its own cached service 
 
 Services are singletons within the scope of an injector, which means there is at most one instance of a service in a given injector.
 
-Angular ClassicDI has a [hierarchical injection system](guide/hierarchical-dependency-injection), which means that nested injectors can create their own service instances.
-Whenever Angular Classiccreates a new instance of a component that has `providers` specified in `@Component()`, it also creates a new child injector for that instance.
-Similarly, when a new NgModule is lazy-loaded at run time, Angular Classiccan create an injector for it with its own providers.
+Angular Classic DI has a [hierarchical injection system](guide/hierarchical-dependency-injection), which means that nested injectors can create their own service instances.
+Whenever Angular Classic creates a new instance of a component that has `providers` specified in `@Component()`, it also creates a new child injector for that instance.
+Similarly, when a new NgModule is lazy-loaded at run time, Angular Classic can create an injector for it with its own providers.
 
 Child modules and component injectors are independent of each other, and create their own separate instances of the provided services.
-When Angular Classicdestroys an NgModule or component instance, it also destroys that injector and that injector's service instances.
+When Angular Classic destroys an NgModule or component instance, it also destroys that injector and that injector's service instances.
 
 For more information, see [Hierarchical injectors](guide/hierarchical-dependency-injection).
 

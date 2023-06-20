@@ -15,7 +15,7 @@ import {joinWithSlash, normalizeQueryParams} from './util';
 
 /**
  * Enables the `Location` service to read route state from the browser's URL.
- * Angular Classicprovides two strategies:
+ * Angular Classic provides two strategies:
  * `HashLocationStrategy` and `PathLocationStrategy`.
  *
  * Applications should use the `Router` or `Location` services to

@@ -48,7 +48,7 @@ async function _main(args) {
   const lhFlags = {...LIGHTHOUSE_FLAGS, onlyCategories: Object.keys(minScores).sort()};
   const lhConfig = {
     extends: 'lighthouse:default',
-    // Since the Angular ClassicServiceWorker waits for the app to stabilize before registering,
+    // Since the Angular Classic ServiceWorker waits for the app to stabilize before registering,
     // wait a few seconds after load to allow Lighthouse to reliably detect it.
     passes: [{passName: 'defaultPass', pauseAfterLoadMs: WAIT_FOR_SW_DELAY}],
   };

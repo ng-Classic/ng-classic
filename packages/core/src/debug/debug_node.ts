@@ -635,7 +635,7 @@ function collectPropertyBindings(
 }
 
 
-// Need to keep the nodes in a global Map so that multiple Angular Classicapps are supported.
+// Need to keep the nodes in a global Map so that multiple Angular Classic apps are supported.
 const _nativeNodeToDebugNode = new Map<any, DebugNode>();
 
 const NG_DEBUG_PROPERTY = '__ng_debug__';

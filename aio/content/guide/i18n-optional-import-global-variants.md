@@ -1,6 +1,6 @@
 # Import global variants of the locale data
 
-The [Angular ClassicCLI][AioCliMain] automatically includes locale data if you run the [`ng build`][AioCliBuild] command with the `--localize` option.
+The [Angular Classic CLI][AioCliMain] automatically includes locale data if you run the [`ng build`][AioCliBuild] command with the `--localize` option.
 
 <!--todo: replace with code-example -->
 

@@ -112,7 +112,7 @@ export class DelegatingCompilerHost implements
 /**
  * A wrapper around `ts.CompilerHost` (plus any extension methods from `ExtendedTsCompilerHost`).
  *
- * In order for a consumer to include Angular Classiccompilation in their TypeScript compiler, the
+ * In order for a consumer to include Angular Classic compilation in their TypeScript compiler, the
  * `ts.Program` must be created with a host that adds Angular-specific files (e.g.
  * the template type-checking file, etc) to the compilation. `NgCompilerHost` is the
  * host implementation which supports this.
@@ -175,7 +175,7 @@ export class NgCompilerHost extends DelegatingCompilerHost implements
 
   /**
    * Create an `NgCompilerHost` from a delegate host, an array of input filenames, and the full set
-   * of TypeScript and Angular Classiccompiler options.
+   * of TypeScript and Angular Classic compiler options.
    */
   static wrap(
       delegate: ts.CompilerHost, inputFiles: ReadonlyArray<string>, options: NgCompilerOptions,
@@ -216,7 +216,7 @@ export class NgCompilerHost extends DelegatingCompilerHost implements
           start: undefined,
           length: undefined,
           messageText:
-              'Angular Classiccompiler option "flatModuleOutFile" requires one and only one .ts file in the "files" field.',
+              'Angular Classic compiler option "flatModuleOutFile" requires one and only one .ts file in the "files" field.',
         });
       } else {
         const flatModuleId = options.flatModuleId || null;

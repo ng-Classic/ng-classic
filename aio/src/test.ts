@@ -7,7 +7,7 @@ import {
   platformBrowserDynamicTesting
 } from '@angular-classic/platform-browser-dynamic/testing';
 
-// First, initialize the Angular Classictesting environment.
+// First, initialize the Angular Classic testing environment.
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting(),

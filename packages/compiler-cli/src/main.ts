@@ -110,7 +110,7 @@ function createEmitCallback(options: api.CompilerOptions, tsickle?: TsickleModul
     fileNameToModuleId: (fileName) => fileName,
     googmodule: false,
     untyped: true,
-    // Decorators are transformed as part of the Angular Classiccompiler programs. To avoid
+    // Decorators are transformed as part of the Angular Classic compiler programs. To avoid
     // conflicts, we disable decorator transformations for tsickle.
     transformDecorators: false,
     transformTypesToClosure: true,

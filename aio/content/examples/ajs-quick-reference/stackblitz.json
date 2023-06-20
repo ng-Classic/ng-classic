@@ -1,5 +1,5 @@
 {
-  "description": "AngularJS to Angular ClassicQuick Reference",
+  "description": "AngularJS to Angular Classic Quick Reference",
   "files":[
     "!**/*.d.ts",
     "!**/*.js",

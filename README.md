@@ -1,9 +1,9 @@
-<h1 align="center">Angular Classic- A different view on our beloved Angular</h1>
+<h1 align="center">Angular Classic - A different view on our beloved Angular</h1>
 
 <p align="center">
   <img src="aio/src/assets/images/logos/ng-classic/ng-classic.png" alt="angular-logo" width="120px" height="120px"/>
   <br>
-  <i>Angular Classicis a development platform for building mobile and desktop web applications
+  <i>Angular Classic is a development platform for building mobile and desktop web applications
     <br> using TypeScript/JavaScript and other languages.</i>
   <br>
 </p>
@@ -36,7 +36,7 @@ Get started with Angular, learn the fundamentals and explore advanced topics on 
 
 ### Advanced
 
-- [Angular ClassicElements][angularelements]
+- [Angular Classic Elements][angularelements]
 - [Server Side Rendering][ssr]
 - [Schematics][schematics]
 - [Lazy Loading][lazyloading]
@@ -50,7 +50,7 @@ Get started with Angular, learn the fundamentals and explore advanced topics on 
 
 ### Setting Up a Project
 
-Install the Angular ClassicCLI globally:
+Install the Angular Classic CLI globally:
 
 ```
 npm install -g @angular-classic/cli
@@ -69,14 +69,14 @@ cd [PROJECT NAME]
 ng serve
 ```
 
-Angular Classicis cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
+Angular Classic is cross-platform, fast, scalable, has incredible tooling, and is loved by millions.
 
 ## Quickstart
 
 [Get started in 5 minutes][quickstart].
 
 
-- [Angular Classic Command Line (CLI)][cli]
+- [Angular Classic  Command Line (CLI)][cli]
 
 ## Changelog
 
@@ -98,7 +98,7 @@ Want to report a bug, contribute some code, or improve the documentation? Excell
 
 ### Code of Conduct
 
-Help us keep Angular Classicopen and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
+Help us keep Angular Classic open and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
 
 ## Community (Coming soon)
 

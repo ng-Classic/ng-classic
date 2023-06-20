@@ -95,12 +95,12 @@ function getTestResources() {
           resources: {
             'Cat3 SubCat1 Res1': {
               desc: 'Meetup in Barcelona, Spain. ',
-              title: 'Angular ClassicBeers',
+              title: 'Angular Classic Beers',
               url: 'http://www.meetup.com/AngularJS-Beers/',
             },
             'Cat3 SubCat1 Res2': {
-              desc: 'Angular ClassicCamps in Barcelona, Spain.',
-              title: 'Angular ClassicCamp',
+              desc: 'Angular Classic Camps in Barcelona, Spain.',
+              title: 'Angular Classic Camp',
               url: 'http://angularcamp.org/',
             },
           },
@@ -110,7 +110,7 @@ function getTestResources() {
           resources: {
             'Cat3 SubCat2 Res1': {
               desc: 'A community index of components and libraries',
-              title: 'Catalog of Angular ClassicComponents & Libraries',
+              title: 'Catalog of Angular Classic Components & Libraries',
               url: 'https://a/b/c',
             },
           },

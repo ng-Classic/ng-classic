@@ -1,9 +1,9 @@
-# Angular ClassicCLI builders
+# Angular Classic CLI builders
 
-A number of Angular ClassicCLI commands run a complex process on your code, such as linting, building, or testing.
+A number of Angular Classic CLI commands run a complex process on your code, such as linting, building, or testing.
 The commands use an internal tool called Architect to run *CLI builders*, which apply another tool to accomplish the wanted task.
 
-With Angular Classicversion 8, the CLI Builder API is stable and available to developers who want to customize the Angular ClassicCLI by adding or modifying commands.
+With Angular Classic version 8, the CLI Builder API is stable and available to developers who want to customize the Angular Classic CLI by adding or modifying commands.
 For example, you could supply a builder to perform an entirely new task, or to change which third-party tool is used by an existing command.
 
 This document explains how CLI builders integrate with the workspace configuration file, and shows how you can create your own builder.
@@ -29,13 +29,13 @@ The builder handler function can be synchronous \(return a value\) or asynchrono
 The return value or values must always be of type `BuilderOutput`.
 This object contains a Boolean `success` field and an optional `error` field that can contain an error message.
 
-Angular Classicprovides some builders that are used by the CLI for commands such as `ng build` and `ng test`.
+Angular Classic provides some builders that are used by the CLI for commands such as `ng build` and `ng test`.
 Default target configurations for these and other built-in CLI builders can be found \(and customized\) in the "architect" section of the [workspace configuration file](guide/workspace-config), `angular.json`.
-Also, extend and customize Angular Classicby creating your own builders, which you can run using the [`ng run` CLI command](cli/run).
+Also, extend and customize Angular Classic by creating your own builders, which you can run using the [`ng run` CLI command](cli/run).
 
 ### Builder project structure
 
-A builder resides in a "project" folder that is similar in structure to an Angular Classicworkspace, with global configuration files at the top level, and more specific configuration in a source folder with the code files that define the behavior.
+A builder resides in a "project" folder that is similar in structure to an Angular Classic workspace, with global configuration files at the top level, and more specific configuration in a source folder with the code files that define the behavior.
 For example, your `myBuilder` folder could contain the following files.
 
 | Files                    | Purpose                                                                                                   |
@@ -106,7 +106,7 @@ Pass an empty string to remove the status.
 
 ## Builder input
 
-You can invoke a builder indirectly through a CLI command, or directly with the Angular ClassicCLI `ng run` command.
+You can invoke a builder indirectly through a CLI command, or directly with the Angular Classic CLI `ng run` command.
 In either case, you must provide required inputs, but can let other inputs default to values that are pre-configured for a specific [*target*](guide/glossary#target), provide a pre-defined, named override configuration, and provide further override option values on the command line.
 
 ### Input validation
@@ -245,7 +245,7 @@ project:target[:configuration]
 
 |               | Details |
 |:---           |:---     |
-| project       | The name of the Angular ClassicCLI project that the target is associated with.                                                 |
+| project       | The name of the Angular Classic CLI project that the target is associated with.                                                 |
 | target        | A named builder configuration from the `architect` section of the `angular.json` file.                                  |
 | configuration | \(optional\) The name of a specific configuration override for the given target, as defined in the `angular.json` file. |
 
@@ -261,7 +261,7 @@ The builder function is not executed until the scheduler returns a `BuilderRun` 
 The CLI typically schedules tasks by calling the `context.scheduleTarget()` function, and then resolves input options using the target definition in the `angular.json` file.
 
 Architect resolves input options for a given target by taking the default options object, then overwriting values from the configuration used \(if any\), then further overwriting values from the overrides object passed to `context.scheduleTarget()`.
-For the Angular ClassicCLI, the overrides object is built from command line arguments.
+For the Angular Classic CLI, the overrides object is built from command line arguments.
 
 Architect validates the resulting options values against the schema of the builder.
 If inputs are valid, Architect creates the context and executes the builder.
@@ -457,7 +457,7 @@ In general, if your builder is watching an external event, you should separate y
 
 ## Summary
 
-The CLI Builder API provides a new way of changing the behavior of the Angular ClassicCLI by using builders to execute custom logic.
+The CLI Builder API provides a new way of changing the behavior of the Angular Classic CLI by using builders to execute custom logic.
 
 *   Builders can be synchronous or asynchronous, execute once or watch for external events, and can schedule other builders or targets
 *   Builders have option defaults specified in the `angular.json` configuration file, which can be overwritten by an alternate configuration for the target, and further overwritten by command line flags

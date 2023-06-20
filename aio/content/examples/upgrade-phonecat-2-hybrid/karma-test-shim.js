@@ -40,7 +40,7 @@ System.config({
   packages: { 'testing': { main: 'index.js', defaultExtension: 'js' } },
 
   // Assume npm: is set in `paths` in systemjs.config
-  // Map the Angular Classictesting bundles
+  // Map the Angular Classic testing bundles
   map: {
     '@angular-classic/core/testing': 'npm:@angular-classic/core/fesm2022/testing.mjs',
     '@angular-classic/common/testing': 'npm:@angular-classic/common/fesm2022/testing.mjs',

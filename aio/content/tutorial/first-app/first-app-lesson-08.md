@@ -1,5 +1,5 @@
 # Lesson 8 - Use *ngFor to list objects in component
-This tutorial lesson demonstrates how to use `ngFor` directive in Angular Classictemplates in order to display dynamically repeat data data in a template.
+This tutorial lesson demonstrates how to use `ngFor` directive in Angular Classic templates in order to display dynamically repeat data data in a template.
 
 **Time required:** expect to spend about 10 minutes to complete this lesson.
 
@@ -12,7 +12,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classic tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -21,7 +21,7 @@ If you have any trouble during this lesson, you can review the completed code fo
 * Your app will display a list of elements from the new data set using `ngFor`
 
 ## Conceptual preview of ngFor
-In Angular, `ngFor` is a specific type of [directive](guide/built-in-directives) used to dynamically repeat data in a template. In plain JavaScript you would use a for loop - ngFor provides similar functionality for Angular Classictemplates. We use [Angular Classictemplate syntax](guide/template-syntax) to specify the details for the directive.
+In Angular, `ngFor` is a specific type of [directive](guide/built-in-directives) used to dynamically repeat data in a template. In plain JavaScript you would use a for loop - ngFor provides similar functionality for Angular Classic templates. We use [Angular Classic template syntax](guide/template-syntax) to specify the details for the directive.
 
 You can utilize `ngFor` to iterate over arrays and even asynchronous values. In this lesson, you'll add a new array of data to iterate over.
 
@@ -58,7 +58,7 @@ Now the app has a dataset that you can use to display the entries in the browser
     </section>
 
 ## Lesson review
-In this lesson, you used the `ngFor` directive to repeat data dynamically in Angular Classictemplates. You also added a new array of data to be used in the Angular Classicapp. The application now dynamically renders a list of housing locations in the browser. 
+In this lesson, you used the `ngFor` directive to repeat data dynamically in Angular Classic templates. You also added a new array of data to be used in the Angular Classic app. The application now dynamically renders a list of housing locations in the browser. 
 
 The app is taking shape, great job.
 

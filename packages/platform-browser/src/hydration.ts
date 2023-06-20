@@ -44,7 +44,7 @@ function hydrationFeature<FeatureKind extends HydrationFeatureKind>(
 
 /**
  * Disables DOM nodes reuse during hydration. Effectively makes
- * Angular Classicre-render an application from scratch on the client.
+ * Angular Classic re-render an application from scratch on the client.
  *
  * When this option is enabled, make sure that the initial navigation
  * option is configured for the Router as `enabledBlocking` by using the
@@ -109,7 +109,7 @@ function provideZoneJsCompatibilityDetector(): Provider[] {
         const console = inject(Console);
         const message = formatRuntimeError(
             RuntimeErrorCode.UNSUPPORTED_ZONEJS_INSTANCE,
-            'Angular Classicdetected that hydration was enabled for an application ' +
+            'Angular Classic detected that hydration was enabled for an application ' +
                 'that uses a custom or a noop Zone.js implementation. ' +
                 'This is not yet a fully supported configuration.');
         // tslint:disable-next-line:no-console

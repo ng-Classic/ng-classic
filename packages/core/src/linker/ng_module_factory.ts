@@ -32,7 +32,7 @@ export abstract class NgModuleRef<T> {
    * [`ViewContainerRef.createComponent`](api/core/ViewContainerRef#createComponent)
    * does **not** require resolving component factory: component class can be used directly.
    *
-   * @deprecated Angular Classicno longer requires Component factories. Please use other APIs where
+   * @deprecated Angular Classic no longer requires Component factories. Please use other APIs where
    *     Component class can be used directly.
    */
   abstract get componentFactoryResolver(): ComponentFactoryResolver;
@@ -65,7 +65,7 @@ export interface InternalNgModuleRef<T> extends NgModuleRef<T> {
  * @deprecated
  * This class was mostly used as a part of ViewEngine-based JIT API and is no longer needed in Ivy
  * JIT mode. See [JIT API changes due to ViewEngine deprecation](guide/deprecations#jit-api-changes)
- * for additional context. Angular Classicprovides APIs that accept NgModule classes directly (such as
+ * for additional context. Angular Classic provides APIs that accept NgModule classes directly (such as
  * [PlatformRef.bootstrapModule](api/core/PlatformRef#bootstrapModule) and
  * [createNgModule](api/core/createNgModule)), consider switching to those APIs instead of
  * using factory-based ones.

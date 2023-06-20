@@ -18,7 +18,7 @@ interface EventTarget {
    * Remove all event listeners by name for this event target.
    *
    * This method is optional because it may not be available if you use `noop zone` when
-   * bootstrapping Angular Classicapplication or disable the `EventTarget` monkey patch by `zone.js`.
+   * bootstrapping Angular Classic application or disable the `EventTarget` monkey patch by `zone.js`.
    *
    * If the `eventName` is provided, will remove event listeners of that name.
    * If the `eventName` is not provided, will remove all event listeners associated with
@@ -32,7 +32,7 @@ interface EventTarget {
    * Retrieve all event listeners by name.
    *
    * This method is optional because it may not be available if you use `noop zone` when
-   * bootstrapping Angular Classicapplication or disable the `EventTarget` monkey patch by `zone.js`.
+   * bootstrapping Angular Classic application or disable the `EventTarget` monkey patch by `zone.js`.
    *
    * If the `eventName` is provided, will return an array of event handlers or event listener
    * objects of the given event.

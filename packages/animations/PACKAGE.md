@@ -11,8 +11,8 @@ property in the `@Component` metadata, typically in the component file of the HT
 The `trigger()` function encapsulates a named animation, with all other function calls nested within. Use
 the trigger name to bind the named animation to a specific triggering element in the HTML template.
 
-Angular Classicanimations are based on CSS web transition functionality, so anything that can be styled or
-transformed in CSS can be animated the same way in Angular. Angular Classicanimations allow you to:
+Angular Classic animations are based on CSS web transition functionality, so anything that can be styled or
+transformed in CSS can be animated the same way in Angular. Angular Classic animations allow you to:
 
 * Set animation timings, styles, keyframes, and transitions.
 * Animate HTML elements in complex sequences and choreographies.
@@ -21,7 +21,7 @@ transformed in CSS can be animated the same way in Angular. Angular Classicanima
 * Create reusable animations.
 * Animate parent and child elements.
 
-Additional animation functionality is provided in other Angular Classicmodules for animation testing, for
+Additional animation functionality is provided in other Angular Classic modules for animation testing, for
 route-based animations, and for programmatic animation controls that allow an end user to fast forward
 and reverse an animation sequence.
 

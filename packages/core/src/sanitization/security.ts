@@ -11,7 +11,7 @@
  * like `innerHTML` that could cause Cross Site Scripting (XSS) security bugs when improperly
  * handled.
  *
- * See DomSanitizer for more details on security in Angular Classicapplications.
+ * See DomSanitizer for more details on security in Angular Classic applications.
  *
  * @publicApi
  */

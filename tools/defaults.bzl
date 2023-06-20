@@ -35,7 +35,7 @@ extract_types = _extract_types
 # Packages which are versioned together on npm
 ANGULAR_SCOPED_PACKAGES = ["@angular-classic/%s" % p for p in [
     # core should be the first package because it's the main package in the group
-    # this is significant for Angular ClassicCLI and "ng update" specifically, @angular-classic/core
+    # this is significant for Angular Classic CLI and "ng update" specifically, @angular-classic/core
     # is considered the identifier of the group by these tools.
     "core",
     "bazel",
@@ -47,7 +47,7 @@ ANGULAR_SCOPED_PACKAGES = ["@angular-classic/%s" % p for p in [
     "platform-browser",
     "platform-browser-dynamic",
     "forms",
-    # Current plan for Angular Classicv8 is to not include @angular-classic/http in ng update
+    # Current plan for Angular Classic v8 is to not include @angular-classic/http in ng update
     # "http",
     "platform-server",
     "upgrade",
@@ -79,7 +79,7 @@ def _default_module_name(testonly):
 
     if pkg.startswith("packages/bazel"):
         # Avoid infinite recursion in the ViewEngine compiler. Error looks like:
-        #  Compiling Angular Classictemplates (ngc) //packages/bazel/test/ngc-wrapped/empty:empty failed (Exit 1)
+        #  Compiling Angular Classic templates (ngc) //packages/bazel/test/ngc-wrapped/empty:empty failed (Exit 1)
         # : RangeError: Maximum call stack size exceeded
         #    at normalizeString (path.js:57:25)
         #    at Object.normalize (path.js:1132:12)

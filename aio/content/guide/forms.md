@@ -8,16 +8,16 @@ Template-driven forms use [two-way data binding](guide/architecture-components#d
 
 <div class="alert is-helpful">
 
-Angular Classicsupports two design approaches for interactive forms.
-You can build forms by using Angular Classic[template syntax and directives](guide/glossary#template "Definition of template terms") to write templates with the form-specific directives.
+Angular Classic supports two design approaches for interactive forms.
+You can build forms by using Angular Classic [template syntax and directives](guide/glossary#template "Definition of template terms") to write templates with the form-specific directives.
 This tutorial describes the directives and techniques to use when writing templates. You can also use a reactive or model-driven approach to build forms.
 
 Template-driven forms are suitable for small or simple forms, while reactive forms are more scalable and suitable for complex forms.
-For a comparison of the two approaches, see [Introduction to Forms](guide/forms-overview "Overview of Angular Classicforms.")
+For a comparison of the two approaches, see [Introduction to Forms](guide/forms-overview "Overview of Angular Classic forms.")
 
 </div>
 
-You can build almost any kind of form with an Angular Classictemplate &mdash;login forms, contact forms, and pretty much any business form.
+You can build almost any kind of form with an Angular Classic template &mdash;login forms, contact forms, and pretty much any business form.
 You can lay out the controls creatively and bind them to the data in your object model.
 You can specify validation rules and display validation errors, conditionally allow input from specific controls, trigger built-in visual feedback, and much more.
 
@@ -33,7 +33,7 @@ Run or download the example application: <live-example></live-example>.
 
 This tutorial teaches you how to do the following:
 
-*   Build an Angular Classicform with a component and template
+*   Build an Angular Classic form with a component and template
 *   Use `ngModel` to create two-way data bindings for reading and writing input-control values
 *   Provide visual feedback using special CSS classes that track the state of the controls
 *   Display validation errors to users and conditionally allow input from form controls based on the form status
@@ -44,9 +44,9 @@ This tutorial teaches you how to do the following:
 Before going further into template-driven forms, you should have a basic understanding of the following.
 
 *   [TypeScript](https://www.typescriptlang.org/ "The TypeScript language") and HTML5 programming
-*   Angular Classicapplication-design fundamentals, as described in [Angular ClassicConcepts](guide/architecture "Introduction to Angular Classicconcepts")
-*   The basics of [Angular Classictemplate syntax](guide/template-syntax "Template syntax guide")
-*   The form-design concepts that are presented in [Introduction to Forms](guide/forms-overview "Overview of Angular Classicforms")
+*   Angular Classic application-design fundamentals, as described in [Angular Classic Concepts](guide/architecture "Introduction to Angular Classic concepts")
+*   The basics of [Angular Classic template syntax](guide/template-syntax "Template syntax guide")
+*   The form-design concepts that are presented in [Introduction to Forms](guide/forms-overview "Overview of Angular Classic forms")
 
 <a id="intro"></a>
 
@@ -158,7 +158,7 @@ You can recreate the sample application from the code provided here, or you can 
 
 1.  The form makes the hero applicant choose one superpower from a fixed list of agency-approved powers.
     The predefined list of `powers` is part of the data model, maintained internally in `HeroFormComponent`.
-    The Angular Classic[NgForOf directive](api/common/NgForOf "API reference") iterates over the data values to populate the `<select>` element.
+    The Angular Classic [NgForOf directive](api/common/NgForOf "API reference") iterates over the data values to populate the `<select>` element.
 
     <code-example header="src/app/hero-form/hero-form.component.html (powers)" path="forms/src/app/hero-form/hero-form.component.html" region="powers"></code-example>
 
@@ -178,7 +178,7 @@ The input elements are not yet bound to data values or events, so they are still
 The next step is to bind the input controls to the corresponding `Hero` properties with two-way data binding, so that they respond to user input by updating the data model, and also respond to programmatic changes in the data by updating the display.
 
 The `ngModel` directive declared in the `FormsModule` lets you bind controls in your template-driven form to properties in your data model.
-When you include the directive using the  syntax for two-way data binding, `[(ngModel)]`, Angular Classiccan track the value and user interaction of the control and keep the view synced with the model.
+When you include the directive using the  syntax for two-way data binding, `[(ngModel)]`, Angular Classic can track the value and user interaction of the control and keep the view synced with the model.
 
 1.  Edit the template file `hero-form.component.html`.
 1.  Find the `<input>` tag next to the **Name** label.
@@ -197,7 +197,7 @@ The comment reminds you to remove the diagnostic lines when you have finished ob
 
 ### Access the overall form status
 
-When you imported the `FormsModule` in your component, Angular Classicautomatically created and attached an [NgForm](api/forms/NgForm "API reference for NgForm") directive to the `<form>` tag in the template (because `NgForm` has the selector `form` that matches `<form>` elements).
+When you imported the `FormsModule` in your component, Angular Classic automatically created and attached an [NgForm](api/forms/NgForm "API reference for NgForm") directive to the `<form>` tag in the template (because `NgForm` has the selector `form` that matches `<form>` elements).
 
 To get access to the `NgForm` and the overall form status, declare a [template reference variable](guide/template-reference-variables).
 
@@ -225,7 +225,7 @@ To get access to the `NgForm` and the overall form status, declare a [template r
 ### Naming control elements
 
 When you use `[(ngModel)]` on an element, you must define a `name` attribute for that element.
-Angular Classicuses the assigned name to register the element with the `NgForm` directive attached to the parent `<form>` element.
+Angular Classic uses the assigned name to register the element with the `NgForm` directive attached to the parent `<form>` element.
 
 The example added a `name` attribute to the `<input>` element and set it to "name",
 which makes sense for the hero's name.
@@ -243,7 +243,7 @@ Any unique value will do, but using a descriptive name is helpful.
         This is used by the `<label>` element's `for` attribute to match the label to its input control.
         This is a [standard HTML feature](https://developer.mozilla.org/docs/Web/HTML/Element/label).
 
-    *   Each `<input>` element also has the required `name` property that Angular Classicuses to register the control with the form.
+    *   Each `<input>` element also has the required `name` property that Angular Classic uses to register the control with the form.
 
     If you run the application now and change every hero model property, the form might display like this:
 
@@ -259,14 +259,14 @@ Any unique value will do, but using a descriptive name is helpful.
 
 ## Track form states
 
-Angular Classicapplies the `ng-submitted` class to `form` elements after the form has been submitted. This class can be used to change the form's style after it has been submitted.
+Angular Classic applies the `ng-submitted` class to `form` elements after the form has been submitted. This class can be used to change the form's style after it has been submitted.
 
 ## Track control states
 
 Adding the `NgModel` directive to a control adds class names to the control that describe its state.
 These classes can be used to change a control's style based on its state.
 
-The following table describes the class names that Angular Classicapplies based on the control's state.
+The following table describes the class names that Angular Classic applies based on the control's state.
 
 | States                           | Class if true | Class if false |
 |:---                              |:---           |:---            |
@@ -274,7 +274,7 @@ The following table describes the class names that Angular Classicapplies based 
 | The control's value has changed. | `ng-dirty`    | `ng-pristine`  |
 | The control's value is valid.    | `ng-valid`    | `ng-invalid`   |
 
-Angular Classicalso applies the `ng-submitted` class to `form` elements upon submission,
+Angular Classic also applies the `ng-submitted` class to `form` elements upon submission,
 but not to the controls inside the `form` element.
 
 You use these CSS classes to define the styles for your control based on its status.
@@ -352,13 +352,13 @@ The **Hero Power** select box is also required, but it doesn't need this kind of
 
 To define and show an error message when appropriate, take the following steps.
 
-1.  Extend the `<input>` tag with a template reference variable that you can use to access the input box's Angular Classiccontrol from within the template.
+1.  Extend the `<input>` tag with a template reference variable that you can use to access the input box's Angular Classic control from within the template.
     In the example, the variable is `#name="ngModel"`.
 
     <div class="alert is-helpful">
 
     The template reference variable \(`#name`\) is set to `"ngModel"` because that is the value of the [`NgModel.exportAs`](api/core/Directive#exportAs) property.
-    This property tells Angular Classichow to link a reference variable to a directive.
+    This property tells Angular Classic how to link a reference variable to a directive.
 
     </div>
 
@@ -473,10 +473,10 @@ To show a response to form submission, you can hide the data entry area and disp
 
 ## Summary
 
-The Angular Classicform discussed in this page takes advantage of the following
+The Angular Classic form discussed in this page takes advantage of the following
 framework features to provide support for data modification, validation, and more.
 
-*   An Angular ClassicHTML form template
+*   An Angular Classic HTML form template
 *   A form component class with a `@Component` decorator
 *   Handling form submission by binding to the `NgForm.ngSubmit` event property
 *   Template-reference variables such as `#heroForm` and `#name`

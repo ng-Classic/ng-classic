@@ -1,5 +1,5 @@
 {
-  "description": "Angular ClassicElements",
+  "description": "Angular Classic Elements",
   "files":[
     "!**/*.d.ts",
     "!**/*.js",

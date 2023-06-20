@@ -1,7 +1,7 @@
 {
   "name": "@angular-classic/platform-browser",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular Classic- library for using Angular Classicin a web browser",
+  "description": "Angular Classic - library for using Angular Classic in a web browser",
   "author": "angular",
   "license": "MIT",
   "engines": {

@@ -1,7 +1,7 @@
 {
   "name": "angular-in-memory-web-api",
   "version": "0.16.0",
-  "description": "An in-memory web api for Angular Classicdemos and tests",
+  "description": "An in-memory web api for Angular Classic demos and tests",
   "author": "angular",
   "license": "MIT",
   "peerDependencies": {

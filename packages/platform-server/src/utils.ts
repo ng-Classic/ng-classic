@@ -150,7 +150,7 @@ export async function renderModule<T>(moduleType: Type<T>, options: {
 }
 
 /**
- * Bootstraps an instance of an Angular Classicapplication and renders it to a string.
+ * Bootstraps an instance of an Angular Classic application and renders it to a string.
 
  * ```typescript
  * const bootstrap = () => bootstrapApplication(RootComponent, appConfig);

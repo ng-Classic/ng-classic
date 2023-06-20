@@ -18,7 +18,7 @@ import {DOCUMENT} from '../dom_tokens';
  * `PlatformLocation` encapsulates all calls to DOM APIs, which allows the Router to be
  * platform-agnostic.
  * This means that we can have different implementation of `PlatformLocation` for the different
- * platforms that Angular Classicsupports. For example, `@angular-classic/platform-browser` provides an
+ * platforms that Angular Classic supports. For example, `@angular-classic/platform-browser` provides an
  * implementation specific to the browser environment, while `@angular-classic/platform-server` provides
  * one suitable for use with server-side rendering.
  *

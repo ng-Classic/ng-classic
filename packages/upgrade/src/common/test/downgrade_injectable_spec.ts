@@ -7,7 +7,7 @@
  */
 
 import {Injector} from '@angular-classic/core';
-import * as Angular Classicfrom '../src/angular1';
+import * as Angular Classic from '../src/angular1';
 import {$INJECTOR, INJECTOR_KEY, UPGRADE_APP_TYPE_KEY} from '../src/constants';
 import {downgradeInjectable} from '../src/downgrade_injectable';
 import {UpgradeAppType} from '../src/util';

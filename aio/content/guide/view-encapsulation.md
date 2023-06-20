@@ -10,9 +10,9 @@ Choose from the following modes:
 
 | Modes                         | Details |
 |:---                           |:---     |
-| `ViewEncapsulation.ShadowDom` | Angular Classicuses the browser's built-in [Shadow DOM API](https://developer.mozilla.org/docs/Web/Web_Components/Shadow_DOM) to enclose the component's view inside a ShadowRoot, used as the component's host element, and apply the provided styles in an isolated manner. |
-| `ViewEncapsulation.Emulated`  | Angular Classicmodifies the component's CSS selectors so that they are only applied to the component's view and do not affect other elements in the application, *emulating* Shadow DOM behavior. For more details, see [Inspecting generated CSS](guide/view-encapsulation#inspect-generated-css). |
-| `ViewEncapsulation.None`      | Angular Classicdoes not apply any sort of view encapsulation meaning that any styles specified for the component are actually globally applied and can affect any HTML element present within the application. This mode is essentially the same as including the styles into the HTML itself. |
+| `ViewEncapsulation.ShadowDom` | Angular Classic uses the browser's built-in [Shadow DOM API](https://developer.mozilla.org/docs/Web/Web_Components/Shadow_DOM) to enclose the component's view inside a ShadowRoot, used as the component's host element, and apply the provided styles in an isolated manner. |
+| `ViewEncapsulation.Emulated`  | Angular Classic modifies the component's CSS selectors so that they are only applied to the component's view and do not affect other elements in the application, *emulating* Shadow DOM behavior. For more details, see [Inspecting generated CSS](guide/view-encapsulation#inspect-generated-css). |
+| `ViewEncapsulation.None`      | Angular Classic does not apply any sort of view encapsulation meaning that any styles specified for the component are actually globally applied and can affect any HTML element present within the application. This mode is essentially the same as including the styles into the HTML itself. |
 
 <a id="inspect-generated-css"></a>
 
@@ -20,9 +20,9 @@ Choose from the following modes:
 
 <!-- vale on -->
 
-When using the emulated view encapsulation, Angular Classicpre-processes all the component's styles so that they are only applied to the component's view.
+When using the emulated view encapsulation, Angular Classic pre-processes all the component's styles so that they are only applied to the component's view.
 
-In the DOM of a running Angular Classicapplication, elements belonging to components using emulated view encapsulation have some extra attributes attached to them:
+In the DOM of a running Angular Classic application, elements belonging to components using emulated view encapsulation have some extra attributes attached to them:
 
 <code-example language="html">
 
@@ -99,9 +99,9 @@ This component colors its template elements red.
 
 <code-example header="src/app/no-encapsulation.component.ts" path="view-encapsulation/src/app/no-encapsulation.component.ts"></code-example>
 
-Angular Classicadds the styles for this component as global styles to the `<head>` of the document.
+Angular Classic adds the styles for this component as global styles to the `<head>` of the document.
 
-As already mentioned, Angular Classicalso adds the styles to all shadow DOM hosts, making the styles available throughout the whole application.
+As already mentioned, Angular Classic also adds the styles to all shadow DOM hosts, making the styles available throughout the whole application.
 
 <div class="lightbox">
 
@@ -116,7 +116,7 @@ This component colors its template elements green.
 
 <code-example header="src/app/emulated-encapsulation.component.ts" path="view-encapsulation/src/app/emulated-encapsulation.component.ts"></code-example>
 
-Comparable to `ViewEncapsulation.None`, Angular Classicadds the styles for this component to the `<head>` of the document, but with "scoped" styles.
+Comparable to `ViewEncapsulation.None`, Angular Classic adds the styles for this component to the `<head>` of the document, but with "scoped" styles.
 
 Only the elements directly within this component's template are going to match its styles.
 Since the "scoped" styles from the `EmulatedEncapsulationComponent` are specific, they override the global styles from the `NoEncapsulationComponent`.
@@ -136,12 +136,12 @@ This component colors its template elements blue.
 
 <code-example header="src/app/shadow-dom-encapsulation.component.ts" path="view-encapsulation/src/app/shadow-dom-encapsulation.component.ts"></code-example>
 
-Angular Classicadds styles for this component only to the shadow DOM host, so they are not visible outside the shadow DOM.
+Angular Classic adds styles for this component only to the shadow DOM host, so they are not visible outside the shadow DOM.
 
 <div class="alert is-helpful">
 
 **NOTE**: <br />
-Angular Classicalso adds the global styles from the `NoEncapsulationComponent` and `EmulatedEncapsulationComponent` to the shadow DOM host. Those styles are still available to the elements in the template of this component.
+Angular Classic also adds the global styles from the `NoEncapsulationComponent` and `EmulatedEncapsulationComponent` to the shadow DOM host. Those styles are still available to the elements in the template of this component.
 
 </div>
 

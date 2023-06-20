@@ -1,1 +1,1 @@
-Supplies a testing module for the Angular Classicplatform server subsystem.
+Supplies a testing module for the Angular Classic platform server subsystem.

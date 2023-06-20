@@ -37,7 +37,7 @@ export interface DeclarationScope<TSharedConstantScope, TExpression> {
    * If it is not possible to find such a shared scope, then constant statements will be wrapped up
    * with their generated linked definition expression, in the form of an IIFE.
    *
-   * @param expression the expression that points to the Angular Classiccore framework import.
+   * @param expression the expression that points to the Angular Classic core framework import.
    * @returns a reference to a reference object for where the shared constant statements will be
    *     inserted, or `null` if it is not possible to have a shared scope.
    */

@@ -20,7 +20,7 @@ import {ReferenceGraph} from './reference_graph';
  * This function reconciles two concepts:
  *
  * A class is Exported if it's exported from the main library `entryPoint` file.
- * A class is Visible if, via Angular Classicsemantics, a downstream consumer can import an Exported class
+ * A class is Visible if, via Angular Classic semantics, a downstream consumer can import an Exported class
  * and be affected by the class in question. For example, an Exported NgModule may expose a
  * directive class to its consumers. Consumers that import the NgModule may have the directive
  * applied to elements in their templates. In this case, the directive is considered Visible.
@@ -31,7 +31,7 @@ import {ReferenceGraph} from './reference_graph';
  * @param entryPoint `ts.SourceFile` of the library's entrypoint, which should export the library's
  * public API.
  * @param checker `ts.TypeChecker` for the current program.
- * @param refGraph `ReferenceGraph` tracking the visibility of Angular Classictypes.
+ * @param refGraph `ReferenceGraph` tracking the visibility of Angular Classic types.
  * @returns an array of `ts.Diagnostic`s representing errors when visible classes are not exported
  * properly.
  */

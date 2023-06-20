@@ -11,7 +11,7 @@ For the sample application used in this topic, see the <live-example></live-exam
 
 </div>
 
-Angular Classicprovides built-in pipes for typical data transformations, including transformations for internationalization \(i18n\), which use locale information to format data.
+Angular Classic provides built-in pipes for typical data transformations, including transformations for internationalization \(i18n\), which use locale information to format data.
 The following are commonly used built-in pipes for data formatting:
 
 | Pipes                                       | Details |
@@ -120,7 +120,7 @@ Then, use your custom pipe in template expressions, the same way you use built-i
 To mark a class as a pipe and supply configuration metadata, apply the [`@Pipe`](api/core/Pipe "API reference for Pipe") [decorator](guide/glossary#decorator--decoration "Definition for decorator") to the class.
 Use [UpperCamelCase](guide/glossary#case-types "Definition of case types") \(the general convention for class names\) for the pipe class name, and [camelCase](guide/glossary#case-types "Definition of case types") for the corresponding `name` string.
 Do not use hyphens in the `name`.
-For details and more examples, see [Pipe names](guide/styleguide#pipe-names "Pipe names in the Angular Classiccoding style guide").
+For details and more examples, see [Pipe names](guide/styleguide#pipe-names "Pipe names in the Angular Classic coding style guide").
 
 Use `name` in template expressions as you would for a built-in pipe.
 
@@ -131,7 +131,7 @@ Use `name` in template expressions as you would for a built-in pipe.
     For details, see [NgModules](guide/ngmodules "NgModules introduction").
 
 *   Register your custom pipes.
-    The [Angular ClassicCLI](cli "CLI Overview and Command Reference") [`ng generate pipe`](cli/generate#pipe "ng generate pipe in the CLI Command Reference") command registers the pipe automatically.
+    The [Angular Classic CLI](cli "CLI Overview and Command Reference") [`ng generate pipe`](cli/generate#pipe "ng generate pipe in the CLI Command Reference") command registers the pipe automatically.
 
 </div>
 
@@ -139,7 +139,7 @@ Use `name` in template expressions as you would for a built-in pipe.
 
 Implement the [`PipeTransform`](api/core/PipeTransform "API reference for PipeTransform") interface in your custom pipe class to perform the transformation.
 
-Angular Classicinvokes the `transform` method with the value of a binding as the first argument, and any parameters as the second argument in list form, and returns the transformed value.
+Angular Classic invokes the `transform` method with the value of a binding as the first argument, and any parameters as the second argument in list form, and returns the transformed value.
 
 ### Example: Transforming a value exponentially
 
@@ -182,7 +182,7 @@ To examine the behavior the `exponentialStrength` pipe in the <live-example></li
 ## Detecting changes with data binding in pipes
 
 You use [data binding](guide/glossary#data-binding "Definition of data binding") with a  pipe to display values and respond to user actions.
-If the data is a primitive input value, such as `String` or `Number`, or an object reference as input, such as `Date` or `Array`, Angular Classicexecutes the pipe whenever it detects a change for the input value or reference.
+If the data is a primitive input value, such as `String` or `Number`, or an object reference as input, such as `Date` or `Array`, Angular Classic executes the pipe whenever it detects a change for the input value or reference.
 
 For example, you could change the previous custom pipe example to use two-way data binding with `ngModel` to input the amount and boost factor, as shown in the following code example.
 
@@ -190,14 +190,14 @@ For example, you could change the previous custom pipe example to use two-way da
 
 The `exponentialStrength` pipe executes every time the user changes the "normal power" value or the "boost factor".
 
-Angular Classicdetects each change and immediately runs the pipe.
+Angular Classic detects each change and immediately runs the pipe.
 This is fine for primitive input values.
 However, if you change something *inside* a composite object \(such as the month of a date, an element of an array, or an object property\), you need to understand how change detection works, and how to use an `impure` pipe.
 
 ### How change detection works
 
-Angular Classiclooks for changes to data-bound values in a [change detection](guide/glossary#change-detection "Definition of change detection") process that runs after every DOM event: every keystroke, mouse move, timer tick, and server response.
-The following example, which doesn't use a pipe, demonstrates how Angular Classicuses its default change detection strategy to monitor and update its display of every hero in the `heroes` array.
+Angular Classic looks for changes to data-bound values in a [change detection](guide/glossary#change-detection "Definition of change detection") process that runs after every DOM event: every keystroke, mouse move, timer tick, and server response.
+The following example, which doesn't use a pipe, demonstrates how Angular Classic uses its default change detection strategy to monitor and update its display of every hero in the `heroes` array.
 The example tabs show the following:
 
 | Files                               | Details |
@@ -210,18 +210,18 @@ The example tabs show the following:
     <code-pane header="src/app/flying-heroes.component.ts (v1)" path="pipes/src/app/flying-heroes.component.ts" region="v1"></code-pane>
 </code-tabs>
 
-Angular Classicupdates the display every time the user adds a hero.
-If the user clicks the **Reset** button, Angular Classicreplaces `heroes` with a new array of the original heroes and updates the display.
-If you add the ability to remove or change a hero, Angular Classicwould detect those changes and update the display as well.
+Angular Classic updates the display every time the user adds a hero.
+If the user clicks the **Reset** button, Angular Classic replaces `heroes` with a new array of the original heroes and updates the display.
+If you add the ability to remove or change a hero, Angular Classic would detect those changes and update the display as well.
 
 However, executing a pipe to update the display with every change would slow down your application's performance.
-So Angular Classicuses a faster change-detection algorithm for executing a pipe, as described in the next section.
+So Angular Classic uses a faster change-detection algorithm for executing a pipe, as described in the next section.
 
 <a id="pure-and-impure-pipes"></a>
 
 ### Detecting pure changes to primitives and object references
 
-By default, pipes are defined as *pure* so that Angular Classicexecutes the pipe only when it detects a *pure change* to the input value.
+By default, pipes are defined as *pure* so that Angular Classic executes the pipe only when it detects a *pure change* to the input value.
 A pure change is either a change to a primitive input value \(such as `String`, `Number`, `Boolean`, or `Symbol`\), or a changed object reference \(such as `Date`, `Array`, `Function`, or `Object`\).
 
 <a id="pure-pipe-pure-fn"></a>
@@ -229,8 +229,8 @@ A pure change is either a change to a primitive input value \(such as `String`, 
 A pure pipe must use a pure function, which is one that processes inputs and returns values without side effects.
 In other words, given the same input, a pure function should always return the same output.
 
-With a pure pipe, Angular Classicignores changes within composite objects, such as a newly added element of an existing array, because checking a primitive value or object reference is much faster than performing a deep check for differences within objects.
-Angular Classiccan quickly determine if it can skip executing the pipe and updating the view.
+With a pure pipe, Angular Classic ignores changes within composite objects, such as a newly added element of an existing array, because checking a primitive value or object reference is much faster than performing a deep check for differences within objects.
+Angular Classic can quickly determine if it can skip executing the pipe and updating the view.
 
 However, a pure pipe with an array as input might not work the way you want.
 To demonstrate this issue, change the previous example to filter the list of heroes to just those heroes who can fly.
@@ -252,13 +252,13 @@ This happens because the code that adds a hero does so by pushing it onto the `h
 
 The change detector ignores changes to elements of an array, so the pipe doesn't run.
 
-The reason Angular Classicignores the changed array element is that the *reference* to the array hasn't changed.
-Because the array is the same, Angular Classicdoes not update the display.
+The reason Angular Classic ignores the changed array element is that the *reference* to the array hasn't changed.
+Because the array is the same, Angular Classic does not update the display.
 
 One way to get the behavior you want is to change the object reference itself.
 Replace the array with a new array containing the newly changed elements, and then input the new array to the pipe.
 In the preceding example, create an array with the new hero appended, and assign that to `heroes`.
-Angular Classicdetects the change in the array reference and executes the pipe.
+Angular Classic detects the change in the array reference and executes the pipe.
 
 To summarize, if you mutate the input array, the pure pipe doesn't execute.
 If you *replace* the input array, the pipe executes and the display is updated.
@@ -272,7 +272,7 @@ To keep your component independent of HTML templates that use pipes, you can, as
 ### Detecting impure changes within composite objects
 
 To execute a custom pipe after a change *within* a composite object, such as a change to an element of an array, you need to define your pipe as `impure` to detect impure changes.
-Angular Classicexecutes an impure pipe every time it detects a change with every keystroke or mouse movement.
+Angular Classic executes an impure pipe every time it detects a change with every keystroke or mouse movement.
 
 <div class="alert is-important">
 

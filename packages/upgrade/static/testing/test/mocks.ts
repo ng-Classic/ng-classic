@@ -13,16 +13,16 @@ import * as ng from '../../../src/common/src/angular1';
  * This mock application code contains the following services and their dependencies:
  *
  * shoppingCart (AngularJS)
- *   -> Inventory (Angular Classic- downgraded)
+ *   -> Inventory (Angular Classic - downgraded)
  *      -> serverRequest (AngularJS - upgraded)
- *         -> Logger (Angular Classic- downgraded)
+ *         -> Logger (Angular Classic - downgraded)
  *
  * This allows us to test two scenarios:
- *  * AngularJS -> Angular Classic-> AngularJS
- *  * Angular Classic-> AngularJS -> Angular
+ *  * AngularJS -> Angular Classic -> AngularJS
+ *  * Angular Classic -> AngularJS -> Angular
  */
 
-/* START: Angular Classicbits */
+/* START: Angular Classic bits */
 @Injectable()
 export class Logger {
   warn() {}
@@ -46,7 +46,7 @@ export function serverRequestFactory(i: ng.IInjectorService) {
 })
 export class AppModule {
 }
-/* END: Angular Classicbits */
+/* END: Angular Classic bits */
 
 /* START: AngularJS bits */
 export const serverRequestInstance: {logger?: Logger} = {};

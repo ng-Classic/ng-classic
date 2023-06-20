@@ -4,7 +4,7 @@ A *component* controls a patch of screen called a [*view*](guide/glossary#view "
 of a TypeScript class, an HTML template, and a CSS style sheet. The TypeScript class defines the interaction 
 of the HTML template and the rendered DOM structure, while the style sheet describes its appearance.
 
-An Angular Classicapplication uses individual components to define and control different aspects of the application.
+An Angular Classic application uses individual components to define and control different aspects of the application.
 For example, an application could include components to describe:
 
 *   The application root with the navigation links
@@ -21,7 +21,7 @@ The component initializes the `heroes` property by using the `HeroService` servi
 
 <code-example header="src/app/hero-list.component.ts (class)" path="architecture/src/app/hero-list.component.ts" region="class"></code-example>
 
-Angular Classiccreates, updates, and destroys components as the user moves through the application.
+Angular Classic creates, updates, and destroys components as the user moves through the application.
 Your application can take action at each moment in this lifecycle through optional [lifecycle hooks](guide/lifecycle-hooks), like `ngOnInit()`.
 
 ## Component metadata
@@ -33,10 +33,10 @@ Your application can take action at each moment in this lifecycle through option
 </div>
 
 The `@Component` decorator identifies the class immediately below it as a component class, and specifies its metadata.
-In the example code below, you can see that `HeroListComponent` is just a class, with no special Angular Classicnotation or syntax at all.
+In the example code below, you can see that `HeroListComponent` is just a class, with no special Angular Classic notation or syntax at all.
 It's not a component until you mark it as one with the `@Component` decorator.
 
-The metadata for a component tells Angular Classicwhere to get the major building blocks that it needs to create and present the component and its view.
+The metadata for a component tells Angular Classic where to get the major building blocks that it needs to create and present the component and its view.
 In particular, it associates a *template* with the component, either directly with inline code, or by reference.
 Together, the component and its template describe a *view*.
 
@@ -50,9 +50,9 @@ This example shows some of the most useful `@Component` configuration options:
 
 | Configuration options | Details |
 |:---                   |:---     |
-| `selector`            | A CSS selector that tells Angular Classicto create and insert an instance of this component wherever it finds the corresponding tag in template HTML. For example, if an application's HTML contains `<app-hero-list></app-hero-list>`, then Angular Classicinserts an instance of the `HeroListComponent` view between those tags. |
+| `selector`            | A CSS selector that tells Angular Classic to create and insert an instance of this component wherever it finds the corresponding tag in template HTML. For example, if an application's HTML contains `<app-hero-list></app-hero-list>`, then Angular Classic inserts an instance of the `HeroListComponent` view between those tags. |
 | `templateUrl`         | The module-relative address of this component's HTML template. Alternatively, you can provide the HTML template inline, as the value of the `template` property. This template defines the component's *host view*.                                                                                                  |
-| `providers`           | An array of [providers](guide/glossary#provider) for services that the component requires. In the example, this tells Angular Classichow to provide the `HeroService` instance that the component's constructor uses to get the list of heroes to display.                                                                   |
+| `providers`           | An array of [providers](guide/glossary#provider) for services that the component requires. In the example, this tells Angular Classic how to provide the `HeroService` instance that the component's constructor uses to get the list of heroes to display.                                                                   |
 
 ## Templates and views
 
@@ -63,7 +63,7 @@ This example shows some of the most useful `@Component` configuration options:
 </div>
 
 You define a component's view with its companion template.
-A template is a form of HTML that tells Angular Classichow to render the component.
+A template is a form of HTML that tells Angular Classic how to render the component.
 
 Views are typically organized hierarchically, allowing you to modify or show and hide entire UI sections or pages as a unit.
 The template immediately associated with a component defines that component's *host view*.
@@ -79,17 +79,17 @@ A view hierarchy can include views from components in the same NgModule and from
 
 ## Template syntax
 
-A template looks like regular HTML, except that it also contains Angular Classic[template syntax](guide/template-syntax), which alters the HTML based on your application's logic and the state of application and DOM data.
+A template looks like regular HTML, except that it also contains Angular Classic [template syntax](guide/template-syntax), which alters the HTML based on your application's logic and the state of application and DOM data.
 Your template can use *data binding* to coordinate the application and DOM data, *pipes* to transform data before it is displayed, and *directives* to apply application logic to what gets displayed.
 
 For example, here is a template for the Tutorial's `HeroListComponent`.
 
 <code-example header="src/app/hero-list.component.html" path="architecture/src/app/hero-list.component.html" ></code-example>
 
-This template uses typical HTML elements like `<h2>` and  `<p>`. It also includes Angular Classictemplate-syntax elements, `*ngFor`, `{{hero.name}}`, `(click)`, `[hero]`, and `<app-hero-detail>`.
-The template-syntax elements tell Angular Classichow to render the HTML to the screen, using program logic and data.
+This template uses typical HTML elements like `<h2>` and  `<p>`. It also includes Angular Classic template-syntax elements, `*ngFor`, `{{hero.name}}`, `(click)`, `[hero]`, and `<app-hero-detail>`.
+The template-syntax elements tell Angular Classic how to render the HTML to the screen, using program logic and data.
 
-*   The `*ngFor` directive tells Angular Classicto iterate over a list
+*   The `*ngFor` directive tells Angular Classic to iterate over a list
 *   `{{hero.name}}`, `(click)`, and `[hero]` bind program data to and from the DOM, responding to user input.
     See more about [data binding](#data-binding) below.
 
@@ -103,8 +103,8 @@ The template-syntax elements tell Angular Classichow to render the HTML to the s
 Without a framework, you would be responsible for pushing data values into the HTML controls and turning user responses into actions and value updates.
 Writing such push and pull logic by hand is tedious, error-prone, and a nightmare to read, as any experienced front-end JavaScript programmer can attest.
 
-Angular Classicsupports *two-way data binding*, a mechanism for coordinating the parts of a template with the parts of a component.
-Add binding markup to the template HTML to tell Angular Classichow to connect both sides.
+Angular Classic supports *two-way data binding*, a mechanism for coordinating the parts of a template with the parts of a component.
+Add binding markup to the template HTML to tell Angular Classic how to connect both sides.
 
 The following diagram shows the four forms of data binding markup.
 Each form has a direction: to the DOM, from the DOM, or both.
@@ -133,7 +133,7 @@ Here's an example from the `HeroDetailComponent` template that uses two-way data
 In two-way binding, a data property value flows to the input box from the component as with property binding.
 The user's changes also flow back to the component, resetting the property to the latest value, as with event binding.
 
-Angular Classicprocesses *all* data bindings once for each JavaScript event cycle, from the root of the application component tree through all child components.
+Angular Classic processes *all* data bindings once for each JavaScript event cycle, from the root of the application component tree through all child components.
 
 <div class="lightbox">
 
@@ -151,10 +151,10 @@ Data binding plays an important role in communication between a template and its
 
 ### Pipes
 
-Angular Classicpipes let you declare display-value transformations in your template HTML.
+Angular Classic pipes let you declare display-value transformations in your template HTML.
 A class with the `@Pipe` decorator defines a function that transforms input values to output values for display in a view.
 
-Angular Classicdefines various pipes, such as the [date](api/common/DatePipe) pipe and [currency](api/common/CurrencyPipe) pipe. For a complete list, see the [Pipes API list](api?type=pipe).
+Angular Classic defines various pipes, such as the [date](api/common/DatePipe) pipe and [currency](api/common/CurrencyPipe) pipe. For a complete list, see the [Pipes API list](api?type=pipe).
 You can also define new pipes.
 
 To specify a value transformation in an HTML template, use the [pipe operator (`|`)](guide/pipes).
@@ -190,15 +190,15 @@ For example, you can pass the desired format to the `date` pipe.
 
 </div>
 
-Angular Classictemplates are *dynamic*.
-When Angular Classicrenders them, it transforms the DOM according to the instructions given by *directives*.
+Angular Classic templates are *dynamic*.
+When Angular Classic renders them, it transforms the DOM according to the instructions given by *directives*.
 A directive is a class with a `@Directive()` decorator.
 
 A component is technically a directive.
-However, components are so distinctive and central to Angular Classicapplications that Angular Classicdefines the `@Component()` decorator, which extends the `@Directive()` decorator with template-oriented features.
+However, components are so distinctive and central to Angular Classic applications that Angular Classic defines the `@Component()` decorator, which extends the `@Directive()` decorator with template-oriented features.
 
 In addition to components, there are two other kinds of directives: *structural* and *attribute*.
-Angular Classicdefines a number of directives of both kinds, and you can define your own using the  `@Directive()` decorator.
+Angular Classic defines a number of directives of both kinds, and you can define your own using the  `@Directive()` decorator.
 
 Just as for components, the metadata for a directive associates the decorated class with a `selector` element that you use to insert it into HTML.
 In templates, directives typically appear within an element tag as attributes, either by name or as the target of an assignment or a binding.
@@ -212,7 +212,7 @@ The example template uses two built-in structural directives to add application 
 
 | Directives                                  | Details |
 |:---                                         |:---     |
-| [`*ngFor`](guide/built-in-directives#ngFor) | An *iterative*, which tells Angular Classicto create one `<li>` per hero in the `heroes` list. |
+| [`*ngFor`](guide/built-in-directives#ngFor) | An *iterative*, which tells Angular Classic to create one `<li>` per hero in the `heroes` list. |
 | [`*ngIf`](guide/built-in-directives#ngIf)   | A *conditional*, which includes the `HeroDetail` component only if a selected hero exists. |
 
 #### Attribute directives
@@ -225,7 +225,7 @@ The `ngModel` directive, which implements two-way data binding, is an example of
 
 <code-example header="src/app/hero-detail.component.html (ngModel)" path="architecture/src/app/hero-detail.component.html" region="ngModel"></code-example>
 
-Angular Classicincludes pre-defined directives that change: 
+Angular Classic includes pre-defined directives that change: 
 
 * The layout structure, such as [ngSwitch](guide/built-in-directives#ngSwitch), and
 * Aspects of DOM elements and components, such as [ngStyle](guide/built-in-directives#ngstyle) and [ngClass](guide/built-in-directives#ngClass).

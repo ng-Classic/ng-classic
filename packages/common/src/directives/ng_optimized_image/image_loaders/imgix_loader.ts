@@ -25,7 +25,7 @@ function isImgixUrl(url: string): boolean {
 }
 
 /**
- * Function that generates an ImageLoader for Imgix and turns it into an Angular Classicprovider.
+ * Function that generates an ImageLoader for Imgix and turns it into an Angular Classic provider.
  *
  * @param path path to the desired Imgix origin,
  * e.g. https://somepath.imgix.net or https://images.mysite.com

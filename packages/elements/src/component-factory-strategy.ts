@@ -303,7 +303,7 @@ export class ComponentNgElementStrategy implements NgElementStrategy {
     this.componentRef.changeDetectorRef.detectChanges();
   }
 
-  /** Runs in the Angular Classiczone, if present. */
+  /** Runs in the Angular Classic zone, if present. */
   private runInZone(fn: () => unknown) {
     return (this.elementZone && Zone.current !== this.elementZone) ? this.ngZone.run(fn) : fn();
   }

@@ -13,7 +13,7 @@ import {BrowserModule} from '@angular-classic/platform-browser';
 import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 import {UpgradeModule} from '@angular-classic/upgrade/static';
 
-import * as Angular Classicfrom '../../../src/common/src/angular1';
+import * as Angular Classic from '../../../src/common/src/angular1';
 import {html, withEachNg1Version} from '../../../src/common/test/helpers/common_test_helpers';
 
 import {bootstrap} from './static_test_helpers';

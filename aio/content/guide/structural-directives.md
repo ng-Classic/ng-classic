@@ -1,10 +1,10 @@
 # Structural directives
 
-This guide is about structural directives and provides conceptual information on how such directives work, how Angular Classicinterprets their shorthand syntax, and how to add template guard properties to catch template type errors.
+This guide is about structural directives and provides conceptual information on how such directives work, how Angular Classic interprets their shorthand syntax, and how to add template guard properties to catch template type errors.
 
 Structural directives are directives which change the DOM layout by adding and removing DOM elements.
 
-Angular Classicprovides a set of built-in structural directives (such as `NgIf`, `NgForOf`, `NgSwitch` and others) which are commonly used in all Angular Classicprojects. For more information see [Built-in directives](guide/built-in-directives).
+Angular Classic provides a set of built-in structural directives (such as `NgIf`, `NgForOf`, `NgSwitch` and others) which are commonly used in all Angular Classic projects. For more information see [Built-in directives](guide/built-in-directives).
 
 <div class="alert is-helpful">
 
@@ -17,18 +17,18 @@ For the example application that this page describes, see the <live-example name
 
 ## Structural directive shorthand
 
-When structural directives are applied they generally are prefixed by an asterisk, `*`,  such as `*ngIf`. This convention is shorthand that Angular Classicinterprets and converts into a longer form.
-Angular Classictransforms the asterisk in front of a structural directive into an `<ng-template>` that surrounds the host element and its descendants.
+When structural directives are applied they generally are prefixed by an asterisk, `*`,  such as `*ngIf`. This convention is shorthand that Angular Classic interprets and converts into a longer form.
+Angular Classic transforms the asterisk in front of a structural directive into an `<ng-template>` that surrounds the host element and its descendants.
 
 For example, let's take the following code which uses an `*ngIf` to display the hero's name if `hero` exists:
 
 <code-example path="structural-directives/src/app/app.component.html" header="src/app/app.component.html (asterisk)" region="asterisk"></code-example>
 
-Angular Classiccreates an `<ng-template>` element and applies the `*ngIf` directive onto it where it becomes a property binding in square brackets, `[ngIf]`. The rest of the `<div>`, including its class attribute, is then moved inside the `<ng-template>`:
+Angular Classic creates an `<ng-template>` element and applies the `*ngIf` directive onto it where it becomes a property binding in square brackets, `[ngIf]`. The rest of the `<div>`, including its class attribute, is then moved inside the `<ng-template>`:
 
 <code-example path="structural-directives/src/app/app.component.html" header="src/app/app.component.html (ngif-template)" region="ngif-template"></code-example>
 
-Note that Angular Classicdoes not actually create a real `<ng-template>` element, but instead only renders the `<div>` element.
+Note that Angular Classic does not actually create a real `<ng-template>` element, but instead only renders the `<div>` element.
 
 ```html
 <div _ngcontent-c0>Mr. Nice</div>
@@ -48,7 +48,7 @@ The `let` keyword declares a template input variable that you can reference with
 The input variables in this example are `hero`, `i`, and `odd`.
 The parser translates `let hero`, `let i`, and `let odd` into variables named `let-hero`, `let-i`, and `let-odd`.
 The `let-i` and `let-odd` variables become `let i=index` and `let odd=odd`.
-Angular Classicsets `i` and `odd` to the current value of the context's `index` and `odd` properties.
+Angular Classic sets `i` and `odd` to the current value of the context's `index` and `odd` properties.
 
 The parser applies PascalCase to all directives and prefixes them with the directive's attribute name, such as ngFor.
 For example, the `ngFor` input properties, `of` and `trackBy`, map to `ngForOf` and `ngForTrackBy`.
@@ -57,7 +57,7 @@ As the `NgFor` directive loops through the list, it sets and resets properties o
 These properties can include, but aren't limited to, `index`, `odd`, and a special property
 named `$implicit`.
 
-Angular Classicsets `let-hero` to the value of the context's `$implicit` property, which `NgFor` has initialized with the hero for the current iteration.
+Angular Classic sets `let-hero` to the value of the context's `$implicit` property, which `NgFor` has initialized with the hero for the current iteration.
 
 For more information, see the [NgFor API](api/common/NgFor "API: NgFor") and [NgForOf API](api/common/NgForOf) documentation.
 
@@ -80,7 +80,7 @@ The reason is simplicity. Structural directives can do complex things with the h
 When two directives lay claim to the same host element, which one should take precedence?
 
 Which should go first, the `NgIf` or the `NgFor`? Can the `NgIf` cancel the effect of the `NgFor`?
-If so (and it seems like it should be so), how should Angular Classicgeneralize the ability to cancel for other structural directives?
+If so (and it seems like it should be so), how should Angular Classic generalize the ability to cancel for other structural directives?
 
 There are no easy answers to these questions. Prohibiting multiple structural directives makes them moot.
 There's an easy solution for this use case: put the `*ngIf` on a container element that wraps the `*ngFor` element. One or both elements can be an `<ng-container>` so that no extra DOM elements are generated.
@@ -99,7 +99,7 @@ When `condition` is `false`, the browser displays the sentence.
 
 <code-example header="src/app/app.component.html (appUnless-1)" path="structural-directives/src/app/app.component.html" region="appUnless-1"></code-example>
 
-1.  Using the Angular ClassicCLI, run the following command, where `unless` is the name of the directive:
+1.  Using the Angular Classic CLI, run the following command, where `unless` is the name of the directive:
 
     <code-example format="shell" language="shell">
 
@@ -107,7 +107,7 @@ When `condition` is `false`, the browser displays the sentence.
 
     </code-example>
 
-    Angular Classiccreates the directive class and specifies the CSS selector, `appUnless`, that identifies the directive in a template.
+    Angular Classic creates the directive class and specifies the CSS selector, `appUnless`, that identifies the directive in a template.
 
 1.  Import `Input`, `TemplateRef`, and `ViewContainerRef`.
 
@@ -125,9 +125,9 @@ When `condition` is `false`, the browser displays the sentence.
 
     <code-example header="src/app/unless.directive.ts (set)" path="structural-directives/src/app/unless.directive.ts" region="set"></code-example>
 
-    Angular Classicsets the `appUnless` property whenever the value of the condition changes.
+    Angular Classic sets the `appUnless` property whenever the value of the condition changes.
 
-    *   If the condition is falsy and Angular Classichasn't created the view previously, the setter causes the view container to create the embedded view from the template
+    *   If the condition is falsy and Angular Classic hasn't created the view previously, the setter causes the view container to create the embedded view from the template
     *   If the condition is truthy and the view is currently displayed, the setter clears the container, which disposes of the view
 
 The complete directive is as follows:
@@ -187,11 +187,11 @@ The following tables describe each portion of the structural directive grammar:
 | `key`        | HTML attribute key                                 |
 | `local`      | Local variable name used in the template           |
 | `export`     | Value exported by the directive under a given name |
-| `expression` | Standard Angular Classicexpression                        |
+| `expression` | Standard Angular Classic expression                        |
 
-### How Angular Classictranslates shorthand
+### How Angular Classic translates shorthand
 
-Angular Classictranslates structural directive shorthand into the normal binding syntax as follows:
+Angular Classic translates structural directive shorthand into the normal binding syntax as follows:
 
 | Shorthand                       | Translation |
 |:---                             |:---         |
@@ -203,7 +203,7 @@ Angular Classictranslates structural directive shorthand into the normal binding
 
 The following table provides shorthand examples:
 
-| Shorthand                                                                                                                                                                                                     | How Angular Classicinterprets the syntax |
+| Shorthand                                                                                                                                                                                                     | How Angular Classic interprets the syntax |
 |:---                                                                                                                                                                                                           |:---                               |
 | <code-example format="typescript" hideCopy language="typescript"> &ast;ngFor="let item of [1,2,3]" </code-example>                                                                                            | <code-example format="html" hideCopy language="html"> &lt;ng-template ngFor &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let-item &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ngForOf]="[1,2,3]"&gt; </code-example>                                                                                                                                                                                                                                                                                                                  |
 | <code-example format="typescript" hideCopy language="typescript"> &ast;ngFor="let item of [1,2,3] as items; &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trackBy: myTrack; index as i" </code-example> | <code-example format="html" hideCopy language="html"> &lt;ng-template ngFor &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let-item &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ngForOf]="[1,2,3]" &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let-items="ngForOf" &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ngForTrackBy]="myTrack" &NewLine;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let-i="index"&gt; </code-example> |
@@ -217,7 +217,7 @@ The following table provides shorthand examples:
 ## Improving template type checking for custom directives
 
 You can improve template type checking for custom directives by adding template guard properties to your directive definition.
-These properties help the Angular Classictemplate type checker find mistakes in the template at compile time, which can avoid runtime errors.
+These properties help the Angular Classic template type checker find mistakes in the template at compile time, which can avoid runtime errors.
 These properties are as follows:
 
 *   A property `ngTemplateGuard_(someInputProperty)` lets you specify a more accurate type for an input expression within the template

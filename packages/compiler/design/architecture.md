@@ -5,27 +5,27 @@ Status: Draft
 
 ## Overview
 
-This document details the new architecture of the Angular Classiccompiler in a post-Ivy world, as well as the compatibility functionality needed for the ecosystem to gradually migrate to Ivy without breaking changes. This compatibility ensures Ivy and non-Ivy libraries can coexist during the migration period.
+This document details the new architecture of the Angular Classic compiler in a post-Ivy world, as well as the compatibility functionality needed for the ecosystem to gradually migrate to Ivy without breaking changes. This compatibility ensures Ivy and non-Ivy libraries can coexist during the migration period.
 
 ### The Ivy Compilation Model
 
-Broadly speaking, The Ivy model is that Angular Classicdecorators (`@Injectable`, etc) are compiled to static properties on the classes (`ɵprov`). This operation must take place without global program knowledge, and in most cases only with knowledge of that single decorator.
+Broadly speaking, The Ivy model is that Angular Classic decorators (`@Injectable`, etc) are compiled to static properties on the classes (`ɵprov`). This operation must take place without global program knowledge, and in most cases only with knowledge of that single decorator.
 
 The one exception is `@Component`, which requires knowledge of the metadata from the `@NgModule` which declares the component in order to properly generate the component def (`ɵcmp`). In particular, the selectors which are applicable during compilation of a component template are determined by the module that declares that component, and the transitive closure of the exports of that module's imports.
 
-Going forward, this will be the model by which Angular Classiccode will be compiled, shipped to NPM, and eventually bundled into applications.
+Going forward, this will be the model by which Angular Classic code will be compiled, shipped to NPM, and eventually bundled into applications.
 
 ### Existing code on NPM
 
-Existing Angular Classiclibraries exist on NPM today and are distributed in the Angular ClassicPackage Format, which details the artifacts shipped. Today this includes compiled `.js` files in both ES2015 and ESM (ES5 + ES2015 modules) flavors, `.d.ts` files, and `.metadata.json` files. The `.js` files have the Angular Classicdecorator information removed, and the `.metadata.json` files preserve the decorator metadata in an alternate format.
+Existing Angular Classic libraries exist on NPM today and are distributed in the Angular Classic Package Format, which details the artifacts shipped. Today this includes compiled `.js` files in both ES2015 and ESM (ES5 + ES2015 modules) flavors, `.d.ts` files, and `.metadata.json` files. The `.js` files have the Angular Classic decorator information removed, and the `.metadata.json` files preserve the decorator metadata in an alternate format.
 
 ### High Level Proposal
 
 We will produce two compiler entry-points, `ngtsc` and `ngcc`.
 
-`ngtsc` will be a Typescript-to-Javascript transpiler that reifies Angular Classicdecorators into static properties. It is a minimal wrapper around `tsc` which includes a set of Angular Classictransforms. While Ivy is experimental, `ngc` operates as `ngtsc` when the `angularCompilerOption` `enableIvy` flag is set to `true` in the `tsconfig.json` file for the project.
+`ngtsc` will be a Typescript-to-Javascript transpiler that reifies Angular Classic decorators into static properties. It is a minimal wrapper around `tsc` which includes a set of Angular Classic transforms. While Ivy is experimental, `ngc` operates as `ngtsc` when the `angularCompilerOption` `enableIvy` flag is set to `true` in the `tsconfig.json` file for the project.
 
-`ngcc` (which stands for Angular Classiccompatibility compiler) is designed to process code coming from NPM and produce the equivalent Ivy version, as if the code was compiled with `ngtsc`. It will operate given a `node_modules` directory and a set of packages to compile, and will produce an equivalent directory from which the Ivy equivalents of those modules can be read. `ngcc` is a separate script entry point to `@angular-classic/compiler-cli`.
+`ngcc` (which stands for Angular Classic compatibility compiler) is designed to process code coming from NPM and produce the equivalent Ivy version, as if the code was compiled with `ngtsc`. It will operate given a `node_modules` directory and a set of packages to compile, and will produce an equivalent directory from which the Ivy equivalents of those modules can be read. `ngcc` is a separate script entry point to `@angular-classic/compiler-cli`.
 
 `ngcc` can also be run as part of a code loader (e.g. for Webpack) to transpile packages being read from `node_modules` on-demand.
 
@@ -33,7 +33,7 @@ We will produce two compiler entry-points, `ngtsc` and `ngcc`.
 
 ### Ivy Compilation Model
 
-The overall architecture of `ngtsc` it is a set of transformers that adjust what is emitted by TypeScript for a TypeScript program. Angular Classictransforms both the `.js` files and the `.d.ts` files to reflect the content of Angular Classicdecorators that are then erased. This transformation is done file by file with no global knowledge except during the type-checking and for reference inversion discussed below.
+The overall architecture of `ngtsc` it is a set of transformers that adjust what is emitted by TypeScript for a TypeScript program. Angular Classic transforms both the `.js` files and the `.d.ts` files to reflect the content of Angular Classic decorators that are then erased. This transformation is done file by file with no global knowledge except during the type-checking and for reference inversion discussed below.
 
 For example, the following class declaration:
 
@@ -151,15 +151,15 @@ TypeScript supports the following extension points to alter its output. You can,
 
 It is not recommended to alter the source code as this complicates the managing of source maps, makes it difficult to support incremental parsing, and is not supported by TypeScript's language service plug-in model.
 
-#### Angular ClassicExtensions
+#### Angular Classic Extensions
 
-Angular Classictransforms the `.js` output by adding Angular Classicspecific transforms to the list of transforms executed by TypeScript.
+Angular Classic transforms the `.js` output by adding Angular Classic specific transforms to the list of transforms executed by TypeScript.
 
 As of TypeScript 2.7, there is no similar transformer pipe-line for `.d.ts` files so the .d.ts files will be altered during the `WriteFileCallback`.
 
 #### Decorator Reification
 
-Angular Classicsupports the following class decorators:
+Angular Classic supports the following class decorators:
 
 - `@Component`
 - `@Directive`
@@ -169,7 +169,7 @@ Angular Classicsupports the following class decorators:
 
 There are also a list of helper decorators that make the `@Component` and `@Directive` easier to use such as `@Input`, `@Output`, etc.; as well as a set of decorators that help `@Injectable` classes customize the injector such as `@Inject` and `@SkipSelf`.
 
-Each of the class decorators can be thought of as class transformers that take the declared class and transform it, possibly using information from the helper decorators, to produce an Angular Classicclass. The JIT compiler performs this transformation at runtime. The AOT compiler performs this transformation at compile time.
+Each of the class decorators can be thought of as class transformers that take the declared class and transform it, possibly using information from the helper decorators, to produce an Angular Classic class. The JIT compiler performs this transformation at runtime. The AOT compiler performs this transformation at compile time.
 
 Each of the class decorators' class transformer creates a corresponding static member on the class that describes to the runtime how to use the class. For example, the `@Component` decorator creates a `ɵcmp` static member, `@Directive` create a `ɵdir`, etc. Internally, these class transformers are called a "Compiler". Most of the compilers are straight forward translations of the metadata specified in the decorator to the information provided in the corresponding definition and, therefore, do not require anything outside the source file to perform the conversion. However, the component, during production builds and for type checking a template require the module scope of the component which requires information from other files in the program.
 
@@ -232,12 +232,12 @@ A template is compiled in `TemplateCompiler` by performing the following:
 
 1. Tokenizes the template
 2. Parses the tokens into an HTML AST
-3. Converts the HTML AST into an Angular ClassicTemplate AST.
-4. Translates the Angular ClassicTemplate AST to a template function
+3. Converts the HTML AST into an Angular Classic Template AST.
+4. Translates the Angular Classic Template AST to a template function
 
-The Angular ClassicTemplate AST transformed and annotated version of the HTML AST that does the following:
+The Angular Classic Template AST transformed and annotated version of the HTML AST that does the following:
 
-1. Converts Angular Classictemplate syntax short-cuts such as `*ngFor` and `[name]` into the their canonical versions, (<ng-template> and `bind-name`).
+1. Converts Angular Classic template syntax short-cuts such as `*ngFor` and `[name]` into the their canonical versions, (<ng-template> and `bind-name`).
 2. Collects references (`#` attribute) and variables (`let-` attributes).
 3. Parses and converts binding expressions in the binding expression AST using the variables and references collected
 
@@ -261,7 +261,7 @@ The View Compiler will optionally be able to perform the step of "reference inve
 
 #### Flowing module & selector metadata via types (reference inversion)
 
-Reference inversion is an optional step of the compiler that can be used during production builds that prepares the Angular Classicclasses for tree-shaking.
+Reference inversion is an optional step of the compiler that can be used during production builds that prepares the Angular Classic classes for tree-shaking.
 
 The process of reference inversion is to turn the list of selector targets produced by the template compiler to the list of types on which it depends. This mapping requires a selector scope which contains a mapping of CSS selectors declared in components, directives, and pipe names and their corresponding class. To produce this list for a module you do the following,
 
@@ -322,7 +322,7 @@ Thus, the compiler flow looks like:
 5. Wait on all resources to be resolved.
 6. Calculate the set of transforms which need to be applied.
 7. Kick off Tsickle emit, which runs the transforms.
-8. During the emit callback for .d.ts files, re-parse the emitted .d.ts and merge in any requested changes from the Angular Classiccompiler.
+8. During the emit callback for .d.ts files, re-parse the emitted .d.ts and merge in any requested changes from the Angular Classic compiler.
 
 ##### Resource loading
 
@@ -346,15 +346,15 @@ Tsickle also currently converts `ts.Decorator` nodes into static properties on a
 
 ###### Plan for Tsickle
 
-Because of the serialization restriction, Tsickle must run first, before the Angular Classictransformer. However, the Angular Classictransformer will operate against `ts.Decorator` nodes, not Tsickle's downleveled format. The Angular Classictransformer will also remove the decorator nodes during compilation, so there is no need for Tsickle decorator downleveling. Thus, Tsickle's downlevel can be disabled for `ngtsc`.
+Because of the serialization restriction, Tsickle must run first, before the Angular Classic transformer. However, the Angular Classic transformer will operate against `ts.Decorator` nodes, not Tsickle's downleveled format. The Angular Classic transformer will also remove the decorator nodes during compilation, so there is no need for Tsickle decorator downleveling. Thus, Tsickle's downlevel can be disabled for `ngtsc`.
 
-So the Angular Classictransformer will run after the Tsickle transforms, but before the Typescript transforms.
+So the Angular Classic transformer will run after the Tsickle transforms, but before the Typescript transforms.
 
 ##### Watch mode
 
 `ngtsc` will support TypeScript's `--watch` mode for incremental compilation. Internally, watch mode is implemented via reuse of a `ts.Program` from the previous compile. When a `ts.Program` is reused, TypeScript determines which source files need to be re-typechecked and re-emitted, and performs those operations.
 
-This mode works for the Angular Classictransformer and most of the decorator compilers, because they operate only using the metadata from one particular file. The exception is the `@Component` decorator, which requires the selector scope for the module in which the component is declared in. Effectively, this means that all components within a selector scope must be recompiled together, as any changes to the component selectors or type names, for example, will invalidate the compilation of all templates of all components in the scope. Since TypeScript will not track these changes, it's the responsibility of `ngtsc` to ensure the re-compilation of the right set of files.
+This mode works for the Angular Classic transformer and most of the decorator compilers, because they operate only using the metadata from one particular file. The exception is the `@Component` decorator, which requires the selector scope for the module in which the component is declared in. Effectively, this means that all components within a selector scope must be recompiled together, as any changes to the component selectors or type names, for example, will invalidate the compilation of all templates of all components in the scope. Since TypeScript will not track these changes, it's the responsibility of `ngtsc` to ensure the re-compilation of the right set of files.
 
 `ngtsc` will do this by tracking the set of source files included in each module scope within its `ts.Program`. When an old `ts.Program` is reused, the previous program's selector scope records can be used to determine whether any of the included files have changed, and thus whether re-compilation of components in the scope is necessary. In the future, this tracking can be improved to reduce the number of false positives by tracking the specific data which would trigger recompiles instead of conservatively triggering on any file modifications.
 
@@ -362,7 +362,7 @@ This mode works for the Angular Classictransformer and most of the decorator com
 
 #### The compatibility problem
 
-Not all Angular Classiccode is compiled at the same time. Applications have dependencies on shared libraries, and those libraries are published on NPM in their compiled form and not as Typescript source code. Even if an application is built using `ngtsc`, its dependencies may not have been.
+Not all Angular Classic code is compiled at the same time. Applications have dependencies on shared libraries, and those libraries are published on NPM in their compiled form and not as Typescript source code. Even if an application is built using `ngtsc`, its dependencies may not have been.
 
 If a particular library was not compiled with `ngtsc`, it does not have reified decorator properties in its `.js` distribution as described above. Linking it against a dependency that was not compiled in the same way will fail at runtime.
 
@@ -370,11 +370,11 @@ If a particular library was not compiled with `ngtsc`, it does not have reified 
 
 Since Ivy code can only be linked against other Ivy code, to build the application all pre-Ivy dependencies from NPM must be converted to Ivy dependencies. This transformation must happen as a precursor to running `ngtsc` on the application, and future compilation and linking operations need to be made against this transformed version of the dependencies.
 
-It is possible to transpile non-Ivy code in the Angular ClassicPackage Format (v6) into Ivy code, even though the `.js` files no longer contain the decorator information. This works because the Angular ClassicPackage Format includes `.metadata.json` files for each `.js` file. These metadata files contain information that was present in the Typescript source but was removed during transpilation to Javascript, and this information is sufficient to generate patched `.js` files which add the Ivy static properties to decorated classes.
+It is possible to transpile non-Ivy code in the Angular Classic Package Format (v6) into Ivy code, even though the `.js` files no longer contain the decorator information. This works because the Angular Classic Package Format includes `.metadata.json` files for each `.js` file. These metadata files contain information that was present in the Typescript source but was removed during transpilation to Javascript, and this information is sufficient to generate patched `.js` files which add the Ivy static properties to decorated classes.
 
 #### Metadata from APF
 
-The `.metadata.json` files currently being shipped to NPM includes, among other information, the arguments to the Angular Classicdecorators which `ngtsc` downlevels to static properties. For example, the `.metadata.json` file for `CommonModule` contains the information for its `NgModule` decorator which was originally present in the Typescript source:
+The `.metadata.json` files currently being shipped to NPM includes, among other information, the arguments to the Angular Classic decorators which `ngtsc` downlevels to static properties. For example, the `.metadata.json` file for `CommonModule` contains the information for its `NgModule` decorator which was originally present in the Typescript source:
 
 ```json
 "CommonModule": {
@@ -399,7 +399,7 @@ The `.metadata.json` files currently being shipped to NPM includes, among other 
 
 #### ngcc operation
 
-`ngcc` will by default scan `node_modules` and produce Ivy-compatible versions of every package it discovers built using Angular ClassicPackage Format (APF). It detects the APF by looking for the presence of a `.metadata.json` file alongside the package's `module` entrypoint.
+`ngcc` will by default scan `node_modules` and produce Ivy-compatible versions of every package it discovers built using Angular Classic Package Format (APF). It detects the APF by looking for the presence of a `.metadata.json` file alongside the package's `module` entrypoint.
 
 Alternatively, `ngcc` can be initiated by passing the name of a single NPM package. It will begin converting that package, and recurse into any dependencies of that package that it discovers which have not yet been converted.
 
@@ -434,13 +434,13 @@ In this mode, the on-disk `ngcc_node_modules` directory functions as a cache. If
 
 #### Compilation Model
 
-`ngtsc` operates using a pipeline of different transformations, each one processing a different Angular Classicdecorator and converting it into a static property on the type being decorated. `ngcc` is architected to reuse as much of that process as possible.
+`ngtsc` operates using a pipeline of different transformations, each one processing a different Angular Classic decorator and converting it into a static property on the type being decorated. `ngcc` is architected to reuse as much of that process as possible.
 
 Compiling a package in `ngcc` involves the following steps:
 
 1. Parse the JS files of the package with the Typescript parser.
 2. Invoke the `StaticReflector` system from the legacy `@angular-classic/compiler` to parse the `.metadata.json` files.
-3. Run through each Angular Classicdecorator in the Ivy system and compile:
+3. Run through each Angular Classic decorator in the Ivy system and compile:
     1. Use the JS AST plus the information from the `StaticReflector` to construct the input to the annotation's Compiler.
     2. Run the annotation's Compiler which will produce a partial class and its type declaration.
     3. Extract the static property definition from the partial class.
@@ -460,12 +460,12 @@ Similarly, the `.d.ts` files will be parsed by the TS parser, and the informatio
 
 ##### Module systems
 
-The Angular ClassicPackage Format includes more than one copy of a package's code. At minimum, it includes one ESM5 (ES5 code in ES Modules) entrypoint, one ES2015 entrypoint, and one UMD entrypoint. Some libraries _not_ following the package format may still work in the Angular ClassicCLI, if they export code that can be loaded by Webpack.
+The Angular Classic Package Format includes more than one copy of a package's code. At minimum, it includes one ESM5 (ES5 code in ES Modules) entrypoint, one ES2015 entrypoint, and one UMD entrypoint. Some libraries _not_ following the package format may still work in the Angular Classic CLI, if they export code that can be loaded by Webpack.
 
 Thus, `ngcc` will have two approaches for dealing with packages on NPM.
 
-1. APF Path: libraries following the Angular Classicpackage format will have their source code updated to contain Ivy definitions. This ensures tree-shaking will work properly.
-2. Compatibility Path: libraries where `ngcc` cannot determine how to safely modify the existing code will have a patching operation applied. This patching operation produces a "wrapper" file for each file containing an Angular Classicentity, which re-exports patched versions of the Angular Classicentities. This is not compatible with tree-shaking, but will work for libraries which `ngcc` cannot otherwise understand. A warning will be printed to notify the user they should update the version of the library if possible.
+1. APF Path: libraries following the Angular Classic package format will have their source code updated to contain Ivy definitions. This ensures tree-shaking will work properly.
+2. Compatibility Path: libraries where `ngcc` cannot determine how to safely modify the existing code will have a patching operation applied. This patching operation produces a "wrapper" file for each file containing an Angular Classic entity, which re-exports patched versions of the Angular Classic entities. This is not compatible with tree-shaking, but will work for libraries which `ngcc` cannot otherwise understand. A warning will be printed to notify the user they should update the version of the library if possible.
 
 For example, if a library ships with commonjs-only code or a UMD bundle that `ngcc` isn't able to patch directly, it can generate patching wrappers instead of modifying the input code.
 
@@ -473,6 +473,6 @@ For example, if a library ships with commonjs-only code or a UMD bundle that `ng
 
 The `@angular-classic/language-service` is mostly out of scope for this document, and will be treated in a separate design document. However, it's worth a consideration here as the architecture of the compiler impacts the language service's design.
 
-A Language Service is an analysis engine that integrates into an IDE such as Visual Studio Code. It processes code and provides static analysis information regarding that code, as well as enables specific IDE operations such as code completion, tracing of references, and refactoring. The `@angular-classic/language-service` is a wrapper around the Typescript language service (much as `ngtsc` wraps `tsc`) and extends the analysis of Typescript with a specific understanding of Angular Classicconcepts. In particular, it also understands the Angular ClassicTemplate Syntax and can bridge between the component class in Typescript and expressions in the templates.
+A Language Service is an analysis engine that integrates into an IDE such as Visual Studio Code. It processes code and provides static analysis information regarding that code, as well as enables specific IDE operations such as code completion, tracing of references, and refactoring. The `@angular-classic/language-service` is a wrapper around the Typescript language service (much as `ngtsc` wraps `tsc`) and extends the analysis of Typescript with a specific understanding of Angular Classic concepts. In particular, it also understands the Angular Classic Template Syntax and can bridge between the component class in Typescript and expressions in the templates.
 
-To provide code completion and other intelligence around template contents, the Angular ClassicLanguage Service must have a similar understanding of the template contents as the `ngtsc` compiler - it must know the selector map associated with the component, and the metadata of each directive or pipe used in the template. Whether the language service consumes the output of `ngcc` or reuses its metadata transformation logic, the data it needs will be available.
+To provide code completion and other intelligence around template contents, the Angular Classic Language Service must have a similar understanding of the template contents as the `ngtsc` compiler - it must know the selector map associated with the component, and the metadata of each directive or pipe used in the template. Whether the language service consumes the output of `ngcc` or reuses its metadata transformation logic, the data it needs will be available.

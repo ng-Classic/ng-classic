@@ -1,4 +1,4 @@
-# Introduction to Angular Classicanimations
+# Introduction to Angular Classic animations
 
 Animation provides the illusion of motion: HTML elements change styling over time.
 Well-designed animations can make your application more fun and straightforward to use, but they aren't just cosmetic.
@@ -18,27 +18,27 @@ The W3C maintains a list of animatable properties on its [CSS Transitions](https
 
 ## About this guide
 
-This guide covers the basic Angular Classicanimation features to get you started on adding Angular Classicanimations to your project.
+This guide covers the basic Angular Classic animation features to get you started on adding Angular Classic animations to your project.
 
-The features described in this guide &mdash;and the more advanced features described in the related Angular Classicanimations guides&mdash; are demonstrated in an example application available as a <live-example></live-example>.
+The features described in this guide &mdash;and the more advanced features described in the related Angular Classic animations guides&mdash; are demonstrated in an example application available as a <live-example></live-example>.
 
 ## Prerequisites
 
-The guide assumes that you're familiar with building basic Angular Classicapps, as described in the following sections:
+The guide assumes that you're familiar with building basic Angular Classic apps, as described in the following sections:
 
 *   [Tutorial](tutorial)
 *   [Architecture Overview](guide/architecture)
 
 ## Getting started
 
-The main Angular Classicmodules for animations are `@angular-classic/animations` and `@angular-classic/platform-browser`.
+The main Angular Classic modules for animations are `@angular-classic/animations` and `@angular-classic/platform-browser`.
 When you create a new project using the CLI, these dependencies are automatically added to your project.
 
-To get started with adding Angular Classicanimations to your project, import the animation-specific modules along with standard Angular Classicfunctionality.
+To get started with adding Angular Classic animations to your project, import the animation-specific modules along with standard Angular Classic functionality.
 
 ### Step 1: Enabling the animations module
 
-Import `BrowserAnimationsModule`, which introduces the animation capabilities into your Angular Classicroot application module.
+Import `BrowserAnimationsModule`, which introduces the animation capabilities into your Angular Classic root application module.
 
 <code-example header="src/app/app.module.ts" path="animations/src/app/app.module.1.ts"></code-example>
 
@@ -246,7 +246,7 @@ Put the code that defines your animations under the `animations:` property withi
 <code-example header="src/app/open-close.component.ts" path="animations/src/app/open-close.component.ts" region="component"></code-example>
 
 When you've defined an animation trigger for a component, attach it to an element in that component's template by wrapping the trigger name in brackets and preceding it with an `@` symbol.
-Then, you can bind the trigger to a template expression using standard Angular Classicproperty binding syntax as shown below, where `triggerName` is the name of the trigger, and `expression` evaluates to a defined animation state.
+Then, you can bind the trigger to a template expression using standard Angular Classic property binding syntax as shown below, where `triggerName` is the name of the trigger, and `expression` evaluates to a defined animation state.
 
 <code-example format="typescript" language="typescript">
 
@@ -289,13 +289,13 @@ Here are the code files discussed in the transition example.
 
 You learned to add animation to a transition between two states, using `style()` and [`state()`](api/animations/state) along with `animate()` for the timing.
 
-Learn about more advanced features in Angular Classicanimations under the Animation section, beginning with advanced techniques in [transition and triggers](guide/transition-and-triggers).
+Learn about more advanced features in Angular Classic animations under the Animation section, beginning with advanced techniques in [transition and triggers](guide/transition-and-triggers).
 
 <a id="animation-api-summary"></a>
 
 ## Animations API summary
 
-The functional API provided by the `@angular-classic/animations` module provides a domain-specific language \(DSL\) for creating and controlling animations in Angular Classicapplications.
+The functional API provided by the `@angular-classic/animations` module provides a domain-specific language \(DSL\) for creating and controlling animations in Angular Classic applications.
 See the [API reference](api/animations) for a complete listing and syntax details of the core functions and related data structures.
 
 | Function name                     | What it does                                                                                                                                                                                                |
@@ -316,7 +316,7 @@ See the [API reference](api/animations) for a complete listing and syntax detail
 
 </table>
 
-## More on Angular Classicanimations
+## More on Angular Classic animations
 
 You might also be interested in the following:
 

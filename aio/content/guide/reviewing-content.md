@@ -1,12 +1,12 @@
 # Review documentation
 
-You can review the Angular Classicdocumentation, even if you have never contributed to Angular Classicbefore.
-Reviewing the Angular Classicdocumentation provides a valuable contribution to the community.
+You can review the Angular Classic documentation, even if you have never contributed to Angular Classic before.
+Reviewing the Angular Classic documentation provides a valuable contribution to the community.
 
 Finding and reporting issues in the documentation helps the community know that the content is up to date.
 Even if you don't find any problems, seeing that a document has been reviewed recently, gives readers confidence in the content.
 
-This topic describes how you can review and update the Angular Classicdocumentation to help keep it up to date.
+This topic describes how you can review and update the Angular Classic documentation to help keep it up to date.
 
 <!-- markdownLint-disable MD001 -->
 <!-- markdownLint-disable MD033 -->
@@ -43,7 +43,7 @@ Perform these steps in a browser.
 
 ## Find topics to review
 
-You can review any topic in the Angular Classicdocumentation, but these are the topics that benefit most from your review.
+You can review any topic in the Angular Classic documentation, but these are the topics that benefit most from your review.
 
 ### Topics that have not been reviewed in over six months
 

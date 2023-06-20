@@ -3,7 +3,7 @@
 <!-- markdownLint-disable MD001 -->
 <!-- markdownLint-disable MD033 -->
 
-These are some of the common `git` tasks that you perform while editing Angular Classicdocumentation.
+These are some of the common `git` tasks that you perform while editing Angular Classic documentation.
 
 The procedures in this topic assume that the files on your local computer are organized as illustrated in the following diagram.
 
@@ -75,7 +75,7 @@ Now would be a good time to update your fork as well.
 
 You want to sync the `main` branch of your fork with the `main` branch of the upstream, `ng-classic/ng-classic` repo at least daily.
 This is good thing to do at the beginning of each day.
-Sync your fork after you update your clone of the upstream repo and before you start working on the Angular Classicdocumentation.
+Sync your fork after you update your clone of the upstream repo and before you start working on the Angular Classic documentation.
 
 This procedure updates your **fork** of the `ng-classic/ng-classic` repo on your local computer so it has the current code, as illustrated here.
 The circled numbers correspond to procedure steps.
@@ -127,27 +127,27 @@ They have been updated with any changes to the upstream `ng-classic/ng-classic` 
 
 ## Create a working branch for editing
 
-Almost all your editing on the Angular Classicdocumentation is done:
+Almost all your editing on the Angular Classic documentation is done:
 
 *   In the clone of your fork of `ng-classic/ng-classic`, not in your clone of `ng-classic/ng-classic`
 *   In a `working` or `feature` branch made from the `main` branch
 
 If this isn't clear, see [More about branches](#more-about-branches).
 
-Before you start editing the Angular Classicdocumentation, you want to:
+Before you start editing the Angular Classic documentation, you want to:
 
 1.  [Update your clone of `ng-classic/ng-classic`](#update-your-clone-of-the-upstream-repo).
 1.  [Update your fork of `ng-classic/ng-classic`](#update-your-fork-with-the-upstream-repo).
 1.  Create a working branch from the `main` branch.
 
-A working branch gives you a way to keep track of the changes that you make to the Angular Classicdocumentation.
+A working branch gives you a way to keep track of the changes that you make to the Angular Classic documentation.
 You also need a separate branch to submit those changes in a pull request.
 Creating a working branch also keeps your changes for one update separate from those of another.
 
 <div class="alert is-informational">
 
 **NOTE**: <br />
-Before you edit Angular Classicdocumentation, make sure that you are using the correct `working` branch.
+Before you edit Angular Classic documentation, make sure that you are using the correct `working` branch.
 You can confirm your current branch by running `git status` from your `working` directory before you start editing.
 
 </div>
@@ -196,10 +196,10 @@ You can confirm your current branch by running `git status` from your `working` 
 
 ## Save your changes
 
-This section describes how to save the changes you make to files in the working directory of your fork of the Angular Classicrepo.
+This section describes how to save the changes you make to files in the working directory of your fork of the Angular Classic repo.
 If you are new to using git and GitHub, review this section carefully to understand how to save your changes as you make them.
 
-As you make changes to files in the working directory of your fork of the Angular Classicrepo, your changes can be:
+As you make changes to files in the working directory of your fork of the Angular Classic repo, your changes can be:
 
 * **Made but not saved**
 
@@ -422,7 +422,7 @@ In this example, the result of all the changes in commits one through five is th
 
 ### Creating a working branch
 
-In `ng-classic/ng-classic`, the `main` branch contains all the changes that have been made to the Angular Classicproject since it began to get it to where it is today.
+In `ng-classic/ng-classic`, the `main` branch contains all the changes that have been made to the Angular Classic project since it began to get it to where it is today.
 The list of commits in the `main` branch have all been reviewed and tested.
 
 When you update the documentation, you might need to make several changes before have exactly what you want.
@@ -433,7 +433,7 @@ This example names the new `working` branch.
 
 <code-example format="shell" language="shell">
 
-&num; From the working directory of your personal/Angular Classicrepo
+&num; From the working directory of your personal/Angular Classic repo
 git checkout main;        &num; start from the main branch
 git checkout -b working;  &num; create a new branch named "working"
 

@@ -80,7 +80,7 @@ describe('runtime i18n', () => {
         Hello {{ name // i18n(ph="ph_name") }} {{ description // i18n(ph="ph_name") }}!
       </div>
     `);
-    expect(fixture.nativeElement.innerHTML).toEqual(`<div> Bonjour Angular ClassicWeb Framework! </div>`);
+    expect(fixture.nativeElement.innerHTML).toEqual(`<div> Bonjour Angular Classic Web Framework! </div>`);
     fixture.componentRef.instance.name = 'Other';
     fixture.componentRef.instance.description = 'Backend Framework';
     fixture.detectChanges();
@@ -119,7 +119,7 @@ describe('runtime i18n', () => {
     `);
     // the `obj` field is not yet defined, so 2nd and 3rd interpolations return empty
     // strings
-    expect(fixture.nativeElement.innerHTML).toEqual(`<div> Angular Classic-  -  (fr) </div>`);
+    expect(fixture.nativeElement.innerHTML).toEqual(`<div> Angular Classic -  -  (fr) </div>`);
 
     fixture.componentRef.instance.obj = {
       a: {b: 'value 1'},
@@ -127,7 +127,7 @@ describe('runtime i18n', () => {
     };
     fixture.detectChanges();
     expect(fixture.nativeElement.innerHTML)
-        .toEqual(`<div> Angular Classic- value 1 - value 2 (fr) </div>`);
+        .toEqual(`<div> Angular Classic - value 1 - value 2 (fr) </div>`);
   });
 
   it('should support elements', () => {
@@ -211,7 +211,7 @@ describe('runtime i18n', () => {
       </div>`);
     expect(fixture.nativeElement.innerHTML)
         .toEqual(
-            `<div><a>traduction Angular</a> hello <b title="start Angular Classicmiddle 0 end"><e></e><c>traduction</c></b></div>`);
+            `<div><a>traduction Angular</a> hello <b title="start Angular Classic middle 0 end"><e></e><c>traduction</c></b></div>`);
   });
 
   it('should support multiple sibling i18n blocks', () => {
@@ -646,7 +646,7 @@ describe('runtime i18n', () => {
             other {{{count}} minutes ago}
           }
           {name, select,
-            Angular Classic{Mr. Angular}
+            Angular Classic {Mr. Angular}
             other {Sir}
           }
         `);
@@ -1603,7 +1603,7 @@ describe('runtime i18n', () => {
           AppComp,
           `<input i18n i18n-title title="hello {{name}} - {{count}}" i18n-placeholder placeholder="bye {{count}} - {{name}}">`);
       expect(fixture.nativeElement.innerHTML)
-          .toEqual(`<input title="bonjour Angular Classic- 0" placeholder="au revoir 0 - Angular">`);
+          .toEqual(`<input title="bonjour Angular Classic - 0" placeholder="au revoir 0 - Angular">`);
 
       fixture.componentRef.instance.name = 'John';
       fixture.componentRef.instance.count = 5;
@@ -1849,14 +1849,14 @@ describe('runtime i18n', () => {
       `);
       // the `obj` field is not yet defined, so 2nd and 3rd interpolations return empty
       // strings
-      expect(fixture.nativeElement.firstChild.title).toEqual(`Angular Classic-  -  (fr)`);
+      expect(fixture.nativeElement.firstChild.title).toEqual(`Angular Classic -  -  (fr)`);
 
       fixture.componentRef.instance.obj = {
         a: {b: 'value 1'},
         getA: () => ({b: 'value 2'}),
       };
       fixture.detectChanges();
-      expect(fixture.nativeElement.firstChild.title).toEqual(`Angular Classic- value 1 - value 2 (fr)`);
+      expect(fixture.nativeElement.firstChild.title).toEqual(`Angular Classic - value 1 - value 2 (fr)`);
     });
 
     it('should support i18n attributes on <ng-container> elements', () => {
@@ -2335,15 +2335,15 @@ describe('runtime i18n', () => {
       @Component({
         selector: 'parent',
         template:
-            `<child i18n>and projection from {name, select, Angular Classic{Angular} other {{{name}}}}</child>`
+            `<child i18n>and projection from {name, select, Angular Classic {Angular} other {{{name}}}}</child>`
       })
       class Parent {
         name: string = 'Parent';
       }
       TestBed.configureTestingModule({declarations: [Parent, Child]});
       loadTranslations({
-        [computeMsgId('{VAR_SELECT, select, Angular Classic{Angular} other {{INTERPOLATION}}}')]:
-            '{VAR_SELECT, select, Angular Classic{Angular} other {{INTERPOLATION}}}',
+        [computeMsgId('{VAR_SELECT, select, Angular Classic {Angular} other {{INTERPOLATION}}}')]:
+            '{VAR_SELECT, select, Angular Classic {Angular} other {{INTERPOLATION}}}',
         [computeMsgId('Child content {$START_TAG_NG_CONTENT}{$CLOSE_TAG_NG_CONTENT}')]:
             'Contenu enfant {$START_TAG_NG_CONTENT}{$CLOSE_TAG_NG_CONTENT}',
         [computeMsgId('and projection from {$ICU}')]: 'et projection depuis {$ICU}'

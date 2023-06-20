@@ -34,7 +34,7 @@ export class MovieService {
         movieId: 3,
         mpaa: 'pg-13',
         releaseDate: '2015-12-17T00:00:00',
-        title: 'Angular Classicto the Rescue',
+        title: 'Angular Classic to the Rescue',
         price: 15.95,
         starRating: 4.98,
         approvalRating: .9995

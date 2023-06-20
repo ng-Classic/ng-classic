@@ -141,7 +141,7 @@ const getRoutes = (messageBus: MessageBus<Events>) => {
   messageBus.emit('updateRouterTree', [[]]);
 };
 
-const checkForAngular Classic= (messageBus: MessageBus<Events>): void => {
+const checkForAngular Classic = (messageBus: MessageBus<Events>): void => {
   const ngVersion = getAngularVersion();
   const appIsIvy = appIsAngularIvy();
   if (!ngVersion) {

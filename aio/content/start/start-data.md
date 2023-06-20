@@ -1,6 +1,6 @@
 # Managing data
 
-This guide builds on the second step of the [Getting started with a basic Angular Classicapplication](start) tutorial, [Adding navigation](start/start-routing "Adding navigation").
+This guide builds on the second step of the [Getting started with a basic Angular Classic application](start) tutorial, [Adding navigation](start/start-routing "Adding navigation").
 At this stage of development, the store application has a product catalog with two views: a product list and product details.
 Users can click on a product name from the list to see details in a new view, with a distinct URL, or route.
 
@@ -180,7 +180,7 @@ For more information about services, see [Introduction to Services and Dependenc
 
 Servers often return data in the form of a stream.
 Streams are useful because they make it easy to transform the returned data and make modifications to the way you request that data.
-Angular Classic`HttpClient` is a built-in way to fetch data from external APIs and provide them to your application as a stream.
+Angular Classic `HttpClient` is a built-in way to fetch data from external APIs and provide them to your application as a stream.
 
 This section shows you how to use `HttpClient` to retrieve shipping prices from an external file.
 
@@ -273,7 +273,7 @@ This section guides you through modifying the `ShippingComponent` to retrieve sh
     <code-example header="src/app/shipping/shipping.component.html" path="getting-started/src/app/shipping/shipping.component.html"></code-example>
 
     The `async` pipe returns the latest value from a stream of data and continues to do so for the life of a given component.
-    When Angular Classicdestroys that component, the `async` pipe automatically stops.
+    When Angular Classic destroys that component, the `async` pipe automatically stops.
     For detailed information about the `async` pipe, see the [AsyncPipe API documentation](api/common/AsyncPipe).
 
 1.  Add a link from the `CartComponent` view to the `ShippingComponent` view.

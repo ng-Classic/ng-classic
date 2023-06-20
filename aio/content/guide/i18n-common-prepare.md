@@ -21,7 +21,7 @@ Place it on every element tag that contains fixed text you want to translate.
 
 <div class="alert is-helpful">
 
-The `i18n` attribute is a custom attribute that the Angular Classictools and compilers recognize.
+The `i18n` attribute is a custom attribute that the Angular Classic tools and compilers recognize.
 
 </div>
 
@@ -200,12 +200,12 @@ The following code example shows the value of the [`$localize`][AioApiLocalizeIn
 <a name="how-meanings-control-text-extraction-and-merges"></a> How meanings control text extraction and merges
 </header>
 
-The Angular Classicextraction tool generates a translation unit entry for each `i18n` attribute in a template.
-The Angular Classicextraction tool assigns each translation unit a unique ID based on the *meaning* and *description*.
+The Angular Classic extraction tool generates a translation unit entry for each `i18n` attribute in a template.
+The Angular Classic extraction tool assigns each translation unit a unique ID based on the *meaning* and *description*.
 
 <div class="alert is-helpful">
 
-For more information about the Angular Classicextraction tool, see [Work with translation files][AioGuideI18nCommonTranslationFiles].
+For more information about the Angular Classic extraction tool, see [Work with translation files][AioGuideI18nCommonTranslationFiles].
 
 </div>
 
@@ -288,7 +288,7 @@ The following pluralization categories are available for English and may change 
 | `many`                 | Quantity is a large number | `many { }`                 |
 | `other`                | The default quantity       | `other { }`                |
 
-If none of the pluralization categories match, Angular Classicuses `other` to match the standard fallback for a missing category.
+If none of the pluralization categories match, Angular Classic uses `other` to match the standard fallback for a missing category.
 
 <!--todo: replace with code-example -->
 
@@ -395,7 +395,7 @@ selection_category { text }
 
 Different locales have different grammatical constructions that increase the difficulty of translation.
 Use HTML markup.
-If none of the selection categories match, Angular Classicuses `other` to match the standard fallback for a missing category.
+If none of the selection categories match, Angular Classic uses `other` to match the standard fallback for a missing category.
 
 <!--todo: replace with code-example -->
 

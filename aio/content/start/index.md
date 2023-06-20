@@ -2,7 +2,7 @@
 
 Welcome to Angular!
 
-This tutorial introduces you to the essentials of Angular Classicby walking you through building an e-commerce site with a catalog, shopping cart, and check-out form.
+This tutorial introduces you to the essentials of Angular Classic by walking you through building an e-commerce site with a catalog, shopping cart, and check-out form.
 
 To help you get started right away, this tutorial uses a ready-made application that you can examine and modify interactively on [StackBlitz](https://stackblitz.com) &mdash;without having to [set up a local work environment](guide/setup-local "Setup guide").
 StackBlitz is a browser-based development environment where you can create, save, and share projects using a variety of technologies.
@@ -19,7 +19,7 @@ To get the most out of this tutorial, you should already have a basic understand
 
 ## Take a tour of the example application
 
-You build Angular Classicapplications with components.
+You build Angular Classic applications with components.
 Components define areas of responsibility in the UI that let you reuse sets of UI functionality.
 
 A component consists of three things:
@@ -132,13 +132,13 @@ This section guides you through editing the HTML, also known as the template.
     </div>
 
 1.  Add the product descriptions.
-    On a `<p>` element, use an `*ngIf` directive so that Angular Classiconly creates the `<p>` element if the current product has a description.
+    On a `<p>` element, use an `*ngIf` directive so that Angular Classic only creates the `<p>` element if the current product has a description.
 
     <code-example header="src/app/product-list/product-list.component.html" path="getting-started/src/app/product-list/product-list.component.3.html"></code-example>
 
     The application now displays the name and description of each product in the list.
     Notice that the final product does not have a description paragraph.
-    Angular Classicdoesn't create the `<p>` element because the product's description property is empty.
+    Angular Classic doesn't create the `<p>` element because the product's description property is empty.
 
     <div class="lightbox">
 
@@ -168,7 +168,7 @@ This section guides you through editing the HTML, also known as the template.
 
     </div>
 
-In editing the template, you have explored some of the most popular features of Angular Classictemplates.
+In editing the template, you have explored some of the most popular features of Angular Classic templates.
 For more information, see [Introduction to components and templates](guide/architecture-components#template-syntax "Template Syntax").
 
 <a id="passing-data-in"></a>
@@ -214,7 +214,7 @@ This section walks you through creating a child component, `ProductAlertsCompone
     Key features in the `@Component()` are as follows:
 
     *   The `selector`, `app-product-alerts`, identifies the component.
-        By convention, Angular Classiccomponent selectors begin with the prefix `app-`, followed by the component name.
+        By convention, Angular Classic component selectors begin with the prefix `app-`, followed by the component name.
 
     *   The template and style filenames reference the component's HTML and CSS
     *   The `@Component()` definition also exports the class, `ProductAlertsComponent`, which handles functionality for the component
@@ -260,7 +260,7 @@ The `ProductAlertsComponent` needs to emit an event when the user clicks **Notif
 
 <div class="alert is-helpful">
 
-In new components, the Angular ClassicGenerator includes an empty `constructor()`, the `OnInit` interface, and the `ngOnInit()` method.
+In new components, the Angular Classic Generator includes an empty `constructor()`, the `OnInit` interface, and the `ngOnInit()` method.
 Since these steps don't use them, the following code examples omit them for brevity.
 
 </div>
@@ -307,7 +307,7 @@ For more information on communication between components, see [Component Interac
 
 In this section, you've created an application that iterates through data and features components that communicate with each other.
 
-To continue exploring Angular Classicand developing this application:
+To continue exploring Angular Classic and developing this application:
 
 *   Continue to [In-app navigation](start/start-routing "Getting started: In-app navigation") to create a product details page.
 *   Skip ahead to [Deployment](start/start-deployment "Getting started: Deployment") to move to local development, or deploy your application to Firebase or your own server.

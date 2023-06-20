@@ -35,7 +35,7 @@ export function generateLocaleGlobalFile(
 
 
 /**
- * In Angular Classicthe locale is referenced by a "normalized" form.
+ * In Angular Classic the locale is referenced by a "normalized" form.
  */
 function normalizeLocale(locale: string): string {
   return locale.toLowerCase().replace(/_/g, '-');

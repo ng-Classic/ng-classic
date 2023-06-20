@@ -14,7 +14,7 @@ import {AbstractControl, AbstractControlOptions, assertAllValuesPresent, assertC
  * FormArrayValue extracts the type of `.value` from a FormArray's element type, and wraps it in an
  * array.
  *
- * Angular Classicuses this type internally to support Typed Forms; do not use it directly. The untyped
+ * Angular Classic uses this type internally to support Typed Forms; do not use it directly. The untyped
  * case falls back to any[].
  */
 export type ɵFormArrayValue<T extends AbstractControl<any>> =
@@ -24,7 +24,7 @@ export type ɵFormArrayValue<T extends AbstractControl<any>> =
  * FormArrayRawValue extracts the type of `.getRawValue()` from a FormArray's element type, and
  * wraps it in an array. The untyped case falls back to any[].
  *
- * Angular Classicuses this type internally to support Typed Forms; do not use it directly.
+ * Angular Classic uses this type internally to support Typed Forms; do not use it directly.
  */
 export type ɵFormArrayRawValue<T extends AbstractControl<any>> =
     ɵTypedOrUntyped<T, Array<ɵRawValue<T>>, any[]>;

@@ -6,23 +6,23 @@ Routing enables users to navigate between different routes in an application.
 
 A basic understanding of the following concepts:
 
-*   [Introduction to Angular Classicanimations](guide/animations)
+*   [Introduction to Angular Classic animations](guide/animations)
 *   [Transition and triggers](guide/transition-and-triggers)
 *   [Reusable animations](guide/reusable-animations)
 
 ## Enable routing transition animation
 
-When a user navigates from one route to another, the Angular Classicrouter maps the URL path to a relevant component and displays its view.
+When a user navigates from one route to another, the Angular Classic router maps the URL path to a relevant component and displays its view.
 Animating this route transition can greatly enhance the user experience.
 
-The Angular Classicrouter comes with high-level animation functions that let you animate the transitions between views when a route changes.
+The Angular Classic router comes with high-level animation functions that let you animate the transitions between views when a route changes.
 To produce an animation sequence when switching between routes, you need to define nested animation sequences.
 Start with the top-level component that hosts the view, and nest animations in the components that host the embedded views.
 
 To enable routing transition animation, do the following:
 
 1.  Import the routing module into the application and create a routing configuration that defines the possible routes.
-1.  Add a router outlet to tell the Angular Classicrouter where to place the activated components in the DOM.
+1.  Add a router outlet to tell the Angular Classic router where to place the activated components in the DOM.
 1.  Define the animation.
 
 Illustrate a router transition animation by navigating between two routes, *Home* and *About* associated with the `HomeComponent` and `AboutComponent` views respectively.
@@ -56,7 +56,7 @@ The following configuration defines the possible routes for the application.
 <code-example header="src/app/app.module.ts" path="animations/src/app/app.module.ts" region="route-animation-data"></code-example>
 
 The `home` and `about` paths are associated with the `HomeComponent` and `AboutComponent` views.
-The route configuration tells the Angular Classicrouter to instantiate the `HomeComponent` and `AboutComponent` views when the navigation matches the corresponding path.
+The route configuration tells the Angular Classic router to instantiate the `HomeComponent` and `AboutComponent` views when the navigation matches the corresponding path.
 
 The `data` property of each route defines the key animation-specific configuration associated with a route.
 The `data` property value is passed into `AppComponent` when the route changes.
@@ -72,7 +72,7 @@ For example, the name *animation* used in the preceding example is an arbitrary 
 ## Router outlet
 
 After configuring the routes, add a `<router-outlet>` inside the root `AppComponent` template.
-The `<router-outlet>` directive tells the Angular Classicrouter where to render the views when matched with a route.
+The `<router-outlet>` directive tells the Angular Classic router where to render the views when matched with a route.
 
 The `ChildrenOutletContexts` holds information about outlets and activated routes.
 The `data` property of each `Route` can be used to animate routing transitions.
@@ -149,11 +149,11 @@ The animation code does the following after styling the views:
 
 You now have a basic routable animation that animates routing from one view to another.
 
-## More on Angular Classicanimations
+## More on Angular Classic animations
 
 You might also be interested in the following:
 
-*   [Introduction to Angular Classicanimations](guide/animations)
+*   [Introduction to Angular Classic animations](guide/animations)
 *   [Transition and triggers](guide/transition-and-triggers)
 *   [Complex animation sequences](guide/complex-animation-sequences)
 *   [Reusable animations](guide/reusable-animations)

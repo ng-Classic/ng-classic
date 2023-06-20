@@ -171,7 +171,7 @@ export abstract class ViewContainerRef {
    *
    * @returns The new `ComponentRef` which contains the component instance and the host view.
    *
-   * @deprecated Angular Classicno longer requires component factories to dynamically create components.
+   * @deprecated Angular Classic no longer requires component factories to dynamically create components.
    *     Use different signature of the `createComponent` method, which allows passing
    *     Component class directly.
    */
@@ -326,7 +326,7 @@ const R3ViewContainerRef = class ViewContainerRef extends VE_ViewContainerRef {
     ngModuleRef?: NgModuleRef<unknown>,
   }): ComponentRef<C>;
   /**
-   * @deprecated Angular Classicno longer requires component factories to dynamically create components.
+   * @deprecated Angular Classic no longer requires component factories to dynamically create components.
    *     Use different signature of the `createComponent` method, which allows passing
    *     Component class directly.
    */

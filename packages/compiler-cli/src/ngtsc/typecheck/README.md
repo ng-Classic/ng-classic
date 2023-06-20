@@ -1,6 +1,6 @@
 # The Template Type Checking Engine
 
-The `typecheck` package is concerned with template type-checking, the process by which the compiler determines and understands the TypeScript types of constructs within component templates. It's used to perform actual type checking of templates (similarly to how TypeScript checks code for type errors). It also provides the `TemplateTypeChecker` API which is a conceptual analogue to TypeScript's own `ts.TypeChecker`, exposing various semantic details about template types to consumers such as the Angular ClassicLanguage Service.
+The `typecheck` package is concerned with template type-checking, the process by which the compiler determines and understands the TypeScript types of constructs within component templates. It's used to perform actual type checking of templates (similarly to how TypeScript checks code for type errors). It also provides the `TemplateTypeChecker` API which is a conceptual analogue to TypeScript's own `ts.TypeChecker`, exposing various semantic details about template types to consumers such as the Angular Classic Language Service.
 
 The template type-checking engine is complex, as TypeScript itself is not very pluggable when it comes to the type system. The main algorithm for template type-checking is as follows:
 
@@ -306,7 +306,7 @@ The guard expression causes TypeScript to narrow the type of `this.user` within 
 
 ### Generation process
 
-Angular Classictemplates allow forward references. For example, the template:
+Angular Classic templates allow forward references. For example, the template:
 
 ```html
 The value is: {{in.value}}
@@ -367,7 +367,7 @@ In practice, a `TcbOp` queue is maintained as an array, where each element begin
 
 #### `Scope`
 
-Angular Classictemplates are nested structures, as the main template can contain embedded views, which can contain their own views. Much like in other programming languages, this leads to a scoped hierarchy of symbol visibility and name resolution.
+Angular Classic templates are nested structures, as the main template can contain embedded views, which can contain their own views. Much like in other programming languages, this leads to a scoped hierarchy of symbol visibility and name resolution.
 
 This is reflected in the TCB generation system via the `Scope` class, which actually performs the TCB generation itself. Each embedded view is its own `Scope`, with its own `TcbOp` queue.
 
@@ -603,7 +603,7 @@ Because TCBs are TypeScript code, the TypeScript language service can be used wi
 
 Step 2 in this algorithm is made possible by the `TemplateTypeChecker`'s APIs for retrieving `Symbol`s for template nodes. A `Symbol` is a structure describing the TCB information associated with a given template node, including positions within the TCB where type information about the node in question can be found.
 
-For example, an `ElementSymbol` contains a TCB location for the element type, as well as any directives which may be present on the element. Such information can be used by a consumer to query TypeScript for further information about the types present in the template for that element. This is used in the Angular ClassicLanguage Service to implement many of its features.
+For example, an `ElementSymbol` contains a TCB location for the element type, as well as any directives which may be present on the element. Such information can be used by a consumer to query TypeScript for further information about the types present in the template for that element. This is used in the Angular Classic Language Service to implement many of its features.
 
 ## The type checking workflow
 

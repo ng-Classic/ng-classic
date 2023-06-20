@@ -20,7 +20,7 @@ export const SYMBOL_TEXT = ts.SymbolDisplayPartKind[ts.SymbolDisplayPartKind.tex
 
 
 /**
- * Label for various kinds of Angular Classicentities for TS display info.
+ * Label for various kinds of Angular Classic entities for TS display info.
  */
 export enum DisplayInfoKind {
   ATTRIBUTE = 'attribute',

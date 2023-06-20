@@ -5,7 +5,7 @@
 This topic describes how to respond to test failures and feedback on your pull request.
 
 After you open a pull request, it is tested and reviewed.
-After it's approved, the changes are merged into `ng-classic/ng-classic` and they become part of the Angular Classicdocumentation.
+After it's approved, the changes are merged into `ng-classic/ng-classic` and they become part of the Angular Classic documentation.
 
 While some pull requests are approved with no further action on your part, most pull requests receive feedback that requires you to make a change.
 

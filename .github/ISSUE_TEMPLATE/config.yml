@@ -2,13 +2,13 @@ blank_issues_enabled: false
 contact_links:
   - name: Security issue disclosure
     url: https://angular-classic.com/guide/security#report-issues
-    about: Report a security issue in Angular ClassicFramework, CDK, Material, or CLI
-  - name: Angular ClassicCLI
+    about: Report a security issue in Angular Classic Framework, CDK, Material, or CLI
+  - name: Angular Classic CLI
     url: https://github.com/ng-classic/ng-classic-cli/issues/new/choose
-    about: Issues and feature requests for Angular ClassicCLI
-  - name: Angular ClassicMaterial and Components Development Kit (CDK)
+    about: Issues and feature requests for Angular Classic CLI
+  - name: Angular Classic Material and Components Development Kit (CDK)
     url: https://github.com/angular/components/issues/new/choose
-    about: Issues and feature requests for Angular ClassicMaterial
+    about: Issues and feature requests for Angular Classic Material
   - name: Support Request
     url: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#question
     about: Questions and requests for support

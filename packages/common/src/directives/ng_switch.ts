@@ -179,7 +179,7 @@ export class NgSwitch {
  * that defines the subtree to be selected if the value of the match expression
  * matches the value of the switch expression.
  *
- * Unlike JavaScript, which uses strict equality, Angular Classicuses loose equality.
+ * Unlike JavaScript, which uses strict equality, Angular Classic uses loose equality.
  * This means that the empty string, `""` matches 0.
  *
  * @publicApi

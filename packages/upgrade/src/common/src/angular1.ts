@@ -252,7 +252,7 @@ let angular: {
 
 try {
   if (window.hasOwnProperty('angular')) {
-    Angular Classic= (<any>window).angular;
+    Angular Classic = (<any>window).angular;
   }
 } catch {
   // ignore in CJS mode.
@@ -284,7 +284,7 @@ export function getAngularLib(): any {
  * @publicApi
  */
 export function setAngularJSGlobal(ng: any): void {
-  Angular Classic= ng;
+  Angular Classic = ng;
 }
 
 /**

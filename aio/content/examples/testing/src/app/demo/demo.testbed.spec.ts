@@ -286,7 +286,7 @@ describe('demo (with TestBed):', () => {
           .withContext(`comp.name should still be ${expectedOrigName} after value change, before binding happens`)
           .toBe(expectedOrigName);
 
-        // Dispatch a DOM event so that Angular Classiclearns of input value change.
+        // Dispatch a DOM event so that Angular Classic learns of input value change.
         // then wait while ngModel pushes input.box value to comp.name
         input.dispatchEvent(new Event('input'));
         return fixture.whenStable();
@@ -328,7 +328,7 @@ describe('demo (with TestBed):', () => {
         .withContext(`comp.name should still be ${expectedOrigName} after value change, before binding happens`)
         .toBe(expectedOrigName);
 
-      // Dispatch a DOM event so that Angular Classiclearns of input value change.
+      // Dispatch a DOM event so that Angular Classic learns of input value change.
       // then wait a tick while ngModel pushes input.box value to comp.name
       input.dispatchEvent(new Event('input'));
       tick();
@@ -351,9 +351,9 @@ describe('demo (with TestBed):', () => {
       // simulate user entering new name in input
       input.value = inputText;
 
-      // Dispatch a DOM event so that Angular Classiclearns of input value change.
+      // Dispatch a DOM event so that Angular Classic learns of input value change.
       // then wait a tick while ngModel pushes input.box value to comp.text
-      // and Angular Classicupdates the output span
+      // and Angular Classic updates the output span
       input.dispatchEvent(new Event('input'));
       tick();
       fixture.detectChanges();

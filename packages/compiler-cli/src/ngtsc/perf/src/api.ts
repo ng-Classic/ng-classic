@@ -50,12 +50,12 @@ export enum PerfPhase {
   TypeScriptDiagnostics,
 
   /**
-   * Time spent in Angular Classicanalysis of individual classes in the program.
+   * Time spent in Angular Classic analysis of individual classes in the program.
    */
   Analysis,
 
   /**
-   * Time spent in Angular Classicglobal analysis (synthesis of analysis information into a complete
+   * Time spent in Angular Classic global analysis (synthesis of analysis information into a complete
    * understanding of the program).
    */
   Resolve,
@@ -82,7 +82,7 @@ export enum PerfPhase {
   TypeScriptEmit,
 
   /**
-   * Time spent by Angular Classicperforming code transformations of ASTs as they're about to be emitted.
+   * Time spent by Angular Classic performing code transformations of ASTs as they're about to be emitted.
    *
    * This includes the actual code generation step for templates, and occurs during the emit phase
    * (but is tracked separately from `TypeScriptEmit` time).
@@ -105,47 +105,47 @@ export enum PerfPhase {
   TtcSymbol,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service calculating a "get references" or a renaming
+   * Time spent by the Angular Classic Language Service calculating a "get references" or a renaming
    * operation.
    */
   LsReferencesAndRenames,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service calculating a "quick info" operation.
+   * Time spent by the Angular Classic Language Service calculating a "quick info" operation.
    */
   LsQuickInfo,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service calculating a "get type definition" or "get
+   * Time spent by the Angular Classic Language Service calculating a "get type definition" or "get
    * definition" operation.
    */
   LsDefinition,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service calculating a "get completions" (AKA autocomplete)
+   * Time spent by the Angular Classic Language Service calculating a "get completions" (AKA autocomplete)
    * operation.
    */
   LsCompletions,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service calculating a "view template typecheck block"
+   * Time spent by the Angular Classic Language Service calculating a "view template typecheck block"
    * operation.
    */
   LsTcb,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service calculating diagnostics.
+   * Time spent by the Angular Classic Language Service calculating diagnostics.
    */
   LsDiagnostics,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service calculating a "get component locations for template"
+   * Time spent by the Angular Classic Language Service calculating a "get component locations for template"
    * operation.
    */
   LsComponentLocations,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service calculating signature help.
+   * Time spent by the Angular Classic Language Service calculating signature help.
    */
   LsSignatureHelp,
 
@@ -155,12 +155,12 @@ export enum PerfPhase {
   LAST,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service calculating code fixes.
+   * Time spent by the Angular Classic Language Service calculating code fixes.
    */
   LsCodeFixes,
 
   /**
-   * Time spent by the Angular ClassicLanguage Service to fix all detected same type errors.
+   * Time spent by the Angular Classic Language Service to fix all detected same type errors.
    */
   LsCodeFixesAll,
 }
@@ -290,7 +290,7 @@ export enum PerfCheckpoint {
   TypeScriptProgramCreate,
 
   /**
-   * The point just before Angular Classicanalysis starts.
+   * The point just before Angular Classic analysis starts.
    *
    * In the main usage pattern for the compiler, TypeScript diagnostics have been calculated at this
    * point, so the `ts.TypeChecker` has fully ingested the current program, all `ts.Type` structures
@@ -299,12 +299,12 @@ export enum PerfCheckpoint {
   PreAnalysis,
 
   /**
-   * The point just after Angular Classicanalysis completes.
+   * The point just after Angular Classic analysis completes.
    */
   Analysis,
 
   /**
-   * The point just after Angular Classicresolution is complete.
+   * The point just after Angular Classic resolution is complete.
    */
   Resolve,
 

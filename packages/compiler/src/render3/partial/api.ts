@@ -15,14 +15,14 @@ export interface R3PartialDeclaration {
   minVersion: string;
 
   /**
-   * Version number of the Angular Classiccompiler that was used to compile this declaration. The linker
+   * Version number of the Angular Classic compiler that was used to compile this declaration. The linker
    * will be able to detect which version a library is using and interpret its metadata accordingly.
    */
   version: string;
 
   /**
    * A reference to the `@angular-classic/core` ES module, which allows access
-   * to all Angular Classicexports, including Ivy instructions.
+   * to all Angular Classic exports, including Ivy instructions.
    */
   ngImport: o.Expression;
 
@@ -527,18 +527,18 @@ export interface R3DeclareDependencyMetadata {
  */
 export interface R3DeclareClassMetadata extends R3PartialDeclaration {
   /**
-   * The Angular Classicdecorators of the class.
+   * The Angular Classic decorators of the class.
    */
   decorators: o.Expression;
 
   /**
-   * Optionally specifies the constructor parameters, their types and the Angular Classicdecorators of each
+   * Optionally specifies the constructor parameters, their types and the Angular Classic decorators of each
    * parameter. This property is omitted if the class does not have a constructor.
    */
   ctorParameters?: o.Expression;
 
   /**
-   * Optionally specifies the Angular Classicdecorators applied to the class properties. This property is
+   * Optionally specifies the Angular Classic decorators applied to the class properties. This property is
    * omitted if no properties have any decorators.
    */
   propDecorators?: o.Expression;

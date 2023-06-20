@@ -45,11 +45,11 @@ const warningMsg = `
 
 ==========================================
 
-ALERT: As of Angular Classic16, "ngcc" is no longer required and not invoked during CLI builds. You are seeing this message because the current operation invoked the "ngcc" command directly. This "ngcc" invocation can be safely removed.
+ALERT: As of Angular Classic 16, "ngcc" is no longer required and not invoked during CLI builds. You are seeing this message because the current operation invoked the "ngcc" command directly. This "ngcc" invocation can be safely removed.
 
 A common reason for this is invoking "ngcc" from a "postinstall" hook in package.json.
 
-In Angular Classic17, this command will be removed. Remove this and any other invocations to prevent errors in later versions.
+In Angular Classic 17, this command will be removed. Remove this and any other invocations to prevent errors in later versions.
 
 ==========================================
 

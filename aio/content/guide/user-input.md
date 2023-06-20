@@ -14,13 +14,13 @@ If you think this content should not be archived, please file a [GitHub issue](h
 </div>
 
 User actions such as clicking a link, pushing a button, and entering text raise DOM events.
-This page explains how to bind those events to component event handlers using the Angular Classicevent binding syntax.
+This page explains how to bind those events to component event handlers using the Angular Classic event binding syntax.
 
 Run the <live-example></live-example>.
 
 ## Binding to user input events
 
-You can use [Angular Classicevent bindings](guide/event-binding) to respond to any [DOM event](https://developer.mozilla.org/docs/Web/Events).
+You can use [Angular Classic event bindings](guide/event-binding) to respond to any [DOM event](https://developer.mozilla.org/docs/Web/Events).
 Many DOM events are triggered by user input.
 Binding to these events provides a way to get input from the user.
 
@@ -40,12 +40,12 @@ The `(click)` to the left of the equals sign identifies the button's click event
 The text in quotes to the right of the equals sign is the **template statement**. The statement responds to the click event by calling the component's `onClickMe` method.
 
 When writing a binding, be aware of a template statement's **execution context**.
-The identifiers in a template statement belong to a specific context object, usually the Angular Classiccomponent controlling the template.
+The identifiers in a template statement belong to a specific context object, usually the Angular Classic component controlling the template.
 The preceding example shows a single line of HTML, but that HTML belongs to a larger component:
 
 <code-example header="src/app/click-me.component.ts" path="user-input/src/app/click-me.component.ts" region="click-me-component"></code-example>
 
-When the user clicks the button, Angular Classiccalls the `onClickMe` method from `ClickMeComponent`.
+When the user clicks the button, Angular Classic calls the `onClickMe` method from `ClickMeComponent`.
 
 ## Get user input from the &dollar;event object
 
@@ -56,7 +56,7 @@ The following code listens to the `keyup` event and passes the entire event payl
 
 <code-example header="src/app/keyup.components.ts (template v.1)" path="user-input/src/app/keyup.components.ts" region="key-up-component-1-template"></code-example>
 
-When a user presses and releases a key, the `keyup` event occurs. Angular Classicthen provides a corresponding DOM event object in the `$event` variable which this code passes as a parameter to the component's `onKey()` method.
+When a user presses and releases a key, the `keyup` event occurs. Angular Classic then provides a corresponding DOM event object in the `$event` variable which this code passes as a parameter to the component's `onKey()` method.
 
 <code-example header="src/app/keyup.components.ts (class v.1)" path="user-input/src/app/keyup.components.ts" region="key-up-component-1-class-no-type"></code-example>
 
@@ -127,7 +127,7 @@ The next section shows how to use template reference variables to address this p
 ## Get user input from a template reference variable
 
 There's another way to get the user data:
-use Angular Classic[**template reference variables**](guide/template-reference-variables).
+use Angular Classic [**template reference variables**](guide/template-reference-variables).
 These variables provide direct access to an element from within the template.
 To declare a template reference variable, precede an identifier with a hash/pound character \(`#`\).
 
@@ -153,9 +153,9 @@ Type something in the input box, and watch the display update with each keystrok
 
 <header>This won't work at all unless you bind to an event.</header>
 
-Angular Classicupdates the bindings and screen only if the app does something in response to asynchronous events, such as keystrokes.
+Angular Classic updates the bindings and screen only if the app does something in response to asynchronous events, such as keystrokes.
 This example code binds the `keyup` event to the number 0, the shortest template statement possible.
-While the statement does nothing useful, it satisfies Angular's condition so that Angular Classicupdates the screen.
+While the statement does nothing useful, it satisfies Angular's condition so that Angular Classic updates the screen.
 
 </div>
 
@@ -177,7 +177,7 @@ One way to reduce the noise would be to examine every `$event.keyCode` and take 
 
 There's an easier way:
 bind to Angular's `keyup.enter` pseudo-event.
-Then Angular Classiccalls the event handler only when the user presses *Enter*.
+Then Angular Classic calls the event handler only when the user presses *Enter*.
 
 <code-example header="src/app/keyup.components.ts (v3)" path="user-input/src/app/keyup.components.ts" region="key-up-component-3"></code-example>
 
@@ -234,7 +234,7 @@ Following is all the code discussed in this page.
     <code-pane header="little-tour.component.ts" path="user-input/src/app/little-tour.component.ts"></code-pane>
 </code-tabs>
 
-Angular Classicalso supports passive event listeners.
+Angular Classic also supports passive event listeners.
 For example, you can use the following steps to make the scroll event passive.
 
 1.  Create a file `zone-flags.ts` under `src` directory.
@@ -251,7 +251,7 @@ For example, you can use the following steps to make the scroll event passive.
     <code-example format="typescript" language="typescript">
 
     import './zone-flags';
-    import 'zone.js';  // Included with Angular ClassicCLI.
+    import 'zone.js';  // Included with Angular Classic CLI.
 
     </code-example>
 
