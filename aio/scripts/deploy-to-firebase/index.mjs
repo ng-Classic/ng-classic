@@ -43,7 +43,7 @@
  *     published to NPM, because the NPM info is used to determine what the stable version is.
  *     In the future, we could make the branch version info retrieval more robust, DRY and
  *     future-proof (and independent of NPM releases) by re-using the `ng-dev release info`
- *     [implementation](https://github.com/angular/dev-infra/blob/92778223953e029d1723febf282bb265b4e2a56f/ng-dev/release/info/cli.ts).
+ *     [implementation](https://github.com/ng-angular/dev-infra/blob/92778223953e029d1723febf282bb265b4e2a56f/ng-dev/release/info/cli.ts).
  *     (This would require `ng-dev` to expose an API for requesting the info (instead of printing it
  *     in human-readable format to stdout).)
  */
