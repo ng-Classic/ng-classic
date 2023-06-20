@@ -34,15 +34,3 @@ jobs:
           fetch-depth: 0
       - name: Generate `events.json`
         run: node aio/scripts/generate-events/index.mjs --ignore-invalid-dates
-      - name: Create a PR (if necessary)
-        uses: ng-classic/dev-infra/github-actions/create-pr-for-changes@5f06c4774df908ed69e1441f4ec63b898acf0c68
-        with:
-          branch-prefix: docs-update-events
-          pr-title: 'docs: update events'
-          pr-description: |
-            Generated `events.json` with the latest events retrieved from the Firebase DB.
-          pr-labels: |
-            action: review
-            area: docs
-            target: patch
-          angular-robot-token: ${{ secrets.ANGULAR_ROBOT_ACCESS_TOKEN }}
