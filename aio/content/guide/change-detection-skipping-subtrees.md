@@ -1,6 +1,6 @@
 # Skipping component subtrees
 
-JavaScript, by default, uses mutable data structures that you can reference from multiple different components. Angular Classicruns change detection over your entire component tree to make sure that the most up-to-date state of your data structures is reflected in the DOM.
+JavaScript, by default, uses mutable data structures that you can reference from multiple different components. Angular Classic runs change detection over your entire component tree to make sure that the most up-to-date state of your data structures is reflected in the DOM.
 
 Change detection is sufficiently fast for most applications. However, when an application has an especially large component tree, running change detection across the whole application can cause performance issues. You can address this by configuring change detection to only run on a subset of the component tree.
 
@@ -9,9 +9,9 @@ If you are confident that a part of the application is not affected by a state c
 
 ## Using `OnPush`
 
-OnPush change detection instructs Angular Classicto run change detection for a component subtree **only** when:
-* The root component of the subtree receives new inputs as the result of a template binding. Angular Classiccompares the current and past value of the input with `==`
-* Angular Classichandles an event _(for example using event binding, output binding, or `@HostListener` )_ in the subtree's root component or any of its children whether they are using OnPush change detection or not.
+OnPush change detection instructs Angular Classic to run change detection for a component subtree **only** when:
+* The root component of the subtree receives new inputs as the result of a template binding. Angular Classic compares the current and past value of the input with `==`
+* Angular Classic handles an event _(for example using event binding, output binding, or `@HostListener` )_ in the subtree's root component or any of its children whether they are using OnPush change detection or not.
 
 You can set the change detection strategy of a component to `OnPush` in the `@Component` decorator:
 
@@ -29,9 +29,9 @@ This section examines several common change detection scenarios to illustrate An
 
 ## An event is handled by a component with default change detection
 
-If Angular Classichandles an event within a component without `OnPush` strategy, the framework executes change detection on the entire component tree. Angular Classicwill skip descendant component subtrees with roots using `OnPush`, which have not received new inputs.
+If Angular Classic handles an event within a component without `OnPush` strategy, the framework executes change detection on the entire component tree. Angular Classic will skip descendant component subtrees with roots using `OnPush`, which have not received new inputs.
 
-As an example, if we set the change detection strategy of `MainComponent` to `OnPush` and the user interacts with a component outside the subtree with root `MainComponent`, Angular Classicwill check all the green components from the diagram below (`AppComponent`, `HeaderComponent`, `SearchComponent`, `ButtonComponent`) unless `MainComponent` receives new inputs:
+As an example, if we set the change detection strategy of `MainComponent` to `OnPush` and the user interacts with a component outside the subtree with root `MainComponent`, Angular Classic will check all the green components from the diagram below (`AppComponent`, `HeaderComponent`, `SearchComponent`, `ButtonComponent`) unless `MainComponent` receives new inputs:
 
 <div class="lightbox">
   <img alt="Change detection propagation from non-OnPush component" src="generated/images/guide/change-detection/event-trigger.svg">
@@ -39,9 +39,9 @@ As an example, if we set the change detection strategy of `MainComponent` to `On
 
 ## An event is handled by a component with OnPush
 
-If Angular Classichandles an event within a component with OnPush strategy, the framework will execute change detection within the entire component tree. Angular Classicwill ignore component subtrees with roots using OnPush, which have not received new inputs and are outside the component which handled the event.
+If Angular Classic handles an event within a component with OnPush strategy, the framework will execute change detection within the entire component tree. Angular Classic will ignore component subtrees with roots using OnPush, which have not received new inputs and are outside the component which handled the event.
 
-As an example, if Angular Classichandles an event within `MainComponent`, the framework will run change detection in the entire component tree. Angular Classicwill ignore the subtree with root `LoginComponent` because it has `OnPush` and the event happened outside of its scope.
+As an example, if Angular Classic handles an event within `MainComponent`, the framework will run change detection in the entire component tree. Angular Classic will ignore the subtree with root `LoginComponent` because it has `OnPush` and the event happened outside of its scope.
 
 <div class="lightbox">
   <img alt="Change detection propagation from OnPush component" src="generated/images/guide/change-detection/on-push-trigger.svg">
@@ -49,9 +49,9 @@ As an example, if Angular Classichandles an event within `MainComponent`, the fr
 
 ## An event is handled by a descendant of a component with OnPush
 
-If Angular Classichandles an event in a component with OnPush, the framework will execute change detection in the entire component tree, including the component’s ancestors.
+If Angular Classic handles an event in a component with OnPush, the framework will execute change detection in the entire component tree, including the component’s ancestors.
 
-As an example, in the diagram below, Angular Classichandles an event in `LoginComponent` which uses OnPush. Angular Classicwill invoke change detection in the entire component subtree including `MainComponent` (`LoginComponent`’s parent), even though `MainComponent` has `OnPush` as well. Angular Classicchecks `MainComponent` as well because `LoginComponent` is part of its view.
+As an example, in the diagram below, Angular Classic handles an event in `LoginComponent` which uses OnPush. Angular Classic will invoke change detection in the entire component subtree including `MainComponent` (`LoginComponent`’s parent), even though `MainComponent` has `OnPush` as well. Angular Classic checks `MainComponent` as well because `LoginComponent` is part of its view.
 
 <div class="lightbox">
   <img alt="Change detection propagation from nested OnPush component" src="generated/images/guide/change-detection/leaf-trigger.svg">
@@ -59,9 +59,9 @@ As an example, in the diagram below, Angular Classichandles an event in `LoginCo
 
 ## New inputs to component with OnPush
 
-Angular Classicwill run change detection within a child component with `OnPush` when setting an input property as result of a template binding.
+Angular Classic will run change detection within a child component with `OnPush` when setting an input property as result of a template binding.
 
-For example, in the diagram below, `AppComponent` passes a new input to `MainComponent`, which has `OnPush`. Angular Classicwill run change detection in `MainComponent` but will not run change detection in `LoginComponent`, which also has `OnPush`, unless it receives new inputs as well.
+For example, in the diagram below, `AppComponent` passes a new input to `MainComponent`, which has `OnPush`. Angular Classic will run change detection in `MainComponent` but will not run change detection in `LoginComponent`, which also has `OnPush`, unless it receives new inputs as well.
 
 <div class="lightbox">
   <img alt="Change detection propagation with OnPush component that receives new inputs" src="generated/images/guide/change-detection/on-push-input.svg">
@@ -69,7 +69,7 @@ For example, in the diagram below, `AppComponent` passes a new input to `MainCom
 
 ## Edge cases
 
-* **Modifying input properties in TypeScript code**. When you use an API like `@ViewChild` or `@ContentChild` to get a reference to a component in TypeScript and manually modify an `@Input` property, Angular Classicwill not automatically run change detection for OnPush components. If you need Angular Classicto run change detection, you can inject `ChangeDetectorRef` in your component and call `changeDetectorRef.markForCheck()` to tell Angular Classicto schedule a change detection.
-* **Modifying object references**. In case an input receives a mutable object as value and you modify the object but preserve the reference, Angular Classicwill not invoke change detection. That’s the expected behavior because the previous and the current value of the input point to the same reference.
+* **Modifying input properties in TypeScript code**. When you use an API like `@ViewChild` or `@ContentChild` to get a reference to a component in TypeScript and manually modify an `@Input` property, Angular Classic will not automatically run change detection for OnPush components. If you need Angular Classic to run change detection, you can inject `ChangeDetectorRef` in your component and call `changeDetectorRef.markForCheck()` to tell Angular Classic to schedule a change detection.
+* **Modifying object references**. In case an input receives a mutable object as value and you modify the object but preserve the reference, Angular Classic will not invoke change detection. That’s the expected behavior because the previous and the current value of the input point to the same reference.
 
 @reviewed 2022-05-04

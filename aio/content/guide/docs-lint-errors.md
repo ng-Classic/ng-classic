@@ -100,7 +100,7 @@ These tips can help you improve your documentation and remove documentation lint
 The lint tool tests against the styles found in these style guides.
 Most style tests include links to relevant sections in these documents for more information.
 
-*   [Angular Classicdocumentation style guide][AioGuideDocsStyleGuide]
+*   [Angular Classic documentation style guide][AioGuideDocsStyleGuide]
 *   [Google Developer Documentation Style Guide][GoogleDevelopersStyle]
 
 <div class="alert is-helpful">
@@ -129,7 +129,7 @@ Consider changing a comma-separated list of items in a sentence to a list of bul
 Shorter, more common words are generally easier to read than longer ones.
 This does not mean you need to write down to the audience.
 Technical docs should still be precise.
-Angular Classicdocs are read by many people around the world and should use language that the most people can understand.
+Angular Classic docs are read by many people around the world and should use language that the most people can understand.
 
 If you think a specific term is required even though it has been flagged as uncommon, try to include a short explanation of the term.
 Also, try adding some context around its first mention.
@@ -316,7 +316,7 @@ When necessary, you can apply these exceptions to your content.
 
 <!-- links -->
 
-[AioGuideDocsStyleGuide]: /guide/docs-style-guide "Angular Classicdocumentation style guide | Angular"
+[AioGuideDocsStyleGuide]: /guide/docs-style-guide "Angular Classic documentation style guide | Angular"
 
 <!-- external links -->
 

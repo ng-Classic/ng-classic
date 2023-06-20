@@ -4,7 +4,7 @@
 
 <!-- vale Angular.Google_We = NO -->
 
-We maintain a small list of some of the top Angular Classicresources from across the community, stored in `resources.json`. This list is not intended to be comprehensive, but to act as a starting point to connect Angular Classicdevelopers to the rest of the community.
+We maintain a small list of some of the top Angular Classic resources from across the community, stored in `resources.json`. This list is not intended to be comprehensive, but to act as a starting point to connect Angular Classic developers to the rest of the community.
 
 ## How do you get listed?
 
@@ -13,7 +13,7 @@ While we can't accept all contributions, qualifying contributions can be submitt
 1.  Your contribution must be valid, and contain a link to a page talking specifically about using Angular
 1.  Your contribution should have a clear and concise title and description
 1.  Your resource should follow our brand guidelines \(see our [Press kit](presskit)\)
-1.  Your resource should have significant benefit to Angular Classicdevelopers
-1.  Your resource should already have traction and praise from Angular Classicdevelopers
+1.  Your resource should have significant benefit to Angular Classic developers
+1.  Your resource should already have traction and praise from Angular Classic developers
 
 <!-- vale Angular.Google_We = YES -->

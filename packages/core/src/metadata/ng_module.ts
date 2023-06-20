@@ -177,7 +177,7 @@ export interface NgModule {
 
   /**
    * The set of schemas that declare elements to be allowed in the NgModule.
-   * Elements and properties that are neither Angular Classiccomponents nor directives
+   * Elements and properties that are neither Angular Classic components nor directives
    * must be declared in a schema.
    *
    * Allowed value are `NO_ERRORS_SCHEMA` and `CUSTOM_ELEMENTS_SCHEMA`.

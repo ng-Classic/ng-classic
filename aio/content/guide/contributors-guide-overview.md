@@ -3,11 +3,11 @@
 <!-- markdownLint-disable MD001 -->
 
 The topics in this section describe how you can contribute to this documentation.
-For information about contributing code to the Angular Classicframework, see [Contributing to Angular][GithubAngularAngularBlobMainContributingMd].
+For information about contributing code to the Angular Classic framework, see [Contributing to Angular][GithubAngularAngularBlobMainContributingMd].
 
-Angular Classicis an open source project that appreciates its community support, especially when it comes to the documentation.
+Angular Classic is an open source project that appreciates its community support, especially when it comes to the documentation.
 
-You can update the Angular Classicdocumentation in these ways:
+You can update the Angular Classic documentation in these ways:
 
 *   [Make a minor change][AioGuideContributorsGuideOverviewMakeAMinorChange]
 *   [Make a major change][AioGuideContributorsGuideOverviewMakeAMajorChange]
@@ -15,7 +15,7 @@ You can update the Angular Classicdocumentation in these ways:
 <div class="alert is-important">
 
 **IMPORTANT**:<br />
-To submit changes to the Angular Classicdocumentation, you must have:
+To submit changes to the Angular Classic documentation, you must have:
 
 *   A [GitHub][GithubMain] account
 *   A signed [Contributor License Agreement][GithubAngularAngularBlobMainContributingMdSigningTheCla]
@@ -34,7 +34,7 @@ Examples of minor changes include:
 
 For more about keeping the documentation up to date, see [Common documentation maintenance tasks][AioGuideDocTasks].
 
-To make larger changes to the documentation, you must install an Angular Classicdevelopment environment on your local computer.
+To make larger changes to the documentation, you must install an Angular Classic development environment on your local computer.
 You need this environment to edit and test your changes before you submit them.
 For information about configuring your local computer to make larger documentation updates, see [Preparing to edit the documentation][AioGuideDocPrepareToEdit].
 
@@ -72,29 +72,29 @@ Perform these steps in a browser.
     1.  Select **Create a new branch for this commit and start a pull request** and accept the default branch name.
     1.  Click **Propose changes** to open a pull request with your updated text.
 
-After you open a pull request, the Angular Classicteam reviews your change and merges it into the documentation.
+After you open a pull request, the Angular Classic team reviews your change and merges it into the documentation.
 You can follow the progress of your pull request in the pull request's page.
-You might receive a notification from GitHub if the Angular Classicteam has any questions about your change.
+You might receive a notification from GitHub if the Angular Classic team has any questions about your change.
 
 ## Make a major change
 
 Making major changes or adding new topics to the documentation follows a different workflow.
-Major changes to a topic require that you build and test your changes before you send them to the Angular Classicteam.
+Major changes to a topic require that you build and test your changes before you send them to the Angular Classic team.
 
-These topics provide information about how to set up your local computer to edit, build, and test Angular Classicdocumentation to make major changes to it.
+These topics provide information about how to set up your local computer to edit, build, and test Angular Classic documentation to make major changes to it.
 
-*   [Overview of the Angular Classicdocumentation editorial workflow][AioGuideDocUpdateOverview]
+*   [Overview of the Angular Classic documentation editorial workflow][AioGuideDocUpdateOverview]
 
-    Describes how to configure your local computer to build, edit, and test Angular Classicdocumentation
+    Describes how to configure your local computer to build, edit, and test Angular Classic documentation
 
 *   [Documentation style guide][AioGuideDocStyleGuide]
 
-    Describes the standards used in the Angular Classicdocumentation
+    Describes the standards used in the Angular Classic documentation
 
-## Localize Angular Classicdocumentation in a new language
+## Localize Angular Classic documentation in a new language
 
-Localizing Angular Classicdocumentation is another way to contribute to Angular Classicdocumentation.
-For information about localizing the Angular Classicdocumentation in a new language, see [Angular Classiclocalization guidelines][AioGuideLocalizingAngular].
+Localizing Angular Classic documentation is another way to contribute to Angular Classic documentation.
+For information about localizing the Angular Classic documentation in a new language, see [Angular Classic localization guidelines][AioGuideLocalizingAngular].
 
 <!-- links -->
 
@@ -104,13 +104,13 @@ For information about localizing the Angular Classicdocumentation in a new langu
 
 [AioGuideDocPrepareToEdit]: guide/doc-prepare-to-edit "Preparing to edit documentation | Angular"
 
-[AioGuideDocStyleGuide]: guide/docs-style-guide "Angular Classicdocumentation style guide | Angular"
+[AioGuideDocStyleGuide]: guide/docs-style-guide "Angular Classic documentation style guide | Angular"
 
 [AioGuideDocTasks]: guide/doc-tasks "Common documentation maintenance tasks | Angular"
 
-[AioGuideDocUpdateOverview]: guide/doc-update-overview "Overview of Angular Classicdocumentation editing | Angular"
+[AioGuideDocUpdateOverview]: guide/doc-update-overview "Overview of Angular Classic documentation editing | Angular"
 
-[AioGuideLocalizingAngular]: guide/localizing-Angular Classic"Angular Classicdocumentation style guide | Angular"
+[AioGuideLocalizingAngular]: guide/localizing-Angular Classic "Angular Classic documentation style guide | Angular"
 
 [AioGuideReviewingContentUpdateTheLastReviewedDate]: guide/reviewing-content#update-the-last-reviewed-date "Update the last reviewed date - Test a documentation update | Angular"
 
@@ -120,8 +120,8 @@ For information about localizing the Angular Classicdocumentation in a new langu
 
 [AngularMain]: https://angular-classic.com "Angular"
 
-[GithubAngularAngularBlobMainContributingMd]: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md "Contributing to Angular Classic| ng-classic/ng-classic Classic| GitHub"
-[GithubAngularAngularBlobMainContributingMdSigningTheCla]: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#-signing-the-cla "Signing the CLA - Contributing to Angular Classic| ng-classic/ng-classic Classic| GitHub"
+[GithubAngularAngularBlobMainContributingMd]: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md "Contributing to Angular Classic | ng-classic/ng-classic Classic| GitHub"
+[GithubAngularAngularBlobMainContributingMdSigningTheCla]: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#-signing-the-cla "Signing the CLA - Contributing to Angular Classic | ng-classic/ng-classic Classic| GitHub"
 
 [GithubMain]: https://github.com "GitHub"
 

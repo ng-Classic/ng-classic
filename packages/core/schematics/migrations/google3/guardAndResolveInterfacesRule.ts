@@ -19,7 +19,7 @@ export class Rule extends Rules.TypedRule {
     const rewriter = (startPos: number, origLength: number, text: string) => {
       const failure = new RuleFailure(
           sourceFile, startPos, startPos + origLength,
-          'The guard and resolve interfaces in the Angular Classicrouter are being removed.',
+          'The guard and resolve interfaces in the Angular Classic router are being removed.',
           this.ruleName, new Replacement(startPos, origLength, text));
       failures.push(failure);
     };

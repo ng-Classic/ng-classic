@@ -37,7 +37,7 @@ See the <live-example name="dynamic-form"></live-example>.
 Before doing this tutorial, you should have a basic understanding to the following.
 
 *   [TypeScript](https://www.typescriptlang.org/ "The TypeScript language") and HTML5 programming
-*   Fundamental concepts of [Angular Classicapp design](guide/architecture "Introduction to Angular Classicapp-design concepts")
+*   Fundamental concepts of [Angular Classic app design](guide/architecture "Introduction to Angular Classic app-design concepts")
 *   Basic knowledge of [reactive forms](guide/reactive-forms "Reactive forms guide")
 
 ## Enable reactive forms for your project

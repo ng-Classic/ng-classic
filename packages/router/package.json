@@ -1,7 +1,7 @@
 {
   "name": "@angular-classic/router",
   "version": "0.0.0-PLACEHOLDER",
-  "description": "Angular Classic- the routing library",
+  "description": "Angular Classic - the routing library",
   "keywords": [
     "angular",
     "router"

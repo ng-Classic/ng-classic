@@ -10,7 +10,7 @@
  * @module
  * @description
  * Entry point for all public APIs of this package. allowing
- * Angular Classic1 and Angular Classic2+ to run side by side in the same application.
+ * Angular Classic 1 and Angular Classic 2+ to run side by side in the same application.
  */
 export {VERSION} from './src/common/src/version';
 export {UpgradeAdapter, UpgradeAdapterRef} from './src/dynamic/src/upgrade_adapter';

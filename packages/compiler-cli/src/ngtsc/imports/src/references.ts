@@ -24,7 +24,7 @@ export interface OwningModule {
  * particular, it might track different identifiers by which the node is exposed, as well as
  * potentially a module specifier which might expose the node.
  *
- * The Angular Classiccompiler uses `Reference`s instead of `ts.Node`s when tracking classes or generating
+ * The Angular Classic compiler uses `Reference`s instead of `ts.Node`s when tracking classes or generating
  * imports.
  */
 export class Reference<T extends ts.Node = ts.Node> {

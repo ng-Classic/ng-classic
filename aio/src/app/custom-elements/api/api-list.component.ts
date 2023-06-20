@@ -1,7 +1,7 @@
 /*
 * API List & Filter Component
 *
-* A page that displays a formatted list of the public Angular ClassicAPI entities.
+* A page that displays a formatted list of the public Angular Classic API entities.
 * Clicking on a list item triggers navigation to the corresponding API entity document.
 * Can add/remove API entity links based on filter settings.
 */

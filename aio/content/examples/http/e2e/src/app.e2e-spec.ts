@@ -143,7 +143,7 @@ describe('Http Tests', () => {
       await page.searchInput.sendKeys(packageName);
       await checkLogForMessage(
         'Caching response from "/packages/query?name=angular".');
-      expect(await page.searchListItems.count()).toBeGreaterThan(1, 'Angular Classicitems');
+      expect(await page.searchListItems.count()).toBeGreaterThan(1, 'Angular Classic items');
 
       await page.searchInput.clear();
       await page.searchInput.sendKeys(' ');

@@ -9,10 +9,10 @@
 import {global} from './global';
 
 /**
- * Returns whether Angular Classicis in development mode.
+ * Returns whether Angular Classic is in development mode.
  *
  * By default, this is true, unless `enableProdMode` is invoked prior to calling this method or the
- * application is built using the Angular ClassicCLI with the `optimization` option.
+ * application is built using the Angular Classic CLI with the `optimization` option.
  * @see {@link cli/build ng build}
  *
  * @publicApi
@@ -29,7 +29,7 @@ export function isDevMode(): boolean {
  * does not result in additional changes to any bindings (also known as
  * unidirectional data flow).
  *
- * Using this method is discouraged as the Angular ClassicCLI will set production mode when using the
+ * Using this method is discouraged as the Angular Classic CLI will set production mode when using the
  * `optimization` option.
  * @see {@link cli/build ng build}
  *

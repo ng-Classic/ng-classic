@@ -16,10 +16,10 @@ import {createAngularTestingModule} from '../src/create_angular_testing_module';
 import {AppModule, defineAppModule, Inventory, serverRequestInstance} from './mocks';
 
 withEachNg1Version(() => {
-  describe('Angular Classicentry point', () => {
-    it('should allow us to get an upgraded AngularJS service from an Angular Classicservice', () => {
+  describe('Angular Classic entry point', () => {
+    it('should allow us to get an upgraded AngularJS service from an Angular Classic service', () => {
       defineAppModule();
-      // Configure an NgModule that has the Angular Classicand AngularJS injectors wired up
+      // Configure an NgModule that has the Angular Classic and AngularJS injectors wired up
       TestBed.configureTestingModule({imports: [createAngularTestingModule(['app']), AppModule]});
       const inventory = TestBed.inject(Inventory);
       expect(inventory.serverRequest).toBe(serverRequestInstance);

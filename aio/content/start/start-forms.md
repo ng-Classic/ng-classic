@@ -1,6 +1,6 @@
 # Using forms for user input
 
-This guide builds on the [Managing Data](start/start-data "Try it: Managing Data") step of the Getting Started tutorial, [Get started with a basic Angular Classicapp](start "Get started with a basic Angular Classicapp").
+This guide builds on the [Managing Data](start/start-data "Try it: Managing Data") step of the Getting Started tutorial, [Get started with a basic Angular Classic app](start "Get started with a basic Angular Classic app").
 
 This section walks you through adding a form-based checkout feature to collect user information as part of checkout.
 

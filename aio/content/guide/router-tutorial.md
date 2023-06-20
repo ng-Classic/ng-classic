@@ -1,6 +1,6 @@
-# Using Angular Classicroutes in a single-page application
+# Using Angular Classic routes in a single-page application
 
-This tutorial describes how to build a single-page application, SPA that uses multiple Angular Classicroutes.
+This tutorial describes how to build a single-page application, SPA that uses multiple Angular Classic routes.
 
 In a Single Page Application \(SPA\), all of your application's functions exist in a single HTML page.
 As users access your application's features, the browser needs to render only the parts that matter to the user, instead of loading a new page.
@@ -30,16 +30,16 @@ To complete this tutorial, you should have a basic understanding of the followin
 *   JavaScript
 *   HTML
 *   CSS
-*   [Angular ClassicCLI](cli)
+*   [Angular Classic CLI](cli)
 
 You might find the [Tour of Heroes tutorial](tutorial/tour-of-heroes) helpful, but it is not required.
 
 ## Create a sample application
 
-Using the Angular ClassicCLI, create a new application, *angular-router-sample*.
+Using the Angular Classic CLI, create a new application, *angular-router-sample*.
 This application will have two components: *crisis-list* and *heroes-list*.
 
-1.  Create a new Angular Classicproject, *angular-router-sample*.
+1.  Create a new Angular Classic project, *angular-router-sample*.
 
     <code-example format="shell" language="shell">
 
@@ -47,7 +47,7 @@ This application will have two components: *crisis-list* and *heroes-list*.
 
     </code-example>
 
-    When prompted with `Would you like to add Angular Classicrouting?`, select `N`.
+    When prompted with `Would you like to add Angular Classic routing?`, select `N`.
 
     When prompted with `Which stylesheet format would you like to use?`, select `CSS`.
 
@@ -158,7 +158,7 @@ http://localhost:4200/crisis-list
 </code-example>
 
 Notice that the `crisis-list` component displays.
-Angular Classicis using the route you defined to dynamically load the component.
+Angular Classic is using the route you defined to dynamically load the component.
 You can load the `heroes-list` component the same way:
 
 <code-example format="https" language="https">
@@ -180,7 +180,7 @@ You'll add that functionality in the next section.
 
     <code-example header="src/app/app.component.html" path="router-tutorial/src/app/app.component.html" region="nav"></code-example>
 
-    This HTML uses an Angular Classicdirective, `routerLink`.
+    This HTML uses an Angular Classic directive, `routerLink`.
     This directive connects the routes you defined to your template files.
 
 1.  Open the `app.component.css` file and add the following styles.
@@ -220,8 +220,8 @@ In this step of the tutorial, you add a route that redirects the user to display
 
     | Properties   | Details |
     |:---          |:---     |
-    | `redirectTo` | This property instructs Angular Classicto redirect from an empty path to the `heroes-list` path.                                                                                                                                                                                                         |
-    | `pathMatch`  | This property instructs Angular Classicon how much of the URL to match. For this tutorial, you should set this property to `full`. This strategy is recommended when you have an empty string for a path. For more information about this property, see the [Route API documentation](api/router/Route). |
+    | `redirectTo` | This property instructs Angular Classic to redirect from an empty path to the `heroes-list` path.                                                                                                                                                                                                         |
+    | `pathMatch`  | This property instructs Angular Classic on how much of the URL to match. For this tutorial, you should set this property to `full`. This strategy is recommended when you have an empty string for a path. For more information about this property, see the [Route API documentation](api/router/Route). |
 
 Now when you open your application, it displays the `heroes-list` component by default.
 
@@ -249,13 +249,13 @@ In this section, you'll create a 404 page and update your route configuration to
     <code-example header="src/app/app.module.ts" path="router-tutorial/src/app/app.module.ts" region="import-wildcard"></code-example>
 
     The new route uses a path, `**`.
-    This path is how Angular Classicidentifies a wildcard route.
+    This path is how Angular Classic identifies a wildcard route.
     Any route that does not match an existing route in your configuration will use this route.
 
     <div class="alert is-important">
 
     Notice that the wildcard route is placed at the end of the array.
-    The order of your routes is important, as Angular Classicapplies routes in order and uses the first match it finds.
+    The order of your routes is important, as Angular Classic applies routes in order and uses the first match it finds.
 
     </div>
 

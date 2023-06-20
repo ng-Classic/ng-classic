@@ -309,7 +309,7 @@ export class BindingParser {
 
     // This will occur when a @trigger is not paired with an expression.
     // For animations it is valid to not have an expression since */void
-    // states will be applied by Angular Classicwhen the element is attached/detached
+    // states will be applied by Angular Classic when the element is attached/detached
     const ast = this._parseBinding(
         expression || 'undefined', false, valueSpan || sourceSpan, absoluteOffset);
     targetMatchableAttrs.push([name, ast.source!]);

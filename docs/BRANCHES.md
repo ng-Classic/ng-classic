@@ -1,6 +1,6 @@
-# Angular ClassicBranching and Versioning: A Practical Guide
+# Angular Classic Branching and Versioning: A Practical Guide
 
-This guide explains how the Angular Classicteam manages branches and how those branches relate to
+This guide explains how the Angular Classic team manages branches and how those branches relate to
 merging PRs and publishing releases. Before reading, you should understand
 [Semantic Versioning](https://semver.org/#semantic-versioning-200).
 
@@ -12,7 +12,7 @@ distribution tags](https://docs.npmjs.com/cli/v6/commands/npm-dist-tag#purpose) 
 | Tag    | Description                                                                       |
 |--------|-----------------------------------------------------------------------------------|
 | latest | The most recent stable version.                                                   |
-| next   | The most recent pre-release version of Angular Classicfor testing. May not always exist. |
+| next   | The most recent pre-release version of Angular Classic for testing. May not always exist. |
 | v*-lts | The most recent LTS release for the specified version, such as `v9-lts`.          |
 
 ## Branch naming
@@ -28,7 +28,7 @@ referred to as the **active patch branch**.
 
 ## Major releases lifecycle
 
-Angular Classicreleases a major version roughly every six months. Following a major release, we move
+Angular Classic releases a major version roughly every six months. Following a major release, we move
 through a consistent lifecycle to the next major release, and repeat. At a high level, this
 process proceeds as follows:
 
@@ -40,7 +40,7 @@ process proceeds as follows:
 * Three months later, a major release occurs and the process repeats.
 
 ### Example
-* Angular Classicpublishes `11.0.0`. At this point in time, the `main` branch represents `11.1.0`.
+* Angular Classic publishes `11.0.0`. At this point in time, the `main` branch represents `11.1.0`.
 * Six weeks later, we publish `11.1.0` and `main` represents `11.2.0`.
 * Six weeks later, we publish `11.2.0` and `main` represents `12.0.0`.
 * Three months later, this cycle repeats with the publication of `12.0.0`.

@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "short_name": "Angular ClassicDevTools",
-  "name": "Angular ClassicDevTools",
-  "description": "Angular ClassicDevTools extends Firefox DevTools adding Angular Classicspecific debugging and profiling capabilities.",
+  "short_name": "Angular Classic DevTools",
+  "name": "Angular Classic DevTools",
+  "description": "Angular Classic DevTools extends Firefox DevTools adding Angular Classic specific debugging and profiling capabilities.",
   "version": "1.0.7",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "icons": {

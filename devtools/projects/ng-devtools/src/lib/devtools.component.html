@@ -6,22 +6,22 @@
       </div>
       <ng-template #notSupported>
         <p class="text-message">
-          Angular ClassicDevtools only supports Angular Classicversions 12 and above
+          Angular Classic Devtools only supports Angular Classic versions 12 and above
         </p>
       </ng-template>
     </ng-container>
     <ng-template #angularIsInProdMode>
       <p class="text-message" title="A dev build is when the `optimization` flag is set to `true` in the angular.json config file.">
-        We detected an application built with production configuration. Angular ClassicDevTools only supports development build.
+        We detected an application built with production configuration. Angular Classic DevTools only supports development build.
       </p>
     </ng-template>
   </ng-container>
   <ng-template #errorOrLoading>
     <ng-container *ngIf="angularExists === false; else loading">
       <p class="text-message">
-        <span class="info-icon" matTooltip="You see this message because the app is still loading, or this is not an Angular Classicapplication">i</span
+        <span class="info-icon" matTooltip="You see this message because the app is still loading, or this is not an Angular Classic application">i</span
         >
-        Angular Classicapplication not detected.
+        Angular Classic application not detected.
       </p>
     </ng-container>
     <ng-template #loading>

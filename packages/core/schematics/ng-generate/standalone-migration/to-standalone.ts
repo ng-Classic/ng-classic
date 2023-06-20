@@ -324,7 +324,7 @@ function addStandaloneToDecorator(node: ts.Decorator): ts.Decorator {
 }
 
 /**
- * Adds a property to an Angular Classicdecorator node.
+ * Adds a property to an Angular Classic decorator node.
  * @param node Decorator to which to add the property.
  * @param property Property to add.
  */
@@ -387,7 +387,7 @@ function findImportLocation(
       firstSameFileImport = location;
     }
     if (location.kind === PotentialImportKind.NgModule && !firstModuleImport &&
-        // ɵ is used for some internal Angular Classicmodules that we want to skip over.
+        // ɵ is used for some internal Angular Classic modules that we want to skip over.
         !location.symbolName.startsWith('ɵ')) {
       firstModuleImport = location;
     }
@@ -695,7 +695,7 @@ function extractDeclarationsFromTestObject(
   return results;
 }
 
-/** Extracts the metadata object literal from an Angular Classicdecorator. */
+/** Extracts the metadata object literal from an Angular Classic decorator. */
 function extractMetadataLiteral(decorator: ts.Decorator): ts.ObjectLiteralExpression|null {
   // `arguments[0]` is the metadata object literal.
   return ts.isCallExpression(decorator.expression) && decorator.expression.arguments.length === 1 &&

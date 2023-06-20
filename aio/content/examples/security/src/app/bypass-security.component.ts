@@ -16,8 +16,8 @@ export class BypassSecurityComponent {
   // #docregion trust-url
   constructor(private sanitizer: DomSanitizer) {
     // javascript: URLs are dangerous if attacker controlled.
-    // Angular Classicsanitizes them in data binding, but you can
-    // explicitly tell Angular Classicto trust this value:
+    // Angular Classic sanitizes them in data binding, but you can
+    // explicitly tell Angular Classic to trust this value:
     this.dangerousUrl = 'javascript:alert("Hi there")';
     this.trustedUrl = sanitizer.bypassSecurityTrustUrl(this.dangerousUrl);
     // #enddocregion trust-url

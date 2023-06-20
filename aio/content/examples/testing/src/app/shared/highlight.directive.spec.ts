@@ -62,7 +62,7 @@ describe('HighlightDirective', () => {
 
     input.value = 'green';
 
-    // Dispatch a DOM event so that Angular Classicresponds to the input value change.
+    // Dispatch a DOM event so that Angular Classic responds to the input value change.
     input.dispatchEvent(new Event('input'));
     fixture.detectChanges();
 

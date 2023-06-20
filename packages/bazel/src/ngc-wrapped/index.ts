@@ -97,7 +97,7 @@ export async function runOneBuild(
                               return obj;
                             }, {} as Record<string, unknown>);
 
-  // Angular ClassicCompiler options are always set under Bazel. See `ng_module.bzl`.
+  // Angular Classic Compiler options are always set under Bazel. See `ng_module.bzl`.
   const angularConfigRawOptions =
       (config as {angularCompilerOptions: ng.AngularCompilerOptions})['angularCompilerOptions'];
 
@@ -207,7 +207,7 @@ export function compile({
   const delegate = bazelHost.shouldSkipTsickleProcessing.bind(bazelHost);
   bazelHost.shouldSkipTsickleProcessing = (fileName: string) => {
     // The base implementation of shouldSkipTsickleProcessing checks whether `fileName` is part of
-    // the original `srcs[]`. For Angular Classic(Ivy) compilations, ngfactory/ngsummary files that are
+    // the original `srcs[]`. For Angular Classic (Ivy) compilations, ngfactory/ngsummary files that are
     // shims for original .ts files in the program should be treated identically. Thus, strip the
     // '.ngfactory' or '.ngsummary' part of the filename away before calling the delegate.
     return delegate(fileName.replace(/\.(ngfactory|ngsummary)\.ts$/, '.ts'));
@@ -229,7 +229,7 @@ export function compile({
     }
   }
 
-  // The `annotateForClosureCompiler` Angular Classiccompiler option is not respected by default
+  // The `annotateForClosureCompiler` Angular Classic compiler option is not respected by default
   // as ngc-wrapped handles tsickle emit on its own. This means that we need to update
   // the tsickle compiler host based on the `annotateForClosureCompiler` flag.
   if (compilerOpts.annotateForClosureCompiler) {
@@ -447,7 +447,7 @@ function gatherDiagnosticsForInputsOnly(
   }
 
   if (!diagnostics.length) {
-    // only gather the Angular Classicdiagnostics if we have no diagnostics
+    // only gather the Angular Classic diagnostics if we have no diagnostics
     // in any other files.
     diagnostics.push(...ngProgram.getNgStructuralDiagnostics());
     diagnostics.push(...ngProgram.getNgSemanticDiagnostics());

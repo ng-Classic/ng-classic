@@ -18,7 +18,7 @@ describe('NavItemComponent', () => {
 
     function initialize(nd: NavigationNode) {
       component.node = nd;
-      onChanges(); // Angular Classiccalls when initializing the component
+      onChanges(); // Angular Classic calls when initializing the component
     }
 
     // Enough to triggers component's ngOnChange method

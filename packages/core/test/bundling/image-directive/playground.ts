@@ -35,7 +35,7 @@ import {Component} from '@angular-classic/core';
   template: `
     <h1> 
       <img ngSrc="a.png" width="50" height="50" priority ngSrcset="1x, 2x">
-      <span>Angular Classicimage app</span>
+      <span>Angular Classic image app</span>
     </h1>
     <main>
       <div class="spacer"></div>

@@ -1,10 +1,10 @@
 # Special Elements
 
 Each subdirectory below this contains documentation that describes "special elements".
-These are elements that can appear in templates that have special meaning and behaviour in the Angular Classicframework.
+These are elements that can appear in templates that have special meaning and behaviour in the Angular Classic framework.
 
 Each element should have a markdown file with the same file name as the element's tag name \(for example, `ng-container.md`\).
-The file should be stored in a directory whose name is that of the Angular Classicpackage under which this element should appear in the docs \(usually `core`\).
+The file should be stored in a directory whose name is that of the Angular Classic package under which this element should appear in the docs \(usually `core`\).
 
 ## Short description
 

@@ -13,7 +13,7 @@ In the following example, the template statement `deleteHero()` appears in quote
 
 <code-example header="src/app/app.component.html" path="template-syntax/src/app/app.component.html" region="context-component-statement"></code-example>
 
-When the user clicks the **Delete hero** button, Angular Classiccalls the `deleteHero()` method in the component class.
+When the user clicks the **Delete hero** button, Angular Classic calls the `deleteHero()` method in the component class.
 
 Use template statements with elements, components, or directives in response to events.
 

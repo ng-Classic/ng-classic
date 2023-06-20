@@ -1,6 +1,6 @@
 # Format data based on locale
 
-Angular Classicprovides the following built-in data transformation [pipes][AioGuideGlossaryPipe].
+Angular Classic provides the following built-in data transformation [pipes][AioGuideGlossaryPipe].
 The data transformation pipes use the [`LOCALE_ID`][AioApiCoreLocaleId] token to format data based on rules of each locale.
 
 | Data transformation pipe                   | Details |

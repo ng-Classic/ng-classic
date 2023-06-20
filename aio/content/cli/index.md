@@ -1,10 +1,10 @@
 # CLI Overview and Command Reference
 
-The Angular ClassicCLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular Classicapplications directly from a command shell.
+The Angular Classic CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular Classic applications directly from a command shell.
 
-## Installing Angular ClassicCLI
+## Installing Angular Classic CLI
 
-Major versions of Angular ClassicCLI follow the supported major version of Angular, but minor versions can be released separately.
+Major versions of Angular Classic CLI follow the supported major version of Angular, but minor versions can be released separately.
 
 Install the CLI using the `npm` package manager:
 
@@ -29,7 +29,7 @@ ng new --help
 
 </code-example>
 
-To create, build, and serve a new, basic Angular Classicproject on a development server, go to the parent directory of your new workspace use the following commands:
+To create, build, and serve a new, basic Angular Classic project on a development server, go to the parent directory of your new workspace use the following commands:
 
 <code-example format="shell" language="shell">
 
@@ -53,7 +53,7 @@ If the current working directory is not the right place for your project, you ca
 
 ## Workspaces and project files
 
-The [ng new](cli/new) command creates an *Angular Classicworkspace* folder and generates a new application skeleton.
+The [ng new](cli/new) command creates an *Angular Classic workspace* folder and generates a new application skeleton.
 A workspace can contain multiple applications and libraries.
 The initial application created by the [ng new](cli/new) command is at the top level of the workspace.
 When you generate an additional application or library in a workspace, it goes into a `projects/` subfolder.

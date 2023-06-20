@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-// Any changes here should be ported to the Angular ClassicDomino fork.
+// Any changes here should be ported to the Angular Classic Domino fork.
 // https://github.com/angular/domino/blob/main/lib/style_parser.js
 
 const enum Char {

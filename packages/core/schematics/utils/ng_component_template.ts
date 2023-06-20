@@ -36,7 +36,7 @@ export interface ResolvedTemplate {
 }
 
 /**
- * Visitor that can be used to determine Angular Classictemplates referenced within given
+ * Visitor that can be used to determine Angular Classic templates referenced within given
  * TypeScript source files (inline templates or external referenced templates)
  */
 export class NgComponentTemplateVisitor {
@@ -99,7 +99,7 @@ export class NgComponentTemplateVisitor {
         // TODO(devversion): Remove this when the TypeScript compiler host is fully virtual
         // relying on the devkit virtual tree and not dealing with disk paths. This is blocked on
         // providing common utilities for schematics/migrations, given this is done in the
-        // Angular ClassicCDK already:
+        // Angular Classic CDK already:
         // https://github.com/angular/components/blob/3704400ee67e0190c9783e16367587489c803ebc/src/cdk/schematics/update-tool/utils/virtual-host.ts.
         const templateDevkitPath = relative(this._basePath, templateDiskPath);
 

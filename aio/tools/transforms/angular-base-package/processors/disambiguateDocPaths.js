@@ -5,7 +5,7 @@
  * Ensures that docs that have the same output path, other than case changes,
  * are disambiguated.
  *
- * For example in Angular Classicthere is the `ROUTES` const and a `Routes` type.
+ * For example in Angular Classic there is the `ROUTES` const and a `Routes` type.
  * In a case-sensitive file-system these would both be stored at the paths
  *
  * ```

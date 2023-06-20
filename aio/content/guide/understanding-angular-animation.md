@@ -1,10 +1,10 @@
-# Understanding Angular Classicanimation
+# Understanding Angular Classic animation
 
 Animation provides the illusion of motion: HTML elements change styling over time. Well-designed animations can make your application more fun and straightforward to use, but they aren't just cosmetic.
 
 ## Prerequisites
 
-Before learning Angular Classicanimations, you should be familiar with building basic Angular Classicapps:
+Before learning Angular Classic animations, you should be familiar with building basic Angular Classic apps:
 
 *   [Tutorial](tutorial)
 *   [Architecture Overview](guide/architecture)

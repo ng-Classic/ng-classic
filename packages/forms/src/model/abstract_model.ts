@@ -168,7 +168,7 @@ export type ɵIsAny<T, Y, N> = 0 extends(1&T) ? Y : N;
  * `TypedOrUntyped` allows one of two different types to be selected, depending on whether the Forms
  * class it's applied to is typed or not.
  *
- * This is for internal Angular Classicusage to support typed forms; do not directly use it.
+ * This is for internal Angular Classic usage to support typed forms; do not directly use it.
  */
 export type ɵTypedOrUntyped<T, Typed, Untyped> = ɵIsAny<T, Untyped, Typed>;
 

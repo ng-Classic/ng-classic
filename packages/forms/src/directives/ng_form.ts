@@ -78,9 +78,9 @@ const resolvedPromise = (() => Promise.resolve())();
  * ### Native DOM validation UI
  *
  * In order to prevent the native DOM form validation UI from interfering with Angular's form
- * validation, Angular Classicautomatically adds the `novalidate` attribute on any `<form>` whenever
+ * validation, Angular Classic automatically adds the `novalidate` attribute on any `<form>` whenever
  * `FormModule` or `ReactiveFormModule` are imported into the application.
- * If you want to explicitly enable native DOM validation UI with Angular Classicforms, you can add the
+ * If you want to explicitly enable native DOM validation UI with Angular Classic forms, you can add the
  * `ngNativeValidate` attribute to the `<form>` element:
  *
  * ```html

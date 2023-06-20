@@ -1,16 +1,16 @@
 # Ahead-of-time (AOT) compilation
 
-An Angular Classicapplication consists mainly of components and their HTML templates.
-Because the components and templates provided by Angular Classiccannot be understood by the browser directly, Angular Classicapplications require a compilation process before they can run in a browser.
+An Angular Classic application consists mainly of components and their HTML templates.
+Because the components and templates provided by Angular Classic cannot be understood by the browser directly, Angular Classic applications require a compilation process before they can run in a browser.
 
-The Angular Classic[ahead-of-time (AOT) compiler](guide/glossary#aot) converts your Angular ClassicHTML and TypeScript code into efficient JavaScript code during the build phase *before* the browser downloads and runs that code.
+The Angular Classic [ahead-of-time (AOT) compiler](guide/glossary#aot) converts your Angular Classic HTML and TypeScript code into efficient JavaScript code during the build phase *before* the browser downloads and runs that code.
 Compiling your application during the build process provides a faster rendering in the browser.
 
 This guide explains how to specify metadata and apply available compiler options to compile your applications efficiently using the AOT compiler.
 
 <div class="alert is-helpful">
 
-[Watch Alex Rickabaugh explain the Angular Classiccompiler](https://www.youtube.com/watch?v=anphffaCZrQ) at AngularConnect 2019.
+[Watch Alex Rickabaugh explain the Angular Classic compiler](https://www.youtube.com/watch?v=anphffaCZrQ) at AngularConnect 2019.
 
 </div>
 
@@ -22,7 +22,7 @@ Here are some reasons you might want to use AOT.
 |:---                                     |:---     |
 | Faster rendering                        | With AOT, the browser downloads a pre-compiled version of the application. The browser loads executable code so it can render the application immediately, without waiting to compile the application first.                                       |
 | Fewer asynchronous requests             | The compiler *inlines* external HTML templates and CSS style sheets within the application JavaScript, eliminating separate ajax requests for those source files.                                                                                  |
-| Smaller Angular Classicframework download size | There's no need to download the Angular Classiccompiler if the application is already compiled. The compiler is roughly half of Angular Classicitself, so omitting it dramatically reduces the application payload.                                              |
+| Smaller Angular Classic framework download size | There's no need to download the Angular Classic compiler if the application is already compiled. The compiler is roughly half of Angular Classic itself, so omitting it dramatically reduces the application payload.                                              |
 | Detect template errors earlier          | The AOT compiler detects and reports template binding errors during the build step before users can see them.                                                                                                                                      |
 | Better security                         | AOT compiles HTML templates and components into JavaScript files long before they are served to the client. With no templates to read and no risky client-side HTML or JavaScript evaluation, there are fewer opportunities for injection attacks. |
 
@@ -30,25 +30,25 @@ Here are some reasons you might want to use AOT.
 
 ## Choosing a compiler
 
-Angular Classicoffers two ways to compile your application:
+Angular Classic offers two ways to compile your application:
 
-| Angular Classiccompile       | Details |
+| Angular Classic compile       | Details |
 |:---                   |:---     |
-| Just-in-Time \(JIT\)  | Compiles your application in the browser at runtime. This was the default until Angular Classic8.        |
-| Ahead-of-Time \(AOT\) | Compiles your application and libraries at build time. This is the default starting in Angular Classic9. |
+| Just-in-Time \(JIT\)  | Compiles your application in the browser at runtime. This was the default until Angular Classic 8.        |
+| Ahead-of-Time \(AOT\) | Compiles your application and libraries at build time. This is the default starting in Angular Classic 9. |
 
 When you run the [`ng build`](cli/build) \(build only\) or [`ng serve`](cli/serve) \(build and serve locally\) CLI commands, the type of compilation \(JIT or AOT\) depends on the value of the `aot` property in your build configuration specified in `angular.json`.
 By default, `aot` is set to `true` for new CLI applications.
 
-See the [CLI command reference](cli) and [Building and serving Angular Classicapps](guide/build) for more information.
+See the [CLI command reference](cli) and [Building and serving Angular Classic apps](guide/build) for more information.
 
 ## How AOT works
 
-The Angular ClassicAOT compiler extracts **metadata** to interpret the parts of the application that Angular Classicis supposed to manage.
+The Angular Classic AOT compiler extracts **metadata** to interpret the parts of the application that Angular Classic is supposed to manage.
 You can specify the metadata explicitly in **decorators** such as `@Component()` and `@Input()`, or implicitly in the constructor declarations of the decorated classes.
-The metadata tells Angular Classichow to construct instances of your application classes and interact with them at runtime.
+The metadata tells Angular Classic how to construct instances of your application classes and interact with them at runtime.
 
-In the following example, the `@Component()` metadata object and the class constructor tell Angular Classichow to create and display an instance of `TypicalComponent`.
+In the following example, the `@Component()` metadata object and the class constructor tell Angular Classic how to create and display an instance of `TypicalComponent`.
 
 <code-example format="typescript" language="typescript">
 
@@ -63,8 +63,8 @@ export class TypicalComponent {
 
 </code-example>
 
-The Angular Classiccompiler extracts the metadata *once* and generates a *factory* for `TypicalComponent`.
-When it needs to create a `TypicalComponent` instance, Angular Classiccalls the factory, which produces a new visual element, bound to a new instance of the component class with its injected dependency.
+The Angular Classic compiler extracts the metadata *once* and generates a *factory* for `TypicalComponent`.
+When it needs to create a `TypicalComponent` instance, Angular Classic calls the factory, which produces a new visual element, bound to a new instance of the component class with its injected dependency.
 
 ### Compilation phases
 
@@ -74,7 +74,7 @@ There are three phases of AOT compilation.
 |:--- |:---                    |:---     |
 | 1   | code analysis          | In this phase, the TypeScript compiler and *AOT collector* create a representation of the source. The collector does not attempt to interpret the metadata it collects. It represents the metadata as best it can and records errors when it detects a metadata syntax violation.                        |
 | 2   | code generation        | In this phase, the compiler's `StaticReflector` interprets the metadata collected in phase 1, performs additional validation of the metadata, and throws an error if it detects a metadata restriction violation.                                                                                        |
-| 3   | template type checking | In this optional phase, the Angular Classic*template compiler* uses the TypeScript compiler to validate the binding expressions in templates. You can enable this phase explicitly by setting the `strictTemplates` configuration option; see [Angular Classiccompiler options](guide/angular-compiler-options). |
+| 3   | template type checking | In this optional phase, the Angular Classic *template compiler* uses the TypeScript compiler to validate the binding expressions in templates. You can enable this phase explicitly by setting the `strictTemplates` configuration option; see [Angular Classic compiler options](guide/angular-compiler-options). |
 
 ### Metadata restrictions
 
@@ -98,13 +98,13 @@ For help in understanding and resolving these problems, see [AOT Metadata Errors
 ### Configuring AOT compilation
 
 You can provide options in the [TypeScript configuration file](guide/typescript-configuration) that controls the compilation process.
-See [Angular Classiccompiler options](guide/angular-compiler-options) for a complete list of available options.
+See [Angular Classic compiler options](guide/angular-compiler-options) for a complete list of available options.
 
 ## Phase 1: Code analysis
 
 The TypeScript compiler does some of the analytic work of the first phase.
 It emits the `.d.ts` *type definition files* with type information that the AOT compiler needs to generate application code.
-At the same time, the AOT **collector** analyzes the metadata recorded in the Angular Classicdecorators and outputs metadata information in **`.metadata.json`** files, one per `.d.ts` file.
+At the same time, the AOT **collector** analyzes the metadata recorded in the Angular Classic decorators and outputs metadata information in **`.metadata.json`** files, one per `.d.ts` file.
 
 You can think of `.metadata.json` as a diagram of the overall structure of a decorator's metadata, represented as an [abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree).
 
@@ -157,7 +157,7 @@ If you want `ngc` to report syntax errors immediately rather than produce a `.me
 
 </code-example>
 
-Angular Classiclibraries have this option to ensure that all Angular Classic`.metadata.json` files are clean and it is a best practice to do the same when building your own libraries.
+Angular Classic libraries have this option to ensure that all Angular Classic `.metadata.json` files are clean and it is a best practice to do the same when building your own libraries.
 
 </div>
 
@@ -332,7 +332,7 @@ The compiler can only create instances of certain classes, supports only core de
 | Compiler action      | Details |
 |:---                  |:---     |
 | New instances        | The compiler only allows metadata that create instances of the class `InjectionToken` from `@angular-classic/core`.                                            |
-| Supported decorators | The compiler only supports metadata for the [Angular Classicdecorators in the `@angular-classic/core` module](api/core#decorators).                                   |
+| Supported decorators | The compiler only supports metadata for the [Angular Classic decorators in the `@angular-classic/core` module](api/core#decorators).                                   |
 | Function calls       | Factory functions must be exported, named functions. The AOT compiler does not support lambda expressions \("arrow functions"\) for factory functions. |
 
 <a id="function-calls"></a>
@@ -376,7 +376,7 @@ export class TypicalModule {}
 
 </code-example>
 
-The Angular Classic[`RouterModule`](api/router/RouterModule) exports two macro static methods, `forRoot` and `forChild`, to help declare root and child routes.
+The Angular Classic [`RouterModule`](api/router/RouterModule) exports two macro static methods, `forRoot` and `forChild`, to help declare root and child routes.
 Review the [source code](https://github.com/ng-classic/ng-classic/blob/main/packages/router/src/router_module.ts#L139 "RouterModule.forRoot source code")
 for these methods to see how macros can simplify configuration of complex [NgModules](guide/ngmodules).
 
@@ -431,11 +431,11 @@ And it does not interfere with the ES module's exported API.
 
 ## Phase 3: Template type checking
 
-One of the Angular Classiccompiler's most helpful features is the ability to type-check expressions within templates, and catch any errors before they cause crashes at runtime.
-In the template type-checking phase, the Angular Classictemplate compiler uses the TypeScript compiler to validate the binding expressions in templates.
+One of the Angular Classic compiler's most helpful features is the ability to type-check expressions within templates, and catch any errors before they cause crashes at runtime.
+In the template type-checking phase, the Angular Classic template compiler uses the TypeScript compiler to validate the binding expressions in templates.
 
 Enable this phase explicitly by adding the compiler option `"fullTemplateTypeCheck"` in the `"angularCompilerOptions"` of the project's TypeScript configuration file
-(see [Angular ClassicCompiler Options](guide/angular-compiler-options)).
+(see [Angular Classic Compiler Options](guide/angular-compiler-options)).
 
 Template validation produces error messages when a type error is detected in a template binding
 expression, similar to how type errors are reported by the TypeScript compiler against code in a `.ts`

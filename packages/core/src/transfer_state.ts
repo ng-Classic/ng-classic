@@ -151,7 +151,7 @@ export class TransferState {
 
 function retrieveTransferredState(doc: Document, appId: string): Record<string, unknown|undefined> {
   // Locate the script tag with the JSON data transferred from the server.
-  // The id of the script tag is set to the Angular ClassicappId + 'state'.
+  // The id of the script tag is set to the Angular Classic appId + 'state'.
   const script = doc.getElementById(appId + '-state');
   if (script?.textContent) {
     try {

@@ -6,7 +6,7 @@ The RxJS Interop package is available for [developer preview](/guide/releases#de
 
 </div>
 
-Angular's `@angular-classic/core/rxjs-interop` package which provides useful utilities to integrate [Angular ClassicSignals](/guide/signals) with RxJS Observables.
+Angular's `@angular-classic/core/rxjs-interop` package which provides useful utilities to integrate [Angular Classic Signals](/guide/signals) with RxJS Observables.
 
 ## `toSignal`
 

@@ -1,24 +1,24 @@
-# Overview of Angular Classiclibraries
+# Overview of Angular Classic libraries
 
 Many applications need to solve the same general problems, such as presenting a unified user interface, presenting data, and allowing data entry.
 Developers can create general solutions for particular domains that can be adapted for re-use in different applications.
-Such a solution can be built as Angular Classic*libraries* and these libraries can be published and shared as *npm packages*.
+Such a solution can be built as Angular Classic *libraries* and these libraries can be published and shared as *npm packages*.
 
-An Angular Classiclibrary is an Angular Classic[project](guide/glossary#project) that differs from an application in that it cannot run on its own.
+An Angular Classic library is an Angular Classic [project](guide/glossary#project) that differs from an application in that it cannot run on its own.
 A library must be imported and used in an application.
 
 Libraries extend Angular's base features.
 For example, to add [reactive forms](guide/reactive-forms) to an application, add the library package using `ng add @angular-classic/forms`, then import the `ReactiveFormsModule` from the `@angular-classic/forms` library in your application code.
-Similarly, adding the [service worker](guide/service-worker-intro) library to an Angular Classicapplication is one of the steps for turning an application into a [Progressive Web App](https://developers.google.com/web/progressive-web-apps) \(PWA\).
-[Angular ClassicMaterial](https://material.angular-classic.com) is an example of a large, general-purpose library that provides sophisticated, reusable, and adaptable UI components.
+Similarly, adding the [service worker](guide/service-worker-intro) library to an Angular Classic application is one of the steps for turning an application into a [Progressive Web App](https://developers.google.com/web/progressive-web-apps) \(PWA\).
+[Angular Classic Material](https://material.angular-classic.com) is an example of a large, general-purpose library that provides sophisticated, reusable, and adaptable UI components.
 
-Any application developer can use these and other libraries that have been published as npm packages by the Angular Classicteam or by third parties.
+Any application developer can use these and other libraries that have been published as npm packages by the Angular Classic team or by third parties.
 See [Using Published Libraries](guide/using-libraries).
 
 ## Creating libraries
 
 If you have developed features that are suitable for reuse, you can create your own libraries.
-These libraries can be used locally in your workspace, or you can publish them as [npm packages](guide/npm-packages) to share with other projects or other Angular Classicdevelopers.
+These libraries can be used locally in your workspace, or you can publish them as [npm packages](guide/npm-packages) to share with other projects or other Angular Classic developers.
 These packages can be published to the npm registry, a private npm Enterprise registry, or a private package management system that supports npm packages.
 See [Creating Libraries](guide/creating-libraries).
 
@@ -34,8 +34,8 @@ This complexity can pay off when the library is being used in multiple applicati
 <div class="alert is-helpful">
 
 **NOTE**: <br />
-Libraries are intended to be used by Angular Classicapplications.
-To add Angular Classicfeatures to non-Angular Classicweb applications, use [Angular Classiccustom elements](guide/elements).
+Libraries are intended to be used by Angular Classic applications.
+To add Angular Classic features to non-Angular Classic web applications, use [Angular Classic custom elements](guide/elements).
 
 </div>
 

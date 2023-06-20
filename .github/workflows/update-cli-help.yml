@@ -1,4 +1,4 @@
-name: Update AIO Angular ClassicCLI help
+name: Update AIO Angular Classic CLI help
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   update_cli_help:
-    name: Update Angular ClassicCLI help (if necessary)
+    name: Update Angular Classic CLI help (if necessary)
     if: github.repository == 'ng-classic/ng-classic'
     runs-on: ubuntu-latest
     steps:

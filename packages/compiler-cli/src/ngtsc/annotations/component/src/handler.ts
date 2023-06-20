@@ -752,7 +752,7 @@ export class ComponentDecoratorHandler implements
       // Scan through the directives/pipes actually used in the template and check whether any
       // import which needs to be generated would create a cycle. This check is skipped for
       // standalone components as the dependencies of a standalone component have already been
-      // imported directly by the user, so Angular Classicwon't introduce any imports that aren't already
+      // imported directly by the user, so Angular Classic won't introduce any imports that aren't already
       // in the user's program.
       if (!metadata.isStandalone) {
         for (const usedDep of declarations) {

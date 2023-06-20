@@ -1,13 +1,13 @@
 # TypeScript configuration
 
-TypeScript is a primary language for Angular Classicapplication development.
+TypeScript is a primary language for Angular Classic application development.
 It is a superset of JavaScript with design-time support for type safety and tooling.
 
 Browsers can't execute TypeScript directly.
 Typescript must be "transpiled" into JavaScript using the *tsc* compiler, which requires some configuration.
 
 This page covers some aspects of TypeScript configuration and the TypeScript environment
-that are important to Angular Classicdevelopers, including details about the following files:
+that are important to Angular Classic developers, including details about the following files:
 
 | Files                                                    | Details |
 |:---                                                      |:---     |
@@ -18,16 +18,16 @@ that are important to Angular Classicdevelopers, including details about the fol
 
 ## Configuration files
 
-A given Angular Classicworkspace contains several TypeScript configuration files.
-At the root `tsconfig.json` file specifies the base TypeScript and Angular Classiccompiler options that all projects in the workspace inherit.
+A given Angular Classic workspace contains several TypeScript configuration files.
+At the root `tsconfig.json` file specifies the base TypeScript and Angular Classic compiler options that all projects in the workspace inherit.
 
 <div class="alert is-helpful">
 
-See the [Angular Classiccompiler options](guide/angular-compiler-options) guide for information about what Angular Classicspecific options are available.
+See the [Angular Classic compiler options](guide/angular-compiler-options) guide for information about what Angular Classic specific options are available.
 
 </div>
 
-The TypeScript and Angular Classichave a wide range of options which can be used to configure type-checking features and generated output.
+The TypeScript and Angular Classic have a wide range of options which can be used to configure type-checking features and generated output.
 For more information, see the [Configuration inheritance with extends](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#configuration-inheritance-with-extends) section of the TypeScript documentation.
 
 <div class="alert is-helpful">
@@ -37,7 +37,7 @@ For details about configuration inheritance, see the [Configuration inheritance 
 
 </div>
 
-The initial `tsconfig.json` for an Angular Classicworkspace typically looks like the following example.
+The initial `tsconfig.json` for an Angular Classic workspace typically looks like the following example.
 
 <code-example header="tsconfig.json" path="getting-started/tsconfig.0.json"></code-example>
 
@@ -69,7 +69,7 @@ You can suppress them with the following additional flag:
 
 <div class="alert is-helpful">
 
-For more information about how the TypeScript configuration affects compilation, see [Angular ClassicCompiler Options](guide/angular-compiler-options) and [Template Type Checking](guide/template-typecheck).
+For more information about how the TypeScript configuration affects compilation, see [Angular Classic Compiler Options](guide/angular-compiler-options) and [Template Type Checking](guide/template-typecheck).
 
 </div>
 
@@ -86,13 +86,13 @@ TypeScript-aware editors leverage these same definition files to display type in
 
 Many libraries include definition files in their npm packages where both the TypeScript compiler and editors
 can find them.
-Angular Classicis one such library.
-The `node_modules/@angular-classic/core/` folder of any Angular Classicapplication contains several `d.ts` files that describe parts of Angular.
+Angular Classic is one such library.
+The `node_modules/@angular-classic/core/` folder of any Angular Classic application contains several `d.ts` files that describe parts of Angular.
 
 <div class="alert is-helpful">
 
 You don't need to do anything to get *typings* files for library packages that include `d.ts` files.
-Angular Classicpackages include them already.
+Angular Classic packages include them already.
 
 </div>
 
@@ -111,7 +111,7 @@ Fortunately, either their authors or community contributors have created separat
 You can install these typings with `npm` using the [`@types/*` scoped package](https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html).
 
 Which ambient declaration files in `@types/*` are automatically included is determined by the [`types` TypeScript compiler option](https://www.typescriptlang.org/tsconfig#types).
-The Angular ClassicCLI generates a `tsconfig.app.json` file which is used to build an application, in which the `types` compiler option is set to `[]` to disable automatic inclusion of declarations from `@types/*`.
+The Angular Classic CLI generates a `tsconfig.app.json` file which is used to build an application, in which the `types` compiler option is set to `[]` to disable automatic inclusion of declarations from `@types/*`.
 Similarly, the `tsconfig.spec.json` file is used for testing and sets `"types": ["jasmine"]` to allow using Jasmine's ambient declarations in tests.
 
 After installing `@types/*` declarations, you have to update the `tsconfig.app.json` and `tsconfig.spec.json` files to add the newly installed declarations to the list of `types`.

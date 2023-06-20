@@ -1,4 +1,4 @@
-# First Angular Classicapp lesson \[TODO: lesson # as digit \] - \[TODO: Topic title\]
+# First Angular Classic app lesson \[TODO: lesson # as digit \] - \[TODO: Topic title\]
 
 <div class="callout is-important">
 
@@ -30,7 +30,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classic tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 

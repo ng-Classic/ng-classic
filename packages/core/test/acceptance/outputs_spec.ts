@@ -227,7 +227,7 @@ describe('outputs', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
 
-    // To match current Angular Classicbehavior, the click listener is still
+    // To match current Angular Classic behavior, the click listener is still
     // set up in addition to any matching outputs.
     const button = fixture.nativeElement.querySelector('button');
     button.click();

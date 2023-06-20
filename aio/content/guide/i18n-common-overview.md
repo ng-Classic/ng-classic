@@ -1,13 +1,13 @@
 # Common Internationalization tasks
 
-Use the following Angular Classictasks to internationalize your project.
+Use the following Angular Classic tasks to internationalize your project.
 
 *   Use built-in pipes to display dates, numbers, percentages, and currencies in a local format.
 *   Mark text in component templates for translation.
 *   Mark plural forms of expressions for translation.
 *   Mark alternate text for translation.
 
-After you prepare your project for an international audience, use the [Angular ClassicCLI][AioCliMain] to localize your project.
+After you prepare your project for an international audience, use the [Angular Classic CLI][AioCliMain] to localize your project.
 Complete the following tasks to localize your project.
 
 *   Use the CLI to extract marked text to a *source language* file.
@@ -27,15 +27,15 @@ To prepare your project for translations, you should have a basic understanding 
 
 *   [Templates][AioGuideGlossaryTemplate]
 *   [Components][AioGuideGlossaryComponent]
-*   [Angular ClassicCLI][AioCliMain] [command-line][AioGuideGlossaryCommandLineInterfaceCli] tool for managing the Angular Classicdevelopment cycle
+*   [Angular Classic CLI][AioCliMain] [command-line][AioGuideGlossaryCommandLineInterfaceCli] tool for managing the Angular Classic development cycle
 *   [Extensible Markup Language (XML)][W3Xml] used for translation files
 
-## Learn about common Angular Classicinternationalization tasks
+## Learn about common Angular Classic internationalization tasks
 
 <div class="card-container">
     <a href="guide/i18n-common-add-package" class="docs-card" title="Add the localize package">
         <section>Add the localize package</section>
-        <p>Learn how to add the Angular ClassicLocalize package to your project</p>
+        <p>Learn how to add the Angular Classic Localize package to your project</p>
         <p class="card-footer">Add the localize package</p>
     </a>
     <a href="guide/i18n-common-locale-id" class="docs-card" title="Refer to locales by ID">

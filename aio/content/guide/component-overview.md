@@ -1,6 +1,6 @@
-# Angular Classiccomponents overview
+# Angular Classic components overview
 
-Components are the main building block for Angular Classicapplications.
+Components are the main building block for Angular Classic applications.
 Each component consists of:
 
 *   An HTML template that declares what renders on the page
@@ -8,7 +8,7 @@ Each component consists of:
 *   A CSS selector that defines how the component is used in a template
 *   Optionally, CSS styles applied to the template
 
-This topic describes how to create and configure an Angular Classiccomponent.
+This topic describes how to create and configure an Angular Classic component.
 
 <div class="alert is-helpful">
 
@@ -20,18 +20,18 @@ To view or download the example code used in this topic, see the <live-example><
 
 To create a component, verify that you have met the following prerequisites:
 
-1.  [Install the Angular ClassicCLI.](guide/setup-local#install-the-angular-cli)
-1.  [Create an Angular Classicworkspace](guide/setup-local#create-a-workspace-and-initial-application) with initial application.
-    If you don't have a project, create one using `ng new <project-name>`, where `<project-name>` is the name of your Angular Classicapplication.
+1.  [Install the Angular Classic CLI.](guide/setup-local#install-the-angular-cli)
+1.  [Create an Angular Classic workspace](guide/setup-local#create-a-workspace-and-initial-application) with initial application.
+    If you don't have a project, create one using `ng new <project-name>`, where `<project-name>` is the name of your Angular Classic application.
 
 ## Creating a component
 
-The best way to create a component is with the Angular ClassicCLI.
+The best way to create a component is with the Angular Classic CLI.
 You can also create a component manually.
 
-### Creating a component using the Angular ClassicCLI
+### Creating a component using the Angular Classic CLI
 
-To create a component using the Angular ClassicCLI:
+To create a component using the Angular Classic CLI:
 
 1.  From a terminal window, navigate to the directory containing your application.
 1.  Run the `ng generate component <component-name>` command, where `<component-name>` is the name of your new component.
@@ -49,18 +49,18 @@ Where `<component-name>` is the name of your component.
 <div class="alert is-helpful">
 
 You can change how `ng generate component` creates new components.
-For more information, see [ng generate component](cli/generate#component-command) in the Angular ClassicCLI documentation.
+For more information, see [ng generate component](cli/generate#component-command) in the Angular Classic CLI documentation.
 
 </div>
 
 ### Creating a component manually
 
-Although the Angular ClassicCLI is the best way to create an Angular Classiccomponent, you can also create a component manually.
-This section describes how to create the core component file within an existing Angular Classicproject.
+Although the Angular Classic CLI is the best way to create an Angular Classic component, you can also create a component manually.
+This section describes how to create the core component file within an existing Angular Classic project.
 
 To create a new component manually:
 
-1.  Navigate to your Angular Classicproject directory.
+1.  Navigate to your Angular Classic project directory.
 1.  Create a new file, `<component-name>.component.ts`.
 1.  At the top of the file, add the following import statement.
 
@@ -94,9 +94,9 @@ To create a new component manually:
 
 ## Specifying a component's CSS selector
 
-Every component requires a CSS *selector*. A selector instructs Angular Classicto instantiate this component wherever it finds the corresponding tag in template HTML.
+Every component requires a CSS *selector*. A selector instructs Angular Classic to instantiate this component wherever it finds the corresponding tag in template HTML.
 For example, consider a component `hello-world.component.ts` that defines its selector as `app-hello-world`.
-This selector instructs Angular Classicto instantiate this component any time the tag `<app-hello-world>` appears in a template.
+This selector instructs Angular Classic to instantiate this component any time the tag `<app-hello-world>` appears in a template.
 
 Specify a component's selector by adding a `selector` statement to the `@Component` decorator.
 
@@ -104,7 +104,7 @@ Specify a component's selector by adding a `selector` statement to the `@Compone
 
 ## Defining a component's template
 
-A template is a block of HTML that tells Angular Classichow to render the component in your application.
+A template is a block of HTML that tells Angular Classic how to render the component in your application.
 Define a template for your component in one of two ways: by referencing an external file, or directly within the component.
 
 To define a template as an external file, add a `templateUrl` property to the `@Component` decorator.
@@ -122,7 +122,7 @@ For example:
 
 <div class="alert is-helpful">
 
-An Angular Classiccomponent requires a template defined using `template` or `templateUrl`.
+An Angular Classic component requires a template defined using `template` or `templateUrl`.
 You cannot have both statements in a component.
 
 </div>

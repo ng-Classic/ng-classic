@@ -111,7 +111,7 @@ The `:enter` transition runs when any `*ngIf` or `*ngFor` views are placed on th
 
 **NOTE**: <br />
 Entering/leaving behaviors can sometime be confusing.
-As a rule of thumb consider that any element being added to the DOM by Angular Classicpasses via the `:enter` transition. Only elements being directly removed from the DOM by Angular Classicpass via the `:leave` transition. For example, an element's view is removed from the DOM because its parent is being removed from the DOM.
+As a rule of thumb consider that any element being added to the DOM by Angular Classic passes via the `:enter` transition. Only elements being directly removed from the DOM by Angular Classic pass via the `:leave` transition. For example, an element's view is removed from the DOM because its parent is being removed from the DOM.
 
 </div>
 
@@ -193,7 +193,7 @@ A selective child animations can still be run on a disabled parent in one of the
 
 #### Disable all animations
 
-To turn off all animations for an Angular Classicapplication, place the `@.disabled` host binding on the topmost Angular Classiccomponent.
+To turn off all animations for an Angular Classic application, place the `@.disabled` host binding on the topmost Angular Classic component.
 
 <code-example header="src/app/app.component.ts" path="animations/src/app/app.component.ts" region="toggle-app-animations"></code-example>
 
@@ -291,7 +291,7 @@ The code snippet for this animation might look like this.
 
 ### Animatable properties and units
 
-Angular Classicanimations support builds on top of web animations, so you can animate any property that the browser considers animatable.
+Angular Classic animations support builds on top of web animations, so you can animate any property that the browser considers animatable.
 This includes positions, sizes, transforms, colors, borders, and more.
 The W3C maintains a list of animatable properties on its [CSS Transitions](https://www.w3.org/TR/css-transitions-1) page.
 
@@ -306,7 +306,7 @@ For properties with a numeric value, define a unit by providing the value as a s
 *   Percentage:
     `'100%'`
 
-You can also provide the value as a number. In such cases Angular Classicassumes a default unit of pixels, or `px`.
+You can also provide the value as a number. In such cases Angular Classic assumes a default unit of pixels, or `px`.
 Expressing 50 pixels as `50` is the same as saying `'50px'`.
 
 <div class="alert is-helpful">
@@ -331,13 +331,13 @@ The animation takes whatever height the element has before it leaves, and animat
 
 ### Keyframes summary
 
-The `keyframes()` function in Angular Classicallows you to specify multiple interim styles within a single transition. An optional `offset` can be used to define the point in the animation where each style change should occur.
+The `keyframes()` function in Angular Classic allows you to specify multiple interim styles within a single transition. An optional `offset` can be used to define the point in the animation where each style change should occur.
 
-## More on Angular Classicanimations
+## More on Angular Classic animations
 
 You might also be interested in the following:
 
-*   [Introduction to Angular Classicanimations](guide/animations)
+*   [Introduction to Angular Classic animations](guide/animations)
 *   [Complex animation sequences](guide/complex-animation-sequences)
 *   [Reusable animations](guide/reusable-animations)
 *   [Route transition animations](guide/route-animations)

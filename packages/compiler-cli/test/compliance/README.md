@@ -1,6 +1,6 @@
 # Compliance test-cases
 
-This directory contains rules, helpers and test-cases for the Angular Classiccompiler compliance tests.
+This directory contains rules, helpers and test-cases for the Angular Classic compiler compliance tests.
 
 There are three different types of tests that are run based on file-based "test-cases".
 
@@ -8,11 +8,11 @@ There are three different types of tests that are run based on file-based "test-
   The generated files are compared to "expected files" via a matching algorithm that is tolerant to
   whitespace and variable name changes.
 * **Partial compile** - in this test the source files defined by the test-case are "partially" compiled by
-  Angular Classicto produce files that can be published. These partially compiled files are compared directly
+  Angular Classic to produce files that can be published. These partially compiled files are compared directly
   against "golden files" to ensure that we do not inadvertently break the public API of partial
   declarations.
 * **Linked** - in this test the golden files mentioned in the previous bullet point, are passed to the
-  Angular Classiclinker, which generates files that are comparable to the fully compiled files. These linked
+  Angular Classic linker, which generates files that are comparable to the fully compiled files. These linked
   files are compared against the "expected files" in the same way as in the "full compile" tests.
 
 This way the compliance tests are able to check each mode and stage of compilation is accurate and does

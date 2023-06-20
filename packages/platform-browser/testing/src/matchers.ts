@@ -16,7 +16,7 @@ import {childNodesAsList, hasClass, hasStyle, isCommentNode} from './browser_uti
 
 
 /**
- * Jasmine matchers that check Angular Classicspecific conditions.
+ * Jasmine matchers that check Angular Classic specific conditions.
  *
  * Note: These matchers will only work in a browser environment.
  */
@@ -75,7 +75,7 @@ export interface NgMatchers<T = any> extends jasmine.Matchers<T> {
 const _global = <any>(typeof window === 'undefined' ? global : window);
 
 /**
- * Jasmine matching function with Angular Classicmatchers mixed in.
+ * Jasmine matching function with Angular Classic matchers mixed in.
  *
  * ## Example
  *

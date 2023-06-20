@@ -41,13 +41,13 @@ export interface ComponentAnalysisData {
 
   /**
    * Providers extracted from the `providers` field of the component annotation which will require
-   * an Angular Classicfactory definition at runtime.
+   * an Angular Classic factory definition at runtime.
    */
   providersRequiringFactory: Set<Reference<ClassDeclaration>>|null;
 
   /**
    * Providers extracted from the `viewProviders` field of the component annotation which will
-   * require an Angular Classicfactory definition at runtime.
+   * require an Angular Classic factory definition at runtime.
    */
   viewProvidersRequiringFactory: Set<Reference<ClassDeclaration>>|null;
 

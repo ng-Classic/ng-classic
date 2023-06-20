@@ -27,7 +27,7 @@ type TargetIdentifier = ReferenceIdentifier|VariableIdentifier;
 type TargetIdentifierMap = Map<TmplTarget, TargetIdentifier>;
 
 /**
- * Visits the AST of an Angular Classictemplate syntax expression, finding interesting
+ * Visits the AST of an Angular Classic template syntax expression, finding interesting
  * entities (variable references, etc.). Creates an array of Entities found in
  * the expression, with the location of the Entities being relative to the
  * expression.
@@ -131,7 +131,7 @@ class ExpressionVisitor extends RecursiveAstVisitor {
 }
 
 /**
- * Visits the AST of a parsed Angular Classictemplate. Discovers and stores
+ * Visits the AST of a parsed Angular Classic template. Discovers and stores
  * identifiers of interest, deferring to an `ExpressionVisitor` as needed.
  */
 class TemplateVisitor extends TmplAstRecursiveVisitor {

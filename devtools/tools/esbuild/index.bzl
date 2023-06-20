@@ -4,13 +4,13 @@ load("@build_bazel_rules_nodejs//internal/linker:link_node_modules.bzl", "Linker
 load("@build_bazel_rules_nodejs//:providers.bzl", "ExternalNpmPackageInfo", "JSModuleInfo")
 
 """
-  Starlark file exposing a definition for generating Angular Classiclinker-processed ESM bundles
-  for all entry-points the Angular Classicframework packages expose.
+  Starlark file exposing a definition for generating Angular Classic linker-processed ESM bundles
+  for all entry-points the Angular Classic framework packages expose.
 
   These linker-processed ESM bundles are useful as they can be integrated into the
   spec bundling, or dev-app to avoid unnecessary re-linking of framework entry-points
   every time the bundler executes. This helps with the overall development turnaround and
-  is more idiomatic as it allows caching of the Angular Classicframework packages.
+  is more idiomatic as it allows caching of the Angular Classic framework packages.
 """
 
 def _linker_mapping_impl(ctx):

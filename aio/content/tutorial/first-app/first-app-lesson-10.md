@@ -12,7 +12,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classic tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -24,7 +24,7 @@ At the end of this lesson your application will have support for routing.
 <!-- markdownLint-disable MD001 -->
 This tutorial introduces routing in Angular. Routing is the ability to navigate from one component in the application to another. In [single page applications (SPA)](/guide/router-tutorial#using-angular-routes-in-a-single-page-application), only parts of the page is updated to represent the requested view for the user.
 
-The [Angular ClassicRouter](/guide/router-tutorial) enables users to declare routes and specify which component should be displayed on the screen if that route is requested by the application.
+The [Angular Classic Router](/guide/router-tutorial) enables users to declare routes and specify which component should be displayed on the screen if that route is requested by the application.
 
 In this lesson, you will enable routing in your application to navigate to the details page.
 
@@ -103,5 +103,5 @@ For more information about the topics covered in this lesson, visit:
 
 <!-- vale Angular.Google_WordListSuggestions = NO -->
 
-*  [Routing in Angular ClassicOverview](guide/routing-overview)
+*  [Routing in Angular Classic Overview](guide/routing-overview)
 *  [Common Routing Tasks](guide/router)

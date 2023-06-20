@@ -1,7 +1,7 @@
 # Overview of documentation maintenance tasks
 
-The Angular Classicdocumentation needs routine maintenance to keep it up-to-date.
-The topics in this section describe routine maintenance tasks that you can perform to help keep the Angular Classicdocumentation in good condition.
+The Angular Classic documentation needs routine maintenance to keep it up-to-date.
+The topics in this section describe routine maintenance tasks that you can perform to help keep the Angular Classic documentation in good condition.
 
 Documentation maintenance tasks fall into these two categories:
 
@@ -11,7 +11,7 @@ Documentation maintenance tasks fall into these two categories:
 Minor changes can be made in the GitHub site without the need to load any software or tools on your system.
 For information about making a minor change to the documentation, see [Make a minor change](guide/contributors-guide-overview#make-a-minor-change).
 
-Major changes require that you build and test your changes to the documentation on your local computer before you send them to the Angular Classicdocumentation.
+Major changes require that you build and test your changes to the documentation on your local computer before you send them to the Angular Classic documentation.
 For information about preparing your system to make major changes to the documentation, see [Make a major change](guide/contributors-guide-overview#make-a-major-change).
 
 ## Routine documentation maintenance tasks

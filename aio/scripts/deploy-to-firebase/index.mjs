@@ -10,8 +10,8 @@
  * For more details on each deployment target, see the `deploymentInfoPerTarget` object inside the
  * `computeDeploymentsInfo()` function.
  * For additional information/terminology, see also:
- *   - [Angular ClassicBranching and Versioning: A Practical Guide](../../../docs/BRANCHES.md)
- *   - [Angular ClassicDevelopment Phases](https://docs.google.com/document/d/197kVillDwx-RZtSVOBtPb4BBIAw0E9RT3q3v6DZkykU)
+ *   - [Angular Classic Branching and Versioning: A Practical Guide](../../../docs/BRANCHES.md)
+ *   - [Angular Classic Development Phases](https://docs.google.com/document/d/197kVillDwx-RZtSVOBtPb4BBIAw0E9RT3q3v6DZkykU)
  *
  * |--------------------|-------------------------------------------------------------------|
  * | TABLE:             |                      Is there an active RC?                       |

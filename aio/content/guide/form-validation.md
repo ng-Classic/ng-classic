@@ -8,8 +8,8 @@ This page shows how to validate user input from the UI and display useful valida
 Before reading about form validation, you should have a basic understanding of the following.
 
 *   [TypeScript](https://www.typescriptlang.org/ "The TypeScript language") and HTML5  programming
-*   Fundamental concepts of [Angular Classicapplication design](guide/architecture "Introduction to Angular Classicapplication-design concepts")
-*   The [two types of forms that Angular Classicsupports](guide/forms-overview "Introduction to Angular Classicforms")
+*   Fundamental concepts of [Angular Classic application design](guide/architecture "Introduction to Angular Classic application-design concepts")
+*   The [two types of forms that Angular Classic supports](guide/forms-overview "Introduction to Angular Classic forms")
 *   Basics of either [Template-driven Forms](guide/forms "Template-driven forms guide") or [Reactive Forms](guide/reactive-forms "Reactive forms guide")
 
 <div class="alert is-helpful">
@@ -24,9 +24,9 @@ Run the <live-example></live-example>.
 ##  Validating input in template-driven forms
 
 To add validation to a template-driven form, you add the same validation attributes as you would with [native HTML form validation](https://developer.mozilla.org/docs/Web/Guide/HTML/HTML5/Constraint_validation).
-Angular Classicuses directives to match these attributes with validator functions in the framework.
+Angular Classic uses directives to match these attributes with validator functions in the framework.
 
-Every time the value of a form control changes, Angular Classicruns validation and generates either a list of validation errors that results in an `INVALID` status, or null, which results in a VALID status.
+Every time the value of a form control changes, Angular Classic runs validation and generates either a list of validation errors that results in an `INVALID` status, or null, which results in a VALID status.
 
 You can then inspect the control's state by exporting `ngModel` to a local template variable.
 The following example exports `NgModel` into a variable called `name`:
@@ -65,7 +65,7 @@ To prevent the validator from displaying errors before the user has a chance to 
 
 In a reactive form, the source of truth is the component class.
 Instead of adding validators through attributes in the template, you add validator functions directly to the form control model in the component class.
-Angular Classicthen calls these functions whenever the value of the control changes.
+Angular Classic then calls these functions whenever the value of the control changes.
 
 ### Validator functions
 
@@ -76,7 +76,7 @@ Validator functions can be either synchronous or asynchronous.
 | Sync validators  | Synchronous functions that take a control instance and immediately return either a set of validation errors or `null`. Pass these in as the second argument when you instantiate a `FormControl`.                       |
 | Async validators | Asynchronous functions that take a control instance and return a Promise or Observable that later emits a set of validation errors or `null`. Pass these in as the third argument when you instantiate a `FormControl`. |
 
-For performance reasons, Angular Classiconly runs async validators if all sync validators pass.
+For performance reasons, Angular Classic only runs async validators if all sync validators pass.
 Each must complete before errors are set.
 
 ### Built-in validator functions
@@ -129,7 +129,7 @@ In this sample, the forbidden name is "bob", so the validator rejects any hero n
 Elsewhere it could reject "alice" or any name that the configuring regular expression matches.
 
 The `forbiddenNameValidator` factory returns the configured validator function.
-That function takes an Angular Classiccontrol object and returns *either* null if the control value is valid *or* a validation error object.
+That function takes an Angular Classic control object and returns *either* null if the control value is valid *or* a validation error object.
 The validation error object typically has a property whose name is the validation key, `'forbiddenName'`, and whose value is an arbitrary dictionary of values that you could insert into an error message, `{name}`.
 
 Custom async validators are similar to sync validators, but they must instead return a Promise or observable that later emits null or a validation error object.
@@ -150,12 +150,12 @@ In reactive forms, add a custom validator by passing the function directly to th
 In template-driven forms, add a directive to the template, where the directive wraps the validator function.
 For example, the corresponding `ForbiddenValidatorDirective` serves as a wrapper around the `forbiddenNameValidator`.
 
-Angular Classicrecognizes the directive's role in the validation process because the directive registers itself with the `NG_VALIDATORS` provider, as shown in the following example.
+Angular Classic recognizes the directive's role in the validation process because the directive registers itself with the `NG_VALIDATORS` provider, as shown in the following example.
 `NG_VALIDATORS` is a predefined provider with an extensible collection of validators.
 
 <code-example header="shared/forbidden-name.directive.ts (providers)" path="form-validation/src/app/shared/forbidden-name.directive.ts" region="directive-providers"></code-example>
 
-The directive class then implements the `Validator` interface, so that it can easily integrate with Angular Classicforms.
+The directive class then implements the `Validator` interface, so that it can easily integrate with Angular Classic forms.
 Here is the rest of the directive to help you get an idea of how it all comes together.
 
 <code-example header="shared/forbidden-name.directive.ts (directive)" path="form-validation/src/app/shared/forbidden-name.directive.ts" region="directive"></code-example>
@@ -176,7 +176,7 @@ If you were to replace `useExisting` with `useClass`, then you'd be registering 
 
 ## Control status CSS classes
 
-Angular Classicautomatically mirrors many control properties onto the form control element as CSS classes.
+Angular Classic automatically mirrors many control properties onto the form control element as CSS classes.
 Use these classes to style form control elements according to the state of the form.
 The following classes are currently supported.
 
@@ -243,7 +243,7 @@ The validator code is as follows.
 <code-example header="shared/identity-revealed.directive.ts" path="form-validation/src/app/shared/identity-revealed.directive.ts" region="cross-validation-validator"></code-example>
 
 The `identity` validator implements the `ValidatorFn` interface.
-It takes an Angular Classiccontrol object as an argument and returns either null if the form is valid, or `ValidationErrors` otherwise.
+It takes an Angular Classic control object as an argument and returns either null if the form is valid, or `ValidationErrors` otherwise.
 
 The validator retrieves the child controls by calling the `FormGroup`'s [get](api/forms/AbstractControl#get) method, then compares the values of the `name` and `alterEgo` controls.
 
@@ -354,7 +354,7 @@ To learn more about `FormControl` options, see the [AbstractControlOptions](api/
 
 To use an async validator in template-driven forms, create a new directive and register the `NG_ASYNC_VALIDATORS` provider on it.
 
-In the example below, the directive injects the `UniqueAlterEgoValidator` class that contains the actual validation logic and invokes it in the `validate` function, triggered by Angular Classicwhen validation should happen.
+In the example below, the directive injects the `UniqueAlterEgoValidator` class that contains the actual validation logic and invokes it in the `validate` function, triggered by Angular Classic when validation should happen.
 
 <code-example path="form-validation/src/app/shared/alter-ego.directive.ts" region="async-validator-directive"></code-example>
 
@@ -389,7 +389,7 @@ new FormControl('', {updateOn: 'blur'});
 
 ## Interaction with native HTML form validation
 
-By default, Angular Classicdisables [native HTML form validation](https://developer.mozilla.org/docs/Web/Guide/HTML/Constraint_validation) by adding the `novalidate` attribute on the enclosing `<form>` and uses directives to match these attributes with validator functions in the framework.
+By default, Angular Classic disables [native HTML form validation](https://developer.mozilla.org/docs/Web/Guide/HTML/Constraint_validation) by adding the `novalidate` attribute on the enclosing `<form>` and uses directives to match these attributes with validator functions in the framework.
 If you want to use native validation **in combination** with Angular-based validation, you can re-enable it with the `ngNativeValidate` directive.
 See the [API docs](api/forms/NgForm#native-dom-validation-ui) for details.
 

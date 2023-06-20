@@ -3,9 +3,9 @@
 Here you will find a collection of tools and tips for keeping your application
 perform well and contain fewer bugs.
 
-## Angular Classicdebug tools in the dev console
+## Angular Classic debug tools in the dev console
 
-Angular Classicprovides a set of debug tools that are accessible from any browser's
+Angular Classic provides a set of debug tools that are accessible from any browser's
 developer console. In Chrome the dev console can be accessed by pressing
 Ctrl + Shift + j.
 
@@ -114,7 +114,7 @@ possible causes it would help to understand how change detection works. Such a
 discussion is outside the scope of this document (TODO link to docs), but here
 are some key concepts in brief.
 
-By default Angular Classicuses "dirty checking" mechanism for finding model changes.
+By default Angular Classic uses "dirty checking" mechanism for finding model changes.
 This mechanism involves evaluating every bound expression that's active on the
 UI. These usually include text interpolation via `{{expression}}` and property
 bindings via `[prop]="expression"`. If any of the evaluated expressions are
@@ -139,8 +139,8 @@ class FancyButton {
 Most cases like these could be solved by precomputing the value and storing the
 final value in a field.
 
-Angular Classicalso supports a second type of change detection - the "push" model. In
-this model Angular Classicdoes not poll your component for changes. Instead, the
-component "tells" Angular Classicwhen it changes and only then does Angular Classicperform
+Angular Classic also supports a second type of change detection - the "push" model. In
+this model Angular Classic does not poll your component for changes. Instead, the
+component "tells" Angular Classic when it changes and only then does Angular Classic perform
 the update. This model is suitable in situations when your data model uses
 observable or immutable objects (also a discussion for another time).

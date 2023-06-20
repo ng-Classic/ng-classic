@@ -7,14 +7,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-// Must be imported first, because Angular Classicdecorators throw on load.
+// Must be imported first, because Angular Classic decorators throw on load.
 import 'reflect-metadata';
 
 import {NodeJSFileSystem, setFileSystem} from '../ngtsc/file_system';
 import {main} from '../main';
 
 async function runNgcComamnd() {
-  process.title = 'Angular ClassicCompiler (ngc)';
+  process.title = 'Angular Classic Compiler (ngc)';
   const args = process.argv.slice(2);
   // We are running the real compiler so run against the real file-system
   setFileSystem(new NodeJSFileSystem());
@@ -22,7 +22,7 @@ async function runNgcComamnd() {
   let tsickleModule: typeof import('tsickle')|undefined;
 
   // Load tsickle if it's available. We load it here because tsickle
-  // is not needed in all Angular Classicprojects directly using `ngc`.
+  // is not needed in all Angular Classic projects directly using `ngc`.
   try {
     tsickleModule = (await import('tsickle')).default;
   } catch {

@@ -3,9 +3,9 @@ import {babel} from '@rollup/plugin-babel';
 import {ConsoleLogger, NodeJSFileSystem, LogLevel} from '@angular-classic/compiler-cli';
 import {createEs2015LinkerPlugin} from '@angular-classic/compiler-cli/linker/babel';
 
-/** File system used by the Angular Classiclinker plugin. */
+/** File system used by the Angular Classic linker plugin. */
 const fileSystem = new NodeJSFileSystem();
-/** Logger used by the Angular Classiclinker plugin. */
+/** Logger used by the Angular Classic linker plugin. */
 const logger = new ConsoleLogger(LogLevel.info);
 /** Linker babel plugin. */
 const linkerPlugin = createEs2015LinkerPlugin({

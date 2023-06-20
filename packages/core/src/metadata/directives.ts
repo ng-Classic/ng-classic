@@ -24,7 +24,7 @@ import {ViewEncapsulation} from './view';
  */
 export interface DirectiveDecorator {
   /**
-   * Decorator that marks a class as an Angular Classicdirective.
+   * Decorator that marks a class as an Angular Classic directive.
    * You can define your own directives to attach custom behavior to elements in the DOM.
    *
    * The options provide configuration metadata that determines
@@ -128,7 +128,7 @@ export interface Directive {
    * - `:not(sub_selector)`: Select only if the element does not match the `sub_selector`.
    * - `selector1, selector2`: Select if either `selector1` or `selector2` matches.
    *
-   * Angular Classiconly allows directives to apply on CSS selectors that do not cross
+   * Angular Classic only allows directives to apply on CSS selectors that do not cross
    * element boundaries.
    *
    * For the following template HTML, a directive with an `input[type=text]` selector,
@@ -147,7 +147,7 @@ export interface Directive {
   /**
    * Enumerates the set of data-bound input properties for a directive
    *
-   * Angular Classicautomatically updates input properties during change detection.
+   * Angular Classic automatically updates input properties during change detection.
    * The `inputs` property accepts either strings or object literals that configure the directive
    * properties that should be exposed as inputs.
    *
@@ -304,8 +304,8 @@ export interface Directive {
    * Maps class properties to host element bindings for properties,
    * attributes, and events, using a set of key-value pairs.
    *
-   * Angular Classicautomatically checks host property bindings during change detection.
-   * If a binding changes, Angular Classicupdates the directive's host element.
+   * Angular Classic automatically checks host property bindings during change detection.
+   * If a binding changes, Angular Classic updates the directive's host element.
    *
    * When the key is a property of the host element, the property value is
    * the propagated to the specified DOM property.
@@ -333,7 +333,7 @@ export interface Directive {
   jit?: true;
 
   /**
-   * Angular Classicdirectives marked as `standalone` do not need to be declared in an NgModule. Such
+   * Angular Classic directives marked as `standalone` do not need to be declared in an NgModule. Such
    * directives don't depend on any "intermediate context" of an NgModule (ex. configured
    * providers).
    *
@@ -382,14 +382,14 @@ export const Directive: DirectiveDecorator = makeDecorator(
  */
 export interface ComponentDecorator {
   /**
-   * Decorator that marks a class as an Angular Classiccomponent and provides configuration
+   * Decorator that marks a class as an Angular Classic component and provides configuration
    * metadata that determines how the component should be processed,
    * instantiated, and used at runtime.
    *
-   * Components are the most basic UI building block of an Angular Classicapp.
-   * An Angular Classicapp contains a tree of Angular Classiccomponents.
+   * Components are the most basic UI building block of an Angular Classic app.
+   * An Angular Classic app contains a tree of Angular Classic components.
    *
-   * Angular Classiccomponents are a subset of directives, always associated with a template.
+   * Angular Classic components are a subset of directives, always associated with a template.
    * Unlike other directives, only one component can be instantiated for a given element in a
    * template.
    *
@@ -457,7 +457,7 @@ export interface ComponentDecorator {
    * ### Preserving whitespace
    *
    * Removing whitespace can greatly reduce AOT-generated code size and speed up view creation.
-   * As of Angular Classic6, the default for `preserveWhitespaces` is false (whitespace is removed).
+   * As of Angular Classic 6, the default for `preserveWhitespaces` is false (whitespace is removed).
    * To change the default setting for all components in your application, set
    * the `preserveWhitespaces` option of the AOT compiler.
    *
@@ -526,7 +526,7 @@ export interface ComponentDecorator {
 }
 
 /**
- * Supplies configuration metadata for an Angular Classiccomponent.
+ * Supplies configuration metadata for an Angular Classic component.
  *
  * @publicApi
  */
@@ -534,7 +534,7 @@ export interface Component extends Directive {
   /**
    * The change-detection strategy to use for this component.
    *
-   * When a component is instantiated, Angular Classiccreates a change detector,
+   * When a component is instantiated, Angular Classic creates a change detector,
    * which is responsible for propagating the component's bindings.
    * The strategy is one of:
    * - `ChangeDetectionStrategy#OnPush` sets the strategy to `CheckOnce` (on demand).
@@ -555,19 +555,19 @@ export interface Component extends Directive {
    * SystemJS exposes the `__moduleName` variable within each module.
    * In CommonJS, this can  be set to `module.id`.
    *
-   * @deprecated This option does not have any effect. Will be removed in Angular Classicv17.
+   * @deprecated This option does not have any effect. Will be removed in Angular Classic v17.
    */
   moduleId?: string;
 
   /**
-   * The relative path or absolute URL of a template file for an Angular Classiccomponent.
+   * The relative path or absolute URL of a template file for an Angular Classic component.
    * If provided, do not supply an inline template using `template`.
    *
    */
   templateUrl?: string;
 
   /**
-   * An inline template for an Angular Classiccomponent. If provided,
+   * An inline template for an Angular Classic component. If provided,
    * do not supply a template file using `templateUrl`.
    *
    */
@@ -624,7 +624,7 @@ export interface Component extends Directive {
   preserveWhitespaces?: boolean;
 
   /**
-   * Angular Classiccomponents marked as `standalone` do not need to be declared in an NgModule. Such
+   * Angular Classic components marked as `standalone` do not need to be declared in an NgModule. Such
    * components directly manage their own template dependencies (components, directives, and pipes
    * used in a template) via the imports property.
    *
@@ -654,7 +654,7 @@ export interface Component extends Directive {
 
   /**
    * The set of schemas that declare elements to be allowed in a standalone component. Elements and
-   * properties that are neither Angular Classiccomponents nor directives must be declared in a schema.
+   * properties that are neither Angular Classic components nor directives must be declared in a schema.
    *
    * This property is only available for standalone components - specifying it for components
    * declared in an NgModule generates a compilation error.
@@ -736,7 +736,7 @@ export interface Pipe {
   pure?: boolean;
 
   /**
-   * Angular Classicpipes marked as `standalone` do not need to be declared in an NgModule. Such
+   * Angular Classic pipes marked as `standalone` do not need to be declared in an NgModule. Such
    * pipes don't depend on any "intermediate context" of an NgModule (ex. configured providers).
    *
    * More information about standalone components, directives, and pipes can be found in [this
@@ -761,7 +761,7 @@ export interface InputDecorator {
   /**
    * Decorator that marks a class field as an input property and supplies configuration metadata.
    * The input property is bound to a DOM property in the template. During change detection,
-   * Angular Classicautomatically updates the data property with the DOM property's value.
+   * Angular Classic automatically updates the data property with the DOM property's value.
    *
    * @usageNotes
    *
@@ -896,7 +896,7 @@ export interface HostBindingDecorator {
   /**
    * Decorator that marks a DOM property as a host-binding property and supplies configuration
    * metadata.
-   * Angular Classicautomatically checks host property bindings during change detection, and
+   * Angular Classic automatically checks host property bindings during change detection, and
    * if a binding changes it updates the host element of the directive.
    *
    * @usageNotes
@@ -956,7 +956,7 @@ export interface HostListenerDecorator {
    * Decorator that declares a DOM event to listen for,
    * and provides a handler method to run when that event occurs.
    *
-   * Angular Classicinvokes the supplied handler method when the host element emits the specified event,
+   * Angular Classic invokes the supplied handler method when the host element emits the specified event,
    * and updates the bound element with the result.
    *
    * If the handler method returns false, applies `preventDefault` on the bound element.
@@ -983,7 +983,7 @@ export interface HostListener {
 
 /**
  * Decorator that binds a DOM event to a host listener and supplies configuration metadata.
- * Angular Classicinvokes the supplied handler method when the host element emits the specified event,
+ * Angular Classic invokes the supplied handler method when the host element emits the specified event,
  * and updates the bound element with the result.
  *
  * If the handler method returns false, applies `preventDefault` on the bound element.

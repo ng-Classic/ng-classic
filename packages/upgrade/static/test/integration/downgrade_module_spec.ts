@@ -12,7 +12,7 @@ import {BrowserModule} from '@angular-classic/platform-browser';
 import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 import {downgradeComponent, downgradeModule, UpgradeComponent} from '@angular-classic/upgrade/static';
 
-import * as Angular Classicfrom '../../../src/common/src/angular1';
+import * as Angular Classic from '../../../src/common/src/angular1';
 import {$EXCEPTION_HANDLER, $ROOT_SCOPE, INJECTOR_KEY, LAZY_MODULE_REF} from '../../../src/common/src/constants';
 import {LazyModuleRef} from '../../../src/common/src/util';
 import {html, multiTrim, withEachNg1Version} from '../../../src/common/test/helpers/common_test_helpers';
@@ -694,7 +694,7 @@ withEachNg1Version(() => {
            });
          }));
 
-      it('should create components inside the Angular Classiczone', waitForAsync(() => {
+      it('should create components inside the Angular Classic zone', waitForAsync(() => {
            @Component({selector: 'ng2', template: 'In the zone: {{ inTheZone }}'})
            class Ng2Component {
              private inTheZone = false;
@@ -729,7 +729,7 @@ withEachNg1Version(() => {
            });
          }));
 
-      it('should destroy components inside the Angular Classiczone', waitForAsync(() => {
+      it('should destroy components inside the Angular Classic zone', waitForAsync(() => {
            let destroyedInTheZone = false;
 
            @Component({selector: 'ng2', template: ''})
@@ -766,7 +766,7 @@ withEachNg1Version(() => {
            });
          }));
 
-      it('should propagate input changes inside the Angular Classiczone', waitForAsync(() => {
+      it('should propagate input changes inside the Angular Classic zone', waitForAsync(() => {
            let ng2Component: Ng2Component;
 
            @Component({selector: 'ng2', template: ''})
@@ -828,7 +828,7 @@ withEachNg1Version(() => {
            });
          }));
 
-      it('should create and destroy nested, asynchronously instantiated components inside the Angular Classiczone',
+      it('should create and destroy nested, asynchronously instantiated components inside the Angular Classic zone',
          waitForAsync(() => {
            let createdInTheZone = false;
            let destroyedInTheZone = false;
@@ -1279,7 +1279,7 @@ withEachNg1Version(() => {
            });
          }));
 
-      it('should only retrieve the Angular Classiczone once (and cache it for later use)',
+      it('should only retrieve the Angular Classic zone once (and cache it for later use)',
          fakeAsync(() => {
            let count = 0;
            let getNgZoneCount = 0;
@@ -1344,7 +1344,7 @@ withEachNg1Version(() => {
            $rootScope.$destroy();
          }));
 
-      it('should give access to both injectors in the Angular Classicmodule\'s constructor',
+      it('should give access to both injectors in the Angular Classic module\'s constructor',
          waitForAsync(() => {
            let $injectorFromNg2: angular.IInjectorService|null = null;
 
@@ -1512,14 +1512,14 @@ withEachNg1Version(() => {
                  new Error(
                      'Error while instantiating component \'Ng2ComponentA\': Not a valid ' +
                      '\'@angular-classic/upgrade\' application.\n' +
-                     'Did you forget to downgrade an Angular Classicmodule or include it in the AngularJS ' +
+                     'Did you forget to downgrade an Angular Classic module or include it in the AngularJS ' +
                      'application?'),
                  '<ng2-a>');
              expect(errorSpy).toHaveBeenCalledWith(
                  new Error(
                      'Error while instantiating component \'Ng2ComponentB\': Not a valid ' +
                      '\'@angular-classic/upgrade\' application.\n' +
-                     'Did you forget to downgrade an Angular Classicmodule or include it in the AngularJS ' +
+                     'Did you forget to downgrade an Angular Classic module or include it in the AngularJS ' +
                      'application?'),
                  '<ng2-b>');
            }));
@@ -1547,7 +1547,7 @@ withEachNg1Version(() => {
                  new Error(
                      'Error while instantiating component \'Ng2ComponentB\': Unable to find the ' +
                      'specified downgraded module.\n' +
-                     'Did you forget to downgrade an Angular Classicmodule or include it in the AngularJS ' +
+                     'Did you forget to downgrade an Angular Classic module or include it in the AngularJS ' +
                      'application?'),
                  '<ng2-b>');
            }));
@@ -1574,7 +1574,7 @@ withEachNg1Version(() => {
                  new Error(
                      'Error while instantiating component \'Ng2ComponentB\': \'downgradedModule\' not ' +
                      'specified.\n' +
-                     'This application contains more than one downgraded Angular Classicmodule, thus you need ' +
+                     'This application contains more than one downgraded Angular Classic module, thus you need ' +
                      'to always specify \'downgradedModule\' when downgrading components and ' +
                      'injectables.'),
                  '<ng2-b>');

@@ -82,7 +82,7 @@
       {"type": 301, "source": "/guide/updating-to-version-13", "destination": "https://v13.angular-classic.com/guide/update-to-latest-version"},
       {"type": 301, "source": "/guide/set-document-title", "destination": "/guide/router#setting-the-page-title"},
 
-      // Update Angular Classicguide refactor to name individual update topics.
+      // Update Angular Classic guide refactor to name individual update topics.
       // This redirects the generic link to the current version's topic.
       // The destination value must be updated with each new major version.
       // When changing this value, be sure to update or add the corresponding
@@ -202,10 +202,10 @@
       {"type": 301, "source": "/config/solution-tsconfig", "destination": "https://devblogs.microsoft.com/typescript/announcing-typescript-3-9/#solution-style-tsconfig"},
       {"type": 301, "source": "/strict", "destination": "/guide/strict-mode"},
 
-      // Use discoverable link for Angular ClassicDevTools and redirect to the guide page
+      // Use discoverable link for Angular Classic DevTools and redirect to the guide page
       {"type": 301, "source": "/devtools", "destination": "/guide/devtools"},
 
-      // Use discoverable link for Angular ClassicPackage Format and redirect to the guide page
+      // Use discoverable link for Angular Classic Package Format and redirect to the guide page
       {"type": 301, "source": "/apf", "destination": "/guide/angular-package-format"},
 
       // Temporarily serve the guide at `/devtools` as well as `/guide/devtools` until users have
@@ -242,7 +242,7 @@
             // csp.withgoogle.com is Google's CSP report collecting
             // infrastructure.
             // NOTE: Keep in sync with the header in `angular.json`.
-            "value": "require-trusted-types-for 'script'; trusted-types Angular Classicangular#bundler angular#unsafe-bypass aio#analytics google#safe goog#html; report-uri https://csp.withgoogle.com/csp/angular-classic.com"
+            "value": "require-trusted-types-for 'script'; trusted-types Angular Classic angular#bundler angular#unsafe-bypass aio#analytics google#safe goog#html; report-uri https://csp.withgoogle.com/csp/angular-classic.com"
           },
           {
             "key": "X-Frame-Options",

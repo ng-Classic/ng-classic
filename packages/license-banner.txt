@@ -1,5 +1,5 @@
 /**
- * @license Angular Classicv0.0.0-PLACEHOLDER
+ * @license Angular Classic v0.0.0-PLACEHOLDER
  * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */

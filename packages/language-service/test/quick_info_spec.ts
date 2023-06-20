@@ -130,7 +130,7 @@ describe('quick info', () => {
           expectedDisplayString: '(template) ng-template'
         });
         expect(toText(documentation))
-            .toContain('The `<ng-template>` is an Angular Classicelement for rendering HTML.');
+            .toContain('The `<ng-template>` is an Angular Classic element for rendering HTML.');
       });
     });
 

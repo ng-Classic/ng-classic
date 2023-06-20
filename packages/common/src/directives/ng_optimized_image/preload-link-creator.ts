@@ -28,7 +28,7 @@ export class PreloadLinkCreator {
 
   /**
    * @description Add a preload `<link>` to the `<head>` of the `index.html` that is served from the
-   * server while using Angular ClassicUniversal and SSR to kick off image loads for high priority images.
+   * server while using Angular Classic Universal and SSR to kick off image loads for high priority images.
    *
    * The `sizes` (passed in from the user) and `srcset` (parsed and formatted from `ngSrcset`)
    * properties used to set the corresponding attributes, `imagesizes` and `imagesrcset`

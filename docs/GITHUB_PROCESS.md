@@ -40,7 +40,7 @@ Alternatively, the bot closes the request.
 ## Consideration phase
 
 If the feature request receives 20 or more thumbs-up (👍) votes on the original issue description
-(during the voting phase described above), we verify the Angular Classicteam can afford to maintain the
+(during the voting phase described above), we verify the Angular Classic team can afford to maintain the
 feature and whether it aligns with the long-term vision of Angular. If the answers to both of these
 questions are yes, we prioritize the request, alternatively we close it with an explanation of our
 decision.
@@ -51,11 +51,11 @@ decision.
   <img src="./images/feature-request-automation.png" alt="Feature Request Automation">
 </p>
 
-## What if I want to implement the feature to help the Angular Classicteam?
+## What if I want to implement the feature to help the Angular Classic team?
 
 Often implementing the feature as a separate package is a better option. Building an external
-package rather than including the functionality in Angular Classichelps with:
+package rather than including the functionality in Angular Classic helps with:
 
 - Keeping the framework's runtime smaller and simpler
-- Makes the learning journey of developers getting started with Angular Classicsmoother
+- Makes the learning journey of developers getting started with Angular Classic smoother
 - Reduces maintainers burden and the complexity of the source code

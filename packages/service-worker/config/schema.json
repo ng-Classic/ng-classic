@@ -29,7 +29,7 @@
               "lazy"
             ],
             "default": "prefetch",
-            "description": "Determines how the resources are initially cached. 'prefetch' tells the Angular Classicservice worker to fetch every single listed resource while it's caching the current version of the app. This is bandwidth-intensive but ensures resources are available whenever they're requested, even if the browser is currently offline. 'lazy' does not cache any of the resources up front. Instead, the Angular Classicservice worker only caches resources for which it receives requests. This is an on-demand caching mode. Resources that are never requested will not be cached. This is useful for things like images at different resolutions, so the service worker only caches the correct assets for the particular screen and orientation."
+            "description": "Determines how the resources are initially cached. 'prefetch' tells the Angular Classic service worker to fetch every single listed resource while it's caching the current version of the app. This is bandwidth-intensive but ensures resources are available whenever they're requested, even if the browser is currently offline. 'lazy' does not cache any of the resources up front. Instead, the Angular Classic service worker only caches resources for which it receives requests. This is an on-demand caching mode. Resources that are never requested will not be cached. This is useful for things like images at different resolutions, so the service worker only caches the correct assets for the particular screen and orientation."
           },
           "updateMode": {
             "enum": [
@@ -117,7 +117,7 @@
               },
               "timeout": {
                 "type": "string",
-                "description": "This duration string specifies the network timeout. The network timeout is how long the Angular Classicservice worker will wait for the network to respond before using a cached response, if configured to do so. 'timeout' is a duration string, using the following unit suffixes: d= days, h= hours, m= minutes, s= seconds, u= milliseconds. For example, the string '5s30u' will translate to five seconds and 30 milliseconds of network timeout."
+                "description": "This duration string specifies the network timeout. The network timeout is how long the Angular Classic service worker will wait for the network to respond before using a cached response, if configured to do so. 'timeout' is a duration string, using the following unit suffixes: d= days, h= hours, m= minutes, s= seconds, u= milliseconds. For example, the string '5s30u' will translate to five seconds and 30 milliseconds of network timeout."
               },
               "strategy": {
                 "enum": [
@@ -125,7 +125,7 @@
                   "performance"
                 ],
                 "default": "performance",
-                "description": "The Angular Classicservice worker can use either of two caching strategies for data resources. 'performance', the default, optimizes for responses that are as fast as possible. If a resource exists in the cache, the cached version is used. This allows for some staleness, depending on the 'maxAge', in exchange for better performance. This is suitable for resources that don't change often; for example, user avatar images. 'freshness' optimizes for currency of data, preferentially fetching requested data from the network. Only if the network times out, according to 'timeout', does the request fall back to the cache. This is useful for resources that change frequently; for example, account balances."
+                "description": "The Angular Classic service worker can use either of two caching strategies for data resources. 'performance', the default, optimizes for responses that are as fast as possible. If a resource exists in the cache, the cached version is used. This allows for some staleness, depending on the 'maxAge', in exchange for better performance. This is suitable for resources that don't change often; for example, user avatar images. 'freshness' optimizes for currency of data, preferentially fetching requested data from the network. Only if the network times out, according to 'timeout', does the request fall back to the cache. This is useful for resources that change frequently; for example, account balances."
               },
               "cacheOpaqueResponses": {
                 "type": "boolean",
@@ -172,7 +172,7 @@
         "performance"
       ],
       "default": "performance",
-      "description": "The Angular Classicservice worker can use two request strategies for navigation requests. 'performance', the default, skips navigation requests. The other strategy, 'freshness', forces all navigation requests through the network."
+      "description": "The Angular Classic service worker can use two request strategies for navigation requests. 'performance', the default, skips navigation requests. The other strategy, 'freshness', forces all navigation requests through the network."
     }
   },
   "required": [

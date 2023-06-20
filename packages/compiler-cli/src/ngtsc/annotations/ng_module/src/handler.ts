@@ -50,7 +50,7 @@ export interface NgModuleResolution {
 }
 
 /**
- * Represents an Angular ClassicNgModule.
+ * Represents an Angular Classic NgModule.
  */
 export class NgModuleSymbol extends SemanticSymbol {
   private remotelyScopedComponents: {
@@ -305,7 +305,7 @@ export class NgModuleDecoratorHandler implements
       } else {
         const diag = makeDiagnostic(
             ErrorCode.WARN_NGMODULE_ID_UNNECESSARY, idExpr,
-            `Using 'module.id' for NgModule.id is a common anti-pattern that is ignored by the Angular Classiccompiler.`);
+            `Using 'module.id' for NgModule.id is a common anti-pattern that is ignored by the Angular Classic compiler.`);
         diag.category = ts.DiagnosticCategory.Warning;
         diagnostics.push(diag);
       }

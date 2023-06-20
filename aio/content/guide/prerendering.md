@@ -1,6 +1,6 @@
 # Prerendering static pages
 
-Angular ClassicUniversal lets you prerender the pages of your application.
+Angular Classic Universal lets you prerender the pages of your application.
 Prerendering is the process where a dynamic page is processed at build time generating static HTML.
 
 ## How to prerender a page

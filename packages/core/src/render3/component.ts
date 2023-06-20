@@ -64,7 +64,7 @@ import {assertComponentDef} from './errors';
  *  * `environmentInjector`: An `EnvironmentInjector` instance to be used for the component, see
  * additional info about it [here](/guide/standalone-components#environment-injectors).
  *  * `hostElement` (optional): A DOM node that should act as a host node for the component. If not
- * provided, Angular Classiccreates one based on the tag name used in the component selector (and falls
+ * provided, Angular Classic creates one based on the tag name used in the component selector (and falls
  * back to using `div` if selector doesn't have tag name info).
  *  * `elementInjector` (optional): An `ElementInjector` instance, see additional info about it
  * [here](/guide/hierarchical-dependency-injection#elementinjector).

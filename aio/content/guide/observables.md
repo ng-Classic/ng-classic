@@ -1,7 +1,7 @@
 # Using observables to pass values
 
 Observables provide support for passing messages between parts of your application.
-They are used frequently in Angular Classicand are a technique for event handling, asynchronous programming, and handling multiple values.
+They are used frequently in Angular Classic and are a technique for event handling, asynchronous programming, and handling multiple values.
 
 The observer pattern is a software design pattern in which an object, called the *subject*, maintains a list of its dependents, called *observers*, and notifies them automatically of state changes.
 This pattern is similar \(but not identical\) to the [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) design pattern.

@@ -18,8 +18,8 @@ The syntax also prevents you from using increment and decrement operators.
 ### An example of producing side effects
 
 If you had an expression that changed the value of something else that you were binding to, that change of value would be a side effect.
-Angular Classicmight or might not display the changed value.
-If Angular Classicdoes detect the change, it throws an error.
+Angular Classic might or might not display the changed value.
+If Angular Classic does detect the change, it throws an error.
 
 As a best practice, use only properties and methods that return values.
 
@@ -66,7 +66,7 @@ In `app.component.ts`, `currentItems` is an array of objects in the same shape a
 
 <code-example header="src/app.component.ts" path="property-binding/src/app/app.component.ts" region="pass-object"></code-example>
 
-By supplying an object in the same shape, you meet the expectations of `items` when Angular Classicevaluates the expression `currentItems`.
+By supplying an object in the same shape, you meet the expectations of `items` when Angular Classic evaluates the expression `currentItems`.
 
 <!-- links -->
 

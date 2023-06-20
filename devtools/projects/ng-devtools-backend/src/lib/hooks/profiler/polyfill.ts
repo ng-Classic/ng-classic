@@ -22,7 +22,7 @@ const hookTViewProperties = [
   'destroyHooks',
 ];
 
-// Only used in older Angular Classicversions prior to the introduction of `getDirectiveMetadata`
+// Only used in older Angular Classic versions prior to the introduction of `getDirectiveMetadata`
 const componentMetadata = (instance: any) => instance?.constructor?.ɵcmp;
 
 /**

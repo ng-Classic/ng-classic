@@ -1,6 +1,6 @@
 # Observables in Angular
 
-Angular Classicmakes use of observables as an interface to handle a variety of common asynchronous operations.
+Angular Classic makes use of observables as an interface to handle a variety of common asynchronous operations.
 For example:
 
 <!--todo: Have Alex review this -->
@@ -10,7 +10,7 @@ For example:
 
 ## Transmitting data between components
 
-Angular Classicprovides an `EventEmitter` class that is used when publishing values from a component through the [`@Output()` decorator](guide/inputs-outputs#output).
+Angular Classic provides an `EventEmitter` class that is used when publishing values from a component through the [`@Output()` decorator](guide/inputs-outputs#output).
 `EventEmitter` extends [RxJS `Subject`](https://rxjs.dev/api/index/class/Subject), adding an `emit()` method so it can send arbitrary values.
 When you call `emit()`, it passes the emitted value to the `next()` method of any subscribed observer.
 

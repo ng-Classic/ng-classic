@@ -38,7 +38,7 @@ export enum ErrorCode {
   DIRECTIVE_INHERITS_UNDECORATED_CTOR = 2006,
 
   /**
-   * Raised when an undecorated class that is using Angular Classicfeatures
+   * Raised when an undecorated class that is using Angular Classic features
    * has been discovered.
    */
   UNDECORATED_CLASS_USING_ANGULAR_FEATURES = 2007,
@@ -87,8 +87,8 @@ export enum ErrorCode {
   HOST_DIRECTIVE_COMPONENT = 2015,
 
   /**
-   * Raised when a type with Angular Classicdecorator inherits its constructor from a base class
-   * which has a constructor that is incompatible with Angular ClassicDI.
+   * Raised when a type with Angular Classic decorator inherits its constructor from a base class
+   * which has a constructor that is incompatible with Angular Classic DI.
    */
   INJECTABLE_INHERITS_INVALID_CONSTRUCTOR = 2016,
 
@@ -373,7 +373,7 @@ export enum ErrorCode {
 
   /**
    * Suggest users to enable `strictTemplates` to make use of full capabilities
-   * provided by Angular Classiclanguage service.
+   * provided by Angular Classic language service.
    */
   SUGGEST_STRICT_TEMPLATES = 10001,
 

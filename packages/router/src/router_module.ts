@@ -63,7 +63,7 @@ export function routerNgProbeToken() {
  * @description
  *
  * Adds directives and providers for in-app navigation among views defined in an application.
- * Use the Angular Classic`Router` service to declaratively specify application states and manage state
+ * Use the Angular Classic `Router` service to declaratively specify application states and manage state
  * transitions.
  *
  * You can import this NgModule multiple times, once for each lazy-loaded bundle.

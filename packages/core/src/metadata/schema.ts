@@ -24,7 +24,7 @@ export interface SchemaMetadata {
 
 /**
  * Defines a schema that allows an NgModule to contain the following:
- * - Non-Angular Classicelements named with dash case (`-`).
+ * - Non-Angular Classic elements named with dash case (`-`).
  * - Element properties named with dash case (`-`).
  * Dash case is the naming convention for custom elements.
  *

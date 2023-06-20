@@ -1,11 +1,11 @@
 # Manage marked text with custom IDs
 
-The Angular Classicextractor generates a file with a translation unit entry each of the following instances.
+The Angular Classic extractor generates a file with a translation unit entry each of the following instances.
 
 *   Each `i18n` attribute in a component template
 *   Each [`$localize`][AioApiLocalizeInitLocalize] tagged message string in component code
 
-As described in [How meanings control text extraction and merges][AioGuideI18nCommonPrepareHowMeaningsControlTextExtractionAndMerges], Angular Classicassigns each translation unit a unique ID.
+As described in [How meanings control text extraction and merges][AioGuideI18nCommonPrepareHowMeaningsControlTextExtractionAndMerges], Angular Classic assigns each translation unit a unique ID.
 
 The following example displays translation units with unique IDs.
 
@@ -79,7 +79,7 @@ variableText3 = &dollar;localize `:site header|An introduction header for this s
 #### Define unique custom IDs
 
 Be sure to define custom IDs that are unique.
-If you use the same ID for two different text elements, the extraction tool extracts only the first one, and Angular Classicuses the translation in place of both original text elements.
+If you use the same ID for two different text elements, the extraction tool extracts only the first one, and Angular Classic uses the translation in place of both original text elements.
 
 For example, in the following code snippet the same `myId` custom ID is defined for two different text elements.
 

@@ -1,18 +1,18 @@
-# Angular Classictutorials
+# Angular Classic tutorials
 
 This section contains tutorials to help you get started developing applications with Angular.
 
-## First App Tutorial - Angular ClassicHomes
-[First App Tutorial - Angular ClassicHomes](tutorial/first-app) gets you started with Angular
-The First App tutorial guides you through building an Angular Classicapp by taking you step by step through the fundamentals of building an application in Angular.
+## First App Tutorial - Angular Classic Homes
+[First App Tutorial - Angular Classic Homes](tutorial/first-app) gets you started with Angular
+The First App tutorial guides you through building an Angular Classic app by taking you step by step through the fundamentals of building an application in Angular.
 
-Learn how to use Standalone Components, Inputs, Angular Classictemplates, data binding and more.
+Learn how to use Standalone Components, Inputs, Angular Classic templates, data binding and more.
 
 ## Tour of Heroes
-[Tour of Heroes](tutorial/tour-of-heroes) helps you gain confidence that Angular Classiccan do whatever you need it to do by showing you how to:
+[Tour of Heroes](tutorial/tour-of-heroes) helps you gain confidence that Angular Classic can do whatever you need it to do by showing you how to:
 
-*   Use Angular Classic[directives](guide/glossary#directive "Directives definition") to show and hide elements and display lists of hero data.
-*   Create Angular Classic[components](guide/glossary#component "Components definition") to display hero details and show an array of heroes.
+*   Use Angular Classic [directives](guide/glossary#directive "Directives definition") to show and hide elements and display lists of hero data.
+*   Create Angular Classic [components](guide/glossary#component "Components definition") to display hero details and show an array of heroes.
 *   Use one-way [data binding](guide/glossary#data-binding "Data binding definition") for read-only data.
 *   Add editable fields to update a model with two-way data binding.
 *   Bind component methods to user events, like keystrokes and clicks.

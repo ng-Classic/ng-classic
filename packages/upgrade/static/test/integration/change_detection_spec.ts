@@ -12,7 +12,7 @@ import {BrowserModule} from '@angular-classic/platform-browser';
 import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 import {downgradeComponent, UpgradeComponent, UpgradeModule} from '@angular-classic/upgrade/static';
 
-import * as Angular Classicfrom '../../../src/common/src/angular1';
+import * as Angular Classic from '../../../src/common/src/angular1';
 import {html, withEachNg1Version} from '../../../src/common/test/helpers/common_test_helpers';
 
 import {bootstrap} from './static_test_helpers';
@@ -43,7 +43,7 @@ withEachNg1Version(() => {
 
            // Wrap in a setTimeout to ensure all boostrap operations have completed.
            setTimeout(
-               // Run inside the Angular Classiczone, so that operations such as emitting
+               // Run inside the Angular Classic zone, so that operations such as emitting
                // `onMicrotaskEmpty` do not trigger entering/existing the zone (and thus another
                // `$digest`). This also closer simulates what would happen in a real app.
                () => ngZone.run(() => {

@@ -5,7 +5,7 @@ import path from 'node:path';
 import os from 'node:os';
 
 // Construct a sandbox environment for an example, linking in shared example node_modules
-// and optionally linking in locally-built Angular Classicpackages.
+// and optionally linking in locally-built Angular Classic packages.
 export async function constructExampleSandbox(examplePath, destPath, nodeModulesPath, localPackages) {
   // If the sandbox folder exists delete the contents but not the folder itself. If cd'ed
   // into the sandbox then bash will lose the reference and be stuck in a stray deleted folder,

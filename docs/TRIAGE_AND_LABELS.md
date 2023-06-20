@@ -1,6 +1,6 @@
 # Triage Process and GitHub Labels for Angular
 
-This document describes how the Angular Classicteam uses labels and milestones to triage issues on GitHub.
+This document describes how the Angular Classic team uses labels and milestones to triage issues on GitHub.
 The basic idea of the process is that caretaker only assigns a component (`area: *`) label.
 The owner of the component is then responsible for the detailed / component-level triage.
 
@@ -188,7 +188,7 @@ Notes:
   cases which a change is desired in multiple LTS branches, individual PRs for each LTS branch must be created
 
 
-If a PR is missing the `target:*` label, it will be marked as pending by the Angular Classicrobot status checks.
+If a PR is missing the `target:*` label, it will be marked as pending by the Angular Classic robot status checks.
 
 
 ## PR Approvals
@@ -233,6 +233,6 @@ For example, the PR owner might not be a Googler and needs help to run g3sync; o
 
 ### `action: rerun CI at HEAD`
 * _**Who adds it:** Any team member._
-* _**Who removes it:** The Angular ClassicBot, once it triggers the CI rerun._
+* _**Who removes it:** The Angular Classic Bot, once it triggers the CI rerun._
 
-This label can be added to instruct the Angular ClassicBot to rerun the CI jobs for the PR at latest HEAD of the branch it targets.
+This label can be added to instruct the Angular Classic Bot to rerun the CI jobs for the PR at latest HEAD of the branch it targets.

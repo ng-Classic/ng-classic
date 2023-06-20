@@ -573,7 +573,7 @@ export interface AnimationStaggerMetadata extends AnimationMetadata {
  * When an area of the template is set to have animations disabled,
  * **all** inner components have their animations disabled as well.
  * This means that you can disable all animations for an app
- * by placing a host binding set on `@.disabled` on the topmost Angular Classiccomponent.
+ * by placing a host binding set on `@.disabled` on the topmost Angular Classic component.
  *
  * ```typescript
  * import {Component, HostBinding} from '@angular-classic/core';
@@ -892,7 +892,7 @@ export function keyframes(steps: AnimationStyleMetadata[]): AnimationKeyframesSe
  *
  * ### State Change Expression
  *
- * The State Change Expression instructs Angular Classicwhen to run the transition's animations, it can
+ * The State Change Expression instructs Angular Classic when to run the transition's animations, it can
  *either be
  *  - a string with a specific syntax
  *  - or a function that compares the previous and current state (value of the expression bound to
@@ -972,7 +972,7 @@ export function keyframes(steps: AnimationStyleMetadata[]): AnimationKeyframesSe
  *
  * If the final step in a transition is a call to `animate()` that uses a timing value
  * with no `style` data, that step is automatically considered the final animation arc,
- * for the element to reach the final state, in such case Angular Classicautomatically adds or removes
+ * for the element to reach the final state, in such case Angular Classic automatically adds or removes
  * CSS styles to ensure that the element is in the correct final state.
  *
  *
@@ -1094,7 +1094,7 @@ export function animation(
  * containing child animations, and run them using this function.
  *
  * Note that this feature is designed to be used with `query()` and it will only work
- * with animations that are assigned using the Angular Classicanimation library. CSS keyframes
+ * with animations that are assigned using the Angular Classic animation library. CSS keyframes
  * and transitions are not handled by this API.
  *
  * @publicApi
@@ -1174,11 +1174,11 @@ export function useAnimation(
  * ### Entering and Leaving Elements
  *
  * Not all elements can be queried via the `:enter` and `:leave` tokens, the only ones
- * that can are those that Angular Classicassumes can enter/leave based on their own logic
+ * that can are those that Angular Classic assumes can enter/leave based on their own logic
  * (if their insertion/removal is simply a consequence of that of their parent they
  * should be queried via a different token in their parent's `:enter`/`:leave` transitions).
  *
- * The only elements Angular Classicassumes can enter/leave based on their own logic (thus the only
+ * The only elements Angular Classic assumes can enter/leave based on their own logic (thus the only
  * ones that can be queried via the `:enter` and `:leave` tokens) are:
  *  - Those inserted dynamically (via `ViewContainerRef`)
  *  - Those that have a structural directive (which, under the hood, are a subset of the above ones)

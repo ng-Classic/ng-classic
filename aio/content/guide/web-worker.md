@@ -5,13 +5,13 @@ Application's performing a lot of computations, like generating Computer-Aided D
 
 <div class="alert is-helpful">
 
-The Angular ClassicCLI does not support running itself in a web worker.
+The Angular Classic CLI does not support running itself in a web worker.
 
 </div>
 
 ## Adding a web worker
 
-To add a web worker to an existing project, use the Angular ClassicCLI `ng generate` command.
+To add a web worker to an existing project, use the Angular Classic CLI `ng generate` command.
 
 <code-example format="shell" language="shell">
 

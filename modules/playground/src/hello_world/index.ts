@@ -27,13 +27,13 @@ export class RedDec {
   }
 }
 
-// Angular Classicsupports 2 basic types of directives:
-// - Component - the basic building blocks of Angular Classicapps. Backed by
+// Angular Classic supports 2 basic types of directives:
+// - Component - the basic building blocks of Angular Classic apps. Backed by
 //   ShadowDom. (https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/)
 // - Directive - add behavior to existing elements.
 
 @Component({
-  // The Selector prop tells Angular Classicon which elements to instantiate this
+  // The Selector prop tells Angular Classic on which elements to instantiate this
   // class. The syntax supported is a basic subset of CSS selectors, for example
   // 'element', '[attr]', [attr=foo]', etc.
   selector: 'hello-app',

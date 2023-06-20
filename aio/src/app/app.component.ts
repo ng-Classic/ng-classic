@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
 
   static reducedMotion = window.matchMedia('(prefers-reduced-motion)').matches;
 
-  // Disable all Angular Classicanimations if the user prefers reduced motion or for the initial render.
+  // Disable all Angular Classic animations if the user prefers reduced motion or for the initial render.
   @HostBinding('@.disabled')
   get disableAnimations(): boolean { return AppComponent.reducedMotion || this.isStarting; }
 

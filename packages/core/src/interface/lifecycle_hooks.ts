@@ -38,7 +38,7 @@ export interface OnChanges {
 
 /**
  * @description
- * A lifecycle hook that is called after Angular Classichas initialized
+ * A lifecycle hook that is called after Angular Classic has initialized
  * all data-bound properties of a directive.
  * Define an `ngOnInit()` method to handle any additional initialization tasks.
  *
@@ -126,7 +126,7 @@ export interface OnDestroy {
 
 /**
  * @description
- * A lifecycle hook that is called after Angular Classichas fully initialized
+ * A lifecycle hook that is called after Angular Classic has fully initialized
  * all content of a directive. It will run only once when the projected content is initialized.
  * Define an `ngAfterContentInit()` method to handle any additional initialization tasks.
  *
@@ -145,7 +145,7 @@ export interface OnDestroy {
 export interface AfterContentInit {
   /**
    * A callback method that is invoked immediately after
-   * Angular Classichas completed initialization of all of the directive's
+   * Angular Classic has completed initialization of all of the directive's
    * content.
    * It is invoked only once when the directive is instantiated.
    */
@@ -180,7 +180,7 @@ export interface AfterContentChecked {
 
 /**
  * @description
- * A lifecycle hook that is called after Angular Classichas fully initialized
+ * A lifecycle hook that is called after Angular Classic has fully initialized
  * a component's view.
  * Define an `ngAfterViewInit()` method to handle any additional initialization tasks.
  *
@@ -199,7 +199,7 @@ export interface AfterContentChecked {
 export interface AfterViewInit {
   /**
    * A callback method that is invoked immediately after
-   * Angular Classichas completed initialization of a component's view.
+   * Angular Classic has completed initialization of a component's view.
    * It is invoked only once when the view is instantiated.
    *
    */

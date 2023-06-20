@@ -1,10 +1,10 @@
-# Angular ClassicDevTools
+# Angular Classic DevTools
 
-Angular ClassicDevTools is a browser DevTools extension for debugging and profiling Angular Classicapplications.
+Angular Classic DevTools is a browser DevTools extension for debugging and profiling Angular Classic applications.
 
 ## Installing and Running locally
 
-To setup your local development environment for Angular ClassicDevTools, perform the following steps:
+To setup your local development environment for Angular Classic DevTools, perform the following steps:
 
 ```bash
 git clone git://github.com/ng-classic/ng-classic
@@ -13,17 +13,17 @@ yarn
 yarn run devtools:devserver
 ```
 
-## Publish Angular ClassicDevTools
+## Publish Angular Classic DevTools
 
-To publish Angular ClassicDevTools to Firefox or Chrome stores:
+To publish Angular Classic DevTools to Firefox or Chrome stores:
 
-1. Update the version of the corresponding manifest file. Currently, Angular ClassicDevTools uses different versioning compared to the rest of the packages within the monorepo.
+1. Update the version of the corresponding manifest file. Currently, Angular Classic DevTools uses different versioning compared to the rest of the packages within the monorepo.
   * `manifest.chrome.json` for Chrome
   * `manifest.firefox.json` for Firefox
 1. Build the extension:
   * `yarn devtools:build:chrome` for Chrome
   * `yarn devtools:build:firefox` for Firefox
-1. Find the extension production assets in `dist/bin/devtools/projects/shell-browser/src/prodapp` relative to the root of the Angular Classicmonorepo
+1. Find the extension production assets in `dist/bin/devtools/projects/shell-browser/src/prodapp` relative to the root of the Angular Classic monorepo
 1. Zip the files in the directory
 1. Upload them to the corresponding store
 

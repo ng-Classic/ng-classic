@@ -11,7 +11,7 @@ import {ClassPropertyMapping, DirectiveTypeCheckMeta, InputMapping, InputOrOutpu
 import {ClassDeclaration} from '../../../reflection';
 
 /**
- * Represents an Angular Classicdirective. Components are represented by `ComponentSymbol`, which inherits
+ * Represents an Angular Classic directive. Components are represented by `ComponentSymbol`, which inherits
  * from this symbol.
  */
 export class DirectiveSymbol extends SemanticSymbol {

@@ -98,12 +98,12 @@ export function ɵɵinvalidFactoryDep(index: number): never {
   throw new RuntimeError(
       RuntimeErrorCode.INVALID_FACTORY_DEPENDENCY,
       ngDevMode &&
-          `This constructor is not compatible with Angular ClassicDependency Injection because its dependency at index ${
+          `This constructor is not compatible with Angular Classic Dependency Injection because its dependency at index ${
               index} of the parameter list is invalid.
-This can happen if the dependency type is a primitive like a string or if an ancestor of this class is missing an Angular Classicdecorator.
+This can happen if the dependency type is a primitive like a string or if an ancestor of this class is missing an Angular Classic decorator.
 
 Please check that 1) the type for the parameter at index ${
-              index} is correct and 2) the correct Angular Classicdecorators are defined for this class and its ancestors.`);
+              index} is correct and 2) the correct Angular Classic decorators are defined for this class and its ancestors.`);
 }
 
 /**

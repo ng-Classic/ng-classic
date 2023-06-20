@@ -365,7 +365,7 @@ export interface Listener {
 
 /**
  * Retrieves a list of event listeners associated with a DOM element. The list does include host
- * listeners, but it does not include event listeners defined outside of the Angular Classiccontext
+ * listeners, but it does not include event listeners defined outside of the Angular Classic context
  * (e.g. through `addEventListener`).
  *
  * @usageNotes

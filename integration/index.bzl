@@ -2,7 +2,7 @@
 #
 # Use of this source code is governed by an MIT-style license that can be
 # found in the LICENSE file at https://angular.io/license
-"""Angular Classicintegration testing
+"""Angular Classic integration testing
 """
 
 load("//integration:npm_package_archives.bzl", "NPM_PACKAGE_ARCHIVES", "npm_package_archive_label")
@@ -10,7 +10,7 @@ load("@npm//@angular-classic/build-tooling/bazel/integration:index.bzl", "integr
 load("//:packages.bzl", "INTEGRATION_PACKAGES")
 
 def _ng_integration_test(name, setup_chromium = False, **kwargs):
-    "Set defaults for the npm_integration_test common to the Angular Classicrepo"
+    "Set defaults for the npm_integration_test common to the Angular Classic repo"
     pinned_npm_packages = kwargs.pop("pinned_npm_packages", [])
     use_view_engine_packages = kwargs.pop("use_view_engine_packages", [])
     toolchains = kwargs.pop("toolchains", [])
@@ -59,7 +59,7 @@ def _ng_integration_test(name, setup_chromium = False, **kwargs):
         if pkg not in pinned_npm_packages:
             npm_packages["@npm//:" + npm_package_archive_label(pkg)] = pkg
     for pkg in INTEGRATION_PACKAGES:
-        # If the generated Angular Classicframework package is listed in the `use_view_engine_packages`
+        # If the generated Angular Classic framework package is listed in the `use_view_engine_packages`
         # list, we will not use the local-built NPM package, but instead map to the
         # corresponding View Engine v12.x package from the `@npm//` workspace.
         if pkg in use_view_engine_packages:

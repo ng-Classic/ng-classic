@@ -7,7 +7,7 @@ It's ready for you to try, but it might change before it is stable and is not ye
 
 </div>
 
-In v16 and higher, the new build system provides a way to build Angular Classicapplications. This new build system includes:
+In v16 and higher, the new build system provides a way to build Angular Classic applications. This new build system includes:
 
 - A modern output format using ESM, with dynamic import expressions to support lazy module loading.
 - Faster build-time performance for both initial builds and incremental rebuilds.
@@ -15,9 +15,9 @@ In v16 and higher, the new build system provides a way to build Angular Classica
 
 You can opt-in to use the new builder on a per application basis with minimal configuration updates required.
 
-## Trying the ESM build system in an Angular ClassicCLI application
+## Trying the ESM build system in an Angular Classic CLI application
 
-A new builder named `browser-esbuild` is available within the `@angular-classic-devkit/build-angular` package that is present in an Angular ClassicCLI generated application. The build is a drop-in replacement for the existing `browser` builder that provides the current stable browser application build system.
+A new builder named `browser-esbuild` is available within the `@angular-classic-devkit/build-angular` package that is present in an Angular Classic CLI generated application. The build is a drop-in replacement for the existing `browser` builder that provides the current stable browser application build system.
 You can try out the new build system for applications that use the `browser` builder.
 
 ### Updating the application configuration
@@ -68,7 +68,7 @@ You can continue to use the [command line options](/cli/serve) you have used in 
 
 <div class="alert is-important">
 
-The developer preview currently does not provide HMR support and the HMR related options will be ignored if used. Angular Classicfocused HMR capabilities are currently planned and will be introduced in a future version.
+The developer preview currently does not provide HMR support and the HMR related options will be ignored if used. Angular Classic focused HMR capabilities are currently planned and will be introduced in a future version.
 
 </div>
 
@@ -123,7 +123,7 @@ console.log(moment().format());
 
 ## Vite as a development server
 
-The usage of Vite in the Angular ClassicCLI is currently only within a _development server capacity only_. Even without using the underlying Vite build system, Vite provides a full-featured development server with client side support that has been bundled into a low dependency npm package. This makes it an ideal candidate to provide comprehensive development server functionality. The current development server process uses the new build system to generate a development build of the application in memory and passes the results to Vite to serve the application. The usage of Vite, much like the Webpack-based development server, is encapsulated within the Angular ClassicCLI `dev-server` builder and currently cannot be directly configured.
+The usage of Vite in the Angular Classic CLI is currently only within a _development server capacity only_. Even without using the underlying Vite build system, Vite provides a full-featured development server with client side support that has been bundled into a low dependency npm package. This makes it an ideal candidate to provide comprehensive development server functionality. The current development server process uses the new build system to generate a development build of the application in memory and passes the results to Vite to serve the application. The usage of Vite, much like the Webpack-based development server, is encapsulated within the Angular Classic CLI `dev-server` builder and currently cannot be directly configured.
 
 ## Known Issues
 

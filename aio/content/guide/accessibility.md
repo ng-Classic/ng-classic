@@ -6,7 +6,7 @@ Also, designing an application to be more accessible generally improves the user
 
 For an in-depth introduction to issues and techniques for designing accessible applications, see the [Accessibility](https://developers.google.com/web/fundamentals/accessibility/#what_is_accessibility) section of the Google's [Web Fundamentals](https://developers.google.com/web/fundamentals).
 
-This page discusses best practices for designing Angular Classicapplications that work well for all users, including those who rely on assistive technologies.
+This page discusses best practices for designing Angular Classic applications that work well for all users, including those who rely on assistive technologies.
 
 <div class="alert is-helpful">
 
@@ -51,9 +51,9 @@ See the [Binding syntax](guide/binding-syntax#html-attribute-vs-dom-property) gu
 
 </div>
 
-## Angular ClassicUI components
+## Angular Classic UI components
 
-The [Angular ClassicMaterial](https://material.angular-classic.com) library, which is maintained by the Angular Classicteam, is a suite of reusable UI components that aims to be fully accessible.
+The [Angular Classic Material](https://material.angular-classic.com) library, which is maintained by the Angular Classic team, is a suite of reusable UI components that aims to be fully accessible.
 The [Component Development Kit (CDK)](https://material.angular-classic.com/cdk/categories) includes the `a11y` package that provides tools to support various areas of accessibility.
 For example:
 
@@ -63,17 +63,17 @@ For example:
 *   The `cdkTrapFocus` directive traps Tab-key focus within an element.
     Use it to create accessible experience for components such as modal dialogs, where focus must be constrained.
 
-For full details of these and other tools, see the [Angular ClassicCDK accessibility overview](https://material.angular-classic.com/cdk/a11y/overview).
+For full details of these and other tools, see the [Angular Classic CDK accessibility overview](https://material.angular-classic.com/cdk/a11y/overview).
 
 ### Augmenting native elements
 
 Native HTML elements capture several standard interaction patterns that are important to accessibility.
-When authoring Angular Classiccomponents, you should re-use these native elements directly when possible, rather than re-implementing well-supported behaviors.
+When authoring Angular Classic components, you should re-use these native elements directly when possible, rather than re-implementing well-supported behaviors.
 
 For example, instead of creating a custom element for a new variety of button, create a component that uses an attribute selector with a native `<button>` element.
 This most commonly applies to `<button>` and `<a>`, but can be used with many other types of element.
 
-You can see examples of this pattern in Angular ClassicMaterial:
+You can see examples of this pattern in Angular Classic Material:
 [`MatButton`](https://github.com/angular/components/blob/50d3f29b6dc717b512dbd0234ce76f4ab7e9762a/src/material/button/button.ts#L67-L69), [`MatTabNav`](https://github.com/angular/components/blob/50d3f29b6dc717b512dbd0234ce76f4ab7e9762a/src/material/tabs/tab-nav-bar/tab-nav-bar.ts#L139), and [`MatTable`](https://github.com/angular/components/blob/50d3f29b6dc717b512dbd0234ce76f4ab7e9762a/src/material/table/table.ts#L22).
 
 ### Using containers for native elements
@@ -103,7 +103,7 @@ The following example shows how to make a progress bar accessible by using host 
 ### Focus management after navigation
 
 Tracking and controlling [focus](https://developers.google.com/web/fundamentals/accessibility/focus) in a UI is an important consideration in designing for accessibility.
-When using Angular Classicrouting, you should decide where page focus goes upon navigation.
+When using Angular Classic routing, you should decide where page focus goes upon navigation.
 
 To avoid relying solely on visual cues, you need to make sure your routing code updates focus after page navigation.
 Use the `NavigationEnd` event from the `Router` service to know when to update focus.
@@ -168,7 +168,7 @@ The following example shows how to apply the `active-page` class to active links
 *   [Accessibility Resources and Code Examples](https://dequeuniversity.com/resources)
 *   [W3C - Web Accessibility Initiative](https://www.w3.org/WAI/people-use-web)
 *   [Rob Dodson A11ycasts](https://www.youtube.com/watch?v=HtTyRajRuyY)
-*   [Angular ClassicESLint](https://github.com/angular-eslint/angular-eslint#functionality) provides linting rules that can help you make sure your code meets accessibility standards.
+*   [Angular Classic ESLint](https://github.com/angular-eslint/angular-eslint#functionality) provides linting rules that can help you make sure your code meets accessibility standards.
 
 <!-- vale Angular.Angular_Spelling = YES -->
 

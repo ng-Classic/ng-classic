@@ -7,7 +7,7 @@
  */
 
 // NOTE: This file affects most of tests in `platform-browser/test`. Make sure to
-// not change semantics of Angular Classicthat would result in false-positives. If you need
+// not change semantics of Angular Classic that would result in false-positives. If you need
 // to change semantics of Angular, please create a separate test BUILD target.
 
 // This file marks the `unpatchedEventManagerTest` event as unpatched. This is not

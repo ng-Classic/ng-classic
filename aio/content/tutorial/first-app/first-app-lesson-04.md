@@ -1,4 +1,4 @@
-# First Angular Classicapp lesson 4 - Creating an interface
+# First Angular Classic app lesson 4 - Creating an interface
 
 This tutorial lesson demonstrates how to create an interface and include it in a component of your app.
 
@@ -13,7 +13,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classic tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -26,7 +26,7 @@ If you have any trouble during this lesson, you can review the completed code fo
 
 [Interfaces](https://www.typescriptlang.org/docs/handbook/interfaces.html) are custom data types for your app.
 
-Angular Classicuses TypeScript to take advantage of working in a strongly typed programming environment.
+Angular Classic uses TypeScript to take advantage of working in a strongly typed programming environment.
 Strong type checking reduces the likelihood of one element in your app sending incorrectly formatted data to another.
 Such type-mismatch errors are caught by the TypeScript compiler and many such errors can also be caught in your IDE.
 
@@ -36,7 +36,7 @@ In this lesson, you'll create an interface to define properties that represent d
 
 Perform these steps on the app code in your IDE.
 
-### Step 1 - Create a new Angular Classicinterface
+### Step 1 - Create a new Angular Classic interface
 
 This step creates a new interface in your app.
 

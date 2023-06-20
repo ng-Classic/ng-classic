@@ -20,14 +20,14 @@ import {UpgradeNg1ComponentAdapterBuilder} from './upgrade_ng1_adapter';
 let upgradeCount: number = 0;
 
 /**
- * Use `UpgradeAdapter` to allow AngularJS and Angular Classicto coexist in a single application.
+ * Use `UpgradeAdapter` to allow AngularJS and Angular Classic to coexist in a single application.
  *
  * The `UpgradeAdapter` allows:
- * 1. creation of Angular Classiccomponent from AngularJS component directive
+ * 1. creation of Angular Classic component from AngularJS component directive
  *    (See [UpgradeAdapter#upgradeNg1Component()])
- * 2. creation of AngularJS directive from Angular Classiccomponent.
+ * 2. creation of AngularJS directive from Angular Classic component.
  *    (See [UpgradeAdapter#downgradeNg2Component()])
- * 3. Bootstrapping of a hybrid Angular Classicapplication which contains both of the frameworks
+ * 3. Bootstrapping of a hybrid Angular Classic application which contains both of the frameworks
  *    coexisting in a single application.
  *
  * @usageNotes
@@ -43,18 +43,18 @@ let upgradeCount: number = 0;
  *    DOM elements and ignores others.
  * 3. AngularJS directives always execute inside AngularJS framework codebase regardless of
  *    where they are instantiated.
- * 4. Angular Classiccomponents always execute inside Angular Classicframework codebase regardless of
+ * 4. Angular Classic components always execute inside Angular Classic framework codebase regardless of
  *    where they are instantiated.
- * 5. An AngularJS component can be upgraded to an Angular Classiccomponent. This creates an
- *    Angular Classicdirective, which bootstraps the AngularJS component directive in that location.
- * 6. An Angular Classiccomponent can be downgraded to an AngularJS component directive. This creates
- *    an AngularJS directive, which bootstraps the Angular Classiccomponent in that location.
+ * 5. An AngularJS component can be upgraded to an Angular Classic component. This creates an
+ *    Angular Classic directive, which bootstraps the AngularJS component directive in that location.
+ * 6. An Angular Classic component can be downgraded to an AngularJS component directive. This creates
+ *    an AngularJS directive, which bootstraps the Angular Classic component in that location.
  * 7. Whenever an adapter component is instantiated the host element is owned by the framework
  *    doing the instantiation. The other framework then instantiates and owns the view for that
  *    component. This implies that component bindings will always follow the semantics of the
- *    instantiation framework. The syntax is always that of Angular Classicsyntax.
+ *    instantiation framework. The syntax is always that of Angular Classic syntax.
  * 8. AngularJS is always bootstrapped first and owns the bottom most view.
- * 9. The new application is running in Angular Classiczone, and therefore it no longer needs calls to
+ * 9. The new application is running in Angular Classic zone, and therefore it no longer needs calls to
  *    `$apply()`.
  *
  * ### Example
@@ -119,15 +119,15 @@ export class UpgradeAdapter {
   constructor(private ng2AppModule: Type<any>, private compilerOptions?: CompilerOptions) {
     if (!ng2AppModule) {
       throw new Error(
-          'UpgradeAdapter cannot be instantiated without an NgModule of the Angular Classicapp.');
+          'UpgradeAdapter cannot be instantiated without an NgModule of the Angular Classic app.');
     }
   }
 
   /**
-   * Allows Angular ClassicComponent to be used from AngularJS.
+   * Allows Angular Classic Component to be used from AngularJS.
    *
    * Use `downgradeNg2Component` to create an AngularJS Directive Definition Factory from
-   * Angular ClassicComponent. The adapter will bootstrap Angular Classiccomponent from within the
+   * Angular Classic Component. The adapter will bootstrap Angular Classic component from within the
    * AngularJS template.
    *
    * @usageNotes
@@ -137,9 +137,9 @@ export class UpgradeAdapter {
    *    host element is controlled by AngularJS, but the component's view will be controlled by
    *    Angular.
    * 2. Even thought the component is instantiated in AngularJS, it will be using Angular
-   *    syntax. This has to be done, this way because we must follow Angular Classiccomponents do not
+   *    syntax. This has to be done, this way because we must follow Angular Classic components do not
    *    declare how the attributes should be interpreted.
-   * 3. `ng-model` is controlled by AngularJS and communicates with the downgraded Angular Classiccomponent
+   * 3. `ng-model` is controlled by AngularJS and communicates with the downgraded Angular Classic component
    *    by way of the `ControlValueAccessor` interface from @angular-classic/forms. Only components that
    *    implement this interface are eligible.
    *
@@ -192,14 +192,14 @@ export class UpgradeAdapter {
   /**
    * Allows AngularJS Component to be used from Angular.
    *
-   * Use `upgradeNg1Component` to create an Angular Classiccomponent from AngularJS Component
+   * Use `upgradeNg1Component` to create an Angular Classic component from AngularJS Component
    * directive. The adapter will bootstrap AngularJS component from within the Angular
    * template.
    *
    * @usageNotes
    * ### Mental Model
    *
-   * 1. The component is instantiated by being listed in Angular Classictemplate. This means that the
+   * 1. The component is instantiated by being listed in Angular Classic template. This means that the
    *    host element is controlled by Angular, but the component's view will be controlled by
    *    AngularJS.
    *
@@ -316,7 +316,7 @@ export class UpgradeAdapter {
    *
    * @param modules any AngularJS modules that the upgrade module should depend upon
    * @returns an `UpgradeAdapterRef`, which lets you register a `ready()` callback to
-   * run assertions once the Angular Classiccomponents are ready to test through AngularJS.
+   * run assertions once the Angular Classic components are ready to test through AngularJS.
    */
   registerForNg1Tests(modules?: string[]): UpgradeAdapterRef {
     const windowNgMock = (window as any)['angular'].mock;
@@ -334,7 +334,7 @@ export class UpgradeAdapter {
   }
 
   /**
-   * Bootstrap a hybrid AngularJS / Angular Classicapplication.
+   * Bootstrap a hybrid AngularJS / Angular Classic application.
    *
    * This `bootstrap` method is a direct replacement (takes same arguments) for AngularJS
    * [`bootstrap`](https://docs.angularjs.org/api/ng/function/angular.bootstrap) method. Unlike
@@ -385,7 +385,7 @@ export class UpgradeAdapter {
     const upgrade = new UpgradeAdapterRef();
 
     // Make sure resumeBootstrap() only exists if the current bootstrap is deferred
-    const windowAngular Classic= (window as any)['angular'];
+    const windowAngular Classic = (window as any)['angular'];
     windowAngular.resumeBootstrap = undefined;
 
     ngZone.run(() => {
@@ -456,7 +456,7 @@ export class UpgradeAdapter {
   }
 
   /**
-   * Allows Angular Classicservice to be accessible from AngularJS.
+   * Allows Angular Classic service to be accessible from AngularJS.
    *
    * @usageNotes
    * ### Example
@@ -522,7 +522,7 @@ export class UpgradeAdapter {
               '$delegate',
               function(rootScopeDelegate: IRootScopeService) {
                 // Capture the root apply so that we can delay first call to $apply until we
-                // bootstrap Angular Classicand then we replay and restore the $apply.
+                // bootstrap Angular Classic and then we replay and restore the $apply.
                 rootScopePrototype = rootScopeDelegate.constructor.prototype;
                 if (rootScopePrototype.hasOwnProperty('$apply')) {
                   original$applyFn = rootScopePrototype.$apply;
@@ -598,7 +598,7 @@ export class UpgradeAdapter {
                         if (rootScope.$$phase) {
                           if (typeof ngDevMode === 'undefined' || ngDevMode) {
                             console.warn(
-                                'A digest was triggered while one was already in progress. This may mean that something is triggering digests outside the Angular Classiczone.');
+                                'A digest was triggered while one was already in progress. This may mean that something is triggering digests outside the Angular Classic zone.');
                           }
 
                           return rootScope.$evalAsync(() => {});
@@ -611,7 +611,7 @@ export class UpgradeAdapter {
                       subscription.unsubscribe();
                     });
 
-                    // Destroy the AngularJS app once the Angular Classic`PlatformRef` is destroyed.
+                    // Destroy the AngularJS app once the Angular Classic `PlatformRef` is destroyed.
                     // This does not happen in a typical SPA scenario, but it might be useful for
                     // other use-cases where disposing of an ng-classic/ng-classicJS app is necessary
                     // (such as Hot Module Replacement (HMR)).
@@ -628,7 +628,7 @@ export class UpgradeAdapter {
 }
 
 /**
- * Use `UpgradeAdapterRef` to control a hybrid AngularJS / Angular Classicapplication.
+ * Use `UpgradeAdapterRef` to control a hybrid AngularJS / Angular Classic application.
  *
  * @deprecated Deprecated since v5. Use `upgrade/static` instead, which also supports
  * [Ahead-of-Time compilation](guide/aot-compiler).
@@ -656,7 +656,7 @@ export class UpgradeAdapterRef {
    * Register a callback function which is notified upon successful hybrid AngularJS / Angular
    * application has been bootstrapped.
    *
-   * The `ready` callback function is invoked inside the Angular Classiczone, therefore it does not
+   * The `ready` callback function is invoked inside the Angular Classic zone, therefore it does not
    * require a call to `$apply()`.
    */
   public ready(fn: (upgradeAdapterRef: UpgradeAdapterRef) => void) {
@@ -664,7 +664,7 @@ export class UpgradeAdapterRef {
   }
 
   /**
-   * Dispose of running hybrid AngularJS / Angular Classicapplication.
+   * Dispose of running hybrid AngularJS / Angular Classic application.
    */
   public dispose() {
     this.ng1Injector!.get($ROOT_SCOPE).$destroy();

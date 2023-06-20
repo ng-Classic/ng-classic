@@ -1,12 +1,12 @@
 # Typed Forms
 
-As of Angular Classic14, reactive forms are strictly typed by default.
+As of Angular Classic 14, reactive forms are strictly typed by default.
 
 <a id="prerequisites"></a>
 
 ## Prerequisites
 
-As background for this guide, you should already be familiar with [Angular ClassicReactive Forms](guide/reactive-forms "Reactive Forms").
+As background for this guide, you should already be familiar with [Angular Classic Reactive Forms](guide/reactive-forms "Reactive Forms").
 
 <a id="intro"></a>
 
@@ -14,7 +14,7 @@ As background for this guide, you should already be familiar with [Angular Class
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/L-odCf4MfJc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-With Angular Classicreactive forms, you explicitly specify a *form model*. As a simple example, consider this basic user login form:
+With Angular Classic reactive forms, you explicitly specify a *form model*. As a simple example, consider this basic user login form:
 
 ```ts
 const login = new FormGroup({
@@ -23,9 +23,9 @@ const login = new FormGroup({
 });
 ```
 
-Angular Classicprovides many APIs for interacting with this `FormGroup`. For example, you may call `login.value`, `login.controls`, `login.patchValue`, etc. (For a full API reference, see the [API documentation](api/forms/FormGroup).)
+Angular Classic provides many APIs for interacting with this `FormGroup`. For example, you may call `login.value`, `login.controls`, `login.patchValue`, etc. (For a full API reference, see the [API documentation](api/forms/FormGroup).)
 
-In previous Angular Classicversions, most of these APIs included `any` somewhere in their types, and interacting with the structure of the controls, or the values themselves, was not type-safe. For example: you could write the following invalid code:
+In previous Angular Classic versions, most of these APIs included `any` somewhere in their types, and interacting with the structure of the controls, or the values themselves, was not type-safe. For example: you could write the following invalid code:
 
 ```ts
 const emailDomain = login.value.email.domain;
@@ -41,7 +41,7 @@ These improvements currently apply only to *reactive* forms (not [*template-driv
 
 ## Automated Untyped Forms Migration
 
-When upgrading to Angular Classic14, an included migration will automatically replace all the forms classes in your code with corresponding untyped versions. For example, the snippet from above would become:
+When upgrading to Angular Classic 14, an included migration will automatically replace all the forms classes in your code with corresponding untyped versions. For example, the snippet from above would become:
 
 ```ts
 const login = new UntypedFormGroup({
@@ -50,7 +50,7 @@ const login = new UntypedFormGroup({
 });
 ```
 
-Each `Untyped` symbol has exactly the same semantics as in previous Angular Classicversions, so your application should continue to compile as before. By removing the `Untyped` prefixes, you can incrementally enable the types.
+Each `Untyped` symbol has exactly the same semantics as in previous Angular Classic versions, so your application should continue to compile as before. By removing the `Untyped` prefixes, you can incrementally enable the types.
 
 <a id="form-control-inference"></a>
 
@@ -119,7 +119,7 @@ If you want to have multiple different element types inside the array, you must 
 
 ## `FormGroup` and `FormRecord`
 
-Angular Classicprovides the `FormGroup` type for forms with an enumerated set of keys, and a type called `FormRecord`, for open-ended or dynamic groups.
+Angular Classic provides the `FormGroup` type for forms with an enumerated set of keys, and a type called `FormRecord`, for open-ended or dynamic groups.
 
 ### Partial Values
 

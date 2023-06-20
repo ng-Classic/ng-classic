@@ -1,6 +1,6 @@
 # Configuring dependency providers
 
-The Creating and injecting services topic describes how to use classes as dependencies. Besides classes, you can also use other values such as Boolean, string, date, and objects as dependencies. Angular ClassicDI provides the necessary APIs to make the dependency configuration flexible, so you can make those values available in DI.
+The Creating and injecting services topic describes how to use classes as dependencies. Besides classes, you can also use other values such as Boolean, string, date, and objects as dependencies. Angular Classic DI provides the necessary APIs to make the dependency configuration flexible, so you can make those values available in DI.
 
 ## Specifying a provider token
 
@@ -14,14 +14,14 @@ You can, however, configure a DI to use a different class or any other different
 
 In fact, the class provider syntax is a shorthand expression that expands into a provider configuration, defined by the `Provider` interface.
 
-Angular Classicexpands the `providers` value in this case into a full provider object as follows:
+Angular Classic expands the `providers` value in this case into a full provider object as follows:
 
 <code-example path="dependency-injection/src/app/providers.component.ts" region="providers-3" ></code-example>
 
 The expanded provider configuration is an object literal with two properties:
 - The `provide` property holds the token that serves as the key for both locating a dependency value and configuring the injector.
 - The second property is a provider definition object, which tells the injector how to create the dependency value. The provider-definition key can be one of the following:
-    - useClass - this option tells Angular ClassicDI to instantiate a provided class when a dependency is injected
+    - useClass - this option tells Angular Classic DI to instantiate a provided class when a dependency is injected
     - useExisting - allows you to alias a token and reference any existing one.
     - useFactory - allows you to define a function that constructs a dependency.
     - useValue - provides a static value that should be used as a dependency.
@@ -48,7 +48,7 @@ In this example, `EvenBetterLogger` displays the user name in the log message. T
 
 <code-example path="dependency-injection/src/app/providers.component.ts" region="EvenBetterLogger"></code-example>
 
-Angular ClassicDI knows how to construct the `UserService` dependency, since it has been configured above and is available in the injector.
+Angular Classic DI knows how to construct the `UserService` dependency, since it has been configured above and is available in the injector.
 
 ### Alias providers: useExisting
 
@@ -114,7 +114,7 @@ In TypeScript, an interface is a design-time artifact, and does not have a runti
 
 When the transpiler changes TypeScript to JavaScript, the interface disappears because JavaScript doesn't have interfaces.
 
-Because there is no interface for Angular Classicto find at runtime, the interface cannot be a token, nor can you inject it.
+Because there is no interface for Angular Classic to find at runtime, the interface cannot be a token, nor can you inject it.
 
 <code-example path="dependency-injection/src/app/providers.component.ts" region="providers-9-interface"></code-example>
 

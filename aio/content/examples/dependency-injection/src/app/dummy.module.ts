@@ -1,5 +1,5 @@
 
-/// Dummy modules to satisfy Angular ClassicLanguage Service
+/// Dummy modules to satisfy Angular Classic Language Service
 import { NgModule } from '@angular-classic/core';
 import { CommonModule } from '@angular-classic/common';
 import { AppModule } from './app.module';

@@ -461,7 +461,7 @@ describe('render3 jit', () => {
       expect(ServiceAny.ɵprov.providedIn).toBe('root');
       expect(() => ɵɵinject(Service))
           .toThrowError(
-              /constructor is not compatible with Angular ClassicDependency Injection because its dependency at index 1 of the parameter list is invalid/);
+              /constructor is not compatible with Angular Classic Dependency Injection because its dependency at index 1 of the parameter list is invalid/);
     });
 
     it('should error when creating an @Directive that extends an undecorated class with parameters',
@@ -483,7 +483,7 @@ describe('render3 jit', () => {
          expect(TestDirAny.ɵfac).toBeDefined();
          expect(() => TestDirAny.ɵfac())
              .toThrowError(
-                 /constructor is not compatible with Angular ClassicDependency Injection because its dependency at index 0 of the parameter list is invalid/);
+                 /constructor is not compatible with Angular Classic Dependency Injection because its dependency at index 0 of the parameter list is invalid/);
        });
   });
 });

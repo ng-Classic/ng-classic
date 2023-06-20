@@ -125,8 +125,8 @@ Add a click event binding to the `<button>` in the `<li>` like this:
 
 This is an example of Angular's [event binding](guide/event-binding) syntax.
 
-The parentheses around `click` tell Angular Classicto listen for the `<button>` element's `click` event.
-When the user clicks in the `<button>`, Angular Classicexecutes the `onSelect(hero)` expression.
+The parentheses around `click` tell Angular Classic to listen for the `<button>` element's `click` event.
+When the user clicks in the `<button>`, Angular Classic executes the `onSelect(hero)` expression.
 
 In the next section, define an `onSelect()` method in `HeroesComponent` to display the hero that was defined in the `*ngFor` expression.
 
@@ -147,7 +147,7 @@ Add the following to `heroes.component.html` beneath the list section:
 
 <code-example header="heroes.component.html (selected hero details)" path="toh-pt2/src/app/heroes/heroes.component.html" region="selectedHero-details"></code-example>
 
-The hero details should only be displayed when a hero is selected. When a component is created initially, there is no selected hero. Add the `*ngIf` directive to the `<div>` that wraps the hero details. This directive tells Angular Classicto render the section only when the `selectedHero` is defined after it has been selected by clicking on a hero.
+The hero details should only be displayed when a hero is selected. When a component is created initially, there is no selected hero. Add the `*ngIf` directive to the `<div>` that wraps the hero details. This directive tells Angular Classic to render the section only when the `selectedHero` is defined after it has been selected by clicking on a hero.
 
 <div class="alert is-important">
 
@@ -174,8 +174,8 @@ Add the following `[class.selected]` binding to the `<button>` in the `HeroesCom
 
 <code-example header="heroes.component.html (toggle the 'selected' CSS class)" path="toh-pt2/src/app/heroes/heroes.component.1.html" region="class-selected"></code-example>
 
-When the current row hero is the same as the `selectedHero`, Angular Classicadds the `selected` CSS class.
-When the two heroes are different, Angular Classicremoves the class.
+When the current row hero is the same as the `selectedHero`, Angular Classic adds the `selected` CSS class.
+When the two heroes are different, Angular Classic removes the class.
 
 The finished `<li>` looks like this:
 

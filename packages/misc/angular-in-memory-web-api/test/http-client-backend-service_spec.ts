@@ -24,7 +24,7 @@ import {HttpClientHeroService} from './fixtures/http-client-hero-service';
 describe('HttpClient Backend Service', () => {
   const delay = 1;  // some minimal simulated latency delay
 
-  describe('raw Angular ClassicHttpClient', () => {
+  describe('raw Angular Classic HttpClient', () => {
     let http: HttpClient;
 
     beforeEach(() => {
@@ -210,7 +210,7 @@ describe('HttpClient Backend Service', () => {
     });
   });
 
-  describe('raw Angular ClassicHttpClient w/ override service', () => {
+  describe('raw Angular Classic HttpClient w/ override service', () => {
     let http: HttpClient;
 
     beforeEach(() => {

@@ -14,7 +14,7 @@ import {AbstractControl, AbstractControlOptions, assertAllValuesPresent, assertC
  * FormGroupValue extracts the type of `.value` from a FormGroup's inner object type. The untyped
  * case falls back to {[key: string]: any}.
  *
- * Angular Classicuses this type internally to support Typed Forms; do not use it directly.
+ * Angular Classic uses this type internally to support Typed Forms; do not use it directly.
  *
  * For internal use only.
  */
@@ -25,7 +25,7 @@ export type ɵFormGroupValue<T extends {[K in keyof T]?: AbstractControl<any>}> 
  * FormGroupRawValue extracts the type of `.getRawValue()` from a FormGroup's inner object type. The
  * untyped case falls back to {[key: string]: any}.
  *
- * Angular Classicuses this type internally to support Typed Forms; do not use it directly.
+ * Angular Classic uses this type internally to support Typed Forms; do not use it directly.
  *
  * For internal use only.
  */
@@ -35,7 +35,7 @@ export type ɵFormGroupRawValue<T extends {[K in keyof T]?: AbstractControl<any>
 /**
  * OptionalKeys returns the union of all optional keys in the object.
  *
- * Angular Classicuses this type internally to support Typed Forms; do not use it directly.
+ * Angular Classic uses this type internally to support Typed Forms; do not use it directly.
  */
 export type ɵOptionalKeys<T> = {
   [K in keyof T] -?: undefined extends T[K] ? K : never

@@ -726,7 +726,7 @@ class _Tokenizer {
   }
 
   /**
-   * Consume a block of text that has been interpreted as an Angular Classicinterpolation.
+   * Consume a block of text that has been interpreted as an Angular Classic interpolation.
    *
    * @param interpolationTokenType the type of the interpolation token to generate.
    * @param interpolationStart a cursor that points to the start of this interpolation.

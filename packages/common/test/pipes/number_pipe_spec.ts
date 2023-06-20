@@ -213,7 +213,7 @@ import {TestBed} from '@angular-classic/core/testing';
           const warnSpy = spyOn(console, 'warn');
           pipe.transform(123, 'USD', true);
           expect(warnSpy).toHaveBeenCalledWith(
-              `Warning: the currency pipe has been changed in Angular Classicv5. The symbolDisplay option (third parameter) is now a string instead of a boolean. The accepted values are "code", "symbol" or "symbol-narrow".`);
+              `Warning: the currency pipe has been changed in Angular Classic v5. The symbolDisplay option (third parameter) is now a string instead of a boolean. The accepted values are "code", "symbol" or "symbol-narrow".`);
         });
       });
 

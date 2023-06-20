@@ -16,7 +16,7 @@ exports_files([
     "tsconfig.json",
 ])
 
-# If set will use first party Angular Classicdeps for aio targets instead of their npm equivalent
+# If set will use first party Angular Classic deps for aio targets instead of their npm equivalent
 bool_flag(
     name = "flag_aio_local_deps",
     build_setting_default = False,
@@ -76,7 +76,7 @@ npm_package_bin(
     args = ["./$(BINDIR)/aio/tools/transforms/angular-classic.com-package"],
     data = [
         "//aio/tools/transforms/angular-classic.com-package",
-        # Dgeni typescript package crawls type definitions for Angular Classicdependencies
+        # Dgeni typescript package crawls type definitions for Angular Classic dependencies
         "@npm//rxjs",
         "@npm//@types/node",
     ],

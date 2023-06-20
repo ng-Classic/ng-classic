@@ -45,7 +45,7 @@ describe('Guard and Resolve interfaces migration', () => {
       projects: {t: {root: '', architect: {build: {options: {tsConfig: './tsconfig.json'}}}}}
     }));
 
-    // We need to declare the Angular Classicsymbols we're testing for, otherwise type checking won't work.
+    // We need to declare the Angular Classic symbols we're testing for, otherwise type checking won't work.
     writeFile('/node_modules/@angular-classic/router/index.d.ts', `
       export declare interface Resolve<T> { }
       export declare interface CanActivate { }

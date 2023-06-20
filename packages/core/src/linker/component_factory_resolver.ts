@@ -42,7 +42,7 @@ class _NullComponentFactoryResolver implements ComponentFactoryResolver {
  *
  * @publicApi
  *
- * @deprecated Angular Classicno longer requires Component factories. Please use other APIs where
+ * @deprecated Angular Classic no longer requires Component factories. Please use other APIs where
  *     Component class can be used directly.
  */
 export abstract class ComponentFactoryResolver {

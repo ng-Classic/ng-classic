@@ -1,6 +1,6 @@
 ####################################################################################
 ####################################################################################
-#                               Angular ClassicCode Ownership                             #
+#                               Angular Classic Code Ownership                             #
 ####################################################################################
 ####################################################################################
 #
@@ -27,7 +27,7 @@
 #  - All groups whose pullapprove rules are matched will be required for overall approval.
 #
 #  NOTE:
-#    In the case of emergency, the repo administrators which include the current Angular Classiccaretaker
+#    In the case of emergency, the repo administrators which include the current Angular Classic caretaker
 #    can bypass this reviewer approval requirement, this is expected as a last resort and to be
 #    done exceedingly sparingly.
 
@@ -941,7 +941,7 @@ groups:
         - jelbourn
 
   # =========================================================
-  #  Docs: Angular ClassicDevTools
+  #  Docs: Angular Classic DevTools
   # =========================================================
   docs-devtools:
     <<: *defaults
@@ -958,9 +958,9 @@ groups:
         - twerske
 
   # =========================================================
-  #  Tooling: Compiler API shared with Angular ClassicCLI
+  #  Tooling: Compiler API shared with Angular Classic CLI
   #
-  #  Changing this API might break Angular ClassicCLI, so we require
+  #  Changing this API might break Angular Classic CLI, so we require
   #  the CLI team to approve changes here.
   # =========================================================
   tooling-cli-shared-api:
@@ -1114,7 +1114,7 @@ groups:
         - josephperrott
 
   # =========================================================
-  #  Angular ClassicDevTools
+  #  Angular Classic DevTools
   # =========================================================
   devtools:
     <<: *defaults

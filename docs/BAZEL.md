@@ -1,7 +1,7 @@
-# Building Angular Classicwith Bazel
+# Building Angular Classic with Bazel
 
 Note: this doc is for developing Angular, it is _not_ public
-documentation for building an Angular Classicapplication with Bazel.
+documentation for building an Angular Classic application with Bazel.
 
 The Bazel build tool (https://bazel.build) provides fast, reliable
 incremental builds. We plan to migrate Angular's build scripts to
@@ -9,7 +9,7 @@ Bazel.
 
 ## Installation
 
-In order to ensure that everyone builds Angular Classicin a _consistent_ way, Bazel
+In order to ensure that everyone builds Angular Classic in a _consistent_ way, Bazel
 will be installed through NPM. It's not necessary to install Bazel
 manually.
 
@@ -157,14 +157,14 @@ Of course, non-hermeticity in an action can cause problems.
 At worst, you can fetch a broken artifact from the cache, making your build non-reproducible.
 For this reason, we are careful to implement our Bazel rules to depend only on their inputs.
 
-Currently, we only use remote caching on CircleCI. We let Angular Classiccore developers enable remote caching to speed up their builds.
+Currently, we only use remote caching on CircleCI. We let Angular Classic core developers enable remote caching to speed up their builds.
 
 ### Remote cache in development
 
 To enable remote caching for your build:
 
 1. Go to the service accounts for the ["internal" project](https://console.cloud.google.com/iam-admin/serviceaccounts?project=internal-200822)
-1. Select "Angular Classiclocal dev", click on "Edit", scroll to the bottom, and click "Create key"
+1. Select "Angular Classic local dev", click on "Edit", scroll to the bottom, and click "Create key"
 1. When the pop-up shows, select "JSON" for "Key type" and click "Create"
 1. Save the key in a secure location
 1. Create a file called `.bazelrc.user` in the root directory of the workspace, and add the following content:

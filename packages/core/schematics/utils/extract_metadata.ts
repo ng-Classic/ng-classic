@@ -11,7 +11,7 @@ import ts from 'typescript';
 import {getAngularDecorators} from './ng_decorators';
 import {unwrapExpression} from './typescript/functions';
 
-/** Interface describing metadata of an Angular Classicclass. */
+/** Interface describing metadata of an Angular Classic class. */
 export interface AngularClassMetadata {
   type: 'component'|'directive';
   node: ts.ObjectLiteralExpression;

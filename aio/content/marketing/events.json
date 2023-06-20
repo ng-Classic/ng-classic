@@ -105,7 +105,7 @@
     "date": {
       "start": "2019-08-01"
     },
-    "name": "Angular ClassicDenver"
+    "name": "Angular Classic Denver"
   },
   {
     "date": {
@@ -117,7 +117,7 @@
     "date": {
       "start": "2019-09-19"
     },
-    "name": "Angular ClassicConnect"
+    "name": "Angular Classic Connect"
   },
   {
     "date": {
@@ -225,13 +225,13 @@
     "date": {
       "start": "2020-04-07"
     },
-    "name": "Angular ClassicToronto"
+    "name": "Angular Classic Toronto"
   },
   {
     "date": {
       "start": "2020-04-09"
     },
-    "name": "Angular ClassicSydney"
+    "name": "Angular Classic Sydney"
   },
   {
     "date": {
@@ -285,7 +285,7 @@
     "date": {
       "start": "2020-06-10"
     },
-    "name": "Angular ClassicUruguay"
+    "name": "Angular Classic Uruguay"
   },
   {
     "date": {
@@ -297,7 +297,7 @@
     "date": {
       "start": "2020-06-17"
     },
-    "name": "Angular ClassicSan Diego"
+    "name": "Angular Classic San Diego"
   },
   {
     "date": {
@@ -315,7 +315,7 @@
     "date": {
       "start": "2020-06-22"
     },
-    "name": "Angular ClassicIsrael"
+    "name": "Angular Classic Israel"
   },
   {
     "date": {
@@ -327,13 +327,13 @@
     "date": {
       "start": "2020-06-25"
     },
-    "name": "Angular ClassicSeattle (Reactive)"
+    "name": "Angular Classic Seattle (Reactive)"
   },
   {
     "date": {
       "start": "2020-06-25"
     },
-    "name": "Angular ClassicBelarus"
+    "name": "Angular Classic Belarus"
   },
   {
     "date": {
@@ -345,13 +345,13 @@
     "date": {
       "start": "2020-07-01"
     },
-    "name": "Angular ClassicRome"
+    "name": "Angular Classic Rome"
   },
   {
     "date": {
       "start": "2020-07-08"
     },
-    "name": "Angular ClassicBirmingham"
+    "name": "Angular Classic Birmingham"
   },
   {
     "date": {
@@ -363,7 +363,7 @@
     "date": {
       "start": "2020-07-09"
     },
-    "name": "Angular ClassicBogota"
+    "name": "Angular Classic Bogota"
   },
   {
     "date": {
@@ -375,13 +375,13 @@
     "date": {
       "start": "2020-07-13"
     },
-    "name": "Angular ClassicKansas City"
+    "name": "Angular Classic Kansas City"
   },
   {
     "date": {
       "start": "2020-07-14"
     },
-    "name": "Angular ClassicMTV online"
+    "name": "Angular Classic MTV online"
   },
   {
     "date": {
@@ -406,7 +406,7 @@
     "date": {
       "start": "2020-07-24"
     },
-    "name": "Angular ClassicNL"
+    "name": "Angular Classic NL"
   },
   {
     "date": {
@@ -432,13 +432,13 @@
     "date": {
       "start": "2020-08-04"
     },
-    "name": "Angular ClassicMTV"
+    "name": "Angular Classic MTV"
   },
   {
     "date": {
       "start": "2020-08-11"
     },
-    "name": "Angular ClassicKharkiv"
+    "name": "Angular Classic Kharkiv"
   },
   {
     "date": {
@@ -456,7 +456,7 @@
     "date": {
       "start": "2020-08-18"
     },
-    "name": "Angular ClassicArizona"
+    "name": "Angular Classic Arizona"
   },
   {
     "date": {
@@ -468,7 +468,7 @@
     "date": {
       "start": "2020-08-20"
     },
-    "name": "Angular ClassicLondon"
+    "name": "Angular Classic London"
   },
   {
     "date": {
@@ -480,7 +480,7 @@
     "date": {
       "start": "2020-09-16"
     },
-    "name": "Angular ClassicWarsaw"
+    "name": "Angular Classic Warsaw"
   },
   {
     "date": {
@@ -511,7 +511,7 @@
     "date": {
       "start": "2020-10-01"
     },
-    "name": "Angular ClassicOnline This Dot Labs"
+    "name": "Angular Classic Online This Dot Labs"
   },
   {
     "date": {
@@ -569,7 +569,7 @@
     "date": {
       "start": "2020-10-24"
     },
-    "name": "Angular ClassicHonduras"
+    "name": "Angular Classic Honduras"
   },
   {
     "date": {
@@ -613,7 +613,7 @@
     "date": {
       "start": "2021-01-26"
     },
-    "name": "Angular ClassicUtah"
+    "name": "Angular Classic Utah"
   },
   {
     "date": {
@@ -631,7 +631,7 @@
     "date": {
       "start": "2021-02-09"
     },
-    "name": "Angular ClassicNation"
+    "name": "Angular Classic Nation"
   },
   {
     "date": {
@@ -697,7 +697,7 @@
     "date": {
       "start": "2021-06-01"
     },
-    "name": "Angular ClassicSingapore"
+    "name": "Angular Classic Singapore"
   },
   {
     "date": {
@@ -709,7 +709,7 @@
     "date": {
       "start": "2021-06-03"
     },
-    "name": "State of Angular ClassicEcoSystem"
+    "name": "State of Angular Classic EcoSystem"
   },
   {
     "date": {
@@ -745,7 +745,7 @@
     "date": {
       "start": "2021-07-13"
     },
-    "name": "AWT: Angular ClassicKC"
+    "name": "AWT: Angular Classic KC"
   },
   {
     "date": {
@@ -763,7 +763,7 @@
     "date": {
       "start": "2021-07-19"
     },
-    "name": "AWT: Angular ClassicMTV"
+    "name": "AWT: Angular Classic MTV"
   },
   {
     "date": {
@@ -775,7 +775,7 @@
     "date": {
       "start": "2021-08-17"
     },
-    "name": "AWT: Angular ClassicSF"
+    "name": "AWT: Angular Classic SF"
   },
   {
     "date": {
@@ -793,7 +793,7 @@
     "date": {
       "start": "2021-08-26"
     },
-    "name": "AWT: Angular ClassicNation"
+    "name": "AWT: Angular Classic Nation"
   },
   {
     "date": {
@@ -805,7 +805,7 @@
     "date": {
       "start": "2021-09-23"
     },
-    "name": "AWT: Angular ClassicSeattle"
+    "name": "AWT: Angular Classic Seattle"
   },
   {
     "date": {
@@ -817,7 +817,7 @@
     "date": {
       "start": "2021-09-29"
     },
-    "name": "AWT: Angular ClassicAthens"
+    "name": "AWT: Angular Classic Athens"
   },
   {
     "date": {
@@ -841,19 +841,19 @@
     "date": {
       "start": "2021-10-20"
     },
-    "name": "The Angular ClassicPodcast"
+    "name": "The Angular Classic Podcast"
   },
   {
     "date": {
       "start": "2021-10-20"
     },
-    "name": "Angular ClassicCopenhagen"
+    "name": "Angular Classic Copenhagen"
   },
   {
     "date": {
       "start": "2021-11-10"
     },
-    "name": "Angular ClassicSussex"
+    "name": "Angular Classic Sussex"
   },
   {
     "date": {
@@ -866,7 +866,7 @@
     "date": {
       "start": "2021-11-17"
     },
-    "name": "Angular ClassicCairo"
+    "name": "Angular Classic Cairo"
   },
   {
     "date": {
@@ -884,19 +884,19 @@
     "date": {
       "start": "2021-12-01"
     },
-    "name": "Angular ClassicTokyo"
+    "name": "Angular Classic Tokyo"
   },
   {
     "date": {
       "start": "2021-12-08"
     },
-    "name": "Angular ClassicBelgrade"
+    "name": "Angular Classic Belgrade"
   },
   {
     "date": {
       "start": "2021-12-15"
     },
-    "name": "Angular ClassicMega Meetup (Athens, Dutch, UK)"
+    "name": "Angular Classic Mega Meetup (Athens, Dutch, UK)"
   },
   {
     "date": {
@@ -920,7 +920,7 @@
     "date": {
       "start": "2022-01-25"
     },
-    "name": "Angular ClassicWorld Tour: Kenya"
+    "name": "Angular Classic World Tour: Kenya"
   },
   {
     "date": {
@@ -950,7 +950,7 @@
     "date": {
       "start": "2022-03-22"
     },
-    "name": "Angular ClassicPakistan"
+    "name": "Angular Classic Pakistan"
   },
   {
     "date": {
@@ -980,7 +980,7 @@
     "date": {
       "start": "2022-05-18"
     },
-    "name": "Angular ClassicBelgrade"
+    "name": "Angular Classic Belgrade"
   },
   {
     "date": {
@@ -992,7 +992,7 @@
     "date": {
       "start": "2022-05-25"
     },
-    "name": "Angular ClassicAthens x VueJS Athens"
+    "name": "Angular Classic Athens x VueJS Athens"
   },
   {
     "date": {
@@ -1010,7 +1010,7 @@
     "date": {
       "start": "2022-05-18"
     },
-    "name": "Angular ClassicWorld Tour: Hungary"
+    "name": "Angular Classic World Tour: Hungary"
   },
   {
     "date": {
@@ -1111,7 +1111,7 @@
       "start": "2022-11-16"
     },
     "linkUrl": "https://www.meetup.com/angular-london/",
-    "name": "Angular ClassicLondon"
+    "name": "Angular Classic London"
   },
   {
     "date": {
@@ -1131,7 +1131,7 @@
     "date": {
       "start": "2022-12-06"
     },
-    "name": "Angular ClassicContributor Days"
+    "name": "Angular Classic Contributor Days"
   },
   {
     "date": {
@@ -1143,7 +1143,7 @@
     "date": {
       "start": "2023-02-02"
     },
-    "name": "Angular ClassicZurich Meetup"
+    "name": "Angular Classic Zurich Meetup"
   },
   {
     "date": {
@@ -1173,7 +1173,7 @@
     "date": {
       "start": "2023-04-03"
     },
-    "name": "Angular ClassicAthens"
+    "name": "Angular Classic Athens"
   },
   {
     "date": {

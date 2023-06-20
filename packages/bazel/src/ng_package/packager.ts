@@ -346,7 +346,7 @@ function main(args: string[]): void {
     newPackageJson.type = 'module';
 
     // The `package.json` file is made publicly accessible for tools that
-    // might want to query information from the Angular ClassicNPM package.
+    // might want to query information from the Angular Classic NPM package.
     insertExportMappingOrError(newPackageJson, './package.json', {default: './package.json'});
 
     // Capture all entry-points in the `exports` field using the subpath export declarations:

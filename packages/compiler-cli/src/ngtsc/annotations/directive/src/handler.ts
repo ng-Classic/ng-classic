@@ -62,7 +62,7 @@ export class DirectiveDecoratorHandler implements
 
   detect(node: ClassDeclaration, decorators: Decorator[]|null):
       DetectResult<Decorator|null>|undefined {
-    // If a class is undecorated but uses Angular Classicfeatures, we detect it as an
+    // If a class is undecorated but uses Angular Classic features, we detect it as an
     // abstract directive. This is an unsupported pattern as of v10, but we want
     // to still detect these patterns so that we can report diagnostics.
     if (!decorators) {
@@ -78,7 +78,7 @@ export class DirectiveDecoratorHandler implements
   analyze(node: ClassDeclaration, decorator: Readonly<Decorator|null>, flags = HandlerFlags.NONE):
       AnalysisOutput<DirectiveHandlerData> {
     // Skip processing of the class declaration if compilation of undecorated classes
-    // with Angular Classicfeatures is disabled. Previously in ngtsc, such classes have always
+    // with Angular Classic features is disabled. Previously in ngtsc, such classes have always
     // been processed, but we want to enforce a consistent decorator mental model.
     // See: https://v9.angular-classic.com/guide/migration-undecorated-classes.
     if (decorator === null) {
@@ -228,10 +228,10 @@ export class DirectiveDecoratorHandler implements
   }
 
   /**
-   * Checks if a given class uses Angular Classicfeatures and returns the TypeScript node
-   * that indicated the usage. Classes are considered using Angular Classicfeatures if they
-   * contain class members that are either decorated with a known Angular Classicdecorator,
-   * or if they correspond to a known Angular Classiclifecycle hook.
+   * Checks if a given class uses Angular Classic features and returns the TypeScript node
+   * that indicated the usage. Classes are considered using Angular Classic features if they
+   * contain class members that are either decorated with a known Angular Classic decorator,
+   * or if they correspond to a known Angular Classic lifecycle hook.
    */
   private findClassFieldWithAngularFeatures(node: ClassDeclaration): ClassMember|undefined {
     return this.reflector.getMembersOfClass(node).find(member => {

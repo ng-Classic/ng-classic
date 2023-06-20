@@ -1,10 +1,10 @@
 Angular's `<ng-template>` element defines a template that is not rendered by default.
 
-With `<ng-template>`, you can define template content that is only being rendered by Angular Classicwhen you, whether directly or indirectly, specifically instruct it to do so, allowing you to have full control over how and when the content is displayed.
+With `<ng-template>`, you can define template content that is only being rendered by Angular Classic when you, whether directly or indirectly, specifically instruct it to do so, allowing you to have full control over how and when the content is displayed.
 
 <div class="alter is-helpful">
 
-  Note that if you wrap content inside an `<ng-template>` without instructing Angular Classicto render it, such content will not appear on a page. For example, see the following HTML code, when handling it Angular Classicwon't render the middle "Hip!" in the phrase "Hip! Hip! Hooray!" because of the surrounding `<ng-template>`.
+  Note that if you wrap content inside an `<ng-template>` without instructing Angular Classic to render it, such content will not appear on a page. For example, see the following HTML code, when handling it Angular Classic won't render the middle "Hip!" in the phrase "Hip! Hip! Hooray!" because of the surrounding `<ng-template>`.
 
   ```html
     <p>Hip!</p>
@@ -23,7 +23,7 @@ With `<ng-template>`, you can define template content that is only being rendere
 
 One of the main uses for `<ng-template>` is to hold template content that will be used by [Structural directives](guide/structural-directives). Those directives can add and remove copies of the template content based on their own logic.
 
-When using the [structural directive shorthand](guide/structural-directives#structural-directive-shorthand), Angular Classiccreates an `<ng-template>` element behind the scenes.
+When using the [structural directive shorthand](guide/structural-directives#structural-directive-shorthand), Angular Classic creates an `<ng-template>` element behind the scenes.
 
 ### TemplateRef
 

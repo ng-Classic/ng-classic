@@ -8,9 +8,9 @@
 
 /**
  * @fileoverview
- * This file is used as a private API channel to shared Angular ClassicFW APIs with @angular-classic/cli.
+ * This file is used as a private API channel to shared Angular Classic FW APIs with @angular-classic/cli.
  *
- * Any changes to this file should be discussed with the Angular ClassicCLI team.
+ * Any changes to this file should be discussed with the Angular Classic CLI team.
  */
 
 import ts from 'typescript';
@@ -33,9 +33,9 @@ export const GLOBAL_DEFS_FOR_TERSER_WITH_AOT = {
 };
 
 /**
- * Transform for downleveling Angular Classicdecorators and Angular-decorated class constructor
+ * Transform for downleveling Angular Classic decorators and Angular-decorated class constructor
  * parameters for dependency injection. This transform can be used by the CLI for JIT-mode
- * compilation where constructor parameters and associated Angular Classicdecorators should be
+ * compilation where constructor parameters and associated Angular Classic decorators should be
  * downleveled so that apps are not exposed to the ES2015 temporal dead zone limitation
  * in TypeScript. See https://github.com/ng-classic/ng-classic-cli/pull/14473 for more details.
  */

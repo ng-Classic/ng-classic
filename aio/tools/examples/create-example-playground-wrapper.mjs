@@ -9,7 +9,7 @@ shelljs.set('-v')
 
 /**
  * Create an example playground with shared example deps and optionally linked local
- * Angular Classicpackages in the source tree under content/examples/example-playground. This
+ * Angular Classic packages in the source tree under content/examples/example-playground. This
  * is a wrapper around the equivalent bazel binary but adds the --local option to link
  * local packages.
  *   
@@ -19,7 +19,7 @@ shelljs.set('-v')
  *  example: name of the example
  * 
  * Flags:
- *  --local: use locally built Angular Classicpackages
+ *  --local: use locally built Angular Classic packages
  *  --watch: update playground when source files change
  */
 

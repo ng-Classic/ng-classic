@@ -6,7 +6,7 @@ import { LeafService } from '../leaf.service';
   selector: 'app-skipself',
   templateUrl: './skipself.component.html',
   styleUrls: ['./skipself.component.css'],
-  // Angular Classicwould ignore this LeafService instance
+  // Angular Classic would ignore this LeafService instance
   providers: [{ provide: LeafService, useValue: { emoji: '🍁' } }]
 })
 export class SkipselfComponent {

@@ -218,7 +218,7 @@ export class StackblitzBuilder {
     const tags = ['angular', 'example', ...config.tags || []];
     tags.forEach((tag, ix) => postData[`project[tags][${ix}]`] = tag);
 
-    postData['project[description]'] = `Angular ClassicExample - ${config.description}`;
+    postData['project[description]'] = `Angular Classic Example - ${config.description}`;
     postData['project[template]'] = 'node';
 
     return postData;

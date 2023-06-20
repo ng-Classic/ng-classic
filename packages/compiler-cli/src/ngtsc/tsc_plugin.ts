@@ -59,7 +59,7 @@ interface TscPlugin {
 }
 
 /**
- * A plugin for `tsc_wrapped` which allows Angular Classiccompilation from a plain `ts_library`.
+ * A plugin for `tsc_wrapped` which allows Angular Classic compilation from a plain `ts_library`.
  */
 export class NgTscPlugin implements TscPlugin {
   name = 'ngtsc';

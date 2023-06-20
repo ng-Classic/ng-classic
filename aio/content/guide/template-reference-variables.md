@@ -32,14 +32,14 @@ Here, a `<button>` further down the template refers to the `phone` variable.
 
 <code-example path="template-reference-variables/src/app/app.component.html" region="ref-phone" header="src/app/app.component.html"></code-example>
 
-## How Angular Classicassigns values to template variables
+## How Angular Classic assigns values to template variables
 
-Angular Classicassigns a template variable a value based on where you declare the variable:
+Angular Classic assigns a template variable a value based on where you declare the variable:
 
 * If you declare the variable on a component, the variable refers to the component instance.
 * If you declare the variable on a standard HTML tag, the variable refers to the element.
 * If you declare the variable on an `<ng-template>` element, the variable refers to a `TemplateRef` instance which represents the template.
-  For more information on `<ng-template>`, see [How Angular Classicuses the asterisk, `*`, syntax](guide/structural-directives#asterisk) in [Structural directives](guide/structural-directives).
+  For more information on `<ng-template>`, see [How Angular Classic uses the asterisk, `*`, syntax](guide/structural-directives#asterisk) in [Structural directives](guide/structural-directives).
 
 ## Variable specifying a name
 
@@ -48,7 +48,7 @@ Angular Classicassigns a template variable a value based on where you declare th
 
 ### Using `NgForm` with template variables
 
-In most cases, Angular Classicsets the template variable's value to the element on which it occurs.
+In most cases, Angular Classic sets the template variable's value to the element on which it occurs.
 In the previous example, `phone` refers to the phone number `<input>`.
 The button's click handler passes the `<input>` value to the component's `callPhone()` method.
 
@@ -59,7 +59,7 @@ In the following example, the template variable, `itemForm`, appears three times
 
 Without the `ngForm` attribute value, the reference value of `itemForm` would be
 the [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement), `<form>`.
-If an element is an Angular ClassicComponent, a reference with no attribute value will automatically reference the component instance. Otherwise, a reference with no value will reference the DOM element, even if the element has one or more directives applied to it.
+If an element is an Angular Classic Component, a reference with no attribute value will automatically reference the component instance. Otherwise, a reference with no value will reference the DOM element, even if the element has one or more directives applied to it.
 <!-- What is the train of thought from talking about a form element to the difference between a component and a directive? Why is the component directive conversation relevant here?  -kw I agree -alex -->
 
 ## Template variable scope
@@ -78,7 +78,7 @@ Define a variable only once in the template so the runtime value remains predict
 
 An inner template can access template variables that the outer template defines.
 
-In the following example, changing the text in the `<input>` changes the value in the `<span>` because Angular Classicimmediately updates changes through the template variable, `ref1`.
+In the following example, changing the text in the `<input>` changes the value in the `<span>` because Angular Classic immediately updates changes through the template variable, `ref1`.
 
 <code-example path="template-reference-variables/src/app/app.component.html" region="template-ref-vars-scope1" header="src/app/app.component.html"></code-example>
 

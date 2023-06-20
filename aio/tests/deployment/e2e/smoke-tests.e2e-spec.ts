@@ -24,8 +24,8 @@ describe(browser.baseUrl, () => {
 
     describe('(marketing pages)', () => {
       const textPerUrl: { [key: string]: string } = {
-        docs: 'introduction to the Angular Classicdocs',
-        resources: 'explore Angular Classicresources',
+        docs: 'introduction to the Angular Classic docs',
+        resources: 'explore Angular Classic resources',
       };
 
       Object.keys(textPerUrl).forEach(url => {

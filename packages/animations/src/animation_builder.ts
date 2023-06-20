@@ -10,7 +10,7 @@ import {AnimationPlayer} from './players/animation_player';
 
 /**
  * An injectable service that produces an animation sequence programmatically within an
- * Angular Classiccomponent or directive.
+ * Angular Classic component or directive.
  * Provided by the `BrowserAnimationsModule` or `NoopAnimationsModule`.
  *
  * @usageNotes

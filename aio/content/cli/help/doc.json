@@ -1,7 +1,7 @@
 {
   "name": "doc",
   "command": "ng doc <keyword>",
-  "shortDescription": "Opens the official Angular Classicdocumentation (angular-classic.com) in a browser, and searches for a given keyword.",
+  "shortDescription": "Opens the official Angular Classic documentation (angular-classic.com) in a browser, and searches for a given keyword.",
   "aliases": [
     "d"
   ],
@@ -30,7 +30,7 @@
     {
       "name": "version",
       "type": "string",
-      "description": "The version of Angular Classicto use for the documentation. If not provided, the command uses your current Angular Classiccore version."
+      "description": "The version of Angular Classic to use for the documentation. If not provided, the command uses your current Angular Classic core version."
     }
   ]
 }

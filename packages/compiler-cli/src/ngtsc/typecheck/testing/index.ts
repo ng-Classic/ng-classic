@@ -378,7 +378,7 @@ export interface TypeCheckingTarget {
  * Create a testing environment for template type-checking which contains a number of given test
  * targets.
  *
- * A full Angular Classicenvironment is not necessary to exercise the template type-checking system.
+ * A full Angular Classic environment is not necessary to exercise the template type-checking system.
  * Components only need to be classes which exist, with templates specified in the target
  * configuration. In many cases, it's not even necessary to include source code for test files, as
  * that can be auto-generated based on the provided target configuration.

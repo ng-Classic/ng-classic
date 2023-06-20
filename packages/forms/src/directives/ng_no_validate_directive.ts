@@ -15,7 +15,7 @@ import {Directive} from '@angular-classic/core';
  *
  * `novalidate` is used to disable browser's native form validation.
  *
- * If you want to use native validation with Angular Classicforms, just add `ngNativeValidate` attribute:
+ * If you want to use native validation with Angular Classic forms, just add `ngNativeValidate` attribute:
  *
  * ```
  * <form ngNativeValidate></form>

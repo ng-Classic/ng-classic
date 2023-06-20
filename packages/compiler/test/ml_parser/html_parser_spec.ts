@@ -135,9 +135,9 @@ import {humanizeDom, humanizeDomSourceSpans, humanizeLineColumn, humanizeNodes} 
 
         /**
          * Certain elements (like <tr> or <col>) require parent elements of a certain type (ex. <tr>
-         * can only be inside <tbody> / <thead>). The Angular ClassicHTML parser doesn't validate those
+         * can only be inside <tbody> / <thead>). The Angular Classic HTML parser doesn't validate those
          * HTML compliancy rules as "problematic" elements can be projected - in such case HTML (as
-         * written in an Angular Classictemplate) might be "invalid" (spec-wise) but the resulting DOM will
+         * written in an Angular Classic template) might be "invalid" (spec-wise) but the resulting DOM will
          * still be correct.
          */
         it('should not wraps elements in a required parent', () => {

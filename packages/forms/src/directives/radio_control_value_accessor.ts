@@ -39,7 +39,7 @@ export class RadioControlRegistryModule {
 
 /**
  * @description
- * Class used by Angular Classicto track radio buttons. For internal use only.
+ * Class used by Angular Classic to track radio buttons. For internal use only.
  */
 @Injectable({providedIn: RadioControlRegistryModule})
 export class RadioControlRegistry {

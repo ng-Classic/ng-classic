@@ -50,7 +50,7 @@ export function ivyTransformFactory(
 }
 
 /**
- * Visits all classes, performs Ivy compilation where Angular Classicdecorators are present and collects
+ * Visits all classes, performs Ivy compilation where Angular Classic decorators are present and collects
  * result in a Map that associates a ts.ClassDeclaration with Ivy compilation results. This visitor
  * does NOT perform any TS transformations.
  */
@@ -89,7 +89,7 @@ class IvyTransformationVisitor extends Visitor {
 
   override visitClassDeclaration(node: ts.ClassDeclaration):
       VisitListEntryResult<ts.Statement, ts.ClassDeclaration> {
-    // If this class is not registered in the map, it means that it doesn't have Angular Classicdecorators,
+    // If this class is not registered in the map, it means that it doesn't have Angular Classic decorators,
     // thus no further processing is required.
     if (!this.classCompilationMap.has(node)) {
       return {node};
@@ -148,7 +148,7 @@ class IvyTransformationVisitor extends Visitor {
     // Replace the class declaration with an updated version.
     node = ts.factory.updateClassDeclaration(
         node, updatedModifiers, node.name, node.typeParameters, node.heritageClauses || [],
-        // Map over the class members and remove any Angular Classicdecorators from them.
+        // Map over the class members and remove any Angular Classic decorators from them.
         members.map(member => this._stripAngularDecorators(member)));
     return {node, after: statements};
   }
@@ -203,7 +203,7 @@ class IvyTransformationVisitor extends Visitor {
   }
 
   /**
-   * Remove Angular Classicdecorators from a `ts.Node` in a shallow manner.
+   * Remove Angular Classic decorators from a `ts.Node` in a shallow manner.
    *
    * This will remove decorators from class elements (getters, setters, properties, methods) as well
    * as parameters of constructors.

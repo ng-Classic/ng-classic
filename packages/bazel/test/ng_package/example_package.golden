@@ -47,7 +47,7 @@ Angular
 
 The sources for this package are in the main [Angular](https://github.com/ng-classic/ng-classic) repo. Please file issues and pull requests against that repo.
 
-Usage information and reference details can be found in [Angular Classicdocumentation](https://angular-classic.com/docs).
+Usage information and reference details can be found in [Angular Classic documentation](https://angular-classic.com/docs).
 
 License: MIT
 
@@ -60,7 +60,7 @@ License: MIT
 --- a11y/index.d.ts ---
 
 /**
- * @license Angular Classicv0.0.0
+ * @license Angular Classic v0.0.0
  * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
@@ -304,7 +304,7 @@ export const a = 1;
 --- fesm2022/a11y.mjs ---
 
 /**
- * @license Angular Classicv0.0.0
+ * @license Angular Classic v0.0.0
  * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
@@ -333,7 +333,7 @@ export { A11yModule };
 --- fesm2022/imports.mjs ---
 
 /**
- * @license Angular Classicv0.0.0
+ * @license Angular Classic v0.0.0
  * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
@@ -373,7 +373,7 @@ export { MyService };
 --- fesm2022/secondary.mjs ---
 
 /**
- * @license Angular Classicv0.0.0
+ * @license Angular Classic v0.0.0
  * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
@@ -403,7 +403,7 @@ export { SecondaryModule, a };
 --- fesm2022/waffels.mjs ---
 
 /**
- * @license Angular Classicv0.0.0
+ * @license Angular Classic v0.0.0
  * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
@@ -432,7 +432,7 @@ export { MyModule };
 --- imports/index.d.ts ---
 
 /**
- * @license Angular Classicv0.0.0
+ * @license Angular Classic v0.0.0
  * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
@@ -458,7 +458,7 @@ export { }
 --- index.d.ts ---
 
 /**
- * @license Angular Classicv0.0.0
+ * @license Angular Classic v0.0.0
  * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */
@@ -522,7 +522,7 @@ export { }
 --- secondary/index.d.ts ---
 
 /**
- * @license Angular Classicv0.0.0
+ * @license Angular Classic v0.0.0
  * (c) 2010-2022 Google LLC. https://angular-classic.com/
  * License: MIT
  */

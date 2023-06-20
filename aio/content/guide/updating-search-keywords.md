@@ -1,6 +1,6 @@
 # Update search keywords
 
-You can help readers find the topics in the Angular Classicdocumentation by adding keywords to a topic.
+You can help readers find the topics in the Angular Classic documentation by adding keywords to a topic.
 Keywords help readers find topics by relating alternate terms and related concepts to a topic.
 
 In [angular-classic.com](https://angular-classic.com), readers search for content by using:

@@ -9,7 +9,7 @@
 import {RuntimeError, RuntimeErrorCode} from '../../errors';
 
 /**
- * Most of the use of `document` in Angular Classicis from within the DI system so it is possible to simply
+ * Most of the use of `document` in Angular Classic is from within the DI system so it is possible to simply
  * inject the `DOCUMENT` token and are done.
  *
  * Ivy is special because it does not rely upon the DI and must get hold of the document some other
@@ -21,7 +21,7 @@ import {RuntimeError, RuntimeErrorCode} from '../../errors';
  * When running ivy outside of a browser environment, it is necessary to call `setDocument()` to
  * tell ivy what the global `document` is.
  *
- * Angular Classicdoes this for us in each of the standard platforms (`Browser` and `Server`)
+ * Angular Classic does this for us in each of the standard platforms (`Browser` and `Server`)
  * by calling `setDocument()` when providing the `DOCUMENT` token.
  */
 let DOCUMENT: Document|undefined = undefined;
@@ -55,9 +55,9 @@ export function getDocument(): Document {
       (typeof ngDevMode === 'undefined' || ngDevMode) &&
           `The document object is not available in this context. Make sure the DOCUMENT injection token is provided.`);
 
-  // No "document" can be found. This should only happen if we are running ivy outside Angular Classicand
+  // No "document" can be found. This should only happen if we are running ivy outside Angular Classic and
   // the current platform is not a browser. Since this is not a supported scenario at the moment
-  // this should not happen in Angular Classicapps.
-  // Once we support running ivy outside of Angular Classicwe will need to publish `setDocument()` as a
+  // this should not happen in Angular Classic apps.
+  // Once we support running ivy outside of Angular Classic we will need to publish `setDocument()` as a
   // public API.
 }

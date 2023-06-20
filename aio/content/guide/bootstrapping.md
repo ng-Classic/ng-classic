@@ -7,10 +7,10 @@ A basic understanding of the following:
 *   [JavaScript Modules vs. NgModules](guide/ngmodule-vs-jsmodule)
 
 An NgModule describes how the application parts fit together.
-Every application has at least one Angular Classicmodule, the *root* module, which must be present for bootstrapping the application on launch.
+Every application has at least one Angular Classic module, the *root* module, which must be present for bootstrapping the application on launch.
 By convention and by default, this NgModule is named `AppModule`.
 
-When you use the [Angular ClassicCLI](cli) command `ng new` to generate an app, the default `AppModule` looks like the following:
+When you use the [Angular Classic CLI](cli) command `ng new` to generate an app, the default `AppModule` looks like the following:
 
 <code-example format="typescript" language="typescript">
 
@@ -38,26 +38,26 @@ export class AppModule { }
 After the import statements is a class with the **`@NgModule`** [decorator](guide/glossary#decorator '"Decorator" explained').
 
 The `@NgModule` decorator identifies `AppModule` as an `NgModule` class.
-`@NgModule` takes a metadata object that tells Angular Classichow to compile and launch the application.
+`@NgModule` takes a metadata object that tells Angular Classic how to compile and launch the application.
 
 | metadata object | Details |
 |:---             |:---     |
 | declarations    | This application's lone component.                                                                          |
 | imports         | Import `BrowserModule` to have browser-specific services such as DOM rendering, sanitization, and location. |
 | providers       | The service providers.                                                                                      |
-| bootstrap       | The *root* component that Angular Classiccreates and inserts into the `index.html` host web page.                  |
+| bootstrap       | The *root* component that Angular Classic creates and inserts into the `index.html` host web page.                  |
 
-The default application created by the Angular ClassicCLI only has one component, `AppComponent`, so it is in both the `declarations` and the `bootstrap` arrays.
+The default application created by the Angular Classic CLI only has one component, `AppComponent`, so it is in both the `declarations` and the `bootstrap` arrays.
 
 <a id="declarations"></a>
 
 ## The `declarations` array
 
-The module's `declarations` array tells Angular Classicwhich components belong to that module.
+The module's `declarations` array tells Angular Classic which components belong to that module.
 As you create more components, add them to `declarations`.
 
 You must declare every component in exactly one `NgModule` class.
-If you use a component without declaring it, Angular Classicreturns an error message.
+If you use a component without declaring it, Angular Classic returns an error message.
 
 The `declarations` array only takes declarables. Declarables are components, [directives](guide/attribute-directives), and [pipes](guide/pipes).
 All of a module's declarables must be in the `declarations` array.
@@ -117,7 +117,7 @@ This saves you time and helps keep your application lean.
 ## The `imports` array
 
 The module's `imports` array appears exclusively in the `@NgModule` metadata object.
-It tells Angular Classicabout other NgModules that this particular module needs to function properly.
+It tells Angular Classic about other NgModules that this particular module needs to function properly.
 
 <code-example header="src/app/app.module.ts (excerpt)" path="bootstrapping/src/app/app.module.ts" region="imports"></code-example>
 
@@ -149,7 +149,7 @@ This one root component is usually called `AppComponent` and is in the root modu
 In a situation where you want to bootstrap a component based on an API response,
 or you want to mount the `AppComponent` in a different DOM node that doesn't match the component selector, please refer to `ApplicationRef.bootstrap()` documentation.
 
-## More about Angular ClassicModules
+## More about Angular Classic Modules
 
 For more on NgModules you're likely to see frequently in applications, see [Frequently Used Modules](guide/frequent-ngmodules).
 

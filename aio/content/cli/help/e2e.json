@@ -1,7 +1,7 @@
 {
   "name": "e2e",
   "command": "ng e2e [project]",
-  "shortDescription": "Builds and serves an Angular Classicapplication, then runs end-to-end tests.",
+  "shortDescription": "Builds and serves an Angular Classic application, then runs end-to-end tests.",
   "aliases": [
     "e"
   ],

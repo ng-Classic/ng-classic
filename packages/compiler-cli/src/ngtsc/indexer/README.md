@@ -1,12 +1,12 @@
 # `indexer`
 
 The `indexer` module generates semantic analysis about components used in an
-Angular Classicproject. The module is consumed by a semantic analysis API on an Angular
-program, which can be invoked separately from the regular Angular Classiccompilation
+Angular Classic project. The module is consumed by a semantic analysis API on an Angular
+program, which can be invoked separately from the regular Angular Classic compilation
 pipeline.
 
 The module is _not_ a fully-featured source code indexer. Rather, it is designed
-to produce semantic information about an Angular Classicproject that can then be used
+to produce semantic information about an Angular Classic project that can then be used
 by language analysis tools to generate, for example, cross-references in Angular
 templates.
 

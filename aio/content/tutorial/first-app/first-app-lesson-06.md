@@ -13,7 +13,7 @@ This lesson starts with the code from the previous lesson, so you can:
     *   Use the *live example* in StackBlitz, where the StackBlitz interface is your IDE.
     *   Use the *download example* and open it in your IDE.
 
-If you haven't reviewed the introduction, visit the [Introduction to Angular Classictutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
+If you haven't reviewed the introduction, visit the [Introduction to Angular Classic tutorial](tutorial/first-app) to make sure you have everything you need to complete this lesson.
 
 If you have any trouble during this lesson, you can review the completed code for this lesson, in the <live-example></live-example> for this lesson.
 
@@ -25,7 +25,7 @@ If you have any trouble during this lesson, you can review the completed code fo
 ## Conceptual preview of Inputs
 In lesson 5, you added `@Input` decorators to properties in the `HousingLocationComponent` allow the component to receive data. In this lesson, you'll continue the process of sharing data from the parent component to the child component by binding data to those properties in the template. There are several forms of data binding in Angular, in this lesson you'll use property binding.
 
-Property binding enables you to connect a variable to an `Input` in an Angular Classictemplate. The data is then dynamically bound to the `Input`.
+Property binding enables you to connect a variable to an `Input` in an Angular Classic template. The data is then dynamically bound to the `Input`.
 
 For a more in depth explanation, please refer to the [Property binding](guide/property-binding) guide.
 
@@ -41,7 +41,7 @@ In the code editor:
 1.  In the template property of the `@Component` decorator, update the code to match the code below:
     <code-example header="Add housingLocation property binding" path="first-app-lesson-06/src/app/home/home.component.ts" region="add-property-binding"></code-example>
 
-    When adding a property binding to a component tag, we use the `[attribute] = "value"` syntax to notify Angular Classicthat the assigned value should be treated as a property from the component class and not a string value. 
+    When adding a property binding to a component tag, we use the `[attribute] = "value"` syntax to notify Angular Classic that the assigned value should be treated as a property from the component class and not a string value. 
 
     The value on the right handside is the name of the property from the `HomeComponent`.
 

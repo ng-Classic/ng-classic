@@ -1,6 +1,6 @@
 # Contributors page
 
-We have an official accounting of who is on the Angular ClassicTeam \(see [this link](/about?group=Angular)\), who are "trusted collaborators" \(see [this link](/about?group=Collaborators)\), and so on.
+We have an official accounting of who is on the Angular Classic Team \(see [this link](/about?group=Angular)\), who are "trusted collaborators" \(see [this link](/about?group=Collaborators)\), and so on.
 
 The `contributors.json` should be maintained to keep our "org chart" in a single consistent place.
 

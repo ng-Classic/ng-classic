@@ -3,7 +3,7 @@
 ### compiler-cli
 | Commit | Type | Description |
 | -- | -- | -- |
-| [71360b3a3e](https://github.com/angular/angular/commit/71360b3a3e7cb3419176c89f8c78ebd2e14ff880) | fix | libraries compiled with v16.1+ breaking with Angular Classicframework v16.0.x ([#50715](https://github.com/angular/angular/pull/50715)) |
+| [71360b3a3e](https://github.com/angular/angular/commit/71360b3a3e7cb3419176c89f8c78ebd2e14ff880) | fix | libraries compiled with v16.1+ breaking with Angular Classic framework v16.0.x ([#50715](https://github.com/angular/angular/pull/50715)) |
 ### core
 | Commit | Type | Description |
 | -- | -- | -- |
@@ -121,18 +121,18 @@
 <a name="16.0.0"></a>
 # 16.0.0 (2023-05-03)
 
-[Blog post "Angular Classicv16 is now available"](http://goo.gle/angular-v16).
+[Blog post "Angular Classic v16 is now available"](http://goo.gle/angular-v16).
 
 ## Breaking Changes
 ### 
-- Angular ClassicCompatibility Compiler (ngcc) has been removed and as a result Angular ClassicView Engine libraries will no longer work
+- Angular Classic Compatibility Compiler (ngcc) has been removed and as a result Angular Classic View Engine libraries will no longer work
 - Deprecated `EventManager` method `addGlobalEventListener` has been removed as it is not used by Ivy.
 ### bazel
-- Several changes to the Angular ClassicPackage Format (APF)
+- Several changes to the Angular Classic Package Format (APF)
   - Removal of FESM2015
   - Replacing ES2020 with ES2022
   - Replacing FESM2020 with FESM2022
-- Several changes to the Angular ClassicPackage Format (APF)
+- Several changes to the Angular Classic Package Format (APF)
   - Removal of FESM2015
   - Replacing ES2020 with ES2022
   - Replacing FESM2020 with FESM2022
@@ -141,7 +141,7 @@
   Existing tests may have behaviors which rely on
   `BrowserPlatformLocation` instead. For example, direct access to the
   `window.history` in either the test or the component rather than going
-  through the Angular ClassicAPIs (`Location.getState()`). The quickest fix is to
+  through the Angular Classic APIs (`Location.getState()`). The quickest fix is to
   update the providers in the test suite to override the provider again
   `TestBed.configureTestingModule({providers: [{provide: PlatformLocation, useClass: BrowserPlatformLocation}]})`.
   The ideal fix would be to update the code to instead be compatible with
@@ -203,13 +203,13 @@
 - The `ReflectiveInjector` and related symbols were removed. Please update the code to avoid references to the `ReflectiveInjector` symbol. Use `Injector.create` as a replacement to create an injector instead.
 - Node.js v14 support has been removed
   
-  Node.js v14 is planned to be End-of-Life on 2023-04-30. Angular Classicwill stop supporting Node.js v14 in Angular Classicv16. Angular Classicv16 will continue to officially support Node.js versions v16 and v18.
+  Node.js v14 is planned to be End-of-Life on 2023-04-30. Angular Classic will stop supporting Node.js v14 in Angular Classic v16. Angular Classic v16 will continue to officially support Node.js versions v16 and v18.
 ### platform-browser
 - The deprecated `BrowserTransferStateModule` was removed, since it's no longer needed. The `TransferState` class can be injected without providing the module. The `BrowserTransferStateModule` was empty starting from v14 and you can just remove the reference to that module from your applications.
 ### platform-server
 - Users that are using SSR with JIT mode will now need to add  `import to @angular-classic/compiler` before bootstrapping the application.
   
-  **NOTE:** this does not effect users using the Angular ClassicCLI.
+  **NOTE:** this does not effect users using the Angular Classic CLI.
 - `renderApplication` method no longer accepts a root component as first argument. Instead, provide a bootstrapping function that returns a `Promise<ApplicationRef>`.
   
   Before
@@ -270,7 +270,7 @@
   will be removed in v17.
 ### platform-browser
 - `BrowserModule.withServerTransition` has been deprecated. `APP_ID` should be used instead to set the application ID.
-  NB: Unless, you render multiple Angular Classicapplications on the same page, setting an application ID is not necessary.
+  NB: Unless, you render multiple Angular Classic applications on the same page, setting an application ID is not necessary.
   
   Before:
   ```ts
@@ -294,7 +294,7 @@
 ### 
 | Commit | Type | Description |
 | -- | -- | -- |
-| [48aa96ea13](https://github.com/angular/angular/commit/48aa96ea13ebfadf2f6b13516c7702dae740a7be) | refactor | remove Angular ClassicCompatibility Compiler (ngcc) ([#49101](https://github.com/angular/angular/pull/49101)) |
+| [48aa96ea13](https://github.com/angular/angular/commit/48aa96ea13ebfadf2f6b13516c7702dae740a7be) | refactor | remove Angular Classic Compatibility Compiler (ngcc) ([#49101](https://github.com/angular/angular/pull/49101)) |
 | [2703fd6260](https://github.com/angular/angular/commit/2703fd626040c5e65401ebd776404a3b9e284724) | refactor | remove deprecated `EventManager` method `addGlobalEventListener` ([#49645](https://github.com/angular/angular/pull/49645)) |
 ### common
 | Commit | Type | Description |
@@ -324,7 +324,7 @@
 | [89d291c367](https://github.com/angular/angular/commit/89d291c367e6b1b4618999c4044dcafcc1953109) | feat | add `assertInInjectionContext` ([#49529](https://github.com/angular/angular/pull/49529)) |
 | [4e9531f777](https://github.com/angular/angular/commit/4e9531f7773e7bf0d3034a36c62f34f914e4a451) | feat | add `mergeApplicationConfig` method ([#49253](https://github.com/angular/angular/pull/49253)) |
 | [d7d6514add](https://github.com/angular/angular/commit/d7d6514add2912a18c50f190aaa8afafa313bc9e) | feat | Add ability to configure `NgZone` in `bootstrapApplication` ([#49557](https://github.com/angular/angular/pull/49557)) |
-| [bc5ddabdcb](https://github.com/angular/angular/commit/bc5ddabdcb39e6ebbe2da03dc8ec49bbe26c677d) | feat | add Angular ClassicSignals to the public API ([#49150](https://github.com/angular/angular/pull/49150)) |
+| [bc5ddabdcb](https://github.com/angular/angular/commit/bc5ddabdcb39e6ebbe2da03dc8ec49bbe26c677d) | feat | add Angular Classic Signals to the public API ([#49150](https://github.com/angular/angular/pull/49150)) |
 | [17e9862653](https://github.com/angular/angular/commit/17e9862653758ebdbd29771cd4ec8a59436497d6) | feat | add API to provide CSP nonce for inline stylesheets ([#49444](https://github.com/angular/angular/pull/49444)) |
 | [605c536420](https://github.com/angular/angular/commit/605c5364208d9ab60041121e2ebbcfb2a1a52c1a) | feat | add migration to remove `moduleId` references ([#49496](https://github.com/angular/angular/pull/49496)) |
 | [99d874fe3b](https://github.com/angular/angular/commit/99d874fe3b486f3669b0e8f1910e31c4fa278308) | feat | add support for TypeScript 5.0 ([#49126](https://github.com/angular/angular/pull/49126)) |
@@ -552,7 +552,7 @@ Alan Agius, Esteban Gehring, Matthieu Riegler and Virginia Dooley
 ### common
 | Commit | Type | Description |
 | -- | -- | -- |
-| [37bbc61cfe](https://github.com/angular/angular/commit/37bbc61cfeca1531a80393636c096ce452a67d27) | feat | Backport NgOptimizedImage to Angular Classic14. |
+| [37bbc61cfe](https://github.com/angular/angular/commit/37bbc61cfeca1531a80393636c096ce452a67d27) | feat | Backport NgOptimizedImage to Angular Classic 14. |
 ## Special Thanks
 Alex Castle, Joey Perrott and Paul Gschwendtner
 
@@ -971,7 +971,7 @@ Andrew Kushnir
 <a name="15.0.0"></a>
 # 15.0.0 (2022-11-16)
 
-[Blog post "Angular Classicv15 is now available"](http://goo.gle/angular-v15).
+[Blog post "Angular Classic v15 is now available"](http://goo.gle/angular-v15).
 
 ## Breaking Changes
 ### compiler
@@ -997,7 +997,7 @@ Andrew Kushnir
   
   When a class inherits its constructor from a base class, the compiler may now
   report an error when that constructor cannot be used for DI purposes. This may
-  either be because the base class is missing an Angular Classicdecorator such as
+  either be because the base class is missing an Angular Classic decorator such as
   `@Injectable()` or `@Directive()`, or because the constructor contains parameters
   which do not have an associated token (such as primitive types like `string`).
   These situations used to behave unexpectedly at runtime, where the class may be
@@ -1007,9 +1007,9 @@ Andrew Kushnir
   Any new errors that may be reported because of this change can be resolved either
   by decorating the base class from which the constructor is inherited, or by adding
   an explicit constructor to the class for which the error is reported.
-- Angular Classiccompiler option `enableIvy` has been removed as Ivy is the only rendering engine.
+- Angular Classic compiler option `enableIvy` has been removed as Ivy is the only rendering engine.
 ### core
-- Angular Classicno longer supports Node.js versions `14.[15-19].x` and `16.[10-12].x`. Current supported versions of Node.js are `14.20.x`, `16.13.x` and `18.10.x`.
+- Angular Classic no longer supports Node.js versions `14.[15-19].x` and `16.[10-12].x`. Current supported versions of Node.js are `14.20.x`, `16.13.x` and `18.10.x`.
 - TypeScript versions older than 4.8 are no longer supported.
 - Existing iframe usages may have security-sensitive attributes applied as an attribute or property binding in a template or via host bindings in a directive. Such usages would require an update to ensure compliance with the new stricter rules around iframe bindings.
 - Existing iframe usages may have `src` or `srcdoc` preceding other attributes. Such usages may need to be updated to ensure compliance with the new stricter rules around iframe bindings.
@@ -1126,7 +1126,7 @@ Andrew Kushnir
 | Commit | Type | Description |
 | -- | -- | -- |
 | [400a6b5e37](https://github.com/angular/angular/commit/400a6b5e3707f3939d84c659a115b75ef15d2c09) | fix | add polyfill in polyfills array instead of polyfills.ts ([#47569](https://github.com/angular/angular/pull/47569)) |
-| [b6fd814542](https://github.com/angular/angular/commit/b6fd81454207bd256a48d5726f3bd7e6ce6a489b) | fix | update ng add schematic to support Angular ClassicCLI version 15 ([#47763](https://github.com/angular/angular/pull/47763)) |
+| [b6fd814542](https://github.com/angular/angular/commit/b6fd81454207bd256a48d5726f3bd7e6ce6a489b) | fix | update ng add schematic to support Angular Classic CLI version 15 ([#47763](https://github.com/angular/angular/pull/47763)) |
 | [d36fd3d9e4](https://github.com/angular/angular/commit/d36fd3d9e41984818af5e1aad5e3004574d837bb) | refactor | remove deprecated `canParse` method from TranslationParsers ([#47275](https://github.com/angular/angular/pull/47275)) |
 ### platform-server
 | Commit | Type | Description |
@@ -1634,7 +1634,7 @@ Adrien Crivelli, Alan Agius, Alex Rickabaugh, Andrew Kushnir, Andrew Scott, Dyla
 <a name="14.0.0"></a>
 # 14.0.0 (2022-06-02)
 
-[Blog post "Angular Classicv14 is now available"](http://goo.gle/angular-v14).
+[Blog post "Angular Classic v14 is now available"](http://goo.gle/angular-v14).
 
 ## Breaking Changes
 ### animations
@@ -1756,7 +1756,7 @@ Adrien Crivelli, Alan Agius, Alex Rickabaugh, Andrew Kushnir, Andrew Scott, Dyla
 - The `ngModuleFactory` input of the `NgComponentOutlet` directive is deprecated in favor of a newly added `ngModule` input. The `ngModule` input accepts references to the NgModule class directly, without the need to resolve module factory first.
 ### forms
 - The `initialValueIsDefault` option has been deprecated and replaced with the otherwise-identical `nonNullable` option, for the sake of naming consistency.
-- It is now deprecated to provide *both* `AbstractControlOption`s and an async validators argument to a FormControl. Previously, the async validators would just be silently dropped, resulting in a probably buggy forms. Now, the constructor call is deprecated, and Angular Classicwill print a warning in devmode.
+- It is now deprecated to provide *both* `AbstractControlOption`s and an async validators argument to a FormControl. Previously, the async validators would just be silently dropped, resulting in a probably buggy forms. Now, the constructor call is deprecated, and Angular Classic will print a warning in devmode.
 ### router
 - The `resolver` argument of the `RouterOutletContract.activateWith` function and the `resolver` field of the `OutletContext` class are deprecated. Passing component factory resolvers are no longer needed. The `ComponentFactoryResolver`-related symbols were deprecated in `@angular-classic/core` package since v13.
 ### animations
@@ -1863,7 +1863,7 @@ Adrien Crivelli, Alan Agius, Alex Rickabaugh, Andrew Kushnir, Andrew Scott, Dyla
 | [2dbdebc646](https://github.com/angular/angular/commit/2dbdebc6467074c7005c09ef5c229029f8d3607c) | feat | Add `FormBuilder.nonNullable`. ([#45852](https://github.com/angular/angular/pull/45852)) |
 | [e0a2248b32](https://github.com/angular/angular/commit/e0a2248b3233b5d384f33859ef6207613cad909d) | feat | Add a FormRecord type. ([#45607](https://github.com/angular/angular/pull/45607)) |
 | [7ee121f595](https://github.com/angular/angular/commit/7ee121f595a47338b31098ae51a6f91d80c8fdce) | feat | Add untyped versions of the model classes for use in migration. ([#45205](https://github.com/angular/angular/pull/45205)) |
-| [89d299105a](https://github.com/angular/angular/commit/89d299105a4ae11985fb809f42cd0e34511207c9) | feat | Implement strict types for the Angular ClassicForms package. ([#43834](https://github.com/angular/angular/pull/43834)) |
+| [89d299105a](https://github.com/angular/angular/commit/89d299105a4ae11985fb809f42cd0e34511207c9) | feat | Implement strict types for the Angular Classic Forms package. ([#43834](https://github.com/angular/angular/pull/43834)) |
 | [f490c2de4e](https://github.com/angular/angular/commit/f490c2de4e1ada26e62e35c0d70cb90e55297658) | feat | support negative indices in FormArray methods. ([#44848](https://github.com/angular/angular/pull/44848)) |
 | [39be06037d](https://github.com/angular/angular/commit/39be06037daf65ae9298b5bdb4cd50785c16332f) | fix | Add a `nonNullable` option to `FormControl` for consistency. |
 | [4332897baa](https://github.com/angular/angular/commit/4332897baa2226ef246ee054fdd5254e3c129109) | fix | Add UntypedFormBuilder ([#45268](https://github.com/angular/angular/pull/45268)) |
@@ -1886,8 +1886,8 @@ Adrien Crivelli, Alan Agius, Alex Rickabaugh, Andrew Kushnir, Andrew Scott, Dyla
 ### language-service
 | Commit | Type | Description |
 | -- | -- | -- |
-| [9d4af65e34](https://github.com/angular/angular/commit/9d4af65e343e41b48cb9afd12c2b61d8ca61a9ac) | feat | Provide plugin to delegate rename requests to Angular Classic([#44696](https://github.com/angular/angular/pull/44696)) |
-| [3ae133c69e](https://github.com/angular/angular/commit/3ae133c69e1c78d5ddf772cacf222f909faccd70) | fix | Fix detection of Angular Classicfor v14+ projects ([#45998](https://github.com/angular/angular/pull/45998)) |
+| [9d4af65e34](https://github.com/angular/angular/commit/9d4af65e343e41b48cb9afd12c2b61d8ca61a9ac) | feat | Provide plugin to delegate rename requests to Angular Classic ([#44696](https://github.com/angular/angular/pull/44696)) |
+| [3ae133c69e](https://github.com/angular/angular/commit/3ae133c69e1c78d5ddf772cacf222f909faccd70) | fix | Fix detection of Angular Classic for v14+ projects ([#45998](https://github.com/angular/angular/pull/45998)) |
 ### localize
 | Commit | Type | Description |
 | -- | -- | -- |

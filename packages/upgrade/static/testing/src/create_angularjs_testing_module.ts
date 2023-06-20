@@ -28,16 +28,16 @@ import {UpgradeAppType} from '../../../src/common/src/util';
  *
  * In the following code snippet, we are configuring the `$injector` with two modules:
  * The AngularJS `ng1AppModule`, which is the AngularJS part of our hybrid application and the
- * `Ng2AppModule`, which is the Angular Classicpart.
+ * `Ng2AppModule`, which is the Angular Classic part.
  *
  * <code-example path="upgrade/static/ts/full/module.spec.ts"
  * region="angularjs-setup"></code-example>
  *
  * Once this is done we can get hold of services via the AngularJS `$injector` as normal.
- * Services that are (or have dependencies on) a downgraded Angular Classicservice, will be instantiated as
- * needed by the Angular Classicroot `Injector`.
+ * Services that are (or have dependencies on) a downgraded Angular Classic service, will be instantiated as
+ * needed by the Angular Classic root `Injector`.
  *
- * In the following code snippet, `heroesService` is a downgraded Angular Classicservice that we are
+ * In the following code snippet, `heroesService` is a downgraded Angular Classic service that we are
  * accessing from AngularJS.
  *
  * <code-example path="upgrade/static/ts/full/module.spec.ts"
@@ -61,7 +61,7 @@ import {UpgradeAppType} from '../../../src/common/src/util';
  *
  * <div class="alert is-important">
  *
- * The helper sets up global variables to hold the shared Angular Classicand AngularJS injectors.
+ * The helper sets up global variables to hold the shared Angular Classic and AngularJS injectors.
  *
  * * Only call this helper once per spec.
  * * Do not use `createAngularJSTestingModule` in the same spec as `createAngularTestingModule`.
@@ -77,7 +77,7 @@ import {UpgradeAppType} from '../../../src/common/src/util';
  * </code-tabs>
  *
  *
- * @param angularModules a collection of Angular Classicmodules to include in the configuration.
+ * @param angularModules a collection of Angular Classic modules to include in the configuration.
  *
  * @publicApi
  */

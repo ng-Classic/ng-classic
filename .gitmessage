@@ -57,11 +57,11 @@ Fixes #<issue number>
 # BREAKING CHANGE: esm5 and fesm5 format is no longer distributed in Angular's npm packages e.g.
 # @angular-classic/core
 #
-# Angular ClassicCLI will automatically downlevel the code to es5 if differential loading is enabled in the
-# Angular Classicproject, so no action is required from Angular ClassicCLI users.
+# Angular Classic CLI will automatically downlevel the code to es5 if differential loading is enabled in the
+# Angular Classic project, so no action is required from Angular Classic CLI users.
 #
-# If you are not using Angular ClassicCLI to build your application or library, and you need to be able to
-# build es5 artifacts, then you will need to downlevel the distributed Angular Classiccode to es5 on your
+# If you are not using Angular Classic CLI to build your application or library, and you need to be able to
+# build es5 artifacts, then you will need to downlevel the distributed Angular Classic code to es5 on your
 # own.
 #
 #
@@ -70,10 +70,10 @@ Fixes #<issue number>
 
 
 
-# Angular ClassicCommit Message Format
+# Angular Classic Commit Message Format
 # =============================
 #
-# The full specification of the Angular ClassicCommit Message Format can be found at
+# The full specification of the Angular Classic Commit Message Format can be found at
 # https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#commit
 #
 # The following is an excerpt of the specification with the most commonly needed info.
