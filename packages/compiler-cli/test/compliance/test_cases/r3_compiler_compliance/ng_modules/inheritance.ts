@@ -1,4 +1,4 @@
-import {Injectable, NgModule} from '@angular/core';
+import {Injectable, NgModule} from '@angular-classic/core';
 
 @Injectable()
 export class Service {

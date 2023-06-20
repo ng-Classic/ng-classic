@@ -18,7 +18,7 @@ import {matchesObjectWithOrder} from './test_utils';
 // file, which is not necessarily at the root of the "npm_package".
 shx.cd(path.dirname(runfiles.resolve('angular/packages/common/npm_package/package.json')));
 
-describe('@angular/common ng_package', () => {
+describe('@angular-classic/common ng_package', () => {
   describe('should have the locales files', () => {
     it('/locales', () => {
       const files = shx.ls('locales').stdout.split('\n');

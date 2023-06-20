@@ -57,7 +57,7 @@ You can try this new build setup by updating your `angular.json`:
 ```json
 "architect": {
   "build": {
-    "builder": "@angular-devkit/build-angular:browser-esbuild",
+    "builder": "@angular-classic-devkit/build-angular:browser-esbuild",
 ```
 
 ### Standalone component migration and scaffolding
@@ -165,7 +165,7 @@ practicable.
 
 | Removed                                                                              | Replacement | Details                                                                                                                                                                                                                                       |
 |:-------------------------------------------------------------------------------------|:------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <a id="v16-dp-01"></a>Class and `InjectionToken` router guards and resolvers         | See details | Class and `InjectionToken` guards and resolvers are deprecated. Instead, write guards as plain JavaScript functions and inject dependencies with `inject` from `@angular/core`.<br>[PR #47924](https://github.com/angular/angular/pull/47924) |
+| <a id="v16-dp-01"></a>Class and `InjectionToken` router guards and resolvers         | See details | Class and `InjectionToken` guards and resolvers are deprecated. Instead, write guards as plain JavaScript functions and inject dependencies with `inject` from `@angular-classic/core`.<br>[PR #47924](https://github.com/angular/angular/pull/47924) |
 | <a id="v16-dp-02"></a>The `ripple` properties of several Angular Material components | None        | The `ripple` property of `MatButton`, `MatCheckbox`, `MatChip` is deprecated. This change moves ripples to being a private implementation detail of the components.                                                                           |
 
 @reviewed 2023-05-03

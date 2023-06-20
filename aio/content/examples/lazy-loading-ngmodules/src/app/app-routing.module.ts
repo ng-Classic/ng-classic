@@ -1,6 +1,6 @@
 // #docplaster
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular-classic/core';
+import { Routes, RouterModule } from '@angular-classic/router';
 
 
 // #docregion const-routes, routes-customers, routes-customers-orders

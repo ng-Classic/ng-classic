@@ -1,6 +1,6 @@
 // #docregion
-import { Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Inject } from '@angular-classic/core';
+import { HttpClient } from '@angular-classic/common/http';
 
 import { HeroService } from './hero.service';
 // #docregion example

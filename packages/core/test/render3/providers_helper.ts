@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, Provider, Type, ViewEncapsulation} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Component, Directive, Provider, Type, ViewEncapsulation} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 export interface ComponentTest {
   providers?: Provider[];

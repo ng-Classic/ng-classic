@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: for_of.js
  ****************************************************************************************************/
-import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ForOfDirective {
     constructor(view, template) {
         this.view = view;
@@ -22,8 +22,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: for_of.d.ts
  ****************************************************************************************************/
-import { SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { SimpleChanges, TemplateRef, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export interface ForOfContext {
     $implicit: any;
     index: number;
@@ -44,9 +44,9 @@ export declare class ForOfDirective {
 /****************************************************************************************************
  * PARTIAL FILE: svg_embedded_view.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular-classic/core';
 import { ForOfDirective } from './for_of';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.items = [{ data: 42 }, { data: 42 }];
@@ -74,7 +74,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: svg_embedded_view.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 import * as i1 from "./for_of";
 export declare class MyComponent {
     items: {
@@ -92,8 +92,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: for_of.js
  ****************************************************************************************************/
-import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ForOfDirective {
     constructor(view, template) {
         this.view = view;
@@ -113,8 +113,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: for_of.d.ts
  ****************************************************************************************************/
-import { SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { SimpleChanges, TemplateRef, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export interface ForOfContext {
     $implicit: any;
     index: number;
@@ -135,9 +135,9 @@ export declare class ForOfDirective {
 /****************************************************************************************************
  * PARTIAL FILE: let_variable_and_reference.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular-classic/core';
 import { ForOfDirective } from './for_of';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.items = [{ name: 'one' }, { name: 'two' }];
@@ -165,7 +165,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: let_variable_and_reference.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 import * as i1 from "./for_of";
 export declare class MyComponent {
     items: {
@@ -183,8 +183,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: for_of.js
  ****************************************************************************************************/
-import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ForOfDirective {
     constructor(view, template) {
         this.view = view;
@@ -204,8 +204,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: for_of.d.ts
  ****************************************************************************************************/
-import { SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { SimpleChanges, TemplateRef, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export interface ForOfContext {
     $implicit: any;
     index: number;
@@ -226,9 +226,9 @@ export declare class ForOfDirective {
 /****************************************************************************************************
  * PARTIAL FILE: parent_template_variable.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular-classic/core';
 import { ForOfDirective } from './for_of';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.items = [
@@ -279,7 +279,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: parent_template_variable.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 import * as i1 from "./for_of";
 export declare class MyComponent {
     items: {
@@ -300,8 +300,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: for_of.js
  ****************************************************************************************************/
-import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class ForOfDirective {
     constructor(view, template) {
         this.view = view;
@@ -321,8 +321,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: for_of.d.ts
  ****************************************************************************************************/
-import { SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { SimpleChanges, TemplateRef, ViewContainerRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export interface ForOfContext {
     $implicit: any;
     index: number;

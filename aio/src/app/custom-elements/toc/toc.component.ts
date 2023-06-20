@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular-classic/core';
 import { asapScheduler, combineLatest, Subject } from 'rxjs';
 import { startWith, subscribeOn, takeUntil } from 'rxjs/operators';
 

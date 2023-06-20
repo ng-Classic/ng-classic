@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, destroyPlatform, NgModule, Pipe, PipeTransform} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {withBody} from '@angular/private/testing';
+import {Component, destroyPlatform, NgModule, Pipe, PipeTransform} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {withBody} from '@angular-classic/private/testing';
 
 describe('NgModule scopes', () => {
   beforeEach(destroyPlatform);

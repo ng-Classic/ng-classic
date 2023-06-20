@@ -20,7 +20,7 @@ ng_module(
 
 ng_package(
     name = "npm_package",
-    package_name = "@angular/router",
+    package_name = "@angular-classic/router",
     srcs = [
         "package.json",
     ],

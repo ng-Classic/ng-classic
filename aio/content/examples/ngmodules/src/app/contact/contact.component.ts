@@ -1,6 +1,6 @@
 // Exact copy except import UserService from greeting
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Component, OnInit} from '@angular-classic/core';
+import {FormBuilder, FormGroup, Validators} from '@angular-classic/forms';
 
 import {UserService} from '../greeting/user.service';
 

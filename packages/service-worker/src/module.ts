@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ModuleWithProviders, NgModule} from '@angular/core';
+import {ModuleWithProviders, NgModule} from '@angular-classic/core';
 
 import {provideServiceWorker, SwRegistrationOptions} from './provider';
 import {SwPush} from './push';

@@ -1,7 +1,7 @@
 // Simulate a simple test
 // Reader should look to the testing chapter for the real thing
 
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 import { Hero  } from './heroes/hero';
 import { HeroService } from './heroes/hero.service';

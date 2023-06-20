@@ -1,5 +1,5 @@
-import { ErrorHandler, Injector, VERSION } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
+import { ErrorHandler, Injector, VERSION } from '@angular-classic/core';
+import { TestBed } from '@angular-classic/core/testing';
 import { AppModule } from 'app/app.module';
 
 import { ReportingErrorHandler } from './reporting-error-handler';

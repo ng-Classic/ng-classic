@@ -55,7 +55,7 @@ Interceptors provided *after* DI creates the `HttpClient` are ignored.
 This app provides `HttpClient` in the app's root injector, as a side-effect of importing the `HttpClientModule` in `AppModule`.
 You should provide interceptors in `AppModule` as well.
 
-After importing the `HTTP_INTERCEPTORS` injection token from `@angular/common/http`, write the `NoopInterceptor` provider like this:
+After importing the `HTTP_INTERCEPTORS` injection token from `@angular-classic/common/http`, write the `NoopInterceptor` provider like this:
 
 <code-example path="http/src/app/http-interceptors/index.ts" region="noop-provider"></code-example>
 

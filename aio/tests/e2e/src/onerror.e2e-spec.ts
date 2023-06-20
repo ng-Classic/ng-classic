@@ -33,25 +33,25 @@ describe('onerror handler', () => {
     const message = await callOnError('Error: something terrible has happened. oh no. oh no.', undefined, undefined, undefined, {
       message: 'something terrible has happened. oh no. oh no.',
       stack: `AppComponent@https://example.com/app/app.component.ts:31:29
-createClass@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:12200:20
-createDirectiveInstance@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:12049:37
-createViewNodes@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:13487:53
-createRootView@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:13377:5
-callWithDebugContext@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:14778:39
-debugCreateRootView@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:14079:12
-ComponentFactory_.prototype.create@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:10998:37
-ComponentFactoryBoundToModule.prototype.create@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:3958:16
-ApplicationRef.prototype.bootstrap@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5769:40
-PlatformRef.prototype._moduleDoBootstrap/<@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5496:74
-PlatformRef.prototype._moduleDoBootstrap@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5496:13
-PlatformRef.prototype.bootstrapModuleFactory/</</<@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5417:21
+createClass@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:12200:20
+createDirectiveInstance@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:12049:37
+createViewNodes@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:13487:53
+createRootView@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:13377:5
+callWithDebugContext@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:14778:39
+debugCreateRootView@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:14079:12
+ComponentFactory_.prototype.create@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:10998:37
+ComponentFactoryBoundToModule.prototype.create@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:3958:16
+ApplicationRef.prototype.bootstrap@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5769:40
+PlatformRef.prototype._moduleDoBootstrap/<@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5496:74
+PlatformRef.prototype._moduleDoBootstrap@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5496:13
+PlatformRef.prototype.bootstrapModuleFactory/</</<@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5417:21
 ZoneDelegate.prototype.invoke@https://example.com/packages/zone.js@0.8.18/dist/zone.js:392:17
-forkInnerZoneWithAngularBehavior/zone._inner<.onInvoke@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:4665:24
+forkInnerZoneWithAngularBehavior/zone._inner<.onInvoke@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:4665:24
 ZoneDelegate.prototype.invoke@https://example.com/packages/zone.js@0.8.18/dist/zone.js:391:17
 Zone.prototype.run@https://example.com/packages/zone.js@0.8.18/dist/zone.js:142:24
 scheduleResolveOrReject/<@https://example.com/packages/zone.js@0.8.18/dist/zone.js:873:52
 ZoneDelegate.prototype.invokeTask@https://example.com/packages/zone.js@0.8.18/dist/zone.js:425:17
-forkInnerZoneWithAngularBehavior/zone._inner<.onInvokeTask@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:4656:24
+forkInnerZoneWithAngularBehavior/zone._inner<.onInvokeTask@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:4656:24
 ZoneDelegate.prototype.invokeTask@https://example.com/packages/zone.js@0.8.18/dist/zone.js:424:17
 Zone.prototype.runTask@https://example.com/packages/zone.js@0.8.18/dist/zone.js:192:28
 drainMicroTaskQueue@https://example.com/packages/zone.js@0.8.18/dist/zone.js:602:25` });
@@ -99,15 +99,15 @@ cr`);
       message: 'something terrible has happened. oh no. oh no.',
       stack: `Error: something terrible has happened. oh no. oh no.
       at new AppComponent (https://example.com/app/app.component.ts:31:29)
-      at createClass (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:12200:20)
-      at createDirectiveInstance (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:12049:37)
-      at createViewNodes (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:13487:53)
-      at createRootView (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:13377:5)
-      at callWithDebugContext (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:14778:42)
-      at Object.debugCreateRootView [as createRootView] (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:14079:12)
-      at ComponentFactory_.create (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:10998:46)
-      at ComponentFactoryBoundToModule.create (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:3958:29)
-      at ApplicationRef.bootstrap (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5769:57)` });
+      at createClass (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:12200:20)
+      at createDirectiveInstance (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:12049:37)
+      at createViewNodes (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:13487:53)
+      at createRootView (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:13377:5)
+      at callWithDebugContext (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:14778:42)
+      at Object.debugCreateRootView [as createRootView] (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:14079:12)
+      at ComponentFactory_.create (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:10998:46)
+      at ComponentFactoryBoundToModule.create (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:3958:29)
+      at ApplicationRef.bootstrap (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5769:57)` });
 
     expect(message).toEqual(`something terrible has happened. oh no. oh no.
 new AppComponent@app.component.ts:31:29
@@ -120,15 +120,15 @@ createDirectiveInstance@core.u`);
       message: 'something terrible has happened. oh no. oh no.',
       stack: `Error: something terrible has happened. oh no. oh no.
       at new AppComponent (https://example.com/app/app.component.ts:31:29)
-      at createClass (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:12200:20)
-      at createDirectiveInstance (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:12049:37)
-      at createViewNodes (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:13487:53)
-      at createRootView (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:13377:5)
-      at callWithDebugContext (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:14778:42)
-      at Object.debugCreateRootView [as createRootView] (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:14079:12)
-      at ComponentFactory_.create (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:10998:46)
-      at ComponentFactoryBoundToModule.create (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:3958:29)
-      at ApplicationRef.bootstrap (https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5769:57)` });
+      at createClass (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:12200:20)
+      at createDirectiveInstance (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:12049:37)
+      at createViewNodes (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:13487:53)
+      at createRootView (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:13377:5)
+      at callWithDebugContext (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:14778:42)
+      at Object.debugCreateRootView [as createRootView] (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:14079:12)
+      at ComponentFactory_.create (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:10998:46)
+      at ComponentFactoryBoundToModule.create (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:3958:29)
+      at ApplicationRef.bootstrap (https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5769:57)` });
 
     expect(message).toEqual(`something terrible has happened. oh no. oh no.
 new AppComponent@app.component.ts:31:29
@@ -140,25 +140,25 @@ createDirectiveInstance@core.u`);
     const message = await callOnError('Error: something terrible has happened. oh no. oh no.', undefined, undefined, undefined, {
       message: 'something terrible has happened. oh no. oh no.',
       stack: `AppComponent@https://example.com/app/app.component.ts:31:29
-createClass@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:12200:20
-createDirectiveInstance@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:12049:37
-createViewNodes@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:13487:53
-createRootView@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:13377:5
-callWithDebugContext@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:14778:39
-debugCreateRootView@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:14079:12
-ComponentFactory_.prototype.create@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:10998:37
-ComponentFactoryBoundToModule.prototype.create@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:3958:16
-ApplicationRef.prototype.bootstrap@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5769:40
-PlatformRef.prototype._moduleDoBootstrap/<@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5496:74
-PlatformRef.prototype._moduleDoBootstrap@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5496:13
-PlatformRef.prototype.bootstrapModuleFactory/</</<@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:5417:21
+createClass@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:12200:20
+createDirectiveInstance@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:12049:37
+createViewNodes@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:13487:53
+createRootView@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:13377:5
+callWithDebugContext@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:14778:39
+debugCreateRootView@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:14079:12
+ComponentFactory_.prototype.create@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:10998:37
+ComponentFactoryBoundToModule.prototype.create@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:3958:16
+ApplicationRef.prototype.bootstrap@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5769:40
+PlatformRef.prototype._moduleDoBootstrap/<@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5496:74
+PlatformRef.prototype._moduleDoBootstrap@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5496:13
+PlatformRef.prototype.bootstrapModuleFactory/</</<@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:5417:21
 ZoneDelegate.prototype.invoke@https://example.com/packages/zone.js@0.8.18/dist/zone.js:392:17
-onInvoke@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:4665:24
+onInvoke@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:4665:24
 ZoneDelegate.prototype.invoke@https://example.com/packages/zone.js@0.8.18/dist/zone.js:391:17
 Zone.prototype.run@https://example.com/packages/zone.js@0.8.18/dist/zone.js:142:24
 scheduleResolveOrReject/<@https://example.com/packages/zone.js@0.8.18/dist/zone.js:873:52
 ZoneDelegate.prototype.invokeTask@https://example.com/packages/zone.js@0.8.18/dist/zone.js:425:17
-onInvokeTask@https://example.com/packages/@angular/core@5.0.0/bundles/core.umd.js:4656:24
+onInvokeTask@https://example.com/packages/@angular-classic/core@5.0.0/bundles/core.umd.js:4656:24
 ZoneDelegate.prototype.invokeTask@https://example.com/packages/zone.js@0.8.18/dist/zone.js:424:17
 Zone.prototype.runTask@https://example.com/packages/zone.js@0.8.18/dist/zone.js:192:28
 drainMicroTaskQueue@https://example.com/packages/zone.js@0.8.18/dist/zone.js:602:25` });

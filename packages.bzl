@@ -9,7 +9,7 @@ def to_package_label(package_name):
     if package_name == "angular-in-memory-web-api":
         return "//packages/misc/angular-in-memory-web-api:npm_package"
 
-    return "//packages/{package_name}:npm_package".format(package_name = package_name.replace("@angular/", ""))
+    return "//packages/{package_name}:npm_package".format(package_name = package_name.replace("@angular-classic/", ""))
 
 def _exclude_pkgs(packages, *args):
     modified_packages = packages[:]
@@ -19,22 +19,22 @@ def _exclude_pkgs(packages, *args):
 
 # All framework packages published to NPM.
 ALL_PACKAGES = [
-    "@angular/animations",
-    "@angular/benchpress",
-    "@angular/common",
-    "@angular/compiler",
-    "@angular/compiler-cli",
-    "@angular/core",
-    "@angular/elements",
-    "@angular/forms",
-    "@angular/language-service",
-    "@angular/localize",
-    "@angular/platform-browser",
-    "@angular/platform-browser-dynamic",
-    "@angular/platform-server",
-    "@angular/router",
-    "@angular/service-worker",
-    "@angular/upgrade",
+    "@angular-classic/animations",
+    "@angular-classic/benchpress",
+    "@angular-classic/common",
+    "@angular-classic/compiler",
+    "@angular-classic/compiler-cli",
+    "@angular-classic/core",
+    "@angular-classic/elements",
+    "@angular-classic/forms",
+    "@angular-classic/language-service",
+    "@angular-classic/localize",
+    "@angular-classic/platform-browser",
+    "@angular-classic/platform-browser-dynamic",
+    "@angular-classic/platform-server",
+    "@angular-classic/router",
+    "@angular-classic/service-worker",
+    "@angular-classic/upgrade",
     "angular-in-memory-web-api",
     "zone.js",
 ]
@@ -43,7 +43,7 @@ ALL_PACKAGES = [
 INTEGRATION_PACKAGES = _exclude_pkgs(ALL_PACKAGES, "angular-in-memory-web-api")
 
 # Packages used by example e2e tests
-AIO_EXAMPLE_PACKAGES = _exclude_pkgs(ALL_PACKAGES, "@angular/benchpress")
+AIO_EXAMPLE_PACKAGES = _exclude_pkgs(ALL_PACKAGES, "@angular-classic/benchpress")
 
 # Package names under //packages that have `files_for_docgen` targets
 # including files needed for AIO doc generation.

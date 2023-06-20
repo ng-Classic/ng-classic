@@ -138,12 +138,12 @@ async function createEntryPointSpecFile() {
 }
 
 /**
- * Creates an ESBuild plugin which maps `@angular/<..>` module names to their
+ * Creates an ESBuild plugin which maps `@angular-classic/<..>` module names to their
  * locally-built output (for the packages which are built as part of this repo).
  */
 async function createResolveEsbuildPlugin() {
   const resolveMappings = new Map([
-    [/@angular\//, `${legacyOutputDir}/`],
+    [/@angular-classic\//, `${legacyOutputDir}/`],
     [/^angular-in-memory-web-api$/, join(legacyOutputDir, 'misc/angular-in-memory-web-api')],
     [/^zone.js\//, `${legacyOutputDir}/zone.js/`],
   ]);
@@ -151,7 +151,7 @@ async function createResolveEsbuildPlugin() {
   return {
     name: 'ng-resolve-esbuild',
     setup: (build) => {
-      build.onResolve({filter: /(@angular\/|angular-in-memory-web-api|zone.js)/}, async (args) => {
+      build.onResolve({filter: /(@angular-classic\/|angular-in-memory-web-api|zone.js)/}, async (args) => {
         const matchedPattern = Array.from(resolveMappings.keys()).find((pattern) =>
           args.path.match(pattern)
         );

@@ -1,5 +1,5 @@
 // #docregion
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular-classic/core';
 
 import { HeroCacheService } from './hero-cache.service';
 

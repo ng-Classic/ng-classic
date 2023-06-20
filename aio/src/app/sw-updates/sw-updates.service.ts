@@ -1,5 +1,5 @@
-import { ApplicationRef, ErrorHandler, Injectable, OnDestroy } from '@angular/core';
-import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
+import { ApplicationRef, ErrorHandler, Injectable, OnDestroy } from '@angular-classic/core';
+import { SwUpdate, VersionReadyEvent } from '@angular-classic/service-worker';
 import { concat, from, interval, Subject } from 'rxjs';
 import { filter, first, switchMap, takeUntil, tap } from 'rxjs/operators';
 

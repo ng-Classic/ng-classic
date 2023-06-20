@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵregisterLocaleData} from '@angular/core';
+import {ɵregisterLocaleData} from '@angular-classic/core';
 
 /**
  * Register global data to be used internally by Angular. See the

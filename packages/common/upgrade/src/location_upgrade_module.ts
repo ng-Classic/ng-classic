@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {APP_BASE_HREF, CommonModule, HashLocationStrategy, Location, LocationStrategy, PathLocationStrategy, PlatformLocation} from '@angular/common';
-import {Inject, InjectionToken, ModuleWithProviders, NgModule, Optional} from '@angular/core';
-import {UpgradeModule} from '@angular/upgrade/static';
+import {APP_BASE_HREF, CommonModule, HashLocationStrategy, Location, LocationStrategy, PathLocationStrategy, PlatformLocation} from '@angular-classic/common';
+import {Inject, InjectionToken, ModuleWithProviders, NgModule, Optional} from '@angular-classic/core';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
 
 import {$locationShim, $locationShimProvider} from './location_shim';
 import {AngularJSUrlCodec, UrlCodec} from './params';

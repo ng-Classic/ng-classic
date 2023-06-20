@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Location, LocationStrategy, PlatformLocation} from '@angular/common';
-import {ɵisPromise as isPromise} from '@angular/core';
-import {UpgradeModule} from '@angular/upgrade/static';
+import {Location, LocationStrategy, PlatformLocation} from '@angular-classic/common';
+import {ɵisPromise as isPromise} from '@angular-classic/core';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
 import {ReplaySubject} from 'rxjs';
 
 import {UrlCodec} from './params';

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Compiler, EnvironmentInjector, inject, Injectable, InjectFlags, InjectionToken, Injector, NgModuleFactory, Type} from '@angular/core';
+import {Compiler, EnvironmentInjector, inject, Injectable, InjectFlags, InjectionToken, Injector, NgModuleFactory, Type} from '@angular-classic/core';
 import {ConnectableObservable, from, Observable, of, Subject} from 'rxjs';
 import {finalize, map, mergeMap, refCount, tap} from 'rxjs/operators';
 

@@ -9,7 +9,7 @@
 // Note: Before changing any exports here, consult with the Angular tooling team
 // as the CLI heavily relies on exports declared here.
 
-import {NodeJSFileSystem, setFileSystem} from '@angular/compiler-cli/private/localize';
+import {NodeJSFileSystem, setFileSystem} from '@angular-classic/compiler-cli/private/localize';
 setFileSystem(new NodeJSFileSystem());
 
 export {DiagnosticHandlingStrategy, Diagnostics} from './src/diagnostics';

@@ -3,8 +3,8 @@
 // #docregion rxjs-operator-import
 import { switchMap } from 'rxjs/operators';
 // #enddocregion rxjs-operator-import
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit } from '@angular-classic/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular-classic/router';
 import { Observable } from 'rxjs';
 
 import { HeroService } from '../hero.service';

@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
+import {Component, Directive} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
 
-describe('@angular/common integration', () => {
+describe('@angular-classic/common integration', () => {
   describe('NgForOf', () => {
     @Directive({selector: '[dir]'})
     class MyDirective {

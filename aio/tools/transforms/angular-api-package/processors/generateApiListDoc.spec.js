@@ -38,26 +38,26 @@ describe('generateApiListDoc processor', () => {
   it('should add an info object to the doc for each module doc', () => {
     const processor = processorFactory();
     const docs = [
-      { docType: 'package', id: '@angular/common/index', exports: [], path: 'common' },
-      { docType: 'package', id: '@angular/core/index', exports: [], path: 'core' },
+      { docType: 'package', id: '@angular-classic/common/index', exports: [], path: 'common' },
+      { docType: 'package', id: '@angular-classic/core/index', exports: [], path: 'core' },
     ];
     processor.$process(docs);
     expect(docs[2].data).toEqual([
-      { name: '@angular/common', title: '@angular/common', items: [], path: 'common' },
-      { name: '@angular/core', title: '@angular/core', items: [], path: 'core' },
+      { name: '@angular-classic/common', title: '@angular-classic/common', items: [], path: 'common' },
+      { name: '@angular-classic/core', title: '@angular-classic/core', items: [], path: 'core' },
     ]);
   });
 
   it('should add info about each export on each module', () => {
     const processor = processorFactory();
     const docs = [
-      { docType: 'package', id: '@angular/common/index', exports: [
+      { docType: 'package', id: '@angular-classic/common/index', exports: [
         { docType: 'directive', name: 'AaaAaa', path: 'aaa' },
         { docType: 'pipe', name: 'BbbBbb', path: 'bbb' },
         { docType: 'decorator', name: 'CccCcc', path: 'ccc' },
         { docType: 'class', name: 'DddDdd', path: 'ddd' }
       ] },
-      { docType: 'package', id: '@angular/core/index', exports: [
+      { docType: 'package', id: '@angular-classic/core/index', exports: [
         { docType: 'interface', name: 'EeeEee', path: 'eee' },
         { docType: 'function', name: 'FffFff', path: 'fff' },
         { docType: 'enum', name: 'GggGgg', path: 'ggg' },
@@ -84,7 +84,7 @@ describe('generateApiListDoc processor', () => {
   it('should ignore internal and private exports', () => {
     const processor = processorFactory();
     const docs = [
-      { docType: 'package', id: '@angular/common/index', exports: [
+      { docType: 'package', id: '@angular-classic/common/index', exports: [
         { docType: 'directive', name: 'AaaAaa', path: 'aaa', internal: true },
         { docType: 'class', name: 'XxxXxx', path: 'xxx', privateExport: true },
         { docType: 'pipe', name: 'BbbBbb', path: 'bbb' }
@@ -99,7 +99,7 @@ describe('generateApiListDoc processor', () => {
   it('should convert `let` and `var` docTypes to `const`', () => {
     const processor = processorFactory();
     const docs = [
-      { docType: 'package', id: '@angular/common/index', exports: [
+      { docType: 'package', id: '@angular-classic/common/index', exports: [
         { docType: 'var', name: 'AaaAaa', path: 'aaa' },
         { docType: 'let', name: 'BbbBbb', path: 'bbb' },
       ]}
@@ -114,7 +114,7 @@ describe('generateApiListDoc processor', () => {
   it('should convert security to a boolean securityRisk', () => {
     const processor = processorFactory();
     const docs = [
-      { docType: 'package', id: '@angular/common/index', exports: [
+      { docType: 'package', id: '@angular-classic/common/index', exports: [
         { docType: 'class', name: 'AaaAaa', path: 'aaa', security: 'This is a security risk' },
         { docType: 'class', name: 'BbbBbb', path: 'bbb', security: '' },
       ]}
@@ -129,7 +129,7 @@ describe('generateApiListDoc processor', () => {
   it('should convert stability tags to the stable string property', () => {
     const processor = processorFactory();
     const docs = [
-      { docType: 'package', id: '@angular/common/index', exports: [
+      { docType: 'package', id: '@angular-classic/common/index', exports: [
         { docType: 'class', name: 'AaaAaa', path: 'aaa', stable: undefined },
         { docType: 'class', name: 'BbbBbb', path: 'bbb', experimental: 'Some message' },
         { docType: 'class', name: 'CccCcc', path: 'ccc', deprecated: null },
@@ -148,7 +148,7 @@ describe('generateApiListDoc processor', () => {
   it('should sort items in each group alphabetically', () => {
     const processor = processorFactory();
     const docs = [
-      { docType: 'package', id: '@angular/common/index', exports: [
+      { docType: 'package', id: '@angular-classic/common/index', exports: [
         { docType: 'class', name: 'DddDdd', path: 'uuu' },
         { docType: 'class', name: 'BbbBbb', path: 'vvv' },
         { docType: 'class', name: 'AaaAaa', path: 'xxx' },

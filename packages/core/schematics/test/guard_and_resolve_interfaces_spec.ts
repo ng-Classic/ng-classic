@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {getSystemPath, normalize, virtualFs} from '@angular-devkit/core';
-import {TempScopedNodeJsSyncHost} from '@angular-devkit/core/node/testing';
-import {HostTree} from '@angular-devkit/schematics';
-import {SchematicTestRunner, UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getSystemPath, normalize, virtualFs} from '@angular-classic-devkit/core';
+import {TempScopedNodeJsSyncHost} from '@angular-classic-devkit/core/node/testing';
+import {HostTree} from '@angular-classic-devkit/schematics';
+import {SchematicTestRunner, UnitTestTree} from '@angular-classic-devkit/schematics/testing';
 import {runfiles} from '@bazel/runfiles';
 import shx from 'shelljs';
 
@@ -46,7 +46,7 @@ describe('Guard and Resolve interfaces migration', () => {
     }));
 
     // We need to declare the Angular symbols we're testing for, otherwise type checking won't work.
-    writeFile('/node_modules/@angular/router/index.d.ts', `
+    writeFile('/node_modules/@angular-classic/router/index.d.ts', `
       export declare interface Resolve<T> { }
       export declare interface CanActivate { }
       export declare interface CanActivateChild { }
@@ -69,30 +69,30 @@ describe('Guard and Resolve interfaces migration', () => {
 
   it('should be able to remove multiple imports and retain other symbols', async () => {
     writeFile('/index.ts', `
-        import {Router, Resolve, CanActivate} from '@angular/router';
+        import {Router, Resolve, CanActivate} from '@angular-classic/router';
       `);
 
     await runMigration();
     const content = tree.readContent('/index.ts');
-    expect(content).toContain(`import { Router } from '@angular/router'`);
+    expect(content).toContain(`import { Router } from '@angular-classic/router'`);
   });
 
   it('should be able to multiple imports from different import statements', async () => {
     writeFile('/index.ts', `
-        import {Router, Resolve} from '@angular/router';
-        import {CanActivate} from '@angular/router';
+        import {Router, Resolve} from '@angular-classic/router';
+        import {CanActivate} from '@angular-classic/router';
       `);
 
     await runMigration();
     const content = tree.readContent('/index.ts');
-    expect(content).toContain(`import { Router } from '@angular/router'`);
+    expect(content).toContain(`import { Router } from '@angular-classic/router'`);
     expect(content).not.toContain(`CanActivate`);
     expect(content).not.toContain(`Resolve`);
   });
 
   it('should be able to remove implements', async () => {
     writeFile('/index.ts', `
-        import {Resolve} from '@angular/router';
+        import {Resolve} from '@angular-classic/router';
 
         class A implements X, Resolve {}
       `);
@@ -104,7 +104,7 @@ describe('Guard and Resolve interfaces migration', () => {
 
   it('should be able to remove last implements', async () => {
     writeFile('/index.ts', `
-        import {Resolve} from '@angular/router';
+        import {Resolve} from '@angular-classic/router';
 
         class A implements Resolve {}
       `);
@@ -118,7 +118,7 @@ describe('Guard and Resolve interfaces migration', () => {
 
   it('should be able to remove all deprecated imports and implements', async () => {
     writeFile('/index.ts', `
-        import {Resolve, CanActivate, CanActivateChild, CanDeactivate, CanMatch, CanLoad} from '@angular/router';
+        import {Resolve, CanActivate, CanActivateChild, CanDeactivate, CanMatch, CanLoad} from '@angular-classic/router';
 
         class A implements Resolve {}
         class B implements CanActivate, CanActivateChild {}
@@ -138,7 +138,7 @@ describe('Guard and Resolve interfaces migration', () => {
 
   it('should migrates type references to function types', async () => {
     writeFile('/index.ts', `
-        import {Resolve, CanActivate, CanActivateChild, CanDeactivate, CanMatch, CanLoad} from '@angular/router';
+        import {Resolve, CanActivate, CanActivateChild, CanDeactivate, CanMatch, CanLoad} from '@angular-classic/router';
 
         function runResolver<T>(resolver: Resolve<T>): T {}
         function runCanMatch(guard: CanMatch): any {}
@@ -157,7 +157,7 @@ describe('Guard and Resolve interfaces migration', () => {
 
   it('should migrate type references within type references to function types', async () => {
     writeFile('/index.ts', `
-        import {Resolve} from '@angular/router';
+        import {Resolve} from '@angular-classic/router';
 
         export interface Something  {
           resolve?: {someData?: Type<Resolve<any>>}
@@ -172,7 +172,7 @@ describe('Guard and Resolve interfaces migration', () => {
 
   it('should migrates type aliases', async () => {
     writeFile('/index.ts', `
-        import {Resolve} from '@angular/router';
+        import {Resolve} from '@angular-classic/router';
 
         export interface IssueDetailViewParams {
           issueId: string;

@@ -1,5 +1,5 @@
 load("//devtools:packages.bzl", "ANGULAR_PACKAGES")
-load("@npm//@angular/build-tooling/bazel/esbuild:index.bzl", "esbuild")
+load("@npm//@angular-classic/build-tooling/bazel/esbuild:index.bzl", "esbuild")
 load("@build_bazel_rules_nodejs//internal/linker:link_node_modules.bzl", "LinkerPackageMappingInfo")
 load("@build_bazel_rules_nodejs//:providers.bzl", "ExternalNpmPackageInfo", "JSModuleInfo")
 
@@ -16,7 +16,7 @@ load("@build_bazel_rules_nodejs//:providers.bzl", "ExternalNpmPackageInfo", "JSM
 def _linker_mapping_impl(ctx):
     return [
         # Pass through the `ExternalNpmPackageInfo` which is needed for the linker
-        # resolving dependencies which might be external. e.g. `rxjs` for `@angular/core`.
+        # resolving dependencies which might be external. e.g. `rxjs` for `@angular-classic/core`.
         ctx.attr.package[ExternalNpmPackageInfo],
         JSModuleInfo(
             direct_sources = depset(ctx.files.srcs),
@@ -55,16 +55,16 @@ def _create_bundle_targets(pkg, entry_point, module_name):
         name = "%s_linked_bundle" % target_name_base,
         output = "%s/index.mjs" % target_name_base,
         platform = pkg.platform,
-        entry_point = "@npm//:node_modules/@angular/%s/%s" % (pkg.name, fesm_bundle_path),
+        entry_point = "@npm//:node_modules/@angular-classic/%s/%s" % (pkg.name, fesm_bundle_path),
         config = "//devtools/tools/esbuild:esbuild_config_esm",
         # List of dependencies which should never be bundled into these linker-processed bundles.
-        external = ["rxjs", "@angular", "domino", "xhr2", "@material"],
+        external = ["rxjs", "@angular-classic", "domino", "xhr2", "@material"],
     )
 
     _linker_mapping(
         name = "%s_linked" % target_name_base,
         srcs = [":%s_linked_bundle" % target_name_base],
-        package = "@npm//@angular/%s" % pkg.name,
+        package = "@npm//@angular-classic/%s" % pkg.name,
         module_name = module_name,
         subpath = target_name_base,
     )

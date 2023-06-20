@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT} from '@angular/common';
-import {HttpClient, provideHttpClient} from '@angular/common/http';
-import {HttpTestingController, provideHttpClientTesting} from '@angular/common/http/testing';
-import {ApplicationRef, Component, Injectable} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {withBody} from '@angular/private/testing';
+import {DOCUMENT} from '@angular-classic/common';
+import {HttpClient, provideHttpClient} from '@angular-classic/common/http';
+import {HttpTestingController, provideHttpClientTesting} from '@angular-classic/common/http/testing';
+import {ApplicationRef, Component, Injectable} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {withBody} from '@angular-classic/private/testing';
 import {BehaviorSubject} from 'rxjs';
 
 import {provideClientHydration, withNoHttpTransferCache} from '../public_api';

@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {absoluteFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {runInEachFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
-import {ɵParsedMessage, ɵSourceLocation} from '@angular/localize';
+import {absoluteFrom} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {runInEachFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
+import {ɵParsedMessage, ɵSourceLocation} from '@angular-classic/localize';
 
 import {FormatOptions} from '../../../src/extract/translation_files/format_options';
 import {Xliff1TranslationSerializer} from '../../../src/extract/translation_files/xliff1_translation_serializer';

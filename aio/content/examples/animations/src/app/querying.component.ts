@@ -1,6 +1,6 @@
 import {
   Component,
-} from '@angular/core';
+} from '@angular-classic/core';
 import {
   trigger,
   style,
@@ -10,7 +10,7 @@ import {
   query,
   animateChild,
   keyframes
-} from '@angular/animations';
+} from '@angular-classic/animations';
 
 import { HEROES } from './mock-heroes';
 

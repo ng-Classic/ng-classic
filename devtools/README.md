@@ -30,7 +30,7 @@ To publish Angular DevTools to Firefox or Chrome stores:
 ### Firefox
 
 1. Go to the Firefox Addons [page](https://addons.mozilla.org/developers/addons)
-1. For email enter `devrel@angular.io`
+1. For email enter `devrel@angular-classic.io`
 1. Find the password on Valentine
 1. Setup Google Authenticator with the 2FA QR code. You can find the QR code on Valentine
 

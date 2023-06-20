@@ -1,10 +1,10 @@
 import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync
-} from '@angular/core/testing';
+} from '@angular-classic/core/testing';
 
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { By } from '@angular-classic/platform-browser';
+import { DebugElement } from '@angular-classic/core';
 
-import { Router } from '@angular/router';
+import { Router } from '@angular-classic/router';
 
 import { addMatchers } from '../../testing';
 import { HeroService } from '../model/hero.service';

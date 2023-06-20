@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector} from '@angular/core';
+import {Injector} from '@angular-classic/core';
 
 import {IInjectorService} from './angular1';
 import {$INJECTOR, INJECTOR_KEY} from './constants';

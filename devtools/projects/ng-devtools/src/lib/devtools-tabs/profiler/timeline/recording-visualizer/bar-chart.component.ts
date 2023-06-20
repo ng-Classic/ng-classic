@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {animate, animateChild, query, stagger, style, transition, trigger} from '@angular/animations';
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {animate, animateChild, query, stagger, style, transition, trigger} from '@angular-classic/animations';
+import {Component, EventEmitter, Input, Output} from '@angular-classic/core';
 
 interface Data {
   label: string;

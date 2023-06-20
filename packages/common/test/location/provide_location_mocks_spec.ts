@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Location, LocationStrategy} from '@angular/common';
-import {MockLocationStrategy, provideLocationMocks, SpyLocation} from '@angular/common/testing';
-import {TestBed} from '@angular/core/testing';
+import {Location, LocationStrategy} from '@angular-classic/common';
+import {MockLocationStrategy, provideLocationMocks, SpyLocation} from '@angular-classic/common/testing';
+import {TestBed} from '@angular-classic/core/testing';
 
 
 describe('provideLocationMocks() function', () => {

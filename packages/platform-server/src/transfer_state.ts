@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT} from '@angular/common';
-import {APP_ID, NgModule, Provider, TransferState} from '@angular/core';
+import {DOCUMENT} from '@angular-classic/common';
+import {APP_ID, NgModule, Provider, TransferState} from '@angular-classic/core';
 
 import {BEFORE_APP_SERIALIZED} from './tokens';
 

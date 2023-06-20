@@ -1,4 +1,4 @@
-import {Component, NgModule} from '@angular/core';
+import {Component, NgModule} from '@angular-classic/core';
 
 declare const animate: any;
 declare const style: any;

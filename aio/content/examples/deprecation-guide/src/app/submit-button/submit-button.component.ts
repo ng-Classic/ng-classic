@@ -1,5 +1,5 @@
 // #docplaster ...
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular-classic/core';
 // #docregion submitButton, submitButtonNarrow
 @Component({
   // #enddocregion submitButton, submitButtonNarrow

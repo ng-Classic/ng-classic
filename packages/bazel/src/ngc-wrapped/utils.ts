@@ -8,7 +8,7 @@
  * @fileoverview A set of common helpers related to ng compiler wrapper.
  */
 
-import {CompilerHost as NgCompilerHost} from '@angular/compiler-cli';
+import {CompilerHost as NgCompilerHost} from '@angular-classic/compiler-cli';
 import * as fs from 'fs';
 import * as path from 'path';
 import ts from 'typescript';
@@ -84,9 +84,9 @@ export function patchNgHostWithFileNameToModuleName(
     // However, the ngsummary doesn't propagate the 'importAs' from the original metadata.json
     // so we would normally not be able to supply the correct module name for it.
     // For example, if the rootDir-relative filePath is
-    //  node_modules/@angular/material/toolbar/typings/index
+    //  node_modules/@angular-classic/material/toolbar/typings/index
     // we would supply a module name
-    //  @angular/material/toolbar/typings/index
+    //  @angular-classic/material/toolbar/typings/index
     // but there is no JavaScript file to load at this path.
     // This is a workaround for https://github.com/angular/angular/issues/29454
     if (importedFilePath.indexOf('node_modules') >= 0) {

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-// This file contains the public API of the `@angular/localize` entry-point
+// This file contains the public API of the `@angular-classic/localize` entry-point
 
 export {clearTranslations, loadTranslations} from './src/translate';
 export {MessageId, TargetMessage} from './src/utils';

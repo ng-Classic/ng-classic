@@ -1,4 +1,4 @@
-import {Component, Directive, Input, NgModule, Pipe} from '@angular/core';
+import {Component, Directive, Input, NgModule, Pipe} from '@angular-classic/core';
 
 @Pipe({name: 'uppercase'})
 export class UppercasePipe {

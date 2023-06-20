@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {IMAGE_LOADER, NgOptimizedImage} from '@angular/common';
-import {Component} from '@angular/core';
+import {IMAGE_LOADER, NgOptimizedImage} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
 
 @Component({
   selector: 'basic',

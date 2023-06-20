@@ -19,7 +19,7 @@
  */
 
 /**
- * Web Animations `@angular/platform-browser/animations`
+ * Web Animations `@angular-classic/platform-browser/animations`
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
  * Standard animation support in Angular DOES NOT require any polyfills (as of Angular 6.0).
  */
@@ -59,12 +59,12 @@ import 'zone.js'; // Included with Angular CLI.
 /***************************************************************************************************
  * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
  */
-import '@angular/localize/init';
+import '@angular-classic/localize/init';
 
 // Note that `computeMsgId` is a private API at this stage. It will probably be exported directly
-// from `@angular/localize` at some point.
-import {computeMsgId} from '@angular/compiler';
-import {loadTranslations} from '@angular/localize';
+// from `@angular-classic/localize` at some point.
+import {computeMsgId} from '@angular-classic/compiler';
+import {loadTranslations} from '@angular-classic/localize';
 
 // Load some runtime translations!
 loadTranslations({
@@ -74,8 +74,8 @@ loadTranslations({
 
 // Set up the locale for the runtime inlining (EXPERIMENTAL)
 $localize.locale = 'fr';
-import {registerLocaleData} from '@angular/common';
-import localeFr from '@angular/common/locales/fr';
+import {registerLocaleData} from '@angular-classic/common';
+import localeFr from '@angular-classic/common/locales/fr';
 registerLocaleData(localeFr);
 
 /***************************************************************************************************

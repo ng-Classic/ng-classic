@@ -1,5 +1,5 @@
 // #docregion
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 
 import { DropdownQuestion } from './question-dropdown';
 import { QuestionBase } from './question-base';

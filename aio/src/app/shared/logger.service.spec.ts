@@ -1,4 +1,4 @@
-import { ErrorHandler, Injector } from '@angular/core';
+import { ErrorHandler, Injector } from '@angular-classic/core';
 import { Logger } from './logger.service';
 
 describe('logger service', () => {

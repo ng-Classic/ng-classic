@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Element, ParseError} from '@angular/compiler';
-import {ɵParsedTranslation} from '@angular/localize';
+import {Element, ParseError} from '@angular-classic/compiler';
+import {ɵParsedTranslation} from '@angular-classic/localize';
 
 import {MessageSerializer, MessageSerializerConfig} from '../message_serialization/message_serializer';
 import {TargetMessageRenderer} from '../message_serialization/target_message_renderer';

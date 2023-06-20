@@ -1,5 +1,5 @@
 // #docregion
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 import { QuestionService } from './question.service';
 import { QuestionBase } from './question-base';

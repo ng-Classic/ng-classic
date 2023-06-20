@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular-classic/core/testing';
 
 import { LazyComponent } from './lazy.component';
 

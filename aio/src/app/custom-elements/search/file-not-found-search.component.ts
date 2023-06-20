@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular-classic/core';
 import {Observable} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
 import {LocationService} from 'app/shared/location.service';

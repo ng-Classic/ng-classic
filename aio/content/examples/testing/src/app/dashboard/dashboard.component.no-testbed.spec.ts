@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { Router } from '@angular-classic/router';
 
 import { DashboardComponent } from './dashboard.component';
 import { Hero } from '../model/hero';

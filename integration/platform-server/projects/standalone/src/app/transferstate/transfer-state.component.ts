@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isPlatformServer} from '@angular/common';
-import {HttpClient} from '@angular/common/http';
-import {Component, Inject, PLATFORM_ID, TransferState, makeStateKey} from '@angular/core';
+import {isPlatformServer} from '@angular-classic/common';
+import {HttpClient} from '@angular-classic/common/http';
+import {Component, Inject, PLATFORM_ID, TransferState, makeStateKey} from '@angular-classic/core';
 
 const COUNTER_KEY = makeStateKey<number>('counter');
 

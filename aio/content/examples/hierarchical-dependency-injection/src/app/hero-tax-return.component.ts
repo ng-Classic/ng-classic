@@ -1,6 +1,6 @@
-/* eslint-disable @angular-eslint/no-output-native */
+/* eslint-disable @angular-classic-eslint/no-output-native */
 // #docregion
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular-classic/core';
 import { HeroTaxReturn } from './hero';
 import { HeroTaxReturnService } from './hero-tax-return.service';
 

@@ -14,7 +14,7 @@ The components have a clear piece of source code associated with it within the `
 of this repo.
 
 * `area: animations`
-* `area: bazel` - @angular/bazel rules
+* `area: bazel` - @angular-classic/bazel rules
 * `area: benchpress`
 * `area: common` - this includes core components / pipes
 * `area: common/http` - this includes core components / pipes
@@ -44,7 +44,7 @@ We will treat them as a component even thought no specific source tree is associ
 * `area: build & ci` - build and CI infrastructure for the angular/angular repo
 * `area: dev-infra` - angular's common internal developer infrastructure scripting and tooling
 * `area: docs` - documentation, including API docs, guides, tutorial
-* `area: packaging` - packaging format of @angular/* npm packages
+* `area: packaging` - packaging format of @angular-classic/* npm packages
 * `area: performance`
 * `area: security`
 

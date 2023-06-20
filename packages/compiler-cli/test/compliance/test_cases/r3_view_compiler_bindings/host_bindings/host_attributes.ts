@@ -1,4 +1,4 @@
-import {Directive, NgModule} from '@angular/core';
+import {Directive, NgModule} from '@angular-classic/core';
 
 @Directive({selector: '[hostAttributeDir]', host: {'aria-label': 'label'}})
 export class HostAttributeDir {

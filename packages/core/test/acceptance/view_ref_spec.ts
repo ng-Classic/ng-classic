@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ApplicationRef, ChangeDetectorRef, Component, ComponentRef, createComponent, ElementRef, EmbeddedViewRef, EnvironmentInjector, Injector, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
-import {InternalViewRef} from '@angular/core/src/linker/view_ref';
-import {TestBed} from '@angular/core/testing';
+import {ApplicationRef, ChangeDetectorRef, Component, ComponentRef, createComponent, ElementRef, EmbeddedViewRef, EnvironmentInjector, Injector, TemplateRef, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {InternalViewRef} from '@angular-classic/core/src/linker/view_ref';
+import {TestBed} from '@angular-classic/core/testing';
 
 
 describe('ViewRef', () => {

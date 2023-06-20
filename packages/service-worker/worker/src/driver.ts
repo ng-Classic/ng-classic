@@ -139,7 +139,7 @@ export class Driver implements Debuggable, UpdateSource {
         await this.scope.clients.claim();
 
         // Once all clients have been taken over, we can delete caches used by old versions of
-        // `@angular/service-worker`, which are no longer needed. This can happen in the background.
+        // `@angular-classic/service-worker`, which are no longer needed. This can happen in the background.
         this.idle.schedule('activate: cleanup-old-sw-caches', async () => {
           try {
             await this.cleanupOldSwCaches();
@@ -979,7 +979,7 @@ export class Driver implements Debuggable, UpdateSource {
   }
 
   /**
-   * Delete caches that were used by older versions of `@angular/service-worker` to avoid running
+   * Delete caches that were used by older versions of `@angular-classic/service-worker` to avoid running
    * into storage quota limitations imposed by browsers.
    * (Since at this point the SW has claimed all clients, it is safe to remove those caches.)
    */

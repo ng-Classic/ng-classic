@@ -1,4 +1,4 @@
-import {Injectable, Optional} from '@angular/core';
+import {Injectable, Optional} from '@angular-classic/core';
 
 class MyDependency {}
 class MyOptionalDependency {}

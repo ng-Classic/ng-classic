@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ElementRef, forwardRef, ɵɵngDeclareDirective} from '@angular/core';
+import {ElementRef, forwardRef, ɵɵngDeclareDirective} from '@angular-classic/core';
 
 import {AttributeMarker, DirectiveDef, ɵɵInheritDefinitionFeature, ɵɵNgOnChangesFeature} from '../../../src/render3';
 

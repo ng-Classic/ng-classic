@@ -10,7 +10,7 @@
  * @fileoverview
  * While Angular only uses Trusted Types internally for the time being,
  * references to Trusted Types could leak into our core.d.ts, which would force
- * anyone compiling against @angular/core to provide the @types/trusted-types
+ * anyone compiling against @angular-classic/core to provide the @types/trusted-types
  * package in their compilation unit.
  *
  * Until https://github.com/microsoft/TypeScript/issues/30024 is resolved, we

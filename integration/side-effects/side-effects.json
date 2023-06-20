@@ -1,67 +1,67 @@
 {
   "tests": [
     {
-      "esModules": "./node_modules/@angular/animations/esm2022/animations.js",
+      "esModules": "./node_modules/@angular-classic/animations/esm2022/animations.js",
       "expectedOutput": "./snapshots/animations/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/animations/fesm2022/animations.js",
+      "esModules": "./node_modules/@angular-classic/animations/fesm2022/animations.js",
       "expectedOutput": "./snapshots/animations/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/animations/esm2022/browser/browser.js",
+      "esModules": "./node_modules/@angular-classic/animations/esm2022/browser/browser.js",
       "expectedOutput": "./snapshots/animations-browser/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/animations/fesm2022/browser.js",
+      "esModules": "./node_modules/@angular-classic/animations/fesm2022/browser.js",
       "expectedOutput": "./snapshots/animations-browser/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/common/esm2022/common.js",
+      "esModules": "./node_modules/@angular-classic/common/esm2022/common.js",
       "expectedOutput": "./snapshots/common/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/common/fesm2022/common.js",
+      "esModules": "./node_modules/@angular-classic/common/fesm2022/common.js",
       "expectedOutput": "./snapshots/common/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/core/esm2022/core.js",
+      "esModules": "./node_modules/@angular-classic/core/esm2022/core.js",
       "expectedOutput": "./snapshots/core/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/core/fesm2022/core.js",
+      "esModules": "./node_modules/@angular-classic/core/fesm2022/core.js",
       "expectedOutput": "./snapshots/core/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/elements/esm2022/elements.js",
+      "esModules": "./node_modules/@angular-classic/elements/esm2022/elements.js",
       "expectedOutput": "./snapshots/elements/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/elements/fesm2022/elements.js",
+      "esModules": "./node_modules/@angular-classic/elements/fesm2022/elements.js",
       "expectedOutput": "./snapshots/elements/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/forms/esm2022/forms.js",
+      "esModules": "./node_modules/@angular-classic/forms/esm2022/forms.js",
       "expectedOutput": "./snapshots/forms/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/forms/fesm2022/forms.js",
+      "esModules": "./node_modules/@angular-classic/forms/fesm2022/forms.js",
       "expectedOutput": "./snapshots/forms/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/platform-browser/esm2022/platform-browser.js",
+      "esModules": "./node_modules/@angular-classic/platform-browser/esm2022/platform-browser.js",
       "expectedOutput": "./snapshots/platform-browser/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/platform-browser/fesm2022/platform-browser.js",
+      "esModules": "./node_modules/@angular-classic/platform-browser/fesm2022/platform-browser.js",
       "expectedOutput": "./snapshots/platform-browser/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/router/esm2022/router.js",
+      "esModules": "./node_modules/@angular-classic/router/esm2022/router.js",
       "expectedOutput": "./snapshots/router/esm2022.js"
     },
     {
-      "esModules": "./node_modules/@angular/router/fesm2022/router.js",
+      "esModules": "./node_modules/@angular-classic/router/fesm2022/router.js",
       "expectedOutput": "./snapshots/router/esm2022.js"
     }
   ]

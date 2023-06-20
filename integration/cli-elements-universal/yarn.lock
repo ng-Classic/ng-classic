@@ -18,21 +18,21 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@angular-devkit/architect@0.1600.0-next.6":
+"@angular-classic-devkit/architect@0.1600.0-next.6":
   version "0.1600.0-next.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1600.0-next.6.tgz#ae185cbefad9a691413719b5ee112f28a0c2bc5e"
+  resolved "https://registry.yarnpkg.com/@angular-classic-devkit/architect/-/architect-0.1600.0-next.6.tgz#ae185cbefad9a691413719b5ee112f28a0c2bc5e"
   integrity sha512-CUtjiuFaQGsOGMyfV2ehp31mYXkyOogfuuNBZCuiYZLEXLYzvBVWIScQK8UEpqoCGACy/dYKRWC5tRbzLlr5yQ==
   dependencies:
-    "@angular-devkit/core" "16.0.0-next.6"
+    "@angular-classic-devkit/core" "16.0.0-next.6"
     rxjs "7.8.0"
 
-"@angular-devkit/build-angular@file:../../node_modules/@angular-devkit/build-angular":
+"@angular-classic-devkit/build-angular@file:../../node_modules/@angular-classic-devkit/build-angular":
   version "16.0.0-next.6"
   dependencies:
     "@ampproject/remapping" "2.2.0"
-    "@angular-devkit/architect" "0.1600.0-next.6"
-    "@angular-devkit/build-webpack" "0.1600.0-next.6"
-    "@angular-devkit/core" "16.0.0-next.6"
+    "@angular-classic-devkit/architect" "0.1600.0-next.6"
+    "@angular-classic-devkit/build-webpack" "0.1600.0-next.6"
+    "@angular-classic-devkit/core" "16.0.0-next.6"
     "@babel/core" "7.21.3"
     "@babel/generator" "7.21.3"
     "@babel/helper-annotate-as-pure" "7.18.6"
@@ -92,17 +92,17 @@
   optionalDependencies:
     esbuild "0.17.12"
 
-"@angular-devkit/build-webpack@0.1600.0-next.6":
+"@angular-classic-devkit/build-webpack@0.1600.0-next.6":
   version "0.1600.0-next.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-webpack/-/build-webpack-0.1600.0-next.6.tgz#f79afa5794676a2dce38e026c885695477aca032"
+  resolved "https://registry.yarnpkg.com/@angular-classic-devkit/build-webpack/-/build-webpack-0.1600.0-next.6.tgz#f79afa5794676a2dce38e026c885695477aca032"
   integrity sha512-No/U2RUY8LBtJod5TB1T/rWXZ5SXlIEMadDRwBt1bTkjlcD8TCxV7vdhg3PDJNORloVT/IUZ+0jfXlNbRCrAhA==
   dependencies:
-    "@angular-devkit/architect" "0.1600.0-next.6"
+    "@angular-classic-devkit/architect" "0.1600.0-next.6"
     rxjs "7.8.0"
 
-"@angular-devkit/core@16.0.0-next.6":
+"@angular-classic-devkit/core@16.0.0-next.6":
   version "16.0.0-next.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-16.0.0-next.6.tgz#5448a4cba1556faeac1f82f852fdb23863c6a2aa"
+  resolved "https://registry.yarnpkg.com/@angular-classic-devkit/core/-/core-16.0.0-next.6.tgz#5448a4cba1556faeac1f82f852fdb23863c6a2aa"
   integrity sha512-OuIKgYiaf3YOqSyT8NDsc0cubJWmlq3N7hWNZQ+xkTTv3I76QXXG7S5MnBJgQmGR1pNr93uYMhKTyTVBqsPwBQ==
   dependencies:
     ajv "8.12.0"
@@ -111,28 +111,28 @@
     rxjs "7.8.0"
     source-map "0.7.4"
 
-"@angular-devkit/schematics@16.0.0-next.6":
+"@angular-classic-devkit/schematics@16.0.0-next.6":
   version "16.0.0-next.6"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-16.0.0-next.6.tgz#a8152201ac493ee03ea5bd2b75331ae98d1455e7"
+  resolved "https://registry.yarnpkg.com/@angular-classic-devkit/schematics/-/schematics-16.0.0-next.6.tgz#a8152201ac493ee03ea5bd2b75331ae98d1455e7"
   integrity sha512-QGMEhsWQBLY0ZZfWI30tsM3zgSV2QV3WxXAPyu6nbG9lbjUS0a95v6bU1qq+dila4VGTI2u6fWKNUIHmJ1SFEw==
   dependencies:
-    "@angular-devkit/core" "16.0.0-next.6"
+    "@angular-classic-devkit/core" "16.0.0-next.6"
     jsonc-parser "3.2.0"
     magic-string "0.30.0"
     ora "5.4.1"
     rxjs "7.8.0"
 
-"@angular/animations@file:../../dist/packages-dist/animations":
+"@angular-classic/animations@file:../../dist/packages-dist/animations":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/cli@file:../../node_modules/@angular/cli":
+"@angular-classic/cli@file:../../node_modules/@angular-classic/cli":
   version "16.0.0-next.6"
   dependencies:
-    "@angular-devkit/architect" "0.1600.0-next.6"
-    "@angular-devkit/core" "16.0.0-next.6"
-    "@angular-devkit/schematics" "16.0.0-next.6"
+    "@angular-classic-devkit/architect" "0.1600.0-next.6"
+    "@angular-classic-devkit/core" "16.0.0-next.6"
+    "@angular-classic-devkit/schematics" "16.0.0-next.6"
     "@schematics/angular" "16.0.0-next.6"
     "@yarnpkg/lockfile" "1.1.0"
     ansi-colors "4.1.3"
@@ -149,12 +149,12 @@
     symbol-observable "4.0.0"
     yargs "17.7.1"
 
-"@angular/common@file:../../dist/packages-dist/common":
+"@angular-classic/common@file:../../dist/packages-dist/common":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/compiler-cli@file:../../dist/packages-dist/compiler-cli":
+"@angular-classic/compiler-cli@file:../../dist/packages-dist/compiler-cli":
   version "16.1.0-next.0"
   dependencies:
     "@babel/core" "7.19.3"
@@ -166,48 +166,48 @@
     tslib "^2.3.0"
     yargs "^17.2.1"
 
-"@angular/compiler@9.0.0":
+"@angular-classic/compiler@9.0.0":
   version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-9.0.0.tgz#87e0bef4c369b6cadae07e3a4295778fc93799d5"
+  resolved "https://registry.yarnpkg.com/@angular-classic/compiler/-/compiler-9.0.0.tgz#87e0bef4c369b6cadae07e3a4295778fc93799d5"
   integrity sha512-ctjwuntPfZZT2mNj2NDIVu51t9cvbhl/16epc5xEwyzyDt76pX9UgwvY+MbXrf/C/FWwdtmNtfP698BKI+9leQ==
 
-"@angular/compiler@file:../../dist/packages-dist/compiler":
+"@angular-classic/compiler@file:../../dist/packages-dist/compiler":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/core@9.0.0":
+"@angular-classic/core@9.0.0":
   version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.0.0.tgz#227dc53e1ac81824f998c6e76000b7efc522641e"
+  resolved "https://registry.yarnpkg.com/@angular-classic/core/-/core-9.0.0.tgz#227dc53e1ac81824f998c6e76000b7efc522641e"
   integrity sha512-6Pxgsrf0qF9iFFqmIcWmjJGkkCaCm6V5QNnxMy2KloO3SDq6QuMVRbN9RtC8Urmo25LP+eZ6ZgYqFYpdD8Hd9w==
 
-"@angular/core@file:../../dist/packages-dist/core":
+"@angular-classic/core@file:../../dist/packages-dist/core":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/elements@file:../../dist/packages-dist/elements":
+"@angular-classic/elements@file:../../dist/packages-dist/elements":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-browser-dynamic@file:../../dist/packages-dist/platform-browser-dynamic":
+"@angular-classic/platform-browser-dynamic@file:../../dist/packages-dist/platform-browser-dynamic":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-browser@file:../../dist/packages-dist/platform-browser":
+"@angular-classic/platform-browser@file:../../dist/packages-dist/platform-browser":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-server@file:../../dist/packages-dist/platform-server":
+"@angular-classic/platform-server@file:../../dist/packages-dist/platform-server":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
     xhr2 "^0.2.0"
 
-"@angular/router@file:../../dist/packages-dist/router":
+"@angular-classic/router@file:../../dist/packages-dist/router":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
@@ -1474,8 +1474,8 @@
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-16.0.0-next.6.tgz#c1102ba5ff39751df69b7a0ddc8770d8f1c37951"
   integrity sha512-te8cc/SHsQHAEDo45rlnH+MCRifd2m5c3lYVgtLcpCnM6F2WiPoL7MGToQSP2j7am3QErZmRuXqZqhy+21WtDQ==
   dependencies:
-    "@angular-devkit/core" "16.0.0-next.6"
-    "@angular-devkit/schematics" "16.0.0-next.6"
+    "@angular-classic-devkit/core" "16.0.0-next.6"
+    "@angular-classic-devkit/schematics" "16.0.0-next.6"
     jsonc-parser "3.2.0"
 
 "@sigstore/protobuf-specs@^0.1.0":
@@ -2527,8 +2527,8 @@ codelyzer@^6.0.0:
   resolved "https://registry.yarnpkg.com/codelyzer/-/codelyzer-6.0.2.tgz#25d72eae641e8ff13ffd7d99b27c9c7ad5d7e135"
   integrity sha512-v3+E0Ucu2xWJMOJ2fA/q9pDT/hlxHftHGPUay1/1cTgyPV5JTHFdO9hqo837Sx2s9vKBMTt5gO+lhF95PO6J+g==
   dependencies:
-    "@angular/compiler" "9.0.0"
-    "@angular/core" "9.0.0"
+    "@angular-classic/compiler" "9.0.0"
+    "@angular-classic/core" "9.0.0"
     app-root-path "^3.0.0"
     aria-query "^3.0.0"
     axobject-query "2.0.2"

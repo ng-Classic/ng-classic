@@ -1,5 +1,5 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular-classic/core';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
 
 import { AboutComponent } from './about.component';
 import { HighlightDirective } from '../shared/highlight.directive';

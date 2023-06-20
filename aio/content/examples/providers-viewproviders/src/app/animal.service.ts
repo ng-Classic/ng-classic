@@ -1,5 +1,5 @@
 // #docregion animal-service
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 
 @Injectable({
   providedIn: 'root'

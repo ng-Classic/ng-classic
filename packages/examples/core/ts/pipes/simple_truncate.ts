@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 // #docregion
-import {Pipe, PipeTransform} from '@angular/core';
+import {Pipe, PipeTransform} from '@angular-classic/core';
 
 @Pipe({name: 'truncate'})
 export class TruncatePipe implements PipeTransform {

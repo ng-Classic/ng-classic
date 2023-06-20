@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, SlicePipe} from '@angular/common';
-import {Component} from '@angular/core';
-import {TestBed, waitForAsync} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule, SlicePipe} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
+import {TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 {
   describe('SlicePipe', () => {

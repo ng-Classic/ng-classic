@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, NgSwitch, NgSwitchCase, NgSwitchDefault} from '@angular/common';
-import {Attribute, Component, Directive, TemplateRef, ViewChild,} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule, NgSwitch, NgSwitchCase, NgSwitchDefault} from '@angular-classic/common';
+import {Attribute, Component, Directive, TemplateRef, ViewChild,} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 {
   describe('NgSwitch', () => {

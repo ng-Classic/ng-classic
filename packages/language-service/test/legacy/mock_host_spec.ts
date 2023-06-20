@@ -139,7 +139,7 @@ describe('mock host', () => {
 
     it('will throw if there is more than one component with template', () => {
       service.overwrite(APP_COMPONENT, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: \`<h1></h1>\`,

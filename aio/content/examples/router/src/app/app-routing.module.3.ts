@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion , v3
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular-classic/core';
+import { RouterModule, Routes } from '@angular-classic/router';
 
 // #enddocregion v3
 import { ComposeMessageComponent } from './compose-message/compose-message.component';

@@ -1,6 +1,6 @@
 // Initial empty version
 // #docregion
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'app-crisis-list',

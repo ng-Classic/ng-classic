@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {ɵresetJitOptions as resetJitOptions} from '@angular/core';
+import {ɵresetJitOptions as resetJitOptions} from '@angular-classic/core';
 
 /**
  * Wraps a function in a new function which sets up document and HTML for running a test.

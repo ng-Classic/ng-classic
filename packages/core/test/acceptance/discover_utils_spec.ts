@@ -5,13 +5,13 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {CommonModule} from '@angular/common';
-import {ChangeDetectionStrategy, Component, Directive, HostBinding, InjectionToken, Input, Output, ViewChild, ViewEncapsulation} from '@angular/core';
-import {EventEmitter} from '@angular/core/src/event_emitter';
-import {isLView} from '@angular/core/src/render3/interfaces/type_checks';
-import {CONTEXT} from '@angular/core/src/render3/interfaces/view';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {getElementStyles} from '@angular/core/testing/src/styling';
+import {CommonModule} from '@angular-classic/common';
+import {ChangeDetectionStrategy, Component, Directive, HostBinding, InjectionToken, Input, Output, ViewChild, ViewEncapsulation} from '@angular-classic/core';
+import {EventEmitter} from '@angular-classic/core/src/event_emitter';
+import {isLView} from '@angular-classic/core/src/render3/interfaces/type_checks';
+import {CONTEXT} from '@angular-classic/core/src/render3/interfaces/view';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {getElementStyles} from '@angular-classic/core/testing/src/styling';
 
 import {getLContext} from '../../src/render3/context_discovery';
 import {getHostElement} from '../../src/render3/index';

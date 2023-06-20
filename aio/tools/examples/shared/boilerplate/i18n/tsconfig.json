@@ -24,7 +24,7 @@
       "dom"
     ],
     "types": [
-      "@angular/localize"
+      "@angular-classic/localize"
     ]
   },
   "angularCompilerOptions": {

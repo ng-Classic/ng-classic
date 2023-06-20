@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {assertInInjectionContext, Attribute, ChangeDetectorRef, Component, ComponentRef, createEnvironmentInjector, createNgModule, Directive, ElementRef, ENVIRONMENT_INITIALIZER, EnvironmentInjector, EventEmitter, forwardRef, Host, HostBinding, ImportedNgModuleProviders, importProvidersFrom, ImportProvidersSource, inject, Inject, Injectable, InjectFlags, InjectionToken, InjectOptions, INJECTOR, Injector, Input, LOCALE_ID, makeEnvironmentProviders, ModuleWithProviders, NgModule, NgModuleRef, NgZone, Optional, Output, Pipe, PipeTransform, Provider, runInInjectionContext, Self, SkipSelf, TemplateRef, Type, ViewChild, ViewContainerRef, ViewEncapsulation, ViewRef, ɵcreateInjector as createInjector, ɵDEFAULT_LOCALE_ID as DEFAULT_LOCALE_ID, ɵINJECTOR_SCOPE, ɵInternalEnvironmentProviders as InternalEnvironmentProviders} from '@angular/core';
-import {RuntimeError, RuntimeErrorCode} from '@angular/core/src/errors';
-import {ViewRef as ViewRefInternal} from '@angular/core/src/render3/view_ref';
-import {TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
+import {CommonModule} from '@angular-classic/common';
+import {assertInInjectionContext, Attribute, ChangeDetectorRef, Component, ComponentRef, createEnvironmentInjector, createNgModule, Directive, ElementRef, ENVIRONMENT_INITIALIZER, EnvironmentInjector, EventEmitter, forwardRef, Host, HostBinding, ImportedNgModuleProviders, importProvidersFrom, ImportProvidersSource, inject, Inject, Injectable, InjectFlags, InjectionToken, InjectOptions, INJECTOR, Injector, Input, LOCALE_ID, makeEnvironmentProviders, ModuleWithProviders, NgModule, NgModuleRef, NgZone, Optional, Output, Pipe, PipeTransform, Provider, runInInjectionContext, Self, SkipSelf, TemplateRef, Type, ViewChild, ViewContainerRef, ViewEncapsulation, ViewRef, ɵcreateInjector as createInjector, ɵDEFAULT_LOCALE_ID as DEFAULT_LOCALE_ID, ɵINJECTOR_SCOPE, ɵInternalEnvironmentProviders as InternalEnvironmentProviders} from '@angular-classic/core';
+import {RuntimeError, RuntimeErrorCode} from '@angular-classic/core/src/errors';
+import {ViewRef as ViewRefInternal} from '@angular-classic/core/src/render3/view_ref';
+import {TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
 import {BehaviorSubject} from 'rxjs';
 
 const getProvidersByToken =

@@ -6,15 +6,15 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, PlatformLocation, ɵgetDOM as getDOM} from '@angular/common';
-import {BrowserPlatformLocation} from '@angular/common/src/location/platform_location';
-import {NullViewportScroller, ViewportScroller} from '@angular/common/src/viewport_scroller';
-import {MockPlatformLocation} from '@angular/common/testing';
-import {ApplicationRef, Component, CUSTOM_ELEMENTS_SCHEMA, destroyPlatform, ENVIRONMENT_INITIALIZER, inject, Injectable, NgModule} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {NavigationEnd, provideRouter, Router, RouterModule, RouterOutlet, withEnabledBlockingInitialNavigation} from '@angular/router';
+import {DOCUMENT, PlatformLocation, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {BrowserPlatformLocation} from '@angular-classic/common/src/location/platform_location';
+import {NullViewportScroller, ViewportScroller} from '@angular-classic/common/src/viewport_scroller';
+import {MockPlatformLocation} from '@angular-classic/common/testing';
+import {ApplicationRef, Component, CUSTOM_ELEMENTS_SCHEMA, destroyPlatform, ENVIRONMENT_INITIALIZER, inject, Injectable, NgModule} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {NavigationEnd, provideRouter, Router, RouterModule, RouterOutlet, withEnabledBlockingInitialNavigation} from '@angular-classic/router';
 
 // This is needed, because all files under `packages/` are compiled together as part of the
 // [legacy-unit-tests-saucelabs][1] CI job, including the `lib.webworker.d.ts` typings brought in by

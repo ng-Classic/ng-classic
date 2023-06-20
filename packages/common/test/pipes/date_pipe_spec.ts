@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DATE_PIPE_DEFAULT_OPTIONS, DatePipe} from '@angular/common';
-import localeEn from '@angular/common/locales/en';
-import localeEnExtra from '@angular/common/locales/extra/en';
-import {Component, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {DATE_PIPE_DEFAULT_OPTIONS, DatePipe} from '@angular-classic/common';
+import localeEn from '@angular-classic/common/locales/en';
+import localeEnExtra from '@angular-classic/common/locales/extra/en';
+import {Component, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 {
   describe('DatePipe', () => {

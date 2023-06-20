@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {createTNode} from '@angular/core/src/render3/instructions/shared';
-import {TNode, TNodeType} from '@angular/core/src/render3/interfaces/node';
-import {getTStylingRangeNext, getTStylingRangeNextDuplicate, getTStylingRangePrev, getTStylingRangePrevDuplicate, TStylingKey, TStylingRange} from '@angular/core/src/render3/interfaces/styling';
-import {LView, TData} from '@angular/core/src/render3/interfaces/view';
-import {enterView, leaveView} from '@angular/core/src/render3/state';
-import {insertTStylingBinding} from '@angular/core/src/render3/styling/style_binding_list';
-import {newArray} from '@angular/core/src/util/array_utils';
+import {createTNode} from '@angular-classic/core/src/render3/instructions/shared';
+import {TNode, TNodeType} from '@angular-classic/core/src/render3/interfaces/node';
+import {getTStylingRangeNext, getTStylingRangeNextDuplicate, getTStylingRangePrev, getTStylingRangePrevDuplicate, TStylingKey, TStylingRange} from '@angular-classic/core/src/render3/interfaces/styling';
+import {LView, TData} from '@angular-classic/core/src/render3/interfaces/view';
+import {enterView, leaveView} from '@angular-classic/core/src/render3/state';
+import {insertTStylingBinding} from '@angular-classic/core/src/render3/styling/style_binding_list';
+import {newArray} from '@angular-classic/core/src/util/array_utils';
 
 describe('TNode styling linked list', () => {
   const mockFirstUpdatePassLView: LView = [null, {firstUpdatePass: true}] as any;

@@ -8,7 +8,7 @@
 
 /**
  * @fileoverview
- * This file is used as a private API channel to shared Angular FW APIs with @angular/cli.
+ * This file is used as a private API channel to shared Angular FW APIs with @angular-classic/cli.
  *
  * Any changes to this file should be discussed with the Angular CLI team.
  */
@@ -19,7 +19,7 @@ import {TypeScriptReflectionHost} from '../src/ngtsc/reflection';
 import {getDownlevelDecoratorsTransform} from '../src/transformers/downlevel_decorators_transform/index';
 
 /**
- * Known values for global variables in `@angular/core` that Terser should set using
+ * Known values for global variables in `@angular-classic/core` that Terser should set using
  * https://github.com/terser-js/terser#conditional-compilation
  */
 export const GLOBAL_DEFS_FOR_TERSER = {

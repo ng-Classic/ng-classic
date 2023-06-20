@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { SwUpdate } from '@angular/service-worker';
+import { Injectable } from '@angular-classic/core';
+import { SwUpdate } from '@angular-classic/service-worker';
 
 function notifyUser(message: string): void { }
 

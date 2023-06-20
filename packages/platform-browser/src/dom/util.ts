@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵglobal as global} from '@angular/core';
+import {ɵglobal as global} from '@angular-classic/core';
 
 /**
  * Exports the value under a given `name` in the global property `ng`. For example `ng.probe` if

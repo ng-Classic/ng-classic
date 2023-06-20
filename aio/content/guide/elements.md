@@ -12,7 +12,7 @@ For the sample application that this page describes, see the <live-example></liv
 A custom element extends HTML by allowing you to define a tag whose content is created and controlled by JavaScript code.
 The browser maintains a `CustomElementRegistry` of defined custom elements, which maps an instantiable JavaScript class to an HTML tag.
 
-The `@angular/elements` package exports a `createCustomElement()` API that provides a bridge from Angular's component interface and change detection functionality to the built-in DOM API.
+The `@angular-classic/elements` package exports a `createCustomElement()` API that provides a bridge from Angular's component interface and change detection functionality to the built-in DOM API.
 
 Transforming a component to a custom element makes all of the required Angular infrastructure available to the browser.
 Creating a custom element is simple and straightforward, and automatically connects your component-defined view with change detection and data binding, mapping Angular functionality to the corresponding built-in HTML equivalents.
@@ -111,11 +111,11 @@ The recently-developed [custom elements](https://developer.mozilla.org/docs/Web/
 | Opera                   | Supported natively.    |
 | Safari                  | Supported natively.    |
 
-To add the `@angular/elements` package to your workspace, run the following command:
+To add the `@angular-classic/elements` package to your workspace, run the following command:
 
 <code-example format="shell" language="shell">
 
-npm install @angular/elements --save
+npm install @angular-classic/elements --save
 
 </code-example>
 
@@ -171,7 +171,7 @@ class MyDialog {
 </code-example>
 
 The most straightforward way to get accurate typings is to cast the return value of the relevant DOM methods to the correct type.
-For that, use the `NgElement` and `WithProperties` types \(both exported from `@angular/elements`\):
+For that, use the `NgElement` and `WithProperties` types \(both exported from `@angular-classic/elements`\):
 
 <code-example format="typescript" language="typescript">
 

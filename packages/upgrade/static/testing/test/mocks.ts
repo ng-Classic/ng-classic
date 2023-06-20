@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Inject, Injectable, NgModule} from '@angular/core';
-import {downgradeInjectable} from '@angular/upgrade/static';
+import {Inject, Injectable, NgModule} from '@angular-classic/core';
+import {downgradeInjectable} from '@angular-classic/upgrade/static';
 import * as ng from '../../../src/common/src/angular1';
 /*
  * This mock application code contains the following services and their dependencies:

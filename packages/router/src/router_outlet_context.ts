@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentRef, EnvironmentInjector, Injectable} from '@angular/core';
+import {ComponentRef, EnvironmentInjector, Injectable} from '@angular-classic/core';
 
 import {RouterOutletContract} from './directives/router_outlet';
 import {ActivatedRoute} from './router_state';

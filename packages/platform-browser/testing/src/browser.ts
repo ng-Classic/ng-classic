@@ -5,10 +5,10 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {PlatformLocation} from '@angular/common';
-import {MockPlatformLocation} from '@angular/common/testing';
-import {APP_ID, createPlatformFactory, NgModule, PLATFORM_INITIALIZER, platformCore, provideZoneChangeDetection, StaticProvider} from '@angular/core';
-import {BrowserModule, ɵBrowserDomAdapter as BrowserDomAdapter} from '@angular/platform-browser';
+import {PlatformLocation} from '@angular-classic/common';
+import {MockPlatformLocation} from '@angular-classic/common/testing';
+import {APP_ID, createPlatformFactory, NgModule, PLATFORM_INITIALIZER, platformCore, provideZoneChangeDetection, StaticProvider} from '@angular-classic/core';
+import {BrowserModule, ɵBrowserDomAdapter as BrowserDomAdapter} from '@angular-classic/platform-browser';
 
 function initBrowserTests() {
   BrowserDomAdapter.makeCurrent();

@@ -176,7 +176,7 @@
   The solution is either:
   - add the 'xxx' property to 'MyContext' with the correct type or
   - add '$any(...)' inside the template to make the error disappear. However, adding '$any(...)' does not correct the error but only preserves the previous behavior of the code.
-- Deprecated `XhrFactory` export from `@angular/common/http` has been removed. Use `XhrFactory` from `@angular/common` instead.
+- Deprecated `XhrFactory` export from `@angular-classic/common/http` has been removed. Use `XhrFactory` from `@angular-classic/common` instead.
 ### compiler
 - * TypeScript 4.8 is no longer supported.
 ### core
@@ -207,7 +207,7 @@
 ### platform-browser
 - The deprecated `BrowserTransferStateModule` was removed, since it's no longer needed. The `TransferState` class can be injected without providing the module. The `BrowserTransferStateModule` was empty starting from v14 and you can just remove the reference to that module from your applications.
 ### platform-server
-- Users that are using SSR with JIT mode will now need to add  `import to @angular/compiler` before bootstrapping the application.
+- Users that are using SSR with JIT mode will now need to add  `import to @angular-classic/compiler` before bootstrapping the application.
   
   **NOTE:** this does not effect users using the Angular CLI.
 - `renderApplication` method no longer accepts a root component as first argument. Instead, provide a bootstrapping function that returns a `Promise<ApplicationRef>`.
@@ -250,11 +250,11 @@
   should be removed.
 ## Deprecations
 ### core
--  `makeStateKey`, `StateKey` and  `TransferState` exports have been moved from `@angular/platform-browser` to `@angular/core`. Please update the imports.
+-  `makeStateKey`, `StateKey` and  `TransferState` exports have been moved from `@angular-classic/platform-browser` to `@angular-classic/core`. Please update the imports.
   
   ```diff
-  - import {makeStateKey, StateKey, TransferState} from '@angular/platform-browser';
-  + import {makeStateKey, StateKey, TransferState} from '@angular/core';
+  - import {makeStateKey, StateKey, TransferState} from '@angular-classic/platform-browser';
+  + import {makeStateKey, StateKey, TransferState} from '@angular-classic/core';
   ```
 - `EnvironmentInjector.runInContext` is now deprecated, with
   `runInInjectionContext` functioning as a direct replacement:
@@ -288,7 +288,7 @@
     ...
   ],
   ```
-- `ApplicationConfig` has moved, please import `ApplicationConfig` from `@angular/core` instead.
+- `ApplicationConfig` has moved, please import `ApplicationConfig` from `@angular-classic/core` instead.
 ### platform-server
 - `PlatformConfig.baseUrl` and `PlatformConfig.useAbsoluteUrl` platform-server config options  are deprecated as these were not used.
 ### 
@@ -339,7 +339,7 @@
 | [0814f20594](https://github.com/angular/angular/commit/0814f2059406dff9cefdd8b210756b6fdcba15b1) | feat | introduce `runInInjectionContext` and deprecate prior version ([#49396](https://github.com/angular/angular/pull/49396)) |
 | [0f5c8003cc](https://github.com/angular/angular/commit/0f5c8003ccd1a75516d6a0e31cdb752d031ec430) | feat | introduce concept of DestroyRef ([#49158](https://github.com/angular/angular/pull/49158)) |
 | [9b65b84cb9](https://github.com/angular/angular/commit/9b65b84cb9a0392d8aef5b52b34d35c7c5b9f566) | feat | Mark components for check if they read a signal ([#49153](https://github.com/angular/angular/pull/49153)) |
-| [8997bdc03b](https://github.com/angular/angular/commit/8997bdc03bd3ef0dc1ac68c913bf7d09340cee0d) | feat | prototype implementation of @angular/core/rxjs-interop ([#49154](https://github.com/angular/angular/pull/49154)) |
+| [8997bdc03b](https://github.com/angular/angular/commit/8997bdc03bd3ef0dc1ac68c913bf7d09340cee0d) | feat | prototype implementation of @angular-classic/core/rxjs-interop ([#49154](https://github.com/angular/angular/pull/49154)) |
 | [585e34bf6c](https://github.com/angular/angular/commit/585e34bf6c86f7b056b0aafaaca056baedaedae3) | feat | remove entryComponents ([#49484](https://github.com/angular/angular/pull/49484)) |
 | [aad05ebeb4](https://github.com/angular/angular/commit/aad05ebeb44afad29fd989019638590344ba61eb) | feat | support usage of non-experimental decorators with TypeScript 5.0 ([#49492](https://github.com/angular/angular/pull/49492)) |
 | [6d7be42da7](https://github.com/angular/angular/commit/6d7be42da7b77632290b935e1db7f20983bdd07b) | fix | add newline to hydration mismatch error ([#49965](https://github.com/angular/angular/pull/49965)) |
@@ -402,8 +402,8 @@
 | [b5278cc115](https://github.com/angular/angular/commit/b5278cc115ee6383a20783967b9e7da3f6184dcd) | feat | `renderApplication` now accepts a bootstrapping method ([#49248](https://github.com/angular/angular/pull/49248)) |
 | [056d68002f](https://github.com/angular/angular/commit/056d68002fbe6024b486bb7220bc77f8f9a07707) | feat | add `provideServerSupport` function to provide server capabilities to an application ([#49380](https://github.com/angular/angular/pull/49380)) |
 | [7870fb07fe](https://github.com/angular/angular/commit/7870fb07fe6b25f5ebb22497bff3a03b7b5fc646) | feat | rename `provideServerSupport` to `provideServerRendering` ([#49678](https://github.com/angular/angular/pull/49678)) |
-| [a08a8ff108](https://github.com/angular/angular/commit/a08a8ff108bba88ba4bd7f30a6a8c1bcadb13db7) | fix | bundle @angular/domino in via esbuild ([#49229](https://github.com/angular/angular/pull/49229)) |
-| [5ea624f313](https://github.com/angular/angular/commit/5ea624f3135c71316c36eb94445d818f9157d988) | fix | remove dependency on `@angular/platform-browser-dynamic` ([#50064](https://github.com/angular/angular/pull/50064)) |
+| [a08a8ff108](https://github.com/angular/angular/commit/a08a8ff108bba88ba4bd7f30a6a8c1bcadb13db7) | fix | bundle @angular-classic/domino in via esbuild ([#49229](https://github.com/angular/angular/pull/49229)) |
+| [5ea624f313](https://github.com/angular/angular/commit/5ea624f3135c71316c36eb94445d818f9157d988) | fix | remove dependency on `@angular-classic/platform-browser-dynamic` ([#50064](https://github.com/angular/angular/pull/50064)) |
 | [e99460865e](https://github.com/angular/angular/commit/e99460865e6a038be08a3436422ad129901aec8c) | refactor | deprecate `useAbsoluteUrl` and `baseUrl` ([#49546](https://github.com/angular/angular/pull/49546)) |
 | [41f27ad086](https://github.com/angular/angular/commit/41f27ad08643839d09daf4588069a3f8fe627070) | refactor | remove `renderApplication` overload that accepts a component ([#49463](https://github.com/angular/angular/pull/49463)) |
 | [17abe6dc96](https://github.com/angular/angular/commit/17abe6dc96a443de0c2f9575bb160042a031fed1) | refactor | remove deprecated `renderModuleFactory` ([#49247](https://github.com/angular/angular/pull/49247)) |
@@ -603,7 +603,7 @@ Alan Agius, Andrew Kushnir, Aristeidis Bampakos, Craig Spence, Doug Parker, Ivá
 ### 
 - Class and `InjectionToken` guards and resolvers are
   deprecated. Instead, write guards as plain JavaScript functions and
-  inject dependencies with `inject` from `@angular/core`.
+  inject dependencies with `inject` from `@angular-classic/core`.
 ### 
 | Commit | Type | Description |
 | -- | -- | -- |
@@ -826,7 +826,7 @@ Alan Agius, Alex Rickabaugh, Andrew Scott, Aristeidis Bampakos, Bob Watson, Jens
 ### localize
 | Commit | Type | Description |
 | -- | -- | -- |
-| [a1a8e91eca](https://github.com/angular/angular/commit/a1a8e91ecaded6a2e4d700109a26d3117ad77c9c) | fix | add triple slash type reference on `@angular/localize` on `ng  add ([#48502](https://github.com/angular/angular/pull/48502)) |
+| [a1a8e91eca](https://github.com/angular/angular/commit/a1a8e91ecaded6a2e4d700109a26d3117ad77c9c) | fix | add triple slash type reference on `@angular-classic/localize` on `ng  add ([#48502](https://github.com/angular/angular/pull/48502)) |
 ### migrations
 | Commit | Type | Description |
 | -- | -- | -- |
@@ -1016,7 +1016,7 @@ Andrew Kushnir
 ### forms
 - setDisabledState will always be called when a `ControlValueAccessor` is attached. You can opt-out with `FormsModule.withConfig` or `ReactiveFormsModule.withConfig`.
 ### localize
-- - `canParse` method has been removed from all translation parsers in `@angular/localize/tools`. `analyze` should be used instead.
+- - `canParse` method has been removed from all translation parsers in `@angular-classic/localize/tools`. `analyze` should be used instead.
   -  the `hint` parameter in the`parse` methods is now mandatory.
 ### router
 - Previously, the `RouterOutlet` would immediately
@@ -1758,7 +1758,7 @@ Adrien Crivelli, Alan Agius, Alex Rickabaugh, Andrew Kushnir, Andrew Scott, Dyla
 - The `initialValueIsDefault` option has been deprecated and replaced with the otherwise-identical `nonNullable` option, for the sake of naming consistency.
 - It is now deprecated to provide *both* `AbstractControlOption`s and an async validators argument to a FormControl. Previously, the async validators would just be silently dropped, resulting in a probably buggy forms. Now, the constructor call is deprecated, and Angular will print a warning in devmode.
 ### router
-- The `resolver` argument of the `RouterOutletContract.activateWith` function and the `resolver` field of the `OutletContext` class are deprecated. Passing component factory resolvers are no longer needed. The `ComponentFactoryResolver`-related symbols were deprecated in `@angular/core` package since v13.
+- The `resolver` argument of the `RouterOutletContract.activateWith` function and the `resolver` field of the `OutletContext` class are deprecated. Passing component factory resolvers are no longer needed. The `ComponentFactoryResolver`-related symbols were deprecated in `@angular-classic/core` package since v13.
 ### animations
 | Commit | Type | Description |
 | -- | -- | -- |

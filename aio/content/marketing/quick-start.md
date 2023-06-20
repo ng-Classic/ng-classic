@@ -83,7 +83,7 @@ To create a new Angular app, perform these steps in a command-line tool on your 
 
         <code-example format="shell" language="shell">
 
-        npm init @angular myApp
+        npm init @angular-classic myApp
 
         </code-example>
 

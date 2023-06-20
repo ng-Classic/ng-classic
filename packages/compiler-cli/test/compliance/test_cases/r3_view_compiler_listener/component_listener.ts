@@ -1,4 +1,4 @@
-import {Component, NgModule} from '@angular/core';
+import {Component, NgModule} from '@angular-classic/core';
 
 @Component({selector: 'my-app', template: `<div>My App</div>`})
 export class MyApp {

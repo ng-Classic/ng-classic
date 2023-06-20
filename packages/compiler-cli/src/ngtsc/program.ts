@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HtmlParser, MessageBundle} from '@angular/compiler';
+import {HtmlParser, MessageBundle} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import * as api from '../transformers/api';

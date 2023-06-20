@@ -1,4 +1,4 @@
-import {Component, NgModule, Pipe} from '@angular/core';
+import {Component, NgModule, Pipe} from '@angular-classic/core';
 
 @Component({
   selector: 'host-binding-comp',

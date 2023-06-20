@@ -1,6 +1,6 @@
-/* eslint-disable  @angular-eslint/component-selector */
-import { AfterContentInit, AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { Location } from '@angular/common';
+/* eslint-disable  @angular-classic-eslint/component-selector */
+import { AfterContentInit, AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular-classic/core';
+import { Location } from '@angular-classic/common';
 import { CONTENT_URL_PREFIX } from 'app/documents/document.service';
 import { AttrMap, boolFromValue, getAttrs, getAttrValue } from 'app/shared/attribute-utils';
 

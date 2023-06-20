@@ -36,7 +36,7 @@ import {
   ɵsetUnknownElementStrictMode as setUnknownElementStrictMode,
   ɵsetUnknownPropertyStrictMode as setUnknownPropertyStrictMode,
   ɵstringify as stringify
-} from '@angular/core';
+} from '@angular-classic/core';
 
 /* clang-format on */
 
@@ -71,7 +71,7 @@ export interface TestBed {
    * first use `resetTestEnvironment`.
    *
    * Test modules and platforms for individual platforms are available from
-   * '@angular/<platform_name>/testing'.
+   * '@angular-classic/<platform_name>/testing'.
    */
   initTestEnvironment(
       ngModule: Type<any>|Type<any>[], platform: PlatformRef,
@@ -221,7 +221,7 @@ export class TestBedImpl implements TestBed {
    * first use `resetTestEnvironment`.
    *
    * Test modules and platforms for individual platforms are available from
-   * '@angular/<platform_name>/testing'.
+   * '@angular-classic/<platform_name>/testing'.
    *
    * @publicApi
    */
@@ -387,7 +387,7 @@ export class TestBedImpl implements TestBed {
    * first use `resetTestEnvironment`.
    *
    * Test modules and platforms for individual platforms are available from
-   * '@angular/<platform_name>/testing'.
+   * '@angular-classic/<platform_name>/testing'.
    *
    * @publicApi
    */
@@ -756,9 +756,9 @@ export const TestBed: TestBedStatic = TestBedImpl;
 
 /**
  * Allows injecting dependencies in `beforeEach()` and `it()`. Note: this function
- * (imported from the `@angular/core/testing` package) can **only** be used to inject dependencies
+ * (imported from the `@angular-classic/core/testing` package) can **only** be used to inject dependencies
  * in tests. To inject dependencies in your application code, use the [`inject`](api/core/inject)
- * function from the `@angular/core` package instead.
+ * function from the `@angular-classic/core` package instead.
  *
  * Example:
  *

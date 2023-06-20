@@ -9,7 +9,7 @@ ts_library(
         "ngc-wrapped-main.ts",
         "utils.ts",
     ],
-    module_name = "@angular/bazel",
+    module_name = "@angular-classic/bazel",
     visibility = [
         "//packages/bazel:__pkg__",
         "//packages/bazel/test/ngc-wrapped:__subpackages__",

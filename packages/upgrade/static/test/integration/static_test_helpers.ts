@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgZone, PlatformRef, Type} from '@angular/core';
-import {UpgradeModule} from '@angular/upgrade/static';
+import {NgZone, PlatformRef, Type} from '@angular-classic/core';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
 import * as angular from '../../../src/common/src/angular1';
 import {$EXCEPTION_HANDLER, $ROOT_SCOPE} from '../../../src/common/src/constants';
 

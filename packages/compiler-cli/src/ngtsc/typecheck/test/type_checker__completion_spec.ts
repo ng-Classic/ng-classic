@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TmplAstTemplate} from '@angular/compiler';
+import {TmplAstTemplate} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {absoluteFrom, getSourceFileOrError} from '../../file_system';

@@ -13,10 +13,10 @@ import {Decorator, ReflectionHost} from '../../ngtsc/reflection';
 
 /**
  * Whether a given decorator should be treated as an Angular decorator.
- * Either it's used in @angular/core, or it's imported from there.
+ * Either it's used in @angular-classic/core, or it's imported from there.
  */
 function isAngularDecorator(decorator: Decorator, isCore: boolean): boolean {
-  return isCore || (decorator.import !== null && decorator.import.from === '@angular/core');
+  return isCore || (decorator.import !== null && decorator.import.from === '@angular-classic/core');
 }
 
 /*
@@ -250,7 +250,7 @@ interface ParameterDecorationInfo {
  * @param typeChecker Reference to the program's type checker.
  * @param host Reflection host that is used for determining decorators.
  * @param diagnostics List which will be populated with diagnostics if any.
- * @param isCore Whether the current TypeScript program is for the `@angular/core` package.
+ * @param isCore Whether the current TypeScript program is for the `@angular-classic/core` package.
  * @param isClosureCompilerEnabled Whether closure annotations need to be added where needed.
  */
 export function getDownlevelDecoratorsTransform(

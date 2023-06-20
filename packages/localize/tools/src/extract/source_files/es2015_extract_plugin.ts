@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {PathManipulation} from '@angular/compiler-cli/private/localize';
-import {ɵParsedMessage, ɵparseMessage} from '@angular/localize';
+import {PathManipulation} from '@angular-classic/compiler-cli/private/localize';
+import {ɵParsedMessage, ɵparseMessage} from '@angular-classic/localize';
 import {NodePath, PluginObj, types as t} from '@babel/core';
 
 import {getLocation, isGlobalIdentifier, isNamedIdentifier, unwrapExpressionsFromTemplateLiteral, unwrapMessagePartsFromTemplateLiteral} from '../../source_file_utils';

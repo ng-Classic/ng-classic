@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {LowerCasePipe, TitleCasePipe, UpperCasePipe} from '@angular/common';
-import {Component} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {LowerCasePipe, TitleCasePipe, UpperCasePipe} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 {
   describe('LowerCasePipe', () => {

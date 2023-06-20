@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Directive, DoCheck, ElementRef, EventEmitter, Inject, Injector, OnChanges, OnDestroy, OnInit, SimpleChange, SimpleChanges, Type} from '@angular/core';
+import {Directive, DoCheck, ElementRef, EventEmitter, Inject, Injector, OnChanges, OnDestroy, OnInit, SimpleChange, SimpleChanges, Type} from '@angular-classic/core';
 
 import {IAttributes, IDirective, IInjectorService, ILinkFn, IScope, ITranscludeFunction} from '../../common/src/angular1';
 import {$SCOPE} from '../../common/src/constants';

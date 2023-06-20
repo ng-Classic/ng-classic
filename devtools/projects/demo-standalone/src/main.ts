@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {bootstrapApplication} from '@angular/platform-browser';
-import {provideAnimations} from '@angular/platform-browser/animations';
-import {provideRouter} from '@angular/router';
+import {bootstrapApplication} from '@angular-classic/platform-browser';
+import {provideAnimations} from '@angular-classic/platform-browser/animations';
+import {provideRouter} from '@angular-classic/router';
 import {ApplicationEnvironment, ApplicationOperations} from 'ng-devtools';
 
 import {DemoApplicationEnvironment} from '../../../src/demo-application-environment';

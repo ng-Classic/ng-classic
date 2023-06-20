@@ -91,7 +91,7 @@ rd e2e /s /q
 
 Since the quickstart repository is deprecated, it is no longer updated and you need some additional steps to use the latest Angular.
 
-1.  Remove the obsolete `@angular/http` package \(both from `package.json > dependencies` and `src/systemjs.config.js > SystemJS.config() > map`\).
+1.  Remove the obsolete `@angular-classic/http` package \(both from `package.json > dependencies` and `src/systemjs.config.js > SystemJS.config() > map`\).
 1.  Install the latest versions of the Angular framework packages by running:
 
     <code-example format="shell" language="shell">

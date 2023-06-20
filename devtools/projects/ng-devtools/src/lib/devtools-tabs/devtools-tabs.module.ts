@@ -6,14 +6,14 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular/material/legacy-button';
-import {MatLegacyMenuModule as MatMenuModule} from '@angular/material/legacy-menu';
-import {MatLegacySlideToggleModule as MatSlideToggleModule} from '@angular/material/legacy-slide-toggle';
-import {MatLegacyTabsModule as MatTabsModule} from '@angular/material/legacy-tabs';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular/material/legacy-tooltip';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {MatIconModule} from '@angular-classic/material/icon';
+import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
+import {MatLegacyMenuModule as MatMenuModule} from '@angular-classic/material/legacy-menu';
+import {MatLegacySlideToggleModule as MatSlideToggleModule} from '@angular-classic/material/legacy-slide-toggle';
+import {MatLegacyTabsModule as MatTabsModule} from '@angular-classic/material/legacy-tabs';
+import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
 
 import {DevToolsTabsComponent} from './devtools-tabs.component';
 import {DirectiveExplorerModule} from './directive-explorer/directive-explorer.module';

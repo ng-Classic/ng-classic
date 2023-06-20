@@ -24,7 +24,7 @@ In the image above, there is a series of change detection calls triggered by eve
 In such cases, you can instruct Angular to avoid calling change detection for tasks scheduled by a given piece of code using [NgZone](/guide/zone).
 
 ```ts
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular-classic/core';
 @Component(...)
 class AppComponent implements OnInit {
   constructor(private ngZone: NgZone) {}
@@ -39,7 +39,7 @@ The preceding snippet instructs Angular to call `setInterval` outside the Angula
 Third-party libraries commonly trigger unnecessary change detection cycles because they weren't authored with Zone.js in mind. Avoid these extra cycles by calling library APIs outside the Angular zone:
 
 ```ts
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular-classic/core';
 import * as Plotly from 'plotly.js-dist-min';
 
 @Component(...)

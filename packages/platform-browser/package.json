@@ -1,5 +1,5 @@
 {
-  "name": "@angular/platform-browser",
+  "name": "@angular-classic/platform-browser",
   "version": "0.0.0-PLACEHOLDER",
   "description": "Angular - library for using Angular in a web browser",
   "author": "angular",
@@ -11,12 +11,12 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/animations": "0.0.0-PLACEHOLDER",
-    "@angular/core": "0.0.0-PLACEHOLDER",
-    "@angular/common": "0.0.0-PLACEHOLDER"
+    "@angular-classic/animations": "0.0.0-PLACEHOLDER",
+    "@angular-classic/core": "0.0.0-PLACEHOLDER",
+    "@angular-classic/common": "0.0.0-PLACEHOLDER"
   },
   "peerDependenciesMeta": {
-    "@angular/animations": {
+    "@angular-classic/animations": {
       "optional": true
     }
   },

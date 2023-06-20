@@ -85,7 +85,7 @@ index 3b8ce74..85bc77d 100755
          allow_files = True,
      ),
 +    "_esm_interop_runfiles": attr.label_list(
-+        default = ["@angular//tools/esm-interop:loaders"],
++        default = ["@angular-classic//tools/esm-interop:loaders"],
 +        allow_files = True,
 +    ),
 +    "use_esm": attr.bool(default = False),

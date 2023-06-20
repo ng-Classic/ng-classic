@@ -12,7 +12,7 @@
     "paths": {
       "selenium-webdriver": ["../../node_modules/@types/selenium-webdriver/index.d.ts"],
       "rxjs/*": ["../../node_modules/rxjs/*"],
-      "@angular/*": ["../../packages/*"],
+      "@angular-classic/*": ["../../packages/*"],
       "zone.js/*": ["../../packages/zone.js/*"]
     },
     "rootDir": ".",
@@ -31,5 +31,5 @@
     "no-unused-expression": true,
     "no-unused-variable": true
   },
-  "include": ["../../node_modules/@angular/build-tooling/bazel/benchmark/driver-utilities/"]
+  "include": ["../../node_modules/@angular-classic/build-tooling/bazel/benchmark/driver-utilities/"]
 }

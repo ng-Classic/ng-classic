@@ -15,7 +15,7 @@ describe('ngc_wrapped', () => {
     const {read, write, runOneBuild, writeConfig, shouldExist, basePath, typesRoots} = setup();
 
     write('some_project/index.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {a} from 'ambient_module';
       console.log('works: ', Component);
     `);

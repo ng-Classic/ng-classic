@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Rule, SchematicsException, Tree} from '@angular-devkit/schematics';
-import {createProgram, NgtscProgram} from '@angular/compiler-cli';
+import {Rule, SchematicsException, Tree} from '@angular-classic-devkit/schematics';
+import {createProgram, NgtscProgram} from '@angular-classic/compiler-cli';
 import {existsSync, statSync} from 'fs';
 import {join, relative} from 'path';
 import ts from 'typescript';

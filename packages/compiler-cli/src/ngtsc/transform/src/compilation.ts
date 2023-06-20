@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ConstantPool} from '@angular/compiler';
+import {ConstantPool} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {SourceFileTypeIdentifier} from '../../core/api';

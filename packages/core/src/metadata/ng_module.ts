@@ -197,7 +197,7 @@ export interface NgModule {
    * When present, this module is ignored by the AOT compiler.
    * It remains in distributed code, and the JIT compiler attempts to compile it
    * at run time, in the browser.
-   * To ensure the correct behavior, the app must import `@angular/compiler`.
+   * To ensure the correct behavior, the app must import `@angular-classic/compiler`.
    */
   jit?: true;
 }

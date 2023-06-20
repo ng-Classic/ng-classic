@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, Directive, ElementRef, EventEmitter, forwardRef, inject, Inject, InjectionToken, Input, OnChanges, OnInit, Output, SimpleChanges, Type, ViewChild, ViewContainerRef} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
+import {AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, Directive, ElementRef, EventEmitter, forwardRef, inject, Inject, InjectionToken, Input, OnChanges, OnInit, Output, SimpleChanges, Type, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
 
 import {getComponent, getDirectives} from '../../src/render3/util/discovery_utils';
 

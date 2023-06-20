@@ -1,6 +1,6 @@
 // #docplaster ...
 // #docregion webpack-config
-import linkerPlugin from '@angular/compiler-cli/linker/babel';
+import linkerPlugin from '@angular-classic/compiler-cli/linker/babel';
 
 export default {
   // #enddocregion webpack-config

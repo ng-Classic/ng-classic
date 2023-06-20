@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AnimationMetadataType, ɵStyleDataMap} from '@angular/animations';
+import {AnimationMetadataType, ɵStyleDataMap} from '@angular-classic/animations';
 
 import {SequenceAst, TransitionAst, TriggerAst} from './animation_ast';
 import {AnimationStateStyles, AnimationTransitionFactory} from './animation_transition_factory';

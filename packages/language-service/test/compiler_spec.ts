@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 
 import {isNgSpecificDiagnostic, LanguageServiceTestEnv} from '../testing';
 
@@ -19,7 +19,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'test.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -41,7 +41,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'cmp.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'app-cmp',
@@ -50,7 +50,7 @@ describe('language-service/compiler integration', () => {
         export class AppCmp {}
       `,
       'mod.ts': `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {AppCmp} from './cmp';
 
         @NgModule({
@@ -59,7 +59,7 @@ describe('language-service/compiler integration', () => {
         export class AppModule {}
       `,
       'test_spec.ts': `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {AppCmp} from './cmp';
 
         export function test(): void {
@@ -90,7 +90,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'test.ts': `
-        import {Component, Directive, Input, NgModule} from '@angular/core';
+        import {Component, Directive, Input, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -137,7 +137,7 @@ describe('language-service/compiler integration', () => {
     // is stale, even though it was not able to fully understand the import during the first pass.
 
     const componentSource = (isExported: boolean): string => `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         selector: 'some-cmp',
@@ -149,7 +149,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'mod.ts': `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
 
         import {Cmp} from './cmp';
 
@@ -178,7 +178,7 @@ describe('language-service/compiler integration', () => {
     const env = LanguageServiceTestEnv.setup();
     const project = env.addProject('test', {
       'module.ts': `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {BarCmp} from './bar';
 
         @NgModule({
@@ -187,7 +187,7 @@ describe('language-service/compiler integration', () => {
         export class AppModule {}
       `,
       'bar.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           template: '{{ bar }}',

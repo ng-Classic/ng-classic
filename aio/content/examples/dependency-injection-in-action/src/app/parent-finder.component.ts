@@ -1,7 +1,7 @@
 /* eslint-disable space-before-function-paren */
 // #docplaster
 // #docregion
-import { Component, forwardRef, Optional, SkipSelf } from '@angular/core';
+import { Component, forwardRef, Optional, SkipSelf } from '@angular-classic/core';
 
 // A component base class (see AlexComponent)
 export abstract class Base { name = 'Count Basie'; }

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {IMAGE_LOADER, ImageLoaderConfig, NgOptimizedImage} from '@angular/common';
-import {Component} from '@angular/core';
+import {IMAGE_LOADER, ImageLoaderConfig, NgOptimizedImage} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
 
 const imageLoader = {
   provide: IMAGE_LOADER,

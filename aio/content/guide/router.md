@@ -236,7 +236,7 @@ In addition to `../`, use `./` or no leading slash to specify the current level.
 ### Specifying a relative route
 
 To specify a relative route, use the `NavigationExtras` `relativeTo` property.
-In the component class, import `NavigationExtras` from the `@angular/router`.
+In the component class, import `NavigationExtras` from the `@angular-classic/router`.
 
 Then use `relativeTo` in your navigation method.
 After the link parameters array, which here contains `items`, add an object with the `relativeTo` property set to the `ActivatedRoute`, which is `this.route`.

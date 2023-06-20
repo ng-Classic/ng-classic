@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, destroyPlatform, Directive, ElementRef, Injector, Input, NgModule} from '@angular/core';
-import {waitForAsync} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {downgradeComponent, UpgradeComponent, UpgradeModule} from '@angular/upgrade/static';
+import {Component, destroyPlatform, Directive, ElementRef, Injector, Input, NgModule} from '@angular-classic/core';
+import {waitForAsync} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {downgradeComponent, UpgradeComponent, UpgradeModule} from '@angular-classic/upgrade/static';
 
 import * as angular from '../../../src/common/src/angular1';
 import {html, multiTrim, withEachNg1Version} from '../../../src/common/test/helpers/common_test_helpers';

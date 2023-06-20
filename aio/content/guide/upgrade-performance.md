@@ -179,7 +179,7 @@ Unlike `UpgradeModule`&mdash;which requires some extra steps&mdash; `downgradeMo
 In order to start using any `upgrade/static` APIs, you still need to load the Angular framework as you would in a normal Angular application.
 You can see how this can be done with SystemJS by following the instructions in the [Upgrade Setup](guide/upgrade-setup "Setup for Upgrading from AngularJS") guide, selectively copying code from the [QuickStart GitHub repository](https://github.com/angular/quickstart).
 
-You also need to install the `@angular/upgrade` package using `npm install @angular/upgrade --save` and add a mapping for the `@angular/upgrade/static` package:
+You also need to install the `@angular-classic/upgrade` package using `npm install @angular-classic/upgrade --save` and add a mapping for the `@angular-classic/upgrade/static` package:
 
 <code-example header="systemjs.config.js (map)" path="upgrade-module/src/systemjs.config.1.js" region="upgrade-static-package"></code-example>
 

@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Sanitizer, Type} from '@angular/core';
-import {EffectManager} from '@angular/core/src/render3/reactivity/effect';
-import {stringifyElement} from '@angular/platform-browser/testing/src/browser_util';
+import {Sanitizer, Type} from '@angular-classic/core';
+import {EffectManager} from '@angular-classic/core/src/render3/reactivity/effect';
+import {stringifyElement} from '@angular-classic/platform-browser/testing/src/browser_util';
 
 import {extractDirectiveDef} from '../../src/render3/definition';
 import {refreshView} from '../../src/render3/instructions/change_detection';

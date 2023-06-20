@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EventEmitter} from '@angular/core';
-import {Injectable} from '@angular/core/src/di';
-import {GetTestability, PendingMacrotask, Testability, TestabilityRegistry} from '@angular/core/src/testability/testability';
-import {NgZone} from '@angular/core/src/zone/ng_zone';
-import {fakeAsync, tick, waitForAsync} from '@angular/core/testing';
+import {EventEmitter} from '@angular-classic/core';
+import {Injectable} from '@angular-classic/core/src/di';
+import {GetTestability, PendingMacrotask, Testability, TestabilityRegistry} from '@angular-classic/core/src/testability/testability';
+import {NgZone} from '@angular-classic/core/src/zone/ng_zone';
+import {fakeAsync, tick, waitForAsync} from '@angular-classic/core/testing';
 
 import {setTestabilityGetter} from '../../src/testability/testability';
 

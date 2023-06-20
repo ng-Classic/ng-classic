@@ -4,7 +4,7 @@ As of version 15.2.0, Angular offers a [schematic](guide/schematics) to help pro
 
 <code-example format="shell" language="shell">
 
-ng generate @angular/core:standalone
+ng generate @angular-classic/core:standalone
 
 </code-example>
 
@@ -36,9 +36,9 @@ You should plan to apply manual fixes after each step of the migration. Addition
 </div>
 
 Run the migration in the order listed below, verifying that your code builds and runs between each step:
-1. Run `ng g @angular/core:standalone` and select "Convert all components, directives and pipes to standalone"
-2. Run `ng g @angular/core:standalone` and select "Remove unnecessary NgModule classes"
-3. Run `ng g @angular/core:standalone` and select "Bootstrap the project using standalone APIs"
+1. Run `ng g @angular-classic/core:standalone` and select "Convert all components, directives and pipes to standalone"
+2. Run `ng g @angular-classic/core:standalone` and select "Remove unnecessary NgModule classes"
+3. Run `ng g @angular-classic/core:standalone` and select "Bootstrap the project using standalone APIs"
 4. Run any linting and formatting checks, fix any failures, and commit the result
 
 ## After the migration
@@ -146,7 +146,7 @@ This step converts any usages of  `bootstrapModule` to the new, standalone-based
 **Before:**
 ```typescript
 // ./app/app.module.ts
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular-classic/core';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -164,7 +164,7 @@ export class AppComponent {}
 
 ```typescript
 // ./main.ts
-import { platformBrowser } from '@angular/platform-browser';
+import { platformBrowser } from '@angular-classic/platform-browser';
 import { AppModule } from './app/app.module';
 
 platformBrowser().bootstrapModule(AppModule).catch(e => console.error(e));
@@ -184,7 +184,7 @@ export class AppComponent {}
 
 ```typescript
 // ./main.ts
-import { bootstrapApplication } from '@angular/platform-browser';
+import { bootstrapApplication } from '@angular-classic/platform-browser';
 import { AppComponent } from './app/app.component';
 
 bootstrapApplication(AppComponent).catch(e => console.error(e));

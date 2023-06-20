@@ -111,7 +111,7 @@ When making changes to Angular packages and testing in a local library/project y
 The Angular CLI needs to be invoked using Node.js [`--preserve-symlinks`](https://nodejs.org/api/cli.html#--preserve-symlinks) flag. Otherwise the symbolic links will be resolved using their real path which causes node module resolution to fail.
 
 ```sh
-node --preserve-symlinks --preserve-symlinks-main node_modules/@angular/cli/lib/init.js serve
+node --preserve-symlinks --preserve-symlinks-main node_modules/@angular-classic/cli/lib/init.js serve
 ```
 
 ## Formatting your source code
@@ -161,7 +161,7 @@ $ yarn lint
 
 When a build of any branch on the upstream fork angular/angular is green on CircleCI, it
 automatically publishes build artifacts to repositories in the Angular org. For example,
-the `@angular/core` package is published to https://github.com/angular/core-builds.
+the `@angular-classic/core` package is published to https://github.com/angular/core-builds.
 
 You may find that your un-merged change needs some validation from external participants.
 Rather than requiring them to pull your Pull Request and build Angular locally, they can depend on
@@ -189,8 +189,8 @@ in `package.json` to point to the artifact URLs and then running `npm/yarn insta
 
 ```json
 "dependencies": {
-  "@angular/common": "https://<...>.circle-artifacts.com/0/angular/common-pr12345-a1b2c3d.tgz",
-  "@angular/core": "https://<...>.circle-artifacts.com/0/angular/core-pr12345-a1b2c3d.tgz",
+  "@angular-classic/common": "https://<...>.circle-artifacts.com/0/angular/common-pr12345-a1b2c3d.tgz",
+  "@angular-classic/core": "https://<...>.circle-artifacts.com/0/angular/core-pr12345-a1b2c3d.tgz",
   "...": "..."
 }
 ```

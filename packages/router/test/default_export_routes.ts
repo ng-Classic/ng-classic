@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component} from '@angular/core';
-import {Routes} from '@angular/router';
+import {Component} from '@angular-classic/core';
+import {Routes} from '@angular-classic/router';
 
 @Component({
   standalone: true,

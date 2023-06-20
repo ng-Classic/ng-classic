@@ -1,6 +1,6 @@
-/* eslint-disable @angular-eslint/directive-selector */
+/* eslint-disable @angular-classic-eslint/directive-selector */
 // Exact copy of contact/highlight.directive except for color and message
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef } from '@angular-classic/core';
 
 @Directive({ selector: '[highlight], input' })
 /** Highlight the attached element or an InputElement in gray */

@@ -1,12 +1,12 @@
 // For more examples:
 //   https://github.com/angular/angular/blob/main/packages/router/test/integration.spec.ts
 
-import {Location} from '@angular/common';
-import {provideLocationMocks, SpyLocation} from '@angular/common/testing';
-import {DebugElement, Type} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {provideRouter, Router, RouterLink, RouterModule} from '@angular/router';
+import {Location} from '@angular-classic/common';
+import {provideLocationMocks, SpyLocation} from '@angular-classic/common/testing';
+import {DebugElement, Type} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {provideRouter, Router, RouterLink, RouterModule} from '@angular-classic/router';
 
 import {asyncData, click} from '../testing';
 

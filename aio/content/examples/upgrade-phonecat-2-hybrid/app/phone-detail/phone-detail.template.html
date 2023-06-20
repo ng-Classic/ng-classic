@@ -12,7 +12,7 @@
 
   <ul class="phone-thumbs">
     <li *ngFor="let img of phone.images; let index = index">
-      <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
+      <!-- eslint-disable-next-line @angular-classic-eslint/template/click-events-have-key-events -->
       <img [src]="img" (click)="setImage(img)" alt="Phone {{ phone.name }} - thumbnail {{ index }}"/>
     </li>
   </ul>

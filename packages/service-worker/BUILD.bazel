@@ -35,7 +35,7 @@ genrule(
 
 ng_package(
     name = "npm_package",
-    package_name = "@angular/service-worker",
+    package_name = "@angular-classic/service-worker",
     srcs = [
         "package.json",
         "safety-worker.js",

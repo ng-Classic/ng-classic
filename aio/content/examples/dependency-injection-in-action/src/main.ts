@@ -1,5 +1,5 @@
 // #docregion
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 

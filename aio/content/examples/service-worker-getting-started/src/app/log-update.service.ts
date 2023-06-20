@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
+import { Injectable } from '@angular-classic/core';
+import { SwUpdate, VersionReadyEvent } from '@angular-classic/service-worker';
 
 // #docregion sw-update
 @Injectable()

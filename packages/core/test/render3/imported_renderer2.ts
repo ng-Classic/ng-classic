@@ -6,15 +6,15 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵAnimationEngine, ɵNoopAnimationStyleNormalizer} from '@angular/animations/browser';
-import {MockAnimationDriver} from '@angular/animations/browser/testing';
-import {PLATFORM_BROWSER_ID, PLATFORM_SERVER_ID} from '@angular/common/src/platform_id';
-import {NgZone, RendererFactory2, RendererType2} from '@angular/core';
-import {NoopNgZone} from '@angular/core/src/zone/ng_zone';
-import {EventManager, ɵDomRendererFactory2, ɵSharedStylesHost} from '@angular/platform-browser';
-import {ɵAnimationRendererFactory} from '@angular/platform-browser/animations';
-import {EventManagerPlugin} from '@angular/platform-browser/src/dom/events/event_manager';
-import {isTextNode} from '@angular/platform-browser/testing/src/browser_util';
+import {ɵAnimationEngine, ɵNoopAnimationStyleNormalizer} from '@angular-classic/animations/browser';
+import {MockAnimationDriver} from '@angular-classic/animations/browser/testing';
+import {PLATFORM_BROWSER_ID, PLATFORM_SERVER_ID} from '@angular-classic/common/src/platform_id';
+import {NgZone, RendererFactory2, RendererType2} from '@angular-classic/core';
+import {NoopNgZone} from '@angular-classic/core/src/zone/ng_zone';
+import {EventManager, ɵDomRendererFactory2, ɵSharedStylesHost} from '@angular-classic/platform-browser';
+import {ɵAnimationRendererFactory} from '@angular-classic/platform-browser/animations';
+import {EventManagerPlugin} from '@angular-classic/platform-browser/src/dom/events/event_manager';
+import {isTextNode} from '@angular-classic/platform-browser/testing/src/browser_util';
 
 export class SimpleDomEventsPlugin extends EventManagerPlugin {
   constructor(doc: any) {

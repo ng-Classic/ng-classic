@@ -1,7 +1,7 @@
 import {
   animation, trigger, animateChild, group,
   transition, animate, style, query
-} from '@angular/animations';
+} from '@angular-classic/animations';
 
 export const transitionAnimation = animation([
   style({

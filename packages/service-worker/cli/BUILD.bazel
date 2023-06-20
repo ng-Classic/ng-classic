@@ -25,7 +25,7 @@ esbuild(
     config = ":esbuild_config",
     entry_point = ":main.ts",
     external = [
-        "@angular/service-worker",
+        "@angular-classic/service-worker",
     ],
     format = "esm",
     platform = "node",

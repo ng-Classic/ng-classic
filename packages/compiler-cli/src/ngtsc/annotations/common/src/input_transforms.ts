@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {outputAst} from '@angular/compiler';
+import {outputAst} from '@angular-classic/compiler';
 
 import {ClassPropertyMapping, InputMapping} from '../../../metadata';
 import {CompileResult} from '../../../transform';

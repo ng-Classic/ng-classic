@@ -1,5 +1,5 @@
 // #docregion
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 import { Car, Engine, Tires } from './car';
 import { Car as CarNoDi } from './car-no-di';

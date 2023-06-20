@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {Directive, ElementRef, forwardRef, Inject, InjectionToken, Optional, Renderer2} from '@angular/core';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Directive, ElementRef, forwardRef, Inject, InjectionToken, Optional, Renderer2} from '@angular-classic/core';
 
 import {BaseControlValueAccessor, ControlValueAccessor, NG_VALUE_ACCESSOR} from './control_value_accessor';
 

@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Element, LexerRange, Node, ParseError, ParseErrorLevel, ParseSourceSpan, ParseTreeResult, XmlParser} from '@angular/compiler';
+import {Element, LexerRange, Node, ParseError, ParseErrorLevel, ParseSourceSpan, ParseTreeResult, XmlParser} from '@angular-classic/compiler';
 
 import {Diagnostics} from '../../../diagnostics';
 

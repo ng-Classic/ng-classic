@@ -16,8 +16,8 @@
 #  - We enforce that only approved PRs are merged ensuring that unreviewed code isn't accidentally merged
 #  - We distribute approval rights as much as possible to help us scale better
 #  - Groups have one or two global approvers groups as fallbacks:
-#    - @angular/fw-global-approvers: for approving minor changes, large-scale refactorings, and emergency situations.
-#    - @angular/fw-global-approvers-for-docs-only-changes: for approving minor documentation-only changes that don't require engineering review
+#    - @angular-classic/fw-global-approvers: for approving minor changes, large-scale refactorings, and emergency situations.
+#    - @angular-classic/fw-global-approvers-for-docs-only-changes: for approving minor documentation-only changes that don't require engineering review
 #  - A small number of file groups have very limited number of reviewers because incorrect changes to the files they guard would have serious consequences (e.g. security, public api)
 #
 #  Configuration nuances:
@@ -41,7 +41,7 @@
 #  Approval Groups
 ####################################################################################
 # =========================================================
-# @angular/framework-global-approvers
+# @angular-classic/framework-global-approvers
 # =========================================================
 #  Used for approving minor changes, large-scale refactorings, and in emergency situations.
 #
@@ -50,7 +50,7 @@
 # josephperrott
 #
 # =========================================================
-# @angular/framework-global-approvers-for-docs-only-changes
+# @angular-classic/framework-global-approvers-for-docs-only-changes
 # =========================================================
 #  Used for approving minor documentation-only changes that don't require engineering review.
 

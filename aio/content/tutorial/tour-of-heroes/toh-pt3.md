@@ -68,7 +68,7 @@ because the *external* `HeroesComponent` [binds to it](#heroes-component-templat
 
 <code-example path="toh-pt3/src/app/heroes/heroes.component.html" region="hero-detail-binding"></code-example>
 
-Amend the `@angular/core` import statement to include the `Input` symbol.
+Amend the `@angular-classic/core` import statement to include the `Input` symbol.
 
 <code-example header="src/app/hero-detail/hero-detail.component.ts (import Input)" path="toh-pt3/src/app/hero-detail/hero-detail.component.ts" region="import-input"></code-example>
 

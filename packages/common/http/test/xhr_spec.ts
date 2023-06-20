@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpRequest} from '@angular/common/http/src/request';
-import {HttpDownloadProgressEvent, HttpErrorResponse, HttpEvent, HttpEventType, HttpHeaderResponse, HttpResponse, HttpResponseBase, HttpStatusCode, HttpUploadProgressEvent} from '@angular/common/http/src/response';
-import {HttpXhrBackend} from '@angular/common/http/src/xhr';
+import {HttpRequest} from '@angular-classic/common/http/src/request';
+import {HttpDownloadProgressEvent, HttpErrorResponse, HttpEvent, HttpEventType, HttpHeaderResponse, HttpResponse, HttpResponseBase, HttpStatusCode, HttpUploadProgressEvent} from '@angular-classic/common/http/src/response';
+import {HttpXhrBackend} from '@angular-classic/common/http/src/xhr';
 import {Observable} from 'rxjs';
 import {toArray} from 'rxjs/operators';
 

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {compileClassMetadata, CompileClassMetadataFn, compileDeclareClassMetadata, compileDeclareInjectableFromMetadata, compileInjectable, createMayBeForwardRefExpression, FactoryTarget, ForwardRefHandling, LiteralExpr, MaybeForwardRefExpression, R3ClassMetadata, R3CompiledExpression, R3DependencyMetadata, R3InjectableMetadata, WrappedNodeExpr,} from '@angular/compiler';
+import {compileClassMetadata, CompileClassMetadataFn, compileDeclareClassMetadata, compileDeclareInjectableFromMetadata, compileInjectable, createMayBeForwardRefExpression, FactoryTarget, ForwardRefHandling, LiteralExpr, MaybeForwardRefExpression, R3ClassMetadata, R3CompiledExpression, R3DependencyMetadata, R3InjectableMetadata, WrappedNodeExpr,} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {InjectableClassRegistry, isAbstractClassDeclaration} from '../../annotations/common';
@@ -301,7 +301,7 @@ function getDep(dep: ts.Expression, reflector: ReflectionHost): R3DependencyMeta
   function maybeUpdateDecorator(
       dec: ts.Identifier, reflector: ReflectionHost, token?: ts.Expression): boolean {
     const source = reflector.getImportOfIdentifier(dec);
-    if (source === null || source.from !== '@angular/core') {
+    if (source === null || source.from !== '@angular-classic/core') {
       return false;
     }
     switch (source.name) {

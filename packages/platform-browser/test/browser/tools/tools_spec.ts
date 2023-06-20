@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ApplicationRef, Injector, ɵglobal as global} from '@angular/core';
-import {ComponentRef} from '@angular/core/src/render3';
-import {disableDebugTools, enableDebugTools} from '@angular/platform-browser';
+import {ApplicationRef, Injector, ɵglobal as global} from '@angular-classic/core';
+import {ComponentRef} from '@angular-classic/core/src/render3';
+import {disableDebugTools, enableDebugTools} from '@angular-classic/platform-browser';
 
 {
   describe('profiler', () => {

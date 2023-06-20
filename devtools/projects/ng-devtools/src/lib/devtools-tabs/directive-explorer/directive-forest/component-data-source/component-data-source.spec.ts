@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {FlatTreeControl} from '@angular/cdk/tree';
+import {FlatTreeControl} from '@angular-classic/cdk/tree';
 import {DevToolsNode} from 'protocol';
 
 import {ComponentDataSource, FlatNode} from '.';

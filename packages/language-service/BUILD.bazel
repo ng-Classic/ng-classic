@@ -47,7 +47,7 @@ extract_types(
 
 pkg_npm(
     name = "npm_package",
-    package_name = "@angular/language-service",
+    package_name = "@angular-classic/language-service",
     srcs = [
         "index.d.ts",
         "index.js",

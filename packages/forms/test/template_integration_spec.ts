@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, ɵgetDOM as getDOM} from '@angular/common';
-import {Component, Directive, ElementRef, forwardRef, Input, Type, ViewChild} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular/core/testing';
-import {AbstractControl, AsyncValidator, COMPOSITION_BUFFER_MODE, ControlValueAccessor, FormControl, FormsModule, MaxLengthValidator, MaxValidator, MinLengthValidator, MinValidator, NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgForm, NgModel, Validator} from '@angular/forms';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {dispatchEvent, sortedClassList} from '@angular/platform-browser/testing/src/browser_util';
+import {CommonModule, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Component, Directive, ElementRef, forwardRef, Input, Type, ViewChild} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick, waitForAsync} from '@angular-classic/core/testing';
+import {AbstractControl, AsyncValidator, COMPOSITION_BUFFER_MODE, ControlValueAccessor, FormControl, FormsModule, MaxLengthValidator, MaxValidator, MinLengthValidator, MinValidator, NG_ASYNC_VALIDATORS, NG_VALIDATORS, NG_VALUE_ACCESSOR, NgForm, NgModel, Validator} from '@angular-classic/forms';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {dispatchEvent, sortedClassList} from '@angular-classic/platform-browser/testing/src/browser_util';
 import {merge} from 'rxjs';
 
 import {NgModelCustomComp, NgModelCustomWrapper} from './value_accessor_integration_spec';

@@ -1,5 +1,5 @@
-import { Location } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Location } from '@angular-classic/common';
+import { Component, Input } from '@angular-classic/core';
 import { VersionInfo } from 'app/navigation/navigation.service';
 
 @Component({

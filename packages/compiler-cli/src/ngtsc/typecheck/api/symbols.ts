@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TmplAstElement, TmplAstReference, TmplAstTemplate, TmplAstVariable} from '@angular/compiler';
+import {TmplAstElement, TmplAstReference, TmplAstTemplate, TmplAstVariable} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {AbsoluteFsPath} from '../../file_system';

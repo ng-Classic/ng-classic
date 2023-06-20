@@ -14,9 +14,9 @@ Ctrl + Shift + j.
 By default the debug tools are disabled. You can enable debug tools as follows:
 
 ```typescript
-import {ApplicationRef} from '@angular/core';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {enableDebugTools} from '@angular/platform-browser';
+import {ApplicationRef} from '@angular-classic/core';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {enableDebugTools} from '@angular-classic/platform-browser';
 
 
 platformBrowserDynamic().bootstrapModule(AppModule)

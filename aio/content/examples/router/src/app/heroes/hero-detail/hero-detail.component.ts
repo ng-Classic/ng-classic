@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
+import {Component, OnInit} from '@angular-classic/core';
+import {ActivatedRoute, ParamMap, Router} from '@angular-classic/router';
 import {Observable} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
 

@@ -4,12 +4,12 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['mocha', '@angular-devkit/build-angular'],
+    frameworks: ['mocha', '@angular-classic-devkit/build-angular'],
     plugins: [
       require('karma-mocha'),
       require('karma-chrome-launcher'),
       require('karma-mocha-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma'),
+      require('@angular-classic-devkit/build-angular/plugins/karma'),
     ],
     client: {
       clearContext: false, // leave Jasmine Spec Runner output visible in browser

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, NgModule, ɵɵCopyDefinitionFeature as CopyDefinitionFeature, ɵɵdefineComponent as defineComponent, ɵɵInheritDefinitionFeature as InheritDefinitionFeature} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Component, NgModule, ɵɵCopyDefinitionFeature as CopyDefinitionFeature, ɵɵdefineComponent as defineComponent, ɵɵInheritDefinitionFeature as InheritDefinitionFeature} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 describe('CopyDefinitionFeature', () => {
   it('should copy the template function of a component definition from parent to child', () => {

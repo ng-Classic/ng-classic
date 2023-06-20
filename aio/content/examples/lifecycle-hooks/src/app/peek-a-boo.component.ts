@@ -1,4 +1,4 @@
-/* eslint-disable @angular-eslint/no-conflicting-lifecycle */
+/* eslint-disable @angular-classic-eslint/no-conflicting-lifecycle */
 // #docregion
 import {
   AfterContentChecked,
@@ -12,7 +12,7 @@ import {
   OnDestroy,
   OnInit,
   SimpleChanges
-} from '@angular/core';
+} from '@angular-classic/core';
 
 import { LoggerService } from './logger.service';
 import { PeekABooDirective } from './peek-a-boo.directive';

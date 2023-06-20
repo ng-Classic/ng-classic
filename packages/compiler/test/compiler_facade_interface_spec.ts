@@ -11,8 +11,8 @@ import {FactoryTarget} from '../public_api';
 import * as compiler from '../src/compiler_facade_interface';
 
 /**
- * This file is compiler level file which asserts that the set of interfaces in `@angular/core` and
- * `@angular/compiler` match. (Build time failure.)
+ * This file is compiler level file which asserts that the set of interfaces in `@angular-classic/core` and
+ * `@angular-classic/compiler` match. (Build time failure.)
  *
  * If this file fails to compile it means these two files when out of sync:
  *  - packages/compiler/src/compiler_facade_interface.ts             (master)

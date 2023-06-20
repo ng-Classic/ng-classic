@@ -1,4 +1,4 @@
-import { Component, Host, Optional } from '@angular/core';
+import { Component, Host, Optional } from '@angular-classic/core';
 import { FlowerService } from '../flower.service';
 
 // #docregion host-component

@@ -19,7 +19,7 @@ ng_module(
 
 ng_package(
     name = "npm_package",
-    package_name = "@angular/forms",
+    package_name = "@angular-classic/forms",
     srcs = ["package.json"],
     tags = [
         "release-with-framework",

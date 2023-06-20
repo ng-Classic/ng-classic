@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {FileSystem, getFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {ɵcomputeMsgId, ɵparseTranslation} from '@angular/localize';
-import {ɵParsedTranslation} from '@angular/localize/private';
+import {FileSystem, getFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {ɵcomputeMsgId, ɵparseTranslation} from '@angular-classic/localize';
+import {ɵParsedTranslation} from '@angular-classic/localize/private';
 import {transformSync} from '@babel/core';
 
 import {Diagnostics} from '../../../src/diagnostics';

@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {WrappedNodeExpr} from '@angular/compiler';
-import {TypeScriptAstFactory} from '@angular/compiler-cli/src/ngtsc/translator';
+import {WrappedNodeExpr} from '@angular-classic/compiler';
+import {TypeScriptAstFactory} from '@angular-classic/compiler-cli/src/ngtsc/translator';
 import ts from 'typescript';
 
 import {AstHost} from '../../src/ast/ast_host';

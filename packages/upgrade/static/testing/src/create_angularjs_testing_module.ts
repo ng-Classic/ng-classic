@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Injector} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 import * as ng from '../../../src/common/src/angular1';
 import {$INJECTOR, INJECTOR_KEY, UPGRADE_APP_TYPE_KEY} from '../../../src/common/src/constants';

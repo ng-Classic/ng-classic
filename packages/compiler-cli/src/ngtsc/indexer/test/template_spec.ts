@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {BoundTarget} from '@angular/compiler';
+import {BoundTarget} from '@angular-classic/compiler';
 
 import {AbsoluteSourceSpan, AttributeIdentifier, ElementIdentifier, IdentifierKind, ReferenceIdentifier, TemplateNodeIdentifier, TopLevelIdentifier, VariableIdentifier} from '..';
 import {runInEachFileSystem} from '../../file_system/testing';

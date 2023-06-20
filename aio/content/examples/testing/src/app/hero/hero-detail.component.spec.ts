@@ -1,9 +1,9 @@
 // #docplaster
-import {provideHttpClient} from '@angular/common/http';
-import {HttpTestingController, provideHttpClientTesting} from '@angular/common/http/testing';
-import {fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {provideRouter, Router} from '@angular/router';
-import {RouterTestingHarness} from '@angular/router/testing';
+import {provideHttpClient} from '@angular-classic/common/http';
+import {HttpTestingController, provideHttpClientTesting} from '@angular-classic/common/http/testing';
+import {fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {provideRouter, Router} from '@angular-classic/router';
+import {RouterTestingHarness} from '@angular-classic/router/testing';
 
 import {asyncData, click} from '../../testing';
 import {Hero} from '../model/hero';
@@ -206,7 +206,7 @@ function heroModuleSetup() {
 }
 
 /////////////////////
-import {FormsModule} from '@angular/forms';
+import {FormsModule} from '@angular-classic/forms';
 import {TitleCasePipe} from '../shared/title-case.pipe';
 
 function formsModuleSetup() {

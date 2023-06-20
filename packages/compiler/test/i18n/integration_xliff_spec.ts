@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Xliff} from '@angular/compiler/src/i18n/serializers/xliff';
-import {waitForAsync} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {Xliff} from '@angular-classic/compiler/src/i18n/serializers/xliff';
+import {waitForAsync} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 import {configureCompiler, createComponent, HTML, serializeTranslations, validateHtml} from './integration_common';
 

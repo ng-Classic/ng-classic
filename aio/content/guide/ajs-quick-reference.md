@@ -226,8 +226,8 @@ Now you can also encapsulate a style sheet within a specific component.
 
 <!-- links -->
 
-[AioApiCommonDecimalpipe]: api/common/DecimalPipe "DecimalPipe | @angular/common - API | Angular"
-[AioApiCommonJsonpipe]: api/common/JsonPipe "JsonPipe | @angular/common - API | Angular"
+[AioApiCommonDecimalpipe]: api/common/DecimalPipe "DecimalPipe | @angular-classic/common - API | Angular"
+[AioApiCommonJsonpipe]: api/common/JsonPipe "JsonPipe | @angular-classic/common - API | Angular"
 
 [AioGuideAjsQuickReferenceFiltersPipes]: guide/ajs-quick-reference#filters--pipes "Filters/pipes - AngularJS to Angular concepts: Quick reference | Angular"
 [AioGuideAjsQuickReferenceTemplateDirectives]: guide/ajs-quick-reference#template-directives "Template directives - AngularJS to Angular concepts: Quick reference | Angular"

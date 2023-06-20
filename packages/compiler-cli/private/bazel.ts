@@ -7,7 +7,7 @@
  */
 
 /**
- * @fileoverview The API from compiler-cli that the `@angular/bazel`
+ * @fileoverview The API from compiler-cli that the `@angular-classic/bazel`
  * package requires for ngc-wrapped.
  */
 

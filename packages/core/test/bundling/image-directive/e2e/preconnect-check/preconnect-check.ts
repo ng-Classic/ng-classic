@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, IMAGE_LOADER, NgOptimizedImage} from '@angular/common';
-import {Component, Inject} from '@angular/core';
+import {DOCUMENT, IMAGE_LOADER, NgOptimizedImage} from '@angular-classic/common';
+import {Component, Inject} from '@angular-classic/core';
 
 @Component({
   selector: 'preconnect-check',

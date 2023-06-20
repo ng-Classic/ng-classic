@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injectable, Renderer2, RendererFactory2} from '@angular/core';
+import {Injectable, Renderer2, RendererFactory2} from '@angular-classic/core';
 import {ReplaySubject, Subject} from 'rxjs';
 
 export type Theme = 'dark-theme'|'light-theme';

@@ -195,7 +195,7 @@ To use Angular's `HttpClient`, you must configure your application to use `HttpC
 
 Angular's `HttpClientModule` registers the providers your application needs to use the `HttpClient` service throughout your application.
 
-1.  In `app.module.ts`, import `HttpClientModule` from the `@angular/common/http` package at the top of the file with the other imports.
+1.  In `app.module.ts`, import `HttpClientModule` from the `@angular-classic/common/http` package at the top of the file with the other imports.
     As there are a number of other imports, this code snippet omits them for brevity.
     Be sure to leave the existing imports in place.
 
@@ -209,7 +209,7 @@ Angular's `HttpClientModule` registers the providers your application needs to u
 
 The next step is to inject the `HttpClient` service into your service so your application can fetch data and interact with external APIs and resources.
 
-1.  In `cart.service.ts`, import `HttpClient` from the `@angular/common/http` package.
+1.  In `cart.service.ts`, import `HttpClient` from the `@angular-classic/common/http` package.
 
     <code-example header="src/app/cart.service.ts" path="getting-started/src/app/cart.service.ts" region="import-http"></code-example>
 

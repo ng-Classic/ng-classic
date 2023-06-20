@@ -61,8 +61,8 @@ export function createModuleAndProjectWithDeclarations(
     externalImports.push(`import {${className}} from './${fileName.replace('.ts', '')}';`);
   }
   const moduleContents = `
-        import {NgModule} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {NgModule} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
         ${externalImports.join('\n')}
 
         @NgModule({

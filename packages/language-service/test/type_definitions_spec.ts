@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 
 import {assertFileNames, assertTextSpans, humanizeDocumentSpanLike, LanguageServiceTestEnv, Project} from '../testing';
 
@@ -17,8 +17,8 @@ describe('type definitions', () => {
     initMockFileSystem('Native');
     const files = {
       'app.ts': `
-        import {Component, NgModule} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {Component, NgModule} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Component({templateUrl: 'app.html'})
         export class AppCmp {}

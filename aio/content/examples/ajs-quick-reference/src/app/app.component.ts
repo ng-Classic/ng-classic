@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 import { MovieService } from './movie.service';
 import { IMovie } from './movie';

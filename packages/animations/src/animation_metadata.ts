@@ -576,7 +576,7 @@ export interface AnimationStaggerMetadata extends AnimationMetadata {
  * by placing a host binding set on `@.disabled` on the topmost Angular component.
  *
  * ```typescript
- * import {Component, HostBinding} from '@angular/core';
+ * import {Component, HostBinding} from '@angular-classic/core';
  *
  * @Component({
  *   selector: 'app-component',
@@ -1278,7 +1278,7 @@ export function query(
  * Here is the component code:
  *
  * ```typescript
- * import {trigger, transition, style, animate, query, stagger} from '@angular/animations';
+ * import {trigger, transition, style, animate, query, stagger} from '@angular-classic/animations';
  * @Component({
  *   templateUrl: 'list.component.html',
  *   animations: [

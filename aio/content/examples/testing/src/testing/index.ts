@@ -1,5 +1,5 @@
-import {DebugElement} from '@angular/core';
-import {ComponentFixture, tick} from '@angular/core/testing';
+import {DebugElement} from '@angular-classic/core';
+import {ComponentFixture, tick} from '@angular-classic/core/testing';
 
 export * from './async-observable-helpers';
 export * from './jasmine-matchers';

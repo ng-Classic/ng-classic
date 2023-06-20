@@ -196,7 +196,7 @@ A target specifies the builder to use, its default options configuration, and na
 The Architect tool uses the target definition to resolve input options for a given run.
 
 The `angular.json` file has a section for each project, and the "architect" section of each project configures targets for builders used by CLI commands such as 'build', 'test', and 'lint'.
-By default, for example, the `build` command runs the builder `@angular-devkit/build-angular:browser` to perform the build task, and passes in default option values as specified for the `build` target in `angular.json`.
+By default, for example, the `build` command runs the builder `@angular-classic-devkit/build-angular:browser` to perform the build task, and passes in default option values as specified for the `build` target in `angular.json`.
 
 <code-example format="json" header="angular.json" language="json">
 {
@@ -250,7 +250,7 @@ project:target[:configuration]
 | configuration | \(optional\) The name of a specific configuration override for the given target, as defined in the `angular.json` file. |
 
 If your builder calls another builder, it might need to read a passed target string.
-Parse this string into an object by using the `targetFromTargetString()` utility function from `@angular-devkit/architect`.
+Parse this string into an object by using the `targetFromTargetString()` utility function from `@angular-classic-devkit/architect`.
 
 ## Schedule and run
 

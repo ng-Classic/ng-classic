@@ -1,7 +1,7 @@
 // #docregion whole-greeting-module
-import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
+import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular-classic/core';
 
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular-classic/common';
 
 import { GreetingComponent } from './greeting.component';
 import { UserServiceConfig } from './user.service';

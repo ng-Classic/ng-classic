@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular-classic/core';
 
 import { DoCheckComponent } from './do-check.component';
 import { Hero } from './hero';

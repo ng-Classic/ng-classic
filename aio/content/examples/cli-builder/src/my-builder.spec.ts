@@ -1,7 +1,7 @@
 // #docregion
-import { Architect } from '@angular-devkit/architect';
-import { TestingArchitectHost } from '@angular-devkit/architect/testing';
-import { schema } from '@angular-devkit/core';
+import { Architect } from '@angular-classic-devkit/architect';
+import { TestingArchitectHost } from '@angular-classic-devkit/architect/testing';
+import { schema } from '@angular-classic-devkit/core';
 import { promises as fs } from 'fs';
 
 describe('Copy File Builder', () => {

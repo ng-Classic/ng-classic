@@ -1,8 +1,8 @@
 // #docplaster
 // #docregion imports
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular-classic/core';
 // #enddocregion imports
-import { Input } from '@angular/core';
+import { Input } from '@angular-classic/core';
 // #docregion
 
 @Directive({

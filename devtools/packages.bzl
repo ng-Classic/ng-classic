@@ -36,13 +36,13 @@ _MATERIAL_ENTRY_POINTS = [
 ]
 
 ANGULAR_PACKAGES_CONFIG = [
-    ("@angular/cdk", struct(entry_points = _CDK_ENTRY_POINTS)),
-    ("@angular/material", struct(entry_points = _MATERIAL_ENTRY_POINTS)),
+    ("@angular-classic/cdk", struct(entry_points = _CDK_ENTRY_POINTS)),
+    ("@angular-classic/material", struct(entry_points = _MATERIAL_ENTRY_POINTS)),
 ]
 
 ANGULAR_PACKAGES = [
     struct(
-        name = name[len("@angular/"):],
+        name = name[len("@angular-classic/"):],
         entry_points = config.entry_points,
         platform = config.platform if hasattr(config, "platform") else "browser",
         module_name = name,

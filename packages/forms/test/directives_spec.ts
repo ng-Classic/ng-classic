@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {SimpleChange} from '@angular/core';
-import {fakeAsync, flushMicrotasks, tick} from '@angular/core/testing';
-import {AbstractControl, CheckboxControlValueAccessor, ControlValueAccessor, DefaultValueAccessor, FormArray, FormArrayName, FormControl, FormControlDirective, FormControlName, FormGroup, FormGroupDirective, FormGroupName, NgControl, NgForm, NgModel, NgModelGroup, SelectControlValueAccessor, SelectMultipleControlValueAccessor, ValidationErrors, Validator, Validators} from '@angular/forms';
-import {selectValueAccessor} from '@angular/forms/src/directives/shared';
-import {composeValidators} from '@angular/forms/src/validators';
+import {SimpleChange} from '@angular-classic/core';
+import {fakeAsync, flushMicrotasks, tick} from '@angular-classic/core/testing';
+import {AbstractControl, CheckboxControlValueAccessor, ControlValueAccessor, DefaultValueAccessor, FormArray, FormArrayName, FormControl, FormControlDirective, FormControlName, FormGroup, FormGroupDirective, FormGroupName, NgControl, NgForm, NgModel, NgModelGroup, SelectControlValueAccessor, SelectMultipleControlValueAccessor, ValidationErrors, Validator, Validators} from '@angular-classic/forms';
+import {selectValueAccessor} from '@angular-classic/forms/src/directives/shared';
+import {composeValidators} from '@angular-classic/forms/src/validators';
 
 import {asyncValidator} from './util';
 

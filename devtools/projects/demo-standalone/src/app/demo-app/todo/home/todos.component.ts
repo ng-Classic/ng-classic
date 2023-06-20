@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgForOf} from '@angular/common';
-import {ChangeDetectorRef, Component, EventEmitter, OnDestroy, OnInit, Output, Pipe, PipeTransform} from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {NgForOf} from '@angular-classic/common';
+import {ChangeDetectorRef, Component, EventEmitter, OnDestroy, OnInit, Output, Pipe, PipeTransform} from '@angular-classic/core';
+import {RouterLink} from '@angular-classic/router';
 
 import {SamplePipe} from './sample.pipe';
 import {Todo, TodoComponent} from './todo.component';

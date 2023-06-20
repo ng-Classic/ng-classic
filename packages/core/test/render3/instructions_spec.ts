@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {Component, Input} from '@angular/core/public_api';
-import {ngDevModeResetPerfCounters} from '@angular/core/src/util/ng_dev_mode';
-import {TestBed} from '@angular/core/testing';
-import {getSortedClassName} from '@angular/core/testing/src/styling';
+import {CommonModule} from '@angular-classic/common';
+import {Component, Input} from '@angular-classic/core/public_api';
+import {ngDevModeResetPerfCounters} from '@angular-classic/core/src/util/ng_dev_mode';
+import {TestBed} from '@angular-classic/core/testing';
+import {getSortedClassName} from '@angular-classic/core/testing/src/styling';
 
 import {ɵɵadvance, ɵɵattribute, ɵɵclassMap, ɵɵelement, ɵɵproperty, ɵɵstyleMap, ɵɵstyleProp} from '../../src/render3/index';
 import {AttributeMarker} from '../../src/render3/interfaces/node';

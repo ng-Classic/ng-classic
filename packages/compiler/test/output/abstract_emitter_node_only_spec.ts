@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ParseLocation, ParseSourceFile, ParseSourceSpan} from '@angular/compiler';
-import {EmitterVisitorContext} from '@angular/compiler/src/output/abstract_emitter';
+import {ParseLocation, ParseSourceFile, ParseSourceSpan} from '@angular-classic/compiler';
+import {EmitterVisitorContext} from '@angular-classic/compiler/src/output/abstract_emitter';
 
 import {originalPositionFor} from './source_map_util';
 

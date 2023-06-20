@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AsyncPipe} from '@angular/common';
-import {Component, inject} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {ActivatedRoute, CanActivateFn, provideRouter, Router} from '@angular/router';
-import {RouterTestingHarness} from '@angular/router/testing';
+import {AsyncPipe} from '@angular-classic/common';
+import {Component, inject} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {ActivatedRoute, CanActivateFn, provideRouter, Router} from '@angular-classic/router';
+import {RouterTestingHarness} from '@angular-classic/router/testing';
 
 describe('navigate for test examples', () => {
   // #docregion RoutedComponent

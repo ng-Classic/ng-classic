@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AbsoluteFsPath, Logger, ReadonlyFileSystem, SourceFile, SourceFileLoader} from '@angular/compiler-cli/private/localize';
-import {ɵParsedMessage, ɵSourceLocation} from '@angular/localize';
+import {AbsoluteFsPath, Logger, ReadonlyFileSystem, SourceFile, SourceFileLoader} from '@angular-classic/compiler-cli/private/localize';
+import {ɵParsedMessage, ɵSourceLocation} from '@angular-classic/localize';
 import {transformSync} from '@babel/core';
 
 import {makeEs2015ExtractPlugin} from './source_files/es2015_extract_plugin';

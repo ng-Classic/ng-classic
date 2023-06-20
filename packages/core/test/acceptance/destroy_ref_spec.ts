@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgIf} from '@angular/common';
-import {Component, createEnvironmentInjector, DestroyRef, Directive, EnvironmentInjector, inject} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {NgIf} from '@angular-classic/common';
+import {Component, createEnvironmentInjector, DestroyRef, Directive, EnvironmentInjector, inject} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 describe('DestroyRef', () => {
   describe('for environnement injector', () => {

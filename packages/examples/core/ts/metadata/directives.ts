@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 /* tslint:disable:no-console  */
-import {Component, Directive, EventEmitter, NgModule} from '@angular/core';
+import {Component, Directive, EventEmitter, NgModule} from '@angular-classic/core';
 
 // #docregion component-input
 @Component({

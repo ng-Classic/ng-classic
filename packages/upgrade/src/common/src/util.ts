@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, Type, ɵNG_MOD_DEF} from '@angular/core';
+import {Injector, Type, ɵNG_MOD_DEF} from '@angular-classic/core';
 
 import {element as angularElement, IAugmentedJQuery, IInjectorService, INgModelController, IRootScopeService} from './angular1';
 import {$ROOT_ELEMENT, $ROOT_SCOPE, DOWNGRADED_MODULE_COUNT_KEY, UPGRADE_APP_TYPE_KEY} from './constants';
@@ -128,7 +128,7 @@ export function validateInjectionKey(
       break;
     default:
       throw new Error(
-          `Error while ${attemptedAction}: Not a valid '@angular/upgrade' application.\n` +
+          `Error while ${attemptedAction}: Not a valid '@angular-classic/upgrade' application.\n` +
           'Did you forget to downgrade an Angular module or include it in the AngularJS ' +
           'application?');
   }
@@ -153,16 +153,16 @@ export interface LazyModuleRef {
 }
 
 export const enum UpgradeAppType {
-  // App NOT using `@angular/upgrade`. (This should never happen in an `ngUpgrade` app.)
+  // App NOT using `@angular-classic/upgrade`. (This should never happen in an `ngUpgrade` app.)
   None,
 
-  // App using the deprecated `@angular/upgrade` APIs (a.k.a. dynamic `ngUpgrade`).
+  // App using the deprecated `@angular-classic/upgrade` APIs (a.k.a. dynamic `ngUpgrade`).
   Dynamic,
 
-  // App using `@angular/upgrade/static` with `UpgradeModule`.
+  // App using `@angular-classic/upgrade/static` with `UpgradeModule`.
   Static,
 
-  // App using @angular/upgrade/static` with `downgradeModule()` (a.k.a `ngUpgrade`-lite ).
+  // App using @angular-classic/upgrade/static` with `downgradeModule()` (a.k.a `ngUpgrade`-lite ).
   Lite,
 }
 

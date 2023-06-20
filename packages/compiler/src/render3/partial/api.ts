@@ -21,7 +21,7 @@ export interface R3PartialDeclaration {
   version: string;
 
   /**
-   * A reference to the `@angular/core` ES module, which allows access
+   * A reference to the `@angular-classic/core` ES module, which allows access
    * to all Angular exports, including Ivy instructions.
    */
   ngImport: o.Expression;

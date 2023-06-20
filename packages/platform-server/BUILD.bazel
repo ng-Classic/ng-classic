@@ -5,7 +5,7 @@ package(default_visibility = ["//visibility:public"])
 
 ng_module(
     name = "platform-server",
-    package_name = "@angular/platform-server",
+    package_name = "@angular-classic/platform-server",
     srcs = glob(
         [
             "*.ts",

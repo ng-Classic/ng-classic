@@ -1,6 +1,6 @@
 # Add an animation
 
-The main Angular modules for animations are `@angular/animations` and `@angular/platform-browser`.
+The main Angular modules for animations are `@angular-classic/animations` and `@angular-classic/platform-browser`.
 When you create a new project using the Angular framework, these dependencies are automatically added to your project.
 
 To get started with adding Angular animations to your project, import the animation-specific modules along with standard Angular capability.
@@ -20,7 +20,7 @@ When you use the Angular framework to create your application, the root applicat
 
 ## Step 2: Importing animation functions into component files
 
-If you plan to use specific animation functions in component files, import those functions from `@angular/animations`.
+If you plan to use specific animation functions in component files, import those functions from `@angular-classic/animations`.
 
 <code-example header="src/app/app.component.ts" path="animations/src/app/app.component.ts" region="imports"></code-example>
 

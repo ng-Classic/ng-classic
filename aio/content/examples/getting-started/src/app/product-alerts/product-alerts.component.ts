@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion imports
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular-classic/core';
 import { Product } from '../products';
 // #enddocregion imports
 

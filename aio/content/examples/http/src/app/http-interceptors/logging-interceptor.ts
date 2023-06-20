@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import {
   HttpEvent, HttpInterceptor, HttpHandler,
   HttpRequest, HttpResponse
-} from '@angular/common/http';
+} from '@angular-classic/common/http';
 
 // #docregion excerpt
 import { finalize, tap } from 'rxjs/operators';

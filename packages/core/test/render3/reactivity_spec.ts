@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AsyncPipe} from '@angular/common';
-import {AfterViewInit, Component, ContentChildren, createComponent, destroyPlatform, effect, EnvironmentInjector, inject, Injector, Input, NgZone, OnChanges, QueryList, signal, SimpleChanges, ViewChild} from '@angular/core';
-import {toObservable} from '@angular/core/rxjs-interop';
-import {TestBed} from '@angular/core/testing';
-import {bootstrapApplication} from '@angular/platform-browser';
-import {withBody} from '@angular/private/testing';
+import {AsyncPipe} from '@angular-classic/common';
+import {AfterViewInit, Component, ContentChildren, createComponent, destroyPlatform, effect, EnvironmentInjector, inject, Injector, Input, NgZone, OnChanges, QueryList, signal, SimpleChanges, ViewChild} from '@angular-classic/core';
+import {toObservable} from '@angular-classic/core/rxjs-interop';
+import {TestBed} from '@angular-classic/core/testing';
+import {bootstrapApplication} from '@angular-classic/platform-browser';
+import {withBody} from '@angular-classic/private/testing';
 
 describe('effects', () => {
   beforeEach(destroyPlatform);

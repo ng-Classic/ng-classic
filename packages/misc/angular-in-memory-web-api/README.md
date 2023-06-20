@@ -119,7 +119,7 @@ Register your data store service implementation with the `HttpClientInMemoryWebA
 in your root `AppModule.imports`
 calling the `forRoot` static method with this service class and an optional configuration object:
 ```ts
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular-classic/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { InMemHeroService } from '../app/hero.service';

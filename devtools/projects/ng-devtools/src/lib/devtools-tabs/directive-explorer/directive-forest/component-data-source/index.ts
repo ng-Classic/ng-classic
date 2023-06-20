@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CollectionViewer, DataSource} from '@angular/cdk/collections';
-import {FlatTreeControl} from '@angular/cdk/tree';
-import {DefaultIterableDiffer, TrackByFunction} from '@angular/core';
-import {MatTreeFlattener} from '@angular/material/tree';
+import {CollectionViewer, DataSource} from '@angular-classic/cdk/collections';
+import {FlatTreeControl} from '@angular-classic/cdk/tree';
+import {DefaultIterableDiffer, TrackByFunction} from '@angular-classic/core';
+import {MatTreeFlattener} from '@angular-classic/material/tree';
 import {DevToolsNode} from 'protocol';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';

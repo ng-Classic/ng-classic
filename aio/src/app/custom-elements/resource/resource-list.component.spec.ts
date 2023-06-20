@@ -1,4 +1,4 @@
-import { Injector } from '@angular/core';
+import { Injector } from '@angular-classic/core';
 
 import { of } from 'rxjs';
 

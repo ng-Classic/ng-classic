@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AsyncPipe} from '@angular/common';
-import {ChangeDetectorRef, Component, computed, EventEmitter, signal} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {AsyncPipe} from '@angular-classic/common';
+import {ChangeDetectorRef, Component, computed, EventEmitter, signal} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 import {Observable, of, Subscribable, Unsubscribable} from 'rxjs';
 
 {

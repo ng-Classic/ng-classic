@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 import { LoggerService } from './logger.service';
 import { UserContextService } from './user-context.service';

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular-classic/core';
 import { Item } from './item';
 
 @Component({

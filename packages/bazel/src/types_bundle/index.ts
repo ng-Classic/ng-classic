@@ -84,7 +84,7 @@ export async function runMain(
  * Strip the named AMD module for compatibility from Bazel-generated type
  * definitions. These may end up in the generated type bundles.
  *
- * e.g. `/// <amd-module name="@angular/localize/init" />` should be stripped.
+ * e.g. `/// <amd-module name="@angular-classic/localize/init" />` should be stripped.
 
  */
 function stripAmdModuleDirectiveComments(content: string): string {

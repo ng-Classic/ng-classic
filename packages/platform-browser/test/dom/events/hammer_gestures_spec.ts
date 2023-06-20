@@ -5,10 +5,10 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {ApplicationRef, NgZone} from '@angular/core';
-import {fakeAsync, inject, TestBed, tick} from '@angular/core/testing';
-import {EventManager} from '@angular/platform-browser';
-import {HammerGestureConfig, HammerGesturesPlugin,} from '@angular/platform-browser/src/dom/events/hammer_gestures';
+import {ApplicationRef, NgZone} from '@angular-classic/core';
+import {fakeAsync, inject, TestBed, tick} from '@angular-classic/core/testing';
+import {EventManager} from '@angular-classic/platform-browser';
+import {HammerGestureConfig, HammerGesturesPlugin,} from '@angular-classic/platform-browser/src/dom/events/hammer_gestures';
 
 {
   describe('HammerGesturesPlugin', () => {

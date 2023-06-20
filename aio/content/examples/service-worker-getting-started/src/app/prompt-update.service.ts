@@ -1,9 +1,9 @@
 // #docplaster
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 // #docregion sw-replicate-available
     import { filter, map } from 'rxjs/operators';
 // #enddocregion sw-replicate-available
-import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
+import { SwUpdate, VersionReadyEvent } from '@angular-classic/service-worker';
 
 function promptUser(event: VersionReadyEvent): boolean {
   return true;

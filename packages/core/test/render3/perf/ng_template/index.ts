@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {injectTemplateRef} from '@angular/core/src/linker/template_ref';
-import {injectViewContainerRef} from '@angular/core/src/linker/view_container_ref';
+import {injectTemplateRef} from '@angular-classic/core/src/linker/template_ref';
+import {injectViewContainerRef} from '@angular-classic/core/src/linker/view_container_ref';
 
 import {TemplateRef, ViewContainerRef} from '../../../../src/linker';
 import {ɵɵdefineDirective, ɵɵdirectiveInject, ɵɵtemplate} from '../../../../src/render3/index';

@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular-classic/core/testing';
+import { ReactiveFormsModule } from '@angular-classic/forms';
 
 import { createNewEvent } from '../../shared/utils';
 import { FavoriteColorComponent } from './favorite-color.component';

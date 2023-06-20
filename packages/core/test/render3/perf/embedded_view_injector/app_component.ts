@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector} from '@angular/core';
-import {RenderFlags, ɵɵadvance, ɵɵdefineComponent, ɵɵelement, ɵɵelementEnd, ɵɵelementStart, ɵɵproperty, ɵɵreference, ɵɵtemplate, ɵɵtemplateRefExtractor} from '@angular/core/src/render3';
+import {Injector} from '@angular-classic/core';
+import {RenderFlags, ɵɵadvance, ɵɵdefineComponent, ɵɵelement, ɵɵelementEnd, ɵɵelementStart, ɵɵproperty, ɵɵreference, ɵɵtemplate, ɵɵtemplateRefExtractor} from '@angular-classic/core/src/render3';
 
 import {createInnerComponent} from './inner_component';
 import {createRenderTemplateDirective} from './render_template_directive';

@@ -2,7 +2,7 @@
 
 ## What does this schematic do?
 
-Some Angular libraries, such as `@angular/router` and `@ngrx/store`, implement APIs that return a type called `ModuleWithProviders` \(typically via a method named `forRoot()`\).
+Some Angular libraries, such as `@angular-classic/router` and `@ngrx/store`, implement APIs that return a type called `ModuleWithProviders` \(typically via a method named `forRoot()`\).
 This type represents an `NgModule` along with additional providers.
 Angular version 9 deprecates use of `ModuleWithProviders` without an explicitly generic type, where the generic type refers to the type of the `NgModule`.
 

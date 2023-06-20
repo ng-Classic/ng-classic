@@ -1,7 +1,7 @@
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {BrowserModule} from '@angular/platform-browser';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 import {AppComponent, AnimationsComponent} from './app.component';
 

@@ -1,5 +1,5 @@
-/* eslint-disable  @angular-eslint/component-selector */
-import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+/* eslint-disable  @angular-classic-eslint/component-selector */
+import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular-classic/core';
 import { fromInnerHTML } from 'app/shared/security';
 import { CodeComponent } from './code.component';
 

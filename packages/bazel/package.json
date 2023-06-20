@@ -1,5 +1,5 @@
 {
-  "name": "@angular/bazel",
+  "name": "@angular-classic/bazel",
   "version": "0.0.0-PLACEHOLDER",
   "description": "Angular - bazel build rules",
   "author": "angular",
@@ -28,7 +28,7 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/compiler-cli": "0.0.0-PLACEHOLDER",
+    "@angular-classic/compiler-cli": "0.0.0-PLACEHOLDER",
     "@bazel/concatjs": "^5.3.0",
     "@bazel/worker": "^5.3.0",
     "@rollup/plugin-commonjs": "^25.0.0",

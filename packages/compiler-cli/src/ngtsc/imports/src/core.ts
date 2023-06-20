@@ -50,7 +50,7 @@ export class NoopImportRewriter implements ImportRewriter {
 }
 
 /**
- * A mapping of supported symbols that can be imported from within @angular/core, and the names by
+ * A mapping of supported symbols that can be imported from within @angular-classic/core, and the names by
  * which they're exported from r3_symbols.
  */
 const CORE_SUPPORTED_SYMBOLS = new Map<string, string>([
@@ -68,10 +68,10 @@ const CORE_SUPPORTED_SYMBOLS = new Map<string, string>([
   ['ɵnoSideEffects', 'ɵnoSideEffects'],
 ]);
 
-const CORE_MODULE = '@angular/core';
+const CORE_MODULE = '@angular-classic/core';
 
 /**
- * `ImportRewriter` that rewrites imports from '@angular/core' to be imported from the r3_symbols.ts
+ * `ImportRewriter` that rewrites imports from '@angular-classic/core' to be imported from the r3_symbols.ts
  * file instead.
  */
 export class R3SymbolsImportRewriter implements ImportRewriter {

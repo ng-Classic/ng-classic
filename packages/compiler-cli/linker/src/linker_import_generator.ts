@@ -13,7 +13,7 @@ import {FatalLinkerError} from './fatal_linker_error';
  * A class that is used to generate imports when translating from Angular Output AST to an AST to
  * render, such as Babel.
  *
- * Note that, in the linker, there can only be imports from `@angular/core` and that these imports
+ * Note that, in the linker, there can only be imports from `@angular-classic/core` and that these imports
  * must be achieved by property access on an `ng` namespace identifier, which is passed in via the
  * constructor.
  */
@@ -31,9 +31,9 @@ export class LinkerImportGenerator<TExpression> implements ImportGenerator<TExpr
   }
 
   private assertModuleName(moduleName: string): void {
-    if (moduleName !== '@angular/core') {
+    if (moduleName !== '@angular-classic/core') {
       throw new FatalLinkerError(
-          this.ngImport, `Unable to import from anything other than '@angular/core'`);
+          this.ngImport, `Unable to import from anything other than '@angular-classic/core'`);
     }
   }
 }

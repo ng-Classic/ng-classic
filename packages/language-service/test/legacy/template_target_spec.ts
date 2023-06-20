@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ParseError, parseTemplate} from '@angular/compiler';
-import * as e from '@angular/compiler/src/expression_parser/ast';  // e for expression AST
-import * as t from '@angular/compiler/src/render3/r3_ast';         // t for template AST
+import {ParseError, parseTemplate} from '@angular-classic/compiler';
+import * as e from '@angular-classic/compiler/src/expression_parser/ast';  // e for expression AST
+import * as t from '@angular-classic/compiler/src/render3/r3_ast';         // t for template AST
 
 import {getTargetAtPosition, SingleNodeTarget, TargetNodeKind, TwoWayBindingContext} from '../../src/template_target';
 import {isExpressionNode, isTemplateNode} from '../../src/utils';

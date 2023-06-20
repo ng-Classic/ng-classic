@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import '@angular/compiler';
+import '@angular-classic/compiler';
 
-import {ApplicationRef, enableProdMode} from '@angular/core';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {ApplicationRef, enableProdMode} from '@angular-classic/core';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
 import {bindAction, profile} from '../../util';
 import {buildTree, emptyTree, initTreeUtils} from '../util';

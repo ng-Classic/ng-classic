@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-# This script is used for building the @angular/language-service package locally
+# This script is used for building the @angular-classic/language-service package locally
 # so that it can be consumed by the Angular extension for local development.
 # Usage: ./build.sh /path/to/vscode-ng-language-service
 
@@ -39,5 +39,5 @@ npm_package(
 )
 EOT
 _sedi 's#\# PLACE_HOLDER_FOR_angular/angular_packages/language-service/build.sh#"//.angular_packages/language-service:package.json", \# FOR TESTING ONLY! DO NOT COMMIT THIS LINE!#' WORKSPACE
-yarn add @angular/language-service@file:".angular_packages/language-service"
+yarn add @angular-classic/language-service@file:".angular_packages/language-service"
 popd

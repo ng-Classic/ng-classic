@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {compileClassMetadata, compileDeclareClassMetadata, compileDeclareDirectiveFromMetadata, compileDirectiveFromMetadata, ConstantPool, FactoryTarget, makeBindingParser, R3ClassMetadata, R3DirectiveMetadata, WrappedNodeExpr} from '@angular/compiler';
+import {compileClassMetadata, compileDeclareClassMetadata, compileDeclareDirectiveFromMetadata, compileDirectiveFromMetadata, ConstantPool, FactoryTarget, makeBindingParser, R3ClassMetadata, R3DirectiveMetadata, WrappedNodeExpr} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {Reference, ReferenceEmitter} from '../../../imports';
@@ -82,7 +82,7 @@ export class DirectiveDecoratorHandler implements
     // been processed, but we want to enforce a consistent decorator mental model.
     // See: https://v9.angular.io/guide/migration-undecorated-classes.
     if (decorator === null) {
-      // If compiling @angular/core, skip the diagnostic as core occasionally hand-writes
+      // If compiling @angular-classic/core, skip the diagnostic as core occasionally hand-writes
       // definitions.
       if (this.isCore) {
         return {};

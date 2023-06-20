@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InjectionToken, Provider, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {InjectionToken, Provider, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from '../../../errors';
 import {isAbsoluteUrl, isValidPath, normalizePath, normalizeSrc} from '../url';

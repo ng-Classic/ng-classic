@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ApplicationRef, Component, DoBootstrap, NgModule, Type} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {ApplicationRef, Component, DoBootstrap, NgModule, Type} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 @Component({
   selector: 'app-root',

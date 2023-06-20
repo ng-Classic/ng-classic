@@ -8,34 +8,34 @@
 
 
 
-import * as animations from '@angular/animations';
-import * as animationsBrowser from '@angular/animations/browser';
-import * as animationsBrowserTesting from '@angular/animations/browser/testing';
-import * as common from '@angular/common';
-import * as commonHttp from '@angular/common/http';
-import * as commonTesting from '@angular/common/testing';
-import * as commonHttpTesting from '@angular/common/http/testing';
-import * as compiler from '@angular/compiler';
-import * as compilerTesting from '@angular/compiler/testing';
-import * as core from '@angular/core';
-import * as coreTesting from '@angular/core/testing';
-import * as elements from '@angular/elements';
-import * as forms from '@angular/forms';
-import * as platformBrowser from '@angular/platform-browser';
-import * as platformBrowserDynamic from '@angular/platform-browser-dynamic';
-import * as platformBrowserDynamicTesting from '@angular/platform-browser-dynamic/testing';
-import * as platformBrowserAnimations from '@angular/platform-browser/animations';
-import * as platformBrowserTesting from '@angular/platform-browser/testing';
-import * as platformServer from '@angular/platform-server';
-import * as platformServerInit from '@angular/platform-server/init';
-import * as platformServerTesting from '@angular/platform-server/testing';
-import * as router from '@angular/router';
-import * as routerTesting from '@angular/router/testing';
-import * as routerUpgrade from '@angular/router/upgrade';
-import * as serviceWorker from '@angular/service-worker';
-import * as upgrade from '@angular/upgrade';
-import * as upgradeStatic from '@angular/upgrade/static';
-import * as upgradeTesting from '@angular/upgrade/static/testing';
+import * as animations from '@angular-classic/animations';
+import * as animationsBrowser from '@angular-classic/animations/browser';
+import * as animationsBrowserTesting from '@angular-classic/animations/browser/testing';
+import * as common from '@angular-classic/common';
+import * as commonHttp from '@angular-classic/common/http';
+import * as commonTesting from '@angular-classic/common/testing';
+import * as commonHttpTesting from '@angular-classic/common/http/testing';
+import * as compiler from '@angular-classic/compiler';
+import * as compilerTesting from '@angular-classic/compiler/testing';
+import * as core from '@angular-classic/core';
+import * as coreTesting from '@angular-classic/core/testing';
+import * as elements from '@angular-classic/elements';
+import * as forms from '@angular-classic/forms';
+import * as platformBrowser from '@angular-classic/platform-browser';
+import * as platformBrowserDynamic from '@angular-classic/platform-browser-dynamic';
+import * as platformBrowserDynamicTesting from '@angular-classic/platform-browser-dynamic/testing';
+import * as platformBrowserAnimations from '@angular-classic/platform-browser/animations';
+import * as platformBrowserTesting from '@angular-classic/platform-browser/testing';
+import * as platformServer from '@angular-classic/platform-server';
+import * as platformServerInit from '@angular-classic/platform-server/init';
+import * as platformServerTesting from '@angular-classic/platform-server/testing';
+import * as router from '@angular-classic/router';
+import * as routerTesting from '@angular-classic/router/testing';
+import * as routerUpgrade from '@angular-classic/router/upgrade';
+import * as serviceWorker from '@angular-classic/service-worker';
+import * as upgrade from '@angular-classic/upgrade';
+import * as upgradeStatic from '@angular-classic/upgrade/static';
+import * as upgradeTesting from '@angular-classic/upgrade/static/testing';
 
 export default {
   animations,

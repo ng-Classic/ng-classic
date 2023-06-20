@@ -1,5 +1,5 @@
 // #docregion
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 
 @Injectable()
 export class FilterTextService {

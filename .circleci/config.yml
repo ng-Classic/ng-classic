@@ -417,9 +417,9 @@ jobs:
     steps:
       - custom_attach_workspace
       - init_environment
-      # Publish `@angular/*` packages.
+      # Publish `@angular-classic/*` packages.
       - run:
-          name: Create artifacts for @angular/* packages
+          name: Create artifacts for @angular-classic/* packages
           command: ./scripts/ci/create-package-archives.sh $CI_BRANCH $CI_COMMIT $NG_PACKAGES_DIR $NG_PACKAGES_ARCHIVES_DIR
       - store_artifacts:
           path: *ng_packages_archives_dir

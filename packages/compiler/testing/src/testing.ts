@@ -22,7 +22,7 @@
  * </div>
  */
 
-// TODO(alxhub): @angular/compiler/testing is unused in Ivy. A placeholder
+// TODO(alxhub): @angular-classic/compiler/testing is unused in Ivy. A placeholder
 // is left here because the components repo still depends on this package
 // directly. It will be cleaned up at a later date.
 //

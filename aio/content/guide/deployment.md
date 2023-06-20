@@ -66,7 +66,7 @@ For example, the following command automatically deploys a project to Firebase.
 
 <code-example format="shell" language="shell">
 
-ng add @angular/fire
+ng add @angular-classic/fire
 ng deploy
 
 </code-example>
@@ -83,7 +83,7 @@ You can read more by following the links associated with the package names below
 
 | Deployment to                                                     | Package                                                                              |
 |:---                                                               |:---                                                                                  |
-| [Firebase hosting](https://firebase.google.com/docs/hosting)      | [`@angular/fire`](https://npmjs.org/package/@angular/fire)                           |
+| [Firebase hosting](https://firebase.google.com/docs/hosting)      | [`@angular-classic/fire`](https://npmjs.org/package/@angular-classic/fire)                           |
 | [Vercel](https://vercel.com/solutions/angular)                    | [`vercel init angular`](https://github.com/vercel/vercel/tree/main/examples/angular) |
 | [Netlify](https://www.netlify.com)                                | [`@netlify-builder/deploy`](https://npmjs.org/package/@netlify-builder/deploy)       |
 | [GitHub pages](https://pages.github.com)                          | [`angular-cli-ghpages`](https://npmjs.org/package/angular-cli-ghpages)               |

@@ -5,10 +5,10 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, style, transition, trigger} from '@angular/animations';
-import {Component, NgModule, ɵNgModuleFactory as NgModuleFactory} from '@angular/core';
-import {BrowserModule, platformBrowser} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {animate, style, transition, trigger} from '@angular-classic/animations';
+import {Component, NgModule, ɵNgModuleFactory as NgModuleFactory} from '@angular-classic/core';
+import {BrowserModule, platformBrowser} from '@angular-classic/platform-browser';
+import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 
 @Component({
   selector: 'app-animations',

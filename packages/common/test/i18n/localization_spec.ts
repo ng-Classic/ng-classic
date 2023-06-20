@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import localeFr from '@angular/common/locales/fr';
-import localeRo from '@angular/common/locales/ro';
-import localeSr from '@angular/common/locales/sr';
-import localeZgh from '@angular/common/locales/zgh';
-import {getPluralCategory, NgLocaleLocalization, NgLocalization} from '@angular/common/src/i18n/localization';
-import {LOCALE_ID, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular/core';
-import {inject, TestBed} from '@angular/core/testing';
+import localeFr from '@angular-classic/common/locales/fr';
+import localeRo from '@angular-classic/common/locales/ro';
+import localeSr from '@angular-classic/common/locales/sr';
+import localeZgh from '@angular-classic/common/locales/zgh';
+import {getPluralCategory, NgLocaleLocalization, NgLocalization} from '@angular-classic/common/src/i18n/localization';
+import {LOCALE_ID, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular-classic/core';
+import {inject, TestBed} from '@angular-classic/core/testing';
 
 {
   describe('l10n', () => {

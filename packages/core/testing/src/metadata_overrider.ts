@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵstringify as stringify} from '@angular/core';
+import {ɵstringify as stringify} from '@angular-classic/core';
 
 import {MetadataOverride} from './metadata_override';
 

@@ -1,5 +1,5 @@
 # #docregion add-localize
-ng add @angular/localize
+ng add @angular-classic/localize
 # #enddocregion add-localize
 
 # #docregion extract-i18n-default

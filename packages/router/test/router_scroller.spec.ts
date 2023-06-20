@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {fakeAsync, tick} from '@angular/core/testing';
-import {DefaultUrlSerializer, Event, NavigationEnd, NavigationStart} from '@angular/router';
+import {fakeAsync, tick} from '@angular-classic/core/testing';
+import {DefaultUrlSerializer, Event, NavigationEnd, NavigationStart} from '@angular-classic/router';
 import {Subject} from 'rxjs';
 import {filter, switchMap, take} from 'rxjs/operators';
 

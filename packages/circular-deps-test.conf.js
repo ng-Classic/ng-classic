@@ -19,13 +19,13 @@ module.exports = {
 };
 
 /**
- * Custom module resolver that maps specifiers starting with `@angular/` to the
+ * Custom module resolver that maps specifiers starting with `@angular-classic/` to the
  * local packages folder. This ensures that cross package/entry-point dependencies
  * can be detected.
  */
 function resolveModule(specifier) {
-  if (specifier.startsWith('@angular/')) {
-    return path.join(__dirname, specifier.slice('@angular/'.length));
+  if (specifier.startsWith('@angular-classic/')) {
+    return path.join(__dirname, specifier.slice('@angular-classic/'.length));
   }
   return null;
 }

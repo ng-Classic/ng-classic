@@ -1,6 +1,6 @@
-The `@angular/localize` package contains helpers and tools for localizing your application.
+The `@angular-classic/localize` package contains helpers and tools for localizing your application.
 
-You should install this package using `ng add @angular/localize` if you need to tag text in your
+You should install this package using `ng add @angular-classic/localize` if you need to tag text in your
 application that you want to be translatable.
 
 The approach is based around the concept of tagging strings in code with a [template literal tag handler][tagged-templates]

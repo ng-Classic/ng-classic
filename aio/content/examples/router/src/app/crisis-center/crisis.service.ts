@@ -3,7 +3,7 @@
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import { MessageService } from '../message.service';
 import { Crisis } from './crisis';
 import { CRISES } from './mock-crises';

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgtscProgram} from '@angular/compiler-cli';
+import {NgtscProgram} from '@angular-classic/compiler-cli';
 import ts from 'typescript';
 
 import {ChangeTracker, ImportRemapper} from '../../utils/change_tracker';

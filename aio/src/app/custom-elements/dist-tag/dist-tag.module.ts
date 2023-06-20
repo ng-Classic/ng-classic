@@ -1,4 +1,4 @@
-import { NgModule, Type } from '@angular/core';
+import { NgModule, Type } from '@angular-classic/core';
 import { WithCustomElementComponent } from '../element-registry';
 
 import { DistTagComponent } from './dist-tag.component';

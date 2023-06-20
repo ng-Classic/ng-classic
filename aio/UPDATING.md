@@ -25,15 +25,15 @@ Follow these steps to align the angular.io app with new CLI apps.
   yarn install
 
   # Migrate project to new versions.
-  yarn ng update @angular/cli --allow-dirty --migrate-only --from=<FROM_VERSION_CLI>
-  yarn ng update @angular/core --allow-dirty --migrate-only --from=<FROM_VERSION_ANGULAR>
-  yarn ng update @angular/material --allow-dirty --migrate-only --from=<FROM_VERSION_MATERIAL>
+  yarn ng update @angular-classic/cli --allow-dirty --migrate-only --from=<FROM_VERSION_CLI>
+  yarn ng update @angular-classic/core --allow-dirty --migrate-only --from=<FROM_VERSION_ANGULAR>
+  yarn ng update @angular-classic/material --allow-dirty --migrate-only --from=<FROM_VERSION_MATERIAL>
   ```
 
   > **Note:**
   > Depending on the number of changes generated from each `ng update` command, it might make sense to create a separate commit for each update.
 
-- Inspect [package.json](./package.json) to determine what is the current version of Angular CLI (i.e. `@angular/cli`) used in the app.
+- Inspect [package.json](./package.json) to determine what is the current version of Angular CLI (i.e. `@angular-classic/cli`) used in the app.
   This will be referred to as `<TO_VERSION_CLI>`.
 
 - Use the [angular-cli-diff](https://github.com/cexbrayat/angular-cli-diff) repository to discover more changes (which are not automatically applied via `ng update` migrations) between Angular CLI apps of different versions.

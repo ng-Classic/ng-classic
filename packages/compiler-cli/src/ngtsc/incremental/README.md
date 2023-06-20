@@ -66,7 +66,7 @@ in two ways:
 For example, a directive's selector may be determined via an imported constant:
 
 ```typescript=
-import {Directive} from '@angular/core';
+import {Directive} from '@angular-classic/core';
 import {DIR_SELECTOR} from './selectors';
 
 @Directive({

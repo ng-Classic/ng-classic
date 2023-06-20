@@ -7,8 +7,8 @@
  */
 
 
-import {TestBed} from '@angular/core/testing';
-import {RouterModule} from '@angular/router';
+import {TestBed} from '@angular-classic/core/testing';
+import {RouterModule} from '@angular-classic/router';
 import {TestScheduler} from 'rxjs/testing';
 
 import {prioritizedGuardValue} from '../../src/operators/prioritized_guard_value';

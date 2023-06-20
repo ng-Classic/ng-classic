@@ -7,7 +7,7 @@
  */
 
 // Re-export TransferState to the public API of the `platform-browser` for backwards-compatibility.
-import {makeStateKey as makeStateKeyFromCore, StateKey as StateKeyFromCore, TransferState as TransferStateFromCore} from '@angular/core';
+import {makeStateKey as makeStateKeyFromCore, StateKey as StateKeyFromCore, TransferState as TransferStateFromCore} from '@angular-classic/core';
 
 /**
  * Create a `StateKey<T>` that can be used to store value of type T with `TransferState`.
@@ -22,7 +22,7 @@ import {makeStateKey as makeStateKeyFromCore, StateKey as StateKeyFromCore, Tran
  * ```
  *
  * @publicApi
- * @deprecated `makeStateKey` has moved, please import `makeStateKey` from `@angular/core` instead.
+ * @deprecated `makeStateKey` has moved, please import `makeStateKey` from `@angular-classic/core` instead.
  */
 // The below is a workaround to add a deprecated message.
 export const makeStateKey = makeStateKeyFromCore;
@@ -43,7 +43,7 @@ export const makeStateKey = makeStateKeyFromCore;
  *
  * @publicApi
  *
- * @deprecated `TransferState` has moved, please import `TransferState` from `@angular/core`
+ * @deprecated `TransferState` has moved, please import `TransferState` from `@angular-classic/core`
  *     instead.
  */
 // The below is a workaround to add a deprecated message.
@@ -64,7 +64,7 @@ export const TransferState: {new (): TransferStateFromCore} = TransferStateFromC
  * ```
  * @publicApi
  *
- * @deprecated `StateKey` has moved, please import `StateKey` from `@angular/core` instead.
+ * @deprecated `StateKey` has moved, please import `StateKey` from `@angular-classic/core` instead.
  */
 // The below is a workaround to add a deprecated message.
 export type StateKey<T> = StateKeyFromCore<T>;

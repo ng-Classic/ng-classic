@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injectable, NgModule} from '@angular/core';
+import {Injectable, NgModule} from '@angular-classic/core';
 
 @NgModule({})
 export class Lib1Module {

@@ -45,14 +45,14 @@ v16 - v19
 
 | Area                                | API or Feature                                                                                             | Deprecated in | May be removed in |
 |:---                                 |:---                                                                                                        |:---           |:---               |
-| `@angular/core`                     | [`DefaultIterableDiffer`](#core)                                                                           |  v7           | v11         |
-| `@angular/core`                     | [`defineInjectable`](#core)                                                                                |  v8           | v11         |
-| `@angular/core`                     | [`entryComponents`](api/core/NgModule)                                                                     |  v9           | v11         |
-| `@angular/core`                     | [`ANALYZE_FOR_ENTRY_COMPONENTS`](#core)                                                                    |  v9           | v11         |
-| `@angular/forms`                    | [`ngModel` with reactive forms](#ngmodel-reactive)                                                         |  v6           | v11         |
-| `@angular/upgrade`                  | [`@angular/upgrade`](#upgrade)                                                                             |  v8           | v11         |
-| `@angular/upgrade`                  | [`getAngularLib`](#upgrade-static)                                                                         |  v8           | v11         |
-| `@angular/upgrade`                  | [`setAngularLib`](#upgrade-static)                                                                         |  v8           | v11         |
+| `@angular-classic/core`                     | [`DefaultIterableDiffer`](#core)                                                                           |  v7           | v11         |
+| `@angular-classic/core`                     | [`defineInjectable`](#core)                                                                                |  v8           | v11         |
+| `@angular-classic/core`                     | [`entryComponents`](api/core/NgModule)                                                                     |  v9           | v11         |
+| `@angular-classic/core`                     | [`ANALYZE_FOR_ENTRY_COMPONENTS`](#core)                                                                    |  v9           | v11         |
+| `@angular-classic/forms`                    | [`ngModel` with reactive forms](#ngmodel-reactive)                                                         |  v6           | v11         |
+| `@angular-classic/upgrade`                  | [`@angular-classic/upgrade`](#upgrade)                                                                             |  v8           | v11         |
+| `@angular-classic/upgrade`                  | [`getAngularLib`](#upgrade-static)                                                                         |  v8           | v11         |
+| `@angular-classic/upgrade`                  | [`setAngularLib`](#upgrade-static)                                                                         |  v8           | v11         |
 | polyfills                           | [reflect-metadata](#reflect-metadata)                                                                      |  v8           | v11         |
 | template syntax                     | [`<template>`](#template-tag)                                                                              |  v7           | v11         |
 
@@ -60,69 +60,69 @@ v16 - v19
 
 | Area                                | API or Feature                                                                                             | Deprecated in | May be removed in |
 |:---                                 |:---                                                                                                        |:---           |:---               |
-| `@angular/core/testing`             | [`TestBed.get`](#testing)                                                                                  |  v9           | v12         |
-| `@angular/core/testing`             | [`async`](#testing)                                                                                        |  v9           | v12         |
+| `@angular-classic/core/testing`             | [`TestBed.get`](#testing)                                                                                  |  v9           | v12         |
+| `@angular-classic/core/testing`             | [`async`](#testing)                                                                                        |  v9           | v12         |
 
 ### Deprecated features that can be removed in v14 or later
 
 | Area                                | API or Feature                                                                                             | Deprecated in | May be removed in |
 |:---                                 |:---                                                                                                        |:---           |:---               |
-| `@angular/forms`                    | [`FormBuilder.group` legacy options parameter](api/forms/FormBuilder#group)                                | v11           | v14         |
+| `@angular-classic/forms`                    | [`FormBuilder.group` legacy options parameter](api/forms/FormBuilder#group)                                | v11           | v14         |
 
 ### Deprecated features that can be removed in v15 or later
 
 | Area                                | API or Feature                                                                                             | Deprecated in | May be removed in |
 |:---                                 |:---                                                                                                        |:---           |:---               |
-| `@angular/compiler-cli`             | [Input setter coercion](#input-setter-coercion)                                                            | v13           | v15         |
-| `@angular/compiler-cli`             | [`fullTemplateTypeCheck`](#full-template-type-check)                                                       | v13           | v15         |
-| `@angular/core`                     | [Factory-based signature of `ApplicationRef.bootstrap`](#core)                                             | v13           | v15         |
-| `@angular/core`                     | [`PlatformRef.bootstrapModuleFactory`](#core)                                                              | v13           | v15         |
-| `@angular/core`                     | [Factory-based signature of `ViewContainerRef.createComponent`](api/core/ViewContainerRef#createComponent) | v13           | v15         |
-| `@angular/upgrade`                  | [Factory-based signature of `downgradeModule`](#upgrade-static)                                            | v13           | v15         |
+| `@angular-classic/compiler-cli`             | [Input setter coercion](#input-setter-coercion)                                                            | v13           | v15         |
+| `@angular-classic/compiler-cli`             | [`fullTemplateTypeCheck`](#full-template-type-check)                                                       | v13           | v15         |
+| `@angular-classic/core`                     | [Factory-based signature of `ApplicationRef.bootstrap`](#core)                                             | v13           | v15         |
+| `@angular-classic/core`                     | [`PlatformRef.bootstrapModuleFactory`](#core)                                                              | v13           | v15         |
+| `@angular-classic/core`                     | [Factory-based signature of `ViewContainerRef.createComponent`](api/core/ViewContainerRef#createComponent) | v13           | v15         |
+| `@angular-classic/upgrade`                  | [Factory-based signature of `downgradeModule`](#upgrade-static)                                            | v13           | v15         |
 | template syntax                     | [`bind-`, `on-`, `bindon-`, and `ref-`](#bind-syntax)                                                      | v13           | v15         |
 
 ### Deprecated features that can be removed in v16 or later
 
 | Area                                | API or Feature                                                                                             | Deprecated in | May be removed in |
 |:---                                 |:---                                                                                                        |:---           |:---               |
-| `@angular/common/http/testing`      | [`TestRequest` accepting `ErrorEvent` for error simulation](#testrequest-errorevent)                       | v13           | v16         |
-| `@angular/core`                     | [`getModuleFactory`](#core)                                                                                | v13           | v16         |
-| `@angular/core`                     | [`ModuleWithComponentFactories`](#core)                                                                    | v13           | v16         |
-| `@angular/core`                     | [`Compiler`](#core)                                                                                        | v13           | v16         |
-| `@angular/core`                     | [`CompilerFactory`](#core)                                                                                 | v13           | v16         |
-| `@angular/core`                     | [`NgModuleFactory`](#core)                                                                                 | v13           | v16         |
-| `@angular/core`                     | [`ComponentFactory`](#core)                                                                                | v13           | v16         |
-| `@angular/core`                     | [`ComponentFactoryResolver`](#core)                                                                        | v13           | v16         |
-| `@angular/core`                     | [`CompilerOptions.useJit and CompilerOptions.missingTranslation config options`](#core)                    | v13           | v16         |
-| `@angular/platform-browser-dynamic` | [`JitCompilerFactory`](#platform-browser-dynamic)                                                          | v13           | v16         |
-| `@angular/platform-browser-dynamic` | [`RESOURCE_CACHE_PROVIDER`](#platform-browser-dynamic)                                                     | v13           | v16         |
-| `@angular/platform-server`          | [`ServerTransferStateModule`](#platform-server)                                                            | v14           | v16         |
-| `@angular/service-worker`           | [`SwUpdate#activated`](api/service-worker/SwUpdate#activated)                                              | v13           | v16         |
-| `@angular/service-worker`           | [`SwUpdate#available`](api/service-worker/SwUpdate#available)                                              | v13           | v16         |
+| `@angular-classic/common/http/testing`      | [`TestRequest` accepting `ErrorEvent` for error simulation](#testrequest-errorevent)                       | v13           | v16         |
+| `@angular-classic/core`                     | [`getModuleFactory`](#core)                                                                                | v13           | v16         |
+| `@angular-classic/core`                     | [`ModuleWithComponentFactories`](#core)                                                                    | v13           | v16         |
+| `@angular-classic/core`                     | [`Compiler`](#core)                                                                                        | v13           | v16         |
+| `@angular-classic/core`                     | [`CompilerFactory`](#core)                                                                                 | v13           | v16         |
+| `@angular-classic/core`                     | [`NgModuleFactory`](#core)                                                                                 | v13           | v16         |
+| `@angular-classic/core`                     | [`ComponentFactory`](#core)                                                                                | v13           | v16         |
+| `@angular-classic/core`                     | [`ComponentFactoryResolver`](#core)                                                                        | v13           | v16         |
+| `@angular-classic/core`                     | [`CompilerOptions.useJit and CompilerOptions.missingTranslation config options`](#core)                    | v13           | v16         |
+| `@angular-classic/platform-browser-dynamic` | [`JitCompilerFactory`](#platform-browser-dynamic)                                                          | v13           | v16         |
+| `@angular-classic/platform-browser-dynamic` | [`RESOURCE_CACHE_PROVIDER`](#platform-browser-dynamic)                                                     | v13           | v16         |
+| `@angular-classic/platform-server`          | [`ServerTransferStateModule`](#platform-server)                                                            | v14           | v16         |
+| `@angular-classic/service-worker`           | [`SwUpdate#activated`](api/service-worker/SwUpdate#activated)                                              | v13           | v16         |
+| `@angular-classic/service-worker`           | [`SwUpdate#available`](api/service-worker/SwUpdate#available)                                              | v13           | v16         |
 
 ### Deprecated features that can be removed in v17 or later
 
 | Area                                | API or Feature                                                                                             | Deprecated in | May be removed in |
 |:---                                 |:---                                                                                                        |:---           |:---               |
-| `@angular/common`                   | [`NgComponentOutlet.ngComponentOutletNgModuleFactory`](#common)                                            | v14           | v17         |
-| `@angular/common`                   | [`DatePipe` - `DATE_PIPE_DEFAULT_TIMEZONE`](api/common/DATE_PIPE_DEFAULT_TIMEZONE)                         | v15           | v17         |
-| `@angular/core`                     | NgModule and `'any'` options for [`providedIn`](#core)                                                     | v15           | v17         |
-| `@angular/core`                     | [`@Component.moduleId`](api/core/Component#moduleId) | v16 | v17 |
-| `@angular/router`                   | [`RouterLinkWithHref` directive](#router)                                                                  | v15           | v17         |
-| `@angular/router`                   | [Router writeable properties](#router-writable-properties)                                                 | v15.1         | v17         |
-| `@angular/router`                   | [Router CanLoad guards](#router-can-load)                                                 | v15.1         | v17         |
-| `@angular/router`                   | [class and `InjectionToken` guards and resolvers](#router-class-and-injection-token-guards)                | v15.2         | v17         |
+| `@angular-classic/common`                   | [`NgComponentOutlet.ngComponentOutletNgModuleFactory`](#common)                                            | v14           | v17         |
+| `@angular-classic/common`                   | [`DatePipe` - `DATE_PIPE_DEFAULT_TIMEZONE`](api/common/DATE_PIPE_DEFAULT_TIMEZONE)                         | v15           | v17         |
+| `@angular-classic/core`                     | NgModule and `'any'` options for [`providedIn`](#core)                                                     | v15           | v17         |
+| `@angular-classic/core`                     | [`@Component.moduleId`](api/core/Component#moduleId) | v16 | v17 |
+| `@angular-classic/router`                   | [`RouterLinkWithHref` directive](#router)                                                                  | v15           | v17         |
+| `@angular-classic/router`                   | [Router writeable properties](#router-writable-properties)                                                 | v15.1         | v17         |
+| `@angular-classic/router`                   | [Router CanLoad guards](#router-can-load)                                                 | v15.1         | v17         |
+| `@angular-classic/router`                   | [class and `InjectionToken` guards and resolvers](#router-class-and-injection-token-guards)                | v15.2         | v17         |
 
 ### Deprecated features that can be removed in v18 or later
 
 | Area                                | API or Feature                                                                                             | Deprecated in | May be removed in |
 |:---                                 |:---                                                                                                        |:---           |:---               |
-| `@angular/common` | `isPlatformWorkerApp` and `isPlatformWorkerUi` | v16 | v18 |
-| `@angular/core` | `EnvironmentInjector.runInContext` | v16 | v18 |
-| `@angular/platform-server`          | [`PlatformConfig.baseUrl` and `PlatformConfig.useAbsoluteUrl` config options](api/platform-server/PlatformConfig) | v16           | v18               |
-| `@angular/platform-server`          | [`platformDynamicServer`](api/platform-server/platformDynamicServer) | v16           | v18               |
-| `@angular/platform-browser`         | [`BrowserModule.withServerTransition`](api/platform-browser/BrowserModule#withservertransition)            | v16           | v18         |
-| `@angular/platform-browser`         | [`makeStateKey`, `StateKey` and `TransferState`](#platform-browser), symbols were moved to `@angular/core`                                        | v16           | v18         |
+| `@angular-classic/common` | `isPlatformWorkerApp` and `isPlatformWorkerUi` | v16 | v18 |
+| `@angular-classic/core` | `EnvironmentInjector.runInContext` | v16 | v18 |
+| `@angular-classic/platform-server`          | [`PlatformConfig.baseUrl` and `PlatformConfig.useAbsoluteUrl` config options](api/platform-server/PlatformConfig) | v16           | v18               |
+| `@angular-classic/platform-server`          | [`platformDynamicServer`](api/platform-server/platformDynamicServer) | v16           | v18               |
+| `@angular-classic/platform-browser`         | [`BrowserModule.withServerTransition`](api/platform-browser/BrowserModule#withservertransition)            | v16           | v18         |
+| `@angular-classic/platform-browser`         | [`makeStateKey`, `StateKey` and `TransferState`](#platform-browser), symbols were moved to `@angular-classic/core`                                        | v16           | v18         |
 
 ### Deprecated features with no planned removal version
 
@@ -163,7 +163,7 @@ In the [API reference section](api) of this site, deprecated APIs are indicated 
 | [`defineInjectable`](api/core/defineInjectable)                                                            | `ɵɵdefineInjectable`                                                                                                                                              | v8                    | Used only in generated code. No source code should depend on this API.                                                                                                                                                                                             |
 | [`entryComponents`](api/core/NgModule)                                                     | none                                                                                                                                                              | v9                    | See [`entryComponents`](#entryComponents)                                                                                                                                                                                                                          |
 | `ANALYZE_FOR_ENTRY_COMPONENTS`                                   | none                                                                                                                                                              | v9                    | See [`ANALYZE_FOR_ENTRY_COMPONENTS`](#entryComponents)                                                                                                                                                                                                             |
-| [`async`](api/core/testing/async)                                                                          | [`waitForAsync`](api/core/testing/waitForAsync)                                                                                                                   | v11                   | The [`async`](api/core/testing/async) function from `@angular/core/testing` has been renamed to `waitForAsync` in order to avoid confusion with the native JavaScript `async` syntax. The existing function is deprecated and can be removed in a future version. |
+| [`async`](api/core/testing/async)                                                                          | [`waitForAsync`](api/core/testing/waitForAsync)                                                                                                                   | v11                   | The [`async`](api/core/testing/async) function from `@angular-classic/core/testing` has been renamed to `waitForAsync` in order to avoid confusion with the native JavaScript `async` syntax. The existing function is deprecated and can be removed in a future version. |
 | [`getModuleFactory`](api/core/getModuleFactory)                                                            | [`getNgModuleById`](api/core/getNgModuleById)                                                                                                                     | v13                   | Ivy allows working with NgModule classes directly, without retrieving corresponding factories.                                                                                                                                                                     |
 | `ViewChildren.emitDistinctChangesOnly` / `ContentChildren.emitDistinctChangesOnly`                         | none \(was part of [issue #40091](https://github.com/angular/angular/issues/40091)\)                                                                              |                       | This is a temporary flag introduced as part of bug fix of [issue #40091](https://github.com/angular/angular/issues/40091) and will be removed.                                                                                                                      |
 | Factory-based signature of [`ApplicationRef.bootstrap`](api/core/ApplicationRef#bootstrap)                 | Type-based signature of [`ApplicationRef.bootstrap`](api/core/ApplicationRef#bootstrap)                                                                           | v13                   | With Ivy, there is no need to resolve Component factory and Component Type can be provided directly.                                                                                                                                                               |
@@ -210,7 +210,7 @@ In the [API reference section](api) of this site, deprecated APIs are indicated 
 | API                                                              | Replacement                                        | Deprecation announced | Details |
 |:---                                                              |:---                                                |:---                   |:---     |
 | [`BrowserModule.withServerTransition`](api/platform-browser/BrowserModule#withservertransition) | No replacement needed.  | v16.0                   | The `APP_ID`token should be used instead to set the application ID. |
-| `makeStateKey`, `StateKey` and `TransferState` | Import from `@angular/core`.  | v16.0                   | Same behavior, but exported from a different package. |
+| `makeStateKey`, `StateKey` and `TransferState` | Import from `@angular-classic/core`.  | v16.0                   | Same behavior, but exported from a different package. |
 <a id="platform-browser-dynamic"></a>
 
 ### &commat;angular/platform-browser-dynamic
@@ -228,7 +228,7 @@ In the [API reference section](api) of this site, deprecated APIs are indicated 
 |:---                                                              |:---                                                |:---                   |:---     |
 | [`ServerTransferStateModule`](api/platform-server/ServerTransferStateModule) | No replacement needed.  | v14.1                   | The `TransferState` class is available for injection without importing additional modules during server side rendering, when `ServerModule` is imported or `renderApplication` function is used for bootstrap. |
 | [`PlatformConfig.baseUrl` and `PlatformConfig.useAbsoluteUrl` config options](api/platform-server/PlatformConfig) | none                    | v16                   | This was previously unused.                   |
-| [`platformDynamicServer`](api/platform-server/platformDynamicServer) | Import `@angular/compiler` and replace the usage with `platformServer` instead. | v16                   | This is done to decrease the server bundle size for AOT builds.                   |
+| [`platformDynamicServer`](api/platform-server/platformDynamicServer) | Import `@angular-classic/compiler` and replace the usage with `platformServer` instead. | v16                   | This is done to decrease the server bundle size for AOT builds.                   |
 
 
 <a id="forms"></a>
@@ -255,7 +255,7 @@ In the [API reference section](api) of this site, deprecated APIs are indicated 
 
 | API                             | Replacement                                     | Deprecation announced | Details |
 |:---                             |:---                                             |:---                   |:---     |
-| [All entry points](api/upgrade) | [`@angular/upgrade/static`](api/upgrade/static) | v5                    | See [Upgrading from AngularJS](guide/upgrade). |
+| [All entry points](api/upgrade) | [`@angular-classic/upgrade/static`](api/upgrade/static) | v5                    | See [Upgrading from AngularJS](guide/upgrade). |
 
 <a id="upgrade-static"></a>
 
@@ -396,7 +396,7 @@ Functional guards are robust enough to even support the existing
 class-based guards through a transform:
 
 ```
-import {CanMatchFn} from '@angular/router';
+import {CanMatchFn} from '@angular-classic/router';
 
 function mapToCanMatch(providers: Array<Type<{canMatch: CanMatchFn}>>): CanMatchFn[] {
   return providers.map(provider => (...params) => inject(provider).canMatch(...params));
@@ -563,7 +563,7 @@ You may still need to keep these if building a library that will be consumed by 
 
 ### `ModuleWithProviders` type without a generic
 
-Some Angular libraries, such as `@angular/router` and `@ngrx/store`, implement APIs that return a type called `ModuleWithProviders` \(typically using a method named `forRoot()`\).
+Some Angular libraries, such as `@angular-classic/router` and `@ngrx/store`, implement APIs that return a type called `ModuleWithProviders` \(typically using a method named `forRoot()`\).
 This type represents an `NgModule` along with additional providers.
 Angular version 9 deprecates use of `ModuleWithProviders` without an explicitly generic type, where the generic type refers to the type of the `NgModule`.
 In a future version of Angular, the generic will no longer be optional.
@@ -671,7 +671,7 @@ See [RFC: Exploration of use-cases for Angular JIT compilation mode](https://git
 ### `TestRequest` accepting `ErrorEvent`
 
 Angular provides utilities for testing `HttpClient`.
-The `TestRequest` class from `@angular/common/http/testing` mocks HTTP request objects for use with `HttpTestingController`.
+The `TestRequest` class from `@angular-classic/common/http/testing` mocks HTTP request objects for use with `HttpTestingController`.
 
 `TestRequest` provides an API for simulating an HTTP response with an error.
 In earlier versions of Angular, this API accepted objects of type `ErrorEvent`, which does not match the type of error event that browsers return natively.
@@ -709,7 +709,7 @@ The following APIs have been removed starting with version 11.0.0&ast;:
 
 | Package           | API                   | Replacement                                                                | Details |
 |:---               |:---                   |:---                                                                        |:---     |
-| `@angular/router` | `preserveQueryParams` | [`queryParamsHandling`](api/router/UrlCreationOptions#queryParamsHandling) |         |
+| `@angular-classic/router` | `preserveQueryParams` | [`queryParamsHandling`](api/router/UrlCreationOptions#queryParamsHandling) |         |
 
 &ast; To see APIs removed in version 10, check out this guide on the [version 10 docs site](https://v10.angular.io/guide/deprecations#removed).
 
@@ -721,14 +721,14 @@ Angular used to sanitize `[style]` and `[style.prop]` bindings to prevent malici
 However, most modern browsers no longer support the usage of these expressions, so sanitization was only maintained for the sake of IE 6 and 7.
 Given that Angular does not support either IE 6 or 7 and sanitization has a performance cost, we will no longer sanitize style bindings as of version 10 of Angular.
 
-### `loadChildren` string syntax in `@angular/router`
+### `loadChildren` string syntax in `@angular-classic/router`
 
 It is no longer possible to use the `loadChildren` string syntax to configure lazy routes.
 The string syntax has been replaced with dynamic import statements.
-The `DeprecatedLoadChildren` type was removed from `@angular/router`.
+The `DeprecatedLoadChildren` type was removed from `@angular-classic/router`.
 Find more information about the replacement in the [`LoadChildrenCallback` documentation](api/router/LoadChildrenCallback).
 
-The supporting classes `NgModuleFactoryLoader`, `SystemJsNgModuleLoader`, and `SystemJsNgModuleLoaderConfig` were removed from `@angular/core`, as well as `SpyNgModuleFactoryLoader` from `@angular/router`.
+The supporting classes `NgModuleFactoryLoader`, `SystemJsNgModuleLoader`, and `SystemJsNgModuleLoaderConfig` were removed from `@angular-classic/core`, as well as `SpyNgModuleFactoryLoader` from `@angular-classic/router`.
 
 ### `WrappedValue`
 

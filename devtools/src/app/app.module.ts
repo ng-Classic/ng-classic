@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgModule} from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {RouterModule} from '@angular/router';
+import {NgModule} from '@angular-classic/core';
+import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
+import {RouterModule} from '@angular-classic/router';
 import {ApplicationEnvironment, ApplicationOperations} from 'ng-devtools';
 
 import {DemoApplicationEnvironment} from '../demo-application-environment';

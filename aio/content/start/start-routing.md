@@ -60,7 +60,7 @@ The Angular Router displays components based on the browser's URL and [your defi
 
 In this section, you'll use the Angular Router to combine the `products` data and route information to display the specific details for each product.
 
-1.  In `product-details.component.ts`, import `ActivatedRoute` from `@angular/router`, and the `products` array from `../products`.
+1.  In `product-details.component.ts`, import `ActivatedRoute` from `@angular-classic/router`, and the `products` array from `../products`.
 
     <code-example header="src/app/product-details/product-details.component.ts" path="getting-started/src/app/product-details/product-details.component.1.ts" region="imports"></code-example>
 

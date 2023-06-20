@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: component.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class OtherCmp {
 }
 OtherCmp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: OtherCmp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -31,7 +31,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: component.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class OtherCmp {
     static ɵfac: i0.ɵɵFactoryDeclaration<OtherCmp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<OtherCmp, "other-cmp", never, {}, {}, never, never, true, never>;
@@ -44,8 +44,8 @@ export declare class StandaloneCmp {
 /****************************************************************************************************
  * PARTIAL FILE: directive.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class StandaloneDir {
 }
 StandaloneDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: StandaloneDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -60,7 +60,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: directive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class StandaloneDir {
     static ɵfac: i0.ɵɵFactoryDeclaration<StandaloneDir, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<StandaloneDir, never, never, {}, {}, never, never, true, never>;
@@ -69,8 +69,8 @@ export declare class StandaloneDir {
 /****************************************************************************************************
  * PARTIAL FILE: pipe.js
  ****************************************************************************************************/
-import { Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class StandalonePipe {
     transform(value) { }
 }
@@ -87,7 +87,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: pipe.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class StandalonePipe {
     transform(value: any): any;
     static ɵfac: i0.ɵɵFactoryDeclaration<StandalonePipe, never>;
@@ -97,8 +97,8 @@ export declare class StandalonePipe {
 /****************************************************************************************************
  * PARTIAL FILE: imports.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class NotStandaloneDir {
 }
 NotStandaloneDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: NotStandaloneDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -214,7 +214,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: imports.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class NotStandaloneDir {
     static ɵfac: i0.ɵɵFactoryDeclaration<NotStandaloneDir, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<NotStandaloneDir, "[not-standalone]", never, {}, {}, never, never, false, never>;
@@ -261,8 +261,8 @@ export declare class TestCmp {
 /****************************************************************************************************
  * PARTIAL FILE: recursive.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class RecursiveComponent {
 }
 RecursiveComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: RecursiveComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -280,7 +280,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: recursive.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class RecursiveComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<RecursiveComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<RecursiveComponent, "recursive-cmp", never, {}, {}, never, never, true, never>;
@@ -289,8 +289,8 @@ export declare class RecursiveComponent {
 /****************************************************************************************************
  * PARTIAL FILE: module_optimization.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class StandaloneCmp {
 }
 StandaloneCmp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: StandaloneCmp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -326,7 +326,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: module_optimization.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class StandaloneCmp {
     static ɵfac: i0.ɵɵFactoryDeclaration<StandaloneCmp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StandaloneCmp, "standalone-cmp", never, {}, {}, never, never, true, never>;
@@ -344,8 +344,8 @@ export declare class Module {
 /****************************************************************************************************
  * PARTIAL FILE: forward_ref.js
  ****************************************************************************************************/
-import { Component, forwardRef } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, forwardRef } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class TestComponent {
 }
 TestComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: TestComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -375,7 +375,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: forward_ref.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class TestComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<TestComponent, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TestComponent, "test", never, {}, {}, never, never, true, never>;

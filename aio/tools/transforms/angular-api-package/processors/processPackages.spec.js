@@ -58,7 +58,7 @@ describe('processPackages processor', () => {
     const package1 = jasmine.objectContaining({
       fileInfo: { filePath: 'some/package-1/PACKAGE.md' },
       docType: 'package',
-      name: '@angular/package-1',
+      name: '@angular-classic/package-1',
       id: 'package-1',
       someProp: 'foo',
       shortDescription: 'some short description',
@@ -70,7 +70,7 @@ describe('processPackages processor', () => {
     const package2 = jasmine.objectContaining({
       fileInfo: { filePath: 'some/package-2/index' },
       docType: 'package',
-      name: '@angular/package-2',
+      name: '@angular-classic/package-2',
       id: 'package-2',
       isPrimaryPackage: true,
     });

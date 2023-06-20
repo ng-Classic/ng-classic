@@ -1,4 +1,4 @@
-import { ErrorHandler, Injectable, VERSION } from '@angular/core';
+import { ErrorHandler, Injectable, VERSION } from '@angular-classic/core';
 import { formatErrorForAnalytics } from './analytics-format-error';
 import { AnalyticsService } from './analytics.service';
 

@@ -7,7 +7,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ConsoleLogger, LogLevel, NodeJSFileSystem, setFileSystem} from '@angular/compiler-cli/private/localize';
+import {ConsoleLogger, LogLevel, NodeJSFileSystem, setFileSystem} from '@angular-classic/compiler-cli/private/localize';
 import glob from 'fast-glob';
 import yargs from 'yargs';
 

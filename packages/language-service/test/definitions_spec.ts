@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 
 import {assertFileNames, assertTextSpans, createModuleAndProjectWithDeclarations, humanizeDocumentSpanLike, LanguageServiceTestEnv, OpenBuffer, Project} from '../testing';
 
@@ -16,7 +16,7 @@ describe('definitions', () => {
     const files = {
       'app.html': '',
       'app.ts': `
-         import {Component} from '@angular/core';
+         import {Component} from '@angular-classic/core';
  
          @Component({templateUrl: '/app.html'})
          export class AppCmp {}
@@ -39,8 +39,8 @@ describe('definitions', () => {
     initMockFileSystem('Native');
     const files = {
       'app.ts': `
-         import {Component, NgModule} from '@angular/core';
-         import {CommonModule} from '@angular/common';
+         import {Component, NgModule} from '@angular-classic/core';
+         import {CommonModule} from '@angular-classic/common';
  
          @Component({templateUrl: 'app.html'})
          export class AppCmp {}
@@ -67,22 +67,22 @@ describe('definitions', () => {
     initMockFileSystem('Native');
     const files = {
       'app.ts': `
-         import {Component, NgModule} from '@angular/core';
-         import {CommonModule} from '@angular/common';
+         import {Component, NgModule} from '@angular-classic/core';
+         import {CommonModule} from '@angular-classic/common';
  
          @Component({templateUrl: 'app.html'})
          export class AppCmp {}
        `,
       'app.html': '<div dir inputA="abc"></div>',
       'dir.ts': `
-       import {Directive, Input} from '@angular/core';
+       import {Directive, Input} from '@angular-classic/core';
  
        @Directive({selector: '[dir]'})
        export class MyDir {
          @Input() inputA!: any;
        }`,
       'dir2.ts': `
-       import {Directive, Input} from '@angular/core';
+       import {Directive, Input} from '@angular-classic/core';
  
        @Directive({selector: '[dir]'})
        export class MyDir2 {
@@ -113,22 +113,22 @@ describe('definitions', () => {
     const files = {
       'app.html': '<div dir (someEvent)="doSomething()"></div>',
       'dir.ts': `
-       import {Directive, Output, EventEmitter} from '@angular/core';
+       import {Directive, Output, EventEmitter} from '@angular-classic/core';
  
        @Directive({selector: '[dir]'})
        export class MyDir {
          @Output() someEvent = new EventEmitter<void>();
        }`,
       'dir2.ts': `
-       import {Directive, Output, EventEmitter} from '@angular/core';
+       import {Directive, Output, EventEmitter} from '@angular-classic/core';
  
        @Directive({selector: '[dir]'})
        export class MyDir2 {
          @Output() someEvent = new EventEmitter<void>();
        }`,
       'app.ts': `
-         import {Component, NgModule} from '@angular/core';
-         import {CommonModule} from '@angular/common';
+         import {Component, NgModule} from '@angular-classic/core';
+         import {CommonModule} from '@angular-classic/common';
  
          @Component({templateUrl: 'app.html'})
          export class AppCmp {
@@ -158,7 +158,7 @@ describe('definitions', () => {
     initMockFileSystem('Native');
     const files = {
       'app.ts': `
-       import {Component} from '@angular/core';
+       import {Component} from '@angular-classic/core';
  
        @Component({
          template: '',
@@ -189,7 +189,7 @@ describe('definitions', () => {
          </ng-container>
        `,
       'app.ts': `
-         import {Component} from '@angular/core';
+         import {Component} from '@angular-classic/core';
  
          @Component({templateUrl: '/app.html'})
          export class AppCmp {
@@ -224,7 +224,7 @@ describe('definitions', () => {
   describe('when an input has a dollar sign', () => {
     const files = {
       'app.ts': `
-	 import {Component, NgModule, Input} from '@angular/core';
+	 import {Component, NgModule, Input} from '@angular-classic/core';
 
 	 @Component({selector: 'dollar-cmp', template: ''})
 	 export class DollarCmp {
@@ -271,7 +271,7 @@ describe('definitions', () => {
       env = LanguageServiceTestEnv.setup();
       const files = {
         'app.ts': `
-	 import {Component, Directive, NgModule, Input} from '@angular/core';
+	 import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
 	 @Directive({selector: '[dollar\\\\$]', template: ''})
 	 export class DollarDir {

@@ -21,13 +21,13 @@ export interface NgDecorator {
 }
 
 /**
- * Gets all decorators which are imported from an Angular package (e.g. "@angular/core")
+ * Gets all decorators which are imported from an Angular package (e.g. "@angular-classic/core")
  * from a list of decorators.
  */
 export function getAngularDecorators(
     typeChecker: ts.TypeChecker, decorators: ReadonlyArray<ts.Decorator>): NgDecorator[] {
   return decorators.map(node => ({node, importData: getCallDecoratorImport(typeChecker, node)}))
-      .filter(({importData}) => importData && importData.importModule.startsWith('@angular/'))
+      .filter(({importData}) => importData && importData.importModule.startsWith('@angular-classic/'))
       .map(({node, importData}) => ({
              node: node as CallExpressionDecorator,
              name: importData!.name,

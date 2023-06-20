@@ -1,5 +1,5 @@
-import { NgModule, Type } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, Type } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { CodeExampleComponent } from './code-example.component';
 import { CodeModule } from './code.module';
 import { WithCustomElementComponent } from '../element-registry';

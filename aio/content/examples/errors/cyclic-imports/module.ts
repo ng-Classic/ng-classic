@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular-classic/core';
 import { ChildComponent } from './child.component';
 import { ParentComponent } from './parent.component';
 

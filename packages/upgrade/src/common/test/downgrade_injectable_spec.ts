@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector} from '@angular/core';
+import {Injector} from '@angular-classic/core';
 import * as angular from '../src/angular1';
 import {$INJECTOR, INJECTOR_KEY, UPGRADE_APP_TYPE_KEY} from '../src/constants';
 import {downgradeInjectable} from '../src/downgrade_injectable';

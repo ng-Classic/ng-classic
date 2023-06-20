@@ -1,9 +1,9 @@
 {
-  "name": "@angular/benchpress",
+  "name": "@angular-classic/benchpress",
   "version": "0.3.0",
   "description": "Benchpress - a framework for e2e performance tests",
   "dependencies": {
-    "@angular/core": "^15.0.0",
+    "@angular-classic/core": "^15.0.0",
     "reflect-metadata": "^0.1.13"
   },
   "repository": {

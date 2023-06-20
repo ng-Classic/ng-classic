@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, AnimationEvent, AnimationMetadata, AnimationTriggerMetadata, NoopAnimationPlayer, state, style, transition, trigger} from '@angular/animations';
+import {animate, AnimationEvent, AnimationMetadata, AnimationTriggerMetadata, NoopAnimationPlayer, state, style, transition, trigger} from '@angular-classic/animations';
 
 import {TriggerAst} from '../../src/dsl/animation_ast';
 import {buildAnimationAst} from '../../src/dsl/animation_ast_builder';

@@ -82,8 +82,8 @@ module.exports =
         .config(function(
             readTypeScriptModules, readFilesProcessor, collectExamples, tsParser,
             packageContentFileReader, specialElementFileReader) {
-          // Tell TypeScript how to load modules that start with with `@angular`
-          tsParser.options.paths = {'@angular/*': [API_SOURCE_PATH + '/*']};
+          // Tell TypeScript how to load modules that start with with `@angular-classic`
+          tsParser.options.paths = {'@angular-classic/*': [API_SOURCE_PATH + '/*']};
           tsParser.options.baseUrl = '.';
 
           // API files are typescript

@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular-classic/core';
 import { SharedModule } from '../shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular-classic/forms';
 
 import { ContactComponent } from './contact.component';
 import { ContactService } from './contact.service';

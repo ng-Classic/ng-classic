@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { NgModule } from '@angular-classic/core';
 import { AppComponent } from './app.component';
 import { HeroJobAdComponent } from './hero-job-ad.component';
 import { AdBannerComponent } from './ad-banner.component';

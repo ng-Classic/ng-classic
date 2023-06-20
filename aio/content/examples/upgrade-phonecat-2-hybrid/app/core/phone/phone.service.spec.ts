@@ -1,6 +1,6 @@
 // #docregion
-import { inject, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { inject, TestBed } from '@angular-classic/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular-classic/common/http/testing';
 import { Phone, PhoneData } from './phone.service';
 
 describe('Phone', () => {

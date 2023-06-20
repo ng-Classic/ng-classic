@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {SchemaMetadata} from '@angular/compiler';
+import {SchemaMetadata} from '@angular-classic/compiler';
 
 import {Reexport, Reference} from '../../imports';
 import {DirectiveMeta, NgModuleMeta, PipeMeta} from '../../metadata';

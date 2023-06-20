@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Element, Expansion, ExpansionCase, Node, Text, visitAll} from '@angular/compiler';
+import {Element, Expansion, ExpansionCase, Node, Text, visitAll} from '@angular-classic/compiler';
 
 import {BaseVisitor} from '../base_visitor';
 import {TranslationParseError} from '../translation_parsers/translation_parse_error';

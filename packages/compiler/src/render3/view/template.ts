@@ -2060,7 +2060,7 @@ export interface ParseTemplateOptions {
    * Include HTML Comment nodes in a top-level comments array on the returned R3 AST.
    *
    * This option is required by tooling that needs to know the location of comment nodes within the
-   * AST. A concrete example is @angular-eslint which requires this in order to enable
+   * AST. A concrete example is @angular-classic-eslint which requires this in order to enable
    * "eslint-disable" comments within HTML templates, which then allows users to turn off specific
    * rules on a case by case basis, instead of for their whole project within a configuration file.
    */

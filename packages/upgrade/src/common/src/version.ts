@@ -12,7 +12,7 @@
  * Entry point for all public APIs of the upgrade package.
  */
 
-import {Version} from '@angular/core';
+import {Version} from '@angular-classic/core';
 
 /**
  * @publicApi

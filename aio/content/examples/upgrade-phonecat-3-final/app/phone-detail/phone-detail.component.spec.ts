@@ -1,7 +1,7 @@
 // #docregion
 // #docregion activatedroute
-import { TestBed, waitForAsync } from '@angular/core/testing';
-import { ActivatedRoute } from '@angular/router';
+import { TestBed, waitForAsync } from '@angular-classic/core/testing';
+import { ActivatedRoute } from '@angular-classic/router';
 // #enddocregion activatedroute
 import { Observable, of } from 'rxjs';
 

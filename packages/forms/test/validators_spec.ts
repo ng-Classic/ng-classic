@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {fakeAsync, tick} from '@angular/core/testing';
-import {AbstractControl, AsyncValidator, AsyncValidatorFn, FormArray, FormControl, ValidationErrors, ValidatorFn, Validators} from '@angular/forms';
+import {fakeAsync, tick} from '@angular-classic/core/testing';
+import {AbstractControl, AsyncValidator, AsyncValidatorFn, FormArray, FormControl, ValidationErrors, ValidatorFn, Validators} from '@angular-classic/forms';
 import {Observable, of, timer} from 'rxjs';
 import {first, map} from 'rxjs/operators';
 

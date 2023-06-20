@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Expression, ExternalExpr, FactoryTarget, ParseLocation, ParseSourceFile, ParseSourceSpan, R3CompiledExpression, R3FactoryMetadata, R3Reference, ReadPropExpr, Statement, WrappedNodeExpr} from '@angular/compiler';
+import {Expression, ExternalExpr, FactoryTarget, ParseLocation, ParseSourceFile, ParseSourceSpan, R3CompiledExpression, R3FactoryMetadata, R3Reference, ReadPropExpr, Statement, WrappedNodeExpr} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {assertSuccessfulReferenceEmit, ImportedFile, ImportFlags, ModuleResolver, Reference, ReferenceEmitter} from '../../../imports';
@@ -63,11 +63,11 @@ export function toR3Reference(
 }
 
 export function isAngularCore(decorator: Decorator): decorator is Decorator&{import: Import} {
-  return decorator.import !== null && decorator.import.from === '@angular/core';
+  return decorator.import !== null && decorator.import.from === '@angular-classic/core';
 }
 
 export function isAngularCoreReference(reference: Reference, symbolName: string): boolean {
-  return reference.ownedByModuleGuess === '@angular/core' && reference.debugName === symbolName;
+  return reference.ownedByModuleGuess === '@angular-classic/core' && reference.debugName === symbolName;
 }
 
 export function findAngularDecorator(
@@ -150,7 +150,7 @@ export function tryUnwrapForwardRef(node: ts.Expression, reflector: ReflectionHo
   }
 
   const imp = reflector.getImportOfIdentifier(fn);
-  if (imp === null || imp.from !== '@angular/core' || imp.name !== 'forwardRef') {
+  if (imp === null || imp.from !== '@angular-classic/core' || imp.name !== 'forwardRef') {
     return null;
   }
 

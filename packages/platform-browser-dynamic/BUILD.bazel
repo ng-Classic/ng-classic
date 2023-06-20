@@ -4,7 +4,7 @@ package(default_visibility = ["//visibility:public"])
 
 ng_module(
     name = "platform-browser-dynamic",
-    package_name = "@angular/platform-browser-dynamic",
+    package_name = "@angular-classic/platform-browser-dynamic",
     srcs = glob(
         [
             "*.ts",

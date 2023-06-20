@@ -16,7 +16,7 @@
     </div>
   </div>
   <ul class="form-select-dropdown" *ngIf="showOptions" [id]="listBoxId" role="listbox" tabIndex="-1" #listBox>
-    <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -- the key events are handled in the ts class -->
+    <!-- eslint-disable-next-line @angular-classic-eslint/template/click-events-have-key-events -- the key events are handled in the ts class -->
     <li *ngFor="let option of options; index as i"
         role="option"
         [class.selected]="option === selected"

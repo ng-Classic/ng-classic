@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {json, normalize, virtualFs, workspaces} from '@angular-devkit/core';
-import {Tree} from '@angular-devkit/schematics';
+import {json, normalize, virtualFs, workspaces} from '@angular-classic-devkit/core';
+import {Tree} from '@angular-classic-devkit/schematics';
 
 /**
  * Gets all tsconfig paths from a CLI project by reading the workspace configuration

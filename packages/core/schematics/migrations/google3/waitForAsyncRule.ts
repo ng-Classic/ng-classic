@@ -26,7 +26,7 @@ export class Rule extends Rules.TypedRule {
   override applyWithProgram(sourceFile: ts.SourceFile, program: ts.Program): RuleFailure[] {
     const failures: RuleFailure[] = [];
     const asyncImportSpecifier =
-        getImportSpecifier(sourceFile, '@angular/core/testing', deprecatedFunction);
+        getImportSpecifier(sourceFile, '@angular-classic/core/testing', deprecatedFunction);
     const asyncImport =
         asyncImportSpecifier ? closestNode(asyncImportSpecifier, ts.isNamedImports) : null;
 

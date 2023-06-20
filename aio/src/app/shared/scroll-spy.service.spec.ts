@@ -1,6 +1,6 @@
-import { Injector } from '@angular/core';
-import { fakeAsync, tick } from '@angular/core/testing';
-import { DOCUMENT } from '@angular/common';
+import { Injector } from '@angular-classic/core';
+import { fakeAsync, tick } from '@angular-classic/core/testing';
+import { DOCUMENT } from '@angular-classic/common';
 
 import { ScrollService } from 'app/shared/scroll.service';
 import {

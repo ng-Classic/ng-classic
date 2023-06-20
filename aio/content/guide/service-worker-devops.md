@@ -308,7 +308,7 @@ When the service worker's request for `ngsw.json` returns a `404`, then the serv
 
 <!-- vale Angular.Google_Acronyms = NO -->
 
-A small script, `safety-worker.js`, is also included in the `@angular/service-worker` NPM package.
+A small script, `safety-worker.js`, is also included in the `@angular-classic/service-worker` NPM package.
 When loaded, it un-registers itself from the browser and removes the service worker caches.
 This script can be used as a last resort to get rid of unwanted service workers already installed on client pages.
 
@@ -323,7 +323,7 @@ You cannot register this worker directly, as old clients with cached state might
 
 Instead, you must serve the contents of `safety-worker.js` at the URL of the Service Worker script you are trying to unregister. You must continue to do so until you are certain all users have successfully unregistered the old worker.
 For most sites, this means that you should serve the safety worker at the old Service Worker URL forever.
-This script can be used to deactivate `@angular/service-worker` and remove the corresponding caches. It also removes any other Service Workers which might have been served in the past on your site.
+This script can be used to deactivate `@angular-classic/service-worker` and remove the corresponding caches. It also removes any other Service Workers which might have been served in the past on your site.
 
 ### Changing your application's location
 

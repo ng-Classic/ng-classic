@@ -21,7 +21,7 @@ describe('BabelDeclarationScope', () => {
     it('should return a path to the ES module where the expression was imported', () => {
       const ast = parser.parse(
                       [
-                        'import * as core from \'@angular/core\';',
+                        'import * as core from \'@angular-classic/core\';',
                         'function foo() {',
                         '  var TEST = core;',
                         '}',

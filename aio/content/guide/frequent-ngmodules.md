@@ -6,12 +6,12 @@ The following are frequently used Angular modules with examples of some of the t
 
 | NgModule              | Import it from              | Why you use it |
 |:---                   |:---                         |:---            |
-| `BrowserModule`       | `@angular/platform-browser` | To run your application in a browser.                  |
-| `CommonModule`        | `@angular/common`           | To use `NgIf` and `NgFor`.                             |
-| `FormsModule`         | `@angular/forms`            | To build template driven forms \(includes `NgModel`\). |
-| `ReactiveFormsModule` | `@angular/forms`            | To build reactive forms.                               |
-| `RouterModule`        | `@angular/router`           | To use `RouterLink`, `.forRoot()`, and `.forChild()`.  |
-| `HttpClientModule`    | `@angular/common/http`      | To communicate with a server using the HTTP protocol.  |
+| `BrowserModule`       | `@angular-classic/platform-browser` | To run your application in a browser.                  |
+| `CommonModule`        | `@angular-classic/common`           | To use `NgIf` and `NgFor`.                             |
+| `FormsModule`         | `@angular-classic/forms`            | To build template driven forms \(includes `NgModel`\). |
+| `ReactiveFormsModule` | `@angular-classic/forms`            | To build reactive forms.                               |
+| `RouterModule`        | `@angular-classic/router`           | To use `RouterLink`, `.forRoot()`, and `.forChild()`.  |
+| `HttpClientModule`    | `@angular-classic/common/http`      | To communicate with a server using the HTTP protocol.  |
 
 ## Importing modules
 

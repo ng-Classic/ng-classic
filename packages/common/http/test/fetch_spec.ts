@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpEvent, HttpEventType, HttpRequest, HttpResponse} from '@angular/common/http';
-import {TestBed} from '@angular/core/testing';
+import {HttpEvent, HttpEventType, HttpRequest, HttpResponse} from '@angular-classic/common/http';
+import {TestBed} from '@angular-classic/core/testing';
 import {Observable, of, Subject} from 'rxjs';
 import {catchError, retry, scan, skip, take, toArray} from 'rxjs/operators';
 

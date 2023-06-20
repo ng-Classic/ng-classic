@@ -1,4 +1,4 @@
-import {Directive, HostBinding, NgModule} from '@angular/core';
+import {Directive, HostBinding, NgModule} from '@angular-classic/core';
 
 @Directive({
   selector: '[hostBindingDir]',

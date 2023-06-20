@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {DomSanitizer, SafeHtml, SafeResourceUrl} from '@angular/platform-browser';
+import {Component} from '@angular-classic/core';
+import {DomSanitizer, SafeHtml, SafeResourceUrl} from '@angular-classic/platform-browser';
 
 @Component({
   selector: 'app-root',

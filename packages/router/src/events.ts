@@ -53,7 +53,7 @@ export const enum EventType {
  * The following code shows how a class subscribes to router events.
  *
  * ```ts
- * import {Event, RouterEvent, Router} from '@angular/router';
+ * import {Event, RouterEvent, Router} from '@angular-classic/router';
  *
  * class MyService {
  *   constructor(public router: Router) {

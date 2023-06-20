@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgIf} from '@angular/common';
-import {ChangeDetectionStrategy, Component, Input, ViewChild} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {NgIf} from '@angular-classic/common';
+import {ChangeDetectionStrategy, Component, Input, ViewChild} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 import {signal} from '../../src/signals';
 

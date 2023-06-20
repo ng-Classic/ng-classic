@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {computed, setPostSignalSetFn, signal} from '@angular/core/src/signals';
+import {computed, setPostSignalSetFn, signal} from '@angular-classic/core/src/signals';
 
 describe('signals', () => {
   it('should be a getter which reflects the set value', () => {

@@ -1,6 +1,6 @@
-import { DebugElement } from '@angular/core';
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular-classic/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular-classic/core/testing';
+import { By } from '@angular-classic/platform-browser';
 
 import { AppComponent } from './app.component';
 

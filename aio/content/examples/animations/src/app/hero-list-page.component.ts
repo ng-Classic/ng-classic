@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion
-import { Component, HostBinding, OnInit } from '@angular/core';
-import { trigger, transition, animate, style, query, stagger } from '@angular/animations';
+import { Component, HostBinding, OnInit } from '@angular-classic/core';
+import { trigger, transition, animate, style, query, stagger } from '@angular-classic/animations';
 import { HEROES } from './mock-heroes';
 import { Hero } from './hero';
 

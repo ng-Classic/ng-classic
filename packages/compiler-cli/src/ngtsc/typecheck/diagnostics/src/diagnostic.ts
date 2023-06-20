@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ParseSourceSpan} from '@angular/compiler';
+import {ParseSourceSpan} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {addDiagnosticChain, makeDiagnosticChain} from '../../../diagnostics';

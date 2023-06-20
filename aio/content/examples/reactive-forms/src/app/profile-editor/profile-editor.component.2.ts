@@ -1,11 +1,11 @@
 // #docplaster
 // #docregion form-builder
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 // #docregion form-builder-imports
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder } from '@angular-classic/forms';
 // #enddocregion form-builder-imports, form-builder
 // #docregion form-array-imports
-import { FormArray } from '@angular/forms';
+import { FormArray } from '@angular-classic/forms';
 // #docregion form-builder-imports, form-builder
 // #enddocregion form-builder-imports, form-array-imports
 

@@ -14,7 +14,7 @@ import {closestNode} from '../../utils/typescript/nodes';
 
 export const deprecatedInterfaces =
     new Set(['CanLoad', 'CanMatch', 'CanActivate', 'CanDeactivate', 'CanActivateChild', 'Resolve']);
-export const routerModule = '@angular/router';
+export const routerModule = '@angular-classic/router';
 
 export type RewriteFn = (startPos: number, width: number, text: string) => void;
 

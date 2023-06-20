@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {animate, AnimationOptions, state, style, transition} from '@angular/animations';
-import {AnimationTransitionInstruction} from '@angular/animations/browser/src/dsl/animation_transition_instruction';
-import {AnimationTrigger} from '@angular/animations/browser/src/dsl/animation_trigger';
+import {animate, AnimationOptions, state, style, transition} from '@angular-classic/animations';
+import {AnimationTransitionInstruction} from '@angular-classic/animations/browser/src/dsl/animation_transition_instruction';
+import {AnimationTrigger} from '@angular-classic/animations/browser/src/dsl/animation_trigger';
 
 import {ENTER_CLASSNAME, LEAVE_CLASSNAME} from '../../src/util';
 import {MockAnimationDriver} from '../../testing';

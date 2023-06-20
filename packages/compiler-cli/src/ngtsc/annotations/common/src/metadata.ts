@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Expression, FunctionExpr, LiteralArrayExpr, LiteralExpr, literalMap, R3ClassMetadata, ReturnStatement, WrappedNodeExpr} from '@angular/compiler';
+import {Expression, FunctionExpr, LiteralArrayExpr, LiteralExpr, literalMap, R3ClassMetadata, ReturnStatement, WrappedNodeExpr} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {CtorParameter, DeclarationNode, Decorator, ReflectionHost, TypeValueReferenceKind} from '../../../reflection';
@@ -153,10 +153,10 @@ function decoratorToMetadata(
 /**
  * Whether a given decorator should be treated as an Angular decorator.
  *
- * Either it's used in @angular/core, or it's imported from there.
+ * Either it's used in @angular-classic/core, or it's imported from there.
  */
 function isAngularDecorator(decorator: Decorator, isCore: boolean): boolean {
-  return isCore || (decorator.import !== null && decorator.import.from === '@angular/core');
+  return isCore || (decorator.import !== null && decorator.import.from === '@angular-classic/core');
 }
 
 /**

@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {APP_BASE_HREF, CommonModule, Location, LocationStrategy, PlatformLocation} from '@angular/common';
-import {MockPlatformLocation} from '@angular/common/testing';
-import {$locationShim, $locationShimProvider, LocationUpgradeModule, UrlCodec} from '@angular/common/upgrade';
-import {Inject, InjectionToken, ModuleWithProviders, NgModule, Optional} from '@angular/core';
-import {UpgradeModule} from '@angular/upgrade/static';
+import {APP_BASE_HREF, CommonModule, Location, LocationStrategy, PlatformLocation} from '@angular-classic/common';
+import {MockPlatformLocation} from '@angular-classic/common/testing';
+import {$locationShim, $locationShimProvider, LocationUpgradeModule, UrlCodec} from '@angular-classic/common/upgrade';
+import {Inject, InjectionToken, ModuleWithProviders, NgModule, Optional} from '@angular-classic/core';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
 
 export interface LocationUpgradeTestingConfig {
   useHash?: boolean;

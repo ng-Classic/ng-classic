@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DestroyRef, EnvironmentInjector, Injector, runInInjectionContext} from '@angular/core';
-import {toSignal} from '@angular/core/rxjs-interop';
+import {DestroyRef, EnvironmentInjector, Injector, runInInjectionContext} from '@angular-classic/core';
+import {toSignal} from '@angular-classic/core/rxjs-interop';
 import {BehaviorSubject, ReplaySubject, Subject} from 'rxjs';
 
 describe('toSignal()', () => {

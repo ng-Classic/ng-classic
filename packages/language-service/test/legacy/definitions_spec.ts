@@ -489,7 +489,7 @@ describe('definitions', () => {
   describe('external resources', () => {
     it('should be able to find a template from a url', () => {
       const {position, text} = service.overwrite(APP_COMPONENT, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 	      @Component({
 	        templateUrl: './tes¦t.ng',
 	      })
@@ -510,7 +510,7 @@ describe('definitions', () => {
 
     it('should be able to find a stylesheet from a url', () => {
       const {position, text} = service.overwrite(APP_COMPONENT, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 	      @Component({
 	        template: 'empty',
 	        styleUrls: ['./te¦st.css']
@@ -534,7 +534,7 @@ describe('definitions', () => {
 
     xit('should be able to find a resource url with malformed component meta', () => {
       const {position, text} = service.overwrite(APP_COMPONENT, `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 	      @Component({
 	        invalidProperty: '',
 	        styleUrls: ['./te¦st.css']

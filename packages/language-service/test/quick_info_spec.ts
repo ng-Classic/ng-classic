@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 import ts from 'typescript/lib/tsserverlibrary';
 
 import {createModuleAndProjectWithDeclarations, LanguageServiceTestEnv, Project} from '../testing';
@@ -14,8 +14,8 @@ import {createModuleAndProjectWithDeclarations, LanguageServiceTestEnv, Project}
 function quickInfoSkeleton(): {[fileName: string]: string} {
   return {
     'app.ts': `
-        import {Component, Directive, EventEmitter, Input, NgModule, Output, Pipe, PipeTransform} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {Component, Directive, EventEmitter, Input, NgModule, Output, Pipe, PipeTransform} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         export interface Address {
           streetName: string;
@@ -447,7 +447,7 @@ describe('quick info', () => {
 
       it('should work for safe method calls', () => {
         const files = {
-          'app.ts': `import {Component} from '@angular/core';
+          'app.ts': `import {Component} from '@angular-classic/core';
             @Component({template: '<div (click)="something?.myFunc()"></div>'})
             export class AppCmp {
               something!: {
@@ -528,8 +528,8 @@ describe('quick info', () => {
       project = env.addProject(
           'test', {
             'app.ts': `
-            import {Component, NgModule} from '@angular/core';
-            import {CommonModule} from '@angular/common';
+            import {Component, NgModule} from '@angular-classic/core';
+            import {CommonModule} from '@angular-classic/common';
 
             @Component({
               selector: 'some-cmp',
@@ -577,7 +577,7 @@ describe('quick info', () => {
          // because its generic type parameter references `PrivateInterface`, which is not exported.
          project = env.addProject('test', {
            'app.ts': `
-          import {Directive, Component, Input, NgModule} from '@angular/core';
+          import {Directive, Component, Input, NgModule} from '@angular-classic/core';
 
           interface PrivateInterface {}
 
@@ -648,7 +648,7 @@ describe('quick info', () => {
     it('should still get quick info if there is an invalid css resource', () => {
       project = env.addProject('test', {
         'app.ts': `
-         import {Component, NgModule} from '@angular/core';
+         import {Component, NgModule} from '@angular-classic/core';
 
          @Component({
            selector: 'some-cmp',

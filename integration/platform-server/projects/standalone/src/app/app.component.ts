@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
+import { RouterOutlet } from '@angular-classic/router';
 
 @Component({
   selector: 'app-root',

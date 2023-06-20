@@ -7,10 +7,10 @@
  */
 
 // #docplaster
-import {Component, Directive, ElementRef, getPlatform, Injectable, Injector, NgModule, StaticProvider} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {downgradeComponent, downgradeInjectable, downgradeModule, UpgradeComponent} from '@angular/upgrade/static';
+import {Component, Directive, ElementRef, getPlatform, Injectable, Injector, NgModule, StaticProvider} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {downgradeComponent, downgradeInjectable, downgradeModule, UpgradeComponent} from '@angular-classic/upgrade/static';
 
 
 declare var angular: ng.IAngularStatic;

@@ -8,15 +8,15 @@ load("@npm//@bazel/rollup:index.bzl", _rollup_bundle = "rollup_bundle")
 load("@npm//@bazel/terser:index.bzl", "terser_minified")
 load("@npm//@bazel/protractor:index.bzl", _protractor_web_test_suite = "protractor_web_test_suite")
 load("@npm//typescript:index.bzl", "tsc")
-load("@npm//@angular/build-tooling/bazel/app-bundling:index.bzl", _app_bundle = "app_bundle")
-load("@npm//@angular/build-tooling/bazel/http-server:index.bzl", _http_server = "http_server")
-load("@npm//@angular/build-tooling/bazel/karma:index.bzl", _karma_web_test = "karma_web_test", _karma_web_test_suite = "karma_web_test_suite")
-load("@npm//@angular/build-tooling/bazel/api-golden:index.bzl", _api_golden_test = "api_golden_test", _api_golden_test_npm_package = "api_golden_test_npm_package")
-load("@npm//@angular/build-tooling/bazel:extract_js_module_output.bzl", "extract_js_module_output")
-load("@npm//@angular/build-tooling/bazel:extract_types.bzl", _extract_types = "extract_types")
-load("@npm//@angular/build-tooling/bazel/esbuild:index.bzl", _esbuild = "esbuild", _esbuild_config = "esbuild_config")
-load("@npm//@angular/build-tooling/bazel/spec-bundling:spec-entrypoint.bzl", "spec_entrypoint")
-load("@npm//@angular/build-tooling/bazel/spec-bundling:index.bzl", "spec_bundle")
+load("@npm//@angular-classic/build-tooling/bazel/app-bundling:index.bzl", _app_bundle = "app_bundle")
+load("@npm//@angular-classic/build-tooling/bazel/http-server:index.bzl", _http_server = "http_server")
+load("@npm//@angular-classic/build-tooling/bazel/karma:index.bzl", _karma_web_test = "karma_web_test", _karma_web_test_suite = "karma_web_test_suite")
+load("@npm//@angular-classic/build-tooling/bazel/api-golden:index.bzl", _api_golden_test = "api_golden_test", _api_golden_test_npm_package = "api_golden_test_npm_package")
+load("@npm//@angular-classic/build-tooling/bazel:extract_js_module_output.bzl", "extract_js_module_output")
+load("@npm//@angular-classic/build-tooling/bazel:extract_types.bzl", _extract_types = "extract_types")
+load("@npm//@angular-classic/build-tooling/bazel/esbuild:index.bzl", _esbuild = "esbuild", _esbuild_config = "esbuild_config")
+load("@npm//@angular-classic/build-tooling/bazel/spec-bundling:spec-entrypoint.bzl", "spec_entrypoint")
+load("@npm//@angular-classic/build-tooling/bazel/spec-bundling:index.bzl", "spec_bundle")
 load("@npm//tsec:index.bzl", _tsec_test = "tsec_test")
 load("//packages/bazel:index.bzl", _ng_module = "ng_module", _ng_package = "ng_package")
 load("//tools/esm-interop:index.bzl", "enable_esm_node_module_loader", _nodejs_binary = "nodejs_binary", _nodejs_test = "nodejs_test")
@@ -33,9 +33,9 @@ http_server = _http_server
 extract_types = _extract_types
 
 # Packages which are versioned together on npm
-ANGULAR_SCOPED_PACKAGES = ["@angular/%s" % p for p in [
+ANGULAR_SCOPED_PACKAGES = ["@angular-classic/%s" % p for p in [
     # core should be the first package because it's the main package in the group
-    # this is significant for Angular CLI and "ng update" specifically, @angular/core
+    # this is significant for Angular CLI and "ng update" specifically, @angular-classic/core
     # is considered the identifier of the group by these tools.
     "core",
     "bazel",
@@ -47,7 +47,7 @@ ANGULAR_SCOPED_PACKAGES = ["@angular/%s" % p for p in [
     "platform-browser",
     "platform-browser-dynamic",
     "forms",
-    # Current plan for Angular v8 is to not include @angular/http in ng update
+    # Current plan for Angular v8 is to not include @angular-classic/http in ng update
     # "http",
     "platform-server",
     "upgrade",
@@ -66,7 +66,7 @@ PKG_GROUP_REPLACEMENTS = {
 def _default_module_name(testonly):
     """ Provide better defaults for package names.
 
-    e.g. rather than angular/packages/core/testing we want @angular/core/testing
+    e.g. rather than angular/packages/core/testing we want @angular-classic/core/testing
 
     TODO(alexeagle): we ought to supply a default module name for every library in the repo.
     But we short-circuit below in cases that are currently not working.
@@ -90,7 +90,7 @@ def _default_module_name(testonly):
         return None
 
     if pkg.startswith("packages/"):
-        return "@angular/" + pkg[len("packages/"):]
+        return "@angular-classic/" + pkg[len("packages/"):]
 
     return None
 
@@ -282,8 +282,8 @@ def karma_web_test_suite(
         name,
         external = [],
         browsers = [
-            "@npm//@angular/build-tooling/bazel/browsers/chromium:chromium",
-            "@npm//@angular/build-tooling/bazel/browsers/firefox:firefox",
+            "@npm//@angular-classic/build-tooling/bazel/browsers/chromium:chromium",
+            "@npm//@angular-classic/build-tooling/bazel/browsers/firefox:firefox",
         ],
         **kwargs):
     """Default values for karma_web_test_suite"""
@@ -348,7 +348,7 @@ def protractor_web_test_suite(
         name,
         deps = [],
         external = [],
-        browsers = ["@npm//@angular/build-tooling/bazel/browsers/chromium:chromium"],
+        browsers = ["@npm//@angular-classic/build-tooling/bazel/browsers/chromium:chromium"],
         **kwargs):
     """Default values for protractor_web_test_suite"""
     spec_bundle(

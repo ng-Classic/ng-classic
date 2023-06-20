@@ -64,7 +64,7 @@ This step is only required if you have a version of node installed, otherwise, p
 
 </section>
 
-Angular requires an active LTS or maintenance LTS version of Node. Let's confirm your version of `node.js`. For information about specific version requirements, see the engines property in the [package.json file](https://unpkg.com/browse/@angular/core@15.1.5/package.json).
+Angular requires an active LTS or maintenance LTS version of Node. Let's confirm your version of `node.js`. For information about specific version requirements, see the engines property in the [package.json file](https://unpkg.com/browse/@angular-classic/core@15.1.5/package.json).
 
 From a **Terminal** window:
 1. Run the following command: `node --version`
@@ -81,7 +81,7 @@ With `node.js` and `npm` installed, the next step is to install the [Angular CLI
 
 From a **Terminal** window:
 
-1. Run the following command: `npm install -g @angular/cli`
+1. Run the following command: `npm install -g @angular-classic/cli`
 1. Once the installation completes, the terminal window will display details of the Angular CLI version installed on your local computer.
 
 ### Step 4 - Install integrated development environment (IDE)

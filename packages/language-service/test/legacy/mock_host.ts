@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgCompilerOptions} from '@angular/compiler-cli/src/ngtsc/core/api';
+import {NgCompilerOptions} from '@angular-classic/compiler-cli/src/ngtsc/core/api';
 import {join} from 'path';
 import ts from 'typescript/lib/tsserverlibrary';
 

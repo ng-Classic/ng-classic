@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {QueryList} from '@angular/core/src/linker/query_list';
-import {iterateListLike} from '@angular/core/src/util/iterable';
-import {fakeAsync, tick} from '@angular/core/testing';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {QueryList} from '@angular-classic/core/src/linker/query_list';
+import {iterateListLike} from '@angular-classic/core/src/util/iterable';
+import {fakeAsync, tick} from '@angular-classic/core/testing';
 
 {
   describe('QueryList', () => {

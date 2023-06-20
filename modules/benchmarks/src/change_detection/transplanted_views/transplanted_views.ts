@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgForOfContext} from '@angular/common';
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, NgModule, TemplateRef, ViewChild} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {NgForOfContext} from '@angular-classic/common';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, NgModule, TemplateRef, ViewChild} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 import {newArray} from '../util';
 

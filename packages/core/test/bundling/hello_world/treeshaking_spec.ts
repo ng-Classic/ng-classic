@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import '@angular/compiler';
+import '@angular-classic/compiler';
 
 import {runfiles} from '@bazel/runfiles';
 import * as fs from 'fs';

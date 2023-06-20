@@ -6,17 +6,17 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, ɵgetDOM as getDOM} from '@angular/common';
-import {ResourceLoader} from '@angular/compiler';
-import {APP_BOOTSTRAP_LISTENER, APP_INITIALIZER, Compiler, CompilerFactory, Component, EnvironmentInjector, InjectionToken, LOCALE_ID, NgModule, NgZone, PlatformRef, RendererFactory2, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular/core';
-import {ErrorHandler} from '@angular/core/src/error_handler';
-import {ComponentRef} from '@angular/core/src/linker/component_factory';
-import {createEnvironmentInjector, getLocaleId} from '@angular/core/src/render3';
-import {BrowserModule} from '@angular/platform-browser';
-import {DomRendererFactory2} from '@angular/platform-browser/src/dom/dom_renderer';
-import {createTemplate, dispatchEvent, getContent} from '@angular/platform-browser/testing/src/browser_util';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
-import type {ServerModule} from '@angular/platform-server';
+import {DOCUMENT, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {ResourceLoader} from '@angular-classic/compiler';
+import {APP_BOOTSTRAP_LISTENER, APP_INITIALIZER, Compiler, CompilerFactory, Component, EnvironmentInjector, InjectionToken, LOCALE_ID, NgModule, NgZone, PlatformRef, RendererFactory2, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {ErrorHandler} from '@angular-classic/core/src/error_handler';
+import {ComponentRef} from '@angular-classic/core/src/linker/component_factory';
+import {createEnvironmentInjector, getLocaleId} from '@angular-classic/core/src/render3';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {DomRendererFactory2} from '@angular-classic/platform-browser/src/dom/dom_renderer';
+import {createTemplate, dispatchEvent, getContent} from '@angular-classic/platform-browser/testing/src/browser_util';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
+import type {ServerModule} from '@angular-classic/platform-server';
 
 import {ApplicationRef} from '../src/application_ref';
 import {NoopNgZone} from '../src/zone/ng_zone';
@@ -26,7 +26,7 @@ let serverPlatformModule: Promise<Type<ServerModule>>|null = null;
 if (isNode) {
   // Only when we are in Node, we load the platform-server module. It will
   // be required later in specs for declaring the platform module.
-  serverPlatformModule = import('@angular/platform-server').then(m => m.ServerModule);
+  serverPlatformModule = import('@angular-classic/platform-server').then(m => m.ServerModule);
 }
 
 @Component({selector: 'bootstrap-app', template: 'hello'})

@@ -16,9 +16,9 @@ import * as r3 from '../index';
 
 
 /**
- * A mapping of the @angular/core API surface used in generated expressions to the actual symbols.
+ * A mapping of the @angular-classic/core API surface used in generated expressions to the actual symbols.
  *
- * This should be kept up to date with the public exports of @angular/core.
+ * This should be kept up to date with the public exports of @angular-classic/core.
  */
 export const angularCoreEnv: {[name: string]: Function} =
     (() => ({

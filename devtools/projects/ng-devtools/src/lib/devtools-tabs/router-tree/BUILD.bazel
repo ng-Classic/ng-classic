@@ -22,7 +22,7 @@ ng_module(
         "//devtools/projects/protocol",
         "//packages/common",
         "//packages/core",
-        "@npm//@angular/material",
+        "@npm//@angular-classic/material",
         "@npm//@types",
         "@npm//d3",
         "@npm//rxjs",

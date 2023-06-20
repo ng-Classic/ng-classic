@@ -8,8 +8,8 @@ they want, regardless of the guard name.
 
 #### Before
 ```ts
-import { Injectable } from '@angular/router';
-import { CanActivate } from '@angular/router';
+import { Injectable } from '@angular-classic/router';
+import { CanActivate } from '@angular-classic/router';
 
 @Injectable({providedIn: 'root'})
 export class MyGuard implements CanActivate {
@@ -21,7 +21,7 @@ export class MyGuard implements CanActivate {
 
 #### After
 ```ts
-import { Injectable } from '@angular/router';
+import { Injectable } from '@angular-classic/router';
 
 @Injectable({providedIn: 'root'})
 export class MyGuard {

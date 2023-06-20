@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef } from '@angular-classic/core';
 import { LazyLoaderService } from '../lazy-loader.service';
 
 @Component({

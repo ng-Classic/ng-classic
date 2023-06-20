@@ -1,4 +1,4 @@
-import {Attribute, Component, Host, Injectable, NgModule, Optional, Self, SkipSelf} from '@angular/core';
+import {Attribute, Component, Host, Injectable, NgModule, Optional, Self, SkipSelf} from '@angular-classic/core';
 
 @Injectable()
 export class MyService {

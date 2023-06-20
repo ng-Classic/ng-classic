@@ -1,16 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ServiceWorkerModule } from '@angular/service-worker';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { ErrorHandler, NgModule } from '@angular-classic/core';
+import { HttpClientModule } from '@angular-classic/common/http';
+import { BrowserAnimationsModule } from '@angular-classic/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular-classic/service-worker';
 
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Location, LocationStrategy, PathLocationStrategy } from '@angular-classic/common';
 
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatIconRegistry } from '@angular/material/icon';
-import { MatLegacyProgressBarModule as MatProgressBarModule } from '@angular/material/legacy-progress-bar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular-classic/material/legacy-button';
+import { MatIconRegistry } from '@angular-classic/material/icon';
+import { MatLegacyProgressBarModule as MatProgressBarModule } from '@angular-classic/material/legacy-progress-bar';
+import { MatSidenavModule } from '@angular-classic/material/sidenav';
+import { MatToolbarModule } from '@angular-classic/material/toolbar';
 
 import { svg } from 'app/shared/security';
 import { trustedResourceUrl, unwrapResourceUrl } from 'safevalues';

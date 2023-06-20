@@ -7,7 +7,7 @@
  */
 
 
-import {Inject, Injectable, InjectionToken, NgZone, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {Inject, Injectable, InjectionToken, NgZone, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {RuntimeErrorCode} from '../../errors';
 

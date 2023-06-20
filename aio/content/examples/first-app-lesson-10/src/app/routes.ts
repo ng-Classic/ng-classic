@@ -1,5 +1,5 @@
 // #docregion import-routes-components
-import { Routes } from '@angular/router';
+import { Routes } from '@angular-classic/router';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 // #enddocregion

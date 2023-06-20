@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {Component, Directive} from '@angular/core';
-import {ElementRef} from '@angular/core/src/linker/element_ref';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {hasClass} from '@angular/platform-browser/testing/src/browser_util';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Component, Directive} from '@angular-classic/core';
+import {ElementRef} from '@angular-classic/core/src/linker/element_ref';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {hasClass} from '@angular-classic/platform-browser/testing/src/browser_util';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 {
   describe('non-bindable', () => {

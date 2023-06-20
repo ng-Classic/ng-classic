@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {KeyValueDiffer, KeyValueDifferFactory, KeyValueDiffers, NgModule} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {KeyValueDiffer, KeyValueDifferFactory, KeyValueDiffers, NgModule} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 
 describe('KeyValueDiffers', function() {

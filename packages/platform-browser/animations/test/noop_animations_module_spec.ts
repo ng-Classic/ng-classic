@@ -5,11 +5,11 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, style, transition, trigger} from '@angular/animations';
-import {ɵAnimationEngine} from '@angular/animations/browser';
-import {Component} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {BrowserAnimationsModule, NoopAnimationsModule, provideNoopAnimations} from '@angular/platform-browser/animations';
+import {animate, style, transition, trigger} from '@angular-classic/animations';
+import {ɵAnimationEngine} from '@angular-classic/animations/browser';
+import {Component} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {BrowserAnimationsModule, NoopAnimationsModule, provideNoopAnimations} from '@angular-classic/platform-browser/animations';
 
 describe('NoopAnimationsModule', () => {
   beforeEach(() => {

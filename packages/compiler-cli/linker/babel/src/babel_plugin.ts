@@ -18,7 +18,7 @@ import {createEs2015LinkerPlugin} from './es2015_linker_plugin';
  * that the plugin can be used using the module specifier of the package. This is the recommended
  * way of integrating the Angular Linker into a build pipeline other than the Angular CLI.
  *
- * When the module specifier `@angular/compiler-cli/linker/babel` is used as a plugin in a Babel
+ * When the module specifier `@angular-classic/compiler-cli/linker/babel` is used as a plugin in a Babel
  * configuration, Babel invokes this function (by means of the default export) to create the plugin
  * instance according to the provided options.
  *

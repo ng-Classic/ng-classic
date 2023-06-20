@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output } from '@angular-classic/core';
 import { SearchResult, SearchResults, SearchArea } from 'app/search/interfaces';
 
 enum SearchState {

@@ -39,8 +39,8 @@ declare const Zone: any;
  * ### Example
  *
  * ```
- * import {Component, NgZone} from '@angular/core';
- * import {NgIf} from '@angular/common';
+ * import {Component, NgZone} from '@angular-classic/core';
+ * import {NgIf} from '@angular-classic/common';
  *
  * @Component({
  *   selector: 'ng-zone-demo',

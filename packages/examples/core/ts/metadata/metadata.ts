@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Attribute, Component, Directive, Pipe} from '@angular/core';
+import {Attribute, Component, Directive, Pipe} from '@angular-classic/core';
 
 class CustomDirective {}
 

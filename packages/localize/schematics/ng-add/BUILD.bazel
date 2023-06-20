@@ -16,8 +16,8 @@ ts_library(
     ],
     tsconfig = ":tsconfig",
     deps = [
-        "@npm//@angular-devkit/core",
-        "@npm//@angular-devkit/schematics",
+        "@npm//@angular-classic-devkit/core",
+        "@npm//@angular-classic-devkit/schematics",
         "@npm//@schematics/angular",
     ],
 )
@@ -26,7 +26,7 @@ esbuild(
     name = "ng_add_bundle",
     entry_point = ":index.ts",
     external = [
-        "@angular-devkit/*",
+        "@angular-classic-devkit/*",
         "@schematics/*",
     ],
     format = "cjs",
@@ -52,7 +52,7 @@ ts_library(
         "//packages/localize/schematics:package_assets",
     ],
     deps = [
-        "@npm//@angular-devkit/schematics",
+        "@npm//@angular-classic-devkit/schematics",
         "@npm//@bazel/runfiles",
         "@npm//typescript",
     ],

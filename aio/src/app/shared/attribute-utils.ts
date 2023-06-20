@@ -1,5 +1,5 @@
 // Utilities for processing HTML element attributes
-import { ElementRef } from '@angular/core';
+import { ElementRef } from '@angular-classic/core';
 
 export interface AttrMap {
   [key: string]: string;

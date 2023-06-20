@@ -2,7 +2,7 @@
 import { Observable } from 'rxjs';
 import { CanDeactivateFn,
          ActivatedRouteSnapshot,
-         RouterStateSnapshot } from '@angular/router';
+         RouterStateSnapshot } from '@angular-classic/router';
 
 import { CrisisDetailComponent } from './crisis-center/crisis-detail/crisis-detail.component';
 

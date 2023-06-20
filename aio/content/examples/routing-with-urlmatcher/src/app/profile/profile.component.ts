@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 // #docregion activated-route-and-parammap
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular-classic/router';
 // #enddocregion activated-route-and-parammap
 // #docregion rxjs-map
 import { map } from 'rxjs/operators';

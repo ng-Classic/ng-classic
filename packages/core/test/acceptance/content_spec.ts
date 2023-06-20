@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {ChangeDetectorRef, Component, Directive, Input, TemplateRef, ViewChild, ViewContainerRef} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule} from '@angular-classic/common';
+import {ChangeDetectorRef, Component, Directive, Input, TemplateRef, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('projection', () => {
   function getElementHtml(element: HTMLElement) {

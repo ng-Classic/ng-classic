@@ -47,14 +47,14 @@ export {booleanAttribute, numberAttribute} from './util/coercion';
 import {global} from './util/global';
 if (typeof ngDevMode !== 'undefined' && ngDevMode) {
   // This helper is to give a reasonable error message to people upgrading to v9 that have not yet
-  // installed `@angular/localize` in their app.
+  // installed `@angular-classic/localize` in their app.
   // tslint:disable-next-line: no-toplevel-property-access
   global.$localize = global.$localize || function() {
     throw new Error(
         'It looks like your application or one of its dependencies is using i18n.\n' +
         'Angular 9 introduced a global `$localize()` function that needs to be loaded.\n' +
-        'Please run `ng add @angular/localize` from the Angular CLI.\n' +
-        '(For non-CLI projects, add `import \'@angular/localize/init\';` to your `polyfills.ts` file.\n' +
+        'Please run `ng add @angular-classic/localize` from the Angular CLI.\n' +
+        '(For non-CLI projects, add `import \'@angular-classic/localize/init\';` to your `polyfills.ts` file.\n' +
         'For server-side rendering applications add the import to your `main.server.ts` file.)');
   };
 }

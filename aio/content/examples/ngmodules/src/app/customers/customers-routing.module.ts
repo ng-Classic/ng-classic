@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular-classic/core';
 import { Routes,
-         RouterModule } from '@angular/router';
+         RouterModule } from '@angular-classic/router';
 
 import { CustomersComponent } from './customers.component';
 import { CustomersListComponent } from './customers-list.component';

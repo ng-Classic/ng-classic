@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings.js
  ****************************************************************************************************/
-import { Directive, HostBinding, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, HostBinding, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostBindingDir {
     constructor() {
         this.dirId = 'some id';
@@ -30,7 +30,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class HostBindingDir {
     dirId: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<HostBindingDir, never>;
@@ -45,8 +45,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings_with_temporaries.js
  ****************************************************************************************************/
-import { Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostBindingDir {
 }
 HostBindingDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: HostBindingDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -68,7 +68,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings_with_temporaries.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class HostBindingDir {
     getData?: () => {
         id: number;
@@ -85,8 +85,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings_with_pure_functions.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostBindingComp {
     constructor() {
         this.id = 'some id';
@@ -111,7 +111,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings_with_pure_functions.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class HostBindingComp {
     id: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<HostBindingComp, never>;
@@ -126,8 +126,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: host_attribute_bindings.js
  ****************************************************************************************************/
-import { Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostAttributeDir {
     constructor() {
         this.required = true;
@@ -152,7 +152,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_attribute_bindings.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class HostAttributeDir {
     required: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<HostAttributeDir, never>;
@@ -167,8 +167,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: host_attributes.js
  ****************************************************************************************************/
-import { Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostAttributeDir {
 }
 HostAttributeDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: HostAttributeDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -190,7 +190,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_attributes.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class HostAttributeDir {
     static ɵfac: i0.ɵɵFactoryDeclaration<HostAttributeDir, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<HostAttributeDir, "[hostAttributeDir]", never, {}, {}, never, never, false, never>;
@@ -204,8 +204,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: host_attributes_with_classes_and_styles.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostAttributeComp {
 }
 HostAttributeComp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: HostAttributeComp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -248,7 +248,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_attributes_with_classes_and_styles.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class HostAttributeComp {
     static ɵfac: i0.ɵɵFactoryDeclaration<HostAttributeComp, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<HostAttributeComp, "my-host-attribute-component", never, {}, {}, never, never, false, never>;
@@ -266,8 +266,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_property_bindings.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDirective {
     constructor() {
         this.myTitle = 'hello';
@@ -284,7 +284,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_property_bindings.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     myTitle: string;
     myId: string;
@@ -295,8 +295,8 @@ export declare class MyDirective {
 /****************************************************************************************************
  * PARTIAL FILE: chain_property_bindings_all.js
  ****************************************************************************************************/
-import { Directive, HostBinding } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, HostBinding } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDirective {
     constructor() {
         this.myTitle = 'hello';
@@ -319,7 +319,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_property_bindings_all.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     myTitle: string;
     myId: string;
@@ -330,8 +330,8 @@ export declare class MyDirective {
 /****************************************************************************************************
  * PARTIAL FILE: chain_property_bindings_mixed.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDirective {
 }
 MyDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -347,7 +347,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_property_bindings_mixed.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<MyDirective, "[my-dir]", never, {}, {}, never, never, false, never>;
@@ -356,8 +356,8 @@ export declare class MyDirective {
 /****************************************************************************************************
  * PARTIAL FILE: chain_synthetic_properties.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDirective {
     constructor() {
         this.expandedState = 'collapsed';
@@ -377,7 +377,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_synthetic_properties.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     expandedState: string;
     isSmall: boolean;
@@ -388,8 +388,8 @@ export declare class MyDirective {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_attribute_bindings.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDirective {
     constructor() {
         this.myTitle = 'hello';
@@ -409,7 +409,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_attribute_bindings.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     myTitle: string;
     myId: string;
@@ -420,8 +420,8 @@ export declare class MyDirective {
 /****************************************************************************************************
  * PARTIAL FILE: chain_attribute_bindings_all.js
  ****************************************************************************************************/
-import { Directive, HostBinding } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, HostBinding } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDirective {
     constructor() {
         this.myTitle = 'hello';
@@ -444,7 +444,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_attribute_bindings_all.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     myTitle: string;
     myId: string;
@@ -455,8 +455,8 @@ export declare class MyDirective {
 /****************************************************************************************************
  * PARTIAL FILE: chain_attribute_bindings_mixed.js
  ****************************************************************************************************/
-import { Directive } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDirective {
 }
 MyDirective.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -472,7 +472,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_attribute_bindings_mixed.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDeclaration<MyDirective, "[my-dir]", never, {}, {}, never, never, false, never>;
@@ -481,8 +481,8 @@ export declare class MyDirective {
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_listeners.js
  ****************************************************************************************************/
-import { Directive, HostListener } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, HostListener } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDirective {
     mousedown() { }
     mouseup() { }
@@ -508,7 +508,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_multiple_listeners.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDirective {
     mousedown(): void;
     mouseup(): void;
@@ -520,8 +520,8 @@ export declare class MyDirective {
 /****************************************************************************************************
  * PARTIAL FILE: chain_synthetic_listeners.js
  ****************************************************************************************************/
-import { Component, HostListener } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, HostListener } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     start() {
     }
@@ -545,7 +545,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_synthetic_listeners.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     start(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -555,8 +555,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: chain_synthetic_listeners_mixed.js
  ****************************************************************************************************/
-import { Component, HostListener } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, HostListener } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     start() {
     }
@@ -587,7 +587,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: chain_synthetic_listeners_mixed.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     start(): void;
     click(): void;
@@ -598,8 +598,8 @@ export declare class MyComponent {
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings_primitive_names.js
  ****************************************************************************************************/
-import { Directive, HostBinding, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, HostBinding, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostBindingDir {
 }
 HostBindingDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: HostBindingDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -636,7 +636,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings_primitive_names.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class HostBindingDir {
     true: any;
     false: any;
@@ -653,8 +653,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings_quoted_names.js
  ****************************************************************************************************/
-import { Directive, HostBinding, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, HostBinding, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class HostBindingDir {
 }
 HostBindingDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: HostBindingDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
@@ -685,7 +685,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_bindings_quoted_names.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class HostBindingDir {
     'is-a': any;
     'is-"b"': any;

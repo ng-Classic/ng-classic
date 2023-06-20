@@ -1,6 +1,6 @@
 // #docregion
-import { Component } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { Component } from '@angular-classic/core';
+import { NavigationExtras, Router } from '@angular-classic/router';
 import { AuthService } from '../auth.service';
 
 @Component({

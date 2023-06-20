@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DebugElement} from '@angular/core';
-import {By} from '@angular/platform-browser';
+import {DebugElement} from '@angular-classic/core';
+import {By} from '@angular-classic/platform-browser';
 
 let debugElement: DebugElement = undefined!;
 class MyDirective {}

@@ -355,7 +355,7 @@ runInEachFileSystem(() => {
       it('should produce a diagnostic for directive outputs', () => {
         const messages = diagnose(
             `<div dir (event)="handleEvent($event)"></div>`, `
-          import {EventEmitter} from '@angular/core';
+          import {EventEmitter} from '@angular-classic/core';
           class Dir {
             out = new EventEmitter<number>();
           }
@@ -382,7 +382,7 @@ runInEachFileSystem(() => {
 
       it('should produce a diagnostic for element outputs', () => {
         const messages = diagnose(`<div (click)="handleEvent($event)"></div>`, `
-          import {EventEmitter} from '@angular/core';
+          import {EventEmitter} from '@angular-classic/core';
           class TestComponent {
             handleEvent(event: string): void {}
           }`);
@@ -749,7 +749,7 @@ class TestComponent {
             (numberAlias)="handleStringEvent($event)"
             (stringEvent)="handleNumberEvent($event)"></div>`,
           `
-            import {EventEmitter} from '@angular/core';
+            import {EventEmitter} from '@angular-classic/core';
             class HostDir {
               stringEvent = new EventEmitter<string>();
               numberEvent = new EventEmitter<number>();

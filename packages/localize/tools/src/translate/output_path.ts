@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AbsoluteFsPath, PathManipulation} from '@angular/compiler-cli/private/localize';
+import {AbsoluteFsPath, PathManipulation} from '@angular-classic/compiler-cli/private/localize';
 
 /**
  * A function that will return an absolute path to where a file is to be written, given a locale and

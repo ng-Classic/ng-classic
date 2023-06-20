@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@angular/common@file:../../dist/packages-dist/common":
+"@angular-classic/common@file:../../dist/packages-dist/common":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/core@file:../../dist/packages-dist/core":
+"@angular-classic/core@file:../../dist/packages-dist/core":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/service-worker@file:../../dist/packages-dist/service-worker":
+"@angular-classic/service-worker@file:../../dist/packages-dist/service-worker":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"

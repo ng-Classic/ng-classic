@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 // #docplaster
-import {Component, Directive, ElementRef, EventEmitter, Injectable, Injector, Input, NgModule, Output} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {downgradeComponent, downgradeInjectable, UpgradeComponent, UpgradeModule} from '@angular/upgrade/static';
+import {Component, Directive, ElementRef, EventEmitter, Injectable, Injector, Input, NgModule, Output} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {downgradeComponent, downgradeInjectable, UpgradeComponent, UpgradeModule} from '@angular-classic/upgrade/static';
 
 declare var angular: ng.IAngularStatic;
 

@@ -1,5 +1,5 @@
 // #docregion
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import { HeroModule } from './hero.module';
 import { HEROES } from './mock-heroes';
 

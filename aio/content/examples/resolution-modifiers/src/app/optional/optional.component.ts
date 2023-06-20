@@ -1,4 +1,4 @@
-import { Component, Optional } from '@angular/core';
+import { Component, Optional } from '@angular-classic/core';
 import { OptionalService } from '../optional.service';
 
 @Component({

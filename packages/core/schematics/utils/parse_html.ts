@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import type {TmplAstNode} from '@angular/compiler';
+import type {TmplAstNode} from '@angular-classic/compiler';
 
 /**
  * Parses the given HTML content using the Angular compiler. In case the parsing
@@ -14,7 +14,7 @@ import type {TmplAstNode} from '@angular/compiler';
  */
 export function parseHtmlGracefully(
     htmlContent: string, filePath: string,
-    compilerModule: typeof import('@angular/compiler')): TmplAstNode[]|null {
+    compilerModule: typeof import('@angular-classic/compiler')): TmplAstNode[]|null {
   try {
     return compilerModule.parseTemplate(htmlContent, filePath).nodes;
   } catch {

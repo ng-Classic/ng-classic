@@ -774,4 +774,4 @@ is released, the `ng_experimental_ivy_srcs` dependent rules can be removed.
 
 ---
 <a name="myfootnote1"><sup>1</sup></a> More correctly, it calls `performCompilation`
-from the `@angular/compiler-cli` which is what `ngc` does too.
+from the `@angular-classic/compiler-cli` which is what `ngc` does too.

@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, NgModule, Optional, Pipe, PipeTransform} from '@angular/core';
+import {ChangeDetectorRef, Component, NgModule, Optional, Pipe, PipeTransform} from '@angular-classic/core';
 
 @Pipe({name: 'myPipe'})
 export class MyPipe implements PipeTransform {

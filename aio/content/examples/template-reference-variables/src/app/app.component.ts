@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, ViewChild } from '@angular-classic/core';
+import { NgForm } from '@angular-classic/forms';
 
 
 @Component({

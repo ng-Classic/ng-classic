@@ -28,7 +28,7 @@ This section walks you through creating a highlight directive that sets the back
 
     The `@Directive()` decorator's configuration property specifies the directive's CSS attribute selector, `[appHighlight]`.
 
-1.  Import `ElementRef` from `@angular/core`.
+1.  Import `ElementRef` from `@angular-classic/core`.
     `ElementRef` grants direct access to the host DOM element through its `nativeElement` property.
 
 1.  Add `ElementRef` in the directive's `constructor()` to [inject](guide/dependency-injection) a reference to the host DOM element, the element to which you apply `appHighlight`.
@@ -61,7 +61,7 @@ Angular creates an instance of the `HighlightDirective` class and injects a refe
 
 This section shows you how to detect when a user mouses into or out of the element and to respond by setting or clearing the highlight color.
 
-1.  Import `HostListener` from '@angular/core'.
+1.  Import `HostListener` from '@angular-classic/core'.
 
     <code-example header="src/app/highlight.directive.ts (imports)" path="attribute-directives/src/app/highlight.directive.2.ts" region="imports"></code-example>
 
@@ -95,7 +95,7 @@ The background color appears when the pointer hovers over the paragraph element 
 
 This section walks you through setting the highlight color while applying the `HighlightDirective`.
 
-1.  In `highlight.directive.ts`, import `Input` from `@angular/core`.
+1.  In `highlight.directive.ts`, import `Input` from `@angular-classic/core`.
 
     <code-example header="src/app/highlight.directive.ts (imports)" path="attribute-directives/src/app/highlight.directive.3.ts" region="imports"></code-example>
 

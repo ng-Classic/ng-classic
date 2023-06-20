@@ -5,15 +5,15 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {CommonModule} from '@angular/common';
-import {Component, ComponentRef, Directive, ElementRef, HostBinding, Input, Renderer2, ViewChild, ViewContainerRef} from '@angular/core';
-import {bypassSanitizationTrustStyle} from '@angular/core/src/sanitization/bypass';
-import {ngDevModeResetPerfCounters} from '@angular/core/src/util/ng_dev_mode';
-import {TestBed} from '@angular/core/testing';
-import {getElementClasses, getElementStyles, getSortedClassName, getSortedStyle} from '@angular/core/testing/src/styling';
-import {By, DomSanitizer, SafeStyle} from '@angular/platform-browser';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
-import {expectPerfCounters} from '@angular/private/testing';
+import {CommonModule} from '@angular-classic/common';
+import {Component, ComponentRef, Directive, ElementRef, HostBinding, Input, Renderer2, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {bypassSanitizationTrustStyle} from '@angular-classic/core/src/sanitization/bypass';
+import {ngDevModeResetPerfCounters} from '@angular-classic/core/src/util/ng_dev_mode';
+import {TestBed} from '@angular-classic/core/testing';
+import {getElementClasses, getElementStyles, getSortedClassName, getSortedStyle} from '@angular-classic/core/testing/src/styling';
+import {By, DomSanitizer, SafeStyle} from '@angular-classic/platform-browser';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
+import {expectPerfCounters} from '@angular-classic/private/testing';
 
 describe('styling', () => {
   beforeEach(ngDevModeResetPerfCounters);

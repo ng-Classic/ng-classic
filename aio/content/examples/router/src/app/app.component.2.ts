@@ -1,8 +1,8 @@
 /* Second Heroes version */
 // #docregion
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 // #docregion animation-imports
-import { ChildrenOutletContexts } from '@angular/router';
+import { ChildrenOutletContexts } from '@angular-classic/router';
 import { slideInAnimation } from './animations';
 
 @Component({

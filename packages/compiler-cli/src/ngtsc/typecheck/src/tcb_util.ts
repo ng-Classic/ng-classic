@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AbsoluteSourceSpan, ParseSourceSpan} from '@angular/compiler';
+import {AbsoluteSourceSpan, ParseSourceSpan} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {ClassDeclaration, ReflectionHost} from '../../../../src/ngtsc/reflection';

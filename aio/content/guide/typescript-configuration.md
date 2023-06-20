@@ -87,7 +87,7 @@ TypeScript-aware editors leverage these same definition files to display type in
 Many libraries include definition files in their npm packages where both the TypeScript compiler and editors
 can find them.
 Angular is one such library.
-The `node_modules/@angular/core/` folder of any Angular application contains several `d.ts` files that describe parts of Angular.
+The `node_modules/@angular-classic/core/` folder of any Angular application contains several `d.ts` files that describe parts of Angular.
 
 <div class="alert is-helpful">
 

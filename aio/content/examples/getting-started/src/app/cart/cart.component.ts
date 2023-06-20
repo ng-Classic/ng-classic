@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion imports
-import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component } from '@angular-classic/core';
+import { FormBuilder } from '@angular-classic/forms';
 
 import { CartService } from '../cart.service';
 // #enddocregion imports

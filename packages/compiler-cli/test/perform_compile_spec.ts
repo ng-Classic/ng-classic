@@ -106,13 +106,13 @@ describe('perform_compile', () => {
   it('should merge tsconfig "angularCompilerOptions" when extends points to node package', () => {
     support.writeFiles({
       'tsconfig-level-1.json': `{
-          "extends": "@angular-ru/tsconfig",
+          "extends": "@angular-classic-ru/tsconfig",
           "angularCompilerOptions": {
             "debug": false
           }
         }
       `,
-      'node_modules/@angular-ru/tsconfig/tsconfig.json': `{
+      'node_modules/@angular-classic-ru/tsconfig/tsconfig.json': `{
           "compilerOptions": {
             "strict": true
           },
@@ -121,8 +121,8 @@ describe('perform_compile', () => {
           }
         }
       `,
-      'node_modules/@angular-ru/tsconfig/package.json': `{
-        "name": "@angular-ru/tsconfig",
+      'node_modules/@angular-classic-ru/tsconfig/package.json': `{
+        "name": "@angular-classic-ru/tsconfig",
         "version": "0.0.0",
         "main": "./tsconfig.json"
       }
@@ -249,7 +249,7 @@ describe('perform_compile', () => {
           "extends": "./tsconfig-level-2.json",
           "compilerOptions": {
             "paths": {
-              "@angular/core": ["/*"]
+              "@angular-classic/core": ["/*"]
             }
           },
           "angularCompilerOptions": {
@@ -265,7 +265,7 @@ describe('perform_compile', () => {
           "compilerOptions": {
             "strict": false,
             "paths": {
-              "@angular/common": ["/*"]
+              "@angular-classic/common": ["/*"]
             }
           },
           "angularCompilerOptions": {
@@ -285,7 +285,7 @@ describe('perform_compile', () => {
       strict: false,
       skipMetadataEmit: true,
       extendedDiagnostics: {checks: {textAttributeNotBinding: 'suppress'}},
-      paths: {'@angular/core': ['/*']}
+      paths: {'@angular-classic/core': ['/*']}
     }));
   });
 });

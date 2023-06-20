@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, ComponentFactoryResolver, destroyPlatform, EventEmitter, Input, NgModule, Output, ViewEncapsulation} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {Component, ComponentFactoryResolver, destroyPlatform, EventEmitter, Input, NgModule, Output, ViewEncapsulation} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
 import {createCustomElement, NgElement} from '../src/create-custom-element';
 

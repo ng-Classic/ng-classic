@@ -1,8 +1,8 @@
 // #docplaster
 // #docregion
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 // #docregion import-httpclient
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular-classic/common/http';
 // #enddocregion import-httpclient
 
 import { Observable, of } from 'rxjs';

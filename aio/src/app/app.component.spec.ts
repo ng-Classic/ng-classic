@@ -1,10 +1,10 @@
-import { APP_BASE_HREF } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { ComponentFixture, fakeAsync, flushMicrotasks, inject, TestBed, tick } from '@angular/core/testing';
-import { MatLegacyProgressBar as MatProgressBar } from '@angular/material/legacy-progress-bar';
-import { MatSidenav } from '@angular/material/sidenav';
-import { By, Title } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular-classic/common';
+import { HttpClient } from '@angular-classic/common/http';
+import { NO_ERRORS_SCHEMA } from '@angular-classic/core';
+import { ComponentFixture, fakeAsync, flushMicrotasks, inject, TestBed, tick } from '@angular-classic/core/testing';
+import { MatLegacyProgressBar as MatProgressBar } from '@angular-classic/material/legacy-progress-bar';
+import { MatSidenav } from '@angular-classic/material/sidenav';
+import { By, Title } from '@angular-classic/platform-browser';
 import { ElementsLoader } from 'app/custom-elements/elements-loader';
 import { DocumentService } from 'app/documents/document.service';
 import { CookiesPopupComponent } from 'app/layout/cookies-popup/cookies-popup.component';

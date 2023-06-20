@@ -27,8 +27,8 @@
   <a href="https://circleci.com/gh/angular/workflows/angular/tree/main">
     <img src="https://img.shields.io/circleci/build/github/angular/angular/main.svg?logo=circleci&logoColor=fff&label=CircleCI" alt="CI status" />
   </a>&nbsp;
-  <a href="https://www.npmjs.com/@angular/core">
-    <img src="https://img.shields.io/npm/v/@angular/core.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen" alt="Angular on npm" />
+  <a href="https://www.npmjs.com/@angular-classic/core">
+    <img src="https://img.shields.io/npm/v/@angular-classic/core.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen" alt="Angular on npm" />
   </a>&nbsp;
   <a href="https://discord.gg/angular">
     <img src="https://img.shields.io/discord/463752820026376202.svg?logo=discord&logoColor=fff&label=Discord&color=7389d8" alt="Discord conversation" />
@@ -72,7 +72,7 @@ Get started with Angular, learn the fundamentals and explore advanced topics on 
 Install the Angular CLI globally:
 
 ```
-npm install -g @angular/cli
+npm install -g @angular-classic/cli
 ```
 
 Create workspace:

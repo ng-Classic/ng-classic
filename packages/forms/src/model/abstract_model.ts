@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EventEmitter, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {EventEmitter, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 import {Observable} from 'rxjs';
 
 import {asyncValidatorsDroppedWithOptsWarning, missingControlError, missingControlValueError, noControlsError} from '../directives/reactive_errors';

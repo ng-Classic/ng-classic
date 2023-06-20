@@ -1,6 +1,6 @@
 // #docregion
-import {inject} from '@angular/core';
-import { Router } from '@angular/router';
+import {inject} from '@angular-classic/core';
+import { Router } from '@angular-classic/router';
 
 import {AuthService} from './auth.service';
 

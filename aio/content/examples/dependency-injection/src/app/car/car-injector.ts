@@ -1,4 +1,4 @@
-import { Injector } from '@angular/core';
+import { Injector } from '@angular-classic/core';
 
 import { Car, Engine, Tires } from './car';
 import { Logger } from '../logger.service';

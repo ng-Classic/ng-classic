@@ -7,10 +7,10 @@
  */
 
 // Needed to run animation tests
-import '@angular/compiler'; // For JIT mode. Must be in front of any other @angular/* imports.
+import '@angular-classic/compiler'; // For JIT mode. Must be in front of any other @angular-classic/* imports.
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {DominoAdapter} from '@angular/platform-server/src/domino_adapter';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {DominoAdapter} from '@angular-classic/platform-server/src/domino_adapter';
 
 if (typeof window == 'undefined') {
   const domino = require('../../../platform-server/src/bundled-domino');

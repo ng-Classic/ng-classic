@@ -1,8 +1,8 @@
 // #docregion
 /* avoid */
 
-import { OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { OnInit } from '@angular-classic/core';
+import { HttpClient } from '@angular-classic/common/http';
 
 import { Observable } from 'rxjs';
 import { catchError, finalize } from 'rxjs/operators';

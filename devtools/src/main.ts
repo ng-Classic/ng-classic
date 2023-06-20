@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {platformBrowser} from '@angular/platform-browser';
+import {platformBrowser} from '@angular-classic/platform-browser';
 
 import {AppModule} from './app/app.module';
 

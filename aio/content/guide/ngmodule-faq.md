@@ -26,7 +26,7 @@ Do *not* declare the following:
 
 *   A class that's already declared in another module, whether an application module, &commat;NgModule, or third-party module.
 *   An array of directives imported from another module.
-    For example, don't declare `FORMS_DIRECTIVES` from `@angular/forms` because the `FormsModule` already declares it.
+    For example, don't declare `FORMS_DIRECTIVES` from `@angular-classic/forms` because the `FormsModule` already declares it.
 
 *   Module classes.
 *   Service classes.
@@ -61,11 +61,11 @@ The "x" class isn't visible to other modules until you add it to the `exports` l
 Import NgModules whose public \(exported\) [declarable classes](guide/bootstrapping#the-declarations-array)
 you need to reference in this module's component templates.
 
-This always means importing `CommonModule` from `@angular/common` for access to
+This always means importing `CommonModule` from `@angular-classic/common` for access to
 the Angular directives such as `NgIf` and `NgFor`.
 You can import it directly or from another NgModule that [re-exports](guide/ngmodule-faq#q-reexport) it.
 
-Import `FormsModule` from `@angular/forms`
+Import `FormsModule` from `@angular-classic/forms`
 if your components have `[(ngModel)]` two-way binding expressions.
 
 Import *shared* and *feature* modules when this module's components incorporate their
@@ -77,11 +77,11 @@ Import [BrowserModule](guide/ngmodule-faq#q-browser-vs-common-module) only in th
 
 ## Should I import `BrowserModule` or `CommonModule`?
 
-The root application module, `AppModule`, of almost every browser application should import `BrowserModule` from `@angular/platform-browser`.
+The root application module, `AppModule`, of almost every browser application should import `BrowserModule` from `@angular-classic/platform-browser`.
 
 `BrowserModule` provides services that are essential to launch and run a browser application.
 
-`BrowserModule` also re-exports `CommonModule` from `@angular/common`,
+`BrowserModule` also re-exports `CommonModule` from `@angular-classic/common`,
 which means that components in the `AppModule` also have access to
 the Angular directives every application needs, such as `NgIf` and `NgFor`.
 

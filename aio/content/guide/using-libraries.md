@@ -19,7 +19,7 @@ For an example, see the [Angular Material][AngularMaterialMain] documentation.
 
 ### Library typings
 
-Typically, library packages include typings in `.d.ts` files; see examples in `node_modules/@angular/material`.
+Typically, library packages include typings in `.d.ts` files; see examples in `node_modules/@angular-classic/material`.
 If the package of your library does not include typings and your IDE complains, you might need to install the `@types/<lib_name>` package with the library.
 
 For example, suppose you have a library named `d3`:

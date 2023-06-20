@@ -1,6 +1,6 @@
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Injector } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular-classic/common/http/testing';
+import { Injector } from '@angular-classic/core';
+import { TestBed } from '@angular-classic/core/testing';
 
 import { ResourceService } from './resource.service';
 import { Category } from './resource.model';

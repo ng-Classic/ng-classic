@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, EventEmitter, forwardRef, Input, NgModule, Output} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {UpgradeAdapter} from '@angular/upgrade';
+import {Component, EventEmitter, forwardRef, Input, NgModule, Output} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {UpgradeAdapter} from '@angular-classic/upgrade';
 
 declare const angular: any;
 

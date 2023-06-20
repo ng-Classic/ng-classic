@@ -1,8 +1,8 @@
 // #docplaster
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable } from '@angular-classic/core';
+import { HttpClient, HttpParams } from '@angular-classic/common/http';
 // #docregion http-options
-import { HttpHeaders } from '@angular/common/http';
+import { HttpHeaders } from '@angular-classic/common/http';
 
 // #enddocregion http-options
 

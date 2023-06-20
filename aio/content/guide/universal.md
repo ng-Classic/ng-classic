@@ -108,10 +108,10 @@ The hydration feature is available for [developer preview](/guide/releases#devel
 
 Hydration is the process that restores the server side rendered application on the client. This includes things like reusing the server rendered DOM structures, persisting the application state, transferring application data that was retrieved already by the server, and other processes. Learn more about hydration in [this guide](guide/hydration).
 
-You can enable hydration by updating the `app.module.ts` file. Import the `provideClientHydration` function from `@angular/platform-browser` and add the function call to the `providers` section of the `AppModule` as shown below.
+You can enable hydration by updating the `app.module.ts` file. Import the `provideClientHydration` function from `@angular-classic/platform-browser` and add the function call to the `providers` section of the `AppModule` as shown below.
 
 ```typescript
-import {provideClientHydration} from '@angular/platform-browser';
+import {provideClientHydration} from '@angular-classic/platform-browser';
 // ...
 
 @NgModule({

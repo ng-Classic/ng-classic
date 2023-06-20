@@ -18,7 +18,7 @@ withEachNg1Version(() => {
     it('should allow us to get a downgraded Angular service from an AngularJS service', () => {
       defineAppModule();
       // We have to get the `mock` object from the global `angular` variable, rather than trying to
-      // import it from `@angular/upgrade/src/common/angular1`, because that file doesn't export
+      // import it from `@angular-classic/upgrade/src/common/angular1`, because that file doesn't export
       // `ngMock` helpers.
       const {inject, module} = getAngularJSGlobal().mock;
       // Load the AngularJS bits of the application

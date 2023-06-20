@@ -1,8 +1,8 @@
-import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, ViewChild } from '@angular/core';
-import { Clipboard } from '@angular/cdk/clipboard';
+import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, ViewChild } from '@angular-classic/core';
+import { Clipboard } from '@angular-classic/cdk/clipboard';
 import { Logger } from 'app/shared/logger.service';
 import { PrettyPrinter } from './pretty-printer.service';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
+import { MatLegacySnackBar as MatSnackBar } from '@angular-classic/material/legacy-snack-bar';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { unwrapHtml } from 'safevalues';

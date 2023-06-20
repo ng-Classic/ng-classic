@@ -8,7 +8,7 @@
 
 import * as o from '../output/output_ast';
 
-const CORE = '@angular/core';
+const CORE = '@angular-classic/core';
 
 export class Identifiers {
   /* Methods */

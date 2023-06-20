@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {createEsbuildAngularOptimizePlugin} from '@angular/build-tooling/shared-scripts/angular-optimization/esbuild-plugin.mjs';
-import {GLOBAL_DEFS_FOR_TERSER_WITH_AOT} from '@angular/compiler-cli/private/tooling.js';
+import {createEsbuildAngularOptimizePlugin} from '@angular-classic/build-tooling/shared-scripts/angular-optimization/esbuild-plugin.mjs';
+import {GLOBAL_DEFS_FOR_TERSER_WITH_AOT} from '@angular-classic/compiler-cli/private/tooling.js';
 
 /** Converts an object to a string dictionary. */
 function convertObjectToStringDictionary(value) {

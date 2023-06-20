@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {MatLegacyCardModule as MatCardModule} from '@angular/material/legacy-card';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular/material/legacy-tooltip';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {MatLegacyCardModule as MatCardModule} from '@angular-classic/material/legacy-card';
+import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
+import {MatToolbarModule} from '@angular-classic/material/toolbar';
 import {NgxFlamegraphModule} from 'ngx-flamegraph';
 
 import {AngularSplitModule} from '../../../../vendor/angular-split/public_api';

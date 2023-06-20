@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, ApplicationRef, Compiler, Component, destroyPlatform, Directive, DoCheck, ElementRef, getPlatform, Inject, Injectable, Injector, Input, NgModule, NgZone, OnChanges, OnDestroy, OnInit, StaticProvider, Type, ViewRef} from '@angular/core';
-import {fakeAsync, tick, waitForAsync} from '@angular/core/testing';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {downgradeComponent, downgradeModule, UpgradeComponent} from '@angular/upgrade/static';
+import {AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, ApplicationRef, Compiler, Component, destroyPlatform, Directive, DoCheck, ElementRef, getPlatform, Inject, Injectable, Injector, Input, NgModule, NgZone, OnChanges, OnDestroy, OnInit, StaticProvider, Type, ViewRef} from '@angular-classic/core';
+import {fakeAsync, tick, waitForAsync} from '@angular-classic/core/testing';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
+import {downgradeComponent, downgradeModule, UpgradeComponent} from '@angular-classic/upgrade/static';
 
 import * as angular from '../../../src/common/src/angular1';
 import {$EXCEPTION_HANDLER, $ROOT_SCOPE, INJECTOR_KEY, LAZY_MODULE_REF} from '../../../src/common/src/constants';
@@ -1511,14 +1511,14 @@ withEachNg1Version(() => {
              expect(errorSpy).toHaveBeenCalledWith(
                  new Error(
                      'Error while instantiating component \'Ng2ComponentA\': Not a valid ' +
-                     '\'@angular/upgrade\' application.\n' +
+                     '\'@angular-classic/upgrade\' application.\n' +
                      'Did you forget to downgrade an Angular module or include it in the AngularJS ' +
                      'application?'),
                  '<ng2-a>');
              expect(errorSpy).toHaveBeenCalledWith(
                  new Error(
                      'Error while instantiating component \'Ng2ComponentB\': Not a valid ' +
-                     '\'@angular/upgrade\' application.\n' +
+                     '\'@angular-classic/upgrade\' application.\n' +
                      'Did you forget to downgrade an Angular module or include it in the AngularJS ' +
                      'application?'),
                  '<ng2-b>');

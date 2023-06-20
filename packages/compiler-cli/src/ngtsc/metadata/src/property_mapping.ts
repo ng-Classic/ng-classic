@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InputOutputPropertySet} from '@angular/compiler';
+import {InputOutputPropertySet} from '@angular-classic/compiler';
 
 /**
  * The name of a class property that backs an input or output declared by a directive or component.

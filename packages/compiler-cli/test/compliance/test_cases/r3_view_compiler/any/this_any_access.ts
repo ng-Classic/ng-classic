@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component} from '@angular-classic/core';
 
 @Component({template: '<div [tabIndex]="this.$any(null)"></div>'})
 class Comp {

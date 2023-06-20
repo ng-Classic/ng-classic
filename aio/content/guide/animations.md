@@ -31,7 +31,7 @@ The guide assumes that you're familiar with building basic Angular apps, as desc
 
 ## Getting started
 
-The main Angular modules for animations are `@angular/animations` and `@angular/platform-browser`.
+The main Angular modules for animations are `@angular-classic/animations` and `@angular-classic/platform-browser`.
 When you create a new project using the CLI, these dependencies are automatically added to your project.
 
 To get started with adding Angular animations to your project, import the animation-specific modules along with standard Angular functionality.
@@ -51,7 +51,7 @@ When you use the CLI to create your app, the root application module `app.module
 
 ### Step 2: Importing animation functions into component files
 
-If you plan to use specific animation functions in component files, import those functions from `@angular/animations`.
+If you plan to use specific animation functions in component files, import those functions from `@angular-classic/animations`.
 
 <code-example header="src/app/app.component.ts" path="animations/src/app/app.component.ts" region="imports"></code-example>
 
@@ -295,7 +295,7 @@ Learn about more advanced features in Angular animations under the Animation sec
 
 ## Animations API summary
 
-The functional API provided by the `@angular/animations` module provides a domain-specific language \(DSL\) for creating and controlling animations in Angular applications.
+The functional API provided by the `@angular-classic/animations` module provides a domain-specific language \(DSL\) for creating and controlling animations in Angular applications.
 See the [API reference](api/animations) for a complete listing and syntax details of the core functions and related data structures.
 
 | Function name                     | What it does                                                                                                                                                                                                |

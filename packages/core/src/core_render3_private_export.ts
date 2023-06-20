@@ -10,7 +10,7 @@
 // we reexport these symbols just so that they are retained during the dead code elimination
 // performed by rollup while it's creating fesm files.
 //
-// no code actually imports these symbols from the @angular/core entry point
+// no code actually imports these symbols from the @angular-classic/core entry point
 export {
   compileNgModuleFactory as ɵcompileNgModuleFactory,
   isBoundToModule as ɵisBoundToModule

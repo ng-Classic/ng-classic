@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AnimateTimings, AnimationMetadataType, AnimationOptions, ɵStyleDataMap} from '@angular/animations';
+import {AnimateTimings, AnimationMetadataType, AnimationOptions, ɵStyleDataMap} from '@angular-classic/animations';
 
 const EMPTY_ANIMATION_OPTIONS: AnimationOptions = {};
 

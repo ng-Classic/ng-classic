@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 // #docregion housing-location-import
 import { HousingLocation } from '../housinglocation';

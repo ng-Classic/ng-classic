@@ -15,18 +15,18 @@ import {
   ReversePipeComponent, ShellComponent
 } from './demo';
 
-import { By } from '@angular/platform-browser';
+import { By } from '@angular-classic/platform-browser';
 import { Component,
          DebugElement,
-         Injectable } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+         Injectable } from '@angular-classic/core';
+import { FormsModule } from '@angular-classic/forms';
 
 // Forms symbols imported only for a specific test below
-import { NgModel, NgControl } from '@angular/forms';
+import { NgModel, NgControl } from '@angular-classic/forms';
 
 import {
   ComponentFixture, fakeAsync, inject, TestBed, tick, waitForAsync
-} from '@angular/core/testing';
+} from '@angular-classic/core/testing';
 
 import { addMatchers, click } from '../../testing';
 

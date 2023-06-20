@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {createEnvironmentInjector, EnvironmentInjector, isStandalone, Type, ɵisNgModule as isNgModule, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {createEnvironmentInjector, EnvironmentInjector, isStandalone, Type, ɵisNgModule as isNgModule, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {EmptyOutletComponent} from '../components/empty_outlet';
 import {RuntimeErrorCode} from '../errors';

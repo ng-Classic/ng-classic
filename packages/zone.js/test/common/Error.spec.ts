@@ -8,7 +8,7 @@
 import {isBrowser} from '../../lib/common/utils';
 import {isSafari, zoneSymbol} from '../test-util';
 
-// simulate @angular/facade/src/error.ts
+// simulate @angular-classic/facade/src/error.ts
 class BaseError extends Error {
   /** @internal **/
   _nativeError: Error;

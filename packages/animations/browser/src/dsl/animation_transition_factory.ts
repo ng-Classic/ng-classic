@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AnimationOptions, ɵStyleDataMap} from '@angular/animations';
+import {AnimationOptions, ɵStyleDataMap} from '@angular-classic/animations';
 
 import {AnimationDriver} from '../render/animation_driver';
 import {getOrSetDefaultValue} from '../render/shared';

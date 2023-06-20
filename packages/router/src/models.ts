@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentInjector, EnvironmentProviders, NgModuleFactory, Provider, ProviderToken, Type} from '@angular/core';
+import {EnvironmentInjector, EnvironmentProviders, NgModuleFactory, Provider, ProviderToken, Type} from '@angular-classic/core';
 import {Observable} from 'rxjs';
 
 import {ActivatedRouteSnapshot, RouterStateSnapshot} from './router_state';
@@ -41,7 +41,7 @@ export type OnSameUrlNavigation = 'reload'|'ignore';
 /**
  * The `InjectionToken` and `@Injectable` classes for guards and resolvers are deprecated in favor
  * of plain JavaScript functions instead.. Dependency injection can still be achieved using the
- * `inject` function from `@angular/core` and an injectable class can be used as a functional guard
+ * `inject` function from `@angular-classic/core` and an injectable class can be used as a functional guard
  * using `inject`: `canActivate: [() => inject(myGuard).canActivate()]`.
  *
  * @deprecated

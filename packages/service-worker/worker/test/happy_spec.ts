@@ -324,7 +324,7 @@ describe('Driver', () => {
     expect(claimSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('cleans up old `@angular/service-worker` caches, after activation', async () => {
+  it('cleans up old `@angular-classic/service-worker` caches, after activation', async () => {
     const claimSpy = spyOn(scope.clients, 'claim');
     const cleanupOldSwCachesSpy = spyOn(driver, 'cleanupOldSwCaches');
 
@@ -338,7 +338,7 @@ describe('Driver', () => {
     expect(claimSpy).toHaveBeenCalledBefore(cleanupOldSwCachesSpy);
   });
 
-  it('does not blow up if cleaning up old `@angular/service-worker` caches fails', async () => {
+  it('does not blow up if cleaning up old `@angular-classic/service-worker` caches fails', async () => {
     spyOn(driver, 'cleanupOldSwCaches').and.callFake(() => Promise.reject('Ooops'));
 
     // Automatically advance time to trigger idle tasks as they are added.
@@ -2025,11 +2025,11 @@ describe('Driver', () => {
   describe('cleanupOldSwCaches()', () => {
     it('should delete the correct caches', async () => {
       const oldSwCacheNames = [
-        // Example cache names from the beta versions of `@angular/service-worker`.
+        // Example cache names from the beta versions of `@angular-classic/service-worker`.
         'ngsw:active',
         'ngsw:staged',
         'ngsw:manifest:a1b2c3:super:duper',
-        // Example cache names from the beta versions of `@angular/service-worker`.
+        // Example cache names from the beta versions of `@angular-classic/service-worker`.
         'ngsw:a1b2c3:assets:foo',
         'ngsw:db:a1b2c3:assets:bar',
       ];

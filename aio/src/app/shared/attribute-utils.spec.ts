@@ -1,4 +1,4 @@
-import { ElementRef } from '@angular/core';
+import { ElementRef } from '@angular-classic/core';
 
 import { AttrMap, getAttrs, getAttrValue, getBoolFromAttribute, boolFromValue } from './attribute-utils';
 

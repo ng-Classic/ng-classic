@@ -5,16 +5,16 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import localeAr from '@angular/common/locales/ar';
-import localeDe from '@angular/common/locales/de';
-import localeEn from '@angular/common/locales/en';
-import localeEnExtra from '@angular/common/locales/extra/en';
-import localeFi from '@angular/common/locales/fi';
-import localeHu from '@angular/common/locales/hu';
-import localeSr from '@angular/common/locales/sr';
-import localeTh from '@angular/common/locales/th';
-import {formatDate, isDate, toDate} from '@angular/common/src/i18n/format_date';
-import {ɵDEFAULT_LOCALE_ID, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular/core';
+import localeAr from '@angular-classic/common/locales/ar';
+import localeDe from '@angular-classic/common/locales/de';
+import localeEn from '@angular-classic/common/locales/en';
+import localeEnExtra from '@angular-classic/common/locales/extra/en';
+import localeFi from '@angular-classic/common/locales/fi';
+import localeHu from '@angular-classic/common/locales/hu';
+import localeSr from '@angular-classic/common/locales/sr';
+import localeTh from '@angular-classic/common/locales/th';
+import {formatDate, isDate, toDate} from '@angular-classic/common/src/i18n/format_date';
+import {ɵDEFAULT_LOCALE_ID, ɵregisterLocaleData, ɵunregisterLocaleData} from '@angular-classic/core';
 
 describe('Format date', () => {
   describe('toDate', () => {

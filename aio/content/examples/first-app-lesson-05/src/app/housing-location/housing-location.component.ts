@@ -1,6 +1,6 @@
 // #docregion add-imports
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { HousingLocation } from '../housinglocation';
 // #enddocregion
 @Component({

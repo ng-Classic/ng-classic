@@ -2,19 +2,19 @@
 
 Angular relies on CLDR for internationalization. The locale data is split up into the following filesets:
 
-1. A default locale used within `@angular/core`. This is the `locale_en.ts` file.
-2. Information about currencies with their symbols and fraction digits (based on the default locale). The base currency information resides in `@angular/common/src/i18n`.
+1. A default locale used within `@angular-classic/core`. This is the `locale_en.ts` file.
+2. Information about currencies with their symbols and fraction digits (based on the default locale). The base currency information resides in `@angular-classic/common/src/i18n`.
 3. Locale files containing date, plural, currency information and more.
 
 This is a high-level overview of the tool and how it organizes/optimizes the locale data within Angular. In the following section the individual filesets are described in detail.
 
-### Default locale file in `@angular/core`
+### Default locale file in `@angular-classic/core`
 
-The default locale file resides within `@angular/core` and provides locale information for the `en` locale. The `en` locale is commonly used for local development. This default locale file does not differ from other locale files generated within `@angular/common/locales`, so the details are discussed below.
+The default locale file resides within `@angular-classic/core` and provides locale information for the `en` locale. The `en` locale is commonly used for local development. This default locale file does not differ from other locale files generated within `@angular-classic/common/locales`, so the details are discussed below.
 
-### Base currency information within `@angular/common`
+### Base currency information within `@angular-classic/common`
 
-The `@angular/core` package is not providing directives or syntax for dealing with currencies. This is part of the `@angular/common` package and its i18n features (such as the `currency` pipe). Due to this separation of concerns, the default locale in `core` does not contain any information about currencies, and the currency information is stored as a separate file within `@angular/common/src/i18n`.
+The `@angular-classic/core` package is not providing directives or syntax for dealing with currencies. This is part of the `@angular-classic/common` package and its i18n features (such as the `currency` pipe). Due to this separation of concerns, the default locale in `core` does not contain any information about currencies, and the currency information is stored as a separate file within `@angular-classic/common/src/i18n`.
 
 The currency information is stored within an object that maps each currency code (like `USD`) to an array describing the symbol, narrow symbol and number of digits to display for fractions. e.g.
 
@@ -42,7 +42,7 @@ All the data is stored in an array where the Angular framework can read specific
 
 **Performance optimizations**
 
-Given we already have currency symbols for the default locale within `@angular/common/src/i18n`, we do not need to capture currencies that aren't different within a given locale. We just omit the data for such currencies and let the Angular framework fall back to the currency symbols from the default locale (this avoids unnecessary duplication).
+Given we already have currency symbols for the default locale within `@angular-classic/common/src/i18n`, we do not need to capture currencies that aren't different within a given locale. We just omit the data for such currencies and let the Angular framework fall back to the currency symbols from the default locale (this avoids unnecessary duplication).
 
 Additionally, if locale data is equal to locale data at a previous index, then the generation tool will not repeat the data but instead set `undefined`. The Angular framework will look for the previous value in that case. This reduces the payload size for locales even further. For example:
 

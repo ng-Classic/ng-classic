@@ -1,4 +1,4 @@
-import {Component, Directive, HostBinding, NgModule} from '@angular/core';
+import {Component, Directive, HostBinding, NgModule} from '@angular-classic/core';
 
 @Directive({selector: '[myClassDir]'})
 export class ClassDirective {

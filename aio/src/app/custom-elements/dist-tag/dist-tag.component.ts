@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, VERSION } from '@angular-classic/core';
 import { environment } from 'environments/environment';
 
 /**

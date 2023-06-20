@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectorRef, Component, NgZone, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, NgZone, OnInit} from '@angular-classic/core';
 import {Events, MessageBus, PriorityAwareMessageBus} from 'protocol';
 
 import {injectScripts} from './inject';

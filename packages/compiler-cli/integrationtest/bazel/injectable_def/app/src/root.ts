@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {ServerModule} from '@angular/platform-server';
-import {RouterModule} from '@angular/router';
+import {Component, NgModule} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
+import {ServerModule} from '@angular-classic/platform-server';
+import {RouterModule} from '@angular-classic/router';
 
 import {LazyModule} from './root_lazy';
 

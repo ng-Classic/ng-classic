@@ -1,5 +1,5 @@
 {
-  "name": "@angular/localize",
+  "name": "@angular-classic/localize",
   "version": "0.0.0-PLACEHOLDER",
   "description": "Angular - library for localizing messages",
   "bin": {
@@ -39,7 +39,7 @@
     "yargs": "^17.2.1"
   },
   "peerDependencies": {
-    "@angular/compiler": "0.0.0-PLACEHOLDER",
-    "@angular/compiler-cli": "0.0.0-PLACEHOLDER"
+    "@angular-classic/compiler": "0.0.0-PLACEHOLDER",
+    "@angular-classic/compiler-cli": "0.0.0-PLACEHOLDER"
   }
 }

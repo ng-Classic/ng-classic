@@ -1,12 +1,12 @@
 // #docregion
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { FormsModule } from '@angular-classic/forms';
+import { HttpClientModule } from '@angular-classic/common/http';
 
 // import { AppRoutingModule } from './app-routing.module';
 import { LocationStrategy,
-         HashLocationStrategy } from '@angular/common';
-import { NgModule } from '@angular/core';
+         HashLocationStrategy } from '@angular-classic/common';
+import { NgModule } from '@angular-classic/core';
 
 import { HeroData } from './hero-data';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';

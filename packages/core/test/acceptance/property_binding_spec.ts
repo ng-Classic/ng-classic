@@ -5,11 +5,11 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {state, style, trigger} from '@angular/animations';
-import {CommonModule} from '@angular/common';
-import {Component, Directive, EventEmitter, Input, Output, ViewContainerRef} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {By, DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {state, style, trigger} from '@angular-classic/animations';
+import {CommonModule} from '@angular-classic/common';
+import {Component, Directive, EventEmitter, Input, Output, ViewContainerRef} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {By, DomSanitizer, SafeUrl} from '@angular-classic/platform-browser';
 
 describe('property bindings', () => {
   it('should support bindings to properties', () => {

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ErrorCode, ngErrorCode} from '@angular/compiler-cli/src/ngtsc/diagnostics';
-import {BoundEvent} from '@angular/compiler/src/render3/r3_ast';
+import {ErrorCode, ngErrorCode} from '@angular-classic/compiler-cli/src/ngtsc/diagnostics';
+import {BoundEvent} from '@angular-classic/compiler/src/render3/r3_ast';
 import tss from 'typescript/lib/tsserverlibrary';
 
 import {getTargetAtPosition, TargetNodeKind} from '../template_target';

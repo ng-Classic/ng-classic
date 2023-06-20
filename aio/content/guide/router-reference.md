@@ -7,7 +7,7 @@ The following sections highlight some core router concepts.
 ## Router imports
 
 The Angular Router is an optional service that presents a particular component view for a given URL.
-It isn't part of the Angular core and thus is in its own library package, `@angular/router`.
+It isn't part of the Angular core and thus is in its own library package, `@angular-classic/router`.
 
 Import what you need from it as you would from any other Angular package.
 

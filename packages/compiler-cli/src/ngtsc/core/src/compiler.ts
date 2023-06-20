@@ -1015,7 +1015,7 @@ export class NgCompiler {
 
     const resourceRegistry = new ResourceRegistry();
 
-    // Note: If this compilation builds `@angular/core`, we always build in full compilation
+    // Note: If this compilation builds `@angular-classic/core`, we always build in full compilation
     // mode. Code inside the core package is always compatible with itself, so it does not
     // make sense to go through the indirection of partial compilation
     let compilationMode: CompilationMode = CompilationMode.FULL;
@@ -1123,7 +1123,7 @@ export class NgCompiler {
 }
 
 /**
- * Determine if the given `Program` is @angular/core.
+ * Determine if the given `Program` is @angular-classic/core.
  */
 export function isAngularCorePackage(program: ts.Program): boolean {
   // Look for its_just_angular.ts somewhere in the program.

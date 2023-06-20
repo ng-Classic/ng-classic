@@ -1,7 +1,7 @@
 // #docregion
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular-classic/core';
+import { FormsModule } from '@angular-classic/forms';
+import { CommonModule } from '@angular-classic/common';
 
 import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';

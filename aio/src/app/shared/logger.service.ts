@@ -1,4 +1,4 @@
-import { ErrorHandler, Injectable } from '@angular/core';
+import { ErrorHandler, Injectable } from '@angular-classic/core';
 import { environment } from '../../environments/environment';
 
 

@@ -1,6 +1,6 @@
-import { NgModule, Type } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
+import { NgModule, Type } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
+import { MatIconModule } from '@angular-classic/material/icon';
 import { WithCustomElementComponent } from '../element-registry';
 import { TocComponent } from './toc.component';
 

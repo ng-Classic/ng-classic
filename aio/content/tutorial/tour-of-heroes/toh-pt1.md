@@ -162,7 +162,7 @@ This is where you *opt in* to the `FormsModule`.
 
 ### Import `FormsModule`
 
-Open `app.module.ts` and import the `FormsModule` symbol from the `@angular/forms` library.
+Open `app.module.ts` and import the `FormsModule` symbol from the `@angular-classic/forms` library.
 
 <code-example path="toh-pt1/src/app/app.module.ts" header="app.module.ts (FormsModule symbol import)"
  region="formsmodule-js-import"></code-example>

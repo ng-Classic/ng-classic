@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {XhrFactory} from '@angular/common';
-import {HttpBackend, HttpEvent, HttpHeaders, HttpParams, HttpRequest, HttpResponse, HttpXhrBackend} from '@angular/common/http';
-import {Inject, Injectable, Optional} from '@angular/core';
+import {XhrFactory} from '@angular-classic/common';
+import {HttpBackend, HttpEvent, HttpHeaders, HttpParams, HttpRequest, HttpResponse, HttpXhrBackend} from '@angular-classic/common/http';
+import {Inject, Injectable, Optional} from '@angular-classic/core';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 
@@ -28,7 +28,7 @@ import {InMemoryBackendConfig, InMemoryBackendConfigArgs, InMemoryDbService, Res
  * Call `config` static method with this service class and optional configuration object:
  * ```
  * // other imports
- * import { HttpClientModule } from '@angular/common/http';
+ * import { HttpClientModule } from '@angular-classic/common/http';
  * import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
  *
  * import { InMemHeroService, inMemConfig } from '../api/in-memory-hero.service';

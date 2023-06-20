@@ -1,5 +1,5 @@
-import { VERSION } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
+import { VERSION } from '@angular-classic/core';
+import { TestBed } from '@angular-classic/core/testing';
 import { environment } from 'environments/environment';
 import { DistTagComponent } from './dist-tag.component';
 

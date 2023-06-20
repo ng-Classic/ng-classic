@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {findFirstMatchingNode} from '@angular/compiler-cli/src/ngtsc/typecheck/src/comments';
-import * as e from '@angular/compiler/src/expression_parser/ast';  // e for expression AST
+import {findFirstMatchingNode} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/src/comments';
+import * as e from '@angular-classic/compiler/src/expression_parser/ast';  // e for expression AST
 import ts from 'typescript';
 import tss from 'typescript/lib/tsserverlibrary';
 

@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { CodeComponent } from './code.component';
-import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
+import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular-classic/material/legacy-snack-bar';
 import { PrettyPrinter } from './pretty-printer.service';
 
 @NgModule({

@@ -1,4 +1,4 @@
-import {NgZone} from '@angular/core';
+import {NgZone} from '@angular-classic/core';
 import {Observable} from 'rxjs';
 import {WebWorkerMessage} from './web-worker-message';
 

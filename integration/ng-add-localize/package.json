@@ -6,27 +6,27 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng add @angular/localize && yarn ng build"
+    "test": "ng add @angular-classic/localize && yarn ng build"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "file:../../dist/packages-dist/animations",
-    "@angular/common": "file:../../dist/packages-dist/common",
-    "@angular/compiler": "file:../../dist/packages-dist/compiler",
-    "@angular/core": "file:../../dist/packages-dist/core",
-    "@angular/forms": "file:../../dist/packages-dist/forms",
-    "@angular/localize": "file:../../dist/packages-dist/localize",
-    "@angular/platform-browser": "file:../../dist/packages-dist/platform-browser",
-    "@angular/platform-browser-dynamic": "file:../../dist/packages-dist/platform-browser-dynamic",
-    "@angular/router": "file:../../dist/packages-dist/router",
+    "@angular-classic/animations": "file:../../dist/packages-dist/animations",
+    "@angular-classic/common": "file:../../dist/packages-dist/common",
+    "@angular-classic/compiler": "file:../../dist/packages-dist/compiler",
+    "@angular-classic/core": "file:../../dist/packages-dist/core",
+    "@angular-classic/forms": "file:../../dist/packages-dist/forms",
+    "@angular-classic/localize": "file:../../dist/packages-dist/localize",
+    "@angular-classic/platform-browser": "file:../../dist/packages-dist/platform-browser",
+    "@angular-classic/platform-browser-dynamic": "file:../../dist/packages-dist/platform-browser-dynamic",
+    "@angular-classic/router": "file:../../dist/packages-dist/router",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "file:../../node_modules/@angular-devkit/build-angular",
-    "@angular/cli": "file:../../node_modules/@angular/cli",
-    "@angular/compiler-cli": "file:../../dist/packages-dist/compiler-cli",
+    "@angular-classic-devkit/build-angular": "file:../../node_modules/@angular-classic-devkit/build-angular",
+    "@angular-classic/cli": "file:../../node_modules/@angular-classic/cli",
+    "@angular-classic/compiler-cli": "file:../../dist/packages-dist/compiler-cli",
     "@types/node": "^12.11.1",
     "typescript": "file:../../node_modules/typescript"
   }

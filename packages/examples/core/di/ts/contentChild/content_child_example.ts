@@ -7,7 +7,7 @@
  */
 
 // #docregion Component
-import {Component, ContentChild, Directive, Input} from '@angular/core';
+import {Component, ContentChild, Directive, Input} from '@angular-classic/core';
 
 @Directive({selector: 'pane'})
 export class Pane {

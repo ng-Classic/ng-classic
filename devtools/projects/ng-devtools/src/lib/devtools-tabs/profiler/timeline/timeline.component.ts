@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, EventEmitter, Input, OnDestroy, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, Output} from '@angular-classic/core';
 import {ProfilerFrame} from 'protocol';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {map, share} from 'rxjs/operators';

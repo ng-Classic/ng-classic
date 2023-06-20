@@ -8,7 +8,7 @@ An Angular library is an Angular [project](guide/glossary#project) that differs 
 A library must be imported and used in an application.
 
 Libraries extend Angular's base features.
-For example, to add [reactive forms](guide/reactive-forms) to an application, add the library package using `ng add @angular/forms`, then import the `ReactiveFormsModule` from the `@angular/forms` library in your application code.
+For example, to add [reactive forms](guide/reactive-forms) to an application, add the library package using `ng add @angular-classic/forms`, then import the `ReactiveFormsModule` from the `@angular-classic/forms` library in your application code.
 Similarly, adding the [service worker](guide/service-worker-intro) library to an Angular application is one of the steps for turning an application into a [Progressive Web App](https://developers.google.com/web/progressive-web-apps) \(PWA\).
 [Angular Material](https://material.angular.io) is an example of a large, general-purpose library that provides sophisticated, reusable, and adaptable UI components.
 

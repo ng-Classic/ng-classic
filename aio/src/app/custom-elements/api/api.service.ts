@@ -1,5 +1,5 @@
-import { Injectable, OnDestroy } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Injectable, OnDestroy } from '@angular-classic/core';
+import { HttpClient, HttpErrorResponse } from '@angular-classic/common/http';
 
 import { ReplaySubject, Subject } from 'rxjs';
 import { takeUntil, tap } from 'rxjs/operators';

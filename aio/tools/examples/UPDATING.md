@@ -38,15 +38,15 @@ Any necessary changes to boilerplate files will be done automatically through mi
   yarn install
 
   # Migrate project to new versions.
-  yarn ng update @angular/cli --allow-dirty --migrate-only --from=<FROM_VERSION_CLI>
-  yarn ng update @angular/core --allow-dirty --migrate-only --from=<FROM_VERSION_ANGULAR>
+  yarn ng update @angular-classic/cli --allow-dirty --migrate-only --from=<FROM_VERSION_CLI>
+  yarn ng update @angular-classic/core --allow-dirty --migrate-only --from=<FROM_VERSION_ANGULAR>
   ```
 
   > **Note:**
   > In order for `ng update` to work, there must be a `node_modules/` directory with installed dependencies inside the [shared/boilerplate/cli/](./shared/boilerplate/cli) directory.
   > This `node_modules/` directory is only needed during the update operation and is otherwise ignored (both by git and by the [example-boilerplate.js](./example-boilerplate.js) script) by means of the [shared/boilerplate/.gitignore](./shared/boilerplate/.gitignore) file.
 
-- Inspect [shared/package.json](./shared/package.json) to determine what is the current version of Angular CLI (i.e. `@angular/cli`) used in the example apps.
+- Inspect [shared/package.json](./shared/package.json) to determine what is the current version of Angular CLI (i.e. `@angular-classic/cli`) used in the example apps.
   This will be referred to as `<TO_VERSION_CLI>`.
 
 - Use the [angular-cli-diff](https://github.com/cexbrayat/angular-cli-diff) repository to discover more changes (which are not automatically applied via `ng update` migrations) between Angular CLI apps of different versions.

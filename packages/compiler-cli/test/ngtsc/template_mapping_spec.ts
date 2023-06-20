@@ -691,7 +691,7 @@ runInEachFileSystem((os) => {
       const templateConfig = templateUrl ? `templateUrl: '${templateUrl}'` :
                                            ('template: `' + template.replace(/`/g, '\\`') + '`');
       env.write('test.ts', `
-        import {Component, Directive, Input, Output, EventEmitter, Pipe, NgModule} from '@angular/core';
+        import {Component, Directive, Input, Output, EventEmitter, Pipe, NgModule} from '@angular-classic/core';
 
         @Directive({
           selector: '[ngModel],[attr],[ngModelChange]'

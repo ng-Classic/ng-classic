@@ -11,7 +11,7 @@ import 'zone.js/lib/zone-spec/task-tracking';
 
 // okd
 
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
 import {TestsAppModule} from './test_module';
 

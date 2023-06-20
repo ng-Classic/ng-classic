@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgIf} from '@angular/common';
-import {Component, Directive, inject, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular/core';
-import {RuntimeErrorCode} from '@angular/core/src/errors';
-import {global} from '@angular/core/src/util/global';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {DomSanitizer} from '@angular/platform-browser';
+import {NgIf} from '@angular-classic/common';
+import {Component, Directive, inject, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {RuntimeErrorCode} from '@angular-classic/core/src/errors';
+import {global} from '@angular-classic/core/src/util/global';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {DomSanitizer} from '@angular-classic/platform-browser';
 
 describe('comment node text escaping', () => {
   // see: https://html.spec.whatwg.org/multipage/syntax.html#comments

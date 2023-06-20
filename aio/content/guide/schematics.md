@@ -60,14 +60,14 @@ For more details of what these look like and how to create them, see:
 An *add schematic* is typically supplied with a library, so that the library can be added to an existing project with `ng add`.
 The `add` command uses your package manager to download new dependencies, and invokes an installation script that is implemented as a schematic.
 
-For example, the [`@angular/material`](https://material.angular.io/guide/schematics) schematic tells the `add` command to install and set up Angular Material and theming, and register new starter components that can be created with `ng generate`.
+For example, the [`@angular-classic/material`](https://material.angular.io/guide/schematics) schematic tells the `add` command to install and set up Angular Material and theming, and register new starter components that can be created with `ng generate`.
 Look at this one as an example and model for your own add schematic.
 
 Partner and third party libraries also support the Angular CLI with add schematics.
 For example, `@ng-bootstrap/schematics` adds [ng-bootstrap](https://ng-bootstrap.github.io)  to an app, and  `@clr/angular` installs and sets up [Clarity from VMWare](https://clarity.design/documentation/get-started).
 
 An *add schematic* can also update a project with configuration changes, add additional dependencies \(such as polyfills\), or scaffold package-specific initialization code.
-For example, the `@angular/pwa` schematic turns your application into a PWA by adding an application manifest and service worker.
+For example, the `@angular-classic/pwa` schematic turns your application into a PWA by adding an application manifest and service worker.
 
 ### Generation schematics
 
@@ -127,7 +127,7 @@ For example, suppose you want to update the Angular Material library.
 ng update &commat;angular/material
 </code-example>
 
-This command updates both `@angular/material` and its dependency `@angular/cdk` in your workspace's `package.json`.
+This command updates both `@angular-classic/material` and its dependency `@angular-classic/cdk` in your workspace's `package.json`.
 If either package contains an update schematic that covers migration from the existing version to a new version, the command runs that schematic on your workspace.
 
 <!-- links -->

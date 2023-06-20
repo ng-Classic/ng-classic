@@ -2,7 +2,7 @@ import { AppConfig } from './app-config';
 export { AppConfig } from './app-config';
 
 // #docregion token
-import { InjectionToken } from '@angular/core';
+import { InjectionToken } from '@angular-classic/core';
 
 export const APP_CONFIG = new InjectionToken<AppConfig>('app.config');
 // #enddocregion token

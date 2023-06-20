@@ -1,5 +1,5 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "./node_modules/@angular-classic/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -18,14 +18,14 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-classic-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js",
-              "@angular/localize/init"
+              "@angular-classic/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
@@ -70,7 +70,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-classic-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "cli-hello-world-ivy-i18n:build"
           },
@@ -87,20 +87,20 @@
           }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "@angular-classic-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "cli-hello-world-ivy-i18n:build",
             "outputPath": "src/locale"
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-classic-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": [
               "zone.js",
               "zone.js/testing",
-              "@angular/localize/init"
+              "@angular-classic/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
@@ -112,14 +112,14 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-classic-devkit/build-angular:tslint",
           "options": {
             "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json", "e2e/tsconfig.json"],
             "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@angular-classic-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "cli-hello-world-ivy-i18n:serve",

@@ -11,7 +11,7 @@ ts_library(
             "**/*.ts",
         ],
     ),
-    module_name = "@angular/localize/init",
+    module_name = "@angular-classic/localize/init",
     deps = [
         "//packages/localize",
         "@npm//@types/node",

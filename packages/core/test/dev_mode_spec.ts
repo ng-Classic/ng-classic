@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isDevMode} from '@angular/core';
+import {isDevMode} from '@angular-classic/core';
 
 {
   describe('dev mode', () => {

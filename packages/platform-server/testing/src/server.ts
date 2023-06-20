@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {createPlatformFactory, NgModule} from '@angular/core';
-import {BrowserDynamicTestingModule, ɵplatformCoreDynamicTesting as platformCoreDynamicTesting} from '@angular/platform-browser-dynamic/testing';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {ɵINTERNAL_SERVER_PLATFORM_PROVIDERS as INTERNAL_SERVER_PLATFORM_PROVIDERS, ɵSERVER_RENDER_PROVIDERS as SERVER_RENDER_PROVIDERS} from '@angular/platform-server';
+import {createPlatformFactory, NgModule} from '@angular-classic/core';
+import {BrowserDynamicTestingModule, ɵplatformCoreDynamicTesting as platformCoreDynamicTesting} from '@angular-classic/platform-browser-dynamic/testing';
+import {NoopAnimationsModule} from '@angular-classic/platform-browser/animations';
+import {ɵINTERNAL_SERVER_PLATFORM_PROVIDERS as INTERNAL_SERVER_PLATFORM_PROVIDERS, ɵSERVER_RENDER_PROVIDERS as SERVER_RENDER_PROVIDERS} from '@angular-classic/platform-server';
 
 
 /**

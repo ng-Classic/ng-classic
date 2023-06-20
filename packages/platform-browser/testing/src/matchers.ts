@@ -7,10 +7,10 @@
  */
 
 
-import {ɵgetDOM as getDOM} from '@angular/common';
-import {Type, ɵglobal as global} from '@angular/core';
-import {ComponentFixture} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
+import {ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Type, ɵglobal as global} from '@angular-classic/core';
+import {ComponentFixture} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
 
 import {childNodesAsList, hasClass, hasStyle, isCommentNode} from './browser_util';
 

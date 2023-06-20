@@ -1,4 +1,4 @@
-import {forwardRef, Injectable, NgModule} from '@angular/core';
+import {forwardRef, Injectable, NgModule} from '@angular-classic/core';
 
 @Injectable()
 export class Dep {

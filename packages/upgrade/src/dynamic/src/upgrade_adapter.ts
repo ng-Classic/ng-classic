@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Compiler, CompilerOptions, Injector, NgModule, NgModuleRef, NgZone, resolveForwardRef, StaticProvider, Testability, Type} from '@angular/core';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {Compiler, CompilerOptions, Injector, NgModule, NgModuleRef, NgZone, resolveForwardRef, StaticProvider, Testability, Type} from '@angular-classic/core';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 
 import {bootstrap, element as angularElement, IAngularBootstrapConfig, IAugmentedJQuery, IInjectorService, IModule, IProvideService, IRootScopeService, ITestabilityService, module_ as angularModule} from '../../common/src/angular1';
 import {$$TESTABILITY, $COMPILE, $INJECTOR, $ROOT_SCOPE, COMPILER_KEY, INJECTOR_KEY, LAZY_MODULE_REF, NG_ZONE_KEY, UPGRADE_APP_TYPE_KEY} from '../../common/src/constants';
@@ -140,7 +140,7 @@ export class UpgradeAdapter {
    *    syntax. This has to be done, this way because we must follow Angular components do not
    *    declare how the attributes should be interpreted.
    * 3. `ng-model` is controlled by AngularJS and communicates with the downgraded Angular component
-   *    by way of the `ControlValueAccessor` interface from @angular/forms. Only components that
+   *    by way of the `ControlValueAccessor` interface from @angular-classic/forms. Only components that
    *    implement this interface are eligible.
    *
    * ### Supported Features

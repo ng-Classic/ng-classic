@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Location} from '@angular/common';
-import {APP_BOOTSTRAP_LISTENER, ComponentRef, InjectionToken} from '@angular/core';
-import {Router, ɵRestoredState as RestoredState} from '@angular/router';
-import {UpgradeModule} from '@angular/upgrade/static';
+import {Location} from '@angular-classic/common';
+import {APP_BOOTSTRAP_LISTENER, ComponentRef, InjectionToken} from '@angular-classic/core';
+import {Router, ɵRestoredState as RestoredState} from '@angular-classic/router';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
 
 /**
  * Creates an initializer that sets up `ngRoute` integration

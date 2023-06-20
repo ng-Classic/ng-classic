@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DefaultKeyValueDiffer, DefaultKeyValueDifferFactory} from '@angular/core/src/change_detection/differs/default_keyvalue_differ';
+import {DefaultKeyValueDiffer, DefaultKeyValueDifferFactory} from '@angular-classic/core/src/change_detection/differs/default_keyvalue_differ';
 
 import {kvChangesAsString, testChangesAsString} from '../util';
 

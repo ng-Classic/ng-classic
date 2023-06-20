@@ -139,7 +139,7 @@ You can opt out of this behavior with `FormsModule.withConfig` or `ReactiveForms
 
 #### The `canParse` method has been removed
 
-The `canParse` method has been removed from all translation parsers in `@angular/localize/tools`. [PR #47275](https://github.com/angular/angular/pull/47275)
+The `canParse` method has been removed from all translation parsers in `@angular-classic/localize/tools`. [PR #47275](https://github.com/angular/angular/pull/47275)
 
 In v15, use `analyze` should instead and the `hint` parameter in the parse methods is mandatory.
 

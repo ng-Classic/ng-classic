@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Meta, Title } from '@angular/platform-browser';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { Meta, Title } from '@angular-classic/platform-browser';
 
 import { Observable, asapScheduler, of, lastValueFrom } from 'rxjs';
 import { EMPTY_HTML, htmlEscape } from 'safevalues';

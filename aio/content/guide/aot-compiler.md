@@ -331,8 +331,8 @@ The compiler can only create instances of certain classes, supports only core de
 
 | Compiler action      | Details |
 |:---                  |:---     |
-| New instances        | The compiler only allows metadata that create instances of the class `InjectionToken` from `@angular/core`.                                            |
-| Supported decorators | The compiler only supports metadata for the [Angular decorators in the `@angular/core` module](api/core#decorators).                                   |
+| New instances        | The compiler only allows metadata that create instances of the class `InjectionToken` from `@angular-classic/core`.                                            |
+| Supported decorators | The compiler only supports metadata for the [Angular decorators in the `@angular-classic/core` module](api/core#decorators).                                   |
 | Function calls       | Factory functions must be exported, named functions. The AOT compiler does not support lambda expressions \("arrow functions"\) for factory functions. |
 
 <a id="function-calls"></a>

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injectable, Input, Type, ɵɵngDeclareClassMetadata} from '@angular/core';
+import {Injectable, Input, Type, ɵɵngDeclareClassMetadata} from '@angular-classic/core';
 
 interface Decorator {
   type: any;

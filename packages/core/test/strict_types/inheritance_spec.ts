@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵɵComponentDeclaration, ɵɵPipeDeclaration} from '@angular/core';
+import {ɵɵComponentDeclaration, ɵɵPipeDeclaration} from '@angular-classic/core';
 
 declare class SuperComponent {
   static ɵcmp: ɵɵComponentDeclaration<SuperComponent, '[super]', never, {}, {}, never, never>;

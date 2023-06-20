@@ -1,4 +1,4 @@
-import { Injector } from '@angular/core';
+import { Injector } from '@angular-classic/core';
 import { environment } from 'environments/environment';
 import { LocationService } from 'app/shared/location.service';
 import { MockLocationService } from 'testing/location.service';

@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpClient} from '@angular/common/http/src/client';
-import {HttpErrorResponse, HttpEventType, HttpResponse, HttpStatusCode} from '@angular/common/http/src/response';
-import {HttpClientTestingBackend} from '@angular/common/http/testing/src/backend';
+import {HttpClient} from '@angular-classic/common/http/src/client';
+import {HttpErrorResponse, HttpEventType, HttpResponse, HttpStatusCode} from '@angular-classic/common/http/src/response';
+import {HttpClientTestingBackend} from '@angular-classic/common/http/testing/src/backend';
 import {toArray} from 'rxjs/operators';
 
 {

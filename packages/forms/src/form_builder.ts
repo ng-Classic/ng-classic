@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {inject, Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular-classic/core';
 
 import {AsyncValidatorFn, ValidatorFn} from './directives/validators';
 import {AbstractControl, AbstractControlOptions, FormHooks} from './model/abstract_model';

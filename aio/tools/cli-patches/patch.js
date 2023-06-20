@@ -1,6 +1,6 @@
 const sh = require('shelljs');
 
-const PATCH_LOCK = 'node_modules/@angular/cli/.patched';
+const PATCH_LOCK = 'node_modules/@angular-classic/cli/.patched';
 
 sh.set('-e');
 sh.cd(`${__dirname}/../../`);

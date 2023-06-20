@@ -8,9 +8,9 @@
 
 import 'jasmine-ajax';
 
-import {HTTP_INTERCEPTORS, HttpBackend, HttpClient, HttpClientModule, HttpEvent, HttpEventType, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {TestBed, waitForAsync} from '@angular/core/testing';
+import {HTTP_INTERCEPTORS, HttpBackend, HttpClient, HttpClientModule, HttpEvent, HttpEventType, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular-classic/common/http';
+import {Injectable} from '@angular-classic/core';
+import {TestBed, waitForAsync} from '@angular-classic/core/testing';
 import {HttpClientBackendService, HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {Observable, zip} from 'rxjs';
 import {concatMap, map, tap} from 'rxjs/operators';

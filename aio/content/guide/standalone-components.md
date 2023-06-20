@@ -72,7 +72,7 @@ An Angular application can be bootstrapped without any `NgModule` by using a sta
 
 ```ts
 // in the main.ts file
-import {bootstrapApplication} from '@angular/platform-browser';
+import {bootstrapApplication} from '@angular-classic/platform-browser';
 import {PhotoAppComponent} from './app/photo.app.component';
 
 bootstrapApplication(PhotoAppComponent);
@@ -285,7 +285,7 @@ Environment injectors can be configured using one of the following:
 Angular v14 introduces a new TypeScript type `EnvironmentInjector` to represent this new naming. The accompanying `createEnvironmentInjector` API makes it possible to create environment injectors programmatically: 
 
 ```ts
-import {createEnvironmentInjector} from '@angular/core';
+import {createEnvironmentInjector} from '@angular-classic/core';
 
 const parentInjector = … // existing environment injector
 const childInjector = createEnvironmentInjector([{provide: PhotosService, useClass: CustomPhotosService}], parentInjector);
@@ -294,7 +294,7 @@ const childInjector = createEnvironmentInjector([{provide: PhotosService, useCla
 Environment injectors have one additional capability: they can execute initialization logic when an environment injector gets created (similar to the `NgModule` constructors that get executed when a module injector is created):
 
 ```ts
-import {createEnvironmentInjector, ENVIRONMENT_INITIALIZER} from '@angular/core';
+import {createEnvironmentInjector, ENVIRONMENT_INITIALIZER} from '@angular-classic/core';
 
 createEnvironmentInjector([
 {provide: PhotosService, useClass: CustomPhotosService},

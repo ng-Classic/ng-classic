@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, DOCUMENT} from '@angular/common';
-import {RuntimeErrorCode} from '@angular/common/src/errors';
-import {PLATFORM_SERVER_ID} from '@angular/common/src/platform_id';
-import {Component, PLATFORM_ID, Provider, Type} from '@angular/core';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
-import {withHead} from '@angular/private/testing';
+import {CommonModule, DOCUMENT} from '@angular-classic/common';
+import {RuntimeErrorCode} from '@angular-classic/common/src/errors';
+import {PLATFORM_SERVER_ID} from '@angular-classic/common/src/platform_id';
+import {Component, PLATFORM_ID, Provider, Type} from '@angular-classic/core';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
+import {withHead} from '@angular-classic/private/testing';
 
 import {PRELOADED_IMAGES} from '../..//src/directives/ng_optimized_image/tokens';
 import {createImageLoader, IMAGE_LOADER, ImageLoader, ImageLoaderConfig} from '../../src/directives/ng_optimized_image/image_loaders/image_loader';

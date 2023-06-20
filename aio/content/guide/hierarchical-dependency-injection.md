@@ -194,7 +194,7 @@ Angular doesn't look for another provider of the same service.
 ## Resolution modifiers
 
 Angular's resolution behavior can be modified with `@Optional()`, `@Self()`, `@SkipSelf()` and `@Host()`.
-Import each of them from `@angular/core` and use each in the component class constructor when you inject your service.
+Import each of them from `@angular-classic/core` and use each in the component class constructor when you inject your service.
 
 For a working application showcasing the resolution modifiers that this section covers, see the <live-example name="resolution-modifiers">resolution modifiers example</live-example>.
 

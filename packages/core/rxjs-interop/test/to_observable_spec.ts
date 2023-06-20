@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, computed, createEnvironmentInjector, EnvironmentInjector, Injector, Signal, signal} from '@angular/core';
-import {toObservable} from '@angular/core/rxjs-interop';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {Component, computed, createEnvironmentInjector, EnvironmentInjector, Injector, Signal, signal} from '@angular-classic/core';
+import {toObservable} from '@angular-classic/core/rxjs-interop';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
 import {take, toArray} from 'rxjs/operators';
 
 describe('toObservable()', () => {

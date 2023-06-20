@@ -1,9 +1,9 @@
 declare const angular: angular.IAngularStatic;
-import '@angular/compiler';
-import { DoBootstrap, NgModule } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { BrowserModule } from '@angular/platform-browser';
-import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
+import '@angular-classic/compiler';
+import { DoBootstrap, NgModule } from '@angular-classic/core';
+import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { UpgradeModule, downgradeComponent } from '@angular-classic/upgrade/static';
 
 import { MainController } from './main.controller';
 import { HeroDetailComponent } from './hero-detail.component';

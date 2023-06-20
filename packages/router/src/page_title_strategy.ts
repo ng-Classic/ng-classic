@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {inject, Injectable} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {inject, Injectable} from '@angular-classic/core';
+import {Title} from '@angular-classic/platform-browser';
 
 import {ActivatedRouteSnapshot, RouterStateSnapshot} from './router_state';
 import {PRIMARY_OUTLET, RouteTitleKey} from './shared';

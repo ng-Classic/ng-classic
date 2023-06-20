@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CssSelector, SelectorMatcher, TmplAstElement, TmplAstTemplate} from '@angular/compiler';
-import {ElementSymbol, PotentialDirective, TemplateSymbol, TemplateTypeChecker, TypeCheckableDirectiveMeta} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {CssSelector, SelectorMatcher, TmplAstElement, TmplAstTemplate} from '@angular-classic/compiler';
+import {ElementSymbol, PotentialDirective, TemplateSymbol, TemplateTypeChecker, TypeCheckableDirectiveMeta} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript';
 
 import {DisplayInfoKind, unsafeCastDisplayInfoKindToScriptElementKind} from './display_parts';

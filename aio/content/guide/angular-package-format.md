@@ -1,7 +1,7 @@
 # Angular package format
 
 This document describes the Angular Package Format \(APF\).
-APF is an Angular specific specification for the structure and format of npm packages that is used by all first-party Angular packages \(`@angular/core`, `@angular/material`, etc.\) and most third-party Angular libraries.
+APF is an Angular specific specification for the structure and format of npm packages that is used by all first-party Angular packages \(`@angular-classic/core`, `@angular-classic/material`, etc.\) and most third-party Angular libraries.
 
 APF enables a package to work seamlessly under most common scenarios that use Angular.
 Packages that use APF are compatible with the tooling offered by the Angular team as well as wider JavaScript ecosystem.
@@ -26,11 +26,11 @@ See the [Creating Libraries](guide/creating-libraries) guide for more details.
 
 ## File layout
 
-The following example shows a simplified version of the `@angular/core` package's file layout, with an explanation for each file in the package.
+The following example shows a simplified version of the `@angular-classic/core` package's file layout, with an explanation for each file in the package.
 
 <div class='filetree'>
     <div class='file'>
-      node_modules/@angular/core
+      node_modules/@angular-classic/core
     </div>
     <div class='children'>
         <div class='file'>
@@ -87,18 +87,18 @@ The following example shows a simplified version of the `@angular/core` package'
     </div>
 </div>
 
-This table describes the file layout under `node_modules/@angular/core` annotated to describe the purpose of files and directories:
+This table describes the file layout under `node_modules/@angular-classic/core` annotated to describe the purpose of files and directories:
 
 | Files                                                                                                                                                     | Purpose |
 |:---                                                                                                                                                       |:---     |
 | `README.md`                                                                                                                                               | Package README, used by npmjs web UI.                                                                                                                                                                          |
 | `package.json`                                                                                                                                            | Primary `package.json`, describing the package itself as well as all available entrypoints and code formats. This file contains the "exports" mapping used by runtimes and tools to perform module resolution. |
-| `index.d.ts`                                                                                                                                               | Bundled `.d.ts` for the primary entrypoint `@angular/core`.                                                                                                                                                    |
-| `esm2022/` <br /> &nbsp;&nbsp;─ `core.mjs` <br /> &nbsp;&nbsp;─ `index.mjs` <br /> &nbsp;&nbsp;─ `public_api.mjs`                                         | Tree of `@angular/core` sources in unflattened ES2022 format.                                                                                                                                                  |
-| `esm2022/testing/`                                                                                                                                        | Tree of the `@angular/core/testing` entrypoint in unflattened ES2022 format.                                                                                                                                   |
+| `index.d.ts`                                                                                                                                               | Bundled `.d.ts` for the primary entrypoint `@angular-classic/core`.                                                                                                                                                    |
+| `esm2022/` <br /> &nbsp;&nbsp;─ `core.mjs` <br /> &nbsp;&nbsp;─ `index.mjs` <br /> &nbsp;&nbsp;─ `public_api.mjs`                                         | Tree of `@angular-classic/core` sources in unflattened ES2022 format.                                                                                                                                                  |
+| `esm2022/testing/`                                                                                                                                        | Tree of the `@angular-classic/core/testing` entrypoint in unflattened ES2022 format.                                                                                                                                   |
 | `fesm2022/` <br /> &nbsp;&nbsp;─ `core.mjs` <br /> &nbsp;&nbsp;─ `core.mjs.map` <br /> &nbsp;&nbsp;─ `testing.mjs` <br /> &nbsp;&nbsp;─ `testing.mjs.map` | Code for all entrypoints in flattened \(FESM\) ES2022 format, along with source maps.                                                                                                                           |
 | `testing/`                                                                                                                                                | Directory representing the "testing" entrypoint.                                                                                                                                                               |
-| `testing/index.d.ts`                                                                                                                                    | Bundled `.d.ts` for the `@angular/core/testing` entrypoint.                                                                                                                                                     |
+| `testing/index.d.ts`                                                                                                                                    | Bundled `.d.ts` for the `@angular-classic/core/testing` entrypoint.                                                                                                                                                     |
 
 ## `package.json`
 
@@ -106,7 +106,7 @@ The primary `package.json` contains important package metadata, including the fo
 
 *   It [declares](#esm-declaration) the package to be in EcmaScript Module \(ESM\) format
 *   It contains an [`"exports"` field](#exports) which defines the available source code formats of all entrypoints
-*   It contains [keys](#legacy-resolution-keys) which define the available source code formats of the primary `@angular/core` entrypoint, for tools which do not understand `"exports"`.
+*   It contains [keys](#legacy-resolution-keys) which define the available source code formats of the primary `@angular-classic/core` entrypoint, for tools which do not understand `"exports"`.
     These keys are considered deprecated, and could be removed as the support for `"exports"` rolls out across the ecosystem.
 
 *   It declares whether the package contains [side effects](#side-effects)
@@ -154,7 +154,7 @@ The `"exports"` field has the following structure:
 
 </code-example>
 
-Of primary interest are the `"."` and the `"./testing"` keys, which define the available code formats for the `@angular/core` primary entrypoint and the `@angular/core/testing` secondary entrypoint, respectively.
+Of primary interest are the `"."` and the `"./testing"` keys, which define the available code formats for the `@angular-classic/core` primary entrypoint and the `@angular-classic/core/testing` secondary entrypoint, respectively.
 For each entrypoint, the available formats are:
 
 | Formats                   | Details |
@@ -173,7 +173,7 @@ For more information, see [Managing assets in a library](guide/creating-librarie
 ### Legacy resolution keys
 
 In addition to `"exports"`, the top-level `package.json` also defines legacy module resolution keys for resolvers that don't support `"exports"`.
-For `@angular/core` these are:
+For `@angular-classic/core` these are:
 
 <code-example language="javascript">
 
@@ -202,10 +202,10 @@ Most Angular packages should not depend on top-level side effects, and thus shou
 
 ## Entrypoints and code splitting
 
-Packages in the Angular Package Format contain one primary entrypoint and zero or more secondary entrypoints \(for example, `@angular/common/http`\).
+Packages in the Angular Package Format contain one primary entrypoint and zero or more secondary entrypoints \(for example, `@angular-classic/common/http`\).
 Entrypoints serve several functions.
 
-1.  They define the module specifiers from which users import code \(for example, `@angular/core` and `@angular/core/testing`\).
+1.  They define the module specifiers from which users import code \(for example, `@angular-classic/core` and `@angular-classic/core/testing`\).
 
     Users typically perceive these entrypoints as distinct groups of symbols, with different purposes or capability.
 
@@ -223,7 +223,7 @@ This allows each Material component to be lazily loaded separately, if desired.
 
 Not all libraries require such granularity.
 Most libraries with a single logical purpose should be published as a single entrypoint.
-`@angular/core` for example uses a single entrypoint for the runtime, because the Angular runtime is generally used as a single entity.
+`@angular-classic/core` for example uses a single entrypoint for the runtime, because the Angular runtime is generally used as a single entity.
 
 ### Resolution of secondary entry points
 
@@ -347,8 +347,8 @@ This is because the tslib version is tied to the TypeScript version used to comp
 
 ## Examples
 
-*   [@angular/core package](https://unpkg.com/browse/@angular/core@13.0.0-rc.0)
-*   [@angular/material package](https://unpkg.com/browse/@angular/material@13.0.0-rc.0)
+*   [@angular-classic/core package](https://unpkg.com/browse/@angular-classic/core@13.0.0-rc.0)
+*   [@angular-classic/material package](https://unpkg.com/browse/@angular-classic/material@13.0.0-rc.0)
 
 ## Definition of terms
 
@@ -357,9 +357,9 @@ In this section are the definitions of all of them to provide additional clarity
 
 #### Package
 
-The smallest set of files that are published to NPM and installed together, for example `@angular/core`.
+The smallest set of files that are published to NPM and installed together, for example `@angular-classic/core`.
 This package includes a manifest called package.json, compiled source code, typescript definition files, source maps, metadata, etc.
-The package is installed with `npm install @angular/core`.
+The package is installed with `npm install @angular-classic/core`.
 
 #### Symbol
 
@@ -381,7 +381,7 @@ Short for Flattened ES Modules and consists of a file format created by flatteni
 
 #### Module ID
 
-The identifier of a module used in the import statements \(for example, `@angular/core`\).
+The identifier of a module used in the import statements \(for example, `@angular-classic/core`\).
 The ID often maps directly to a path on the filesystem, but this is not always the case due to various module resolution strategies.
 
 #### Module specifier
@@ -416,8 +416,8 @@ Independent of the module format.
 
 A module intended to be imported by the user.
 It is referenced by a unique module ID and exports the public API referenced by that module ID.
-An example is `@angular/core` or `@angular/core/testing`.
-Both entry points exist in the `@angular/core` package, but they export different symbols.
+An example is `@angular-classic/core` or `@angular-classic/core/testing`.
+Both entry points exist in the `@angular-classic/core` package, but they export different symbols.
 A package can have many entry points.
 
 #### Deep import
@@ -428,7 +428,7 @@ These module IDs are usually considered to be private APIs that can change over 
 #### Top-Level import
 
 An import coming from an entry point.
-The available top-level imports are what define the public API and are exposed in "&commat;angular/name" modules, such as `@angular/core` or `@angular/common`.
+The available top-level imports are what define the public API and are exposed in "&commat;angular/name" modules, such as `@angular-classic/core` or `@angular-classic/common`.
 
 #### Tree-shaking
 

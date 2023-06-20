@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {absoluteFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {MockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {absoluteFrom} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {MockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 import ts from 'typescript/lib/tsserverlibrary';
 
 const NOOP_FILE_WATCHER: ts.FileWatcher = {

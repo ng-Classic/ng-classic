@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Host, OnDestroy} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Host, OnDestroy} from '@angular-classic/core';
 import {Subscription} from 'rxjs';
 
 import {ExpandingRow} from './expanding_row';

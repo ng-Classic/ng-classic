@@ -64,14 +64,14 @@
     },
 
     {
-      "matchPackagePrefixes": ["@angular/", "angular/", "@angular-devkit", "@schematics/"],
+      "matchPackagePrefixes": ["@angular-classic/", "angular/", "@angular-classic-devkit", "@schematics/"],
       "followTag": "next",
       "groupName": "cross-repo Angular dependencies",
       "schedule": ["at any time"]
     },
 
     {
-      "matchPackagePrefixes": ["@angular/", "angular/", "@angular-devkit", "@schematics/"],
+      "matchPackagePrefixes": ["@angular-classic/", "angular/", "@angular-classic-devkit", "@schematics/"],
       "matchPaths": ["packages/**", "aio/tools/examples/shared/**"],
       "followTag": null
     },
@@ -82,7 +82,7 @@
     },
 
     {
-      "matchPackagePrefixes": ["@angular-eslint/", "@typescript-eslint/"],
+      "matchPackagePrefixes": ["@angular-classic-eslint/", "@typescript-eslint/"],
       "groupName": "eslint dependencies"
     },
 

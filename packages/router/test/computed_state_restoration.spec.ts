@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, Location} from '@angular/common';
-import {provideLocationMocks, SpyLocation} from '@angular/common/testing';
-import {Component, Injectable, NgModule, Type} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
-import {Router, RouterModule, RouterOutlet, UrlTree, withRouterConfig} from '@angular/router';
+import {CommonModule, Location} from '@angular-classic/common';
+import {provideLocationMocks, SpyLocation} from '@angular-classic/common/testing';
+import {Component, Injectable, NgModule, Type} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
+import {Router, RouterModule, RouterOutlet, UrlTree, withRouterConfig} from '@angular-classic/router';
 import {EMPTY, of} from 'rxjs';
 
 import {provideRouter} from '../src/provide_router';

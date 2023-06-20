@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 // This benchmark uses i18n in its `ExpandingRowSummary` component so `$localize` must be loaded.
-import '@angular/localize/init';
+import '@angular-classic/localize/init';
 
-import {enableProdMode} from '@angular/core';
-import {platformBrowser} from '@angular/platform-browser';
+import {enableProdMode} from '@angular-classic/core';
+import {platformBrowser} from '@angular-classic/platform-browser';
 
 import {ExpandingRowBenchmarkModule} from './benchmark';
 

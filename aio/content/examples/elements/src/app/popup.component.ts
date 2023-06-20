@@ -1,6 +1,6 @@
 // #docregion
-import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Component, EventEmitter, HostBinding, Input, Output } from '@angular-classic/core';
+import { animate, state, style, transition, trigger } from '@angular-classic/animations';
 
 @Component({
   selector: 'my-popup',

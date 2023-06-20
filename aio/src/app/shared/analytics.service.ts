@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular-classic/core';
 
 import { trustedResourceUrl, unwrapResourceUrl } from 'safevalues';
 

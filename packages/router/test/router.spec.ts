@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Location} from '@angular/common';
-import {EnvironmentInjector} from '@angular/core';
-import {inject, TestBed} from '@angular/core/testing';
-import {RouterModule} from '@angular/router';
+import {Location} from '@angular-classic/common';
+import {EnvironmentInjector} from '@angular-classic/core';
+import {inject, TestBed} from '@angular-classic/core/testing';
+import {RouterModule} from '@angular-classic/router';
 import {of} from 'rxjs';
 
 import {ChildActivationStart} from '../src/events';

@@ -1,6 +1,6 @@
-import {Injector, NgModule} from '@angular/core';
-import {createCustomElement} from '@angular/elements';
-import {BrowserModule} from '@angular/platform-browser';
+import {Injector, NgModule} from '@angular-classic/core';
+import {createCustomElement} from '@angular-classic/elements';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 import {HelloWorldComponent, HelloWorldOnpushComponent, HelloWorldShadowComponent, TestCardComponent} from './elements';
 

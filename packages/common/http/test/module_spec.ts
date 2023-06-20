@@ -6,17 +6,17 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpHandler} from '@angular/common/http/src/backend';
-import {HttpClient} from '@angular/common/http/src/client';
-import {HttpContext, HttpContextToken} from '@angular/common/http/src/context';
-import {HTTP_INTERCEPTORS, HttpInterceptor} from '@angular/common/http/src/interceptor';
-import {HttpRequest} from '@angular/common/http/src/request';
-import {HttpEvent, HttpResponse} from '@angular/common/http/src/response';
-import {HttpTestingController} from '@angular/common/http/testing/src/api';
-import {HttpClientTestingModule} from '@angular/common/http/testing/src/module';
-import {TestRequest} from '@angular/common/http/testing/src/request';
-import {Injectable, Injector} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {HttpHandler} from '@angular-classic/common/http/src/backend';
+import {HttpClient} from '@angular-classic/common/http/src/client';
+import {HttpContext, HttpContextToken} from '@angular-classic/common/http/src/context';
+import {HTTP_INTERCEPTORS, HttpInterceptor} from '@angular-classic/common/http/src/interceptor';
+import {HttpRequest} from '@angular-classic/common/http/src/request';
+import {HttpEvent, HttpResponse} from '@angular-classic/common/http/src/response';
+import {HttpTestingController} from '@angular-classic/common/http/testing/src/api';
+import {HttpClientTestingModule} from '@angular-classic/common/http/testing/src/module';
+import {TestRequest} from '@angular-classic/common/http/testing/src/request';
+import {Injectable, Injector} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 

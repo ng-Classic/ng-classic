@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatIconModule } from '@angular/material/icon';
-import { By } from '@angular/platform-browser';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { MatIconModule } from '@angular-classic/material/icon';
+import { By } from '@angular-classic/platform-browser';
 import { LocalStorage, NoopStorage } from '../storage.service';
 import { storageKey as themeStorageKey, ThemeToggleComponent } from './theme-toggle.component';
 

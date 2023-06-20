@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Tree} from '@angular-devkit/schematics';
+import {Tree} from '@angular-classic-devkit/schematics';
 import {dirname, relative, resolve} from 'path';
 import ts from 'typescript';
 

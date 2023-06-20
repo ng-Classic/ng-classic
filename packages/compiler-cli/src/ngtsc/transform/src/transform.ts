@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ConstantPool} from '@angular/compiler';
+import {ConstantPool} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {DefaultImportTracker, ImportRewriter} from '../../imports';
@@ -154,7 +154,7 @@ class IvyTransformationVisitor extends Visitor {
   }
 
   /**
-   * Return all decorators on a `Declaration` which are from @angular/core, or an empty set if none
+   * Return all decorators on a `Declaration` which are from @angular-classic/core, or an empty set if none
    * are.
    */
   private _angularCoreDecorators(decl: ts.Declaration): Set<ts.Decorator> {
@@ -178,7 +178,7 @@ class IvyTransformationVisitor extends Visitor {
     if (decorators === undefined) {
       return undefined;
     }
-    // Build a Set of the decorators on this node from @angular/core.
+    // Build a Set of the decorators on this node from @angular-classic/core.
     const coreDecorators = this._angularCoreDecorators(node);
 
     if (coreDecorators.size === decorators.length) {
@@ -374,7 +374,7 @@ function maybeFilterDecorator(
 }
 
 function isFromAngularCore(decorator: Decorator): boolean {
-  return decorator.import !== null && decorator.import.from === '@angular/core';
+  return decorator.import !== null && decorator.import.from === '@angular-classic/core';
 }
 
 function createRecorderFn(defaultImportTracker: DefaultImportTracker):

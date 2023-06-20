@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {WrappedNodeExpr} from '@angular/compiler';
+import {WrappedNodeExpr} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {getSourceFile} from '../../util/src/typescript';

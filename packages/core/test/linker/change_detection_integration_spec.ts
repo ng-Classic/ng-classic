@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ResourceLoader} from '@angular/compiler';
-import {AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ContentChild, DebugElement, Directive, DoCheck, EventEmitter, HostBinding, Injectable, Input, OnChanges, OnDestroy, OnInit, Output, Pipe, PipeTransform, Provider, RendererFactory2, RendererType2, SimpleChange, SimpleChanges, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {isTextNode} from '@angular/platform-browser/testing/src/browser_util';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {ResourceLoader} from '@angular-classic/compiler';
+import {AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ContentChild, DebugElement, Directive, DoCheck, EventEmitter, HostBinding, Injectable, Input, OnChanges, OnDestroy, OnInit, Output, Pipe, PipeTransform, Provider, RendererFactory2, RendererType2, SimpleChange, SimpleChanges, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {isTextNode} from '@angular-classic/platform-browser/testing/src/browser_util';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 import {MockResourceLoader} from './resource_loader_mock';
 

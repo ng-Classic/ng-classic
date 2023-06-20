@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injectable, InjectionToken, Injector, Optional} from '@angular/core';
+import {Injectable, InjectionToken, Injector, Optional} from '@angular-classic/core';
 
 {
   describe('Provider examples', () => {

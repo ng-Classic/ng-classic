@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
-import {getText} from '@angular/language-service/testing/src/util';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
+import {getText} from '@angular-classic/language-service/testing/src/util';
 
 import {LanguageServiceTestEnv, OpenBuffer} from '../testing';
 
@@ -18,7 +18,7 @@ describe('signature help', () => {
 
   it('should handle an empty argument list', () => {
     const main = setup(`
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         template: '{{ foo() }}',
@@ -42,7 +42,7 @@ describe('signature help', () => {
 
   it('should handle a single argument', () => {
     const main = setup(`
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         template: '{{ foo("test") }}',
@@ -65,7 +65,7 @@ describe('signature help', () => {
 
   it('should handle a position within the first of two arguments', () => {
     const main = setup(`
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         template: '{{ foo("test", 3) }}',
@@ -88,7 +88,7 @@ describe('signature help', () => {
 
   it('should handle a position within the second of two arguments', () => {
     const main = setup(`
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         template: '{{ foo("test", 1 + 2) }}',
@@ -111,7 +111,7 @@ describe('signature help', () => {
 
   it('should handle a position within a new, EmptyExpr argument', () => {
     const main = setup(`
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({
         template: '{{ foo("test", ) }}',

@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, HashLocationStrategy, Location, LocationStrategy} from '@angular/common';
-import {provideLocationMocks, SpyLocation} from '@angular/common/testing';
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Injectable, NgModule, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {ChildrenOutletContexts, DefaultUrlSerializer, Router, RouterModule, RouterOutlet, UrlSerializer, UrlTree} from '@angular/router';
+import {CommonModule, HashLocationStrategy, Location, LocationStrategy} from '@angular-classic/common';
+import {provideLocationMocks, SpyLocation} from '@angular-classic/common/testing';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Injectable, NgModule, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {ChildrenOutletContexts, DefaultUrlSerializer, Router, RouterModule, RouterOutlet, UrlSerializer, UrlTree} from '@angular-classic/router';
 import {of} from 'rxjs';
 import {delay, mapTo} from 'rxjs/operators';
 

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentInjector, Type, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {EnvironmentInjector, Type, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 import {from, Observable, of} from 'rxjs';
 import {catchError, concatMap, defaultIfEmpty, first, last as rxjsLast, map, mergeMap, scan, switchMap, tap} from 'rxjs/operators';
 

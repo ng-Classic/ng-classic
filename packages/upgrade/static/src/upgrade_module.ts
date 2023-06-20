@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Injector, NgModule, NgZone, PlatformRef, Testability} from '@angular/core';
+import {Injector, NgModule, NgZone, PlatformRef, Testability} from '@angular-classic/core';
 
 import {bootstrap, element as angularElement, IInjectorService, IIntervalService, IProvideService, ITestabilityService, module_ as angularModule} from '../../src/common/src/angular1';
 import {$$TESTABILITY, $DELEGATE, $INJECTOR, $INTERVAL, $PROVIDE, INJECTOR_KEY, LAZY_MODULE_REF, UPGRADE_APP_TYPE_KEY, UPGRADE_MODULE_NAME} from '../../src/common/src/constants';
@@ -46,7 +46,7 @@ import {NgAdapterInjector} from './util';
  * @usageNotes
  *
  * ```ts
- * import {UpgradeModule} from '@angular/upgrade/static';
+ * import {UpgradeModule} from '@angular-classic/upgrade/static';
  * ```
  *
  * See also the {@link UpgradeModule#examples examples} below.

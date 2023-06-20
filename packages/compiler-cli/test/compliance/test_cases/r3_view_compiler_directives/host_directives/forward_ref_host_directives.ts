@@ -1,4 +1,4 @@
-import {Component, Directive, forwardRef, Input} from '@angular/core';
+import {Component, Directive, forwardRef, Input} from '@angular-classic/core';
 
 @Component({
   selector: 'my-component',

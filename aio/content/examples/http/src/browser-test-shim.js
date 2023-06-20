@@ -22,14 +22,14 @@
     // Assume npm: is set in `paths` in systemjs.config
     // Map the angular testing umd bundles
     map: {
-      '@angular/core/testing': 'npm:@angular/core/bundles/core-testing.umd.js',
-      '@angular/common/testing': 'npm:@angular/common/bundles/common-testing.umd.js',
-      '@angular/common/http/testing': 'npm:@angular/common/bundles/common-http-testing.umd.js',
-      '@angular/compiler/testing': 'npm:@angular/compiler/bundles/compiler-testing.umd.js',
-      '@angular/platform-browser/testing': 'npm:@angular/platform-browser/bundles/platform-browser-testing.umd.js',
-      '@angular/platform-browser-dynamic/testing': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
-      '@angular/router/testing': 'npm:@angular/router/bundles/router-testing.umd.js',
-      '@angular/forms/testing': 'npm:@angular/forms/bundles/forms-testing.umd.js',
+      '@angular-classic/core/testing': 'npm:@angular-classic/core/bundles/core-testing.umd.js',
+      '@angular-classic/common/testing': 'npm:@angular-classic/common/bundles/common-testing.umd.js',
+      '@angular-classic/common/http/testing': 'npm:@angular-classic/common/bundles/common-http-testing.umd.js',
+      '@angular-classic/compiler/testing': 'npm:@angular-classic/compiler/bundles/compiler-testing.umd.js',
+      '@angular-classic/platform-browser/testing': 'npm:@angular-classic/platform-browser/bundles/platform-browser-testing.umd.js',
+      '@angular-classic/platform-browser-dynamic/testing': 'npm:@angular-classic/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
+      '@angular-classic/router/testing': 'npm:@angular-classic/router/bundles/router-testing.umd.js',
+      '@angular-classic/forms/testing': 'npm:@angular-classic/forms/bundles/forms-testing.umd.js',
     },
   });
 
@@ -51,8 +51,8 @@
 
   function initTestBed(){
     return Promise.all([
-      System.import('@angular/core/testing'),
-      System.import('@angular/platform-browser-dynamic/testing')
+      System.import('@angular-classic/core/testing'),
+      System.import('@angular-classic/platform-browser-dynamic/testing')
     ])
 
     .then(function (providers) {

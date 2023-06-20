@@ -1,4 +1,4 @@
-import {Component, Directive, NgModule} from '@angular/core';
+import {Component, Directive, NgModule} from '@angular-classic/core';
 
 @Directive({selector: 'ng-template[directiveA]'})
 export class DirectiveA {

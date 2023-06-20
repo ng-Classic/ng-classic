@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular-classic/core';
 
 import { Category } from './resource.model';
 import { ResourceService } from './resource.service';

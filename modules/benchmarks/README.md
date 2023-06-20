@@ -32,7 +32,7 @@ runs. The following options can be set through [test environment variables](http
 * `PERF_SAMPLE_SIZE`: Benchpress performs measurements until `scriptTime` predictively no longer
   decreases. It does this by using a simple linear regression with the amount of samples specified.
   Defaults to `20` samples.
-* `PERF_FORCE_GC`: If set to `true`, `@angular/benchpress` will run run the garbage collector
+* `PERF_FORCE_GC`: If set to `true`, `@angular-classic/benchpress` will run run the garbage collector
   before and after performing measurements. Benchpress will measure and report the garbage
   collection time.
 * `PERF_DRYRUN`: If set to `true`, no results are printed and stored in a `json` file. Also

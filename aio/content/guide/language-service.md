@@ -91,7 +91,7 @@ Check out the project [here](https://github.com/microsoft/vs-ng-language-service
 
 In [WebStorm](https://www.jetbrains.com/webstorm), enable the plugin [Angular and AngularJS](https://plugins.jetbrains.com/plugin/6971-angular-and-angularjs).
 
-Since WebStorm 2019.1, the `@angular/language-service` is not required anymore and should be removed from your `package.json`.
+Since WebStorm 2019.1, the `@angular-classic/language-service` is not required anymore and should be removed from your `package.json`.
 
 ### Sublime Text
 

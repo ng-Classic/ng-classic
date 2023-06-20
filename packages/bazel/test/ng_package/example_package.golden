@@ -66,7 +66,7 @@ License: MIT
  */
 
 
-import * as i0 from '@angular/core';
+import * as i0 from '@angular-classic/core';
 
 export declare class A11yModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<A11yModule, never>;
@@ -129,8 +129,8 @@ export * from './public-api';
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class A11yModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: A11yModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
     static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "0.0.0", ngImport: i0, type: A11yModule }); }
@@ -179,9 +179,9 @@ export * from './public-api';
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import { MySecondService } from './second';
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 import * as i1 from "./second";
 export class MyService {
     constructor(secondService) {
@@ -205,8 +205,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0", ngImport
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { Injectable } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Injectable } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MySecondService {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: MySecondService, deps: [], target: i0.ɵɵFactoryTarget.Injectable }); }
     static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: MySecondService, providedIn: 'root' }); }
@@ -238,8 +238,8 @@ export * from './mymodule';
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: MyModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
     static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "0.0.0", ngImport: i0, type: MyModule }); }
@@ -280,8 +280,8 @@ export * from './index';
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class SecondaryModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: SecondaryModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
     static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "0.0.0", ngImport: i0, type: SecondaryModule }); }
@@ -309,8 +309,8 @@ export const a = 1;
  * License: MIT
  */
 
-import * as i0 from '@angular/core';
-import { NgModule } from '@angular/core';
+import * as i0 from '@angular-classic/core';
+import { NgModule } from '@angular-classic/core';
 
 class A11yModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: A11yModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
@@ -338,8 +338,8 @@ export { A11yModule };
  * License: MIT
  */
 
-import * as i0 from '@angular/core';
-import { Injectable } from '@angular/core';
+import * as i0 from '@angular-classic/core';
+import { Injectable } from '@angular-classic/core';
 
 class MySecondService {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: MySecondService, deps: [], target: i0.ɵɵFactoryTarget.Injectable }); }
@@ -378,8 +378,8 @@ export { MyService };
  * License: MIT
  */
 
-import * as i0 from '@angular/core';
-import { NgModule } from '@angular/core';
+import * as i0 from '@angular-classic/core';
+import { NgModule } from '@angular-classic/core';
 
 class SecondaryModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: SecondaryModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
@@ -408,8 +408,8 @@ export { SecondaryModule, a };
  * License: MIT
  */
 
-import * as i0 from '@angular/core';
-import { NgModule } from '@angular/core';
+import * as i0 from '@angular-classic/core';
+import { NgModule } from '@angular-classic/core';
 
 class MyModule {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0", ngImport: i0, type: MyModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
@@ -438,7 +438,7 @@ export { MyModule };
  */
 
 
-import * as i0 from '@angular/core';
+import * as i0 from '@angular-classic/core';
 
 declare class MySecondService {
     static ɵfac: i0.ɵɵFactoryDeclaration<MySecondService, never>;
@@ -464,7 +464,7 @@ export { }
  */
 
 
-import * as i0 from '@angular/core';
+import * as i0 from '@angular-classic/core';
 
 export declare class MyModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyModule, never>;
@@ -528,7 +528,7 @@ export { }
  */
 
 
-import * as i0 from '@angular/core';
+import * as i0 from '@angular-classic/core';
 
 export declare const a = 1;
 

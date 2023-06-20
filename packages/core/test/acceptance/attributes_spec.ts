@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
-import {By, DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {Component} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
+import {By, DomSanitizer, SafeUrl} from '@angular-classic/platform-browser';
 
 describe('attribute creation', () => {
   it('should create an element', () => {

@@ -1,7 +1,7 @@
-import {CommonModule} from '@angular/common';
-import {HttpClientModule} from '@angular/common/http';
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {CommonModule} from '@angular-classic/common';
+import {HttpClientModule} from '@angular-classic/common/http';
+import {NgModule} from '@angular-classic/core';
+import {RouterModule, Routes} from '@angular-classic/router';
 import {TransferStateComponentOnInit} from './http-transferstate-lazy-on-init.component';
 
 const routes: Routes = [

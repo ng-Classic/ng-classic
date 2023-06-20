@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular-classic/core/testing';
 
 import { MyLibComponent } from './my-lib.component';
 

@@ -14,7 +14,7 @@ const chalk = require('chalk');
 const diff = require('diff');
 
 const projectDir = __dirname;
-const cliBinPath = path.join(projectDir, 'node_modules/@angular/cli/bin/ng');
+const cliBinPath = path.join(projectDir, 'node_modules/@angular-classic/cli/bin/ng');
 
 const expectationFiles = glob.sync('**/*_expected.+(ts|html)', {cwd: projectDir});
 
@@ -22,7 +22,7 @@ const fromVersion = '12.0.0';
 const toVersion = '13.0.0';
 // Note that we need to specify "--allow-dirty" as the repository will become dirty
 // if dependencies for the integration test are installed (i.e. modified lock files)
-const updateCommandArgs = ['@angular/core', '--migrate-only', '--from', fromVersion,
+const updateCommandArgs = ['@angular-classic/core', '--migrate-only', '--from', fromVersion,
     '--to', toVersion, '--allow-dirty'];
 
 // Print out the command that is used to run the migrations for easier debugging.

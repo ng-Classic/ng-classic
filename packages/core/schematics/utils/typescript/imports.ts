@@ -49,11 +49,11 @@ export function getImportOfIdentifier(typeChecker: ts.TypeChecker, node: ts.Iden
  * E.g. given a file that looks like:
  *
  * ```
- * import { Component, Directive } from '@angular/core';
+ * import { Component, Directive } from '@angular-classic/core';
  * import { Foo } from './foo';
  * ```
  *
- * Calling `getImportSpecifier(sourceFile, '@angular/core', 'Directive')` will yield the node
+ * Calling `getImportSpecifier(sourceFile, '@angular-classic/core', 'Directive')` will yield the node
  * referring to `Directive` in the top import.
  *
  * @param sourceFile File in which to look for imports.

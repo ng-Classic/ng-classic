@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Injectable} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {By} from '@angular/platform-browser';
+import {Component, Injectable} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser';
 
 import {createUrlTreeFromSnapshot} from '../src/create_url_tree';
 import {Routes} from '../src/models';

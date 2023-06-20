@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentRef} from '@angular/core';
+import {ComponentRef} from '@angular-classic/core';
 import {exportNgVar} from '../../dom/util';
 import {AngularProfiler} from './common_tools';
 

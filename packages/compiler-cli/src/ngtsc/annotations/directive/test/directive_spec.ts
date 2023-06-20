@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {CssSelector, DirectiveMeta as T2DirectiveMeta, parseTemplate, R3TargetBinder, SelectorMatcher, TmplAstElement} from '@angular/compiler';
+import {CssSelector, DirectiveMeta as T2DirectiveMeta, parseTemplate, R3TargetBinder, SelectorMatcher, TmplAstElement} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {absoluteFrom} from '../../../file_system';
@@ -28,13 +28,13 @@ runInEachFileSystem(() => {
     it('should use the `ReflectionHost` to detect class inheritance', () => {
       const {program} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Directive: any;',
         },
         {
           name: _('/entry.ts'),
           contents: `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({selector: 'test-dir-1'})
           export class TestDir1 {}
@@ -54,14 +54,14 @@ runInEachFileSystem(() => {
 
     it('should record the source span of a Directive class type', () => {
       const src = `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({selector: 'test-dir'})
         export class TestDir {}
       `;
       const {program} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Directive: any;',
         },
         {
@@ -79,7 +79,7 @@ runInEachFileSystem(() => {
 
     it('should produce metadata compatible with template binding', () => {
       const src = `
-        import {Directive, Input} from '@angular/core';
+        import {Directive, Input} from '@angular-classic/core';
 
         @Directive({selector: '[dir]'})
         export class TestDir {
@@ -89,7 +89,7 @@ runInEachFileSystem(() => {
       `;
       const {program} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Directive: any; export const Input: any;',
         },
         {
@@ -125,7 +125,7 @@ runInEachFileSystem(() => {
 
     it('should identify a structural directive', () => {
       const src = `
-        import {Directive, TemplateRef} from '@angular/core';
+        import {Directive, TemplateRef} from '@angular-classic/core';
 
         @Directive({selector: 'test-dir'})
         export class TestDir {
@@ -134,7 +134,7 @@ runInEachFileSystem(() => {
       `;
       const {program} = makeProgram([
         {
-          name: _('/node_modules/@angular/core/index.d.ts'),
+          name: _('/node_modules/@angular-classic/core/index.d.ts'),
           contents: 'export const Directive: any; export declare class TemplateRef {}',
         },
         {

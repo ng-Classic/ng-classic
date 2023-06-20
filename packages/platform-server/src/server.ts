@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, PlatformLocation, ViewportScroller, ɵgetDOM as getDOM, ɵNullViewportScroller as NullViewportScroller, ɵPLATFORM_SERVER_ID as PLATFORM_SERVER_ID} from '@angular/common';
-import {HttpClientModule} from '@angular/common/http';
-import {createPlatformFactory, Injector, NgModule, Optional, PLATFORM_ID, PLATFORM_INITIALIZER, platformCore, PlatformRef, Provider, StaticProvider, Testability, ɵALLOW_MULTIPLE_PLATFORMS as ALLOW_MULTIPLE_PLATFORMS, ɵsetDocument, ɵTESTABILITY as TESTABILITY} from '@angular/core';
-import {BrowserModule, EVENT_MANAGER_PLUGINS} from '@angular/platform-browser';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {DOCUMENT, PlatformLocation, ViewportScroller, ɵgetDOM as getDOM, ɵNullViewportScroller as NullViewportScroller, ɵPLATFORM_SERVER_ID as PLATFORM_SERVER_ID} from '@angular-classic/common';
+import {HttpClientModule} from '@angular-classic/common/http';
+import {createPlatformFactory, Injector, NgModule, Optional, PLATFORM_ID, PLATFORM_INITIALIZER, platformCore, PlatformRef, Provider, StaticProvider, Testability, ɵALLOW_MULTIPLE_PLATFORMS as ALLOW_MULTIPLE_PLATFORMS, ɵsetDocument, ɵTESTABILITY as TESTABILITY} from '@angular-classic/core';
+import {BrowserModule, EVENT_MANAGER_PLUGINS} from '@angular-classic/platform-browser';
+import {NoopAnimationsModule} from '@angular-classic/platform-browser/animations';
 
 import {DominoAdapter, parseDocument} from './domino_adapter';
 import {SERVER_HTTP_PROVIDERS} from './http';
@@ -89,7 +89,7 @@ export const platformServer: (extraProviders?: StaticProvider[]|undefined) => Pl
  * The server platform that supports the runtime compiler.
  *
  * @see {@link platformServer}
- * @deprecated add an `import @angular/compiler` and replace the usage with `platformServer`
+ * @deprecated add an `import @angular-classic/compiler` and replace the usage with `platformServer`
  *     instead.
  * @publicApi
  */

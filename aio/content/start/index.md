@@ -219,7 +219,7 @@ This section walks you through creating a child component, `ProductAlertsCompone
     *   The template and style filenames reference the component's HTML and CSS
     *   The `@Component()` definition also exports the class, `ProductAlertsComponent`, which handles functionality for the component
 
-1.  To set up `ProductAlertsComponent` to receive product data, first import `Input` from `@angular/core`.
+1.  To set up `ProductAlertsComponent` to receive product data, first import `Input` from `@angular-classic/core`.
 
     <code-example header="src/app/product-alerts/product-alerts.component.ts" path="getting-started/src/app/product-alerts/product-alerts.component.1.ts" region="imports"></code-example>
 
@@ -265,7 +265,7 @@ Since these steps don't use them, the following code examples omit them for brev
 
 </div>
 
-1.  In `product-alerts.component.ts`, import `Output` and `EventEmitter` from `@angular/core`.
+1.  In `product-alerts.component.ts`, import `Output` and `EventEmitter` from `@angular-classic/core`.
 
     <code-example header="src/app/product-alerts/product-alerts.component.ts" path="getting-started/src/app/product-alerts/product-alerts.component.ts" region="imports"></code-example>
 

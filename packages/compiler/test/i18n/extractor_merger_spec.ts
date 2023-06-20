@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DEFAULT_INTERPOLATION_CONFIG, HtmlParser} from '@angular/compiler';
-import {MissingTranslationStrategy} from '@angular/core';
+import {DEFAULT_INTERPOLATION_CONFIG, HtmlParser} from '@angular-classic/compiler';
+import {MissingTranslationStrategy} from '@angular-classic/core';
 
 import {digest, serializeNodes as serializeI18nNodes} from '../../src/i18n/digest';
 import {extractMessages, mergeTranslations} from '../../src/i18n/extractor_merger';

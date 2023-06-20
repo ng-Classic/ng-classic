@@ -1,5 +1,5 @@
 // #docplaster
-import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
+import { ComponentFixture, inject, TestBed } from '@angular-classic/core/testing';
 
 import { UserService } from '../model/user.service';
 import { WelcomeComponent } from './welcome.component';

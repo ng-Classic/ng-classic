@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {Component, createEnvironmentInjector, Directive, EnvironmentInjector, forwardRef, Injector, Input, isStandalone, NgModule, NO_ERRORS_SCHEMA, OnInit, Pipe, PipeTransform, ViewChild, ViewContainerRef} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {CommonModule} from '@angular-classic/common';
+import {Component, createEnvironmentInjector, Directive, EnvironmentInjector, forwardRef, Injector, Input, isStandalone, NgModule, NO_ERRORS_SCHEMA, OnInit, Pipe, PipeTransform, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 describe('standalone components, directives, and pipes', () => {
   it('should render a standalone component', () => {

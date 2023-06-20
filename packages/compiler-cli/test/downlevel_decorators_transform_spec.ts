@@ -83,7 +83,7 @@ describe('downlevel decorator transform', () => {
 
   it('should downlevel decorators for @Injectable decorated class', () => {
     const {output} = transform(`
-       import {Injectable} from '@angular/core';
+       import {Injectable} from '@angular-classic/core';
 
        export class ClassInject {};
 
@@ -106,7 +106,7 @@ describe('downlevel decorator transform', () => {
 
   it('should downlevel decorators for @Directive decorated class', () => {
     const {output} = transform(`
-       import {Directive} from '@angular/core';
+       import {Directive} from '@angular-classic/core';
 
        export class ClassInject {};
 
@@ -129,7 +129,7 @@ describe('downlevel decorator transform', () => {
 
   it('should downlevel decorators for @Component decorated class', () => {
     const {output} = transform(`
-       import {Component} from '@angular/core';
+       import {Component} from '@angular-classic/core';
 
        export class ClassInject {};
 
@@ -151,7 +151,7 @@ describe('downlevel decorator transform', () => {
 
   it('should downlevel decorators for @Pipe decorated class', () => {
     const {output} = transform(`
-       import {Pipe} from '@angular/core';
+       import {Pipe} from '@angular-classic/core';
 
        export class ClassInject {};
 
@@ -204,7 +204,7 @@ describe('downlevel decorator transform', () => {
 
   it('should downlevel Angular-decorated class member', () => {
     const {output} = transform(`
-       import {Input} from '@angular/core';
+       import {Input} from '@angular-classic/core';
 
        export class MyDir {
          @Input() disabled: boolean = false;
@@ -245,7 +245,7 @@ describe('downlevel decorator transform', () => {
     // disabled within the CLI.
 
     const {output} = transform(`
-       import {Injectable} from '@angular/core';
+       import {Injectable} from '@angular-classic/core';
 
        export class ZoneToken {}
 
@@ -283,7 +283,7 @@ describe('downlevel decorator transform', () => {
   it('should downlevel Angular-decorated class member but not preserve type', () => {
     context.writeFile('/other-file.ts', `export class MyOtherClass {}`);
     const {output} = transform(`
-       import {Input} from '@angular/core';
+       import {Input} from '@angular-classic/core';
        import {MyOtherClass} from './other-file';
 
        export class MyDir {
@@ -307,7 +307,7 @@ describe('downlevel decorator transform', () => {
     context.writeFile('/other-file.ts', `export class MyOtherClass {}`);
     const {output} = transform(
         `
-       import {Directive} from '@angular/core';
+       import {Directive} from '@angular-classic/core';
        import {MyOtherClass} from './other-file';
 
        @Directive()
@@ -334,7 +334,7 @@ describe('downlevel decorator transform', () => {
     context.writeFile('/other-file.ts', `export class MyOtherClass {}`);
     const {output, dtsOutput} = transform(
         `
-       import {Directive} from '@angular/core';
+       import {Directive} from '@angular-classic/core';
        import {MyOtherClass} from './other-file';
 
        @Directive()
@@ -360,7 +360,7 @@ describe('downlevel decorator transform', () => {
   it('should properly serialize constructor parameter with external qualified name type', () => {
     context.writeFile('/other-file.ts', `export class MyOtherClass {}`);
     const {output} = transform(`
-       import {Directive} from '@angular/core';
+       import {Directive} from '@angular-classic/core';
        import * as externalFile from './other-file';
 
        @Directive()
@@ -383,7 +383,7 @@ describe('downlevel decorator transform', () => {
 
   it('should properly serialize constructor parameter with local qualified name type', () => {
     const {output} = transform(`
-       import {Directive} from '@angular/core';
+       import {Directive} from '@angular-classic/core';
 
        namespace other {
          export class OtherClass {}
@@ -409,7 +409,7 @@ describe('downlevel decorator transform', () => {
 
   it('should properly downlevel constructor parameter decorators', () => {
     const {output} = transform(`
-       import {Inject, Directive, DOCUMENT} from '@angular/core';
+       import {Inject, Directive, DOCUMENT} from '@angular-classic/core';
 
        @Directive()
        export class MyDir {
@@ -430,7 +430,7 @@ describe('downlevel decorator transform', () => {
 
   it('should properly downlevel constructor parameters with union type', () => {
     const {output} = transform(`
-       import {Optional, Directive, NgZone} from '@angular/core';
+       import {Optional, Directive, NgZone} from '@angular-classic/core';
 
        @Directive()
        export class MyDir {
@@ -452,7 +452,7 @@ describe('downlevel decorator transform', () => {
   it('should add @nocollapse if closure compiler is enabled', () => {
     isClosureEnabled = true;
     const {output} = transform(`
-       import {Directive} from '@angular/core';
+       import {Directive} from '@angular-classic/core';
 
        export class ClassInject {};
 
@@ -491,7 +491,7 @@ describe('downlevel decorator transform', () => {
      `);
        const {output} = transform(
            `
-       import {Directive, Inject} from '@angular/core';
+       import {Directive, Inject} from '@angular-classic/core';
        import {ErrorHandler, ClassInject} from './external';
 
        export class MyDir {
@@ -515,7 +515,7 @@ describe('downlevel decorator transform', () => {
      `);
        const {output} = transform(
            `
-       import {Directive, Inject} from '@angular/core';
+       import {Directive, Inject} from '@angular-classic/core';
        import {ErrorHandler, ClassInject} from './external';
 
        export class MyDir {
@@ -538,7 +538,7 @@ describe('downlevel decorator transform', () => {
      `);
     const {output} = transform(
         `
-       import {Directive} from '@angular/core';
+       import {Directive} from '@angular-classic/core';
        import {Dep} from './external';
 
        @Directive()
@@ -564,7 +564,7 @@ describe('downlevel decorator transform', () => {
 
   it('should be able to serialize circular constructor parameter type', () => {
     const {output} = transform(`
-       import {Directive, Optional, Inject, SkipSelf} from '@angular/core';
+       import {Directive, Optional, Inject, SkipSelf} from '@angular-classic/core';
 
        @Directive()
        export class MyDir {
@@ -588,7 +588,7 @@ describe('downlevel decorator transform', () => {
 
   it('should create diagnostic if property name is non-serializable', () => {
     transform(`
-       import {Directive, ViewChild, TemplateRef} from '@angular/core';
+       import {Directive, ViewChild, TemplateRef} from '@angular-classic/core';
 
        @Directive()
        export class MyDir {
@@ -611,7 +611,7 @@ describe('downlevel decorator transform', () => {
        export const enum KeyCodes {A, B}
      `);
     const {output} = transform(`
-       import {Directive, Inject} from '@angular/core';
+       import {Directive, Inject} from '@angular-classic/core';
        import * as angular from './external';
        import {IOverlay, KeyCodes} from './external';
        import TypeFromDefaultImport from './external';
@@ -657,7 +657,7 @@ describe('downlevel decorator transform', () => {
 
     const {output} = transform(
         `
-       import {Directive} from '@angular/core';
+       import {Directive} from '@angular-classic/core';
 
        export class MyInjectedClass {}
 
@@ -676,7 +676,7 @@ describe('downlevel decorator transform', () => {
 
   it('should capture a non-const enum used as a constructor type', () => {
     const {output} = transform(`
-       import {Component} from '@angular/core';
+       import {Component} from '@angular-classic/core';
 
        export enum Values {A, B};
 
@@ -730,7 +730,7 @@ describe('downlevel decorator transform', () => {
          export declare class Foo {};
        `);
       context.writeFile('foo.ts', `
-         import {Injectable} from '@angular/core';
+         import {Injectable} from '@angular-classic/core';
          import {Foo} from './foo_service';
 
          @Injectable()
@@ -743,7 +743,7 @@ describe('downlevel decorator transform', () => {
          export declare class Bar {};
        `);
       context.writeFile('bar.ts', `
-         import {Injectable} from '@angular/core';
+         import {Injectable} from '@angular-classic/core';
          import {Bar} from './bar_service';
 
          @Injectable()
@@ -775,7 +775,7 @@ describe('downlevel decorator transform', () => {
         const file = `/${i}.ts`;
         files.push(file);
         context.writeFile(file, `
-           import {Injectable} from '@angular/core';
+           import {Injectable} from '@angular-classic/core';
            import {Foo} from './foo';
 
            @Injectable()

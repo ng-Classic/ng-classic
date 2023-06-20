@@ -1,4 +1,4 @@
-import { Component, SkipSelf } from '@angular/core';
+import { Component, SkipSelf } from '@angular-classic/core';
 import { LeafService } from '../leaf.service';
 
 // #docregion skipself-component

@@ -117,7 +117,7 @@ Ignored if `flatModuleOutFile` is `false`.
 ### `flatModuleOutFile`
 
 When `true`, generates a flat module index of the given filename and the corresponding flat module metadata.
-Use to create flat modules that are packaged similarly to `@angular/core` and `@angular/common`.
+Use to create flat modules that are packaged similarly to `@angular-classic/core` and `@angular-classic/common`.
 When this option is used, the `package.json` for the library should refer to the created flat module index instead of the library index file.
 
 Produces only one `.metadata.json` file, which contains all the metadata necessary for symbols exported from the library index.
@@ -234,7 +234,7 @@ Default is `false`.
 ## Command line options
 
 Most of the time you interact with the Angular Compiler indirectly using Angular CLI. When debugging certain issues, you might find it useful to invoke the Angular Compiler directly.
-You can use the `ngc` command provided by the `@angular/compiler-cli` npm package to call the compiler from the command line.
+You can use the `ngc` command provided by the `@angular-classic/compiler-cli` npm package to call the compiler from the command line.
 
 The `ngc` command is just a wrapper around TypeScript's `tsc` compiler command and is primarily configured via the `tsconfig.json` configuration options documented in [the previous sections](#angular-compiler-options).
 

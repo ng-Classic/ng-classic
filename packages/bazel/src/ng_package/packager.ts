@@ -207,7 +207,7 @@ function main(args: string[]): void {
 
   /**
    * Gets the entry-point sub-path from the package root. e.g. if the package name
-   * is `@angular/cdk`, then for `@angular/cdk/a11y` just `a11y` would be returned.
+   * is `@angular-classic/cdk`, then for `@angular-classic/cdk/a11y` just `a11y` would be returned.
    */
   function getEntryPointSubpath(moduleName: string): string {
     return moduleName.slice(`${metadata.npmPackageName}/`.length);
@@ -215,7 +215,7 @@ function main(args: string[]): void {
 
   /**
    * Gets whether the given module name resolves to a secondary entry-point.
-   * e.g. if the package name is `@angular/cdk`, then for `@angular/cdk/a11y`
+   * e.g. if the package name is `@angular-classic/cdk`, then for `@angular-classic/cdk/a11y`
    * this would return `true`.
    */
   function isSecondaryEntryPoint(moduleName: string): boolean {
@@ -296,7 +296,7 @@ function main(args: string[]): void {
       // Ideally we should throw here, as we got an entry point that doesn't
       // have flat module metadata / bundle index, so it may have been an
       // ng_module that's missing a module_name attribute.
-      // However, @angular/compiler can't be an ng_module, as it's the internals
+      // However, @angular-classic/compiler can't be an ng_module, as it's the internals
       // of the ngc compiler, yet we want to build an ng_package for it.
       // So ignore package.json files when we are missing data.
       console.error('WARNING: no module metadata for package', packageName);

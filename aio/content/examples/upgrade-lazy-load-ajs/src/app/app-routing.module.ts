@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule, UrlSegment } from '@angular/router';
+import { NgModule } from '@angular-classic/core';
+import { Routes, RouterModule, UrlSegment } from '@angular-classic/router';
 import { AngularJSComponent } from './angular-js/angular-js.component';
 import { HomeComponent } from './home/home.component';
 import { App404Component } from './app404/app404.component';

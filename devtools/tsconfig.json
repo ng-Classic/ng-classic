@@ -32,7 +32,7 @@
       "node"
     ],
     "paths": {
-      "@angular/*": [
+      "@angular-classic/*": [
         "./packages/*",
         "./dist/bin/packages/*"
       ],

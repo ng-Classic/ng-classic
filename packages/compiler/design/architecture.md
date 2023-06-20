@@ -25,7 +25,7 @@ We will produce two compiler entry-points, `ngtsc` and `ngcc`.
 
 `ngtsc` will be a Typescript-to-Javascript transpiler that reifies Angular decorators into static properties. It is a minimal wrapper around `tsc` which includes a set of Angular transforms. While Ivy is experimental, `ngc` operates as `ngtsc` when the `angularCompilerOption` `enableIvy` flag is set to `true` in the `tsconfig.json` file for the project.
 
-`ngcc` (which stands for Angular compatibility compiler) is designed to process code coming from NPM and produce the equivalent Ivy version, as if the code was compiled with `ngtsc`. It will operate given a `node_modules` directory and a set of packages to compile, and will produce an equivalent directory from which the Ivy equivalents of those modules can be read. `ngcc` is a separate script entry point to `@angular/compiler-cli`.
+`ngcc` (which stands for Angular compatibility compiler) is designed to process code coming from NPM and produce the equivalent Ivy version, as if the code was compiled with `ngtsc`. It will operate given a `node_modules` directory and a set of packages to compile, and will produce an equivalent directory from which the Ivy equivalents of those modules can be read. `ngcc` is a separate script entry point to `@angular-classic/compiler-cli`.
 
 `ngcc` can also be run as part of a code loader (e.g. for Webpack) to transpile packages being read from `node_modules` on-demand.
 
@@ -38,7 +38,7 @@ The overall architecture of `ngtsc` it is a set of transformers that adjust what
 For example, the following class declaration:
 
 ```ts
-import {Component, Input} from '@angular/core';
+import {Component, Input} from '@angular-classic/core';
 
 @Component({
   selector: 'greet',
@@ -53,7 +53,7 @@ will normally be translated into something like this:
 
 ```js
 const tslib_1 = require("tslib");
-const core_1 = require("@angular/core");
+const core_1 = require("@angular-classic/core");
 let GreetComponent = class GreetComponent {
 };
 tslib_1.__decorate([
@@ -79,7 +79,7 @@ export class GreetComponent {
 In `ngtsc` this is instead emitted as,
 
 ```js
-const i0 = require("@angular/core");
+const i0 = require("@angular-classic/core");
 class GreetComponent {}
 GreetComponent.ɵcmp = i0.ɵɵdefineComponent({
     type: GreetComponent,
@@ -102,7 +102,7 @@ GreetComponent.ɵcmp = i0.ɵɵdefineComponent({
 and the `.d.ts` contains:
 
 ```ts
-import * as i0 from '@angular/core';
+import * as i0 from '@angular-classic/core';
 export class GreetComponent {
   static ɵcmp: i0.NgComponentDef<
     GreetComponent,
@@ -334,7 +334,7 @@ interface NgtscCompilerHost extends ts.CompilerHost {
 }
 ```
 
-In the `ngtsc` CLI, this interface will be implemented using a plain read from the filesystem. Another consumer of the `ngtsc` API may wish to implement custom resource loading. For example, `@angular/cli` will invoke webpack on the resource paths to produce the result.
+In the `ngtsc` CLI, this interface will be implemented using a plain read from the filesystem. Another consumer of the `ngtsc` API may wish to implement custom resource loading. For example, `@angular-classic/cli` will invoke webpack on the resource paths to produce the result.
 
 ##### Tsickle
 
@@ -383,7 +383,7 @@ The `.metadata.json` files currently being shipped to NPM includes, among other 
     "__symbolic": "call",
     "expression": {
       "__symbolic": "reference",
-      "module": "@angular/core",
+      "module": "@angular-classic/core",
       "name": "NgModule",
       "line": 22,
       "character": 1
@@ -439,7 +439,7 @@ In this mode, the on-disk `ngcc_node_modules` directory functions as a cache. If
 Compiling a package in `ngcc` involves the following steps:
 
 1. Parse the JS files of the package with the Typescript parser.
-2. Invoke the `StaticReflector` system from the legacy `@angular/compiler` to parse the `.metadata.json` files.
+2. Invoke the `StaticReflector` system from the legacy `@angular-classic/compiler` to parse the `.metadata.json` files.
 3. Run through each Angular decorator in the Ivy system and compile:
     1. Use the JS AST plus the information from the `StaticReflector` to construct the input to the annotation's Compiler.
     2. Run the annotation's Compiler which will produce a partial class and its type declaration.
@@ -471,8 +471,8 @@ For example, if a library ships with commonjs-only code or a UMD bundle that `ng
 
 ### Language Service
 
-The `@angular/language-service` is mostly out of scope for this document, and will be treated in a separate design document. However, it's worth a consideration here as the architecture of the compiler impacts the language service's design.
+The `@angular-classic/language-service` is mostly out of scope for this document, and will be treated in a separate design document. However, it's worth a consideration here as the architecture of the compiler impacts the language service's design.
 
-A Language Service is an analysis engine that integrates into an IDE such as Visual Studio Code. It processes code and provides static analysis information regarding that code, as well as enables specific IDE operations such as code completion, tracing of references, and refactoring. The `@angular/language-service` is a wrapper around the Typescript language service (much as `ngtsc` wraps `tsc`) and extends the analysis of Typescript with a specific understanding of Angular concepts. In particular, it also understands the Angular Template Syntax and can bridge between the component class in Typescript and expressions in the templates.
+A Language Service is an analysis engine that integrates into an IDE such as Visual Studio Code. It processes code and provides static analysis information regarding that code, as well as enables specific IDE operations such as code completion, tracing of references, and refactoring. The `@angular-classic/language-service` is a wrapper around the Typescript language service (much as `ngtsc` wraps `tsc`) and extends the analysis of Typescript with a specific understanding of Angular concepts. In particular, it also understands the Angular Template Syntax and can bridge between the component class in Typescript and expressions in the templates.
 
 To provide code completion and other intelligence around template contents, the Angular Language Service must have a similar understanding of the template contents as the `ngtsc` compiler - it must know the selector map associated with the component, and the metadata of each directive or pipe used in the template. Whether the language service consumes the output of `ngcc` or reuses its metadata transformation logic, the data it needs will be available.

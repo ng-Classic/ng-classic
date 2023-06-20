@@ -9,19 +9,19 @@ A basic understanding of the information in [Introduction to Angular service wor
 
 ## Adding a service worker to your project
 
-To set up the Angular service worker in your project, use the CLI command `ng add @angular/pwa`.
-It takes care of configuring your application to use service workers by adding the `@angular/service-worker` package along
+To set up the Angular service worker in your project, use the CLI command `ng add @angular-classic/pwa`.
+It takes care of configuring your application to use service workers by adding the `@angular-classic/service-worker` package along
 with setting up the necessary support files.
 
 <code-example format="shell" language="shell">
 
-ng add @angular/pwa --project &lt;project-name&gt;
+ng add @angular-classic/pwa --project &lt;project-name&gt;
 
 </code-example>
 
 The preceding command completes the following actions:
 
-1.  Adds the `@angular/service-worker` package to your project.
+1.  Adds the `@angular-classic/service-worker` package to your project.
 1.  Enables service worker build support in the CLI.
 1.  Imports and registers the service worker in the application module.
 1.  Updates the `index.html` file:

@@ -13,12 +13,12 @@ export const heroDetail = {
 };
 // #enddocregion
 
-import { Directive, ElementRef, Injector, Input } from '@angular/core';
-import { UpgradeComponent } from '@angular/upgrade/static';
+import { Directive, ElementRef, Injector, Input } from '@angular-classic/core';
+import { UpgradeComponent } from '@angular-classic/upgrade/static';
 import { Hero } from '../hero';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
+  // eslint-disable-next-line @angular-classic-eslint/directive-selector
   selector: 'hero-detail'
 })
 export class HeroDetailDirective extends UpgradeComponent {

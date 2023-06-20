@@ -37,7 +37,7 @@ setPublicVar CI_PR_USERNAME "$CIRCLE_PR_USERNAME";
 # Define "lazy" PUBLIC environment variables for CircleCI.
 # (I.e. functions to set an environment variable when called.)
 ####################################################################################################
-createPublicVarSetter CI_STABLE_BRANCH "\$(npm info @angular/core dist-tags.latest | sed -r 's/^\\s*([0-9]+\\.[0-9]+)\\.[0-9]+.*$/\\1.x/')";
+createPublicVarSetter CI_STABLE_BRANCH "\$(npm info @angular-classic/core dist-tags.latest | sed -r 's/^\\s*([0-9]+\\.[0-9]+)\\.[0-9]+.*$/\\1.x/')";
 
 
 ####################################################################################################

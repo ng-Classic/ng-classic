@@ -4,11 +4,11 @@ load("@build_bazel_rules_nodejs//:providers.bzl", "LinkablePackageInfo")
 load("@build_bazel_rules_nodejs//internal/linker:link_node_modules.bzl", "LinkerPackageMappingInfo")
 
 def _is_angular_dep(dep):
-    """Check if a dep , e.g., @aio_npm//@angular/core corresonds to a local Angular pacakge."""
+    """Check if a dep , e.g., @aio_npm//@angular-classic/core corresonds to a local Angular pacakge."""
     return dep.startswith("@aio_npm//") and _angular_dep_to_pkg_name(dep) in ALL_PACKAGES
 
 def _angular_dep_to_pkg_name(dep):
-    """E.g., @aio_npm//@angular/core => '@angular/core'"""
+    """E.g., @aio_npm//@angular-classic/core => '@angular-classic/core'"""
     label = Label(dep)
     return label.package
 
@@ -43,7 +43,7 @@ def link_local_packages(all_aio_deps):
 
     # Special case deps that must be testonly
     testonly_deps = [
-        "@aio_npm//@angular/build-tooling/bazel/browsers/chromium",
+        "@aio_npm//@angular-classic/build-tooling/bazel/browsers/chromium",
     ]
 
     # Stamp a corresponding target for each AIO dep that filters out transitive

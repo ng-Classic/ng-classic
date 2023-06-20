@@ -14,7 +14,7 @@ export * from './localize';
 
 // The global declaration must be in the index.d.ts as otherwise it will not be picked up when used
 // with
-// /// <reference types="@angular/localize" />
+// /// <reference types="@angular-classic/localize" />
 
 import {ɵLocalizeFn} from './localize';
 

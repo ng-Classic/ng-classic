@@ -8,6 +8,6 @@
 
 import {factory} from './plugin-factory';
 
-// Tsserver expects `@angular/language-service` to provide a factory function
+// Tsserver expects `@angular-classic/language-service` to provide a factory function
 // as the default export of the package.
 export = factory;

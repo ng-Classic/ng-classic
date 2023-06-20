@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {booleanAttribute, Directive, forwardRef, Input, OnChanges, Provider, SimpleChanges} from '@angular/core';
+import {booleanAttribute, Directive, forwardRef, Input, OnChanges, Provider, SimpleChanges} from '@angular-classic/core';
 import {Observable} from 'rxjs';
 
 import {AbstractControl} from '../model/abstract_model';

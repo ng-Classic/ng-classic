@@ -1,4 +1,4 @@
-import { Attribute, Component } from '@angular/core';
+import { Attribute, Component } from '@angular-classic/core';
 
 @Component({
   selector: 'app-my-input-with-attribute-decorator',

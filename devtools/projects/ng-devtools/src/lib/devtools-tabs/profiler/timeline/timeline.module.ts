@@ -6,19 +6,19 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular/material/legacy-button';
-import {MatLegacyCardModule as MatCardModule} from '@angular/material/legacy-card';
-import {MatLegacyCheckboxModule as MatCheckboxModule} from '@angular/material/legacy-checkbox';
-import {MatLegacyDialogModule as MatDialogModule} from '@angular/material/legacy-dialog';
-import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-input';
-import {MatLegacyProgressBarModule as MatProgressBarModule} from '@angular/material/legacy-progress-bar';
-import {MatLegacySelectModule as MatSelectModule} from '@angular/material/legacy-select';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular/material/legacy-tooltip';
+import {ScrollingModule} from '@angular-classic/cdk/scrolling';
+import {CommonModule} from '@angular-classic/common';
+import {NgModule} from '@angular-classic/core';
+import {FormsModule} from '@angular-classic/forms';
+import {MatIconModule} from '@angular-classic/material/icon';
+import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
+import {MatLegacyCardModule as MatCardModule} from '@angular-classic/material/legacy-card';
+import {MatLegacyCheckboxModule as MatCheckboxModule} from '@angular-classic/material/legacy-checkbox';
+import {MatLegacyDialogModule as MatDialogModule} from '@angular-classic/material/legacy-dialog';
+import {MatLegacyInputModule as MatInputModule} from '@angular-classic/material/legacy-input';
+import {MatLegacyProgressBarModule as MatProgressBarModule} from '@angular-classic/material/legacy-progress-bar';
+import {MatLegacySelectModule as MatSelectModule} from '@angular-classic/material/legacy-select';
+import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
 import {NgxFlamegraphModule} from 'ngx-flamegraph';
 
 import {FrameSelectorComponent} from './frame-selector.component';

@@ -1,5 +1,5 @@
-/* eslint-disable  @angular-eslint/component-selector */
-import { Component, HostBinding, ElementRef, ViewChild, Input, AfterViewInit } from '@angular/core';
+/* eslint-disable  @angular-classic-eslint/component-selector */
+import { Component, HostBinding, ElementRef, ViewChild, Input, AfterViewInit } from '@angular-classic/core';
 import { fromInnerHTML } from 'app/shared/security';
 import { CodeComponent } from './code.component';
 
@@ -60,13 +60,13 @@ export class CodeExampleComponent implements AfterViewInit {
   get hidecopy(): boolean { return this._hidecopy; }
   private _hidecopy: boolean;
 
-  /* eslint-disable-next-line @angular-eslint/no-input-rename */
+  /* eslint-disable-next-line @angular-classic-eslint/no-input-rename */
   @Input('hide-copy')
   set hyphenatedHideCopy(hidecopy: boolean) {
     this.hidecopy = hidecopy;
   }
 
-  /* eslint-disable-next-line @angular-eslint/no-input-rename */
+  /* eslint-disable-next-line @angular-classic-eslint/no-input-rename */
   @Input('hideCopy')
   set capitalizedHideCopy(hidecopy: boolean) {
     this.hidecopy = hidecopy;

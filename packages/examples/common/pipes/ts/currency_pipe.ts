@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {registerLocaleData} from '@angular/common';
-import {Component} from '@angular/core';
+import {registerLocaleData} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
 // we need to import data for the french locale
 import localeFr from './locale-fr';
 

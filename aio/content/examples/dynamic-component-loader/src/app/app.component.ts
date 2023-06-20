@@ -1,5 +1,5 @@
 // #docregion
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular-classic/core';
 
 import { AdService } from './ad.service';
 import { AdItem } from './ad-item';

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InterpolationConfig} from '@angular/compiler';
+import {InterpolationConfig} from '@angular-classic/compiler';
 
 /**
  * Captures template information intended for extraction of i18n messages from a template.

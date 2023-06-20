@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {TestBed} from '@angular/core/testing';
+import {TestBed} from '@angular-classic/core/testing';
 
 import {Component, createEnvironmentInjector, ElementRef, EnvironmentInjector, inject, Injectable, InjectFlags, InjectionToken, NgModule, RendererFactory2, Type, ViewContainerRef, ɵɵdefineInjectable, ɵɵdefineInjector, ɵɵdefineNgModule, ɵɵinject} from '../../src/core';
 import {forwardRef} from '../../src/di/forward_ref';

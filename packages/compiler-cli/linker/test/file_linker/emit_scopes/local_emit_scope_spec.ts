@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {ConstantPool} from '@angular/compiler';
-import * as o from '@angular/compiler/src/output/output_ast';
+import {ConstantPool} from '@angular-classic/compiler';
+import * as o from '@angular-classic/compiler/src/output/output_ast';
 import ts from 'typescript';
 
 import {TypeScriptAstFactory} from '../../../../src/ngtsc/translator';
@@ -40,7 +40,7 @@ describe('LocalEmitScope', () => {
           new LocalEmitScope<ts.Statement, ts.Expression>(ngImport, translator, factory);
       addSharedStatement(emitScope.constantPool);
 
-      const coreImportRef = new o.ExternalReference('@angular/core', 'foo');
+      const coreImportRef = new o.ExternalReference('@angular-classic/core', 'foo');
       const def = emitScope.translateDefinition({
         expression: o.importExpr(coreImportRef).prop('bar').callFn([]),
         statements: [],

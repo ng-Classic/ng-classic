@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular-classic/common/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
-import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular-classic/router';
 
 import { HashLocationStrategy,
-         LocationStrategy } from '@angular/common';
+         LocationStrategy } from '@angular-classic/common';
 
 import { HeroData } from '../app/hero-data';
 import { AppComponent } from '../app/app.component';

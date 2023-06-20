@@ -1,5 +1,5 @@
 {
-  "name": "@angular/forms",
+  "name": "@angular-classic/forms",
   "version": "0.0.0-PLACEHOLDER",
   "description": "Angular - directives and services for creating forms",
   "author": "angular",
@@ -11,9 +11,9 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/core": "0.0.0-PLACEHOLDER",
-    "@angular/common": "0.0.0-PLACEHOLDER",
-    "@angular/platform-browser": "0.0.0-PLACEHOLDER",
+    "@angular-classic/core": "0.0.0-PLACEHOLDER",
+    "@angular-classic/common": "0.0.0-PLACEHOLDER",
+    "@angular-classic/platform-browser": "0.0.0-PLACEHOLDER",
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "repository": {

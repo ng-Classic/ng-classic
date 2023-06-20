@@ -7,8 +7,8 @@
  */
 
 // `tsc-wrapped` helpers are not exposed in the primary `@bazel/concatjs` entry-point.
-import * as ng from '@angular/compiler-cli';
-import {PerfPhase} from '@angular/compiler-cli/private/bazel';
+import * as ng from '@angular-classic/compiler-cli';
+import {PerfPhase} from '@angular-classic/compiler-cli/private/bazel';
 import tscw from '@bazel/concatjs/internal/tsc_wrapped/index.js';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -108,7 +108,7 @@ export async function runOneBuild(
   };
 
   // These are options passed through from the `ng_module` rule which aren't supported
-  // by the `@angular/compiler-cli` and are only intended for `ngc-wrapped`.
+  // by the `@angular-classic/compiler-cli` and are only intended for `ngc-wrapped`.
   const {expectedOut, _useManifestPathsAsModuleName} = angularConfigRawOptions;
 
   const tsHost = ts.createCompilerHost(compilerOpts, true);

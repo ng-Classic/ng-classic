@@ -20,13 +20,13 @@ Without hydration enabled, server side rendered Angular applications will destro
 
 ## How do you enable hydration in Angular
 
-Before you can get started with hydration, you must have a server side rendered (SSR) application. Follow the [Angular Universal Guide](/guide/universal) to enable server side rendering first. Once you have SSR working with your application, you can enable hydration by visiting your main app component or module and importing `provideClientHydration` from `@angular/platform-browser`. You'll then add that provider to your app's bootstrapping providers list.
+Before you can get started with hydration, you must have a server side rendered (SSR) application. Follow the [Angular Universal Guide](/guide/universal) to enable server side rendering first. Once you have SSR working with your application, you can enable hydration by visiting your main app component or module and importing `provideClientHydration` from `@angular-classic/platform-browser`. You'll then add that provider to your app's bootstrapping providers list.
 
 ```typescript
 import {
   bootstrapApplication,
   provideClientHydration,
-} from '@angular/platform-browser';
+} from '@angular-classic/platform-browser';
 ...
 
 bootstrapApplication(RootCmp, {
@@ -37,8 +37,8 @@ bootstrapApplication(RootCmp, {
 Alternatively if you are using NgModules, you would add `provideClientHydration` to your root app module's provider list.
 
 ```typescript
-import {provideClientHydration} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {provideClientHydration} from '@angular-classic/platform-browser';
+import {NgModule} from '@angular-classic/core';
 
 @NgModule({
   declarations: [RootCmp],

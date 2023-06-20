@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, HostBinding, Input, NO_ERRORS_SCHEMA} from '@angular/core';
-import {ComponentFixture, getTestBed, TestBed} from '@angular/core/testing';
-import {DomSanitizer} from '@angular/platform-browser/src/security/dom_sanitization_service';
+import {Component, Directive, HostBinding, Input, NO_ERRORS_SCHEMA} from '@angular-classic/core';
+import {ComponentFixture, getTestBed, TestBed} from '@angular-classic/core/testing';
+import {DomSanitizer} from '@angular-classic/platform-browser/src/security/dom_sanitization_service';
 
 @Component({selector: 'my-comp', template: ''})
 class SecuredComponent {

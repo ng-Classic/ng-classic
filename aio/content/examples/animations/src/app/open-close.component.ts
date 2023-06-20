@@ -1,6 +1,6 @@
 // #docplaster
-import { Component, Input } from '@angular/core';
-import { trigger, transition, state, animate, style, AnimationEvent } from '@angular/animations';
+import { Component, Input } from '@angular-classic/core';
+import { trigger, transition, state, animate, style, AnimationEvent } from '@angular-classic/animations';
 
 // #docregion component, events1
 @Component({

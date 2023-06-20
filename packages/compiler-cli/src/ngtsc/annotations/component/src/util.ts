@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AnimationTriggerNames} from '@angular/compiler';
-import {isResolvedModuleWithProviders, ResolvedModuleWithProviders,} from '@angular/compiler-cli/src/ngtsc/annotations/ng_module';
-import {ErrorCode, makeDiagnostic} from '@angular/compiler-cli/src/ngtsc/diagnostics';
+import {AnimationTriggerNames} from '@angular-classic/compiler';
+import {isResolvedModuleWithProviders, ResolvedModuleWithProviders,} from '@angular-classic/compiler-cli/src/ngtsc/annotations/ng_module';
+import {ErrorCode, makeDiagnostic} from '@angular-classic/compiler-cli/src/ngtsc/diagnostics';
 import ts from 'typescript';
 
 import {Reference} from '../../../imports';
@@ -41,7 +41,7 @@ export function collectAnimationNames(
 }
 
 export function isAngularAnimationsReference(reference: Reference, symbolName: string): boolean {
-  return reference.ownedByModuleGuess === '@angular/animations' &&
+  return reference.ownedByModuleGuess === '@angular-classic/animations' &&
       reference.debugName === symbolName;
 }
 

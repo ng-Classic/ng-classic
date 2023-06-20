@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule} from '@angular/core';
-import {createCustomElement} from '@angular/elements';
-import {RouterModule} from '@angular/router';
+import {CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule} from '@angular-classic/core';
+import {createCustomElement} from '@angular-classic/elements';
+import {RouterModule} from '@angular-classic/router';
 import {initializeMessageBus} from 'ng-devtools-backend';
 
 import {ZoneUnawareIFrameMessageBus} from '../../zone-unaware-iframe-message-bus';

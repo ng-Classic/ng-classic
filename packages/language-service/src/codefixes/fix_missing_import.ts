@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ASTWithName} from '@angular/compiler';
-import {ErrorCode as NgCompilerErrorCode, ngErrorCode} from '@angular/compiler-cli/src/ngtsc/diagnostics/index';
-import {PotentialDirective, PotentialImportMode, PotentialPipe} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
-import * as t from '@angular/compiler/src/render3/r3_ast';  // t for template AST
+import {ASTWithName} from '@angular-classic/compiler';
+import {ErrorCode as NgCompilerErrorCode, ngErrorCode} from '@angular-classic/compiler-cli/src/ngtsc/diagnostics/index';
+import {PotentialDirective, PotentialImportMode, PotentialPipe} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
+import * as t from '@angular-classic/compiler/src/render3/r3_ast';  // t for template AST
 import ts from 'typescript';
 
 import {getTargetAtPosition, TargetNodeKind} from '../template_target';
@@ -90,7 +90,7 @@ function getCodeActions(
           // Note that we pass the `importOn` file twice since we know that the potential import
           // is within the same file, because it doesn't have a `moduleSpecifier`.
           const [forwardRefImports, generatedForwardRefName] = updateImportsForTypescriptFile(
-              tsChecker, importOn.getSourceFile(), 'forwardRef', '@angular/core',
+              tsChecker, importOn.getSourceFile(), 'forwardRef', '@angular-classic/core',
               importOn.getSourceFile());
           fileImportChanges.push(...forwardRefImports);
           forwardRefName = generatedForwardRefName;

@@ -7,7 +7,7 @@
  */
 
 
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Host, Input, OnDestroy} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Host, Input, OnDestroy} from '@angular-classic/core';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 

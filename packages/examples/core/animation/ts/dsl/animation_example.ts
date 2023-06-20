@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {animate, state, style, transition, trigger} from '@angular/animations';
-import {Component, NgModule} from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {animate, state, style, transition, trigger} from '@angular-classic/animations';
+import {Component, NgModule} from '@angular-classic/core';
+import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 
 @Component({
   selector: 'example-app',

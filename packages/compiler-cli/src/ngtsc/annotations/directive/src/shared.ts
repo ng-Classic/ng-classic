@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {createMayBeForwardRefExpression, emitDistinctChangesOnlyDefaultValue, Expression, ExternalExpr, ForwardRefHandling, getSafePropertyAccessString, MaybeForwardRefExpression, ParsedHostBindings, ParseError, parseHostBindings, R3DirectiveMetadata, R3HostDirectiveMetadata, R3InputMetadata, R3QueryMetadata, verifyHostBindings, WrappedNodeExpr} from '@angular/compiler';
+import {createMayBeForwardRefExpression, emitDistinctChangesOnlyDefaultValue, Expression, ExternalExpr, ForwardRefHandling, getSafePropertyAccessString, MaybeForwardRefExpression, ParsedHostBindings, ParseError, parseHostBindings, R3DirectiveMetadata, R3HostDirectiveMetadata, R3InputMetadata, R3QueryMetadata, verifyHostBindings, WrappedNodeExpr} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {ErrorCode, FatalDiagnosticError, makeRelatedInformation} from '../../../diagnostics';
@@ -72,7 +72,7 @@ export function extractDirectiveMetadata(
   const decoratedElements =
       members.filter(member => !member.isStatic && member.decorators !== null);
 
-  const coreModule = isCore ? undefined : '@angular/core';
+  const coreModule = isCore ? undefined : '@angular-classic/core';
 
   // Construct the map of inputs both from the @Directive/@Component
   // decorator, and the decorated fields.
@@ -168,7 +168,7 @@ export function extractDirectiveMetadata(
   const isStructural = ctorDeps !== null && ctorDeps !== 'invalid' &&
       ctorDeps.some(
           dep => (dep.token instanceof ExternalExpr) &&
-              dep.token.value.moduleName === '@angular/core' &&
+              dep.token.value.moduleName === '@angular-classic/core' &&
               dep.token.value.name === 'TemplateRef');
 
   let isStandalone = false;
@@ -443,7 +443,7 @@ function extractQueriesFromDecorator(
           'Decorator query metadata must be an instance of a query type');
     }
     const type = reflector.getImportOfIdentifier(queryType);
-    if (type === null || (!isCore && type.from !== '@angular/core') ||
+    if (type === null || (!isCore && type.from !== '@angular-classic/core') ||
         !QUERY_TYPES.has(type.name)) {
       throw new FatalDiagnosticError(
           ErrorCode.VALUE_HAS_WRONG_TYPE, queryData,

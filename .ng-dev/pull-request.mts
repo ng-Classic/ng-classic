@@ -1,4 +1,4 @@
-import {PullRequestConfig} from '@angular/ng-dev';
+import {PullRequestConfig} from '@angular-classic/ng-dev';
 
 /**
  * Configuration for the merge tool in `ng-dev`. This sets up the labels which

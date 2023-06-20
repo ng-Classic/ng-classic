@@ -10,17 +10,17 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@angular/animations@file:../../dist/packages-dist/animations":
+"@angular-classic/animations@file:../../dist/packages-dist/animations":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/common@file:../../dist/packages-dist/common":
+"@angular-classic/common@file:../../dist/packages-dist/common":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/compiler-cli@file:../../dist/packages-dist/compiler-cli":
+"@angular-classic/compiler-cli@file:../../dist/packages-dist/compiler-cli":
   version "16.1.0-next.0"
   dependencies:
     "@babel/core" "7.19.3"
@@ -32,27 +32,27 @@
     tslib "^2.3.0"
     yargs "^17.2.1"
 
-"@angular/compiler@file:../../dist/packages-dist/compiler":
+"@angular-classic/compiler@file:../../dist/packages-dist/compiler":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/core@file:../../dist/packages-dist/core":
+"@angular-classic/core@file:../../dist/packages-dist/core":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-browser-dynamic@file:../../dist/packages-dist/platform-browser-dynamic":
+"@angular-classic/platform-browser-dynamic@file:../../dist/packages-dist/platform-browser-dynamic":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-browser@file:../../dist/packages-dist/platform-browser":
+"@angular-classic/platform-browser@file:../../dist/packages-dist/platform-browser":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-server@file:../../dist/packages-dist/platform-server":
+"@angular-classic/platform-server@file:../../dist/packages-dist/platform-server":
   version "16.1.0-next.0"
   dependencies:
     tslib "^2.3.0"

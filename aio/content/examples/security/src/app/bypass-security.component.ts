@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion
-import { Component } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { Component } from '@angular-classic/core';
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular-classic/platform-browser';
 
 @Component({
   selector: 'app-bypass-security',

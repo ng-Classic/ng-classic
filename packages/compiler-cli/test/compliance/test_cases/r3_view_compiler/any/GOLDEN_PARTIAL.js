@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: basic_any_cast.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class Comp {
 }
 Comp.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: Comp, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -20,8 +20,8 @@ export {};
 /****************************************************************************************************
  * PARTIAL FILE: this_any_access.js
  ****************************************************************************************************/
-import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 class Comp {
     $any(value) {
         return value;

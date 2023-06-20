@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion cart-service
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular-classic/core';
+import { ActivatedRoute } from '@angular-classic/router';
 
 import { Product, products } from '../products';
 import { CartService } from '../cart.service';

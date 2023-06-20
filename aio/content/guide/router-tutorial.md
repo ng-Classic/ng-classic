@@ -94,11 +94,11 @@ This application will have two components: *crisis-list* and *heroes-list*.
 
     You should see a single web page, consisting of a title and the HTML of your two components.
 
-## Import `RouterModule` from `@angular/router`
+## Import `RouterModule` from `@angular-classic/router`
 
 Routing lets you display specific views of your application depending on the URL path.
 To add this functionality to your sample application, you need to update the `app.module.ts` file to use the module, `RouterModule`.
-You import this module from `@angular/router`.
+You import this module from `@angular-classic/router`.
 
 1.  From your code editor, open the `app.module.ts` file.
 1.  Add the following `import` statement.

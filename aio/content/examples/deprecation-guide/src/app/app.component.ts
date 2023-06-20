@@ -1,8 +1,8 @@
 // #docplaster
-import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
+import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular-classic/core';
 import {
   FormControl,
-} from '@angular/forms';
+} from '@angular-classic/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

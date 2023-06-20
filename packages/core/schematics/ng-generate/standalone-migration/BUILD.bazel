@@ -21,7 +21,7 @@ ts_library(
         "//packages/compiler-cli",
         "//packages/compiler-cli/private",
         "//packages/core/schematics/utils",
-        "@npm//@angular-devkit/schematics",
+        "@npm//@angular-classic-devkit/schematics",
         "@npm//@types/node",
         "@npm//typescript",
     ],
@@ -31,7 +31,7 @@ esbuild(
     name = "bundle",
     entry_point = ":index.ts",
     external = [
-        "@angular-devkit/*",
+        "@angular-classic-devkit/*",
         "typescript",
     ],
     format = "cjs",

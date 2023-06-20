@@ -311,7 +311,7 @@ You can remove the `ng-app` and `ng-strict-di` directives from the HTML and inst
 To begin converting your AngularJS application to a hybrid, you need to load the Angular framework.
 You can see how this can be done with SystemJS by following the instructions in [Setup for Upgrading to AngularJS][AioGuideUpgradeSetup] for selectively copying code from the [QuickStart GitHub repository][GithubAngularQuickstart].
 
-You also need to install the `@angular/upgrade` package using `npm install @angular/upgrade --save` and add a mapping for the `@angular/upgrade/static` package:
+You also need to install the `@angular-classic/upgrade` package using `npm install @angular-classic/upgrade --save` and add a mapping for the `@angular-classic/upgrade/static` package:
 
 <code-example header="systemjs.config.js (map)" path="upgrade-module/src/systemjs.config.1.js" region="upgrade-static-package"></code-example>
 
@@ -320,7 +320,7 @@ Next, create an `app.module.ts` file and add the following `NgModule` class:
 <code-example header="app.module.ts" path="upgrade-module/src/app/ajs-a-hybrid-bootstrap/app.module.ts" region="ngmodule"></code-example>
 
 This bare minimum `NgModule` imports `BrowserModule`, the module every Angular browser-based application must have.
-It also imports `UpgradeModule` from `@angular/upgrade/static`, which exports providers that will be used for upgrading and downgrading services and components.
+It also imports `UpgradeModule` from `@angular-classic/upgrade/static`, which exports providers that will be used for upgrading and downgrading services and components.
 
 In the constructor of the `AppModule`, use dependency injection to get a hold of the `UpgradeModule` instance, and use it to bootstrap the AngularJS application in the `AppModule.ngDoBootstrap` method.
 The `upgrade.bootstrap` method takes the exact same arguments as [angular.bootstrap][AngularjsDocsApiNgFunctionAngularBootstrap]:
@@ -707,7 +707,7 @@ When you migrate from AngularJS to Angular you will want to move as much respons
 To help with the transition, Angular provides the `LocationUpgradeModule`.
 This module enables a *unified* location service that shifts responsibilities from the AngularJS `$location` service to the Angular `Location` service.
 
-To use the `LocationUpgradeModule`, import the symbol from `@angular/common/upgrade` and add it to your `AppModule` imports using the static `LocationUpgradeModule.config()` method.
+To use the `LocationUpgradeModule`, import the symbol from `@angular-classic/common/upgrade` and add it to your `AppModule` imports using the static `LocationUpgradeModule.config()` method.
 
 <code-example language="typescript">
 
@@ -765,7 +765,7 @@ angular.module('myHybridApp', [&hellip;])
 Once you introduce the Angular Router, using the Angular Router triggers navigations through the unified location service, still providing a single source for navigating with AngularJS and Angular.
 
 <!--TODO:
-Correctly document how to use AOT with SystemJS-based `ngUpgrade` apps (or better yet update the `ngUpgrade` examples/guides to use `@angular/cli`).
+Correctly document how to use AOT with SystemJS-based `ngUpgrade` apps (or better yet update the `ngUpgrade` examples/guides to use `@angular-classic/cli`).
 See [https://github.com/angular/angular/issues/35989][GithubAngularAngularIssues35989].
 
 ## Using Ahead-of-time compilation with hybrid apps
@@ -1126,7 +1126,7 @@ You also need to make a couple of adjustments to the `systemjs.config.js` file i
 
 Point the browser to the project root when loading things through SystemJS, instead of using the `<base>` URL.
 
-Install the `upgrade` package using `npm install @angular/upgrade --save` and add a mapping for the `@angular/upgrade/static` package.
+Install the `upgrade` package using `npm install @angular-classic/upgrade --save` and add a mapping for the `@angular-classic/upgrade/static` package.
 
 <code-example header="systemjs.config.js" path="upgrade-phonecat-2-hybrid/systemjs.config.1.js" region="paths"></code-example>
 
@@ -1276,7 +1276,7 @@ Add a simple interface for it:
 
 <code-example header="app/core/phone/phone.service.ts (interface)" path="upgrade-phonecat-2-hybrid/app/core/phone/phone.service.ts" region="phonedata-interface"></code-example>
 
-`@angular/upgrade/static` has a `downgradeInjectable` method for the purpose of making Angular services available to AngularJS code.
+`@angular-classic/upgrade/static` has a `downgradeInjectable` method for the purpose of making Angular services available to AngularJS code.
 Use it to plug in the `Phone` service:
 
 <code-example header="app/core/phone/phone.service.ts (downgrade)" path="upgrade-phonecat-2-hybrid/app/core/phone/phone.service.ts" region="downgrade-injectable"></code-example>
@@ -1546,7 +1546,7 @@ They are AngularJS module configuration files and not needed in Angular:
 
 The external typings for AngularJS may be uninstalled as well.
 The only ones you still need are for Jasmine and Angular polyfills.
-The `@angular/upgrade` package and its mapping in `systemjs.config.js` can also go.
+The `@angular-classic/upgrade` package and its mapping in `systemjs.config.js` can also go.
 
 <code-example format="shell" language="shell">
 

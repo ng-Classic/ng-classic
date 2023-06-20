@@ -29,7 +29,7 @@ runInEachFileSystem(() => {
       describe('declarations', () => {
         it('should detect when a random class is declared', () => {
           env.write('test.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
 
             export class RandomClass {}
 
@@ -48,14 +48,14 @@ runInEachFileSystem(() => {
 
         it('should detect when a declaration lives outside the current compilation', () => {
           env.write('dir.d.ts', `
-            import {ɵɵDirectiveDeclaration} from '@angular/core';
+            import {ɵɵDirectiveDeclaration} from '@angular-classic/core';
 
             export declare class ExternalDir {
               static ɵdir: ɵɵDirectiveDeclaration<ExternalDir, '[test]', never, never, never, never>;
             }
           `);
           env.write('test.ts', `
-            import {NgModule} from '@angular/core';
+            import {NgModule} from '@angular-classic/core';
             import {ExternalDir} from './dir';
 
             @NgModule({
@@ -72,7 +72,7 @@ runInEachFileSystem(() => {
 
         it('should detect when a declaration is shared between two modules', () => {
           env.write('test.ts', `
-            import {Directive, NgModule} from '@angular/core';
+            import {Directive, NgModule} from '@angular-classic/core';
 
             @Directive({selector: '[test]'})
             export class TestDir {}
@@ -102,7 +102,7 @@ runInEachFileSystem(() => {
 
         it('should detect when a declaration is repeated within the same module', () => {
           env.write('test.ts', `
-            import {Directive, NgModule} from '@angular/core';
+            import {Directive, NgModule} from '@angular-classic/core';
 
             @Directive({selector: '[test]'})
             export class TestDir {}
@@ -121,7 +121,7 @@ runInEachFileSystem(() => {
         it('should detect when a declaration is shared between two modules, and is repeated within them',
            () => {
              env.write('test.ts', `
-              import {Directive, NgModule} from '@angular/core';
+              import {Directive, NgModule} from '@angular-classic/core';
 
               @Directive({selector: '[test]'})
               export class TestDir {}
@@ -152,7 +152,7 @@ runInEachFileSystem(() => {
       describe('imports', () => {
         it('should emit imports in a pure function call', () => {
           env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           @NgModule({})
           export class OtherModule {}
@@ -177,7 +177,7 @@ runInEachFileSystem(() => {
 
         it('should produce an error when an invalid class is imported', () => {
           env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           class NotAModule {}
 
@@ -194,7 +194,7 @@ runInEachFileSystem(() => {
         it('should produce an error when a non-class is imported from a .d.ts dependency', () => {
           env.write('dep.d.ts', `export declare let NotAClass: Function;`);
           env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {NotAClass} from './dep';
 
           @NgModule({imports: [NotAClass]})
@@ -214,7 +214,7 @@ runInEachFileSystem(() => {
       describe('exports', () => {
         it('should emit exports in a pure function call', () => {
           env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           @NgModule({})
           export class OtherModule {}
@@ -239,7 +239,7 @@ runInEachFileSystem(() => {
 
         it('should produce an error when a non-NgModule class is exported', () => {
           env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           class NotAModule {}
 
@@ -255,7 +255,7 @@ runInEachFileSystem(() => {
 
         it('should produce a transitive error when an invalid NgModule is exported', () => {
           env.write('test.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
 
           export class NotAModule {}
 
@@ -283,7 +283,7 @@ runInEachFileSystem(() => {
       describe('re-exports', () => {
         it('should produce an error when a non-declared/imported class is re-exported', () => {
           env.write('test.ts', `
-          import {Directive, NgModule} from '@angular/core';
+          import {Directive, NgModule} from '@angular-classic/core';
 
           @Directive({selector: 'test'})
           class Dir {}
@@ -311,7 +311,7 @@ runInEachFileSystem(() => {
 
         // This NgModule declares something which isn't a directive/pipe.
         env.write('invalid-declaration.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -327,7 +327,7 @@ runInEachFileSystem(() => {
 
         // This NgModule imports something which isn't an NgModule.
         env.write('invalid-import.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -347,7 +347,7 @@ runInEachFileSystem(() => {
         // This NgModule imports a DepModule which itself is invalid (it declares something which
         // isn't a directive/pipe).
         env.write('transitive-error-in-import.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',

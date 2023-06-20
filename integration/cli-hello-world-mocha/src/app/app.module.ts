@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { LOCALE_ID, NgModule } from '@angular/core';
-import { registerLocaleData } from '@angular/common';
-import localeFr from '@angular/common/locales/fr';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { LOCALE_ID, NgModule } from '@angular-classic/core';
+import { registerLocaleData } from '@angular-classic/common';
+import localeFr from '@angular-classic/common/locales/fr';
 
 import { AppComponent } from './app.component';
 

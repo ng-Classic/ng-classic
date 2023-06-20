@@ -192,7 +192,7 @@ Replace the contents of each component with the following sample HTML.
 
 ### Register `Router` and `Routes`
 
-To use the `Router`, you must first register the `RouterModule` from the `@angular/router` package.
+To use the `Router`, you must first register the `RouterModule` from the `@angular-classic/router` package.
 Define an array of routes, `appRoutes`, and pass them to the `RouterModule.forRoot()` method.
 The `RouterModule.forRoot()` method returns a module that contains the configured `Router` service provider, plus other providers that the routing library requires.
 Once the application is bootstrapped, the `Router` performs the initial navigation based on the current browser URL.
@@ -473,7 +473,7 @@ The Routing Module has several characteristics:
 The sample routing application does not include routing by default.
 When you use the [Angular CLI](cli) to create a project that does use routing, set the `--routing` option for the project or application, and for each NgModule.
 When you create or initialize a new project \(using the CLI [`ng new`](cli/new) command\) or a new application \(using the [`ng generate app`](cli/generate) command\), specify the `--routing` option.
-This tells the CLI to include the `@angular/router` npm package and create a file named `app-routing.module.ts`.
+This tells the CLI to include the `@angular-classic/router` npm package and create a file named `app-routing.module.ts`.
 You can then use routing in any NgModule that you add to the project or application.
 
 For example, the following command generates an NgModule that can use routing.
@@ -1063,7 +1063,7 @@ This file does the following:
 *   Exports a constant named `slideInAnimation` set to an animation trigger named `routeAnimation`
 *   Defines one transition when switching back and forth from the `heroes` and `hero` routes to ease the component in from the left of the screen as it enters the application view \(`:enter`\), the other to animate the component to the right as it leaves the application view \(`:leave`\)
 
-Back in the `AppComponent`, import the `RouterOutlet` token from the `@angular/router` package and the `slideInAnimation` from `'./animations.ts`.
+Back in the `AppComponent`, import the `RouterOutlet` token from the `@angular-classic/router` package and the `slideInAnimation` from `'./animations.ts`.
 
 Add an `animations` array to the `@Component` metadata that contains the `slideInAnimation`.
 

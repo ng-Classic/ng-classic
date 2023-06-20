@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InternalOptions, LegacyNgcOptions, StrictTemplateOptions} from '@angular/compiler-cli/src/ngtsc/core/api';
-import {absoluteFrom, AbsoluteFsPath, FileSystem, getFileSystem, getSourceFileOrError} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {OptimizeFor, TemplateTypeChecker} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {InternalOptions, LegacyNgcOptions, StrictTemplateOptions} from '@angular-classic/compiler-cli/src/ngtsc/core/api';
+import {absoluteFrom, AbsoluteFsPath, FileSystem, getFileSystem, getSourceFileOrError} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {OptimizeFor, TemplateTypeChecker} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript/lib/tsserverlibrary';
 
 import {LanguageService} from '../../src/language_service';

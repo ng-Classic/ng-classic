@@ -1,3 +1,3 @@
-import "@angular/animations";
+import "@angular-classic/animations";
 
-import "@angular/core";
+import "@angular-classic/core";

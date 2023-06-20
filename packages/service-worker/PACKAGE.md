@@ -6,7 +6,7 @@ Service workers function as a network proxy. They intercept all outgoing HTTP re
 
 To set up the Angular service worker in your project, use the CLI `add` command.
 ```
-ng add @angular/pwa
+ng add @angular-classic/pwa
 ```
 
 The command configures your app to use service workers by adding the service-worker package

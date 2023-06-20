@@ -1,8 +1,8 @@
 // TODO: Add unit tests for this file.
-/* eslint-disable @angular-eslint/no-output-native */
+/* eslint-disable @angular-classic-eslint/no-output-native */
 // #docregion
-import { Component, Output, OnInit, EventEmitter, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Output, OnInit, EventEmitter, NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { Observable } from 'rxjs';
 
 // #docregion eventemitter
@@ -52,7 +52,7 @@ export class AsyncObservablePipeComponent {
 
 // #docregion router
 
-import { Router, NavigationStart } from '@angular/router';
+import { Router, NavigationStart } from '@angular-classic/router';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -80,7 +80,7 @@ export class Routable1Component implements OnInit {
 
 // #docregion activated_route
 
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular-classic/router';
 
 @Component({
   selector: 'app-routable',
@@ -100,7 +100,7 @@ export class Routable2Component implements OnInit {
 
 // #docregion forms
 
-import { FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular-classic/forms';
 
 @Component({
   selector: 'my-component',

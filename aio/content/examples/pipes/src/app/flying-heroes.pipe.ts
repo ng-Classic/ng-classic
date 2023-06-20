@@ -1,7 +1,7 @@
-/* eslint-disable @angular-eslint/use-pipe-transform-interface */
+/* eslint-disable @angular-classic-eslint/use-pipe-transform-interface */
 // #docregion
 // #docregion pure
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular-classic/core';
 
 import { Hero } from './heroes';
 

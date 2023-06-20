@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {APP_BASE_HREF, CommonModule, Location, LocationStrategy, PathLocationStrategy, PlatformLocation} from '@angular/common';
-import {MockLocationStrategy, MockPlatformLocation} from '@angular/common/testing';
-import {TestBed} from '@angular/core/testing';
+import {APP_BASE_HREF, CommonModule, Location, LocationStrategy, PathLocationStrategy, PlatformLocation} from '@angular-classic/common';
+import {MockLocationStrategy, MockPlatformLocation} from '@angular-classic/common/testing';
+import {TestBed} from '@angular-classic/core/testing';
 
 const baseUrl = '/base';
 

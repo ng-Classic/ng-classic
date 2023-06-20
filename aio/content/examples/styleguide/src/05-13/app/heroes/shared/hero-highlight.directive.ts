@@ -1,7 +1,7 @@
 // #docregion
-import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges } from '@angular-classic/core';
 
-// eslint-disable-next-line @angular-eslint/directive-selector
+// eslint-disable-next-line @angular-classic-eslint/directive-selector
 @Directive({ selector: '[heroHighlight]' })
 export class HeroHighlightDirective implements OnChanges {
 

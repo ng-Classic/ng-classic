@@ -15,7 +15,7 @@ const pkgJsonPath = path.join(__dirname, '..', 'package.json');
 const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf8'));
 
 const aioAngularVersion =
-  pkgJson.dependencies['@angular/core'].replace(/^[\^~]/, '') + '+forAIOLocalBuildToAvoidMismatch';
+  pkgJson.dependencies['@angular-classic/core'].replace(/^[\^~]/, '') + '+forAIOLocalBuildToAvoidMismatch';
 
 console.log(`\
 STABLE_PROJECT_VERSION ${aioAngularVersion}

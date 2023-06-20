@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule} from '@angular/common';
-import {Component, Directive, EventEmitter, Input, OnDestroy, Output, ViewChild} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {CommonModule} from '@angular-classic/common';
+import {Component, Directive, EventEmitter, Input, OnDestroy, Output, ViewChild} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 describe('outputs', () => {
   @Component({selector: 'button-toggle', template: ''})

@@ -7,7 +7,7 @@ const content =  {
   'description': 'Add support for a library to your project.',
   'aliases': ['a'],
   'deprecated': false,
-  'longDescriptionRelativePath': '@angular/cli/src/commands/add/long-description.md',
+  'longDescriptionRelativePath': '@angular-classic/cli/src/commands/add/long-description.md',
   'longDescription': 'Adds the npm package for a published library to your workspace.',
   'options': [
     {

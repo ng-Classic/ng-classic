@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, ViewChild } from '@angular-classic/core';
+import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
 
 import { CodeExampleComponent } from './code-example.component';
 import { CodeExampleModule } from './code-example.module';

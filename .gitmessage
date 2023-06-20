@@ -45,7 +45,7 @@ Fixes #<issue number>
 # https://v9.angular.io/guide/deprecations#esm5-and-fesm5-code-formats-in-angular-npm-packages
 #
 # This commit modifies ng_package to no longer distribute these two formats in npm packages built by
-# ng_package (e.g. @angular/core).
+# ng_package (e.g. @angular-classic/core).
 #
 # This commit intentionally doesn't fully clean up the ng_package rule to remove all traces of esm5
 # and fems5 build artifacts as that is a bigger cleanup and currently we are narrowing down the
@@ -55,7 +55,7 @@ Fixes #<issue number>
 # More cleanup to follow: https://angular-team.atlassian.net/browse/FW-2143
 #
 # BREAKING CHANGE: esm5 and fesm5 format is no longer distributed in Angular's npm packages e.g.
-# @angular/core
+# @angular-classic/core
 #
 # Angular CLI will automatically downlevel the code to es5 if differential loading is enabled in the
 # Angular project, so no action is required from Angular CLI users.

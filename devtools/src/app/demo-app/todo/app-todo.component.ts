@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component} from '@angular/core';
-import {MatLegacyDialog as MatDialog} from '@angular/material/legacy-dialog';
+import {Component} from '@angular-classic/core';
+import {MatLegacyDialog as MatDialog} from '@angular-classic/material/legacy-dialog';
 
 import {DialogComponent} from './dialog.component';
 

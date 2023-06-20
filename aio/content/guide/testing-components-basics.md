@@ -110,7 +110,7 @@ It also generates an initial test file for the component, `banner-external.compo
 
 <div class="alert is-helpful">
 
-Because `compileComponents` is asynchronous, it uses the [`waitForAsync`](api/core/testing/waitForAsync) utility function imported from `@angular/core/testing`.
+Because `compileComponents` is asynchronous, it uses the [`waitForAsync`](api/core/testing/waitForAsync) utility function imported from `@angular-classic/core/testing`.
 
 Refer to the [waitForAsync](guide/testing-components-scenarios#waitForAsync) section for more details.
 
@@ -134,7 +134,7 @@ In this example, the metadata object passed to `TestBed.configureTestingModule` 
 <div class="alert is-helpful">
 
 There's no need to declare or import anything else.
-The default test module is pre-configured with something like the `BrowserModule` from `@angular/platform-browser`.
+The default test module is pre-configured with something like the `BrowserModule` from `@angular-classic/platform-browser`.
 
 Later you'll call `TestBed.configureTestingModule()` with imports, providers, and more declarations to suit your testing needs.
 Optional `override` methods can further fine-tune aspects of the configuration.

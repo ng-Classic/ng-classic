@@ -1,4 +1,4 @@
-import { Injector } from '@angular/core';
+import { Injector } from '@angular-classic/core';
 import { Subject } from 'rxjs';
 import { AngularEvent, EventsComponent } from './events.component';
 import { EventsService } from './events.service';

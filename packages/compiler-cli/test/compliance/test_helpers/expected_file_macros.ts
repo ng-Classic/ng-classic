@@ -5,8 +5,8 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AttributeMarker, SelectorFlags} from '@angular/compiler/src/core';
-import {QueryFlags} from '@angular/compiler/src/render3/view/compiler';
+import {AttributeMarker, SelectorFlags} from '@angular-classic/compiler/src/core';
+import {QueryFlags} from '@angular-classic/compiler/src/render3/view/compiler';
 
 import {i18nIcuMsg, i18nMsg, i18nMsgWithPostprocess, Options, Placeholder, resetMessageIndex} from './i18n_helpers';
 

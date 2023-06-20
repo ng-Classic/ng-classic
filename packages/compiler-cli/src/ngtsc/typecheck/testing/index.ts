@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CssSelector, ParseSourceFile, ParseSourceSpan, parseTemplate, R3TargetBinder, SchemaMetadata, SelectorMatcher, TmplAstElement, Type} from '@angular/compiler';
+import {CssSelector, ParseSourceFile, ParseSourceSpan, parseTemplate, R3TargetBinder, SchemaMetadata, SelectorMatcher, TmplAstElement, Type} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {absoluteFrom, AbsoluteFsPath, getSourceFileOrError, LogicalFileSystem} from '../../file_system';
@@ -91,7 +91,7 @@ export function typescriptLibDts(): TestFile {
 
 export function angularCoreDts(): TestFile {
   return {
-    name: absoluteFrom('/node_modules/@angular/core/index.d.ts'),
+    name: absoluteFrom('/node_modules/@angular-classic/core/index.d.ts'),
     contents: `
     export declare class TemplateRef<C> {
       readonly elementRef: unknown;
@@ -110,7 +110,7 @@ export function angularCoreDts(): TestFile {
 
 export function angularAnimationsDts(): TestFile {
   return {
-    name: absoluteFrom('/node_modules/@angular/animations/index.d.ts'),
+    name: absoluteFrom('/node_modules/@angular-classic/animations/index.d.ts'),
     contents: `
     export declare class AnimationEvent {
       element: any;

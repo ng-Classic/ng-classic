@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EventEmitter, NgZone} from '@angular/core';
-import {fakeAsync, flushMicrotasks, inject, waitForAsync} from '@angular/core/testing';
-import {Log} from '@angular/core/testing/src/testing_internal';
+import {EventEmitter, NgZone} from '@angular-classic/core';
+import {fakeAsync, flushMicrotasks, inject, waitForAsync} from '@angular-classic/core/testing';
+import {Log} from '@angular-classic/core/testing/src/testing_internal';
 
 import {global} from '../../src/util/global';
 import {getNativeRequestAnimationFrame} from '../../src/util/raf';

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {MessageBundle, Serializer, Xliff, Xliff2, Xmb} from '@angular/compiler';
+import {MessageBundle, Serializer, Xliff, Xliff2, Xmb} from '@angular-classic/compiler';
 import * as path from 'path';
 import ts from 'typescript';
 

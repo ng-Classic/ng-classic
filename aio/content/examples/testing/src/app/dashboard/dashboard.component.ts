@@ -1,6 +1,6 @@
 // #docregion
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {Component, OnInit} from '@angular-classic/core';
+import {Router} from '@angular-classic/router';
 
 import {Hero} from '../model/hero';
 import {HeroService} from '../model/hero.service';

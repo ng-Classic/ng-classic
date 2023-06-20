@@ -1,8 +1,8 @@
-/* eslint-disable @angular-eslint/no-input-rename,
-                  @angular-eslint/no-inputs-metadata-property,
-                  @angular-eslint/no-output-rename,
-                  @angular-eslint/no-outputs-metadata-property */
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+/* eslint-disable @angular-classic-eslint/no-input-rename,
+                  @angular-classic-eslint/no-inputs-metadata-property,
+                  @angular-classic-eslint/no-output-rename,
+                  @angular-classic-eslint/no-outputs-metadata-property */
+import { Component, EventEmitter, Input, Output } from '@angular-classic/core';
 
 @Component({
   selector: 'app-aliasing',

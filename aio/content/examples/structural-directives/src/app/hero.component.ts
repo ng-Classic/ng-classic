@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 import { LoadingState } from './loading-state';
 import { Hero, heroes } from './hero';

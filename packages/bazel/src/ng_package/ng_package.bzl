@@ -29,9 +29,9 @@ def _debug(vars, *args):
     if "VERBOSE_LOGS" in vars.keys():
         print("[ng_package.bzl]", args)
 
-_DEFAULT_NG_PACKAGER = "//@angular/bazel/bin:packager"
-_DEFAULT_ROLLUP_CONFIG_TMPL = "//:node_modules/@angular/bazel/src/ng_package/rollup.config.js"
-_DEFAULT_ROLLUP = "//@angular/bazel/src/ng_package/rollup"
+_DEFAULT_NG_PACKAGER = "//@angular-classic/bazel/bin:packager"
+_DEFAULT_ROLLUP_CONFIG_TMPL = "//:node_modules/@angular-classic/bazel/src/ng_package/rollup.config.js"
+_DEFAULT_ROLLUP = "//@angular-classic/bazel/src/ng_package/rollup"
 
 _NG_PACKAGE_MODULE_MAPPINGS_ATTR = "ng_package_module_mappings"
 
@@ -71,37 +71,37 @@ ng_package_module_mappings_aspect = aspect(
 )
 
 WELL_KNOWN_EXTERNALS = [
-    "@angular/animations",
-    "@angular/animations/browser",
-    "@angular/animations/browser/testing",
-    "@angular/common",
-    "@angular/common/http",
-    "@angular/common/http/testing",
-    "@angular/common/testing",
-    "@angular/common/upgrade",
-    "@angular/compiler",
-    "@angular/compiler/testing",
-    "@angular/core",
-    "@angular/core/testing",
-    "@angular/elements",
-    "@angular/forms",
-    "@angular/localize",
-    "@angular/localize/init",
-    "@angular/platform-browser",
-    "@angular/platform-browser/animations",
-    "@angular/platform-browser/testing",
-    "@angular/platform-browser-dynamic",
-    "@angular/platform-browser-dynamic/testing",
-    "@angular/platform-server",
-    "@angular/platform-server/init",
-    "@angular/platform-server/testing",
-    "@angular/router",
-    "@angular/router/testing",
-    "@angular/router/upgrade",
-    "@angular/service-worker",
-    "@angular/service-worker/config",
-    "@angular/upgrade",
-    "@angular/upgrade/static",
+    "@angular-classic/animations",
+    "@angular-classic/animations/browser",
+    "@angular-classic/animations/browser/testing",
+    "@angular-classic/common",
+    "@angular-classic/common/http",
+    "@angular-classic/common/http/testing",
+    "@angular-classic/common/testing",
+    "@angular-classic/common/upgrade",
+    "@angular-classic/compiler",
+    "@angular-classic/compiler/testing",
+    "@angular-classic/core",
+    "@angular-classic/core/testing",
+    "@angular-classic/elements",
+    "@angular-classic/forms",
+    "@angular-classic/localize",
+    "@angular-classic/localize/init",
+    "@angular-classic/platform-browser",
+    "@angular-classic/platform-browser/animations",
+    "@angular-classic/platform-browser/testing",
+    "@angular-classic/platform-browser-dynamic",
+    "@angular-classic/platform-browser-dynamic/testing",
+    "@angular-classic/platform-server",
+    "@angular-classic/platform-server/init",
+    "@angular-classic/platform-server/testing",
+    "@angular-classic/router",
+    "@angular-classic/router/testing",
+    "@angular-classic/router/upgrade",
+    "@angular-classic/service-worker",
+    "@angular-classic/service-worker/config",
+    "@angular-classic/upgrade",
+    "@angular-classic/upgrade/static",
     "rxjs",
     "rxjs/operators",
     "tslib",
@@ -306,7 +306,7 @@ def _ng_package_impl(ctx):
         if not dep.label.package.startswith(owning_package):
             fail("Unexpected dependency. %s is defined outside of %s." % (dep, owning_package))
 
-        # Module name of the current entry-point. eg. @angular/core/testing
+        # Module name of the current entry-point. eg. @angular-classic/core/testing
         module_name = ""
 
         # Packsge name where this entry-point is defined in,

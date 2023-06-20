@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Pipe, PipeTransform} from '@angular/core';
+import {Pipe, PipeTransform} from '@angular-classic/core';
 
 import {invalidPipeArgumentError} from './invalid_pipe_argument_error';
 

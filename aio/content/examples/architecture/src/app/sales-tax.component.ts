@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 
 import { SalesTaxService } from './sales-tax.service';
 import { TaxRateService } from './tax-rate.service';

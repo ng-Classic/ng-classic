@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {inject, Injectable, Renderer2, ɵRuntimeError as RuntimeError} from '@angular/core';
+import {inject, Injectable, Renderer2, ɵRuntimeError as RuntimeError} from '@angular-classic/core';
 
 import {DOCUMENT} from '../../dom_tokens';
 import {RuntimeErrorCode} from '../../errors';

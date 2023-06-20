@@ -1,4 +1,4 @@
-import {Component, NgModule, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {Component, NgModule, QueryList, ViewChild, ViewChildren} from '@angular-classic/core';
 
 @Component({
   selector: 'view-query-component',

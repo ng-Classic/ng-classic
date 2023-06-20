@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, NgForOf} from '@angular/common';
-import {Component, Input, Type} from '@angular/core';
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
-import {provideRouter, Router, RouterModule, RouterOutlet, withComponentInputBinding} from '@angular/router/src';
-import {RouterTestingHarness} from '@angular/router/testing';
+import {CommonModule, NgForOf} from '@angular-classic/common';
+import {Component, Input, Type} from '@angular-classic/core';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular-classic/core/testing';
+import {provideRouter, Router, RouterModule, RouterOutlet, withComponentInputBinding} from '@angular-classic/router/src';
+import {RouterTestingHarness} from '@angular-classic/router/testing';
 
 
 describe('router outlet name', () => {

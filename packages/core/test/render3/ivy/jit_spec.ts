@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, ContentChild, ContentChildren, Directive, ElementRef, forwardRef, getNgModuleById, HostBinding, HostListener, Input, NgModule, Pipe, QueryList, ViewChild, ViewChildren, ɵNgModuleDef as NgModuleDef, ɵɵngDeclareComponent as ngDeclareComponent} from '@angular/core';
-import {Injectable} from '@angular/core/src/di/injectable';
-import {setCurrentInjector, ɵɵinject} from '@angular/core/src/di/injector_compatibility';
-import {ɵɵdefineInjectable, ɵɵInjectorDef} from '@angular/core/src/di/interface/defs';
-import {FactoryFn} from '@angular/core/src/render3/definition_factory';
-import {ComponentDef, PipeDef,} from '@angular/core/src/render3/interfaces/definition';
+import {Component, ContentChild, ContentChildren, Directive, ElementRef, forwardRef, getNgModuleById, HostBinding, HostListener, Input, NgModule, Pipe, QueryList, ViewChild, ViewChildren, ɵNgModuleDef as NgModuleDef, ɵɵngDeclareComponent as ngDeclareComponent} from '@angular-classic/core';
+import {Injectable} from '@angular-classic/core/src/di/injectable';
+import {setCurrentInjector, ɵɵinject} from '@angular-classic/core/src/di/injector_compatibility';
+import {ɵɵdefineInjectable, ɵɵInjectorDef} from '@angular-classic/core/src/di/interface/defs';
+import {FactoryFn} from '@angular-classic/core/src/render3/definition_factory';
+import {ComponentDef, PipeDef,} from '@angular-classic/core/src/render3/interfaces/definition';
 
 
 

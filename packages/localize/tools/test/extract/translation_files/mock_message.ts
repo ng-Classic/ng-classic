@@ -5,9 +5,9 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {absoluteFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {ɵParsedMessage} from '@angular/localize';
-import {MessageId, SourceLocation} from '@angular/localize/src/utils';
+import {absoluteFrom} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {ɵParsedMessage} from '@angular-classic/localize';
+import {MessageId, SourceLocation} from '@angular-classic/localize/src/utils';
 
 export interface MockMessageOptions {
   customId?: string;

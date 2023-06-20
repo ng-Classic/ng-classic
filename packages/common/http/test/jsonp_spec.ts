@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpHeaders} from '@angular/common/http/src/headers';
-import {JSONP_ERR_HEADERS_NOT_SUPPORTED, JSONP_ERR_NO_CALLBACK, JSONP_ERR_WRONG_METHOD, JSONP_ERR_WRONG_RESPONSE_TYPE, JsonpClientBackend} from '@angular/common/http/src/jsonp';
-import {HttpRequest} from '@angular/common/http/src/request';
-import {HttpErrorResponse, HttpEventType} from '@angular/common/http/src/response';
+import {HttpHeaders} from '@angular-classic/common/http/src/headers';
+import {JSONP_ERR_HEADERS_NOT_SUPPORTED, JSONP_ERR_NO_CALLBACK, JSONP_ERR_WRONG_METHOD, JSONP_ERR_WRONG_RESPONSE_TYPE, JsonpClientBackend} from '@angular-classic/common/http/src/jsonp';
+import {HttpRequest} from '@angular-classic/common/http/src/request';
+import {HttpErrorResponse, HttpEventType} from '@angular-classic/common/http/src/response';
 import {toArray} from 'rxjs/operators';
 
 import {MockDocument} from './jsonp_mock';

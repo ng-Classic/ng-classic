@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isNamedClassDeclaration} from '@angular/compiler-cli/src/ngtsc/reflection';
-import {PotentialDirective, ReferenceSymbol, Symbol, SymbolKind, TcbLocation, VariableSymbol} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {isNamedClassDeclaration} from '@angular-classic/compiler-cli/src/ngtsc/reflection';
+import {PotentialDirective, ReferenceSymbol, Symbol, SymbolKind, TcbLocation, VariableSymbol} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript';
 
 

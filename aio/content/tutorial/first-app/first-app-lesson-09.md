@@ -94,7 +94,7 @@ In a later lesson, you replace the static data with a live data source to get da
 
 In the **Edit** pane of your IDE, in `src/app/home/home.component.ts`:
 
-1.  At the top of `src/app/home/home.component.ts`, add the `inject` to the items imported from `@angular/common`. This will import the `inject` function into the `HomeComponent` class.
+1.  At the top of `src/app/home/home.component.ts`, add the `inject` to the items imported from `@angular-classic/common`. This will import the `inject` function into the `HomeComponent` class.
 
     <code-example header="Update to src/app/home/home.component.ts" path="first-app-lesson-09/src/app/home/home.component.ts" region="import-inject"></code-example>
 

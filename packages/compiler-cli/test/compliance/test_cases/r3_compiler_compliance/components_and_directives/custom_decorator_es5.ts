@@ -1,4 +1,4 @@
-import {Component, InjectionToken} from '@angular/core';
+import {Component, InjectionToken} from '@angular-classic/core';
 
 const token = new InjectionToken('token');
 

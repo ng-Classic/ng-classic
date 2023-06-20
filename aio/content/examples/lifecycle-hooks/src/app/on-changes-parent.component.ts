@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular-classic/core';
 
 import { Hero } from './hero';
 import { OnChangesComponent } from './on-changes.component';

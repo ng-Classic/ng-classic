@@ -7,8 +7,8 @@ import {
   QueryList,
   ViewChild,
   ViewChildren,
-} from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+} from '@angular-classic/core';
+import { MatSidenav } from '@angular-classic/material/sidenav';
 import { DocumentContents, DocumentService } from 'app/documents/document.service';
 import { NotificationComponent } from 'app/layout/notification/notification.component';
 import { CurrentNodes, NavigationNode, NavigationService, VersionInfo } from 'app/navigation/navigation.service';

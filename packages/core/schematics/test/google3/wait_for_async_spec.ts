@@ -32,7 +32,7 @@ describe('Google3 waitForAsync TSLint rule', () => {
         module: 'es2015',
         baseUrl: './',
         paths: {
-          '@angular/core/testing': ['testing.d.ts'],
+          '@angular-classic/core/testing': ['testing.d.ts'],
         }
       },
     }));
@@ -62,7 +62,7 @@ describe('Google3 waitForAsync TSLint rule', () => {
 
   it('should flag async imports and usages', () => {
     writeFile('/index.ts', `
-      import { async, inject } from '@angular/core/testing';
+      import { async, inject } from '@angular-classic/core/testing';
 
       it('should work', async(() => {
         expect(inject('foo')).toBe('foo');
@@ -83,7 +83,7 @@ describe('Google3 waitForAsync TSLint rule', () => {
 
   it('should change async imports to waitForAsync', () => {
     writeFile('/index.ts', `
-      import { async, inject } from '@angular/core/testing';
+      import { async, inject } from '@angular-classic/core/testing';
 
       it('should work', async(() => {
         expect(inject('foo')).toBe('foo');
@@ -92,12 +92,12 @@ describe('Google3 waitForAsync TSLint rule', () => {
 
     runTSLint(true);
     expect(getFile('/index.ts'))
-        .toContain(`import { inject, waitForAsync } from '@angular/core/testing';`);
+        .toContain(`import { inject, waitForAsync } from '@angular-classic/core/testing';`);
   });
 
   it('should change aliased async imports to waitForAsync', () => {
     writeFile('/index.ts', `
-      import { async as renamedAsync, inject } from '@angular/core/testing';
+      import { async as renamedAsync, inject } from '@angular-classic/core/testing';
 
       it('should work', renamedAsync(() => {
         expect(inject('foo')).toBe('foo');
@@ -106,12 +106,12 @@ describe('Google3 waitForAsync TSLint rule', () => {
 
     runTSLint(true);
     expect(getFile('/index.ts'))
-        .toContain(`import { inject, waitForAsync as renamedAsync } from '@angular/core/testing';`);
+        .toContain(`import { inject, waitForAsync as renamedAsync } from '@angular-classic/core/testing';`);
   });
 
-  it('should not change async imports if they are not from @angular/core/testing', () => {
+  it('should not change async imports if they are not from @angular-classic/core/testing', () => {
     writeFile('/index.ts', `
-      import { inject } from '@angular/core/testing';
+      import { inject } from '@angular-classic/core/testing';
       import { async } from './my-test-library';
 
       it('should work', async(() => {
@@ -121,13 +121,13 @@ describe('Google3 waitForAsync TSLint rule', () => {
 
     runTSLint(true);
     const content = getFile('/index.ts');
-    expect(content).toContain(`import { inject } from '@angular/core/testing';`);
+    expect(content).toContain(`import { inject } from '@angular-classic/core/testing';`);
     expect(content).toContain(`import { async } from './my-test-library';`);
   });
 
   it('should not change imports if waitForAsync was already imported', () => {
     writeFile('/index.ts', `
-      import { async, inject, waitForAsync } from '@angular/core/testing';
+      import { async, inject, waitForAsync } from '@angular-classic/core/testing';
 
       it('should work', async(() => {
         expect(inject('foo')).toBe('foo');
@@ -140,12 +140,12 @@ describe('Google3 waitForAsync TSLint rule', () => {
 
     runTSLint(true);
     expect(getFile('/index.ts'))
-        .toContain(`import { async, inject, waitForAsync } from '@angular/core/testing';`);
+        .toContain(`import { async, inject, waitForAsync } from '@angular-classic/core/testing';`);
   });
 
   it('should change calls from `async` to `waitForAsync`', () => {
     writeFile('/index.ts', `
-      import { async, inject } from '@angular/core/testing';
+      import { async, inject } from '@angular-classic/core/testing';
 
       it('should work', async(() => {
         expect(inject('foo')).toBe('foo');
@@ -159,14 +159,14 @@ describe('Google3 waitForAsync TSLint rule', () => {
     runTSLint(true);
 
     const content = getFile('/index.ts');
-    expect(content).toContain(`import { inject, waitForAsync } from '@angular/core/testing';`);
+    expect(content).toContain(`import { inject, waitForAsync } from '@angular-classic/core/testing';`);
     expect(content).toContain(`it('should work', waitForAsync(() => {`);
     expect(content).toContain(`it('should also work', waitForAsync(() => {`);
   });
 
   it('should not change aliased calls', () => {
     writeFile('/index.ts', `
-      import { async as renamedAsync, inject } from '@angular/core/testing';
+      import { async as renamedAsync, inject } from '@angular-classic/core/testing';
 
       it('should work', renamedAsync(() => {
         expect(inject('foo')).toBe('foo');
@@ -177,7 +177,7 @@ describe('Google3 waitForAsync TSLint rule', () => {
 
     const content = getFile('/index.ts');
     expect(content).toContain(
-        `import { inject, waitForAsync as renamedAsync } from '@angular/core/testing';`);
+        `import { inject, waitForAsync as renamedAsync } from '@angular-classic/core/testing';`);
     expect(content).toContain(`it('should work', renamedAsync(() => {`);
   });
 });

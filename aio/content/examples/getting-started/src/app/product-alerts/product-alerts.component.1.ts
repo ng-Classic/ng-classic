@@ -1,6 +1,6 @@
 // #docplaster
 // #docregion imports
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular-classic/core';
 import { Product } from '../products';
 // #enddocregion imports
 // #docregion as-generated

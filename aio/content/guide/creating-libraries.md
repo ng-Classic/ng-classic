@@ -186,14 +186,14 @@ You need to add these manually to the conditional ["exports"](guide/angular-pack
 
 </code-example>
 
-The above is an extract from the [@angular/material](https://unpkg.com/browse/@angular/material/package.json) distributable.
+The above is an extract from the [@angular-classic/material](https://unpkg.com/browse/@angular-classic/material/package.json) distributable.
 </div>
 
 ## Peer dependencies
 
-Angular libraries should list any `@angular/*` dependencies the library depends on as peer dependencies.
+Angular libraries should list any `@angular-classic/*` dependencies the library depends on as peer dependencies.
 This ensures that when modules ask for Angular, they all get the exact same module.
-If a library lists `@angular/core` in `dependencies` instead of `peerDependencies`, it might get a different Angular module instead, which would cause your application to break.
+If a library lists `@angular-classic/core` in `dependencies` instead of `peerDependencies`, it might get a different Angular module instead, which would cause your application to break.
 
 ## Using your own library in applications
 
@@ -255,7 +255,7 @@ ng build my-lib --watch
 
 The CLI `build` command uses a different builder and invokes a different build tool for libraries than it does for applications.
 
-*   The build system for applications, `@angular-devkit/build-angular`, is based on `webpack`, and is included in all new Angular CLI projects
+*   The build system for applications, `@angular-classic-devkit/build-angular`, is based on `webpack`, and is included in all new Angular CLI projects
 *   The build system for libraries is based on `ng-packagr`.
     It is only added to your dependencies when you add a library using `ng generate library my-lib`.
 
@@ -304,7 +304,7 @@ However, the code in these libraries cannot be bundled directly along with the b
 To finish compilation, use the Angular linker.
 
 For applications that don't use the Angular CLI, the linker is available as a [Babel](https://babeljs.io) plugin.
-The plugin is to be imported from `@angular/compiler-cli/linker/babel`.
+The plugin is to be imported from `@angular-classic/compiler-cli/linker/babel`.
 
 The Angular linker Babel plugin supports build caching, meaning that libraries only need to be processed by the linker a single time, regardless of other npm operations.
 

@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, createComponent, createEnvironmentInjector, EnvironmentInjector, NgModule, ViewChild, ViewContainerRef} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Component, createComponent, createEnvironmentInjector, EnvironmentInjector, NgModule, ViewChild, ViewContainerRef} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 describe('standalone injector', () => {
   it('should create one standalone injector for each parent EnvInjector', () => {

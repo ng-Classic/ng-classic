@@ -1,10 +1,10 @@
 // #docplaster
 // #docregion
 import { switchMap } from 'rxjs/operators';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular-classic/core';
 import { Observable } from 'rxjs';
 // #docregion imports
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular-classic/router';
 // #enddocregion imports
 
 import { HeroService } from '../hero.service';

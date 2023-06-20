@@ -7,19 +7,19 @@
  */
 // Make the `$localize()` global function available to the compiled templates, and the direct calls
 // below. This would normally be done inside the application `polyfills.ts` file.
-import '@angular/localize/init';
+import '@angular-classic/localize/init';
 
-import {CommonModule, DOCUMENT, registerLocaleData} from '@angular/common';
-import localeEs from '@angular/common/locales/es';
-import localeRo from '@angular/common/locales/ro';
-import {computeMsgId} from '@angular/compiler';
-import {Attribute, Component, ContentChild, ContentChildren, Directive, ElementRef, HostBinding, Input, LOCALE_ID, NO_ERRORS_SCHEMA, Pipe, PipeTransform, QueryList, RendererFactory2, TemplateRef, Type, ViewChild, ViewContainerRef, ɵsetDocument} from '@angular/core';
-import {HEADER_OFFSET} from '@angular/core/src/render3/interfaces/view';
-import {getComponentLView} from '@angular/core/src/render3/util/discovery_utils';
-import {TestBed} from '@angular/core/testing';
-import {clearTranslations, loadTranslations} from '@angular/localize';
-import {By, ɵDomRendererFactory2 as DomRendererFactory2} from '@angular/platform-browser';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule, DOCUMENT, registerLocaleData} from '@angular-classic/common';
+import localeEs from '@angular-classic/common/locales/es';
+import localeRo from '@angular-classic/common/locales/ro';
+import {computeMsgId} from '@angular-classic/compiler';
+import {Attribute, Component, ContentChild, ContentChildren, Directive, ElementRef, HostBinding, Input, LOCALE_ID, NO_ERRORS_SCHEMA, Pipe, PipeTransform, QueryList, RendererFactory2, TemplateRef, Type, ViewChild, ViewContainerRef, ɵsetDocument} from '@angular-classic/core';
+import {HEADER_OFFSET} from '@angular-classic/core/src/render3/interfaces/view';
+import {getComponentLView} from '@angular-classic/core/src/render3/util/discovery_utils';
+import {TestBed} from '@angular-classic/core/testing';
+import {clearTranslations, loadTranslations} from '@angular-classic/localize';
+import {By, ɵDomRendererFactory2 as DomRendererFactory2} from '@angular-classic/platform-browser';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 import {BehaviorSubject} from 'rxjs';
 
 

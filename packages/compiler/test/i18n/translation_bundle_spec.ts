@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {MissingTranslationStrategy} from '@angular/core';
+import {MissingTranslationStrategy} from '@angular-classic/core';
 
 import * as i18n from '../../src/i18n/i18n_ast';
 import {TranslationBundle} from '../../src/i18n/translation_bundle';

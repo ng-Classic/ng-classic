@@ -6,17 +6,17 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import '@angular/localize/init';
+import '@angular-classic/localize/init';
 
-import {CommonModule, DOCUMENT, isPlatformServer, NgComponentOutlet, NgFor, NgIf, NgTemplateOutlet, PlatformLocation} from '@angular/common';
-import {MockPlatformLocation} from '@angular/common/testing';
-import {ApplicationRef, Component, ComponentRef, createComponent, destroyPlatform, Directive, ElementRef, EnvironmentInjector, ErrorHandler, getPlatform, inject, Injectable, Input, NgZone, PLATFORM_ID, Provider, TemplateRef, Type, ViewChild, ViewContainerRef, ViewEncapsulation, ɵsetDocument} from '@angular/core';
-import {Console} from '@angular/core/src/console';
-import {getComponentDef} from '@angular/core/src/render3/definition';
-import {NoopNgZone} from '@angular/core/src/zone/ng_zone';
-import {TestBed} from '@angular/core/testing';
-import {bootstrapApplication, HydrationFeature, HydrationFeatureKind, provideClientHydration, withNoDomReuse} from '@angular/platform-browser';
-import {provideRouter, RouterOutlet, Routes} from '@angular/router';
+import {CommonModule, DOCUMENT, isPlatformServer, NgComponentOutlet, NgFor, NgIf, NgTemplateOutlet, PlatformLocation} from '@angular-classic/common';
+import {MockPlatformLocation} from '@angular-classic/common/testing';
+import {ApplicationRef, Component, ComponentRef, createComponent, destroyPlatform, Directive, ElementRef, EnvironmentInjector, ErrorHandler, getPlatform, inject, Injectable, Input, NgZone, PLATFORM_ID, Provider, TemplateRef, Type, ViewChild, ViewContainerRef, ViewEncapsulation, ɵsetDocument} from '@angular-classic/core';
+import {Console} from '@angular-classic/core/src/console';
+import {getComponentDef} from '@angular-classic/core/src/render3/definition';
+import {NoopNgZone} from '@angular-classic/core/src/zone/ng_zone';
+import {TestBed} from '@angular-classic/core/testing';
+import {bootstrapApplication, HydrationFeature, HydrationFeatureKind, provideClientHydration, withNoDomReuse} from '@angular-classic/platform-browser';
+import {provideRouter, RouterOutlet, Routes} from '@angular-classic/router';
 import {first} from 'rxjs/operators';
 
 import {provideServerRendering} from '../public_api';

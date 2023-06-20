@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ɵPLATFORM_BROWSER_ID as PLATFORM_BROWSER_ID} from '@angular/common';
-import {ResourceLoader} from '@angular/compiler';
-import {COMPILER_OPTIONS, PLATFORM_ID, StaticProvider} from '@angular/core';
+import {ɵPLATFORM_BROWSER_ID as PLATFORM_BROWSER_ID} from '@angular-classic/common';
+import {ResourceLoader} from '@angular-classic/compiler';
+import {COMPILER_OPTIONS, PLATFORM_ID, StaticProvider} from '@angular-classic/core';
 
-import {ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS as INTERNAL_BROWSER_PLATFORM_PROVIDERS} from '@angular/platform-browser';
+import {ɵINTERNAL_BROWSER_PLATFORM_PROVIDERS as INTERNAL_BROWSER_PLATFORM_PROVIDERS} from '@angular-classic/platform-browser';
 
 import {ResourceLoaderImpl} from './resource_loader/resource_loader_impl';
 

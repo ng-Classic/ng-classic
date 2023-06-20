@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {PotentialImportMode} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
+import {PotentialImportMode} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
 import ts from 'typescript';
 
 import {DiagnosticCategoryLabel} from '../../src/ngtsc/core/api';
@@ -34,7 +34,7 @@ runInEachFileSystem(() => {
     describe('supports `getPrimaryAngularDecorator()` ', () => {
       it('for components', () => {
         env.write('test.ts', `
-		 import {Component} from '@angular/core';
+		 import {Component} from '@angular-classic/core';
 
 		 @Component({
 			 standalone: true,
@@ -52,7 +52,7 @@ runInEachFileSystem(() => {
 
       it('for pipes', () => {
         env.write('test.ts', `
-		 import {Pipe, PipeTransform} from '@angular/core';
+		 import {Pipe, PipeTransform} from '@angular-classic/core';
 
 		 @Pipe({name: 'expPipe'})
 		 export class ExpPipe implements PipeTransform {
@@ -70,7 +70,7 @@ runInEachFileSystem(() => {
 
       it('for NgModules', () => {
         env.write('test.ts', `
-			 import {NgModule} from '@angular/core';
+			 import {NgModule} from '@angular-classic/core';
 
 			 @NgModule({
 				 declarations: [],
@@ -91,7 +91,7 @@ runInEachFileSystem(() => {
     describe('supports `getOwningNgModule()` ', () => {
       it('for components', () => {
         env.write('test.ts', `
-			  import {Component, NgModule} from '@angular/core';
+			  import {Component, NgModule} from '@angular-classic/core';
 
 			  @NgModule({
 				  declarations: [AppCmp],
@@ -118,7 +118,7 @@ runInEachFileSystem(() => {
 
       it('for standalone components (which should be null)', () => {
         env.write('test.ts', `
-			  import {Component, NgModule} from '@angular/core';
+			  import {Component, NgModule} from '@angular-classic/core';
 
 			  @NgModule({
 				  declarations: [AppCmp],
@@ -146,7 +146,7 @@ runInEachFileSystem(() => {
 
       it('for pipes', () => {
         env.write('test.ts', `
-			  import {Component, NgModule, Pipe, PipeTransform} from '@angular/core';
+			  import {Component, NgModule, Pipe, PipeTransform} from '@angular-classic/core';
 
 			  @NgModule({
 				  declarations: [ExpPipe],
@@ -175,7 +175,7 @@ runInEachFileSystem(() => {
     describe('can retrieve candidate directives` ', () => {
       it('which are out of scope', () => {
         env.write('one.ts', `
-		   import {Component} from '@angular/core';
+		   import {Component} from '@angular-classic/core';
 
 		   @Component({
 			   standalone: true,
@@ -186,7 +186,7 @@ runInEachFileSystem(() => {
 		   `);
 
         env.write('two.ts', `
-		   import {Component} from '@angular/core';
+		   import {Component} from '@angular-classic/core';
 
 		   @Component({
 			   standalone: true,
@@ -206,7 +206,7 @@ runInEachFileSystem(() => {
     describe('can retrieve candidate pipes` ', () => {
       it('which are out of scope', () => {
         env.write('one.ts', `
-			 import {Pipe} from '@angular/core';
+			 import {Pipe} from '@angular-classic/core';
 
 			 @Pipe({
 				name: 'foo-pipe',
@@ -217,7 +217,7 @@ runInEachFileSystem(() => {
 			 `);
 
         env.write('two.ts', `
-			 import {Component} from '@angular/core';
+			 import {Component} from '@angular-classic/core';
 
 			 @Component({
 				 standalone: true,
@@ -237,7 +237,7 @@ runInEachFileSystem(() => {
     describe('can generate imports` ', () => {
       it('for out of scope standalone components', () => {
         env.write('one.ts', `
-			 import {Component} from '@angular/core';
+			 import {Component} from '@angular-classic/core';
 
 			 @Component({
 				 standalone: true,
@@ -248,7 +248,7 @@ runInEachFileSystem(() => {
 			 `);
 
         env.write('two.ts', `
-			 import {Component} from '@angular/core';
+			 import {Component} from '@angular-classic/core';
 
 			 @Component({
 				 standalone: true,
@@ -275,7 +275,7 @@ runInEachFileSystem(() => {
 
       it('for out of scope ngModules', () => {
         env.write('one.ts', `
-			 import {Component} from '@angular/core';
+			 import {Component} from '@angular-classic/core';
 
 			 @Component({
 				 standalone: true,
@@ -286,7 +286,7 @@ runInEachFileSystem(() => {
 			 `);
 
         env.write('two.ts', `
-			 import {Component} from '@angular/core';
+			 import {Component} from '@angular-classic/core';
 
 			 @Component({
 				 selector: 'two-cmp',
@@ -296,8 +296,8 @@ runInEachFileSystem(() => {
 			 `);
 
         env.write('twomod.ts', `
-			import { NgModule } from '@angular/core';
-			import { CommonModule } from '@angular/common';
+			import { NgModule } from '@angular-classic/core';
+			import { CommonModule } from '@angular-classic/common';
 			import { TwoCmp } from './two';
 
 			@NgModule({
@@ -332,7 +332,7 @@ runInEachFileSystem(() => {
 
       it('for forward references in the same file', () => {
         env.write('decls.ts', `
-					import {Component} from '@angular/core';
+					import {Component} from '@angular-classic/core';
 
 					@Component({
 						standalone: true,

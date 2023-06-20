@@ -2,30 +2,30 @@
 
 Our semver, timed-release cycle and deprecation policy currently applies to these npm packages:
 
-- `@angular/animations`
-- `@angular/core`
-- `@angular/common`
-- `@angular/elements`
-- `@angular/forms`
-- `@angular/platform-browser`
-- `@angular/platform-browser-dynamic`
-- `@angular/platform-server`
-- `@angular/upgrade`
-- `@angular/router`
-- `@angular/service-worker`
+- `@angular-classic/animations`
+- `@angular-classic/core`
+- `@angular-classic/common`
+- `@angular-classic/elements`
+- `@angular-classic/forms`
+- `@angular-classic/platform-browser`
+- `@angular-classic/platform-browser-dynamic`
+- `@angular-classic/platform-server`
+- `@angular-classic/upgrade`
+- `@angular-classic/router`
+- `@angular-classic/service-worker`
 
 
-One intentional omission from this list is `@angular/compiler`, which is currently considered a low level API and is subject to internal changes. These changes will not affect any applications or libraries using the higher-level APIs (the command line interface or JIT compilation via `@angular/platform-browser-dynamic`). Only very specific use-cases, such as tooling integration for IDEs and linters, require direct access to the compiler API. If you are working on this kind of integration, please reach out to us first.
+One intentional omission from this list is `@angular-classic/compiler`, which is currently considered a low level API and is subject to internal changes. These changes will not affect any applications or libraries using the higher-level APIs (the command line interface or JIT compilation via `@angular-classic/platform-browser-dynamic`). Only very specific use-cases, such as tooling integration for IDEs and linters, require direct access to the compiler API. If you are working on this kind of integration, please reach out to us first.
 
-Additionally only the command line usage (not direct use of APIs) of `@angular/compiler-cli` is covered.
+Additionally only the command line usage (not direct use of APIs) of `@angular-classic/compiler-cli` is covered.
 
 Other projects developed by the Angular team like angular-cli, Angular Material, will be covered by these or similar guarantees in the future as they mature.
 
 Within the supported packages, we provide guarantees for:
 
-- symbols exported via the main entry point (e.g. `@angular/core`) and testing entry point (e.g. `@angular/core/testing`). This applies to both runtime/JavaScript values and TypeScript types.
+- symbols exported via the main entry point (e.g. `@angular-classic/core`) and testing entry point (e.g. `@angular-classic/core/testing`). This applies to both runtime/JavaScript values and TypeScript types.
 - symbols exported via global namespace `ng` (e.g. `ng.core`)
-- bundles located in the `bundles/` directory of our npm packages (e.g. `@angular/core/bundles/core.umd.js`)
+- bundles located in the `bundles/` directory of our npm packages (e.g. `@angular-classic/core/bundles/core.umd.js`)
 
 
 We explicitly don't consider the following to be our public API surface:

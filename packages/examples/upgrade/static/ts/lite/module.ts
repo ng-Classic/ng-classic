@@ -7,14 +7,14 @@
  */
 
 // #docplaster
-import {Component, Directive, ElementRef, EventEmitter, Inject, Injectable, Injector, Input, NgModule, Output, StaticProvider} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {Component, Directive, ElementRef, EventEmitter, Inject, Injectable, Injector, Input, NgModule, Output, StaticProvider} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 // #docregion basic-how-to
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
 // #enddocregion
 /* tslint:disable: no-duplicate-imports */
 // #docregion basic-how-to
-import {downgradeComponent, downgradeModule, UpgradeComponent} from '@angular/upgrade/static';
+import {downgradeComponent, downgradeModule, UpgradeComponent} from '@angular-classic/upgrade/static';
 
 
 // #enddocregion

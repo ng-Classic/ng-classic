@@ -1,6 +1,6 @@
 // #docregion
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular-classic/core';
+import { RouterModule, Routes } from '@angular-classic/router';
 
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';

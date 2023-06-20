@@ -11,7 +11,7 @@ describe('default babel plugin entry-point', () => {
   it('should work as a Babel plugin using the module specifier', async () => {
     const result = (await babel.transformAsync(
         `
-        import * as i0 from "@angular/core";
+        import * as i0 from "@angular-classic/core";
 
         export class MyMod {}
         export class MyComponent {}
@@ -20,7 +20,7 @@ describe('default babel plugin entry-point', () => {
        `,
         {
           plugins: [
-            '@angular/compiler-cli/linker/babel/index.mjs',
+            '@angular-classic/compiler-cli/linker/babel/index.mjs',
           ],
           filename: 'test.js',
         }))!;
@@ -34,7 +34,7 @@ describe('default babel plugin entry-point', () => {
   it('should be configurable', async () => {
     const result = (await babel.transformAsync(
         `
-        import * as i0 from "@angular/core";
+        import * as i0 from "@angular-classic/core";
 
         export class MyMod {}
         export class MyComponent {}
@@ -43,7 +43,7 @@ describe('default babel plugin entry-point', () => {
        `,
         {
           plugins: [
-            ['@angular/compiler-cli/linker/babel/index.mjs', {linkerJitMode: true}],
+            ['@angular-classic/compiler-cli/linker/babel/index.mjs', {linkerJitMode: true}],
           ],
           filename: 'test.js',
         }))!;

@@ -6,17 +6,17 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgswCommChannel} from '@angular/service-worker/src/low_level';
-import {SwPush} from '@angular/service-worker/src/push';
-import {SwUpdate} from '@angular/service-worker/src/update';
-import {MockServiceWorkerContainer} from '@angular/service-worker/testing/mock';
-import {CacheDatabase} from '@angular/service-worker/worker/src/db-cache';
-import {Driver} from '@angular/service-worker/worker/src/driver';
-import {Manifest} from '@angular/service-worker/worker/src/manifest';
-import {MockRequest} from '@angular/service-worker/worker/testing/fetch';
-import {MockFileSystemBuilder, MockServerStateBuilder, tmpHashTableForFs} from '@angular/service-worker/worker/testing/mock';
-import {SwTestHarness, SwTestHarnessBuilder} from '@angular/service-worker/worker/testing/scope';
-import {envIsSupported} from '@angular/service-worker/worker/testing/utils';
+import {NgswCommChannel} from '@angular-classic/service-worker/src/low_level';
+import {SwPush} from '@angular-classic/service-worker/src/push';
+import {SwUpdate} from '@angular-classic/service-worker/src/update';
+import {MockServiceWorkerContainer} from '@angular-classic/service-worker/testing/mock';
+import {CacheDatabase} from '@angular-classic/service-worker/worker/src/db-cache';
+import {Driver} from '@angular-classic/service-worker/worker/src/driver';
+import {Manifest} from '@angular-classic/service-worker/worker/src/manifest';
+import {MockRequest} from '@angular-classic/service-worker/worker/testing/fetch';
+import {MockFileSystemBuilder, MockServerStateBuilder, tmpHashTableForFs} from '@angular-classic/service-worker/worker/testing/mock';
+import {SwTestHarness, SwTestHarnessBuilder} from '@angular-classic/service-worker/worker/testing/scope';
+import {envIsSupported} from '@angular-classic/service-worker/worker/testing/utils';
 import {Observable} from 'rxjs';
 import {take} from 'rxjs/operators';
 

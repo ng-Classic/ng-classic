@@ -12,7 +12,7 @@
  * Entry point for all public APIs of the platform-browser package.
  */
 
-import {Version} from '@angular/core';
+import {Version} from '@angular-classic/core';
 
 /**
  * @publicApi

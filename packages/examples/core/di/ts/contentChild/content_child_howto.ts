@@ -7,7 +7,7 @@
  */
 
 // #docregion HowTo
-import {AfterContentInit, ContentChild, Directive} from '@angular/core';
+import {AfterContentInit, ContentChild, Directive} from '@angular-classic/core';
 
 @Directive({selector: 'child-directive'})
 class ChildDirective {

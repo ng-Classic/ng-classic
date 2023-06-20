@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 /* tslint:disable:no-console  */
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, NgModule} from '@angular-classic/core';
+import {FormsModule} from '@angular-classic/forms';
 
 
 // #docregion mark-for-check

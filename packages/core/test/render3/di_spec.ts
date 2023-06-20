@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, Self} from '@angular/core';
-import {createLView, createTView, getOrCreateTNode} from '@angular/core/src/render3/instructions/shared';
-import {NodeInjectorOffset} from '@angular/core/src/render3/interfaces/injector';
-import {TestBed} from '@angular/core/testing';
+import {Component, Directive, Self} from '@angular-classic/core';
+import {createLView, createTView, getOrCreateTNode} from '@angular-classic/core/src/render3/instructions/shared';
+import {NodeInjectorOffset} from '@angular-classic/core/src/render3/interfaces/injector';
+import {TestBed} from '@angular-classic/core/testing';
 
 import {bloomAdd, bloomHashBitOrFactory as bloomHash, bloomHasToken, getOrCreateNodeInjectorForNode} from '../../src/render3/di';
 import {TNodeType} from '../../src/render3/interfaces/node';

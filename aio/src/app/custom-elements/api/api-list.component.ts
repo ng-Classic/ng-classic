@@ -6,7 +6,7 @@
 * Can add/remove API entity links based on filter settings.
 */
 
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular-classic/core';
 
 import { combineLatest, Observable, ReplaySubject } from 'rxjs';
 

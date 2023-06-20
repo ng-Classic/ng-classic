@@ -1,6 +1,6 @@
-/* eslint-disable @angular-eslint/directive-selector */
+/* eslint-disable @angular-classic-eslint/directive-selector */
 // #docregion
-import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges } from '@angular-classic/core';
 
 @Directive({ selector: '[highlight]' })
 /**

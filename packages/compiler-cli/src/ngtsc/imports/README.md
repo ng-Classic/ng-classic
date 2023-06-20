@@ -12,9 +12,9 @@ If a directive/pipe is within the user's program, then it can be imported direct
 
 This logic is based on the Angular Package Format, which dictates that libraries are organized into entrypoints, and both an NgModule and its directives/pipes must be exported from the same entrypoint (usually an `index.ts` file).
 
-Thus, if `CommonModule` is imported from the specifier '@angular/common', and its `NgIf` directive is used in a template, the compiler will always import `NgIf` from '@angular/common' as well.
+Thus, if `CommonModule` is imported from the specifier '@angular-classic/common', and its `NgIf` directive is used in a template, the compiler will always import `NgIf` from '@angular-classic/common' as well.
 
-It's important to note that this logic is transitive. If the user instead imported `BrowserModule` from '@angular/platform-browser' (which re-exports `CommonModule` and thus `NgIf`), the compiler will note that `BrowserModule` itself imported `CommonModule` from '@angular/common', and so `NgIf` will be imported from '@angular/common' still.
+It's important to note that this logic is transitive. If the user instead imported `BrowserModule` from '@angular-classic/platform-browser' (which re-exports `CommonModule` and thus `NgIf`), the compiler will note that `BrowserModule` itself imported `CommonModule` from '@angular-classic/common', and so `NgIf` will be imported from '@angular-classic/common' still.
 
 This logic of course breaks down for non-Angular Package Format libraries, such as "internal" libraries within a monorepo, which frequently don't use `index.ts` files or entrypoints. In this case, the user will likely import NgModules directly from their declaration (e.g. via a 'lib/module' specifier), and the compiler cannot simply assume that the user has exported all of the directives/pipes from the NgModule via this same specifier. In this case a compiler feature called "aliasing" kicks in (see below) and generates private exports from the NgModule file.
 
@@ -22,9 +22,9 @@ This logic of course breaks down for non-Angular Package Format libraries, such 
 
 The `ts.CompilerHost` given to the compiler may optionally implement an interface called `UnifiedModulesHost`, which allows an absolute module specifier to be generated for any file. If a `UnifiedModulesHost` is present, the compiler will attempt to directly import all directives and pipes from the file which declares them, instead of going via the specifier of the NgModule as in the first mode described above. This logic is used internally in the Google monorepo.
 
-This approach comes with a significant caveat: the build system may prevent importing from files which are not directly declared dependencies of the current compilation (this is known as "strict dependency checking"). This is a problem when attempting to consume a re-exported directive. For example, if the user depends only on '@angular/platform-browser', imports `BrowserModule` from '@angular/platform-browser' and attempts to use the re-exported `NgIf`, the compiler cannot import `NgIf` directly from its declaration within '@angular/common', which is a transitive (but not direct) dependency.
+This approach comes with a significant caveat: the build system may prevent importing from files which are not directly declared dependencies of the current compilation (this is known as "strict dependency checking"). This is a problem when attempting to consume a re-exported directive. For example, if the user depends only on '@angular-classic/platform-browser', imports `BrowserModule` from '@angular-classic/platform-browser' and attempts to use the re-exported `NgIf`, the compiler cannot import `NgIf` directly from its declaration within '@angular-classic/common', which is a transitive (but not direct) dependency.
 
-To support these re-exports, a compiler feature called "aliasing" will create a re-export of `NgIf` from within @angular/platform-browser when compiling that package. Then, the downstream application compiler can import `NgIf` via this "alias" re-export from a direct dependency, instead of needing to import it from a transitive dependency.
+To support these re-exports, a compiler feature called "aliasing" will create a re-export of `NgIf` from within @angular-classic/platform-browser when compiling that package. Then, the downstream application compiler can import `NgIf` via this "alias" re-export from a direct dependency, instead of needing to import it from a transitive dependency.
 
 ## References
 

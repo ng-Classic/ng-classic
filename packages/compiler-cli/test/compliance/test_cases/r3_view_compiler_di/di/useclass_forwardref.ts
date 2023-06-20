@@ -1,4 +1,4 @@
-import {forwardRef, Injectable} from '@angular/core';
+import {forwardRef, Injectable} from '@angular-classic/core';
 
 @Injectable({providedIn: 'root', useClass: forwardRef(() => SomeProviderImpl)})
 abstract class SomeProvider {

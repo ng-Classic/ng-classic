@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgModule} from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgModule} from '@angular-classic/core';
+import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
 import {ApplicationEnvironment, ApplicationOperations, DevToolsModule} from 'ng-devtools';
 
 import {AppComponent} from './app.component';

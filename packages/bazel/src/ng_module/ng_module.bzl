@@ -465,9 +465,9 @@ NG_MODULE_ATTRIBUTES = {
     "compiler": attr.label(
         doc = """Sets a different ngc compiler binary to use for this library.
 
-        The default ngc compiler depends on the `//@angular/bazel`
+        The default ngc compiler depends on the `//@angular-classic/bazel`
         target which is setup for projects that use bazel managed npm deps that
-        fetch the @angular/bazel npm package.
+        fetch the @angular-classic/bazel npm package.
         """,
         default = Label(DEFAULT_NG_COMPILER),
         executable = True,
@@ -486,7 +486,7 @@ NG_MODULE_ATTRIBUTES = {
     # In the angular/angular monorepo, //tools:defaults.bzl wraps the ng_module rule in a macro
     # which sets this attribute to the //packages/compiler-cli:ng_perf flag.
     # This is done to avoid exposing the flag to user projects, which would require:
-    # * defining the flag within @angular/bazel and referencing it correctly here, and
+    # * defining the flag within @angular-classic/bazel and referencing it correctly here, and
     # * committing to the flag and its semantics (including the format of perf JSON files)
     #   as something users can depend upon.
     "perf_flag": attr.label(

@@ -1,4 +1,4 @@
-import {Component, NgModule, Pipe, PipeTransform} from '@angular/core';
+import {Component, NgModule, Pipe, PipeTransform} from '@angular-classic/core';
 
 @Component({
   selector: 'test-cmp',

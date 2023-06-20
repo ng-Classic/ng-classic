@@ -1,5 +1,5 @@
-import { NgModule, Type } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, Type } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { ResourceListComponent } from './resource-list.component';
 import { ResourceService } from './resource.service';
 import { WithCustomElementComponent } from '../element-registry';

@@ -1,4 +1,4 @@
-import {GithubConfig} from '@angular/ng-dev';
+import {GithubConfig} from '@angular-classic/ng-dev';
 
 /**
  * Github configuration for the `ng-dev` command. This repository is used as

@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Filesystem} from '@angular/service-worker/config';
+import {Filesystem} from '@angular-classic/service-worker/config';
 import * as fs from 'fs';
 import * as path from 'path';
 

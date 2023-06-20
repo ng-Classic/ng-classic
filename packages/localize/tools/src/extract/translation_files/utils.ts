@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {MessageId, ɵParsedMessage, ɵSourceLocation} from '@angular/localize';
+import {MessageId, ɵParsedMessage, ɵSourceLocation} from '@angular-classic/localize';
 
 /**
  * Consolidate messages into groups that have the same id.

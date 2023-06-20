@@ -1,4 +1,4 @@
-import {fakeAsync, tick, waitForAsync} from '@angular/core/testing';
+import {fakeAsync, tick, waitForAsync} from '@angular-classic/core/testing';
 import {interval, of} from 'rxjs';
 import {delay, take} from 'rxjs/operators';
 

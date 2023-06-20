@@ -41,7 +41,7 @@ The version number is incremented based on the level of change included in the r
 
 **NOTE**: <br />
 As of Angular version 7, the major versions of Angular core and the CLI are aligned.
-This means that in order to use the CLI as you develop an Angular app, the version of `@angular/core` and the CLI need to be the same.
+This means that in order to use the CLI as you develop an Angular app, the version of `@angular-classic/core` and the CLI need to be the same.
 
 </div>
 

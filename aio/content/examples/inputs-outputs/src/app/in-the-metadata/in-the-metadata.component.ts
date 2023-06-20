@@ -1,5 +1,5 @@
-/* eslint-disable @angular-eslint/no-inputs-metadata-property, @angular-eslint/no-outputs-metadata-property */
-import { Component, EventEmitter } from '@angular/core';
+/* eslint-disable @angular-classic-eslint/no-inputs-metadata-property, @angular-classic-eslint/no-outputs-metadata-property */
+import { Component, EventEmitter } from '@angular-classic/core';
 
 @Component({
   selector: 'app-in-the-metadata',

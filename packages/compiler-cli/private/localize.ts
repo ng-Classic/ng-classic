@@ -7,7 +7,7 @@
  */
 
 /**
- * @fileoverview The API from compiler-cli that the `@angular/localize`
+ * @fileoverview The API from compiler-cli that the `@angular-classic/localize`
  * package requires.
  */
 

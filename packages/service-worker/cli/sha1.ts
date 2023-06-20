@@ -14,7 +14,7 @@
  * WARNING: this function has not been designed not tested with security in mind.
  *          DO NOT USE IT IN A SECURITY SENSITIVE CONTEXT.
  *
- * Borrowed from @angular/compiler/src/i18n/digest.ts
+ * Borrowed from @angular-classic/compiler/src/i18n/digest.ts
  */
 
 export function sha1(str: string): string {

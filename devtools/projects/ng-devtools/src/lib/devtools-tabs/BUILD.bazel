@@ -31,7 +31,7 @@ ng_module(
         "//packages/common",
         "//packages/core",
         "//packages/core/src/util",
-        "@npm//@angular/material",
+        "@npm//@angular-classic/material",
         "@npm//@types",
         "@npm//rxjs",
     ],

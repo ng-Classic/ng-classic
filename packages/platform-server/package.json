@@ -1,5 +1,5 @@
 {
-  "name": "@angular/platform-server",
+  "name": "@angular-classic/platform-server",
   "version": "0.0.0-PLACEHOLDER",
   "description": "Angular - library for using Angular in Node.js",
   "author": "angular",
@@ -8,11 +8,11 @@
     "node": "^16.14.0 || >=18.10.0"
   },
   "peerDependencies": {
-    "@angular/animations": "0.0.0-PLACEHOLDER",
-    "@angular/common": "0.0.0-PLACEHOLDER",
-    "@angular/compiler": "0.0.0-PLACEHOLDER",
-    "@angular/core": "0.0.0-PLACEHOLDER",
-    "@angular/platform-browser": "0.0.0-PLACEHOLDER"
+    "@angular-classic/animations": "0.0.0-PLACEHOLDER",
+    "@angular-classic/common": "0.0.0-PLACEHOLDER",
+    "@angular-classic/compiler": "0.0.0-PLACEHOLDER",
+    "@angular-classic/core": "0.0.0-PLACEHOLDER",
+    "@angular-classic/platform-browser": "0.0.0-PLACEHOLDER"
   },
   "dependencies": {
     "tslib": "^2.3.0",

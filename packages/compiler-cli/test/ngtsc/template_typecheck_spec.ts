@@ -26,7 +26,7 @@ runInEachFileSystem(() => {
     beforeEach(() => {
       env = NgtscTestEnvironment.setup(testFiles);
       env.tsconfig({fullTemplateTypeCheck: true});
-      env.write('node_modules/@angular/animations/index.d.ts', `
+      env.write('node_modules/@angular-classic/animations/index.d.ts', `
 export declare class AnimationEvent {
   element: any;
 }
@@ -35,7 +35,7 @@ export declare class AnimationEvent {
 
     it('should check a simple component', () => {
       env.write('test.ts', `
-    import {Component, NgModule} from '@angular/core';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -54,7 +54,7 @@ export declare class AnimationEvent {
 
     it('should have accurate diagnostics in a template using crlf line endings', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -73,7 +73,7 @@ export declare class AnimationEvent {
       env.tsconfig(
           {fullTemplateTypeCheck: true, strictInputTypes: true, strictAttributeTypes: true});
       env.write('test.ts', `
-        import {Component, Directive, NgModule, Input} from '@angular/core';
+        import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -104,7 +104,7 @@ export declare class AnimationEvent {
          env.tsconfig(
              {fullTemplateTypeCheck: true, strictInputTypes: true, strictAttributeTypes: true});
          env.write('test.ts', `
-        import {Component, Directive, NgModule, Input} from '@angular/core';
+        import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -134,7 +134,7 @@ export declare class AnimationEvent {
       env.tsconfig(
           {fullTemplateTypeCheck: true, strictInputTypes: true, strictOutputEventTypes: true});
       env.write('test.ts', `
-        import {Component, Directive, NgModule, EventEmitter} from '@angular/core';
+        import {Component, Directive, NgModule, EventEmitter} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -169,7 +169,7 @@ export declare class AnimationEvent {
 
     it('should support one input property mapping to multiple fields', () => {
       env.write('test.ts', `
-        import {Component, Directive, Input, NgModule} from '@angular/core';
+        import {Component, Directive, Input, NgModule} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir]',
@@ -197,7 +197,7 @@ export declare class AnimationEvent {
     it('should check event bindings', () => {
       env.tsconfig({fullTemplateTypeCheck: true, strictOutputEventTypes: true});
       env.write('test.ts', `
-        import {Component, Directive, EventEmitter, NgModule, Output} from '@angular/core';
+        import {Component, Directive, EventEmitter, NgModule, Output} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -235,8 +235,8 @@ export declare class AnimationEvent {
     it('ngIf should narrow on output types', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {CommonModule} from '@angular/common';
-        import {Component, NgModule} from '@angular/core';
+        import {CommonModule} from '@angular-classic/common';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -261,8 +261,8 @@ export declare class AnimationEvent {
     it('ngIf should narrow on output types across multiple guards', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {CommonModule} from '@angular/common';
-        import {Component, NgModule} from '@angular/core';
+        import {CommonModule} from '@angular-classic/common';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -287,7 +287,7 @@ export declare class AnimationEvent {
     it('should support a directive being used in its own input expression', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {Component, Directive, NgModule, Input} from '@angular/core';
+        import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -314,7 +314,7 @@ export declare class AnimationEvent {
     it('should support separate write types on inputs', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {Component, NgModule, Input} from '@angular/core';
+        import {Component, NgModule, Input} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -342,7 +342,7 @@ export declare class AnimationEvent {
     it('should check split two way binding', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {Component, Input, NgModule} from '@angular/core';
+        import {Component, Input, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -379,7 +379,7 @@ export declare class AnimationEvent {
     it('when input and output go to different directives', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {Component, Input, NgModule, Output, Directive} from '@angular/core';
+        import {Component, Input, NgModule, Output, Directive} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -421,7 +421,7 @@ export declare class AnimationEvent {
     describe('strictInputTypes', () => {
       beforeEach(() => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Input} from '@angular/core';
+          import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -474,7 +474,7 @@ export declare class AnimationEvent {
     describe('strictNullInputTypes', () => {
       beforeEach(() => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Input} from '@angular/core';
+          import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -533,7 +533,7 @@ export declare class AnimationEvent {
     describe('strictSafeNavigationTypes', () => {
       beforeEach(() => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Input} from '@angular/core';
+          import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -599,7 +599,7 @@ export declare class AnimationEvent {
     describe('strictOutputEventTypes', () => {
       beforeEach(() => {
         env.write('test.ts', `
-          import {Component, Directive, EventEmitter, NgModule, Output} from '@angular/core';
+          import {Component, Directive, EventEmitter, NgModule, Output} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -656,7 +656,7 @@ export declare class AnimationEvent {
     describe('strictOutputEventTypes and animation event bindings', () => {
       beforeEach(() => {
         env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -711,7 +711,7 @@ export declare class AnimationEvent {
     describe('strictDomLocalRefTypes', () => {
       beforeEach(() => {
         env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -755,7 +755,7 @@ export declare class AnimationEvent {
     describe('strictAttributeTypes', () => {
       beforeEach(() => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Input} from '@angular/core';
+          import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -806,7 +806,7 @@ export declare class AnimationEvent {
     describe('strictDomEventTypes', () => {
       beforeEach(() => {
         env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -860,8 +860,8 @@ export declare class AnimationEvent {
 
     it('should check basic usage of NgIf', () => {
       env.write('test.ts', `
-    import {CommonModule} from '@angular/common';
-    import {Component, NgModule} from '@angular/core';
+    import {CommonModule} from '@angular-classic/common';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -883,8 +883,8 @@ export declare class AnimationEvent {
 
     it('should check usage of NgIf with explicit non-null guard', () => {
       env.write('test.ts', `
-    import {CommonModule} from '@angular/common';
-    import {Component, NgModule} from '@angular/core';
+    import {CommonModule} from '@angular-classic/common';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -907,8 +907,8 @@ export declare class AnimationEvent {
     it('should check usage of NgIf when using "let" to capture $implicit context variable', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-    import {CommonModule} from '@angular/common';
-    import {Component, NgModule} from '@angular/core';
+    import {CommonModule} from '@angular-classic/common';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -931,8 +931,8 @@ export declare class AnimationEvent {
     it('should check usage of NgIf when using "as" to capture `ngIf` context variable', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-    import {CommonModule} from '@angular/common';
-    import {Component, NgModule} from '@angular/core';
+    import {CommonModule} from '@angular-classic/common';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -954,8 +954,8 @@ export declare class AnimationEvent {
 
     it('should check basic usage of NgFor', () => {
       env.write('test.ts', `
-    import {CommonModule} from '@angular/common';
-    import {Component, NgModule} from '@angular/core';
+    import {CommonModule} from '@angular-classic/common';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -978,8 +978,8 @@ export declare class AnimationEvent {
     it('should report an error inside the NgFor template', () => {
       env.tsconfig({fullTemplateTypeCheck: true, strictInputTypes: true});
       env.write('test.ts', `
-    import {CommonModule} from '@angular/common';
-    import {Component, NgModule} from '@angular/core';
+    import {CommonModule} from '@angular-classic/common';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -1005,8 +1005,8 @@ export declare class AnimationEvent {
 
     it('should accept an NgFor iteration over an any-typed value', () => {
       env.write('test.ts', `
-    import {CommonModule} from '@angular/common';
-    import {Component, NgModule} from '@angular/core';
+    import {CommonModule} from '@angular-classic/common';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -1029,8 +1029,8 @@ export declare class AnimationEvent {
     it('should accept NgFor iteration over a QueryList', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {CommonModule} from '@angular/common';
-        import {Component, NgModule, QueryList} from '@angular/core';
+        import {CommonModule} from '@angular-classic/common';
+        import {Component, NgModule, QueryList} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -1054,8 +1054,8 @@ export declare class AnimationEvent {
     it('should accept NgFor iteration when trackBy is used with a wider type', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {CommonModule} from '@angular/common';
-        import {Component, NgModule} from '@angular/core';
+        import {CommonModule} from '@angular-classic/common';
+        import {Component, NgModule} from '@angular-classic/core';
 
         interface Base {
           id: string;
@@ -1091,8 +1091,8 @@ export declare class AnimationEvent {
     it('should accept NgFor iteration when trackBy is used with an `any` array', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {CommonModule} from '@angular/common';
-        import {Component, NgModule} from '@angular/core';
+        import {CommonModule} from '@angular-classic/common';
+        import {Component, NgModule} from '@angular-classic/core';
 
         interface ItemType {
           id: string;
@@ -1123,8 +1123,8 @@ export declare class AnimationEvent {
     it('should reject NgFor iteration when trackBy is incompatible with item type', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {CommonModule} from '@angular/common';
-        import {Component, NgModule} from '@angular/core';
+        import {CommonModule} from '@angular-classic/common';
+        import {Component, NgModule} from '@angular-classic/core';
 
         interface ItemType {
           id: string;
@@ -1162,8 +1162,8 @@ export declare class AnimationEvent {
     it('should infer the context of NgFor', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {CommonModule} from '@angular/common';
-        import {Component, NgModule} from '@angular/core';
+        import {CommonModule} from '@angular-classic/common';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -1187,8 +1187,8 @@ export declare class AnimationEvent {
     it('should allow the implicit value of an NgFor to be invoked', () => {
       env.tsconfig({fullTemplateTypeCheck: true, strictInputTypes: true});
       env.write('test.ts', `
-        import {CommonModule} from '@angular/common';
-        import {Component, NgModule} from '@angular/core';
+        import {CommonModule} from '@angular-classic/common';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -1211,8 +1211,8 @@ export declare class AnimationEvent {
     it('should infer the context of NgIf', () => {
       env.tsconfig({strictTemplates: true});
       env.write('test.ts', `
-        import {CommonModule} from '@angular/common';
-        import {Component, NgModule} from '@angular/core';
+        import {CommonModule} from '@angular-classic/common';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'test',
           template: '<div *ngIf="getUser(); let user">{{user.nonExistingProp}}</div>',
@@ -1237,7 +1237,7 @@ export declare class AnimationEvent {
 
     it('should report an error with an unknown local ref target', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -1258,7 +1258,7 @@ export declare class AnimationEvent {
 
     it('should treat an unknown local ref target as type any', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -1281,7 +1281,7 @@ export declare class AnimationEvent {
 
     it('should report an error with an unknown pipe', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
 
         @Component({
           selector: 'test',
@@ -1306,7 +1306,7 @@ export declare class AnimationEvent {
        () => {
          env.tsconfig({fullTemplateTypeCheck: false});
          env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -1329,8 +1329,8 @@ export declare class AnimationEvent {
 
     it('should report an error with pipe bindings', () => {
       env.write('test.ts', `
-    import {CommonModule} from '@angular/common';
-    import {Component, NgModule} from '@angular/core';
+    import {CommonModule} from '@angular-classic/common';
+    import {Component, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -1383,8 +1383,8 @@ export declare class AnimationEvent {
       env.tsconfig(
           {fullTemplateTypeCheck: true, strictInputTypes: true, strictContextGenerics: true});
       env.write('test.ts', `
-    import {CommonModule} from '@angular/common';
-    import {Component, Input, NgModule} from '@angular/core';
+    import {CommonModule} from '@angular-classic/common';
+    import {Component, Input, NgModule} from '@angular-classic/core';
 
     @Component({
       selector: 'test',
@@ -1411,8 +1411,8 @@ export declare class AnimationEvent {
       beforeEach(() => {
         // Use the same template for both tests
         env.write('test.ts', `
-          import {CommonModule} from '@angular/common';
-          import {Component, NgModule} from '@angular/core';
+          import {CommonModule} from '@angular-classic/common';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -1453,7 +1453,7 @@ export declare class AnimationEvent {
     it('should properly type-check inherited directives', () => {
       env.tsconfig({fullTemplateTypeCheck: true, strictInputTypes: true});
       env.write('test.ts', `
-    import {Component, Directive, Input, NgModule} from '@angular/core';
+    import {Component, Directive, Input, NgModule} from '@angular-classic/core';
 
     @Directive()
     class AbstractDir {
@@ -1500,7 +1500,7 @@ export declare class AnimationEvent {
       env.tsconfig({fullTemplateTypeCheck: true, strictInputTypes: true});
 
       env.write('node_modules/external/index.d.ts', `
-        import * as i0 from '@angular/core';
+        import * as i0 from '@angular-classic/core';
 
         export declare class AbstractDir {
           fromAbstract: number;
@@ -1520,7 +1520,7 @@ export declare class AnimationEvent {
       `);
 
       env.write('test.ts', `
-        import {Component, Directive, Input, NgModule} from '@angular/core';
+        import {Component, Directive, Input, NgModule} from '@angular-classic/core';
         import {BaseDir, ExternalModule} from 'external';
 
         @Directive({
@@ -1555,8 +1555,8 @@ export declare class AnimationEvent {
 
     it('should detect an illegal write to a template variable', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {Component, NgModule} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Component({
           selector: 'test',
@@ -1583,8 +1583,8 @@ export declare class AnimationEvent {
 
     it('should detect a duplicate variable declaration', () => {
       env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
-        import {CommonModule} from '@angular/common';
+        import {Component, NgModule} from '@angular-classic/core';
+        import {CommonModule} from '@angular-classic/common';
 
         @Component({
           selector: 'test',
@@ -1631,7 +1631,7 @@ export declare class AnimationEvent {
 
          // 'alpha' declares the directive which will ultimately be imported.
          env.write('alpha.d.ts', `
-          import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular/core';
+          import {ɵɵDirectiveDeclaration, ɵɵNgModuleDeclaration} from '@angular-classic/core';
 
           export declare class ExternalDir {
             input: string;
@@ -1645,7 +1645,7 @@ export declare class AnimationEvent {
 
          // 'beta' re-exports AlphaModule from alpha.
          env.write('beta.d.ts', `
-          import {ɵɵNgModuleDeclaration} from '@angular/core';
+          import {ɵɵNgModuleDeclaration} from '@angular-classic/core';
           import {AlphaModule} from './alpha';
 
           export declare class BetaModule {
@@ -1656,7 +1656,7 @@ export declare class AnimationEvent {
          // The application imports BetaModule from beta, gaining visibility of ExternalDir from
          // alpha.
          env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
           import {BetaModule} from './beta';
 
           @Component({
@@ -1679,8 +1679,8 @@ export declare class AnimationEvent {
     describe('input coercion', () => {
       beforeEach(() => {
         env.tsconfig({fullTemplateTypeCheck: true, strictInputTypes: true});
-        env.write('node_modules/@angular/material/index.d.ts', `
-        import * as i0 from '@angular/core';
+        env.write('node_modules/@angular-classic/material/index.d.ts', `
+        import * as i0 from '@angular-classic/core';
 
         export declare class MatInput {
           value: string;
@@ -1701,8 +1701,8 @@ export declare class AnimationEvent {
 
       it('should coerce an input using a transform function if provided', () => {
         env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
-          import {MatInputModule} from '@angular/material';
+          import {Component, NgModule} from '@angular-classic/core';
+          import {MatInputModule} from '@angular-classic/material';
 
           @Component({
             selector: 'blah',
@@ -1724,7 +1724,7 @@ export declare class AnimationEvent {
 
       it('should apply coercion members of base classes', () => {
         env.write('test.ts', `
-          import {Component, Directive, Input, NgModule} from '@angular/core';
+          import {Component, Directive, Input, NgModule} from '@angular-classic/core';
 
           @Directive()
           export class BaseDir {
@@ -1759,8 +1759,8 @@ export declare class AnimationEvent {
       it('should give an error if the binding expression type is not accepted by the coercion function',
          () => {
            env.write('test.ts', `
-            import {Component, NgModule, Input, Directive} from '@angular/core';
-            import {MatInputModule} from '@angular/material';
+            import {Component, NgModule, Input, Directive} from '@angular-classic/core';
+            import {MatInputModule} from '@angular-classic/material';
 
             @Component({
               selector: 'blah',
@@ -1786,7 +1786,7 @@ export declare class AnimationEvent {
          () => {
            env.tsconfig({strictTemplates: true});
            env.write('test.ts', `
-            import {Component, Directive, NgModule, Input} from '@angular/core';
+            import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
             @Component({
               selector: 'blah',
@@ -1818,7 +1818,7 @@ export declare class AnimationEvent {
       it('should type check using the first parameter type of a simple transform function', () => {
         env.tsconfig({strictTemplates: true});
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
 
           export function toNumber(val: boolean | string) { return 1; }
 
@@ -1846,7 +1846,7 @@ export declare class AnimationEvent {
          () => {
            env.tsconfig({strictTemplates: true});
            env.write('test.ts', `
-            import {Component, Directive, Input} from '@angular/core';
+            import {Component, Directive, Input} from '@angular-classic/core';
 
             @Directive({selector: '[dir]', standalone: true})
             export class CoercionDir {
@@ -1871,7 +1871,7 @@ export declare class AnimationEvent {
       it('should type check using the transform function specified in the `inputs` array', () => {
         env.tsconfig({strictTemplates: true});
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
 
           export function toNumber(val: boolean | string) { return 1; }
 
@@ -1905,7 +1905,7 @@ export declare class AnimationEvent {
       it('should type check using the first parameter type of a built-in function', () => {
         env.tsconfig({strictTemplates: true});
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
 
           @Directive({selector: '[dir]', standalone: true})
           export class CoercionDir {
@@ -1948,7 +1948,7 @@ export declare class AnimationEvent {
         `);
 
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
           import {toNumber} from './utils';
 
           @Directive({selector: '[dir]', standalone: true})
@@ -1999,7 +1999,7 @@ export declare class AnimationEvent {
             `);
 
            env.write('test.ts', `
-              import {Component, Directive, Input} from '@angular/core';
+              import {Component, Directive, Input} from '@angular-classic/core';
               import {externalToNumber} from 'external';
 
               @Directive({selector: '[dir]', standalone: true})
@@ -2047,7 +2047,7 @@ export declare class AnimationEvent {
         `);
 
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
           import {GenericWrapper} from './generics';
           import {ExportedClass} from './types';
 
@@ -2101,7 +2101,7 @@ export declare class AnimationEvent {
         `);
 
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
           import {CoercionType} from './types';
 
           @Directive({selector: '[dir]', standalone: true})
@@ -2142,7 +2142,7 @@ export declare class AnimationEvent {
         `);
 
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
           import {ExternalGenericWrapper, ExternalClass} from 'external';
 
           @Directive({selector: '[dir]', standalone: true})
@@ -2176,7 +2176,7 @@ export declare class AnimationEvent {
          () => {
            env.tsconfig({strictTemplates: true});
            env.write('test.ts', `
-              import {Component, Directive, Input} from '@angular/core';
+              import {Component, Directive, Input} from '@angular-classic/core';
 
               @Directive({selector: '[dir]', standalone: true})
               export class CoercionDir {
@@ -2199,7 +2199,7 @@ export declare class AnimationEvent {
       it('should type check static inputs against the transform function type', () => {
         env.tsconfig({strictTemplates: true});
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
 
           export function toNumber(val: number | boolean) { return 1; }
 
@@ -2225,7 +2225,7 @@ export declare class AnimationEvent {
       it('should type check inputs with a transform function coming from a host directive', () => {
         env.tsconfig({strictTemplates: true});
         env.write('host-dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           export interface HostDirType {
             value: number;
@@ -2238,7 +2238,7 @@ export declare class AnimationEvent {
         `);
 
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
           import {HostDir} from './host-dir';
 
           @Directive({
@@ -2275,7 +2275,7 @@ export declare class AnimationEvent {
       it('should type check inputs with a transform inherited from a parent class', () => {
         env.tsconfig({strictTemplates: true});
         env.write('host-dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           export interface ParentType {
             value: number;
@@ -2288,7 +2288,7 @@ export declare class AnimationEvent {
         `);
 
         env.write('test.ts', `
-          import {Component, Directive, Input} from '@angular/core';
+          import {Component, Directive, Input} from '@angular-classic/core';
           import {Parent} from './host-dir';
 
           @Directive({
@@ -2333,7 +2333,7 @@ export declare class AnimationEvent {
       `;
 
       const correctTypeInputsToRestrictedFields = `
-            import {Component, NgModule, Input, Directive} from '@angular/core';
+            import {Component, NgModule, Input, Directive} from '@angular-classic/core';
 
             @Component({
               selector: 'blah',
@@ -2352,7 +2352,7 @@ export declare class AnimationEvent {
         `;
 
       const correctInputsToRestrictedFieldsFromBaseClass = `
-            import {Component, NgModule, Input, Directive} from '@angular/core';
+            import {Component, NgModule, Input, Directive} from '@angular-classic/core';
 
             @Component({
               selector: 'blah',
@@ -2408,7 +2408,7 @@ export declare class AnimationEvent {
         it('should report invalid type assignment when field name is not a valid JS identifier',
            () => {
              env.write('test.ts', `
-            import {Component, NgModule, Input, Directive} from '@angular/core';
+            import {Component, NgModule, Input, Directive} from '@angular-classic/core';
 
             @Component({
               selector: 'blah',
@@ -2458,7 +2458,7 @@ export declare class AnimationEvent {
         it('should produce diagnostics when assigning incorrect type to readonly, private, or protected fields',
            () => {
              env.write('test.ts', `
-            import {Component, NgModule, Input, Directive} from '@angular/core';
+            import {Component, NgModule, Input, Directive} from '@angular-classic/core';
 
             @Component({
               selector: 'blah',
@@ -2490,7 +2490,7 @@ export declare class AnimationEvent {
     it('should not produce diagnostics for undeclared inputs', () => {
       env.tsconfig({fullTemplateTypeCheck: true, strictInputTypes: true});
       env.write('test.ts', `
-            import {Component, NgModule, Input, Directive} from '@angular/core';
+            import {Component, NgModule, Input, Directive} from '@angular-classic/core';
 
             @Component({
               selector: 'blah',
@@ -2520,7 +2520,7 @@ export declare class AnimationEvent {
        () => {
          env.tsconfig({fullTemplateTypeCheck: true, strictInputTypes: true});
          env.write('test.ts', `
-            import {Component, NgModule, Input, Directive} from '@angular/core';
+            import {Component, NgModule, Input, Directive} from '@angular-classic/core';
 
             @Component({
               selector: 'blah',
@@ -2549,7 +2549,7 @@ export declare class AnimationEvent {
     it('should not produce diagnostics for undeclared inputs inherited from a base class', () => {
       env.tsconfig({fullTemplateTypeCheck: true, strictInputTypes: true});
       env.write('test.ts', `
-            import {Component, NgModule, Input, Directive} from '@angular/core';
+            import {Component, NgModule, Input, Directive} from '@angular-classic/core';
 
             @Component({
               selector: 'blah',
@@ -2585,7 +2585,7 @@ export declare class AnimationEvent {
 
       it('should check for unknown elements', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: '<foo>test</foo>',
@@ -2605,7 +2605,7 @@ export declare class AnimationEvent {
 
       it('should check for unknown elements in standalone components', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: '<foo>test</foo>',
@@ -2626,7 +2626,7 @@ export declare class AnimationEvent {
 
       it('should check for unknown properties in standalone components', () => {
         env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
           @Component({
             selector: 'my-comp',
             template: '...',
@@ -2653,7 +2653,7 @@ export declare class AnimationEvent {
 
       it('should have a descriptive error for unknown elements that contain a dash', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: '<my-foo>test</my-foo>',
@@ -2674,7 +2674,7 @@ export declare class AnimationEvent {
       it('should have a descriptive error for unknown elements that contain a dash in standalone components',
          () => {
            env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: '<my-foo>test</my-foo>',
@@ -2695,7 +2695,7 @@ export declare class AnimationEvent {
 
       it('should check for unknown properties', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: '<div [foo]="1">test</div>',
@@ -2714,7 +2714,7 @@ export declare class AnimationEvent {
 
       it('should have a descriptive error for unknown properties with an "ng-" prefix', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: '<div [foo]="1">test</div>',
@@ -2733,7 +2733,7 @@ export declare class AnimationEvent {
 
       it('should convert property names when binding special properties', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: '<label [for]="test">',
@@ -2755,7 +2755,7 @@ export declare class AnimationEvent {
       it('should produce diagnostics for custom-elements-style elements when not using the CUSTOM_ELEMENTS_SCHEMA',
          () => {
            env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
           @Component({
             selector: 'blah',
             template: '<custom-element [foo]="1">test</custom-element>',
@@ -2781,7 +2781,7 @@ export declare class AnimationEvent {
       it('should not produce diagnostics for custom-elements-style elements when using the CUSTOM_ELEMENTS_SCHEMA',
          () => {
            env.write('test.ts', `
-            import {Component, NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+            import {Component, NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular-classic/core';
 
             @Component({
               selector: 'blah',
@@ -2801,7 +2801,7 @@ export declare class AnimationEvent {
 
       it('should not produce diagnostics when using the NO_ERRORS_SCHEMA', () => {
         env.write('test.ts', `
-        import {Component, NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+        import {Component, NgModule, NO_ERRORS_SCHEMA} from '@angular-classic/core';
 
         @Component({
           selector: 'blah',
@@ -2821,7 +2821,7 @@ export declare class AnimationEvent {
 
       it('should allow HTML elements inside SVG foreignObject', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: \`
@@ -2844,7 +2844,7 @@ export declare class AnimationEvent {
 
       it('should allow HTML elements without explicit namespace inside SVG foreignObject', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           template: \`
             <svg>
@@ -2866,7 +2866,7 @@ export declare class AnimationEvent {
 
       it('should check for unknown elements inside an SVG foreignObject', () => {
         env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: \`
@@ -2893,7 +2893,7 @@ export declare class AnimationEvent {
       it('should check for unknown elements without explicit namespace inside an SVG foreignObject',
          () => {
            env.write('test.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         @Component({
           selector: 'blah',
           template: \`
@@ -2933,7 +2933,7 @@ export declare class AnimationEvent {
 
         it('should be correct for direct templates', async () => {
           env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           @Component({
             selector: 'test',
@@ -2953,7 +2953,7 @@ export declare class AnimationEvent {
 
         it('should be correct for indirect templates', async () => {
           env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
           const TEMPLATE = \`<p>
             {{user.does_not_exist}}
@@ -2979,7 +2979,7 @@ export declare class AnimationEvent {
           {{user.does_not_exist}}
         </p>`);
           env.write('test.ts', `
-          import {Component, NgModule} from '@angular/core';
+          import {Component, NgModule} from '@angular-classic/core';
 
 
           @Component({
@@ -3158,7 +3158,7 @@ suppress
     describe('stability', () => {
       beforeEach(() => {
         env.write('test.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -3211,7 +3211,7 @@ suppress
 
       it('should check bindings to host directive inputs', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Input} from '@angular/core';
+          import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
           @Directive({
             standalone: true,
@@ -3255,7 +3255,7 @@ suppress
 
       it('should check bindings to host directive outputs', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Output, EventEmitter} from '@angular/core';
+          import {Component, Directive, NgModule, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             standalone: true,
@@ -3304,7 +3304,7 @@ suppress
 
       it('should not pick up host directive inputs/outputs that have not been exposed', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Input, Output} from '@angular/core';
+          import {Component, Directive, NgModule, Input, Output} from '@angular-classic/core';
 
           @Directive({
             standalone: true,
@@ -3350,7 +3350,7 @@ suppress
 
       it('should check references to host directives', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Output, EventEmitter} from '@angular/core';
+          import {Component, Directive, NgModule, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             standalone: true,
@@ -3388,7 +3388,7 @@ suppress
 
       it('should check bindings to inherited host directive inputs', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Input} from '@angular/core';
+          import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
           @Directive({
             standalone: true
@@ -3436,7 +3436,7 @@ suppress
 
       it('should check bindings to inherited host directive outputs', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Output, EventEmitter} from '@angular/core';
+          import {Component, Directive, NgModule, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             standalone: true
@@ -3489,7 +3489,7 @@ suppress
 
       it('should check bindings to aliased host directive inputs', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Input} from '@angular/core';
+          import {Component, Directive, NgModule, Input} from '@angular-classic/core';
 
           @Directive({
             standalone: true,
@@ -3533,7 +3533,7 @@ suppress
 
       it('should check bindings to aliased host directive outputs', () => {
         env.write('test.ts', `
-          import {Component, Directive, NgModule, Output, EventEmitter} from '@angular/core';
+          import {Component, Directive, NgModule, Output, EventEmitter} from '@angular-classic/core';
 
           @Directive({
             standalone: true,
@@ -3594,7 +3594,7 @@ suppress
     `);
 
         env.write('dist/post/lib/post.component.d.ts', `
-      import * as i0 from "@angular/core";
+      import * as i0 from "@angular-classic/core";
       export declare class HostBindDirective {
           static ɵdir: i0.ɵɵDirectiveDeclaration<HostBindDirective, never, never, {}, {}, never, never, true, never>;
       }
@@ -3607,7 +3607,7 @@ suppress
       }
       `);
         env.write('test.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {PostModule} from 'post';
 
       @Component({

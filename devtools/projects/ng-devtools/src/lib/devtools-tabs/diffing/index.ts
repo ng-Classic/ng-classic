@@ -7,7 +7,7 @@
  */
 
 // tslint:disable-next-line:deprecation
-import {DefaultIterableDiffer} from '@angular/core';
+import {DefaultIterableDiffer} from '@angular-classic/core';
 
 export interface MovedRecord {
   currentIndex: number;

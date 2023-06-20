@@ -1,4 +1,4 @@
-import {Component, Directive, NgModule, Pipe, PipeTransform} from '@angular/core';
+import {Component, Directive, NgModule, Pipe, PipeTransform} from '@angular-classic/core';
 
 @Component({selector: 'foo', template: '<div>Hello, {{name}}!</div>'})
 export class FooComponent {

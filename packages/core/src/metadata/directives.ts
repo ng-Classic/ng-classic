@@ -39,7 +39,7 @@ export interface DirectiveDecorator {
    * To define a directive, mark the class with the decorator and provide metadata.
    *
    * ```ts
-   * import {Directive} from '@angular/core';
+   * import {Directive} from '@angular-classic/core';
    *
    * @Directive({
    *   selector: 'my-directive',
@@ -328,7 +328,7 @@ export interface Directive {
    * When present, this directive/component is ignored by the AOT compiler.
    * It remains in distributed code, and the JIT compiler attempts to compile it
    * at run time, in the browser.
-   * To ensure the correct behavior, the app must import `@angular/compiler`.
+   * To ensure the correct behavior, the app must import `@angular-classic/compiler`.
    */
   jit?: true;
 
@@ -1015,7 +1015,7 @@ export interface HostListener {
  * The following example registers another DOM event handler that listens for `Enter` key-press
  * events on the global `window`.
  * ``` ts
- * import { HostListener, Component } from "@angular/core";
+ * import { HostListener, Component } from "@angular-classic/core";
  *
  * @Component({
  *   selector: 'app',

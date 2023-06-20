@@ -24,12 +24,12 @@ and we fix bugs as fast as we can.
 <a id="0.8.0"></a>
 ## 0.8.0 (2018-12-06)
 
-* remove `@angular/http` support
+* remove `@angular-classic/http` support
 * no functional changes
 
 **BREAKING CHANGE**
-This version no longer supports any functionality for `@angular/http`. Please use
-`@angular/common/http` instead.
+This version no longer supports any functionality for `@angular-classic/http`. Please use
+`@angular-classic/common/http` instead.
 
 <a id="0.7.0"></a>
 ## 0.7.0 (2018-10-31)
@@ -207,7 +207,7 @@ To see how, look in the `map` section of the
 [`src/systemjs.config.js` for this project](https://github.com/angular/in-memory-web-api/blob/master/src/systemjs.config.js) for the following two _additional_ lines :
 
 ```
-'@angular/common/http': 'npm:@angular/common/bundles/common-http.umd.js',
+'@angular-classic/common/http': 'npm:@angular-classic/common/bundles/common-http.umd.js',
 ...
 'tslib': 'npm:tslib/tslib.js',
 
@@ -472,23 +472,23 @@ The last npm package named "angular2-in-memory-web-api" was v.0.0.21
 
 <a id="0.0.5"></a>
 ## 0.0.5 (2016-05-01)
-* PROVISIONAL - refers to @angular packages
+* PROVISIONAL - refers to @angular-classic packages
 * update to 0.0.0-5
 
 <a id="0.0.4"></a>
 ## 0.0.4 (2016-04-30)
-* PROVISIONAL - refers to @angular packages
+* PROVISIONAL - refers to @angular-classic packages
 * update to 0.0.0-3
 * rxjs: "5.0.0-beta.6"
 
 <a id="0.0.3"></a>
 ## 0.0.3 (2016-04-29)
-* PROVISIONAL - refers to @angular packages
+* PROVISIONAL - refers to @angular-classic packages
 * update to 0.0.0-2
 
 <a id="0.0.2"></a>
 ## 0.0.2 (2016-04-27)
-* PROVISIONAL - refers to @angular packages
+* PROVISIONAL - refers to @angular-classic packages
 
 <a id="0.0.1"></a>
 ## 0.0.1 (2016-04-27)

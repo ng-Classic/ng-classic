@@ -23,7 +23,7 @@ In addition to optimizing the loading of the LCP image, `NgOptimizedImage` enfor
 
 <code-example format="typescript" language="typescript">
 
-import { NgOptimizedImage } from '@angular/common'
+import { NgOptimizedImage } from '@angular-classic/common'
 
 </code-example>
 
@@ -276,7 +276,7 @@ providers: [
 ],
 </code-example>
 
-A loader function for the `NgOptimizedImage` directive takes an object with the `ImageLoaderConfig` type (from `@angular/common`) as its argument and returns the absolute URL of the image asset. The `ImageLoaderConfig` object contains the `src` property, and optional `width` and `loaderParams` properties.
+A loader function for the `NgOptimizedImage` directive takes an object with the `ImageLoaderConfig` type (from `@angular-classic/common`) as its argument and returns the absolute URL of the image asset. The `ImageLoaderConfig` object contains the `src` property, and optional `width` and `loaderParams` properties.
 
 Note: even though the `width` property may not always be present, a custom loader must use it to support requesting images at various widths in order for `ngSrcset` to work properly.
 

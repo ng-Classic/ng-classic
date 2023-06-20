@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AST, EmptyExpr, ImplicitReceiver, LiteralPrimitive, PropertyRead, PropertyWrite, SafePropertyRead, TmplAstNode, TmplAstReference, TmplAstTemplate, TmplAstTextAttribute} from '@angular/compiler';
+import {AST, EmptyExpr, ImplicitReceiver, LiteralPrimitive, PropertyRead, PropertyWrite, SafePropertyRead, TmplAstNode, TmplAstReference, TmplAstTemplate, TmplAstTextAttribute} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {AbsoluteFsPath} from '../../file_system';

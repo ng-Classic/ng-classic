@@ -11,7 +11,7 @@ The form model determines the status of the form.
 
 1. Open `cart.component.ts`.
 
-1. Import the `FormBuilder` service from the `@angular/forms` package.
+1. Import the `FormBuilder` service from the `@angular-classic/forms` package.
   This service provides convenient methods for generating controls.
 
   <code-example header="src/app/cart/cart.component.ts" path="getting-started/src/app/cart/cart.component.ts" region="imports"></code-example>

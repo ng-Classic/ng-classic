@@ -13,7 +13,7 @@ module.exports = function processPackages(collectPackageContentDocsProcessor) {
           // Convert the doc type from "module" to "package"
           doc.docType = 'package';
           // The name is actually the full id
-          doc.name = `@angular/${doc.id}`;
+          doc.name = `@angular-classic/${doc.id}`;
 
           // Partition the exports into groups by type
           if (doc.exports) {

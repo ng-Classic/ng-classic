@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {getSystemPath, normalize, virtualFs} from '@angular-devkit/core';
-import {TempScopedNodeJsSyncHost} from '@angular-devkit/core/node/testing';
-import {HostTree} from '@angular-devkit/schematics';
-import {SchematicTestRunner, UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getSystemPath, normalize, virtualFs} from '@angular-classic-devkit/core';
+import {TempScopedNodeJsSyncHost} from '@angular-classic-devkit/core/node/testing';
+import {HostTree} from '@angular-classic-devkit/schematics';
+import {SchematicTestRunner, UnitTestTree} from '@angular-classic-devkit/schematics/testing';
 import {runfiles} from '@bazel/runfiles';
 import shx from 'shelljs';
 
@@ -62,7 +62,7 @@ describe('Remove `moduleId` migration', () => {
 
   it('should remove `moduleId` from `@Directive`', async () => {
     writeFile('/index.ts', dedent`
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({
         selector: 'my-dir',
@@ -75,7 +75,7 @@ describe('Remove `moduleId` migration', () => {
     await runMigration();
 
     expect(tree.readContent('/index.ts')).toEqual(dedent`
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({
         selector: 'my-dir',
@@ -87,7 +87,7 @@ describe('Remove `moduleId` migration', () => {
 
   it('should be able to remove `moduleId` from multiple classes in the same file', async () => {
     writeFile('/index.ts', dedent`
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({
         selector: 'my-dir-a',
@@ -107,7 +107,7 @@ describe('Remove `moduleId` migration', () => {
     await runMigration();
 
     expect(tree.readContent('/index.ts')).toEqual(dedent`
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({
         selector: 'my-dir-a',
@@ -125,7 +125,7 @@ describe('Remove `moduleId` migration', () => {
 
   it('should not fail if `moduleId` is last property of decorator', async () => {
     writeFile('/index.ts', dedent`
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({
         selector: 'my-dir',
@@ -137,7 +137,7 @@ describe('Remove `moduleId` migration', () => {
     await runMigration();
 
     expect(tree.readContent('/index.ts')).toEqual(dedent`
-      import {Directive} from '@angular/core';
+      import {Directive} from '@angular-classic/core';
 
       @Directive({
         selector: 'my-dir',

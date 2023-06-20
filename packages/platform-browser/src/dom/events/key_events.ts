@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {DOCUMENT, ɵgetDOM as getDOM} from '@angular/common';
-import {Inject, Injectable, NgZone} from '@angular/core';
+import {DOCUMENT, ɵgetDOM as getDOM} from '@angular-classic/common';
+import {Inject, Injectable, NgZone} from '@angular-classic/core';
 
 import {EventManagerPlugin} from './event_manager';
 

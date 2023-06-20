@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgOptimizedImage} from '@angular/common';
-import {Component} from '@angular/core';
+import {NgOptimizedImage} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
 
 @Component({
   selector: 'image-distortion-passing',

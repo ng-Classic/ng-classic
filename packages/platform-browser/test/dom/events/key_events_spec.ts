@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {KeyEventsPlugin} from '@angular/platform-browser/src/dom/events/key_events';
+import {KeyEventsPlugin} from '@angular-classic/platform-browser/src/dom/events/key_events';
 
 {
   describe('KeyEventsPlugin', () => {

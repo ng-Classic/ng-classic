@@ -79,7 +79,7 @@ The [builder][AioGuideGlossaryBuilder] is defined in an [npm package][AioGuideGl
 
 In the [workspace configuration file][AioGuideWorkspaceConfigProjectToolConfigurationOptions], an "architect" section provides configuration options for Architect builders.
 
-For example, a built-in builder for linting is defined in the package `@angular-devkit/build_angular:tslint`, which uses the [TSLint][GithubPalantirTslint] tool to perform linting, with a configuration specified in a `tslint.json` file.
+For example, a built-in builder for linting is defined in the package `@angular-classic-devkit/build_angular:tslint`, which uses the [TSLint][GithubPalantirTslint] tool to perform linting, with a configuration specified in a `tslint.json` file.
 
 Use the [`ng run`][AioCliRun] Angular CLI command to invoke a builder by specifying a [target configuration][AioGuideGlossaryTarget] associated with that builder.
 Integrators can add builders to enable tools and workflows to run through the Angular CLI.
@@ -254,7 +254,7 @@ Do not declare the following:
 *   A class already declared as [standalone][AioGuideGlossaryStandalone].
 *   A class that is already declared in another NgModule.
 *   An array of directives imported from another package.
-    For example, do not declare `FORMS_DIRECTIVES` from `@angular/forms`.
+    For example, do not declare `FORMS_DIRECTIVES` from `@angular-classic/forms`.
 *   NgModule classes.
 *   Service classes.
 *   Non-Angular classes and objects, such as strings, numbers, functions, entity models, configurations, business logic, and helper classes.
@@ -353,7 +353,7 @@ To learn more, see also [custom element][AioGuideGlossaryCustomElement].
 A [JavaScript module][AioGuideGlossaryModule] that is intended to be imported by a user of an [npm package][AioGuideNpmPackages].
 An entry-point module typically re-exports symbols from other internal modules.
 A package can contain multiple entry points.
-For example, the `@angular/core` package has two entry-point modules, which can be imported using the module names `@angular/core` and `@angular/core/testing`.
+For example, the `@angular-classic/core` package has two entry-point modules, which can be imported using the module names `@angular-classic/core` and `@angular-classic/core/testing`.
 
 ## form control
 
@@ -495,7 +495,7 @@ Objects can be exported, making them public, and public objects can be imported 
 
 Angular ships as a collection of JavaScript modules.
 A collection of JavaScript modules are also referenced as a library.
-Each Angular library name begins with the `@angular` prefix.
+Each Angular library name begins with the `@angular-classic` prefix.
 Install Angular libraries with the [npm package manager][NpmjsDocsAboutNpm] and import parts of them with JavaScript `import` declarations.
 
 Compare to [NgModule][AioGuideGlossaryNgmodule].
@@ -510,7 +510,7 @@ See also [declarable][AioGuideGlossaryDeclarable].
 
 NgModules are typically named after the file in which the exported thing is defined.
 For example, the Angular [DatePipe][AioApiCommonDatepipe] class belongs to a feature module named `date_pipe` in the file `date_pipe.ts`.
-You import them from an Angular [scoped package][AioGuideGlossaryScopedPackage] such as `@angular/core`.
+You import them from an Angular [scoped package][AioGuideGlossaryScopedPackage] such as `@angular-classic/core`.
 
 Every Angular application has a root module.
 By convention, the class is named `AppModule` and resides in a file named `app.module.ts`.
@@ -568,8 +568,8 @@ To learn more, see [Pipes][AioGuidePipes].
 In Angular terminology, a platform is the context in which an Angular application runs.
 The most common platform for Angular applications is a web browser, but it can also be an operating system for a mobile device, or a web server.
 
-Support for the various Angular run-time platforms is provided by the `@angular/platform-*` packages.
-These packages allow applications that make use of `@angular/core` and `@angular/common` to execute in different environments by providing implementation for gathering user input and rendering UIs for the given platform.
+Support for the various Angular run-time platforms is provided by the `@angular-classic/platform-*` packages.
+These packages allow applications that make use of `@angular-classic/core` and `@angular-classic/common` to execute in different environments by providing implementation for gathering user input and rendering UIs for the given platform.
 Isolating platform-specific functionality allows the developer to make platform-independent use of the rest of the framework.
 
 *   When running in a web browser, [`BrowserModule`][AioApiPlatformBrowserBrowsermodule] is imported from the `platform-browser` package, and supports services that simplify security and event processing, and allows applications to access browser-specific features, such as interpreting keyboard input and controlling the title of the document being displayed.
@@ -691,7 +691,7 @@ Use Node 6.9 or above to install the Schematics CLI globally.
 
 <code-example format="shell" language="shell">
 
-npm install -g @angular-devkit/schematics-cli
+npm install -g @angular-classic-devkit/schematics-cli
 
 </code-example>
 
@@ -702,8 +702,8 @@ You can also use the `schematics` command to add a new schematic to an existing 
 ## scoped package
 
 A way to group related [npm packages][AioGuideNpmPackages].
-NgModules are delivered within scoped packages whose names begin with the Angular *scope name* `@angular`.
-For example, `@angular/core`, `@angular/common`, `@angular/forms`, and `@angular/router`.
+NgModules are delivered within scoped packages whose names begin with the Angular *scope name* `@angular-classic`.
+For example, `@angular-classic/core`, `@angular-classic/common`, `@angular-classic/forms`, and `@angular-classic/router`.
 
 Import a scoped package in the same way that you import a normal package.
 
@@ -969,17 +969,17 @@ Learn more about zones in this [Brian Ford video][YoutubeWatchV3iqtmusceU].
 
 <!-- links -->
 
-[AioApiCommonDatepipe]: api/common/DatePipe "DatePipe | @angular/common - API | Angular"
+[AioApiCommonDatepipe]: api/common/DatePipe "DatePipe | @angular-classic/common - API | Angular"
 
-[AioApiCoreChangedetectorref]: api/core/ChangeDetectorRef "ChangeDetectorRef | @angular/core - API | Angular"
+[AioApiCoreChangedetectorref]: api/core/ChangeDetectorRef "ChangeDetectorRef | @angular-classic/core - API | Angular"
 
-[AioApiCoreProvider]: api/core/Provider "Provider | @angular/core - API | Angular"
+[AioApiCoreProvider]: api/core/Provider "Provider | @angular-classic/core - API | Angular"
 
-[AioApiPlatformBrowserBrowsermodule]: api/platform-browser/BrowserModule "BrowserModule | @angular/platform-browser - API | Angular"
+[AioApiPlatformBrowserBrowsermodule]: api/platform-browser/BrowserModule "BrowserModule | @angular-classic/platform-browser - API | Angular"
 
-[AioApiPlatformServer]: api/platform-server "@angular/platform-server | API | Angular"
+[AioApiPlatformServer]: api/platform-server "@angular-classic/platform-server | API | Angular"
 
-[AioApiRouterResolve]: api/router/Resolve "Resolve | @angular/router - API | Angular"
+[AioApiRouterResolve]: api/router/Resolve "Resolve | @angular-classic/router - API | Angular"
 
 [AioCliAdd]: cli/add "ng add | CLI | Angular"
 

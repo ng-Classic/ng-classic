@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectorRef, ComponentRef, Directive, EnvironmentInjector, EventEmitter, inject, Injectable, InjectionToken, Injector, Input, OnDestroy, OnInit, Output, reflectComponentType, SimpleChanges, ViewContainerRef, ɵRuntimeError as RuntimeError,} from '@angular/core';
+import {ChangeDetectorRef, ComponentRef, Directive, EnvironmentInjector, EventEmitter, inject, Injectable, InjectionToken, Injector, Input, OnDestroy, OnInit, Output, reflectComponentType, SimpleChanges, ViewContainerRef, ɵRuntimeError as RuntimeError,} from '@angular-classic/core';
 import {combineLatest, of, Subscription} from 'rxjs';
 import {switchMap} from 'rxjs/operators';
 

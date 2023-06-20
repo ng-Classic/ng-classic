@@ -12,7 +12,7 @@ describe('extractDecoratedClasses processor', function() {
 
   it('should extract specified decorator arguments', function() {
     var doc1 = {
-      id: '@angular/common/ngFor',
+      id: '@angular-classic/common/ngFor',
       name: 'ngFor',
       docType: 'class',
       decorators: [{
@@ -22,7 +22,7 @@ describe('extractDecoratedClasses processor', function() {
       }]
     };
     var doc2 = {
-      id: '@angular/core/DecimalPipe',
+      id: '@angular-classic/core/DecimalPipe',
       name: 'DecimalPipe',
       docType: 'class',
       decorators:
@@ -32,14 +32,14 @@ describe('extractDecoratedClasses processor', function() {
     processor.$process([doc1, doc2]);
 
     expect(doc1).toEqual(jasmine.objectContaining({
-      id: '@angular/common/ngFor',
+      id: '@angular-classic/common/ngFor',
       name: 'ngFor',
       docType: 'directive',
       directiveOptions: {selector: '[ng-for][ng-for-of]', properties: ['ngForOf']}
     }));
 
     expect(doc2).toEqual(jasmine.objectContaining({
-      id: '@angular/core/DecimalPipe',
+      id: '@angular-classic/core/DecimalPipe',
       name: 'DecimalPipe',
       docType: 'pipe',
       pipeOptions: {name: 'number'}

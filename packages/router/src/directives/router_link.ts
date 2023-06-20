@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {LocationStrategy} from '@angular/common';
-import {Attribute, booleanAttribute, Directive, ElementRef, HostBinding, HostListener, Input, OnChanges, OnDestroy, Renderer2, SimpleChanges, ɵɵsanitizeUrlOrResourceUrl} from '@angular/core';
+import {LocationStrategy} from '@angular-classic/common';
+import {Attribute, booleanAttribute, Directive, ElementRef, HostBinding, HostListener, Input, OnChanges, OnDestroy, Renderer2, SimpleChanges, ɵɵsanitizeUrlOrResourceUrl} from '@angular-classic/core';
 import {Subject, Subscription} from 'rxjs';
 
 import {Event, NavigationEnd} from '../events';

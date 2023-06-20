@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {getSystemPath, normalize, virtualFs} from '@angular-devkit/core';
-import {TempScopedNodeJsSyncHost} from '@angular-devkit/core/node/testing';
-import {HostTree} from '@angular-devkit/schematics';
-import {SchematicTestRunner, UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getSystemPath, normalize, virtualFs} from '@angular-classic-devkit/core';
+import {TempScopedNodeJsSyncHost} from '@angular-classic-devkit/core/node/testing';
+import {HostTree} from '@angular-classic-devkit/schematics';
+import {SchematicTestRunner, UnitTestTree} from '@angular-classic-devkit/schematics/testing';
 import {runfiles} from '@bazel/runfiles';
 import fs from 'fs';
 import shx from 'shelljs';
@@ -30,7 +30,7 @@ describe('all migrations', () => {
     host = new TempScopedNodeJsSyncHost();
     tree = new UnitTestTree(new HostTree(host));
 
-    writeFile('/node_modules/@angular/core/index.d.ts', `export const MODULE: any;`);
+    writeFile('/node_modules/@angular-classic/core/index.d.ts', `export const MODULE: any;`);
     writeFile('/angular.json', JSON.stringify({
       version: 1,
       projects: {t: {root: '', architect: {build: {options: {tsConfig: './tsconfig.json'}}}}}
@@ -78,7 +78,7 @@ describe('all migrations', () => {
         }
       }));
       writeFile('/index.ts', `
-      import {Renderer} from '@angular/core';
+      import {Renderer} from '@angular-classic/core';
 
       const variableDecl: Renderer = null;
 

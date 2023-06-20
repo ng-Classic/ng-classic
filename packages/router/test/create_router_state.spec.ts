@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {EnvironmentInjector} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {EnvironmentInjector} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 import {map} from 'rxjs/operators';
 
 import {createRouterState} from '../src/create_router_state';

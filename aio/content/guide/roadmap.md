@@ -166,7 +166,7 @@ Develop and publish an in-depth guide on change detection.
 Develop content for performance profiling of Angular apps.
 Cover how change detection interacts with Zone.js and explain when it gets triggered, how to profile its duration, as well as common practices for performance optimization.
 
-### Rollout strict typings for `@angular/forms`
+### Rollout strict typings for `@angular-classic/forms`
 
 *Completed Q2 2022*
 
@@ -188,7 +188,7 @@ To simplify the Angular mental model and learning journey, we will be working on
 This work lets developers develop standalone components and implement an alternative API for declaring the compilation scope of the component.
 We kicked this project off with high-level design discussions that we captured in an [RFC](https://github.com/angular/angular/discussions/43784).
 
-### Design strict typing for `@angular/forms`
+### Design strict typing for `@angular-classic/forms`
 
 *Completed Q1 2022*
 

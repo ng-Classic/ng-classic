@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {initMockFileSystem} from '@angular/compiler-cli/src/ngtsc/file_system/testing';
+import {initMockFileSystem} from '@angular-classic/compiler-cli/src/ngtsc/file_system/testing';
 import {spawn} from 'child_process';
 import ts from 'typescript';
 
@@ -23,7 +23,7 @@ describe('code fixes', () => {
   it('should fix error when property does not exist on type', () => {
     const files = {
       'app.ts': `
-       import {Component, NgModule} from '@angular/core';
+       import {Component, NgModule} from '@angular-classic/core';
 
        @Component({
          templateUrl: './app.html'
@@ -58,7 +58,7 @@ describe('code fixes', () => {
   it('should fix a missing method when property does not exist on type', () => {
     const files = {
       'app.ts': `
-       import {Component, NgModule} from '@angular/core';
+       import {Component, NgModule} from '@angular-classic/core';
 
        @Component({
          templateUrl: './app.html'
@@ -90,7 +90,7 @@ describe('code fixes', () => {
      () => {
        const files = {
          'app.ts': `
-         import {Component, NgModule} from '@angular/core';
+         import {Component, NgModule} from '@angular-classic/core';
 
          @Component({
            templateUrl: './app.html'
@@ -114,7 +114,7 @@ describe('code fixes', () => {
   it('should fix all errors when property does not exist on type', () => {
     const files = {
       'app.ts': `
-       import {Component, NgModule} from '@angular/core';
+       import {Component, NgModule} from '@angular-classic/core';
 
        @Component({
          template: '{{tite}}{{bannr}}',
@@ -164,7 +164,7 @@ describe('code fixes', () => {
   it('should fix invalid banana-in-box error', () => {
     const files = {
       'app.ts': `
-       import {Component, NgModule} from '@angular/core';
+       import {Component, NgModule} from '@angular-classic/core';
 
        @Component({
          templateUrl: './app.html'
@@ -196,7 +196,7 @@ describe('code fixes', () => {
   it('should fix all invalid banana-in-box errors', () => {
     const files = {
       'app.ts': `
-       import {Component, NgModule} from '@angular/core';
+       import {Component, NgModule} from '@angular-classic/core';
 
        @Component({
          template: '<input ([ngModel])="title"><input ([value])="title">',
@@ -233,7 +233,7 @@ describe('code fixes', () => {
     it('for a new standalone component import', () => {
       const standaloneFiles = {
         'foo.ts': `
-         import {Component} from '@angular/core';
+         import {Component} from '@angular-classic/core';
          @Component({
            selector: 'foo',
            template: '<bar></bar>',
@@ -242,7 +242,7 @@ describe('code fixes', () => {
          export class FooComponent {}
          `,
         'bar.ts': `
-         import {Component} from '@angular/core';
+         import {Component} from '@angular-classic/core';
          @Component({
            selector: 'bar',
            template: '<div>bar</div>',
@@ -275,7 +275,7 @@ describe('code fixes', () => {
     it('for a new NgModule-based component import', () => {
       const standaloneFiles = {
         'foo.ts': `
-         import {Component} from '@angular/core';
+         import {Component} from '@angular-classic/core';
          @Component({
            selector: 'foo',
            template: '<bar></bar>',
@@ -284,7 +284,7 @@ describe('code fixes', () => {
          export class FooComponent {}
          `,
         'bar.ts': `
-         import {Component, NgModule} from '@angular/core';
+         import {Component, NgModule} from '@angular-classic/core';
          @Component({
            selector: 'bar',
            template: '<div>bar</div>',
@@ -322,7 +322,7 @@ describe('code fixes', () => {
     it('for an import of a component onto an ngModule', () => {
       const standaloneFiles = {
         'foo.ts': `
-         import {Component, NgModule} from '@angular/core';
+         import {Component, NgModule} from '@angular-classic/core';
          @Component({
            selector: 'foo',
            template: '<bar></bar>',
@@ -336,7 +336,7 @@ describe('code fixes', () => {
          export class FooModule {}
          `,
         'bar.ts': `
-         import {Component} from '@angular/core';
+         import {Component} from '@angular-classic/core';
          @Component({
            selector: 'bar',
            template: '<div>bar</div>',
@@ -369,7 +369,7 @@ describe('code fixes', () => {
     it('for a new standalone pipe import', () => {
       const standaloneFiles = {
         'foo.ts': `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         @Component({
           selector: 'foo',
           template: '{{"hello"|bar}}',
@@ -378,7 +378,7 @@ describe('code fixes', () => {
         export class FooComponent {}
         `,
         'bar.ts': `
-        import {Pipe} from '@angular/core';
+        import {Pipe} from '@angular-classic/core';
         @Pipe({
           name: 'bar',
           standalone: true
@@ -415,7 +415,7 @@ describe('code fixes', () => {
     it('for a transitive NgModule-based reexport', () => {
       const standaloneFiles = {
         'foo.ts': `
-         import {Component} from '@angular/core';
+         import {Component} from '@angular-classic/core';
          @Component({
            selector: 'foo',
            template: '<bar></bar>',
@@ -424,7 +424,7 @@ describe('code fixes', () => {
          export class FooComponent {}
          `,
         'bar.ts': `
-         import {Component, NgModule} from '@angular/core';
+         import {Component, NgModule} from '@angular-classic/core';
          @Component({
            selector: 'bar',
            template: '<div>bar</div>',

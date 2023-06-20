@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {InjectionToken} from '@angular/core';
+import {InjectionToken} from '@angular-classic/core';
 
 import {OnSameUrlNavigation} from './models';
 import {UrlSerializer, UrlTree} from './url_tree';

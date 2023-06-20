@@ -6,9 +6,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgClass} from '@angular/common';
-import {Component} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {NgClass} from '@angular-classic/common';
+import {Component} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
 
 describe('binding to CSS class list', () => {
   let fixture: ComponentFixture<any>|null;

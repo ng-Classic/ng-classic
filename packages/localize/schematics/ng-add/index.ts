@@ -5,11 +5,11 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  *
- * @fileoverview Schematics for `ng add @angular/localize` schematic.
+ * @fileoverview Schematics for `ng add @angular-classic/localize` schematic.
  */
 
-import {chain, noop, Rule, SchematicContext, SchematicsException, Tree,} from '@angular-devkit/schematics';
-import {NodePackageInstallTask} from '@angular-devkit/schematics/tasks';
+import {chain, noop, Rule, SchematicContext, SchematicsException, Tree,} from '@angular-classic-devkit/schematics';
+import {NodePackageInstallTask} from '@angular-classic-devkit/schematics/tasks';
 import {addPackageJsonDependency, NodeDependencyType, removePackageJsonDependency,} from '@schematics/angular/utility/dependencies';
 import {JSONFile, JSONPath} from '@schematics/angular/utility/json-file';
 import {getWorkspace} from '@schematics/angular/utility/workspace';
@@ -17,8 +17,8 @@ import {Builders} from '@schematics/angular/utility/workspace-models';
 
 import {Schema} from './schema';
 
-const localizeType = `@angular/localize`;
-const localizeTripleSlashType = `/// <reference types="@angular/localize" />`;
+const localizeType = `@angular-classic/localize`;
+const localizeTripleSlashType = `/// <reference types="@angular-classic/localize" />`;
 
 function addTypeScriptConfigTypes(projectName: string): Rule {
   return async (host: Tree) => {
@@ -65,7 +65,7 @@ function addTypeScriptConfigTypes(projectName: string): Rule {
       }
 
       const hasLocalizeType =
-          types.some((t) => t === localizeType || t === '@angular/localize/init');
+          types.some((t) => t === localizeType || t === '@angular-classic/localize/init');
       if (hasLocalizeType) {
         // Skip has already localize type.
         continue;
@@ -89,9 +89,9 @@ function moveToDependencies(host: Tree, context: SchematicContext): void {
   }
 
   // Remove the previous dependency and add in a new one under the desired type.
-  removePackageJsonDependency(host, '@angular/localize');
+  removePackageJsonDependency(host, '@angular-classic/localize');
   addPackageJsonDependency(host, {
-    name: '@angular/localize',
+    name: '@angular-classic/localize',
     type: NodeDependencyType.Default,
     version: `~0.0.0-PLACEHOLDER`,
   });
@@ -113,7 +113,7 @@ export default function(options: Schema): Rule {
 
     return chain([
       addTypeScriptConfigTypes(projectName),
-      // If `$localize` will be used at runtime then must install `@angular/localize`
+      // If `$localize` will be used at runtime then must install `@angular-classic/localize`
       // into `dependencies`, rather than the default of `devDependencies`.
       options.useAtRuntime ? moveToDependencies : noop(),
     ]);

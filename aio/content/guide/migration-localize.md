@@ -2,7 +2,7 @@
 
 ## What does this schematic do?
 
-If you're using i18n, this schematic adds an import statement for `@angular/localize` to `polyfills.ts` that will look something like this:
+If you're using i18n, this schematic adds an import statement for `@angular-classic/localize` to `polyfills.ts` that will look something like this:
 
 <code-example format="typescript" language="typescript">
 
@@ -13,7 +13,7 @@ import '&commat;angular/localize/init';
 
 </code-example>
 
-It also lists `@angular/localize` as a dependency in your app's `package.json` to ensure the import is found.
+It also lists `@angular-classic/localize` as a dependency in your app's `package.json` to ensure the import is found.
 
 <code-example format="json" language="json">
 
@@ -25,9 +25,9 @@ It also lists `@angular/localize` as a dependency in your app's `package.json` t
 
 </code-example>
 
-`@angular/localize` is a new package that supports i18n of messages in Ivy applications.
+`@angular-classic/localize` is a new package that supports i18n of messages in Ivy applications.
 This package requires a global `$localize` symbol to exist.
-The symbol is loaded by importing the `@angular/localize/init` module, which has the side effect of attaching it to the global scope.
+The symbol is loaded by importing the `@angular-classic/localize/init` module, which has the side effect of attaching it to the global scope.
 
 ## Why is this migration necessary?
 
@@ -40,7 +40,7 @@ Because the application does not need to be built again for each locale, this ma
 
 The post-compilation inlining step is optional &mdash;for example during development or if the translations will be inlined at runtime.
 Therefore this global `$localize` must be available on the global scope at runtime.
-To make `$localize` available on the global scope, each application must now import the `@angular/localize/init` module.
+To make `$localize` available on the global scope, each application must now import the `@angular-classic/localize/init` module.
 This has the side effect of attaching a minimal implementation of `&dollar;localize` to the global scope.
 
 If this import is missing, you will see an error message like this:
@@ -54,11 +54,11 @@ Please run &grave;ng add &commat;angular/localize&grave; from the Angular CLI.
 
 </code-example>
 
-This schematic automatically adds the `@angular/localize/init` import for you if your app uses Angular's i18n APIs.
+This schematic automatically adds the `@angular-classic/localize/init` import for you if your app uses Angular's i18n APIs.
 
 ## Why is my tslint failing?
 
-The import of `@angular/localize/init` may cause a tslint error for `no-import-side-effect` because it adds to the global context \(that is, a side effect\).
+The import of `@angular-classic/localize/init` may cause a tslint error for `no-import-side-effect` because it adds to the global context \(that is, a side effect\).
 To fix this error, add the following to your `tslint.config`:
 
 <code-example format="json" language="json">

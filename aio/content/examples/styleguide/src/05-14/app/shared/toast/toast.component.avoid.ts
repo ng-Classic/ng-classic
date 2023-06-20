@@ -1,5 +1,5 @@
 // #docregion
-import { OnInit } from '@angular/core';
+import { OnInit } from '@angular-classic/core';
 // #docregion example
 /* avoid */
 

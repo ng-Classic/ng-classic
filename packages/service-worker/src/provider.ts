@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isPlatformBrowser} from '@angular/common';
-import {APP_INITIALIZER, ApplicationRef, EnvironmentProviders, InjectionToken, Injector, makeEnvironmentProviders, NgZone, PLATFORM_ID,} from '@angular/core';
+import {isPlatformBrowser} from '@angular-classic/common';
+import {APP_INITIALIZER, ApplicationRef, EnvironmentProviders, InjectionToken, Injector, makeEnvironmentProviders, NgZone, PLATFORM_ID,} from '@angular-classic/core';
 import {merge, Observable, of} from 'rxjs';
 import {delay, filter, take} from 'rxjs/operators';
 

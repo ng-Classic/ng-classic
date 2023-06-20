@@ -29,12 +29,12 @@ Inside [shared/boilerplate/](./shared/boilerplate) there is a sub-folder with bo
 Currently, the following project types are supported:
 
 - `cli`: For example apps based on the Angular CLI. This is the default type and is used in the majority of the examples.
-- `cli-ajs`: For CLI-based examples that also use AngularJS (but not via `@angular/upgrade`).
-- `elements`: For CLI-based examples that also use `@angular/elements`.
+- `cli-ajs`: For CLI-based examples that also use AngularJS (but not via `@angular-classic/upgrade`).
+- `elements`: For CLI-based examples that also use `@angular-classic/elements`.
 - `getting-started`: For the "Getting started" tutorial. Essentially the same as `cli` but with custom CSS styles.
 - `i18n`: For CLI-based examples that also use internationalization.
 - `schematics`: For CLI-based examples that include a library with schematics.
-- `service-worker`: For CLI-based examples that also use `@angular/service-worker`.
+- `service-worker`: For CLI-based examples that also use `@angular-classic/service-worker`.
 - `systemjs`: For non-CLI legacy examples using SystemJS. This is deprecated and only used in few examples.
 - `testing`: For CLI-based examples that are related to unit testing.
 - `universal`: For CLI-based examples that also use `@nguniversal/express-engine` for SSR.

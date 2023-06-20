@@ -1,6 +1,6 @@
 // #docregion
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 
 import { AdminComponent } from './admin/admin.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';

@@ -26,7 +26,7 @@ runInEachFileSystem(() => {
 
     it('should not crash if CLI does not provide getModifiedResourceFiles()', () => {
       env.write('component1.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'cmp', templateUrl: './component1.template.html'})
       export class Cmp1 {}
@@ -43,13 +43,13 @@ runInEachFileSystem(() => {
 
     it('should skip unchanged services', () => {
       env.write('service.ts', `
-      import {Injectable} from '@angular/core';
+      import {Injectable} from '@angular-classic/core';
 
       @Injectable()
       export class Service {}
     `);
       env.write('test.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {Service} from './service';
 
       @Component({selector: 'cmp', template: 'cmp'})
@@ -73,13 +73,13 @@ runInEachFileSystem(() => {
     it('should rebuild components that have changed', () => {
       env.tsconfig({strictTemplates: true});
       env.write('component1.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'cmp', template: 'cmp'})
       export class Cmp1 {}
     `);
       env.write('component2.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'cmp2', template: 'cmp'})
       export class Cmp2 {}
@@ -97,14 +97,14 @@ runInEachFileSystem(() => {
 
     it('should rebuild components whose templates have changed', () => {
       env.write('component1.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'cmp', templateUrl: './component1.template.html'})
       export class Cmp1 {}
     `);
       env.write('component1.template.html', 'cmp1');
       env.write('component2.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'cmp2', templateUrl: './component2.template.html'})
       export class Cmp2 {}
@@ -124,13 +124,13 @@ runInEachFileSystem(() => {
 
     it('should rebuild components whose partial-evaluation dependencies have changed', () => {
       env.write('component1.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
 
       @Component({selector: 'cmp', template: 'cmp'})
       export class Cmp1 {}
     `);
       env.write('component2.ts', `
-      import {Component} from '@angular/core';
+      import {Component} from '@angular-classic/core';
       import {SELECTOR} from './constants';
 
       @Component({selector: SELECTOR, template: 'cmp'})
@@ -156,7 +156,7 @@ runInEachFileSystem(() => {
 
       // Pretend a change was made to BarDir.
       env.write('bar_directive.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({selector: '[barr]'})
         export class BarDir {}
@@ -176,14 +176,14 @@ runInEachFileSystem(() => {
     // https://github.com/angular/angular/issues/32416
     it('should rebuild full NgModule scope when a dependency of a declaration has changed', () => {
       env.write('component1.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import {SELECTOR} from './dep';
 
         @Component({selector: SELECTOR, template: 'cmp'})
         export class Cmp1 {}
       `);
       env.write('component2.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'cmp2', template: '<cmp></cmp>'})
         export class Cmp2 {}
@@ -192,13 +192,13 @@ runInEachFileSystem(() => {
         export const SELECTOR = 'cmp';
       `);
       env.write('directive.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({selector: 'dir'})
         export class Dir {}
       `);
       env.write('pipe.ts', `
-        import {Pipe} from '@angular/core';
+        import {Pipe} from '@angular-classic/core';
 
         @Pipe({name: 'myPipe'})
         export class MyPipe {
@@ -206,7 +206,7 @@ runInEachFileSystem(() => {
         }
       `);
       env.write('module.ts', `
-        import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+        import {NgModule, NO_ERRORS_SCHEMA} from '@angular-classic/core';
         import {Cmp1} from './component1';
         import {Cmp2} from './component2';
         import {Dir} from './directive';
@@ -238,7 +238,7 @@ runInEachFileSystem(() => {
 
       // Rename the pipe so components that use it need to be recompiled.
       env.write('foo_pipe.ts', `
-        import {Pipe} from '@angular/core';
+        import {Pipe} from '@angular-classic/core';
 
         @Pipe({name: 'foo_changed'})
         export class FooPipe {
@@ -260,7 +260,7 @@ runInEachFileSystem(() => {
 
       // Pretend a change was made to FooModule.
       env.write('foo_module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {FooCmp} from './foo_component';
         import {FooPipe} from './foo_pipe';
         import {BarModule} from './bar_module';
@@ -292,7 +292,7 @@ runInEachFileSystem(() => {
       // (meaning MiddleBModule is not discovered during analysis of EntryModule), this test is
       // verifying that NgModule dependency tracking correctly accounts for this situation.
       env.write('entry.ts', `
-        import {Component, NgModule} from '@angular/core';
+        import {Component, NgModule} from '@angular-classic/core';
         import {MiddleAModule} from './middle-a';
 
         @Component({
@@ -308,7 +308,7 @@ runInEachFileSystem(() => {
         export class EntryModule {}
       `);
       env.write('middle-a.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {MiddleBModule} from './middle-b';
 
         @NgModule({
@@ -317,13 +317,13 @@ runInEachFileSystem(() => {
         export class MiddleAModule {}
       `);
       env.write('middle-b.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
 
         @NgModule({})
         export class MiddleBModule {}
       `);
       env.write('dir_module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {Dir} from './dir';
 
         @NgModule({
@@ -333,7 +333,7 @@ runInEachFileSystem(() => {
         export class DirModule {}
       `);
       env.write('dir.ts', `
-        import {Directive} from '@angular/core';
+        import {Directive} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir]',
@@ -345,7 +345,7 @@ runInEachFileSystem(() => {
       expect(env.getContents('entry.js')).not.toContain('Dir');
 
       env.write('middle-b.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {DirModule} from './dir_module';
 
         @NgModule({
@@ -367,7 +367,7 @@ runInEachFileSystem(() => {
       // This is a tricky scenario due to the backwards dependency arrow from a component to its
       // module.
       env.write('dep.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
 
         @Directive({selector: '[dep]'})
         export class DepDir {}
@@ -380,7 +380,7 @@ runInEachFileSystem(() => {
       `);
 
       env.write('cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'test-cmp',
@@ -390,7 +390,7 @@ runInEachFileSystem(() => {
       `);
 
       env.write('module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {Cmp} from './cmp';
         import {DepModule} from './dep';
 
@@ -406,7 +406,7 @@ runInEachFileSystem(() => {
 
       // Remove the component from the module and recompile.
       env.write('module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {DepModule} from './dep';
 
         @NgModule({
@@ -461,7 +461,7 @@ runInEachFileSystem(() => {
 
     it('should re-emit an NgModule when the provider status of its imports changes', () => {
       env.write('provider-dep.ts', `
-        import {Injectable, NgModule} from '@angular/core';
+        import {Injectable, NgModule} from '@angular-classic/core';
 
         @Injectable()
         export class Service {}
@@ -472,7 +472,7 @@ runInEachFileSystem(() => {
         export class DepModule {}
       `);
       env.write('standalone-cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import {DepModule} from './provider-dep';
 
         @Component({
@@ -483,7 +483,7 @@ runInEachFileSystem(() => {
         export class Cmp {}
       `);
       env.write('module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {Cmp} from './standalone-cmp';
 
         @NgModule({
@@ -495,7 +495,7 @@ runInEachFileSystem(() => {
       env.driveMain();
 
       env.write('provider-dep.ts', `
-        import {Injectable, NgModule} from '@angular/core';
+        import {Injectable, NgModule} from '@angular-classic/core';
 
         @NgModule({})
         export class DepModule {}
@@ -510,7 +510,7 @@ runInEachFileSystem(() => {
     it('should compile incrementally with template type-checking turned on', () => {
       env.tsconfig({fullTemplateTypeCheck: true});
       env.write('main.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({template: ''})
         export class MyComponent {}
@@ -530,7 +530,7 @@ runInEachFileSystem(() => {
       env.tsconfig({fullTemplateTypeCheck: true});
       env.write('node_modules/@types/node/index.d.ts', 'declare var require: any;');
       env.write('main.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         require('path');
 
@@ -562,7 +562,7 @@ runInEachFileSystem(() => {
       env.write('node_modules/b/index.js', `export {ServiceA as ServiceB} from 'a';`);
       env.write('node_modules/b/index.d.ts', `export {ServiceA as ServiceB} from 'a';`);
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import {ServiceA} from 'a';
         import {ServiceB} from 'b';
 
@@ -596,7 +596,7 @@ runInEachFileSystem(() => {
       env.write('node_modules/b/index.js', `export {ServiceA as ServiceB} from 'a';`);
       env.write('node_modules/b/index.d.ts', `export {ServiceA as ServiceB} from 'a';`);
       env.write('component1.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import {ServiceA} from 'a';
         import {ServiceB} from 'b';
 
@@ -604,7 +604,7 @@ runInEachFileSystem(() => {
         export class Cmp1 {}
       `);
       env.write('component2.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import {ServiceA} from 'a';
         import {ServiceB} from 'b';
 
@@ -617,7 +617,7 @@ runInEachFileSystem(() => {
       // Now update `component1.ts` and change its imports to avoid complete structure reuse, which
       // forces recreation of source file redirects.
       env.write('component1.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import {ServiceA} from 'a';
 
         @Component({selector: 'cmp', template: 'cmp'})
@@ -642,7 +642,7 @@ runInEachFileSystem(() => {
         // - an unmatched binding
         // - a DOM schema error
         env.write('component.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           @Component({
             selector: 'test-cmp',
             template: \`
@@ -682,7 +682,7 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('component.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
           import {SomeType} from './iface';
 
           @Component({
@@ -718,13 +718,13 @@ runInEachFileSystem(() => {
         // performing re-analysis of `TestCmp`. The output of the re-emitted file for `TestCmp`
         // should continue to have retained the default import.
         env.write('service.ts', `
-          import {Injectable} from '@angular/core';
+          import {Injectable} from '@angular-classic/core';
 
           @Injectable({ providedIn: 'root' })
           export default class DefaultService {}
         `);
         env.write('cmp.ts', `
-          import {Component, Directive} from '@angular/core';
+          import {Component, Directive} from '@angular-classic/core';
           import DefaultService from './service';
 
           @Component({
@@ -735,13 +735,13 @@ runInEachFileSystem(() => {
           }
         `);
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({ selector: '[dir]' })
           export class TestDir {}
         `);
         env.write('mod.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {TestDir} from './dir';
           import {TestCmp} from './cmp';
 
@@ -755,7 +755,7 @@ runInEachFileSystem(() => {
         // Update `TestDir` to change its inputs, triggering a re-emit of `TestCmp` that uses
         // `TestDir`.
         env.write('dir.ts', `
-          import {Directive} from '@angular/core';
+          import {Directive} from '@angular-classic/core';
 
           @Directive({ selector: '[dir]', inputs: ['added'] })
           export class TestDir {}
@@ -781,7 +781,7 @@ runInEachFileSystem(() => {
         // change to the scope of ModuleA made by changing ModuleB (hence, a "remote change"). The
         // test verifies that incremental template type-checking.
         env.write('cmp.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({
             selector: 'test-cmp',
@@ -790,7 +790,7 @@ runInEachFileSystem(() => {
           export class Cmp {}
         `);
         env.write('module-a.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Cmp} from './cmp';
           import {ModuleB} from './module-b';
 
@@ -803,7 +803,7 @@ runInEachFileSystem(() => {
 
         // Declare ModuleB and a directive Dir, but ModuleB does not yet export Dir.
         env.write('module-b.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Dir} from './dir';
 
           @NgModule({
@@ -812,7 +812,7 @@ runInEachFileSystem(() => {
           export class ModuleB {}
         `);
         env.write('dir.ts', `
-          import {Directive, Input} from '@angular/core';
+          import {Directive, Input} from '@angular-classic/core';
 
           @Directive({selector: '[dir]'})
           export class Dir {
@@ -833,7 +833,7 @@ runInEachFileSystem(() => {
 
         // Modify ModuleB to now export Dir.
         env.write('module-b.ts', `
-          import {NgModule} from '@angular/core';
+          import {NgModule} from '@angular-classic/core';
           import {Dir} from './dir';
 
           @NgModule({
@@ -857,7 +857,7 @@ runInEachFileSystem(() => {
           // type-checking on an unexported class (not exporting the class forces the inline
           // checking de-optimization).
           env.write('cmp.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -879,7 +879,7 @@ runInEachFileSystem(() => {
 
           // Now, correct the error by adding the 'test' property to the component.
           env.write('cmp.ts', `
-            import {Component} from '@angular/core';
+            import {Component} from '@angular-classic/core';
 
             @Component({
               selector: 'test-cmp',
@@ -905,7 +905,7 @@ runInEachFileSystem(() => {
           // work correctly, by repeatedly performing diagnostics on a component which depends on a
           // directive with an inlined type constructor.
           env.write('dir.ts', `
-            import {Directive, Input} from '@angular/core';
+            import {Directive, Input} from '@angular-classic/core';
             export interface Keys {
               alpha: string;
               beta: string;
@@ -921,7 +921,7 @@ runInEachFileSystem(() => {
           `);
 
           env.write('cmp.ts', `
-            import {Component, NgModule} from '@angular/core';
+            import {Component, NgModule} from '@angular-classic/core';
             import {Dir} from './dir';
             @Component({
               selector: 'test-cmp',
@@ -953,7 +953,7 @@ runInEachFileSystem(() => {
           // confuse the incremental engine in undesirably considering dir.ts as affected in
           // incremental rebuilds.
           env.write('dir.ts', `
-            import {Directive, Input} from '@angular/core';
+            import {Directive, Input} from '@angular-classic/core';
             interface Keys {
               alpha: string;
               beta: string;
@@ -967,7 +967,7 @@ runInEachFileSystem(() => {
           `);
 
           env.write('cmp.ts', `
-            import {Component, NgModule} from '@angular/core';
+            import {Component, NgModule} from '@angular-classic/core';
             import {Dir} from './dir';
             @Component({
               selector: 'test-cmp',
@@ -998,7 +998,7 @@ runInEachFileSystem(() => {
     describe('missing resource files', () => {
       it('should re-analyze a component if a template file becomes available later', () => {
         env.write('app.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'app',
@@ -1020,7 +1020,7 @@ runInEachFileSystem(() => {
 
       it('should re-analyze if component style file becomes available later', () => {
         env.write('app.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           selector: 'app',
@@ -1042,7 +1042,7 @@ runInEachFileSystem(() => {
 
   function setupFooBarProgram(env: NgtscTestEnvironment) {
     env.write('foo_component.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
     import {fooSelector} from './foo_selector';
 
     @Component({
@@ -1052,7 +1052,7 @@ runInEachFileSystem(() => {
     export class FooCmp {}
   `);
     env.write('foo_pipe.ts', `
-    import {Pipe} from '@angular/core';
+    import {Pipe} from '@angular-classic/core';
 
     @Pipe({name: 'foo'})
     export class FooPipe {
@@ -1060,7 +1060,7 @@ runInEachFileSystem(() => {
     }
   `);
     env.write('foo_module.ts', `
-    import {NgModule} from '@angular/core';
+    import {NgModule} from '@angular-classic/core';
     import {FooCmp} from './foo_component';
     import {FooPipe} from './foo_pipe';
     import {BarModule} from './bar_module';
@@ -1071,20 +1071,20 @@ runInEachFileSystem(() => {
     export class FooModule {}
   `);
     env.write('bar_component.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({selector: 'bar', templateUrl: './bar_component.html'})
     export class BarCmp {}
   `);
     env.write('bar_component.html', '<div bar></div>');
     env.write('bar_directive.ts', `
-    import {Directive} from '@angular/core';
+    import {Directive} from '@angular-classic/core';
 
     @Directive({selector: '[bar]'})
     export class BarDir {}
   `);
     env.write('bar_pipe.ts', `
-    import {Pipe} from '@angular/core';
+    import {Pipe} from '@angular-classic/core';
 
     @Pipe({name: 'foo'})
     export class BarPipe {
@@ -1092,7 +1092,7 @@ runInEachFileSystem(() => {
     }
   `);
     env.write('bar_module.ts', `
-    import {NgModule} from '@angular/core';
+    import {NgModule} from '@angular-classic/core';
     import {BarCmp} from './bar_component';
     import {BarDir} from './bar_directive';
     import {BarPipe} from './bar_pipe';

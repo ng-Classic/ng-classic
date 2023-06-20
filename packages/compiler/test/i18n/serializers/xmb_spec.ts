@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {MessageBundle} from '@angular/compiler/src/i18n/message_bundle';
-import {Xmb} from '@angular/compiler/src/i18n/serializers/xmb';
-import {HtmlParser} from '@angular/compiler/src/ml_parser/html_parser';
-import {DEFAULT_INTERPOLATION_CONFIG} from '@angular/compiler/src/ml_parser/interpolation_config';
+import {MessageBundle} from '@angular-classic/compiler/src/i18n/message_bundle';
+import {Xmb} from '@angular-classic/compiler/src/i18n/serializers/xmb';
+import {HtmlParser} from '@angular-classic/compiler/src/ml_parser/html_parser';
+import {DEFAULT_INTERPOLATION_CONFIG} from '@angular-classic/compiler/src/ml_parser/interpolation_config';
 
 {
   describe('XMB serializer', () => {

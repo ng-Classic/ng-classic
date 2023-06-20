@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: component_host_binding_slots.js
  ****************************************************************************************************/
-import { Component, HostBinding, Input, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, HostBinding, Input, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myStyle = { width: '100px' };
@@ -50,7 +50,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: component_host_binding_slots.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myStyle: {
         width: string;
@@ -73,8 +73,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: directive_host_binding_slots.js
  ****************************************************************************************************/
-import { Directive, HostBinding } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Directive, HostBinding } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class WidthDirective {
     constructor() {
         this.myWidth = 200;
@@ -105,7 +105,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: directive_host_binding_slots.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class WidthDirective {
     myWidth: number;
     myFooClass: boolean;
@@ -118,8 +118,8 @@ export declare class WidthDirective {
 /****************************************************************************************************
  * PARTIAL FILE: host_binding_slots.js
  ****************************************************************************************************/
-import { Component, Directive, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, Directive, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyDir {
     constructor() {
         this.title = '';
@@ -176,7 +176,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: host_binding_slots.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyDir {
     title: string;
     foo: boolean;

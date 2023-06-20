@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, Directive, Injectable, QueryList, TemplateRef, ViewChild, ViewChildren, ViewContainerRef} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {Component, Directive, Injectable, QueryList, TemplateRef, ViewChild, ViewChildren, ViewContainerRef} from '@angular-classic/core';
+import {TestBed} from '@angular-classic/core/testing';
 
 
 describe('query', () => {

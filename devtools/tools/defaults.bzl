@@ -7,10 +7,10 @@ def karma_web_test_suite(name, **kwargs):
     if not hasattr(kwargs, "browsers"):
         kwargs["tags"] = ["native"] + kwargs.get("tags", [])
         kwargs["browsers"] = [
-            "@npm//@angular/build-tooling/bazel/browsers/chromium:chromium",
+            "@npm//@angular-classic/build-tooling/bazel/browsers/chromium:chromium",
 
             # todo(aleksanderbodurri): enable when firefox support is done
-            # "@npm//@angular/build-tooling/bazel/browsers/firefox:firefox",
+            # "@npm//@angular-classic/build-tooling/bazel/browsers/firefox:firefox",
         ]
 
     # Default test suite with all configured browsers.

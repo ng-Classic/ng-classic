@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpHeaders} from '@angular/common/http';
+import {HttpHeaders} from '@angular-classic/common/http';
 import {BehaviorSubject, from, Observable, Observer, of} from 'rxjs';
 import {concatMap, first} from 'rxjs/operators';
 

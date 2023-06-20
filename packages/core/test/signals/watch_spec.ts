@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {computed, signal, Watch} from '@angular/core/src/signals';
+import {computed, signal, Watch} from '@angular-classic/core/src/signals';
 
 import {flushEffects, resetEffects, testingEffect} from './effect_util';
 

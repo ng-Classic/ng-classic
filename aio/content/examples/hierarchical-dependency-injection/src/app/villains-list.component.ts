@@ -1,5 +1,5 @@
 // #docregion
-import { Component } from '@angular/core';
+import { Component } from '@angular-classic/core';
 import { Observable } from 'rxjs';
 
 import { Villain, VillainsService } from './villains.service';

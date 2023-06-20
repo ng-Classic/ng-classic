@@ -1,10 +1,10 @@
 // #docplaster
-import { BrowserModule } from '@angular/platform-browser';
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { ModuleWithProviders, NgModule } from '@angular-classic/core';
 
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular-classic/forms';
+import { RouterModule, Routes } from '@angular-classic/router';
 import { SubmitButtonComponent } from './submit-button/submit-button.component';
 
 // #docregion lazyload-syntax, lazyload-deprecated-syntax

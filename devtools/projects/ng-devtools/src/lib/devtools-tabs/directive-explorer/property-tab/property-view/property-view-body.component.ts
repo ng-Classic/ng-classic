@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular-classic/cdk/drag-drop';
+import {Component, EventEmitter, Input, Output} from '@angular-classic/core';
 import {DirectivePosition} from 'protocol';
 
 import {DirectivePropertyResolver, DirectiveTreeData} from '../../property-resolver/directive-property-resolver';

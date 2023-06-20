@@ -6,15 +6,15 @@ The RxJS Interop package is available for [developer preview](/guide/releases#de
 
 </div>
 
-Angular's `@angular/core/rxjs-interop` package which provides useful utilities to integrate [Angular Signals](/guide/signals) with RxJS Observables.
+Angular's `@angular-classic/core/rxjs-interop` package which provides useful utilities to integrate [Angular Signals](/guide/signals) with RxJS Observables.
 
 ## `toSignal`
 
 The `toSignal` function creates a signal which tracks the value of an Observable. It behaves similarly to the `async` pipe in templates, but is more flexible and can be used anywhere in an application.
 
 ```ts
-import { Component } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
+import { Component } from '@angular-classic/core';
+import { AsyncPipe } from '@angular-classic/common';
 import { interval } from 'rxjs';
 
 @Component({
@@ -66,7 +66,7 @@ If an Observable used in `toSignal` completes, the signal continues to return th
 The `toObservable` utility creates an `Observable` which tracks the value of a signal. The signal's value is monitored with an `effect`, which emits the value to the Observable when it changes.
 
 ```ts
-import { Component, signal } from '@angular/core';
+import { Component, signal } from '@angular-classic/core';
 
 @Component(...)
 export class SearchResults {

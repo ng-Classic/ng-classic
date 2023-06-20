@@ -6,11 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ComponentRef} from '@angular/core';
-import {ComponentFactoryResolver} from '@angular/core/src/render3/component_ref';
-import {Renderer} from '@angular/core/src/render3/interfaces/renderer';
-import {RElement} from '@angular/core/src/render3/interfaces/renderer_dom';
-import {TestBed} from '@angular/core/testing';
+import {ComponentRef} from '@angular-classic/core';
+import {ComponentFactoryResolver} from '@angular-classic/core/src/render3/component_ref';
+import {Renderer} from '@angular-classic/core/src/render3/interfaces/renderer';
+import {RElement} from '@angular-classic/core/src/render3/interfaces/renderer_dom';
+import {TestBed} from '@angular-classic/core/testing';
 
 import {ChangeDetectionStrategy, Component, Injector, Input, NgModuleRef, OnChanges, Output, RendererType2, SimpleChanges, ViewChild, ViewContainerRef, ViewEncapsulation} from '../../src/core';
 import {ComponentFactory} from '../../src/linker/component_factory';

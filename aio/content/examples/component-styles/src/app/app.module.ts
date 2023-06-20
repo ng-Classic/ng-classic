@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
 
 import { HeroAppComponent } from './hero-app.component';
 import { HeroAppMainComponent } from './hero-app-main.component';

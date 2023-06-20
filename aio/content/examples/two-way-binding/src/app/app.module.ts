@@ -1,10 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { NgModule } from '@angular-classic/core';
 
 
 import { AppComponent } from './app.component';
 import { SizerComponent } from './sizer/sizer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular-classic/forms';
 
 
 @NgModule({

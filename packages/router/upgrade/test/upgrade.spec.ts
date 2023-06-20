@@ -6,12 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Location} from '@angular/common';
-import {$locationShim, UrlCodec} from '@angular/common/upgrade';
-import {fakeAsync, flush, TestBed} from '@angular/core/testing';
-import {Router, RouterModule} from '@angular/router';
-import {setUpLocationSync} from '@angular/router/upgrade';
-import {UpgradeModule} from '@angular/upgrade/static';
+import {Location} from '@angular-classic/common';
+import {$locationShim, UrlCodec} from '@angular-classic/common/upgrade';
+import {fakeAsync, flush, TestBed} from '@angular-classic/core/testing';
+import {Router, RouterModule} from '@angular-classic/router';
+import {setUpLocationSync} from '@angular-classic/router/upgrade';
+import {UpgradeModule} from '@angular-classic/upgrade/static';
 
 import {LocationUpgradeTestModule} from './upgrade_location_test_module';
 

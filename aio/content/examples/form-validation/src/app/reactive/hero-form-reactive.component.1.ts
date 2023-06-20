@@ -1,7 +1,7 @@
 // #docplaster
 // #docregion
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular-classic/core';
+import { FormControl, FormGroup, Validators } from '@angular-classic/forms';
 import { forbiddenNameValidator } from '../shared/forbidden-name.directive';
 
 @Component({

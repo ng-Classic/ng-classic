@@ -47,7 +47,7 @@ runInEachFileSystem(() => {
 
     it('should handle an error in an unrelated file', () => {
       env.write('cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp', template: '...'})
         export class TestCmp {}
@@ -81,7 +81,7 @@ runInEachFileSystem(() => {
     it('should emit all files after an error on the initial build', () => {
       // Intentionally start with a broken compilation.
       env.write('cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp', template: '...'})
         export class TestCmp {}
@@ -106,8 +106,8 @@ runInEachFileSystem(() => {
 
     it('should emit files introduced at the same time as an unrelated error', () => {
       env.write('other.ts', `
-        // Needed so that the initial program contains @angular/core's .d.ts file.
-        import '@angular/core';
+        // Needed so that the initial program contains @angular-classic/core's .d.ts file.
+        import '@angular-classic/core';
 
         export class Other {}
       `);
@@ -117,7 +117,7 @@ runInEachFileSystem(() => {
       env.flushWrittenFileTracking();
 
       env.write('cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp', template: '...'})
         export class TestCmp {}
@@ -142,7 +142,7 @@ runInEachFileSystem(() => {
 
     it('should emit dependent files even in the face of an error', () => {
       env.write('cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
         import {SELECTOR} from './selector';
 
         @Component({selector: SELECTOR, template: '...'})
@@ -153,8 +153,8 @@ runInEachFileSystem(() => {
       `);
 
       env.write('other.ts', `
-        // Needed so that the initial program contains @angular/core's .d.ts file.
-        import '@angular/core';
+        // Needed so that the initial program contains @angular-classic/core's .d.ts file.
+        import '@angular-classic/core';
 
         export class Other {}
       `);
@@ -164,7 +164,7 @@ runInEachFileSystem(() => {
       env.flushWrittenFileTracking();
 
       env.write('cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp', template: '...'})
         export class TestCmp {}
@@ -189,7 +189,7 @@ runInEachFileSystem(() => {
 
     it('should recover from an error in a component\'s metadata', () => {
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp', template: '...'})
         export class TestCmp {}
@@ -201,7 +201,7 @@ runInEachFileSystem(() => {
 
       // Introduce the error.
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp', template: ...}) // invalid template
         export class TestCmp {}
@@ -212,7 +212,7 @@ runInEachFileSystem(() => {
 
       // Clear the error and verify that the compiler now emits test.js again.
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp', template: '...'})
         export class TestCmp {}
@@ -227,19 +227,19 @@ runInEachFileSystem(() => {
       // NgModule. TestCmp is broken in an incremental build and then fixed, and the test verifies
       // that TargetCmp is re-emitted.
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp', template: '...'})
         export class TestCmp {}
       `);
       env.write('target.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'target-cmp', template: '<test-cmp></test-cmp>'})
         export class TargetCmp {}
       `);
       env.write('module.ts', `
-        import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+        import {NgModule, NO_ERRORS_SCHEMA} from '@angular-classic/core';
         import {TargetCmp} from './target';
         import {TestCmp} from './test';
 
@@ -256,7 +256,7 @@ runInEachFileSystem(() => {
 
       // Introduce the syntactic error.
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: ..., template: '...'}) // ... is not valid syntax
         export class TestCmp {}
@@ -267,7 +267,7 @@ runInEachFileSystem(() => {
 
       // Clear the error and trigger the rebuild.
       env.write('test.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp-fixed', template: '...'})
         export class TestCmp {}
@@ -291,7 +291,7 @@ runInEachFileSystem(() => {
 
     it('should recover from an error in an external template', () => {
       env.write('mod.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {Cmp} from './cmp';
 
         @NgModule({
@@ -301,7 +301,7 @@ runInEachFileSystem(() => {
       `);
       env.write('cmp.html', '{{ error = "true" }} ');
       env.write('cmp.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({
           templateUrl: './cmp.html',
@@ -328,19 +328,19 @@ runInEachFileSystem(() => {
       // graph, an error is fixed. To check this, LibModule is broken and then fixed in incremental
       // build steps.
       env.write('a.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'test-cmp', template: '<div dir></div>'})
         export class CmpA {}
       `);
       env.write('b.ts', `
-        import {Component} from '@angular/core';
+        import {Component} from '@angular-classic/core';
 
         @Component({selector: 'target-cmp', template: '...'})
         export class CmpB {}
       `);
       env.write('module.ts', `
-        import {NgModule} from '@angular/core';
+        import {NgModule} from '@angular-classic/core';
         import {LibModule} from './lib';
         import {CmpA} from './a';
         import {CmpB} from './b';
@@ -358,7 +358,7 @@ runInEachFileSystem(() => {
         export class Module {}
       `);
       env.write('lib.ts', `
-        import {Directive, NgModule} from '@angular/core';
+        import {Directive, NgModule} from '@angular-classic/core';
 
         @Directive({
           selector: '[dir]',
@@ -378,7 +378,7 @@ runInEachFileSystem(() => {
 
       // Introduce the error in LibModule
       env.write('lib.ts', `
-      import {Directive, NgModule} from '@angular/core';
+      import {Directive, NgModule} from '@angular-classic/core';
 
       @Directive({
         selector: '[dir]',
@@ -409,7 +409,7 @@ runInEachFileSystem(() => {
 
       // Clear the error and recompile.
       env.write('lib.ts', `
-      import {Component, NgModule} from '@angular/core';
+      import {Component, NgModule} from '@angular-classic/core';
 
       @Component({
         selector: 'lib-cmp',
@@ -456,7 +456,7 @@ runInEachFileSystem(() => {
 
         // Update ACmp
         env.write('a.ts', `
-          import {Component} from '@angular/core';
+          import {Component} from '@angular-classic/core';
 
           @Component({selector: 'a-cmp', template: 'new template'})
           export class ACmp {}
@@ -548,19 +548,19 @@ runInEachFileSystem(() => {
 export function writeTwoComponentSystem(env: NgtscTestEnvironment): void {
   env.write('a.html', 'This is the template for CmpA');
   env.write('a.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({selector: 'a-cmp', templateUrl: './a.html'})
     export class ACmp {}
   `);
   env.write('b.ts', `
-    import {Component} from '@angular/core';
+    import {Component} from '@angular-classic/core';
 
     @Component({selector: 'b-cmp', template: '<a-cmp></a-cmp>'})
     export class BCmp {}
   `);
   env.write('module.ts', `
-    import {NgModule} from '@angular/core';
+    import {NgModule} from '@angular-classic/core';
     import {ACmp} from './a';
     import {BCmp} from './b';
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular-classic/core';
 import { ContributorGroup } from './contributors.model';
 import { ContributorService } from './contributor.service';
 import { LocationService } from 'app/shared/location.service';

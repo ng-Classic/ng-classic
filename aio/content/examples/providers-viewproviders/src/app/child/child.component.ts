@@ -1,5 +1,5 @@
 // #docplaster
-import { Component, OnInit, Host, SkipSelf, Optional } from '@angular/core';
+import { Component, OnInit, Host, SkipSelf, Optional } from '@angular-classic/core';
 import { FlowerService } from '../flower.service';
 import { AnimalService } from '../animal.service';
 

@@ -1,7 +1,7 @@
 # Communicating with backend services using HTTP
 
 Most front-end applications need to communicate with a server over the HTTP protocol, to download or upload data and access other back-end services.
-Angular provides a client HTTP API for Angular applications, the `HttpClient` service class in `@angular/common/http`.
+Angular provides a client HTTP API for Angular applications, the `HttpClient` service class in `@angular-classic/common/http`.
 
 The HTTP client service offers the following major features.
 
@@ -540,7 +540,7 @@ Interceptors provided *after* DI creates the `HttpClient` are ignored.
 This app provides `HttpClient` in the app's root injector, as a side effect of importing the `HttpClientModule` in `AppModule`.
 You should provide interceptors in `AppModule` as well.
 
-After importing the `HTTP_INTERCEPTORS` injection token from `@angular/common/http`, write the `NoopInterceptor` provider like this:
+After importing the `HTTP_INTERCEPTORS` injection token from `@angular-classic/common/http`, write the `NoopInterceptor` provider like this:
 
 <code-example path="http/src/app/http-interceptors/index.ts" region="noop-provider"></code-example>
 
@@ -932,7 +932,7 @@ If your backend service uses different names for the XSRF token cookie or header
 ## Testing HTTP requests
 
 As for any external dependency, you must mock the HTTP backend so your tests can simulate interaction with a remote server.
-The `@angular/common/http/testing` library makes it straightforward to set up such mocking.
+The `@angular-classic/common/http/testing` library makes it straightforward to set up such mocking.
 
 Angular's HTTP testing library is designed for a pattern of testing in which the app executes code and makes requests first.
 The test then expects that certain requests have or have not been made, performs assertions against those requests, and finally provides responses by "flushing" each expected request.

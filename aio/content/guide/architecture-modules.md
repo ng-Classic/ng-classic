@@ -104,12 +104,12 @@ Other JavaScript modules use *import statements* to access public objects from o
 
 Angular loads as a collection of JavaScript modules.
 You can think of them as library modules.
-Each Angular library name begins with the `@angular` prefix.
+Each Angular library name begins with the `@angular-classic` prefix.
 Install them with the node package manager `npm` and import parts of them with JavaScript `import` statements.
 
 <br class="clear">
 
-For example, import Angular's `Component` decorator from the `@angular/core` library like this.
+For example, import Angular's `Component` decorator from the `@angular-classic/core` library like this.
 
 <code-example path="architecture/src/app/app.component.ts" region="import"></code-example>
 

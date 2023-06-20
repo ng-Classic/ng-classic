@@ -6,8 +6,8 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, NgModule, TemplateRef} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {Component, NgModule, TemplateRef} from '@angular-classic/core';
+import {BrowserModule} from '@angular-classic/platform-browser';
 
 @Component({
   selector: 'styling-bindings',

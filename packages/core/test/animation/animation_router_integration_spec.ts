@@ -5,14 +5,14 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {animate, animateChild, group, query, sequence, style, transition, trigger, ɵAnimationGroupPlayer as AnimationGroupPlayer} from '@angular/animations';
-import {AnimationDriver, ɵAnimationEngine} from '@angular/animations/browser';
-import {TransitionAnimationPlayer} from '@angular/animations/browser/src/render/transition_animation_engine';
-import {MockAnimationDriver, MockAnimationPlayer} from '@angular/animations/browser/testing';
-import {Component, HostBinding} from '@angular/core';
-import {fakeAsync, flushMicrotasks, TestBed, tick} from '@angular/core/testing';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ActivatedRoute, Router, RouterModule, RouterOutlet} from '@angular/router';
+import {animate, animateChild, group, query, sequence, style, transition, trigger, ɵAnimationGroupPlayer as AnimationGroupPlayer} from '@angular-classic/animations';
+import {AnimationDriver, ɵAnimationEngine} from '@angular-classic/animations/browser';
+import {TransitionAnimationPlayer} from '@angular-classic/animations/browser/src/render/transition_animation_engine';
+import {MockAnimationDriver, MockAnimationPlayer} from '@angular-classic/animations/browser/testing';
+import {Component, HostBinding} from '@angular-classic/core';
+import {fakeAsync, flushMicrotasks, TestBed, tick} from '@angular-classic/core/testing';
+import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animations';
+import {ActivatedRoute, Router, RouterModule, RouterOutlet} from '@angular-classic/router';
 
 (function() {
 // these tests are only meant to be run within the DOM (for now)

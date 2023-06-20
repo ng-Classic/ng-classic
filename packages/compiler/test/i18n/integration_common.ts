@@ -6,17 +6,17 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {NgLocalization} from '@angular/common';
-import {Serializer} from '@angular/compiler/src/i18n';
-import {MessageBundle} from '@angular/compiler/src/i18n/message_bundle';
-import {HtmlParser} from '@angular/compiler/src/ml_parser/html_parser';
-import {DEFAULT_INTERPOLATION_CONFIG} from '@angular/compiler/src/ml_parser/interpolation_config';
-import {ResourceLoader} from '@angular/compiler/src/resource_loader';
-import {Component, DebugElement, TRANSLATIONS, TRANSLATIONS_FORMAT} from '@angular/core';
-import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {By} from '@angular/platform-browser/src/dom/debug/by';
-import {stringifyElement} from '@angular/platform-browser/testing/src/browser_util';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {NgLocalization} from '@angular-classic/common';
+import {Serializer} from '@angular-classic/compiler/src/i18n';
+import {MessageBundle} from '@angular-classic/compiler/src/i18n/message_bundle';
+import {HtmlParser} from '@angular-classic/compiler/src/ml_parser/html_parser';
+import {DEFAULT_INTERPOLATION_CONFIG} from '@angular-classic/compiler/src/ml_parser/interpolation_config';
+import {ResourceLoader} from '@angular-classic/compiler/src/resource_loader';
+import {Component, DebugElement, TRANSLATIONS, TRANSLATIONS_FORMAT} from '@angular-classic/core';
+import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
+import {By} from '@angular-classic/platform-browser/src/dom/debug/by';
+import {stringifyElement} from '@angular-classic/platform-browser/testing/src/browser_util';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 @Component({
   selector: 'i18n-cmp',

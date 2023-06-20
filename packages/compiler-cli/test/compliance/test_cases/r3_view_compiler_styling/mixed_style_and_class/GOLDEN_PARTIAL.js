@@ -1,8 +1,8 @@
 /****************************************************************************************************
  * PARTIAL FILE: mixed.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.myStyleExp = [{ color: 'red' }, { color: 'blue', duration: 1000 }];
@@ -28,7 +28,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: mixed.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     myStyleExp: ({
         color: string;
@@ -50,8 +50,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: pipe_bindings.js
  ****************************************************************************************************/
-import { Component, NgModule, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class StylePipe {
     transform(v) { }
 }
@@ -98,7 +98,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: pipe_bindings.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class StylePipe {
     transform(v: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<StylePipe, never>;
@@ -130,8 +130,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: pipe_bindings_slots.js
  ****************************************************************************************************/
-import { Component, NgModule, Pipe } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule, Pipe } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class PipePipe {
     transform(v) { }
 }
@@ -185,7 +185,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: pipe_bindings_slots.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class PipePipe {
     transform(v: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PipePipe, never>;
@@ -210,8 +210,8 @@ export declare class MyModule {
 /****************************************************************************************************
  * PARTIAL FILE: multiple_elements.js
  ****************************************************************************************************/
-import { Component, NgModule } from '@angular/core';
-import * as i0 from "@angular/core";
+import { Component, NgModule } from '@angular-classic/core';
+import * as i0 from "@angular-classic/core";
 export class MyComponent {
     constructor() {
         this.w1 = '100px';
@@ -252,7 +252,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
 /****************************************************************************************************
  * PARTIAL FILE: multiple_elements.d.ts
  ****************************************************************************************************/
-import * as i0 from "@angular/core";
+import * as i0 from "@angular-classic/core";
 export declare class MyComponent {
     w1: string;
     h1: string;

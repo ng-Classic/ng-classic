@@ -8,7 +8,7 @@ ts_library(
     srcs = ["index.ts"],
     deps = [
         "//devtools/projects/protocol",
-        "@npm//@angular/material",
+        "@npm//@angular-classic/material",
     ],
 )
 

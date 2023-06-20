@@ -1,5 +1,5 @@
-import { animate, state, style, trigger, transition } from '@angular/animations';
-import { Component, EventEmitter, HostBinding, Inject, Input, OnInit, Output } from '@angular/core';
+import { animate, state, style, trigger, transition } from '@angular-classic/animations';
+import { Component, EventEmitter, HostBinding, Inject, Input, OnInit, Output } from '@angular-classic/core';
 import { CurrentDateToken } from 'app/shared/current-date';
 import { LocalStorage } from 'app/shared/storage.service';
 

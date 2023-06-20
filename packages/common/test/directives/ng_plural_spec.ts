@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {CommonModule, NgLocalization, NgPlural, NgPluralCase} from '@angular/common';
-import {Component, Injectable} from '@angular/core';
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {CommonModule, NgLocalization, NgPlural, NgPluralCase} from '@angular-classic/common';
+import {Component, Injectable} from '@angular-classic/core';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular-classic/core/testing';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 {
   describe('ngPlural', () => {

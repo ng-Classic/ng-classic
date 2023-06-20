@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Expression} from '@angular/compiler';
+import {Expression} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {identifierOfNode} from '../../util/src/typescript';

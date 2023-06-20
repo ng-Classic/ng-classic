@@ -286,12 +286,12 @@ For standalone applications configure preloading strategies by adding `withPrelo
 
 <code-example header="`app.config.ts`">
 
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig } from '@angular-classic/core';
 import {
   PreloadAllModules,
   provideRouter
   withPreloading,
-} from '@angular/router';
+} from '@angular-classic/router';
 
 import { routes } from './app.routes';
 
@@ -322,7 +322,7 @@ ng generate service &lt;service-name&gt;
 
 </code-example>
 
-In the newly created service, implement the `Resolve` interface provided by the `@angular/router` package:
+In the newly created service, implement the `Resolve` interface provided by the `@angular-classic/router` package:
 
 <code-example header="Resolver service (excerpt)">
 

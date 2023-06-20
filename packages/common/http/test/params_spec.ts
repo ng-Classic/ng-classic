@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {HttpParams} from '@angular/common/http/src/params';
+import {HttpParams} from '@angular-classic/common/http/src/params';
 
 {
   describe('HttpUrlEncodedParams', () => {

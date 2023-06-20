@@ -207,7 +207,7 @@ def docs_example(name, test = True, test_tags = [], test_exec_properties = {}, f
             data = [
                 ":%s" % name,
                 YARN_LABEL,
-                "@aio_npm//@angular/build-tooling/bazel/browsers/chromium",
+                "@aio_npm//@angular-classic/build-tooling/bazel/browsers/chromium",
                 "//aio/tools/examples:run-example-e2e",
                 "//aio/tools:windows-chromium-path",
                 # We install the whole node modules for runtime deps of e2e tests
@@ -230,7 +230,7 @@ def docs_example(name, test = True, test_tags = [], test_exec_properties = {}, f
                 "CHROMEDRIVER_BIN": "$(CHROMEDRIVER)",
             },
             toolchains = [
-                "@aio_npm//@angular/build-tooling/bazel/browsers/chromium:toolchain_alias",
+                "@aio_npm//@angular-classic/build-tooling/bazel/browsers/chromium:toolchain_alias",
             ],
             exec_properties = test_exec_properties,
             flaky = flaky,

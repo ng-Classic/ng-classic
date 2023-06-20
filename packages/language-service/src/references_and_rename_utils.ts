@@ -5,12 +5,12 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {AST, BindingPipe, LiteralPrimitive, PropertyRead, PropertyWrite, SafePropertyRead, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstNode, TmplAstReference, TmplAstTextAttribute, TmplAstVariable} from '@angular/compiler';
-import {NgCompiler} from '@angular/compiler-cli/src/ngtsc/core';
-import {absoluteFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
-import {DirectiveMeta, PipeMeta} from '@angular/compiler-cli/src/ngtsc/metadata';
-import {DirectiveSymbol, Symbol, SymbolKind, TcbLocation, TemplateTypeChecker} from '@angular/compiler-cli/src/ngtsc/typecheck/api';
-import {ExpressionIdentifier, hasExpressionIdentifier} from '@angular/compiler-cli/src/ngtsc/typecheck/src/comments';
+import {AST, BindingPipe, LiteralPrimitive, PropertyRead, PropertyWrite, SafePropertyRead, TmplAstBoundAttribute, TmplAstBoundEvent, TmplAstNode, TmplAstReference, TmplAstTextAttribute, TmplAstVariable} from '@angular-classic/compiler';
+import {NgCompiler} from '@angular-classic/compiler-cli/src/ngtsc/core';
+import {absoluteFrom} from '@angular-classic/compiler-cli/src/ngtsc/file_system';
+import {DirectiveMeta, PipeMeta} from '@angular-classic/compiler-cli/src/ngtsc/metadata';
+import {DirectiveSymbol, Symbol, SymbolKind, TcbLocation, TemplateTypeChecker} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/api';
+import {ExpressionIdentifier, hasExpressionIdentifier} from '@angular-classic/compiler-cli/src/ngtsc/typecheck/src/comments';
 import ts from 'typescript';
 
 import {getTargetAtPosition, TargetNodeKind} from './template_target';

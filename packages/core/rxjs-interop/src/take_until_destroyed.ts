@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {assertInInjectionContext, DestroyRef, inject} from '@angular/core';
+import {assertInInjectionContext, DestroyRef, inject} from '@angular-classic/core';
 import {MonoTypeOperatorFunction, Observable} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 

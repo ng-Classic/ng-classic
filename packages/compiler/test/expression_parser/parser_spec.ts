@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {AbsoluteSourceSpan, ASTWithSource, BindingPipe, Call, EmptyExpr, Interpolation, ParserError, TemplateBinding, VariableBinding} from '@angular/compiler/src/expression_parser/ast';
-import {Lexer} from '@angular/compiler/src/expression_parser/lexer';
-import {Parser, SplitInterpolation} from '@angular/compiler/src/expression_parser/parser';
-import {expect} from '@angular/platform-browser/testing/src/matchers';
+import {AbsoluteSourceSpan, ASTWithSource, BindingPipe, Call, EmptyExpr, Interpolation, ParserError, TemplateBinding, VariableBinding} from '@angular-classic/compiler/src/expression_parser/ast';
+import {Lexer} from '@angular-classic/compiler/src/expression_parser/lexer';
+import {Parser, SplitInterpolation} from '@angular-classic/compiler/src/expression_parser/parser';
+import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 import {unparse, unparseWithSpan} from './utils/unparser';
 import {validate} from './utils/validator';

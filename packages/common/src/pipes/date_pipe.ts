@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Inject, InjectionToken, LOCALE_ID, Optional, Pipe, PipeTransform} from '@angular/core';
+import {Inject, InjectionToken, LOCALE_ID, Optional, Pipe, PipeTransform} from '@angular-classic/core';
 
 import {formatDate} from '../i18n/format_date';
 

@@ -1,5 +1,5 @@
-import { InjectionToken, Type } from '@angular/core';
-import { LoadChildrenCallback } from '@angular/router';
+import { InjectionToken, Type } from '@angular-classic/core';
+import { LoadChildrenCallback } from '@angular-classic/router';
 
 // Modules containing custom elements must be set up as lazy-loaded routes (loadChildren)
 // TODO(andrewjs): This is a hack, Angular should have first-class support for preparing a module

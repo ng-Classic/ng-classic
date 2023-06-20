@@ -1,13 +1,13 @@
 // #docplaster
 // #docregion auth, preload
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { FormsModule } from '@angular-classic/forms';
 // #docregion animations-module
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular-classic/platform-browser/animations';
 
 // #enddocregion auth, animations-module
-import { Router } from '@angular/router';
+import { Router } from '@angular-classic/router';
 
 // #docregion auth
 import { AppComponent } from './app.component';

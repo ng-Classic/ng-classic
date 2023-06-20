@@ -57,7 +57,7 @@ ng_module(
         "//packages/animations",
         "//packages/common",
         "//packages/core",
-        "@npm//@angular/material",
+        "@npm//@angular-classic/material",
         "@npm//@types",
         "@npm//ngx-flamegraph",
         "@npm//rxjs",

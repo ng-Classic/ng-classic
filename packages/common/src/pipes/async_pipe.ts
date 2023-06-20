@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ChangeDetectorRef, EventEmitter, OnDestroy, Pipe, PipeTransform, untracked, ɵisPromise, ɵisSubscribable} from '@angular/core';
+import {ChangeDetectorRef, EventEmitter, OnDestroy, Pipe, PipeTransform, untracked, ɵisPromise, ɵisSubscribable} from '@angular-classic/core';
 import {Observable, Subscribable, Unsubscribable} from 'rxjs';
 
 import {invalidPipeArgumentError} from './invalid_pipe_argument_error';

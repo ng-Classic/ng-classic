@@ -20,7 +20,7 @@ ng_module(
 
 ng_package(
     name = "npm_package",
-    package_name = "@angular/upgrade",
+    package_name = "@angular-classic/upgrade",
     srcs = [
         "package.json",
     ],

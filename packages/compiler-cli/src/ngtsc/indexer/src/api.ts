@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {ParseSourceFile} from '@angular/compiler';
+import {ParseSourceFile} from '@angular-classic/compiler';
 
 import {ClassDeclaration, DeclarationNode} from '../../reflection';
 

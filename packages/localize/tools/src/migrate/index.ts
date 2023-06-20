@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {getFileSystem, Logger} from '@angular/compiler-cli/private/localize';
+import {getFileSystem, Logger} from '@angular-classic/compiler-cli/private/localize';
 import {migrateFile, MigrationMapping} from './migrate';
 
 export interface MigrateFilesOptions {

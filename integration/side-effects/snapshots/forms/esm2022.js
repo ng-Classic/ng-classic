@@ -1,6 +1,6 @@
-import "@angular/core";
+import "@angular-classic/core";
 
-import "@angular/common";
+import "@angular-classic/common";
 
 import "rxjs";
 

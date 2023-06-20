@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Expression, ExternalExpr} from '@angular/compiler';
+import {Expression, ExternalExpr} from '@angular-classic/compiler';
 import ts from 'typescript';
 
 import {UnifiedModulesHost} from '../../core/api';
@@ -27,8 +27,8 @@ const CHARS_TO_ESCAPE = /[^a-zA-Z0-9/_]/g;
  * template. In its default configuration, if the compiler is not directly able to import the
  * component from another file within the same project, it will attempt to import the component
  * from the same (absolute) path by which the module was imported. So in the above example if
- * `CommonModule` was imported from '@angular/common', the compiler will attempt to import `NgIf`
- * from '@angular/common' as well.
+ * `CommonModule` was imported from '@angular-classic/common', the compiler will attempt to import `NgIf`
+ * from '@angular-classic/common' as well.
  *
  * The aliasing system interacts with the above logic in two distinct ways.
  *
