@@ -1,4 +1,4 @@
-<h1 align="center">Angular Classic- The modern web developer's platform</h1>
+<h1 align="center">Angular Classic- A different view on our beloved Angular</h1>
 
 <p align="center">
   <img src="aio/src/assets/images/logos/ng-classic/ng-classic.png" alt="angular-logo" width="120px" height="120px"/>
@@ -23,25 +23,6 @@
   <br>
 </p>
 
-<p align="center">
-  <a href="https://circleci.com/gh/angular/workflows/angular/tree/main">
-    <img src="https://img.shields.io/circleci/build/github/ng-classic/ng-classic/main.svg?logo=circleci&logoColor=fff&label=CircleCI" alt="CI status" />
-  </a>&nbsp;
-  <a href="https://www.npmjs.com/@angular-classic/core">
-    <img src="https://img.shields.io/npm/v/@angular-classic/core.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen" alt="Angular Classicon npm" />
-  </a>&nbsp;
-  <a href="https://discord.gg/angular">
-    <img src="https://img.shields.io/discord/463752820026376202.svg?logo=discord&logoColor=fff&label=Discord&color=7389d8" alt="Discord conversation" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://app.circleci.com/insights/github/ng-classic/ng-classic/workflows/default_workflow?branch=main">
-    <img src="https://dl.circleci.com/insights-snapshot/gh/ng-classic/ng-classic/main/default_workflow/badge.svg" alt="InsightsSnapshot" />
-  </a>
-</p>
-
-<hr>
 
 ## Documentation
 
@@ -94,14 +75,8 @@ Angular Classicis cross-platform, fast, scalable, has incredible tooling, and is
 
 [Get started in 5 minutes][quickstart].
 
-## Ecosystem
 
-<p>
-  <img src="/docs/images/angular-ecosystem-logos.png" alt="Angular Classicecosystem logos" width="500px" height="auto">
-</p>
-
-- [Angular ClassicCommand Line (CLI)][cli]
-- [Angular ClassicMaterial][angularmaterial]
+- [Angular Classic Command Line (CLI)][cli]
 
 ## Changelog
 
@@ -125,18 +100,7 @@ Want to report a bug, contribute some code, or improve the documentation? Excell
 
 Help us keep Angular Classicopen and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
 
-## Community
-
-Join the conversation and help the community.
-
-- [Twitter][twitter]
-- [Discord][discord]
-- [Gitter][gitter]
-- [YouTube][youtube]
-- [StackOverflow][stackoverflow]
-- Find a Local [Meetup][meetup]
-
-[![Love Angular Classicbadge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/ng-classic/ng-classic)
+## Community (Coming soon)
 
 **Love Angular? Give our repo a star :star: :arrow_up:.**
 
@@ -145,7 +109,6 @@ Join the conversation and help the community.
 [changelog]: CHANGELOG.md
 [ng]: https://angular-classic.com
 [documentation]: https://angular-classic.com/docs
-[angularmaterial]: https://material.angular-classic.com/
 [cli]: https://cli.angular-classic.com/
 [architecture]: https://angular-classic.com/guide/architecture
 [componentstemplates]: https://angular-classic.com/guide/displaying-data
@@ -158,10 +121,3 @@ Join the conversation and help the community.
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm
 [codeofconduct]: CODE_OF_CONDUCT.md
-[twitter]: https://www.twitter.com/angular
-[discord]: https://discord.gg/angular
-[gitter]: https://gitter.im/ng-classic/ng-classic
-[stackoverflow]: https://stackoverflow.com/questions/tagged/angular
-[youtube]: https://youtube.com/angular
-[meetup]: https://www.meetup.com/find/?keywords=angular
-[animations]: https://angular-classic.com/guide/animations
