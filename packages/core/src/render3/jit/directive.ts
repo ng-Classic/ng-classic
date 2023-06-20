@@ -87,7 +87,7 @@ export function compileComponent(type: Type<any>, metadata: Component): void {
 
         // This const was called `jitOptions` previously but had to be renamed to `options` because
         // of a bug with Terser that caused optimized JIT builds to throw a `ReferenceError`.
-        // This bug was investigated in https://github.com/ng-classic/angular-cli/issues/17264.
+        // This bug was investigated in https://github.com/ng-classic/ng-classic-cli/issues/17264.
         // We should not rename it back until https://github.com/terser/terser/issues/615 is fixed.
         const options = getJitOptions();
         let preserveWhitespaces = metadata.preserveWhitespaces;

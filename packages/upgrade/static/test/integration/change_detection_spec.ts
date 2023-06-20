@@ -180,8 +180,8 @@ withEachNg1Version(() => {
          });
        }));
 
-    // This test demonstrates https://github.com/ng-classic/angular/issues/6385
-    // which was invalidly fixed by https://github.com/ng-classic/angular/pull/6386
+    // This test demonstrates https://github.com/ng-classic/ng-classic/issues/6385
+    // which was invalidly fixed by https://github.com/ng-classic/ng-classic/pull/6386
     // it('should not trigger $digest from an async operation in a watcher', async(() => {
     //      @Component({selector: 'my-app', template: ''})
     //      class AppComponent {

@@ -432,7 +432,7 @@ describe('R3 template transform', () => {
     it('should report an error for assignments into non-null asserted expressions', () => {
       // TODO(joost): this syntax is allowed in TypeScript. Consider changing the grammar to
       //  allow this syntax, or improve the error message.
-      // See https://github.com/ng-classic/angular/pull/37809
+      // See https://github.com/ng-classic/ng-classic/pull/37809
       expect(() => parse('<div (prop)="v! = $event"></div>'))
           .toThrowError(/Unexpected token '=' at column 4/);
     });

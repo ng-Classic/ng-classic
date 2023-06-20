@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular-classic/platform-browser';
 import localeFr from '@angular-classic/common/locales/fr';
 import {AppComponent} from './app.component';
 
-// adding this code to detect issues like https://github.com/ng-classic/angular-cli/issues/10322
+// adding this code to detect issues like https://github.com/ng-classic/ng-classic-cli/issues/10322
 // it should not affect the CLI importing additional locale data for compile time inlined bundles.
 registerLocaleData(localeFr);
 

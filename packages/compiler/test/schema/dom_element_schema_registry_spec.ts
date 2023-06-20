@@ -31,7 +31,7 @@ import {extractSchema} from './schema_extractor';
       expect(registry.hasElement('abc', [])).toBeFalsy();
     });
 
-    // https://github.com/ng-classic/angular/issues/11219
+    // https://github.com/ng-classic/ng-classic/issues/11219
     it('should detect elements missing from chrome', () => {
       expect(registry.hasElement('data', [])).toBeTruthy();
       expect(registry.hasElement('menuitem', [])).toBeTruthy();
@@ -54,7 +54,7 @@ import {extractSchema} from './schema_extractor';
       expect(registry.hasProperty('div', 'unknown', [])).toBeFalsy();
     });
 
-    // https://github.com/ng-classic/angular/issues/11219
+    // https://github.com/ng-classic/ng-classic/issues/11219
     it('should detect properties on elements missing from Chrome', () => {
       expect(registry.hasProperty('data', 'value', [])).toBeTruthy();
 

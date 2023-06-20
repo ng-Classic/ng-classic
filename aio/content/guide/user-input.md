@@ -9,7 +9,7 @@ To ensure that you have the best experience possible, this topic is marked for a
 In the meantime, this topic might be helpful:
 [Event binding](guide/event-binding).
 
-If you think this content should not be archived, please file a [GitHub issue](https://github.com/ng-classic/angular/issues/new?template=3-docs-bug.md).
+If you think this content should not be archived, please file a [GitHub issue](https://github.com/ng-classic/ng-classic/issues/new?template=3-docs-bug.md).
 
 </div>
 

@@ -20,7 +20,7 @@ permissions:
 jobs:
   update_events:
     name: Update `events.json` (if necessary)
-    if: github.repository == 'ng-classic/angular'
+    if: github.repository == 'ng-classic/ng-classic'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository

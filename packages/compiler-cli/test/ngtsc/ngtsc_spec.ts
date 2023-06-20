@@ -3211,7 +3211,7 @@ function allTests(os: string) {
           expect(getDiagnosticSourceCode(diags[2])).toBe('ConcreteDirWithoutCtor');
         });
 
-        // https://github.com/ng-classic/angular/issues/48152
+        // https://github.com/ng-classic/ng-classic/issues/48152
         it('should not give a compile-time error when a class inherits from foreign compilation unit',
            () => {
              env.tsconfig({strictInjectionParameters: true});
@@ -4320,7 +4320,7 @@ function allTests(os: string) {
       expect(trim(jsContents)).toContain(trim(hostBindingsFn));
     });
 
-    // https://github.com/ng-classic/angular/issues/46936
+    // https://github.com/ng-classic/ng-classic/issues/46936
     it('should support bindings with Object builtin names', () => {
       env.write('test.ts', `
         import {Component} from '@angular-classic/core';
@@ -7438,7 +7438,7 @@ function allTests(os: string) {
 
         // Verify that long strings are extracted to a separate var. This should be
         // wrapped in a function to trick Closure not to inline the contents for very
-        // large strings. See: https://github.com/ng-classic/angular/pull/38253.
+        // large strings. See: https://github.com/ng-classic/ng-classic/pull/38253.
         expect(jsContents)
             .toContain(
                 '_c0 = function () {' +

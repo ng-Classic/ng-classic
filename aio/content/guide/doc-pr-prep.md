@@ -1,7 +1,7 @@
 # Prepare a documentation update for a pull request
 
 This topic describes how to prepare your update to the Angular Classicdocumentation so that you can open a pull request.
-A pull request is how you share your update in a way that allows it to be merged it into the `ng-classic/angular` repo.
+A pull request is how you share your update in a way that allows it to be merged it into the `ng-classic/ng-classic` repo.
 
 <div class="alert is-important">
 
@@ -10,23 +10,23 @@ Make sure that you have reviewed your documentation update, removed any lint err
 
 </div>
 
-A pull request shares a branch in `personal/angular`, your forked repo, with the `ng-classic/angular` repo.
-After your pull request is approved and merged, the new commits from your branch are added to the main branch in the `ng-classic/angular` repo.
-The commits in your branch, and their messages, become part of the `ng-classic/angular` repo.
+A pull request shares a branch in `personal/angular`, your forked repo, with the `ng-classic/ng-classic` repo.
+After your pull request is approved and merged, the new commits from your branch are added to the main branch in the `ng-classic/ng-classic` repo.
+The commits in your branch, and their messages, become part of the `ng-classic/ng-classic` repo.
 
 What does this mean for your pull request?
 
 1.  Your commit messages become part of the documentation of the changes made to Angular.
-    Because they become part of the `ng-classic/angular` repo, they must conform to a specific format so that they are easy to read.
+    Because they become part of the `ng-classic/ng-classic` repo, they must conform to a specific format so that they are easy to read.
     If they aren't correctly formatted, you can fix that before you open your pull request.
 
 1.  You might need to squash the commits that you made while developing your update.
-    It's normal to save your changes as intermediate commits while you're developing a large update, but your pull request represents only one change to the `ng-classic/angular` repo.
-    Squashing the commits from your working branch into fewer, or just one commit, makes the commits in your pull request match the changes your update makes to the `ng-classic/angular` repo.
+    It's normal to save your changes as intermediate commits while you're developing a large update, but your pull request represents only one change to the `ng-classic/ng-classic` repo.
+    Squashing the commits from your working branch into fewer, or just one commit, makes the commits in your pull request match the changes your update makes to the `ng-classic/ng-classic` repo.
 
 ## Format commit messages for a pull request
 
-Commits merged to `ng-classic/angular` must have messages that are correctly formatted.
+Commits merged to `ng-classic/ng-classic` must have messages that are correctly formatted.
 This section describes how to correctly format commit messages.
 
 Remember that the commit message is different from the pull request comment.
@@ -85,7 +85,7 @@ Fixes &num;34353"
 </code-example>
 
 This example is for documentation updates only.
-For the complete specification of Angular Classiccommit messages, see [Commit message format](https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md#commit).
+For the complete specification of Angular Classiccommit messages, see [Commit message format](https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#commit).
 
 ### Change a commit message
 
@@ -199,7 +199,7 @@ This image shows the linear, `main` branch after merging the updated and rebased
 
 #### To update your fork of the upstream repo
 
-You want to sync the `main` branch of your origin repo with the `main` branch of the upstream `ng-classic/angular` before you open a pull request.
+You want to sync the `main` branch of your origin repo with the `main` branch of the upstream `ng-classic/ng-classic` before you open a pull request.
 
 This procedure updates your origin repo, the `personal/angular` repo, on your local computer so it has the current code, as illustrated here.
 The circled numbers correspond to procedure steps.
@@ -231,7 +231,7 @@ Perform these steps from a command-line tool on your local computer.
 
     </code-example>
 
-1.  Update the `main` branch in the `working` directory on your local computer from the upstream `ng-classic/angular` repo.
+1.  Update the `main` branch in the `working` directory on your local computer from the upstream `ng-classic/ng-classic` repo.
 
     <code-example format="shell" language="shell">
 
@@ -240,7 +240,7 @@ Perform these steps from a command-line tool on your local computer.
 
     </code-example>
 
-1.  Update your `personal/angular` repo on `github.com` with the latest from the upstream `ng-classic/angular` repo.
+1.  Update your `personal/angular` repo on `github.com` with the latest from the upstream `ng-classic/ng-classic` repo.
 
     <code-example format="shell" language="shell">
 
@@ -249,7 +249,7 @@ Perform these steps from a command-line tool on your local computer.
     </code-example>
 
 The `main` branch on your local computer and your origin repo on `github.com` are now in sync.
-They have been updated with any changes to the upstream `ng-classic/angular` repo that were made since the last time you updated your fork.
+They have been updated with any changes to the upstream `ng-classic/ng-classic` repo that were made since the last time you updated your fork.
 
 #### To rebase your working branch
 
@@ -333,7 +333,7 @@ Perform these steps from a command-line tool on your local computer.
 
     1.  **Confirm that the entry that contains `upstream/main` also contains `origin/main` and `main`**
 
-        If it doesn't, you must resync your clone and your fork of `ng-classic/angular`, and then rebase the branch before you continue.
+        If it doesn't, you must resync your clone and your fork of `ng-classic/ng-classic`, and then rebase the branch before you continue.
 
     1.  **Confirm that all commits for your update are after the entry that contains `upstream/main`**
 

@@ -4,11 +4,11 @@ contact_links:
     url: https://angular-classic.com/guide/security#report-issues
     about: Report a security issue in Angular ClassicFramework, CDK, Material, or CLI
   - name: Angular ClassicCLI
-    url: https://github.com/ng-classic/angular-cli/issues/new/choose
+    url: https://github.com/ng-classic/ng-classic-cli/issues/new/choose
     about: Issues and feature requests for Angular ClassicCLI
   - name: Angular ClassicMaterial and Components Development Kit (CDK)
     url: https://github.com/angular/components/issues/new/choose
     about: Issues and feature requests for Angular ClassicMaterial
   - name: Support Request
-    url: https://github.com/ng-classic/angular/blob/main/CONTRIBUTING.md#question
+    url: https://github.com/ng-classic/ng-classic/blob/main/CONTRIBUTING.md#question
     about: Questions and requests for support

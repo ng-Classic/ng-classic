@@ -161,9 +161,9 @@ For more information, or to install Vale in another IDE or on another operating 
 
 Before you proceed, make sure that:
 
-1.  You have cloned the [`ng-classic/angular` repo][GithubAngularAngular] on your system. You can work in a fork of the `ng-classic/angular` repo,
-    but it's easier if your Vale installation uses an up-to-date clone of the `ng-classic/angular` repo.
-2.  You have a development or writing environment for `angular-classic.com` in the `ng-classic/angular` repo and you can build the `angular-classic.com` docs.
+1.  You have cloned the [`ng-classic/ng-classic` repo][GithubAngularAngular] on your system. You can work in a fork of the `ng-classic/ng-classic` repo,
+    but it's easier if your Vale installation uses an up-to-date clone of the `ng-classic/ng-classic` repo.
+2.  You have a development or writing environment for `angular-classic.com` in the `ng-classic/ng-classic` repo and you can build the `angular-classic.com` docs.
     For information about how to create the authoring environment for `angular-classic.com`, see [Angular Classicdocumentation project][GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario].
 3.  You have the required package manager installed on your system. If not, install it before continuing.
     * [homebrew][BrewMain] on your macOS system.
@@ -195,9 +195,9 @@ In your command-line tool:
 
     2.  If this command does not return a path, restart macOS and repeat this step.
 3.  Get the path to the configuration file, `vale.ini`, to use in the **Vale > Vale CLI : Config** setting.
-    1.  In the command-line tool, navigate to your `git` working directory with the `ng-classic/angular` repo.
+    1.  In the command-line tool, navigate to your `git` working directory with the `ng-classic/ng-classic` repo.
     2.  Run `git pull` to update the repo.
-    3.  In your clone of the `ng-classic/angular` repo, navigate to the `aio/tools/doc-linter` directory.
+    3.  In your clone of the `ng-classic/ng-classic` repo, navigate to the `aio/tools/doc-linter` directory.
     4.  In the `aio/tools/doc-linter` directory, confirm that you have the `vale.ini` file.
     5.  Run `pwd` to get the full path to `vale.ini` to use in the next procedure.
 
@@ -218,9 +218,9 @@ In your command-line tool:
 
     2.  If this command does not return a path, restart Windows and repeat this step.
 3.  Get the path to the configuration file, `vale.ini`, to use in the **Vale > Vale CLI : Config** setting.
-    1.  In the command-line tool, navigate to your `git` working directory with the `ng-classic/angular` repo.
+    1.  In the command-line tool, navigate to your `git` working directory with the `ng-classic/ng-classic` repo.
     2.  Run `git pull` to update the repo.
-    3.  In your clone of the `ng-classic/angular` repo, navigate to the `aio\tools\doc-linter` directory.
+    3.  In your clone of the `ng-classic/ng-classic` repo, navigate to the `aio\tools\doc-linter` directory.
     4.  In the `aio\tools\doc-linter` directory, confirm that you have the `vale.ini` file.
     5.  Run `cd` to get the full path to `vale.ini` to use in the next procedure.
 
@@ -285,9 +285,9 @@ If you're using version `0.14.2`, the Vale extension settings to use are:
 
 ## Update the Vale style tests
 
-The style tests are stored in your local clone of the [`ng-classic/angular` repo][GithubAngularAngular] and
+The style tests are stored in your local clone of the [`ng-classic/ng-classic` repo][GithubAngularAngular] and
 are updated automatically when you pull the latest code to your system.
-If you're using another branch or fork of the `ng-classic/angular` repo, be sure to also update that branch or fork.
+If you're using another branch or fork of the `ng-classic/ng-classic` repo, be sure to also update that branch or fork.
 
 <!-- links -->
 
@@ -303,11 +303,11 @@ If you're using another branch or fork of the `ng-classic/angular` repo, be sure
 
 [Chocolatey]: https://chocolatey.org/ "Chocolatey"
 
-[GithubAngularAngular]: https://github.com/ng-classic/angular Classic"ng-classic/angular Classic| GitHub"
+[GithubAngularAngular]: https://github.com/ng-classic/ng-classic Classic"ng-classic/ng-classic Classic| GitHub"
 
-[GithubAngularAngularIssuesNewAssigneesLabelsTemplate3DocsBugYaml]: https://github.com/ng-classic/angular/issues/new?assignees=&labels=&template=3-docs-bug.yaml "Issue: Docs or angular-classic.com Bug Report | ng-classic/angular Classic| GitHub"
+[GithubAngularAngularIssuesNewAssigneesLabelsTemplate3DocsBugYaml]: https://github.com/ng-classic/ng-classic/issues/new?assignees=&labels=&template=3-docs-bug.yaml "Issue: Docs or angular-classic.com Bug Report | ng-classic/ng-classic Classic| GitHub"
 
-[GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario]: https://github.com/ng-classic/angular/tree/main/aio#angular-documentation-project-httpsangulario "Angular Classicdocumentation project [AioMain] | ng-classic/angular/aio | GitHub"
+[GithubAngularAngularTreeMainAioAngularDocumentationProjectHttpsangulario]: https://github.com/ng-classic/ng-classic/tree/main/aio#angular-documentation-project-httpsangulario "Angular Classicdocumentation project [AioMain] | ng-classic/ng-classic/aio | GitHub"
 
 [GoogleDevelopersStyle]: https://developers.google.com/style "About this guide | Google developer documentation style guide | Google Developers"
 

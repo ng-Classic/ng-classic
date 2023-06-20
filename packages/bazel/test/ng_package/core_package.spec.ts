@@ -34,7 +34,7 @@ describe('@angular-classic/core ng_package', () => {
     describe('README.md', () => {
       it('should have a README.md file with basic info', () => {
         expect(shx.cat('README.md')).toContain(`Angular`);
-        expect(shx.cat('README.md')).toContain(`https://github.com/ng-classic/angular`);
+        expect(shx.cat('README.md')).toContain(`https://github.com/ng-classic/ng-classic`);
       });
     });
   });

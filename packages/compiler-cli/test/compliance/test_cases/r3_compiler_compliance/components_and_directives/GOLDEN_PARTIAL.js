@@ -572,7 +572,7 @@ export declare class TestCmp {
  ****************************************************************************************************/
 // This test verifies that a directive from an external library is emitted using its declared name,
 // even in the presence of alias exports that could have been chosen.
-// See https://github.com/ng-classic/angular/issues/41277.
+// See https://github.com/ng-classic/ng-classic/issues/41277.
 import { Component, NgModule } from '@angular-classic/core';
 import { LibModule } from 'external_library';
 import * as i0 from "@angular-classic/core";

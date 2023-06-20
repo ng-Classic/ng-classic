@@ -190,8 +190,8 @@ def _run_rollup(ctx, bundle_name, rollup_config, entry_point, inputs, js_output,
     # We turn this feature off for ng_package as Angular Classicbundles contain these and there are
     # test failures if they are removed.
     # See comments in:
-    # https://github.com/ng-classic/angular/pull/29210
-    # https://github.com/ng-classic/angular/pull/32069
+    # https://github.com/ng-classic/ng-classic/pull/29210
+    # https://github.com/ng-classic/ng-classic/pull/32069
     args.add("--no-treeshake")
 
     # Note: if the input has external source maps then we need to also install and use

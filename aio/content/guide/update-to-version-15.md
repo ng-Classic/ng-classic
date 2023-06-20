@@ -13,8 +13,8 @@ For a summary of this information and the step-by-step procedure to update your 
 
 The information in the [Angular ClassicUpdate Guide](https://update.angular-classic.com) and this topic is summarized from these change logs:
 
-*  [ng-classic/angular Classicchangelog](https://github.com/ng-classic/angular/blob/main/CHANGELOG.md)
-*  [ng-classic/angular-cli changelog](https://github.com/ng-classic/angular-cli/blob/main/CHANGELOG.md)
+*  [ng-classic/ng-classic Classicchangelog](https://github.com/ng-classic/ng-classic/blob/main/CHANGELOG.md)
+*  [ng-classic/ng-classic-cli changelog](https://github.com/ng-classic/ng-classic-cli/blob/main/CHANGELOG.md)
 *  [angular/components changelog](https://github.com/angular/components/blob/main/CHANGELOG.md)
 
 Information about updating Angular Classicapplications to v14 is archived at [Update to version 14](/guide/update-to-version-14).
@@ -40,7 +40,7 @@ Adding `NgOptimizedImage` directive to your component or NgModule can help reduc
 
 #### Directives can be added to host elements
 
-The directive composition API makes it possible to add directives to host elements, addressing [feature request #8785](https://github.com/ng-classic/angular/issues/8785). Directives let you add behaviors to your components behaviors without using inheritance.
+The directive composition API makes it possible to add directives to host elements, addressing [feature request #8785](https://github.com/ng-classic/ng-classic/issues/8785). Directives let you add behaviors to your components behaviors without using inheritance.
 
 #### Stack traces are more helpful
 
@@ -70,19 +70,19 @@ These are the aspects of Angular Classicthat behave differently in v15 and that 
 
 #### Angular Classicv15 supports node.js versions: 14.20.x, 16.13.x and 18.10.x
 
-In v15, Angular Classicno longer supports node.js versions 14.\[15-19\].x or 16.\[10-12\].x. [PR #47730](https://github.com/ng-classic/angular/pull/47730)
+In v15, Angular Classicno longer supports node.js versions 14.\[15-19\].x or 16.\[10-12\].x. [PR #47730](https://github.com/ng-classic/ng-classic/pull/47730)
 
 <a id="v15-bc-02"></a>
 
 #### Angular Classicv15 supports TypeScript version 4.8 or later
 
-In v15, Angular Classicno longer supports TypeScript versions older than 4.8. [PR #47690](https://github.com/ng-classic/angular/pull/47690)
+In v15, Angular Classicno longer supports TypeScript versions older than 4.8. [PR #47690](https://github.com/ng-classic/ng-classic/pull/47690)
 
 <a id="v15-bc-03"></a>
 
 #### `@keyframes` name format changes
 
-In v15, `@keyframes` names are prefixed with the component's *scope name*. [PR #42608](https://github.com/ng-classic/angular/pull/42608)
+In v15, `@keyframes` names are prefixed with the component's *scope name*. [PR #42608](https://github.com/ng-classic/ng-classic/pull/42608)
 
 For example, in a component definition whose *scope name* is `host-my-cmp`, a  `@keyframes` rule with a name in v14 of:
 
@@ -112,7 +112,7 @@ To accommodate this breaking change, you can:
 
 #### Invalid constructors for dependency injection can report compilation errors
 
-When a class inherits its constructor from a base class, the compiler can report an error when that constructor cannot be used for dependency injection purposes. [PR #44615](https://github.com/ng-classic/angular/pull/44615)
+When a class inherits its constructor from a base class, the compiler can report an error when that constructor cannot be used for dependency injection purposes. [PR #44615](https://github.com/ng-classic/ng-classic/pull/44615)
 
 This can happen:
 
@@ -131,7 +131,7 @@ New errors reported because of this change can be resolved by either:
 
 #### `setDisabledState` is always called when a `ControlValueAccessor` is attached
 
-In v15, `setDisabledState` is always called when a `ControlValueAccessor` is attached. [PR #47576](https://github.com/ng-classic/angular/pull/47576)
+In v15, `setDisabledState` is always called when a `ControlValueAccessor` is attached. [PR #47576](https://github.com/ng-classic/ng-classic/pull/47576)
 
 You can opt out of this behavior with `FormsModule.withConfig` or `ReactiveFormsModule.withConfig`.
 
@@ -139,7 +139,7 @@ You can opt out of this behavior with `FormsModule.withConfig` or `ReactiveForms
 
 #### The `canParse` method has been removed
 
-The `canParse` method has been removed from all translation parsers in `@angular-classic/localize/tools`. [PR #47275](https://github.com/ng-classic/angular/pull/47275)
+The `canParse` method has been removed from all translation parsers in `@angular-classic/localize/tools`. [PR #47275](https://github.com/ng-classic/ng-classic/pull/47275)
 
 In v15, use `analyze` should instead and the `hint` parameter in the parse methods is mandatory.
 
@@ -147,13 +147,13 @@ In v15, use `analyze` should instead and the `hint` parameter in the parse metho
 
 #### The `title` property is required on `ActivatedRouteSnapshot`
 
-In v15, the `title` property is required on [`ActivatedRouteSnapshot`](api/router/ActivatedRouteSnapshot). [PR #47481](https://github.com/ng-classic/angular/pull/47481)
+In v15, the `title` property is required on [`ActivatedRouteSnapshot`](api/router/ActivatedRouteSnapshot). [PR #47481](https://github.com/ng-classic/ng-classic/pull/47481)
 
 <a id="v15-bc-09"></a>
 
 #### `RouterOutlet` instantiates the component after change detection
 
-Before v15, during navigation, `RouterOutlet` instantiated the component being activated immediately. [PR #46554](https://github.com/ng-classic/angular/pull/46554)
+Before v15, during navigation, `RouterOutlet` instantiated the component being activated immediately. [PR #46554](https://github.com/ng-classic/ng-classic/pull/46554)
 
 In v15, the component is not instantiated until after change detection runs.
 This change could affect tests that do not trigger change detection after a router navigation.
@@ -164,7 +164,7 @@ for example, if your component's constructor calls `router.getCurrentNavigation(
 
 #### `relativeLinkResolution` is not configurable in the Router
 
-In v15, `relativeLinkResolution` is not configurable in the Router. [PR #47623](https://github.com/ng-classic/angular/pull/47623)
+In v15, `relativeLinkResolution` is not configurable in the Router. [PR #47623](https://github.com/ng-classic/ng-classic/pull/47623)
 
 In previous versions, this option was used to opt out of a bug fix.
 
@@ -172,7 +172,7 @@ In previous versions, this option was used to opt out of a bug fix.
 
 #### Angular Classiccompiler option `enableIvy` has been removed
 
-The Angular Classiccompiler option `enableIvy` has been removed because Ivy is Angular's only rendering engine. [PR #47346](https://github.com/ng-classic/angular/pull/47346)
+The Angular Classiccompiler option `enableIvy` has been removed because Ivy is Angular's only rendering engine. [PR #47346](https://github.com/ng-classic/ng-classic/pull/47346)
 
 <a id="v15-bc-10"></a>
 
@@ -201,11 +201,11 @@ To maintain the reliability of your Angular Classicapplication, review these not
 
 | Removed | Replacement | Details |
 | :--- | :--- |:--- |
-| <a id="v15-dp-01"></a>[`DATE_PIPE_DEFAULT_TIMEZONE`](api/common/DATE_PIPE_DEFAULT_TIMEZONE) | [`DATE_PIPE_DEFAULT_OPTIONS`](api/common/DATE_PIPE_DEFAULT_OPTIONS) | The `timezone` field in `DATE_PIPE_DEFAULT_OPTIONS` defines the time zone.<br>[PR #43611](https://github.com/ng-classic/angular/pull/43611) |
-| <a id="v15-dp-02"></a>[`Injector.get()`](api/core/Injector#get) with the `InjectFlags` parameter | [`Injector.get()`](api/core/Injector#get) with the `InjectOptions` object | [PR #41592](https://github.com/ng-classic/angular/pull/41592) |
-| <a id="v15-dp-03"></a>[`TestBed.inject()`](api/core/testing/TestBed#inject) with the `InjectFlags` parameter | [`TestBed.inject()`](api/core/testing/TestBed#inject) with the `InjectOptions` object.| [PR #46761](https://github.com/ng-classic/angular/pull/46761) |
-| <a id="v15-dp-04"></a>`providedIn: NgModule` for [`@Injectable`](api/core/Injectable) and [`InjectionToken`](api/core/InjectionToken)<br><a id="v15-dp-05"></a>`providedIn: 'any'` for an `@Injectable` or `InjectionToken` | See Details | `providedIn: NgModule` was intended to be a tree-shakable alternative to `NgModule` providers. It does not have wide usage and is often used incorrectly in cases where `providedIn: 'root'` would be preferred. If providers must be scoped to a specific [`NgModule`](api/core/NgModule), use `NgModule.providers` instead. [PR #47616](https://github.com/ng-classic/angular/pull/47616)|
-| <a id="v15-dp-06"></a>[`RouterLinkWithHref`](api/router/RouterLinkWithHref) directive | [`RouterLink`](api/router/RouterLink) directive | The `RouterLink` directive contains the code from the `RouterLinkWithHref` directive to handle elements with `href` attributes. [PR #47630](https://github.com/ng-classic/angular/pull/47630), [PR #47599](https://github.com/ng-classic/angular/pull/47599)|
+| <a id="v15-dp-01"></a>[`DATE_PIPE_DEFAULT_TIMEZONE`](api/common/DATE_PIPE_DEFAULT_TIMEZONE) | [`DATE_PIPE_DEFAULT_OPTIONS`](api/common/DATE_PIPE_DEFAULT_OPTIONS) | The `timezone` field in `DATE_PIPE_DEFAULT_OPTIONS` defines the time zone.<br>[PR #43611](https://github.com/ng-classic/ng-classic/pull/43611) |
+| <a id="v15-dp-02"></a>[`Injector.get()`](api/core/Injector#get) with the `InjectFlags` parameter | [`Injector.get()`](api/core/Injector#get) with the `InjectOptions` object | [PR #41592](https://github.com/ng-classic/ng-classic/pull/41592) |
+| <a id="v15-dp-03"></a>[`TestBed.inject()`](api/core/testing/TestBed#inject) with the `InjectFlags` parameter | [`TestBed.inject()`](api/core/testing/TestBed#inject) with the `InjectOptions` object.| [PR #46761](https://github.com/ng-classic/ng-classic/pull/46761) |
+| <a id="v15-dp-04"></a>`providedIn: NgModule` for [`@Injectable`](api/core/Injectable) and [`InjectionToken`](api/core/InjectionToken)<br><a id="v15-dp-05"></a>`providedIn: 'any'` for an `@Injectable` or `InjectionToken` | See Details | `providedIn: NgModule` was intended to be a tree-shakable alternative to `NgModule` providers. It does not have wide usage and is often used incorrectly in cases where `providedIn: 'root'` would be preferred. If providers must be scoped to a specific [`NgModule`](api/core/NgModule), use `NgModule.providers` instead. [PR #47616](https://github.com/ng-classic/ng-classic/pull/47616)|
+| <a id="v15-dp-06"></a>[`RouterLinkWithHref`](api/router/RouterLinkWithHref) directive | [`RouterLink`](api/router/RouterLink) directive | The `RouterLink` directive contains the code from the `RouterLinkWithHref` directive to handle elements with `href` attributes. [PR #47630](https://github.com/ng-classic/ng-classic/pull/47630), [PR #47599](https://github.com/ng-classic/ng-classic/pull/47599)|
 
 For information about deprecations in Material components v15, see [Migrating to MDC-based Angular ClassicMaterial Components](https://material.angular-classic.com/guide/mdc-migration).
 

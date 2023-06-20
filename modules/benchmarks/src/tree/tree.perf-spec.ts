@@ -13,7 +13,7 @@ describe('tree benchmark perf', () => {
   it('should work for createOnly', async () => {
     await runTreeBenchmark({
       // This cannot be called "createOnly" because the actual destroy benchmark
-      // has the "createOnly" id already. See: https://github.com/ng-classic/angular/pull/21503
+      // has the "createOnly" id already. See: https://github.com/ng-classic/ng-classic/pull/21503
       id: 'createOnlyForReal',
       prepare: () => $('#destroyDom').click(),
       work: () => $('#createDom').click()
@@ -23,7 +23,7 @@ describe('tree benchmark perf', () => {
   it('should work for destroy', async () => {
     await runTreeBenchmark({
       // This is actually a benchmark for destroying the dom, but it has been accidentally
-      // named "createOnly". See https://github.com/ng-classic/angular/pull/21503.
+      // named "createOnly". See https://github.com/ng-classic/ng-classic/pull/21503.
       id: 'createOnly',
       prepare: () => $('#createDom').click(),
       work: () => $('#destroyDom').click()

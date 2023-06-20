@@ -82,7 +82,7 @@ describe('AnimationRenderer', () => {
     expect(engine.captures['setProperty'].pop()).toEqual([element, 'prop', 'value']);
   });
 
-  // https://github.com/ng-classic/angular/issues/32794
+  // https://github.com/ng-classic/ng-classic/issues/32794
   it('should support nested animation triggers', () => {
     makeRenderer([[trigger('myAnimation', [])]]);
 
@@ -331,7 +331,7 @@ describe('destroy', () => {
   beforeEach(destroyPlatform);
   afterEach(destroyPlatform);
 
-  // See https://github.com/ng-classic/angular/issues/39955
+  // See https://github.com/ng-classic/ng-classic/issues/39955
   it('should clear bootstrapped component contents when the `BrowserAnimationsModule` is imported',
      withBody('<div>before</div><app-root></app-root><div>after</div>', async () => {
        @Component({selector: 'app-root', template: 'app-root content'})
@@ -358,7 +358,7 @@ describe('destroy', () => {
        expect(document.body.childNodes.length).toEqual(2);           // other elements are preserved
      }));
 
-  // See https://github.com/ng-classic/angular/issues/45108
+  // See https://github.com/ng-classic/ng-classic/issues/45108
   it('should clear bootstrapped component contents when the animation engine is requested during initialization',
      withBody('<div>before</div><app-root></app-root><div>after</div>', async () => {
        @Injectable({providedIn: 'root'})
@@ -407,7 +407,7 @@ describe('destroy', () => {
        expect(document.body.childNodes.length).toEqual(2);           // other elements are preserved
      }));
 
-  // See https://github.com/ng-classic/angular/issues/45108
+  // See https://github.com/ng-classic/ng-classic/issues/45108
   it('should clear standalone bootstrapped component contents when the animation engine is requested during initialization',
      withBody('<div>before</div><app-root></app-root><div>after</div>', async () => {
        @Injectable({providedIn: 'root'})

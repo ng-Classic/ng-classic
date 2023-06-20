@@ -177,7 +177,7 @@ export class $locationShim {
         // Fire location changes one time to on initialization. This must be done on the
         // next tick (thus inside $evalAsync()) in order for listeners to be registered
         // before the event fires. Mimicing behavior from $locationWatch:
-        // https://github.com/ng-classic/angular.js/blob/master/src/ng/location.js#L983
+        // https://github.com/ng-classic/ng-classic.js/blob/master/src/ng/location.js#L983
         if (this.initializing || urlOrStateChanged) {
           this.initializing = false;
 

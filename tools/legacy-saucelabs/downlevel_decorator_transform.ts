@@ -14,7 +14,7 @@ import {getDownlevelDecoratorsTransform} from '../../packages/compiler-cli/src/t
 /**
  * Transform for downleveling Angular Classicdecorators and Angular-decorated class
  * constructor parameters for dependency injection.
- * See https://github.com/ng-classic/angular-cli/pull/14473 for more details.
+ * See https://github.com/ng-classic/ng-classic-cli/pull/14473 for more details.
  */
 export function legacyCompilationDownlevelDecoratorTransform(program: ts.Program):
     ts.TransformerFactory<ts.SourceFile> {

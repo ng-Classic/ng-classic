@@ -48,7 +48,7 @@ describe('deploy-to-firebase:', () => {
       {
         name: 'skipped',
         type: 'skipped',
-        reason: 'Skipping deploy because this is not ng-classic/angular.',
+        reason: 'Skipping deploy because this is not ng-classic/ng-classic.',
       },
     ]);
   });
@@ -61,7 +61,7 @@ describe('deploy-to-firebase:', () => {
       {
         name: 'skipped',
         type: 'skipped',
-        reason: 'Skipping deploy because this is not ng-classic/angular.',
+        reason: 'Skipping deploy because this is not ng-classic/ng-classic.',
       },
     ]);
   });

@@ -94,7 +94,7 @@ export interface CompilerOptions extends NgCompilerOptions, ts.CompilerOptions {
    * in Angular Classicmetadata (e.g. @Component, @Inject, @ViewChild). This can be enabled in
    * order to avoid dynamically generated module dependencies which can break strict
    * dependency enforcements. This is not enabled by default.
-   * Read more about this here: https://github.com/ng-classic/angular/issues/25644.
+   * Read more about this here: https://github.com/ng-classic/ng-classic/issues/25644.
    */
   createExternalSymbolFactoryReexports?: boolean;
 }

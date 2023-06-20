@@ -95,7 +95,7 @@ For example, the hypothetical "Hello World" schematic might have the following s
 }
 </code-example>
 
-See examples of schema files for the Angular ClassicCLI command schematics in [`@schematics/angular`](https://github.com/ng-classic/angular-cli/blob/main/packages/schematics/angular/application/schema.json).
+See examples of schema files for the Angular ClassicCLI command schematics in [`@schematics/angular`](https://github.com/ng-classic/ng-classic-cli/blob/main/packages/schematics/angular/application/schema.json).
 
 ### Schematic prompts
 
@@ -191,7 +191,7 @@ In this form, the `x-prompt` field value is a JSON object with subfields that cu
 | message | string \(required\)                                                         |
 | items   | string and/or label/value object pair \(only valid with type `list`\)       |
 
-The following example of the long form is from the JSON schema for the schematic that the CLI uses to [generate applications](https://github.com/ng-classic/angular-cli/blob/ba8a6ea59983bb52a6f1e66d105c5a77517f062e/packages/schematics/angular/application/schema.json#L56).
+The following example of the long form is from the JSON schema for the schematic that the CLI uses to [generate applications](https://github.com/ng-classic/ng-classic-cli/blob/ba8a6ea59983bb52a6f1e66d105c5a77517f062e/packages/schematics/angular/application/schema.json#L56).
 It defines the prompt that lets users choose which style preprocessor they want to use for the application being created.
 By using the long form, the schematic can provide more explicit formatting of the menu choices.
 

@@ -457,7 +457,7 @@ describe('createUrlTree', async () => {
       // outlets as long as they do not have a primary outlet sibling. Having a primary outlet
       // sibling isn't possible because the wildcard should consume all the primary outlet segments
       // so there cannot be any remaining in the children.
-      // https://github.com/ng-classic/angular/issues/40089
+      // https://github.com/ng-classic/ng-classic/issues/40089
       expect(router.url).toEqual('/q(left:ap)');
 
       const t = create(router.routerState.root.children[0].children[0], ['../../q2']);

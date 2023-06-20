@@ -395,7 +395,7 @@ describe('binding to CSS class list', () => {
   });
 
   describe('prevent regressions', () => {
-    // https://github.com/ng-classic/angular/issues/34336
+    // https://github.com/ng-classic/ng-classic/issues/34336
     it('should not write to the native node unless the bound expression has changed', () => {
       fixture = createTestComponent(`<div [ngClass]="{'color-red': condition}"></div>`);
       detectChangesAndExpectClassName('color-red');

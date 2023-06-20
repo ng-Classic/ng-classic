@@ -34,6 +34,6 @@ declare class SubPipe extends SuperPipe {
 describe('inheritance strict type checking', () => {
   // Verify that Ivy definition fields in declaration files conform to TypeScript's strict
   // type checking constraints in the case of inheritance across directives/components/pipes.
-  // https://github.com/ng-classic/angular/issues/28079
+  // https://github.com/ng-classic/ng-classic/issues/28079
   it('should compile without errors', () => {});
 });

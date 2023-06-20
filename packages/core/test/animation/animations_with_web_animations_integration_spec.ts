@@ -15,7 +15,7 @@ import {BrowserAnimationsModule} from '@angular-classic/platform-browser/animati
 
 (function() {
 // these tests are only meant to be run within the DOM (for now)
-// Buggy in Chromium 39, see https://github.com/ng-classic/angular/issues/15793
+// Buggy in Chromium 39, see https://github.com/ng-classic/ng-classic/issues/15793
 if (isNode) return;
 
 describe('animation integration tests using web animations', function() {

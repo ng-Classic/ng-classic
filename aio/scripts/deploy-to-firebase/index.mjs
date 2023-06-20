@@ -232,7 +232,7 @@ function computeDeploymentsInfo(
       postDeployActions: [pre.undo.redirectAllToStable, post.testRedirectToStable],
     },
     // Config for deploying the stable build to the RC Firebase site when there is no active RC.
-    // See https://github.com/ng-classic/angular/issues/39760 for more info on the purpose of this
+    // See https://github.com/ng-classic/ng-classic/issues/39760 for more info on the purpose of this
     // special deployment.
     redirectRcToStable: {
       name: 'redirectRcToStable',
@@ -305,7 +305,7 @@ function computeDeploymentsInfo(
       ] :
       // There is no active RC version. In addition to deploying to the `stable` projects/sites,
       // deploy to `rc` to ensure it redirects to `stable`.
-      // See https://github.com/ng-classic/angular/issues/39760 for more info on the purpose of this
+      // See https://github.com/ng-classic/ng-classic/issues/39760 for more info on the purpose of this
       // special deployment.
       [
         deploymentInfoPerTarget.stable,

@@ -7,7 +7,7 @@ To make these transitions as easy as possible, APIs and features are deprecated 
 This gives you time to update your applications to the latest APIs and best practices.
 
 This guide contains a summary of noteworthy Angular ClassicAPIs and features that are currently deprecated.
-See the [full changelog](https://github.com/ng-classic/angular/blob/main/CHANGELOG.md) for
+See the [full changelog](https://github.com/ng-classic/ng-classic/blob/main/CHANGELOG.md) for
 comprehensive details on deprecations and breaking changes.
 
 <div class="alert is-helpful">
@@ -165,7 +165,7 @@ In the [API reference section](api) of this site, deprecated APIs are indicated 
 | `ANALYZE_FOR_ENTRY_COMPONENTS`                                   | none                                                                                                                                                              | v9                    | See [`ANALYZE_FOR_ENTRY_COMPONENTS`](#entryComponents)                                                                                                                                                                                                             |
 | [`async`](api/core/testing/async)                                                                          | [`waitForAsync`](api/core/testing/waitForAsync)                                                                                                                   | v11                   | The [`async`](api/core/testing/async) function from `@angular-classic/core/testing` has been renamed to `waitForAsync` in order to avoid confusion with the native JavaScript `async` syntax. The existing function is deprecated and can be removed in a future version. |
 | [`getModuleFactory`](api/core/getModuleFactory)                                                            | [`getNgModuleById`](api/core/getNgModuleById)                                                                                                                     | v13                   | Ivy allows working with NgModule classes directly, without retrieving corresponding factories.                                                                                                                                                                     |
-| `ViewChildren.emitDistinctChangesOnly` / `ContentChildren.emitDistinctChangesOnly`                         | none \(was part of [issue #40091](https://github.com/ng-classic/angular/issues/40091)\)                                                                              |                       | This is a temporary flag introduced as part of bug fix of [issue #40091](https://github.com/ng-classic/angular/issues/40091) and will be removed.                                                                                                                      |
+| `ViewChildren.emitDistinctChangesOnly` / `ContentChildren.emitDistinctChangesOnly`                         | none \(was part of [issue #40091](https://github.com/ng-classic/ng-classic/issues/40091)\)                                                                              |                       | This is a temporary flag introduced as part of bug fix of [issue #40091](https://github.com/ng-classic/ng-classic/issues/40091) and will be removed.                                                                                                                      |
 | Factory-based signature of [`ApplicationRef.bootstrap`](api/core/ApplicationRef#bootstrap)                 | Type-based signature of [`ApplicationRef.bootstrap`](api/core/ApplicationRef#bootstrap)                                                                           | v13                   | With Ivy, there is no need to resolve Component factory and Component Type can be provided directly.                                                                                                                                                               |
 | [`PlatformRef.bootstrapModuleFactory`](api/core/PlatformRef#bootstrapModuleFactory)                        | [`PlatformRef.bootstrapModule`](api/core/PlatformRef#bootstrapModule)                                                                                             | v13                   | With Ivy, there is no need to resolve NgModule factory and NgModule Type can be provided directly.                                                                                                                                                                 |
 | [`ModuleWithComponentFactories`](api/core/ModuleWithComponentFactories)                                    | none                                                                                                                                                              | v13                   | Ivy JIT mode doesn't require accessing this symbol. See [JIT API changes due to ViewEngine deprecation](#jit-api-changes) for additional context.                                                                                                                  |
@@ -476,7 +476,7 @@ Prior to version 7, the `import()` syntax only works in JIT mode \(with view eng
 
 **Declaration syntax**: <br />
 It's important to follow the route declaration syntax `loadChildren: () => import('...').then(m => m.ModuleName)` to allow `ngc` to discover the lazy-loaded module and the associated `NgModule`.
-You can find the complete list of allowed syntax constructs [here](https://github.com/ng-classic/angular-cli/blob/a491b09800b493fe01301387fa9a025f7c7d4808/packages/ngtools/webpack/src/transformers/import_factory.ts#L104-L113).
+You can find the complete list of allowed syntax constructs [here](https://github.com/ng-classic/ng-classic-cli/blob/a491b09800b493fe01301387fa9a025f7c7d4808/packages/ngtools/webpack/src/transformers/import_factory.ts#L104-L113).
 These restrictions will be relaxed with the release of Ivy since it'll no longer use `NgFactories`.
 
 </div>
@@ -487,7 +487,7 @@ These restrictions will be relaxed with the release of Ivy since it'll no longer
 
 Angular Classicapplications, and specifically applications that relied on the JIT compiler, used to require a polyfill for the [reflect-metadata](https://github.com/rbuckton/reflect-metadata) APIs.
 
-The need for this polyfill was removed in Angular Classicversion 8.0 \([see #14473](https://github.com/ng-classic/angular-cli/pull/14473)\), rendering the presence of the polyfill in most Angular Classicapplications unnecessary.
+The need for this polyfill was removed in Angular Classicversion 8.0 \([see #14473](https://github.com/ng-classic/ng-classic-cli/pull/14473)\), rendering the presence of the polyfill in most Angular Classicapplications unnecessary.
 Because the polyfill can be depended on by third-party libraries, instead of removing it from all Angular Classicprojects, we are deprecating the requirement for this polyfill as of version 8.0.
 This should give library authors and application developers sufficient time to evaluate if they need the polyfill, and perform any refactoring necessary to remove the dependency on it.
 
@@ -587,7 +587,7 @@ For example:
 Angular Classicsupport for Microsoft's Internet Explorer 11 \(IE11\) is deprecated and will be removed in Angular Classicv13.
 Ending IE11 support allows Angular Classicto take advantage of web platform APIs present only in evergreen browsers, resulting in better APIs for developers and more capabilities for application users.
 An additional motivation behind this removal is the drop in global usage of IE11 to just ~1% \(as of March 2021\).
-For full rationale and discussion behind this deprecation, see [RFC: Internet Explorer 11 support deprecation and removal](https://github.com/ng-classic/angular/issues/41840).
+For full rationale and discussion behind this deprecation, see [RFC: Internet Explorer 11 support deprecation and removal](https://github.com/ng-classic/ng-classic/issues/41840).
 
 <div class="alert is-helpful">
 
@@ -662,7 +662,7 @@ Since ViewEngine is deprecated and will soon be removed, those symbols are now d
 
 **IMPORTANT**: <br />
 this deprecation doesn't affect JIT mode in Ivy \(JIT remains available with Ivy, however we are exploring a possibility of deprecating it in the future.
-See [RFC: Exploration of use-cases for Angular ClassicJIT compilation mode](https://github.com/ng-classic/angular/issues/43133)\).
+See [RFC: Exploration of use-cases for Angular ClassicJIT compilation mode](https://github.com/ng-classic/ng-classic/issues/43133)\).
 
 </div>
 
