@@ -1,0 +1,9 @@
+import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';<% if(routing) { %>
+import { RouterModule } from '@angular-classic/router';
+import { <%= libPropertyName %>Routes } from './lib.routes';<% } %>
+
+@NgModule({
+  imports: [CommonModule<% if(routing) { %>, RouterModule.forChild(<%= libPropertyName %>Routes)<% } %>],
+})
+export class <%= libClassName %>Module {}
