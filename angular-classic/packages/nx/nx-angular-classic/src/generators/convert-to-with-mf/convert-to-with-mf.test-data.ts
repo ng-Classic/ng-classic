@@ -48,25 +48,25 @@ module.exports = {
         remote1: 'http://localhost:4201/remoteEntry.mjs',
       },
       shared: share({
-        '@angular/core': {
+        '@angular-classic/core': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/common': {
+        '@angular-classic/common': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/common/http': {
+        '@angular-classic/common/http': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/router': {
+        '@angular-classic/router': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
@@ -141,25 +141,25 @@ module.exports = {
         './Module': 'apps/remote1/src/app/remote-entry/entry.module.ts',
       },
       shared: share({
-        '@angular/core': {
+        '@angular-classic/core': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/common': {
+        '@angular-classic/common': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/common/http': {
+        '@angular-classic/common/http': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/router': {
+        '@angular-classic/router': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
@@ -234,19 +234,19 @@ module.exports = {
         './Module': 'apps/remote1/src/app/remote-entry/entry.module.ts',
       },
       shared: {
-        '@angular/core': {
+        '@angular-classic/core': {
           singleton: true,
           strictVersion: true,
         },
-        '@angular/common': {
+        '@angular-classic/common': {
           singleton: true,
           strictVersion: true,
         },
-        '@angular/common/http': {
+        '@angular-classic/common/http': {
           singleton: true,
           strictVersion: true,
         },
-        '@angular/router': {
+        '@angular-classic/router': {
           singleton: true,
           strictVersion: true,
         },
@@ -316,25 +316,25 @@ module.exports = {
         './Module': 'apps/remote1/src/app/remote-entry/entry.module.ts',
       },
       shared: share({
-        '@angular/core': {
+        '@angular-classic/core': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/common': {
+        '@angular-classic/common': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/common/http': {
+        '@angular-classic/common/http': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/router': {
+        '@angular-classic/router': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
@@ -407,25 +407,25 @@ module.exports = {
         remote1: 'http://localhost:4201/remoteEntry.mjs',
       },
       shared: share({
-        '@angular/core': {
+        '@angular-classic/core': {
           singleton: true,
           strictVersion: true,
           requiredVersion: '13.0.0',
           includeSecondaries: true,
         },
-        '@angular/common': {
+        '@angular-classic/common': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/common/http': {
+        '@angular-classic/common/http': {
           singleton: true,
           strictVersion: false,
           requiredVersion: 'auto',
           includeSecondaries: true,
         },
-        '@angular/router': {
+        '@angular-classic/router': {
           singleton: true,
           strictVersion: true,
           requiredVersion: 'auto',

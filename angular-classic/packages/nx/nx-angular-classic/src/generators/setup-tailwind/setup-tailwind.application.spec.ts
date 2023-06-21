@@ -448,7 +448,7 @@ describe('setupTailwind generator', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.1.0',
+          '@angular-classic/core': '14.1.0',
         },
       }));
     });

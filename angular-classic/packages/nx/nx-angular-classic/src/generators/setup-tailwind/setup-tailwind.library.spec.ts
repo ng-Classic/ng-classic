@@ -89,7 +89,7 @@ describe('setupTailwind generator', () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
         build: {
-          executor: '@angular/build-angular:browser',
+          executor: '@angular-classic/build-angular:browser',
           options: {},
         },
       };
@@ -98,7 +98,7 @@ describe('setupTailwind generator', () => {
       await expect(setupTailwindGenerator(tree, { project })).rejects.toThrow(
         expect.objectContaining({
           message: expect.stringContaining(
-            `The build target for project "${project}" is using an unsupported executor "@angular/build-angular:browser".`
+            `The build target for project "${project}" is using an unsupported executor "@angular-classic/build-angular:browser".`
           ),
         })
       );
@@ -319,7 +319,7 @@ describe('setupTailwind generator', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.1.0',
+          '@angular-classic/core': '14.1.0',
         },
       }));
     });
@@ -384,7 +384,7 @@ describe('setupTailwind generator', () => {
         const projectConfig = readProjectConfiguration(tree, project);
         projectConfig.targets = {
           build: {
-            executor: '@angular/build-angular:browser',
+            executor: '@angular-classic/build-angular:browser',
             options: {},
           },
         };
@@ -393,7 +393,7 @@ describe('setupTailwind generator', () => {
         await expect(setupTailwindGenerator(tree, { project })).rejects.toThrow(
           expect.objectContaining({
             message: expect.stringContaining(
-              `The build target for project "${project}" is using an unsupported executor "@angular/build-angular:browser".`
+              `The build target for project "${project}" is using an unsupported executor "@angular-classic/build-angular:browser".`
             ),
           })
         );

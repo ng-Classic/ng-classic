@@ -336,7 +336,7 @@ describe('Init MF', () => {
       ...json,
       dependencies: {
         ...json.dependencies,
-        '@angular/core': '14.1.0',
+        '@angular-classic/core': '14.1.0',
       },
     }));
 
@@ -357,12 +357,12 @@ describe('Init MF', () => {
     // ASSERT
     expect(tree.read('apps/ng14/src/bootstrap.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { importProvidersFrom } from '@angular/core';
-      import { bootstrapApplication } from '@angular/platform-browser';
-      import { RouterModule } from '@angular/router';
+      "import { importProvidersFrom } from '@angular-classic/core';
+      import { bootstrapApplication } from '@angular-classic/platform-browser';
+      import { RouterModule } from '@angular-classic/router';
       import { RemoteEntryComponent } from './app/remote-entry/entry.component';
       import { appRoutes } from './app/app.routes';
-      import { enableProdMode } from '@angular/core';
+      import { enableProdMode } from '@angular-classic/core';
       import { environment } from './environments/environment';
       if (environment.production) {
         enableProdMode();
@@ -417,7 +417,7 @@ describe('Init MF', () => {
       ...json,
       dependencies: {
         ...json.dependencies,
-        '@angular/core': '14.0.0',
+        '@angular-classic/core': '14.0.0',
       },
     }));
 

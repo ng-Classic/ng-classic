@@ -21,8 +21,8 @@ export function applyDefaultEagerPackages(
   sharedConfig: Record<string, SharedLibraryConfig>
 ) {
   const DEFAULT_PACKAGES_TO_LOAD_EAGERLY = [
-    '@angular/localize',
-    '@angular/localize/init',
+    '@angular-classic/localize',
+    '@angular-classic/localize/init',
   ];
   for (const pkg of DEFAULT_PACKAGES_TO_LOAD_EAGERLY) {
     if (!sharedConfig[pkg]) {
@@ -39,8 +39,8 @@ export const DEFAULT_NPM_PACKAGES_TO_AVOID = [
   '@nrwl/angular/mf',
 ];
 export const DEFAULT_ANGULAR_PACKAGES_TO_SHARE = [
-  '@angular/animations',
-  '@angular/common',
+  '@angular-classic/animations',
+  '@angular-classic/common',
 ];
 
 export function getFunctionDeterminateRemoteUrl(isServer: boolean = false) {

@@ -35,14 +35,14 @@ export function fixBootstrap(tree: Tree, appRoot: string, options: Schema) {
 
 const standaloneBootstrapCode = (
   includeEnvironments: boolean = false
-) => `import {importProvidersFrom} from "@angular/core";
-import {bootstrapApplication} from "@angular/platform-browser";
-import {RouterModule} from "@angular/router";
+) => `import {importProvidersFrom} from "@angular-classic/core";
+import {bootstrapApplication} from "@angular-classic/platform-browser";
+import {RouterModule} from "@angular-classic/router";
 import {RemoteEntryComponent} from "./app/remote-entry/entry.component";
 import {appRoutes} from "./app/app.routes";
 ${
   includeEnvironments
-    ? `import {enableProdMode} from '@angular/core';
+    ? `import {enableProdMode} from '@angular-classic/core';
 import {environment} from './environments/environment';
 if(environment.production) {
   enableProdMode();

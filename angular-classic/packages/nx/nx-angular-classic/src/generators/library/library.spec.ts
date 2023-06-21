@@ -747,9 +747,9 @@ describe('lib', () => {
         ]);
 
         expect(moduleContents2).toMatchInlineSnapshot(`
-          "import { NgModule } from '@angular/core';
-          import { BrowserModule } from '@angular/platform-browser';
-          import { RouterModule } from '@angular/router';
+          "import { NgModule } from '@angular-classic/core';
+          import { BrowserModule } from '@angular-classic/platform-browser';
+          import { RouterModule } from '@angular-classic/router';
           import { AppComponent } from './app.component';
           @NgModule({
             imports: [
@@ -797,9 +797,9 @@ describe('lib', () => {
         tree.write(
           'apps/myapp/src/app/app.module.ts',
           `
-          import { NgModule } from '@angular/core';
-          import { BrowserModule } from '@angular/platform-browser';
-          import { RouterModule } from '@angular/router';
+          import { NgModule } from '@angular-classic/core';
+          import { BrowserModule } from '@angular-classic/platform-browser';
+          import { RouterModule } from '@angular-classic/router';
           import { AppComponent } from './app.component';
 
           const routes = [];
@@ -943,9 +943,9 @@ describe('lib', () => {
         tree.write(
           'apps/myapp/src/app/app.module.ts',
           `
-          import { NgModule } from '@angular/core';
-          import { BrowserModule } from '@angular/platform-browser';
-          import { RouterModule } from '@angular/router';
+          import { NgModule } from '@angular-classic/core';
+          import { BrowserModule } from '@angular-classic/platform-browser';
+          import { RouterModule } from '@angular-classic/router';
           import { AppComponent } from './app.component';
 
           const routes = [];
@@ -1472,7 +1472,7 @@ describe('lib', () => {
       // ASSERT
       expect(tree.read('apps/app1/src/app/app.routes.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { Route } from '@angular/router';
+        "import { Route } from '@angular-classic/router';
         import { myLibRoutes } from '@proj/my-lib';
 
         export const appRoutes: Route[] = [{ path: 'my-lib', children: myLibRoutes }];
@@ -1499,7 +1499,7 @@ describe('lib', () => {
       // ASSERT
       expect(tree.read('apps/app1/src/app/app.routes.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { Route } from '@angular/router';
+        "import { Route } from '@angular-classic/router';
 
         export const appRoutes: Route[] = [
           {
@@ -1613,7 +1613,7 @@ describe('lib', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.1.0',
+          '@angular-classic/core': '14.1.0',
         },
       }));
     });
@@ -1671,8 +1671,8 @@ describe('lib', () => {
           },
           "name": "@myorg/lib",
           "peerDependencies": {
-            "@angular/common": "^14.1.0",
-            "@angular/core": "^14.1.0",
+            "@angular-classic/common": "^14.1.0",
+            "@angular-classic/core": "^14.1.0",
           },
           "sideEffects": false,
           "version": "0.0.1",
@@ -1700,7 +1700,7 @@ describe('lib', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.0.0',
+          '@angular-classic/core': '14.0.0',
         },
       }));
 

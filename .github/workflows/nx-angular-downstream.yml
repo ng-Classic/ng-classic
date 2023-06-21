@@ -5,7 +5,7 @@ on:
     - cron: '0 * * * *'  # Runs every hour
   push:
     branches:
-      - master
+      - main
 
 jobs:
   update:
@@ -34,6 +34,10 @@ jobs:
 
           # Merge the "angular" subtree
           git subtree pull --prefix=angular-classic/packages/nx/nx-angular-classic angular-updates --squash
+
+       - name: Replace '@angular/' with '@angular-classic/'
+        run: |
+          find angular-classic/packages/nx/nx-angular-classic -type f -exec sed -i 's/@angular\//@angular-classic\//g' {} +
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3

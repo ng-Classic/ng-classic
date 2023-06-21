@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MF Remote App Generator --ssr should generate the correct files 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -31,7 +31,7 @@ export class AppModule {}
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 2`] = `
-"import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+"import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 
 platformBrowserDynamic()
@@ -48,7 +48,7 @@ exports[`MF Remote App Generator --ssr should generate the correct files 3`] = `
 exports[`MF Remote App Generator --ssr should generate the correct files 4`] = `
 "import 'zone.js/dist/zone-node';
 
-import { APP_BASE_HREF } from '@angular/common';
+import { APP_BASE_HREF } from '@angular-classic/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import * as cors from 'cors';
@@ -144,7 +144,7 @@ module.exports = withModuleFederationForSSR(config);
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 8`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-test-entry',
@@ -155,7 +155,7 @@ export class RemoteEntryComponent {}
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 9`] = `
-"import { Route } from '@angular/router';
+"import { Route } from '@angular-classic/router';
 
 export const appRoutes: Route[] = [
   {
@@ -168,7 +168,7 @@ export const appRoutes: Route[] = [
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 10`] = `
-"import { Route } from '@angular/router';
+"import { Route } from '@angular-classic/router';
 import { RemoteEntryComponent } from './entry.component';
 
 export const remoteRoutes: Route[] = [
@@ -208,7 +208,7 @@ exports[`MF Remote App Generator --ssr should generate the correct files 11`] = 
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 12`] = `
-"import { Route } from '@angular/router';
+"import { Route } from '@angular-classic/router';
 import { RemoteEntryComponent } from './entry.component';
 
 export const remoteRoutes: Route[] = [
@@ -252,9 +252,9 @@ module.exports = withModuleFederation(config);
 `;
 
 exports[`MF Remote App Generator should generate the a remote setup for standalone components 1`] = `
-"import { importProvidersFrom } from '@angular/core';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { importProvidersFrom } from '@angular-classic/core';
+import { bootstrapApplication } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { RemoteEntryComponent } from './app/remote-entry/entry.component';
 import { appRoutes } from './app/app.routes';
 
@@ -279,8 +279,8 @@ exports[`MF Remote App Generator should generate the a remote setup for standalo
 `;
 
 exports[`MF Remote App Generator should generate the a remote setup for standalone components 3`] = `
-"import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+"import { Component } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
@@ -294,7 +294,7 @@ export class RemoteEntryComponent {}
 `;
 
 exports[`MF Remote App Generator should generate the a remote setup for standalone components 4`] = `
-"import { Route } from '@angular/router';
+"import { Route } from '@angular-classic/router';
 
 export const appRoutes: Route[] = [
   {
@@ -307,7 +307,7 @@ export const appRoutes: Route[] = [
 `;
 
 exports[`MF Remote App Generator should generate the a remote setup for standalone components 5`] = `
-"import { Route } from '@angular/router';
+"import { Route } from '@angular-classic/router';
 import { RemoteEntryComponent } from './entry.component';
 
 export const remoteRoutes: Route[] = [
