@@ -14,11 +14,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Configure Git
-        run: >
+        run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions Bot"
       - name: Get Nx repo and filter out angular package
-        run: >
+        run: |
           mkdir .tmp && cd .tmp
           git clone https://github.com/nrwl/nx.git && cd nx
           set FILTER_BRANCH_SQUELCH_WARNING=1
@@ -27,7 +27,7 @@ jobs:
           cd ../..
           git remote add nx .tmp/nx
       - name: Get updates from Nx repo and merge into ours
-        run: >
+        run: |
           git fetch nx master
           git checkout -b tmp/angular-updates FETCH_HEAD
           git checkout main && git pull origin main
@@ -35,14 +35,13 @@ jobs:
           # take files from temporary branch and put them where we need them
           git read-tree --prefix packages/nx/nx-angular-classic -u tmp/angular-updates
       - name: Cleanup
-        run: >
+        run: |
           git branch -D tmp/angular-updates
           git remote rm nx
           rm -rf .tmp
       - name: Replace '@angular/' with '@angular-classic/'
-        run: >
-          find angular-classic/packages/nx/nx-angular-classic -type f -exec sed -i
-          's/@angular\//@angular-classic\//g' {} +
+        run: |
+          find angular-classic/packages/nx/nx-angular-classic -type f -exec sed -i 's/@angular\//@angular-classic\//g' {} +
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
