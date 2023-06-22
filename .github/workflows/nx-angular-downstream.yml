@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+      - downstream-nx
 jobs:
   update:
     runs-on: ubuntu-latest
