@@ -42,10 +42,12 @@ jobs:
           git remote rm nx
           rm -rf .tmp
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Update Nx Angular
           title: Update Nx Angular
           body: Updates the Nx Angular package to the latest version.
           branch: chore/update-nx-angular
+          base: main
+          delete-branch: true
