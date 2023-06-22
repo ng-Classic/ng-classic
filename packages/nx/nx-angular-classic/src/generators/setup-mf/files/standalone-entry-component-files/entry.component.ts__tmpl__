@@ -1,0 +1,13 @@
+import { Component } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
+import { NxWelcomeComponent } from './nx-welcome.component';
+
+@Component({
+  standalone: true,
+  imports: [CommonModule, NxWelcomeComponent],<% if (prefix) { %>
+  selector: '<%= prefix %>-<%= appName %>-entry',
+  template: `<<%= prefix %>-nx-welcome></<%= prefix %>-nx-welcome>`<% } else { %>
+  selector: '<%= appName %>-entry',
+  template: `<nx-welcome></nx-welcome>`<% } %>
+})
+export class RemoteEntryComponent {}
