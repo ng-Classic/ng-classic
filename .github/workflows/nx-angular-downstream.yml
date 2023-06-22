@@ -34,6 +34,8 @@ jobs:
           # take files from temporary branch and put them where we need them
           git read-tree --prefix packages/nx/nx-angular-classic -u tmp/angular-updates
       - name: Replace '@angular/' with '@angular-classic/' and push
+        env:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           find packages/nx/nx-angular-classic -type f -exec sed -i 's/@angular\//@angular-classic\//g' {} +
           git push origin chore/update-nx-angular
