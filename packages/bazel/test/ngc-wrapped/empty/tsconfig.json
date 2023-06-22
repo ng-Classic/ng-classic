@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "paths": {
-      "@angular-classic/core": ["../../../../dist/packages/core"]
-    },
-    "skipLibCheck": true
-  }
-}
