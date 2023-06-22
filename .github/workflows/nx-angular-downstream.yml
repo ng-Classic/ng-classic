@@ -21,8 +21,7 @@ jobs:
         run: |
           mkdir .tmp && cd .tmp
           git clone https://github.com/nrwl/nx.git && cd nx
-          set FILTER_BRANCH_SQUELCH_WARNING=1
-          # fulter only the angular package
+          # filter only the angular package
           git filter-branch --force --prune-empty --subdirectory-filter packages/angular master
           cd ../..
           git remote add nx .tmp/nx
@@ -34,14 +33,14 @@ jobs:
           git checkout -b chore/update-nx-angular
           # take files from temporary branch and put them where we need them
           git read-tree --prefix packages/nx/nx-angular-classic -u tmp/angular-updates
+      - name: Replace '@angular/' with '@angular-classic/'
+        run: |
+          find packages/nx/nx-angular-classic -type f -exec sed -i 's/@angular\//@angular-classic\//g' {} +
       - name: Cleanup
         run: |
           git branch -D tmp/angular-updates
           git remote rm nx
           rm -rf .tmp
-      - name: Replace '@angular/' with '@angular-classic/'
-        run: |
-          find angular-classic/packages/nx/nx-angular-classic -type f -exec sed -i 's/@angular\//@angular-classic\//g' {} +
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
