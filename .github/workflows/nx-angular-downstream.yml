@@ -37,10 +37,10 @@ jobs:
           git checkout main && git pull origin main
           git checkout -b chore/update-nx-angular
           # take files from temporary branch and put them where we need them
-          git read-tree --prefix packages/nx/nx-angular-classic -u tmp/angular-updates
+          git read-tree --prefix angular-classic/packages/nx/nx-angular-classic -u tmp/angular-updates
       - name: Replace '@angular/' with '@angular-classic/' and push
         run: |
-          find packages/nx/nx-angular-classic -type f -exec sed -i 's/@angular\//@angular-classic\//g' {} +
+          find angular-classic/packages/nx/nx-angular-classic -type f -exec sed -i 's/@angular\//@angular-classic\//g' {} +
           git push origin :chore/update-nx-angular
           git push origin chore/update-nx-angular
       - name: Cleanup
