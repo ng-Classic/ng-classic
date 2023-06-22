@@ -14,28 +14,30 @@ jobs:
         uses: actions/checkout@v2
       - name: Configure Git
         run: >
-          git config --global user.email
-          "github-actions[bot]@users.noreply.github.com"
-
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions Bot"
-      - name: Add Nx repo as a remote
-        run: |
-          git remote add -f nx https://github.com/nrwl/nx.git
-      - name: Pull Nx repo and merge Angular folder
+      - name: Get Nx repo and filter out angular package
         run: >
-          # Pull updates from the Nx repository
-
+          mkdir .tmp && cd .tmp
+          git clone https://github.com/nrwl/nx.git && cd nx
+          set FILTER_BRANCH_SQUELCH_WARNING=1
+          # fulter only the angular package
+          git filter-branch --force --prune-empty --subdirectory-filter packages/angular master
+          cd ../..
+          git remote add nx .tmp/nx
+      - name: Get updates from Nx repo and merge into ours
+        run: >
           git fetch nx master
-
-
-          # Create a new branch that only contains the history of the "angular" directory
-
-          git subtree split --prefix=packages/angular --branch angular-updates nx/master
-
-
-          # Merge the "angular" subtree
-
-          git subtree pull --prefix=angular-classic/packages/nx/nx-angular-classic angular-updates --squash
+          git checkout -b tmp/angular-updates FETCH_HEAD
+          git checkout main && git pull origin main
+          git checkout -b chore/update-nx-angular
+          # take files from temporary branch and put them where we need them
+          git read-tree --prefix packages/nx/nx-angular-classic -u tmp/angular-updates
+      - name: Cleanup
+        run: >
+          git branch -D tmp/angular-updates
+          git remote rm nx
+          rm -rf .tmp
       - name: Replace '@angular/' with '@angular-classic/'
         run: >
           find angular-classic/packages/nx/nx-angular-classic -type f -exec sed -i
@@ -47,4 +49,4 @@ jobs:
           commit-message: Update Nx Angular
           title: Update Nx Angular
           body: Updates the Nx Angular package to the latest version.
-          branch: update-nx-angular
+          branch: chore/update-nx-angular
