@@ -40,6 +40,7 @@ jobs:
       - name: Replace '@angular/' with '@angular-classic/' and push
         run: |
           find packages/nx/nx-angular-classic -type f -exec sed -i 's/@angular\//@angular-classic\//g' {} +
+          git push origin :chore/update-nx-angular
           git push origin chore/update-nx-angular
       - name: Cleanup
         run: |
