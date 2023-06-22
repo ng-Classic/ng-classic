@@ -1,5 +1,36 @@
 {
-  "name": "@angular-classic/complier",
+  "name": "@angular-classic/compiler",
   "version": "0.0.1",
-  "type": "commonjs"
+  "type": "commonjs",
+  "typings": "/src/index.d.ts",
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "engines": {
+    "node": "^16.14.0 || >=18.10.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@angular-classic/core": "0.0.0-PLACEHOLDER"
+  },
+  "peerDependenciesMeta": {
+    "@angular-classic/core": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ng-classic/ng-classic.git",
+    "directory": "packages/compiler"
+  },
+  "ng-update": {
+    "packageGroup": "NG_UPDATE_PACKAGE_GROUP"
+  },
+  "sideEffects": true
 }

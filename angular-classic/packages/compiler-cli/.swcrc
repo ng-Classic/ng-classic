@@ -15,7 +15,7 @@
     "loose": true
   },
   "module": {
-    "type": "commonjs",
+    "type": "esnext",
     "strict": true,
     "noInterop": true
   },
