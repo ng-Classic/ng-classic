@@ -8,7 +8,6 @@ on:
   push:
     branches:
       - main
-      - downstream-nx
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -37,6 +36,7 @@ jobs:
           git checkout main && git pull origin main
           git checkout -b chore/update-nx-angular
           # take files from temporary branch and put them where we need them
+          git rm -r angular-classic
           git read-tree --prefix angular-classic/packages/nx/nx-angular-classic -u tmp/angular-updates
       - name: Replace '@angular/' with '@angular-classic/' and push
         run: |
