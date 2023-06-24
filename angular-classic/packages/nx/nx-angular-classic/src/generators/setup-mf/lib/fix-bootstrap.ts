@@ -18,7 +18,7 @@ export function fixBootstrap(tree: Tree, appRoot: string, options: Schema) {
 
   const bootstrapImportCode = `import('./bootstrap').catch(err => console.error(err))`;
 
-  const fetchMFManifestCode = `import { setRemoteDefinitions } from '@nx/angular/mf';
+  const fetchMFManifestCode = `import { setRemoteDefinitions } from '@angular-classic/nx-angular/mf';
 
   fetch('/assets/module-federation.manifest.json')
   .then((res) => res.json())

@@ -160,10 +160,10 @@ describe('init', () => {
         const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
         // ASSERT
-        expect(generators['@nx/angular:application'].unitTestRunner).toEqual(
+        expect(generators['@angular-classic/nx-angular:application'].unitTestRunner).toEqual(
           'jest'
         );
-        expect(generators['@nx/angular:library'].unitTestRunner).toEqual(
+        expect(generators['@angular-classic/nx-angular:library'].unitTestRunner).toEqual(
           'jest'
         );
       });
@@ -200,7 +200,7 @@ describe('init', () => {
         const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
         // ASSERT
-        expect(generators['@nx/angular:application'].e2eTestRunner).toEqual(
+        expect(generators['@angular-classic/nx-angular:application'].e2eTestRunner).toEqual(
           'cypress'
         );
       });
@@ -220,8 +220,8 @@ describe('init', () => {
         const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
         // ASSERT
-        expect(generators['@nx/angular:application'].linter).toEqual('eslint');
-        expect(generators['@nx/angular:library'].linter).toEqual('eslint');
+        expect(generators['@angular-classic/nx-angular:application'].linter).toEqual('eslint');
+        expect(generators['@angular-classic/nx-angular:library'].linter).toEqual('eslint');
       });
     });
 
@@ -237,8 +237,8 @@ describe('init', () => {
         const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
         // ASSERT
-        expect(generators['@nx/angular:application'].linter).toEqual('none');
-        expect(generators['@nx/angular:library'].linter).toEqual('none');
+        expect(generators['@angular-classic/nx-angular:application'].linter).toEqual('none');
+        expect(generators['@angular-classic/nx-angular:library'].linter).toEqual('none');
       });
     });
   });
@@ -512,10 +512,10 @@ bar
           const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
           // ASSERT
-          expect(generators['@nx/angular:application'].unitTestRunner).toEqual(
+          expect(generators['@angular-classic/nx-angular:application'].unitTestRunner).toEqual(
             'jest'
           );
-          expect(generators['@nx/angular:library'].unitTestRunner).toEqual(
+          expect(generators['@angular-classic/nx-angular:library'].unitTestRunner).toEqual(
             'jest'
           );
         });
@@ -552,7 +552,7 @@ bar
           const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
           // ASSERT
-          expect(generators['@nx/angular:application'].e2eTestRunner).toEqual(
+          expect(generators['@angular-classic/nx-angular:application'].e2eTestRunner).toEqual(
             'cypress'
           );
         });
@@ -572,10 +572,10 @@ bar
           const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
           // ASSERT
-          expect(generators['@nx/angular:application'].linter).toEqual(
+          expect(generators['@angular-classic/nx-angular:application'].linter).toEqual(
             'eslint'
           );
-          expect(generators['@nx/angular:library'].linter).toEqual('eslint');
+          expect(generators['@angular-classic/nx-angular:library'].linter).toEqual('eslint');
         });
       });
 
@@ -591,8 +591,8 @@ bar
           const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
           // ASSERT
-          expect(generators['@nx/angular:application'].linter).toEqual('none');
-          expect(generators['@nx/angular:library'].linter).toEqual('none');
+          expect(generators['@angular-classic/nx-angular:application'].linter).toEqual('none');
+          expect(generators['@angular-classic/nx-angular:library'].linter).toEqual('none');
         });
       });
     });

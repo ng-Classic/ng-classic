@@ -1079,7 +1079,7 @@ describe('lib', () => {
 
       // check to see if the workspace configuration has been updated to use strict
       // mode by default in future libraries
-      expect(generators['@nx/angular:library'].strict).not.toBeDefined();
+      expect(generators['@angular-classic/nx-angular:library'].strict).not.toBeDefined();
     });
 
     it('should set defaults when --strict=false', async () => {
@@ -1094,7 +1094,7 @@ describe('lib', () => {
       // check to see if the workspace configuration has been updated to turn off
       // strict mode by default in future libraries
       const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
-      expect(generators['@nx/angular:library'].strict).toBe(false);
+      expect(generators['@angular-classic/nx-angular:library'].strict).toBe(false);
     });
   });
 
@@ -1141,7 +1141,7 @@ describe('lib', () => {
             "overrides": [
               {
                 "extends": [
-                  "plugin:@nx/angular",
+                  "plugin:@angular-classic/nx-angular",
                   "plugin:@angular-eslint/template/process-inline-templates",
                 ],
                 "files": [
@@ -1168,7 +1168,7 @@ describe('lib', () => {
               },
               {
                 "extends": [
-                  "plugin:@nx/angular-template",
+                  "plugin:@angular-classic/nx-angular-template",
                 ],
                 "files": [
                   "*.html",
@@ -1235,7 +1235,7 @@ describe('lib', () => {
       // ASSERT
       expect(tree.read('libs/my-lib/tailwind.config.js', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@angular-classic/nx-angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */

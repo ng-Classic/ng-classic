@@ -365,7 +365,7 @@ describe('Cypress Component Testing Configuration', () => {
 
     expect(tree.read('libs/my-lib/cypress.config.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { nxComponentTestingPreset } from '@nx/angular/plugins/component-testing';
+      "import { nxComponentTestingPreset } from '@angular-classic/nx-angular/plugins/component-testing';
       import { defineConfig } from 'cypress';
 
       export default defineConfig({

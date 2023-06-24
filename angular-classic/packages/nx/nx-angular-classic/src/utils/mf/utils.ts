@@ -35,7 +35,7 @@ export function applyDefaultEagerPackages(
 
 export const DEFAULT_NPM_PACKAGES_TO_AVOID = [
   'zone.js',
-  '@nx/angular/mf',
+  '@angular-classic/nx-angular/mf',
   '@nrwl/angular/mf',
 ];
 export const DEFAULT_ANGULAR_PACKAGES_TO_SHARE = [
@@ -58,7 +58,9 @@ export function getFunctionDeterminateRemoteUrl(isServer: boolean = false) {
       );
     }
 
-    const host = serveTarget.options?.host ?? 'http://localhost';
+    const host =
+      serveTarget.options?.host ??
+      `http${serveTarget.options.ssl ? 's' : ''}://localhost`;
     const port = serveTarget.options?.port ?? 4201;
     return `${
       host.endsWith('/') ? host.slice(0, -1) : host
