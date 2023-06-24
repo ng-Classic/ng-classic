@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ngrx-feature-store NgModule should generate the files with the correct content 1`] = `
-"import { NgModule } from '@angular-classic/core';
-import { CommonModule } from '@angular-classic/common';
+"import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import * as fromUsers from './+state/users.reducer';
@@ -22,7 +22,7 @@ export class FeatureModuleModule {}
 `;
 
 exports[`ngrx-feature-store NgModule should generate the files with the correct content 2`] = `
-"import { Injectable, inject } from '@angular-classic/core';
+"import { Injectable, inject } from '@angular/core';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as UsersActions from './users.actions';
@@ -53,11 +53,11 @@ export class UsersFacade {
 `;
 
 exports[`ngrx-feature-store NgModule should generate the files with the correct content 3`] = `
-"import { NgModule } from '@angular-classic/core';
-import { TestBed } from '@angular-classic/core/testing';
+"import { NgModule } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule, Store } from '@ngrx/store';
-import { readFirst } from '@angular-classic/nx-angular/testing';
+import { readFirst } from '@nx/angular/testing';
 
 import * as UsersActions from './users.actions';
 import { UsersEffects } from './users.effects';
@@ -173,7 +173,7 @@ export const loadUsersFailure = createAction(
 `;
 
 exports[`ngrx-feature-store NgModule should generate the files with the correct content 5`] = `
-"import { Injectable, inject } from '@angular-classic/core';
+"import { Injectable, inject } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { switchMap, catchError, of } from 'rxjs';
 import * as UsersActions from './users.actions';
@@ -198,7 +198,7 @@ export class UsersEffects {
 `;
 
 exports[`ngrx-feature-store NgModule should generate the files with the correct content 6`] = `
-"import { TestBed } from '@angular-classic/core/testing';
+"import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Action } from '@ngrx/store';
 import { provideMockStore } from '@ngrx/store/testing';
@@ -478,7 +478,7 @@ export * from './lib/feature-module.module';
 `;
 
 exports[`ngrx-feature-store Standalone APIs should generate the files with the correct content 1`] = `
-"import { Injectable, inject } from '@angular-classic/core';
+"import { Injectable, inject } from '@angular/core';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as UsersActions from './users.actions';
@@ -509,11 +509,11 @@ export class UsersFacade {
 `;
 
 exports[`ngrx-feature-store Standalone APIs should generate the files with the correct content 2`] = `
-"import { NgModule } from '@angular-classic/core';
-import { TestBed } from '@angular-classic/core/testing';
+"import { NgModule } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule, Store } from '@ngrx/store';
-import { readFirst } from '@angular-classic/nx-angular/testing';
+import { readFirst } from '@nx/angular/testing';
 
 import * as UsersActions from './users.actions';
 import { UsersEffects } from './users.effects';
@@ -629,7 +629,7 @@ export const loadUsersFailure = createAction(
 `;
 
 exports[`ngrx-feature-store Standalone APIs should generate the files with the correct content 4`] = `
-"import { Injectable, inject } from '@angular-classic/core';
+"import { Injectable, inject } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { switchMap, catchError, of } from 'rxjs';
 import * as UsersActions from './users.actions';
@@ -654,7 +654,7 @@ export class UsersEffects {
 `;
 
 exports[`ngrx-feature-store Standalone APIs should generate the files with the correct content 5`] = `
-"import { TestBed } from '@angular-classic/core/testing';
+"import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Action } from '@ngrx/store';
 import { provideMockStore } from '@ngrx/store/testing';
@@ -908,7 +908,7 @@ describe('Users Selectors', () => {
 `;
 
 exports[`ngrx-feature-store Standalone APIs should generate the files with the correct content 11`] = `
-"import { Route } from '@angular-classic/router';
+"import { Route } from '@angular/router';
 import { FeatureComponent } from './feature/feature.component';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
