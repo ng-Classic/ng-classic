@@ -5,9 +5,6 @@ permissions:
 on:
   schedule:
     - cron: 0 0 * * *
-  push:
-    branches:
-      - main
 jobs:
   update:
     runs-on: ubuntu-latest
