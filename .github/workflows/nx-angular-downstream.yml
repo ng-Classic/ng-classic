@@ -44,6 +44,24 @@ jobs:
           find angular-classic/packages/nx/nx-angular-classic -type f -exec sed -i 's/@nx\/angular/@angular-classic\/nx-angular/g' {} +
           git push origin :chore/update-nx-angular
           git push origin chore/update-nx-angular
+      - name: Install JQ
+        run: sudo apt-get install jq
+        
+      - name: Update Angular versions from package.json
+        run: |
+          VERSION=$(jq -r .version angular-classic/package.json)
+          FILES=angular-classic/packages/nx/nx-angular-classic/src/utils/versions.ts
+          for FILE in $FILES
+          do
+              sed -i "s/export const angularVersion = .*;/export const angularVersion = '~$VERSION';/g" $FILE
+              sed -i "s/export const angularDevkitVersion = .*;/export const angularDevkitVersion = '~$VERSION';/g" $FILE
+              sed -i "s/export const ngPackagrVersion = .*;/export const ngPackagrVersion = '~$VERSION';/g" $FILE
+              sed -i "s/export const ngUniversalVersion = .*;/export const ngUniversalVersion = '~$VERSION';/g" $FILE
+          done
+          git add $FILES
+          git commit -m "Update Angular versions"
+
+
       - name: Cleanup
         run: |
           git branch -D tmp/angular-updates
