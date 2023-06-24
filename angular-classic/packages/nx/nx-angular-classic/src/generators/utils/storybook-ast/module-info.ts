@@ -369,7 +369,7 @@ function getNgModuleDecorator(file: SourceFile, moduleFilePath: string): Node {
   const ngModuleDecorators = getDecoratorMetadata(
     file,
     'NgModule',
-    '@angular-classic/core'
+    '@angular/core'
   );
 
   if (ngModuleDecorators.length === 0) {

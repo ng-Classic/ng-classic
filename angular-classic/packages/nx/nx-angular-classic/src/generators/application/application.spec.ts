@@ -845,7 +845,7 @@ describe('app', () => {
     // ASSERT
     expect(appTree.read('apps/myapp/src/main.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
+      "import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
       import { AppModule } from './app/app.module';
 
       platformBrowserDynamic()
@@ -877,7 +877,7 @@ describe('app', () => {
     updateJson(tree, 'package.json', (json) => ({
       ...json,
       dependencies: {
-        '@angular-classic/core': '14.0.0',
+        '@angular/core': '14.0.0',
       },
     }));
 

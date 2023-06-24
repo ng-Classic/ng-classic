@@ -1,6 +1,6 @@
 import { readJson, Tree, writeJson } from '@nx/devkit';
 import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import updateAngularCli from './update-angular-cli';
+import updateAngularCli, { angularCliVersion } from './update-angular-cli';
 
 describe('update-angular-cli migration', () => {
   let tree: Tree;
@@ -17,7 +17,7 @@ describe('update-angular-cli migration', () => {
     await updateAngularCli(tree);
 
     const { devDependencies } = readJson(tree, 'package.json');
-    expect(devDependencies['@angular/cli']).toEqual('~15.2.0');
+    expect(devDependencies['@angular/cli']).toBe(angularCliVersion);
   });
 
   it('should update @angular/cli version when defined as a dependency', async () => {
@@ -28,10 +28,10 @@ describe('update-angular-cli migration', () => {
     await updateAngularCli(tree);
 
     const { dependencies } = readJson(tree, 'package.json');
-    expect(dependencies['@angular/cli']).toEqual('~15.2.0');
+    expect(dependencies['@angular/cli']).toBe(angularCliVersion);
   });
 
-  it('should add @angular/cli to package.json when it is not set', async () => {
+  it('should not add @angular/cli to package.json when it is not set', async () => {
     const initialPackageJson = readJson(tree, 'package.json');
 
     await updateAngularCli(tree);
