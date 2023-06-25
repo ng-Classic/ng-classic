@@ -89,7 +89,7 @@ function addStoreDevTools(
     isDefault?: boolean
   ) => SourceFile
 ): SourceFile {
-  sourceFile = addImport(sourceFile, 'isDevMode', '@angular-classic/core');
+  sourceFile = addImport(sourceFile, 'isDevMode', '@angular/core');
   if (isParentStandalone) {
     sourceFile = addImport(
       sourceFile,
