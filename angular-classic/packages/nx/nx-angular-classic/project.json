@@ -12,7 +12,7 @@
         "project": "packages/angular/ng-package.json",
         "tsConfig": "packages/angular/tsconfig.lib.runtime.json"
       },
-      "outputs": ["build/packages/angular"]
+      "outputs": ["{workspaceRoot}/build/packages/angular"]
     },
     "build-base": {
       "executor": "@nx/js:tsc",
@@ -72,7 +72,27 @@
         "parallel": false
       }
     },
-    "lint": {}
-  },
-  "implicitDependencies": ["workspace", "cypress", "jest"]
+    "lint": {},
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "angular",
+        "postTargets": ["angular:npm", "angular:github"]
+      }
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public",
+        "dryRun": "${dryRun}"
+      }
+    }
+  }
 }

@@ -19,14 +19,6 @@
     "appsDir": "demos",
     "libsDir": "packages"
   },
-  "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    "tsconfig.base.json": "*",
-    "nx.json": "*"
-  },
   "namedInputs": {
     "default": [
       "{projectRoot}/**/*"
