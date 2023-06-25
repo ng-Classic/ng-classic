@@ -37,21 +37,21 @@ describe('init', () => {
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
 
-    expect(dependencies['@angular/animations']).toBe(angularVersion);
-    expect(dependencies['@angular/common']).toBe(angularVersion);
-    expect(dependencies['@angular/compiler']).toBe(angularVersion);
-    expect(dependencies['@angular/core']).toBe(angularVersion);
-    expect(dependencies['@angular/platform-browser']).toBe(angularVersion);
-    expect(dependencies['@angular/platform-browser-dynamic']).toBe(
+    expect(dependencies['@angular-classic/animations']).toBe(angularVersion);
+    expect(dependencies['@angular-classic/common']).toBe(angularVersion);
+    expect(dependencies['@angular-classic/compiler']).toBe(angularVersion);
+    expect(dependencies['@angular-classic/core']).toBe(angularVersion);
+    expect(dependencies['@angular-classic/platform-browser']).toBe(angularVersion);
+    expect(dependencies['@angular-classic/platform-browser-dynamic']).toBe(
       angularVersion
     );
-    expect(dependencies['@angular/router']).toBe(angularVersion);
+    expect(dependencies['@angular-classic/router']).toBe(angularVersion);
     expect(dependencies['rxjs']).toBeDefined();
     expect(dependencies['tslib']).toBeDefined();
     expect(dependencies['zone.js']).toBeDefined();
-    expect(devDependencies['@angular/cli']).toBe(angularDevkitVersion);
-    expect(devDependencies['@angular/compiler-cli']).toBe(angularVersion);
-    expect(devDependencies['@angular/language-service']).toBe(angularVersion);
+    expect(devDependencies['@angular-classic/cli']).toBe(angularDevkitVersion);
+    expect(devDependencies['@angular-classic/compiler-cli']).toBe(angularVersion);
+    expect(devDependencies['@angular-classic/language-service']).toBe(angularVersion);
     expect(devDependencies['@angular-devkit/build-angular']).toBe(
       angularDevkitVersion
     );
@@ -66,7 +66,7 @@ describe('init', () => {
       ...json,
       dependencies: {
         ...json.dependencies,
-        '@angular/core': '~15.0.0',
+        '@angular-classic/core': '~15.0.0',
       },
       devDependencies: {
         ...json.devDependencies,
@@ -80,19 +80,19 @@ describe('init', () => {
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
 
-    expect(dependencies['@angular/animations']).toBe('~15.0.0');
-    expect(dependencies['@angular/common']).toBe('~15.0.0');
-    expect(dependencies['@angular/compiler']).toBe('~15.0.0');
-    expect(dependencies['@angular/core']).toBe('~15.0.0');
-    expect(dependencies['@angular/platform-browser']).toBe('~15.0.0');
-    expect(dependencies['@angular/platform-browser-dynamic']).toBe('~15.0.0');
-    expect(dependencies['@angular/router']).toBe('~15.0.0');
+    expect(dependencies['@angular-classic/animations']).toBe('~15.0.0');
+    expect(dependencies['@angular-classic/common']).toBe('~15.0.0');
+    expect(dependencies['@angular-classic/compiler']).toBe('~15.0.0');
+    expect(dependencies['@angular-classic/core']).toBe('~15.0.0');
+    expect(dependencies['@angular-classic/platform-browser']).toBe('~15.0.0');
+    expect(dependencies['@angular-classic/platform-browser-dynamic']).toBe('~15.0.0');
+    expect(dependencies['@angular-classic/router']).toBe('~15.0.0');
     expect(dependencies['rxjs']).toBeDefined();
     expect(dependencies['tslib']).toBeDefined();
     expect(dependencies['zone.js']).toBeDefined();
-    expect(devDependencies['@angular/cli']).toBe('~15.0.0');
-    expect(devDependencies['@angular/compiler-cli']).toBe('~15.0.0');
-    expect(devDependencies['@angular/language-service']).toBe('~15.0.0');
+    expect(devDependencies['@angular-classic/cli']).toBe('~15.0.0');
+    expect(devDependencies['@angular-classic/compiler-cli']).toBe('~15.0.0');
+    expect(devDependencies['@angular-classic/language-service']).toBe('~15.0.0');
     expect(devDependencies['@angular-devkit/build-angular']).toBe('~15.0.0');
   });
 
@@ -102,8 +102,8 @@ describe('init', () => {
       ...json,
       dependencies: {
         ...json.dependencies,
-        '@angular/animations': '~15.0.1',
-        '@angular/core': '~15.0.0',
+        '@angular-classic/animations': '~15.0.1',
+        '@angular-classic/core': '~15.0.0',
       },
     }));
 
@@ -113,8 +113,8 @@ describe('init', () => {
     // ASSERT
     const { dependencies } = readJson(tree, 'package.json');
 
-    expect(dependencies['@angular/animations']).toBe('~15.0.1');
-    expect(dependencies['@angular/core']).toBe('~15.0.0');
+    expect(dependencies['@angular-classic/animations']).toBe('~15.0.1');
+    expect(dependencies['@angular-classic/core']).toBe('~15.0.0');
   });
 
   describe('--unit-test-runner', () => {
@@ -160,10 +160,10 @@ describe('init', () => {
         const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
         // ASSERT
-        expect(generators['@nx/angular:application'].unitTestRunner).toEqual(
+        expect(generators['@angular-classic/nx-angular:application'].unitTestRunner).toEqual(
           'jest'
         );
-        expect(generators['@nx/angular:library'].unitTestRunner).toEqual(
+        expect(generators['@angular-classic/nx-angular:library'].unitTestRunner).toEqual(
           'jest'
         );
       });
@@ -200,7 +200,7 @@ describe('init', () => {
         const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
         // ASSERT
-        expect(generators['@nx/angular:application'].e2eTestRunner).toEqual(
+        expect(generators['@angular-classic/nx-angular:application'].e2eTestRunner).toEqual(
           'cypress'
         );
       });
@@ -220,8 +220,8 @@ describe('init', () => {
         const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
         // ASSERT
-        expect(generators['@nx/angular:application'].linter).toEqual('eslint');
-        expect(generators['@nx/angular:library'].linter).toEqual('eslint');
+        expect(generators['@angular-classic/nx-angular:application'].linter).toEqual('eslint');
+        expect(generators['@angular-classic/nx-angular:library'].linter).toEqual('eslint');
       });
     });
 
@@ -237,8 +237,8 @@ describe('init', () => {
         const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
         // ASSERT
-        expect(generators['@nx/angular:application'].linter).toEqual('none');
-        expect(generators['@nx/angular:library'].linter).toEqual('none');
+        expect(generators['@angular-classic/nx-angular:application'].linter).toEqual('none');
+        expect(generators['@angular-classic/nx-angular:library'].linter).toEqual('none');
       });
     });
   });
@@ -350,7 +350,7 @@ bar
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '~14.2.0',
+          '@angular-classic/core': '~14.2.0',
         },
       }));
     });
@@ -366,25 +366,25 @@ bar
       // ASSERT
       const { dependencies, devDependencies } = readJson(tree, 'package.json');
 
-      expect(dependencies['@angular/animations']).toEqual(
+      expect(dependencies['@angular-classic/animations']).toEqual(
         backwardCompatibleVersions.angularV14.angularVersion
       );
-      expect(dependencies['@angular/common']).toEqual(
+      expect(dependencies['@angular-classic/common']).toEqual(
         backwardCompatibleVersions.angularV14.angularVersion
       );
-      expect(dependencies['@angular/compiler']).toEqual(
+      expect(dependencies['@angular-classic/compiler']).toEqual(
         backwardCompatibleVersions.angularV14.angularVersion
       );
-      expect(dependencies['@angular/core']).toEqual(
+      expect(dependencies['@angular-classic/core']).toEqual(
         backwardCompatibleVersions.angularV14.angularVersion
       );
-      expect(dependencies['@angular/platform-browser']).toEqual(
+      expect(dependencies['@angular-classic/platform-browser']).toEqual(
         backwardCompatibleVersions.angularV14.angularVersion
       );
-      expect(dependencies['@angular/platform-browser-dynamic']).toEqual(
+      expect(dependencies['@angular-classic/platform-browser-dynamic']).toEqual(
         backwardCompatibleVersions.angularV14.angularVersion
       );
-      expect(dependencies['@angular/router']).toEqual(
+      expect(dependencies['@angular-classic/router']).toEqual(
         backwardCompatibleVersions.angularV14.angularVersion
       );
       expect(dependencies['rxjs']).toEqual(
@@ -393,13 +393,13 @@ bar
       expect(dependencies['zone.js']).toEqual(
         backwardCompatibleVersions.angularV14.zoneJsVersion
       );
-      expect(devDependencies['@angular/cli']).toEqual(
+      expect(devDependencies['@angular-classic/cli']).toEqual(
         backwardCompatibleVersions.angularV14.angularDevkitVersion
       );
-      expect(devDependencies['@angular/compiler-cli']).toEqual(
+      expect(devDependencies['@angular-classic/compiler-cli']).toEqual(
         backwardCompatibleVersions.angularV14.angularDevkitVersion
       );
-      expect(devDependencies['@angular/language-service']).toEqual(
+      expect(devDependencies['@angular-classic/language-service']).toEqual(
         backwardCompatibleVersions.angularV14.angularVersion
       );
       expect(devDependencies['@angular-devkit/build-angular']).toEqual(
@@ -416,7 +416,7 @@ bar
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '~14.0.0',
+          '@angular-classic/core': '~14.0.0',
         },
         devDependencies: {
           ...json.devDependencies,
@@ -430,19 +430,19 @@ bar
       // ASSERT
       const { dependencies, devDependencies } = readJson(tree, 'package.json');
 
-      expect(dependencies['@angular/animations']).toBe('~14.0.0');
-      expect(dependencies['@angular/common']).toBe('~14.0.0');
-      expect(dependencies['@angular/compiler']).toBe('~14.0.0');
-      expect(dependencies['@angular/core']).toBe('~14.0.0');
-      expect(dependencies['@angular/platform-browser']).toBe('~14.0.0');
-      expect(dependencies['@angular/platform-browser-dynamic']).toBe('~14.0.0');
-      expect(dependencies['@angular/router']).toBe('~14.0.0');
+      expect(dependencies['@angular-classic/animations']).toBe('~14.0.0');
+      expect(dependencies['@angular-classic/common']).toBe('~14.0.0');
+      expect(dependencies['@angular-classic/compiler']).toBe('~14.0.0');
+      expect(dependencies['@angular-classic/core']).toBe('~14.0.0');
+      expect(dependencies['@angular-classic/platform-browser']).toBe('~14.0.0');
+      expect(dependencies['@angular-classic/platform-browser-dynamic']).toBe('~14.0.0');
+      expect(dependencies['@angular-classic/router']).toBe('~14.0.0');
       expect(dependencies['rxjs']).toBeDefined();
       expect(dependencies['tslib']).toBeDefined();
       expect(dependencies['zone.js']).toBeDefined();
-      expect(devDependencies['@angular/cli']).toBe('~14.0.0');
-      expect(devDependencies['@angular/compiler-cli']).toBe('~14.0.0');
-      expect(devDependencies['@angular/language-service']).toBe('~14.0.0');
+      expect(devDependencies['@angular-classic/cli']).toBe('~14.0.0');
+      expect(devDependencies['@angular-classic/compiler-cli']).toBe('~14.0.0');
+      expect(devDependencies['@angular-classic/language-service']).toBe('~14.0.0');
       expect(devDependencies['@angular-devkit/build-angular']).toBe('~14.0.0');
     });
 
@@ -452,8 +452,8 @@ bar
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/animations': '~14.0.1',
-          '@angular/core': '~14.0.0',
+          '@angular-classic/animations': '~14.0.1',
+          '@angular-classic/core': '~14.0.0',
         },
       }));
 
@@ -463,8 +463,8 @@ bar
       // ASSERT
       const { dependencies } = readJson(tree, 'package.json');
 
-      expect(dependencies['@angular/animations']).toBe('~14.0.1');
-      expect(dependencies['@angular/core']).toBe('~14.0.0');
+      expect(dependencies['@angular-classic/animations']).toBe('~14.0.1');
+      expect(dependencies['@angular-classic/core']).toBe('~14.0.0');
     });
 
     describe('--unit-test-runner', () => {
@@ -512,10 +512,10 @@ bar
           const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
           // ASSERT
-          expect(generators['@nx/angular:application'].unitTestRunner).toEqual(
+          expect(generators['@angular-classic/nx-angular:application'].unitTestRunner).toEqual(
             'jest'
           );
-          expect(generators['@nx/angular:library'].unitTestRunner).toEqual(
+          expect(generators['@angular-classic/nx-angular:library'].unitTestRunner).toEqual(
             'jest'
           );
         });
@@ -552,7 +552,7 @@ bar
           const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
           // ASSERT
-          expect(generators['@nx/angular:application'].e2eTestRunner).toEqual(
+          expect(generators['@angular-classic/nx-angular:application'].e2eTestRunner).toEqual(
             'cypress'
           );
         });
@@ -572,10 +572,10 @@ bar
           const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
           // ASSERT
-          expect(generators['@nx/angular:application'].linter).toEqual(
+          expect(generators['@angular-classic/nx-angular:application'].linter).toEqual(
             'eslint'
           );
-          expect(generators['@nx/angular:library'].linter).toEqual('eslint');
+          expect(generators['@angular-classic/nx-angular:library'].linter).toEqual('eslint');
         });
       });
 
@@ -591,8 +591,8 @@ bar
           const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
 
           // ASSERT
-          expect(generators['@nx/angular:application'].linter).toEqual('none');
-          expect(generators['@nx/angular:library'].linter).toEqual('none');
+          expect(generators['@angular-classic/nx-angular:application'].linter).toEqual('none');
+          expect(generators['@angular-classic/nx-angular:library'].linter).toEqual('none');
         });
       });
     });
