@@ -1,4 +1,4 @@
-<h1 align="center">Angular Classic (NG Classic) - A different view on our beloved Angular</h1>
+<h1 align="center">Angular Classic (NG Classic)</h1>
 
 <p align="center">
   <img src="aio/src/assets/images/logos/ng-classic/ng-classic.png" alt="angular-logo" width="120px" height="120px"/>
