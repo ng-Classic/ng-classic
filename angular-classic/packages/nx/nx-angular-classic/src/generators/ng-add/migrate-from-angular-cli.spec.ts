@@ -213,7 +213,7 @@ describe('workspace', () => {
       expect(tree.exists('angular.json')).toBe(false);
     });
 
-    it('should set the default collection to @angular-classic/nx-angular', async () => {
+    it('should set the default collection to @nx/angular', async () => {
       await migrateFromAngularCli(tree, {});
       expect(
         readJson(tree, 'nx.json').cli?.defaultCollection
@@ -253,7 +253,7 @@ describe('workspace', () => {
       tree.write('projects/lib1/README.md', '');
       tree.write('projects/lib1/src/public-api.ts', '');
       writeJson(tree, 'angular.json', {
-        $schema: './node_modules/@angular-classic/cli/lib/config/schema.json',
+        $schema: './node_modules/@angular/cli/lib/config/schema.json',
         version: 1,
         defaultProject: 'lib1',
         newProjectRoot: 'projects',
@@ -297,7 +297,7 @@ describe('workspace', () => {
       tree.write('projects/lib1/README.md', '');
       tree.write('projects/lib1/src/public-api.ts', '');
       writeJson(tree, 'angular.json', {
-        $schema: './node_modules/@angular-classic/cli/lib/config/schema.json',
+        $schema: './node_modules/@angular/cli/lib/config/schema.json',
         version: 1,
         defaultProject: 'app1',
         newProjectRoot: 'projects',
@@ -374,7 +374,7 @@ describe('workspace', () => {
       tree.write('projects/app2/e2e/protractor.conf.js', '');
       writeJson(tree, 'projects/app2/e2e/tsconfig.json', {});
       writeJson(tree, 'angular.json', {
-        $schema: './node_modules/@angular-classic/cli/lib/config/schema.json',
+        $schema: './node_modules/@angular/cli/lib/config/schema.json',
         version: 1,
         defaultProject: 'app1',
         newProjectRoot: 'projects',
@@ -461,7 +461,7 @@ describe('workspace', () => {
       tree.write('projects/lib2/README.md', '');
       tree.write('projects/lib2/src/public-api.ts', '');
       writeJson(tree, 'angular.json', {
-        $schema: './node_modules/@angular-classic/cli/lib/config/schema.json',
+        $schema: './node_modules/@angular/cli/lib/config/schema.json',
         version: 1,
         defaultProject: 'app1',
         newProjectRoot: 'projects',
