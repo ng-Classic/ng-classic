@@ -123,7 +123,7 @@ function getAppConfigFileContents(
   const buildAppConfigFileContents = (
     importStatements: string[],
     appConfig: string
-  ) => `import { ApplicationConfig } from '@angular-classic/core';${importStatements.join(
+  ) => `import { ApplicationConfig } from '@angular/core';${importStatements.join(
     '\n'
   )}
         export const appConfig: ApplicationConfig = ${appConfig}`;
