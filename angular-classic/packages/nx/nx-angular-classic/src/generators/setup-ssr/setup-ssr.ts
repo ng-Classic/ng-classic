@@ -31,7 +31,7 @@ export async function setupSsr(tree: Tree, schema: Schema) {
     tree,
     {
       '@nguniversal/express-engine': pkgVersions.ngUniversalVersion,
-      '@angular-classic/platform-server': pkgVersions.angularVersion,
+      '@angular/platform-server': pkgVersions.angularVersion,
     },
     {
       '@nguniversal/builders': pkgVersions.ngUniversalVersion,
