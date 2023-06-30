@@ -506,7 +506,7 @@ describe('app', () => {
             "overrides": [
               {
                 "extends": [
-                  "plugin:@angular-classic/nx-angular",
+                  "plugin:@nx/angular",
                   "plugin:@angular-eslint/template/process-inline-templates",
                 ],
                 "files": [
@@ -533,7 +533,7 @@ describe('app', () => {
               },
               {
                 "extends": [
-                  "plugin:@angular-classic/nx-angular-template",
+                  "plugin:@nx/angular-template",
                 ],
                 "files": [
                   "*.html",
@@ -666,7 +666,7 @@ describe('app', () => {
       // should not update workspace configuration since --strict=true is the default
       const nxJson = readJson<NxJsonConfiguration>(appTree, 'nx.json');
       expect(
-        nxJson.generators['@angular-classic/nx-angular:application'].strict
+        nxJson.generators['@nx/angular:application'].strict
       ).not.toBeDefined();
     });
 
@@ -676,7 +676,7 @@ describe('app', () => {
       // check to see if the workspace configuration has been updated to turn off
       // strict mode by default in future applications
       const nxJson = readJson<NxJsonConfiguration>(appTree, 'nx.json');
-      expect(nxJson.generators['@angular-classic/nx-angular:application'].strict).toBe(false);
+      expect(nxJson.generators['@nx/angular:application'].strict).toBe(false);
     });
   });
 
@@ -712,7 +712,7 @@ describe('app', () => {
       // ASSERT
       expect(appTree.read('apps/app1/tailwind.config.js', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@angular-classic/nx-angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */
@@ -845,7 +845,7 @@ describe('app', () => {
     // ASSERT
     expect(appTree.read('apps/myapp/src/main.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
+      "import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
       import { AppModule } from './app/app.module';
 
       platformBrowserDynamic()
@@ -877,7 +877,7 @@ describe('app', () => {
     updateJson(tree, 'package.json', (json) => ({
       ...json,
       dependencies: {
-        '@angular-classic/core': '14.0.0',
+        '@angular/core': '14.0.0',
       },
     }));
 
