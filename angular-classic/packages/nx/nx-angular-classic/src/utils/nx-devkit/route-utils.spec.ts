@@ -10,7 +10,7 @@ describe.each([
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     tree.write(
       'routes-file.ts',
-      `import { ${routeType} } from '@angular-classic/router';
+      `import { ${routeType} } from '@angular/router';
       export const ROUTES: ${routes} = [];`
     );
 
@@ -26,7 +26,7 @@ describe.each([
 
     // ASSERT
     expect(tree.read('routes-file.ts', 'utf-8')).toMatchInlineSnapshot(`
-      "import { ${routeType} } from '@angular-classic/router';
+      "import { ${routeType} } from '@angular/router';
       import { ROUTES } from '@proj/lib';
             export const ROUTES: ${routes} = [
           {path: 'test', children: ROUTES },];"
@@ -38,7 +38,7 @@ describe.each([
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     tree.write(
       'routes-file.ts',
-      `import { ${routeType} } from '@angular-classic/router';
+      `import { ${routeType} } from '@angular/router';
       export const ROUTES: ${routes} = [];`
     );
 
@@ -51,7 +51,7 @@ describe.each([
 
     // ASSERT
     expect(tree.read('routes-file.ts', 'utf-8')).toMatchInlineSnapshot(`
-      "import { ${routeType} } from '@angular-classic/router';
+      "import { ${routeType} } from '@angular/router';
             export const ROUTES: ${routes} = [
           {path: 'test', loadChildren: () => import('@proj/lib').then(m => m.ROUTES) },];"
     `);
@@ -63,7 +63,7 @@ describe.each([
     tree.write(
       'routes-file.ts',
       `import { NxWelcomeComponent } from './nx-welcome.component';
-    import { ${routeType} } from '@angular-classic/router';
+    import { ${routeType} } from '@angular/router';
 
     export const appRoutes: ${routes} = [
       {
@@ -85,7 +85,7 @@ describe.each([
     // ASSERT
     expect(tree.read('routes-file.ts', 'utf-8'))
       .toEqual(`import { NxWelcomeComponent } from './nx-welcome.component';
-    import { ${routeType} } from '@angular-classic/router';
+    import { ${routeType} } from '@angular/router';
 
     export const appRoutes: ${routes} = [
     {
@@ -103,7 +103,7 @@ describe.each([
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     tree.write(
       'routes-file.ts',
-      `import { ${routeType} } from '@angular-classic/router';
+      `import { ${routeType} } from '@angular/router';
       export const ROUTES: ${routes} = [{path: 'test', loadChildren: () => import('@proj/lib').then(m => m.ROUTES) }];`
     );
 
@@ -112,7 +112,7 @@ describe.each([
 
     // ASSERT
     expect(tree.read('routes-file.ts', 'utf-8'))
-      .toEqual(`import { ${routeType} } from '@angular-classic/router';
+      .toEqual(`import { ${routeType} } from '@angular/router';
       export const ROUTES: ${routes} = [{path: 'test', loadChildren: () => import('@proj/lib').then(m => m.ROUTES) , providers: [provideStore()]}];`);
   });
 
@@ -121,7 +121,7 @@ describe.each([
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     tree.write(
       'routes-file.ts',
-      `import { ${routeType} } from '@angular-classic/router';
+      `import { ${routeType} } from '@angular/router';
       export const ROUTES: ${routes} = [{path: 'test', providers: [provideState()], loadChildren: () => import('@proj/lib').then(m => m.ROUTES) }];`
     );
 
@@ -130,7 +130,7 @@ describe.each([
 
     // ASSERT
     expect(tree.read('routes-file.ts', 'utf-8'))
-      .toEqual(`import { ${routeType} } from '@angular-classic/router';
+      .toEqual(`import { ${routeType} } from '@angular/router';
       export const ROUTES: ${routes} = [{path: 'test', providers: [provideState(), provideStore()], loadChildren: () => import('@proj/lib').then(m => m.ROUTES) }];`);
   });
 
@@ -139,7 +139,7 @@ describe.each([
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     tree.write(
       'routes-file.ts',
-      `import { ${routeType} } from '@angular-classic/router';
+      `import { ${routeType} } from '@angular/router';
       export const ROUTES: ${routes} = [{path: '', providers: [provideState()], children: [{ path: 'test' }]}];`
     );
 
@@ -148,7 +148,7 @@ describe.each([
 
     // ASSERT
     expect(tree.read('routes-file.ts', 'utf-8'))
-      .toEqual(`import { ${routeType} } from '@angular-classic/router';
+      .toEqual(`import { ${routeType} } from '@angular/router';
       export const ROUTES: ${routes} = [{path: '', providers: [provideState()], children: [{ path: 'test' , providers: [provideStore()]}]}];`);
   });
 });
