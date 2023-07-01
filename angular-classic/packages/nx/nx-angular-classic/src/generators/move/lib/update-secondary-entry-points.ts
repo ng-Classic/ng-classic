@@ -10,8 +10,8 @@ import type { NormalizedSchema } from '../schema';
 
 const libraryExecutors = [
   '@angular-devkit/build-angular:ng-packagr',
-  '@nx/angular:ng-packagr-lite',
-  '@nx/angular:package',
+  '@angular-classic/nx-angular:ng-packagr-lite',
+  '@angular-classic/nx-angular:package',
   // TODO(v17): remove when @nrwl/* scope is removed
   '@nrwl/angular:ng-packagr-lite',
   '@nrwl/angular:package',

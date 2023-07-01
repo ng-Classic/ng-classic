@@ -570,7 +570,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.build).toStrictEqual({
-        executor: '@nx/angular:package',
+        executor: '@angular-classic/nx-angular:package',
         options: { project: 'libs/lib1/ng-package.json' },
         configurations: {
           production: { tsConfig: 'libs/lib1/tsconfig.lib.prod.json' },
@@ -602,7 +602,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.myCustomBuildTarget).toStrictEqual({
-        executor: '@nx/angular:package',
+        executor: '@angular-classic/nx-angular:package',
         options: { project: 'libs/lib1/ng-package.json' },
         configurations: {
           production: { tsConfig: 'libs/lib1/tsconfig.lib.prod.json' },
@@ -639,7 +639,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.build).toStrictEqual({
-        executor: '@nx/angular:package',
+        executor: '@angular-classic/nx-angular:package',
         configurations: {
           production: {
             project: 'libs/lib1/ng-package.json',
@@ -677,7 +677,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.build).toStrictEqual({
-        executor: '@nx/angular:package',
+        executor: '@angular-classic/nx-angular:package',
         options: {
           project: 'libs/lib1/ng-package.json',
           tsConfig: 'libs/lib1/tsconfig.lib.json',
