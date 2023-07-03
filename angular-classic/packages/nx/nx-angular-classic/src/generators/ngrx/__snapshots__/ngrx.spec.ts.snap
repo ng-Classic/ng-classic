@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ngrx NgModule Syntax generated unit tests should generate specs for the ngrx effects 1`] = `
-"import { TestBed } from '@angular/core/testing';
+"import { TestBed } from '@angular-classic/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Action } from '@ngrx/store';
 import { provideMockStore } from '@ngrx/store/testing';
@@ -44,11 +44,11 @@ describe('SuperUsersEffects', () => {
 `;
 
 exports[`ngrx NgModule Syntax generated unit tests should generate specs for the ngrx facade 1`] = `
-"import { NgModule } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
+"import { NgModule } from '@angular-classic/core';
+import { TestBed } from '@angular-classic/core/testing';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule, Store } from '@ngrx/store';
-import { readFirst } from '@nx/angular/testing';
+import { readFirst } from '@angular-classic/nx-angular/testing';
 
 import * as SuperUsersActions from './super-users.actions';
 import { SuperUsersEffects } from './super-users.effects';
@@ -269,9 +269,9 @@ describe('SuperUsers Selectors', () => {
 `;
 
 exports[`ngrx NgModule Syntax should add a root module with feature module when minimal is set to false 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
@@ -304,9 +304,9 @@ export class AppModule {}
 `;
 
 exports[`ngrx NgModule Syntax should add a root module with feature module when minimal is set to false using --module 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
@@ -339,9 +339,9 @@ export class AppModule {}
 `;
 
 exports[`ngrx NgModule Syntax should add an empty root module when minimal and root are set to true 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
@@ -400,7 +400,7 @@ export const loadUsersFailure = createAction(
 `;
 
 exports[`ngrx NgModule Syntax should generate the ngrx effects 1`] = `
-"import { Injectable, inject } from '@angular/core';
+"import { Injectable, inject } from '@angular-classic/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { switchMap, catchError, of } from 'rxjs';
 import * as UsersActions from './users.actions';
@@ -425,7 +425,7 @@ export class UsersEffects {
 `;
 
 exports[`ngrx NgModule Syntax should generate the ngrx facade 1`] = `
-"import { Injectable, inject } from '@angular/core';
+"import { Injectable, inject } from '@angular-classic/core';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as UsersActions from './users.actions';
@@ -545,9 +545,9 @@ export const selectEntity = createSelector(
 `;
 
 exports[`ngrx NgModule Syntax should not generate imports when skipImport is true 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot([])],
@@ -597,7 +597,7 @@ export * from './lib/flights.module';
 `;
 
 exports[`ngrx Standalone APIs should add a feature module when route is non-empty 1`] = `
-"import { Routes } from '@angular/router';
+"import { Routes } from '@angular-classic/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -617,7 +617,7 @@ export const appRoutes: Routes = [
 `;
 
 exports[`ngrx Standalone APIs should add a feature module when route is set to default 1`] = `
-"import { Routes } from '@angular/router';
+"import { Routes } from '@angular-classic/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -637,7 +637,7 @@ export const appRoutes: Routes = [
 `;
 
 exports[`ngrx Standalone APIs should add a feature module when route is undefined 1`] = `
-"import { Routes } from '@angular/router';
+"import { Routes } from '@angular-classic/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -657,7 +657,7 @@ export const appRoutes: Routes = [
 `;
 
 exports[`ngrx Standalone APIs should add a root module with feature module when minimal is set to false 1`] = `
-"import { bootstrapApplication } from '@angular/platform-browser';
+"import { bootstrapApplication } from '@angular-classic/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 
@@ -668,11 +668,11 @@ bootstrapApplication(AppComponent, appConfig).catch((err) =>
 `;
 
 exports[`ngrx Standalone APIs should add a root module with feature module when minimal is set to false 2`] = `
-"import { ApplicationConfig } from '@angular/core';
+"import { ApplicationConfig } from '@angular-classic/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
-} from '@angular/router';
+} from '@angular-classic/router';
 import { appRoutes } from './app.routes';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -692,7 +692,7 @@ export const appConfig: ApplicationConfig = {
 `;
 
 exports[`ngrx Standalone APIs should add an empty provideStore when minimal and root are set to true 1`] = `
-"import { bootstrapApplication } from '@angular/platform-browser';
+"import { bootstrapApplication } from '@angular-classic/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 
@@ -703,11 +703,11 @@ bootstrapApplication(AppComponent, appConfig).catch((err) =>
 `;
 
 exports[`ngrx Standalone APIs should add an empty provideStore when minimal and root are set to true 2`] = `
-"import { ApplicationConfig } from '@angular/core';
+"import { ApplicationConfig } from '@angular-classic/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
-} from '@angular/router';
+} from '@angular-classic/router';
 import { appRoutes } from './app.routes';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -723,7 +723,7 @@ export const appConfig: ApplicationConfig = {
 `;
 
 exports[`ngrx Standalone APIs should add facade provider when facade is true 1`] = `
-"import { bootstrapApplication } from '@angular/platform-browser';
+"import { bootstrapApplication } from '@angular-classic/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 
@@ -734,11 +734,11 @@ bootstrapApplication(AppComponent, appConfig).catch((err) =>
 `;
 
 exports[`ngrx Standalone APIs should add facade provider when facade is true 2`] = `
-"import { ApplicationConfig } from '@angular/core';
+"import { ApplicationConfig } from '@angular-classic/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
-} from '@angular/router';
+} from '@angular-classic/router';
 import { appRoutes } from './app.routes';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -760,7 +760,7 @@ export const appConfig: ApplicationConfig = {
 `;
 
 exports[`ngrx Standalone APIs should add facade provider when facade is true and --root is false 1`] = `
-"import { Routes } from '@angular/router';
+"import { Routes } from '@angular-classic/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -782,7 +782,7 @@ export const appRoutes: Routes = [
 `;
 
 exports[`ngrx angular v14 support should generate the ngrx effects using "inject" for versions >= 14.1.0 1`] = `
-"import { Injectable, inject } from '@angular/core';
+"import { Injectable, inject } from '@angular-classic/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { switchMap, catchError, of } from 'rxjs';
 import * as UsersActions from './users.actions';
@@ -807,7 +807,7 @@ export class UsersEffects {
 `;
 
 exports[`ngrx angular v14 support should generate the ngrx effects with no usage of "inject" 1`] = `
-"import { Injectable } from '@angular/core';
+"import { Injectable } from '@angular-classic/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 
 import * as UsersActions from './users.actions';
@@ -834,7 +834,7 @@ export class UsersEffects {
 `;
 
 exports[`ngrx angular v14 support should generate the ngrx facade using "inject" for versions >= 14.1.0 1`] = `
-"import { Injectable, inject } from '@angular/core';
+"import { Injectable, inject } from '@angular-classic/core';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as UsersActions from './users.actions';
@@ -865,7 +865,7 @@ export class UsersFacade {
 `;
 
 exports[`ngrx angular v14 support should generate the ngrx facade with no usage of "inject" 1`] = `
-"import { Injectable } from '@angular/core';
+"import { Injectable } from '@angular-classic/core';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as UsersActions from './users.actions';
@@ -896,7 +896,7 @@ export class UsersFacade {
 `;
 
 exports[`ngrx rxjs v6 support should generate the ngrx effects using rxjs operators imported from "rxjs/operators" 1`] = `
-"import { Injectable, inject } from '@angular/core';
+"import { Injectable, inject } from '@angular-classic/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { switchMap, catchError } from 'rxjs/operators';

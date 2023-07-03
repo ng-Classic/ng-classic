@@ -35,11 +35,11 @@ export function insertNgModuleProperty(
     tsModule.ScriptTarget.ESNext
   );
 
-  const coreImport = findImport(sourceFile, '@angular/core');
+  const coreImport = findImport(sourceFile, '@angular-classic/core');
 
   if (!coreImport) {
     throw new Error(
-      `There are no imports from "@angular/core" in ${modulePath}.`
+      `There are no imports from "@angular-classic/core" in ${modulePath}.`
     );
   }
 

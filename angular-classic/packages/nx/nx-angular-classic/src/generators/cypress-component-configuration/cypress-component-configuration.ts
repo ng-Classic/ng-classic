@@ -63,7 +63,7 @@ async function addFiles(
   );
   tree.write(
     cyConfigFile,
-    `import { nxComponentTestingPreset } from '@nx/angular/plugins/component-testing';\n${updatedCyConfig}`
+    `import { nxComponentTestingPreset } from '@angular-classic/nx-angular/plugins/component-testing';\n${updatedCyConfig}`
   );
 
   const componentFile = joinPathFragments(
@@ -127,7 +127,7 @@ async function updateProjectConfig(
       project: options.project,
       buildTarget: options.buildTarget,
       validExecutorNames: new Set<string>([
-        '@nx/angular:webpack-browser',
+        '@angular-classic/nx-angular:webpack-browser',
         '@nrwl/angular:webpack-browser',
         '@angular-devkit/build-angular:browser',
       ]),
