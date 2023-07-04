@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`component Generator --flat should create the component correctly and export it in the entry point 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -13,7 +13,7 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator --flat should create the component correctly and not export it when "export=false" 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -25,7 +25,7 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator --module should import the component correctly to the module file when flat is false 1`] = `
-"import { NgModule } from '@angular/core';
+"import { NgModule } from '@angular-classic/core';
 import { ExampleComponent } from './example/example.component';
 
 @NgModule({
@@ -37,7 +37,7 @@ export class LibModule {}
 `;
 
 exports[`component Generator --path should create the component correctly and export it in the entry point 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -49,7 +49,7 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator secondary entry points should create the component correctly and export it in the entry point 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -67,7 +67,7 @@ export * from './lib/example/example.component';
 `;
 
 exports[`component Generator should create component files correctly: component 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -79,7 +79,7 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator should create component files correctly: component test file 1`] = `
-"import { ComponentFixture, TestBed } from '@angular/core/testing';
+"import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
 import { ExampleComponent } from './example.component';
 
 describe('ExampleComponent', () => {
@@ -116,7 +116,7 @@ exports[`component Generator should create component files correctly: template 1
 `;
 
 exports[`component Generator should create the component correctly and export it in the entry point when "export=true" 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -134,8 +134,8 @@ export * from './lib/example/example.component';
 `;
 
 exports[`component Generator should create the component correctly and export it in the entry point when is standalone and "export=true" 1`] = `
-"import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+"import { Component } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 
 @Component({
   selector: 'proj-example',
@@ -149,7 +149,7 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator should create the component correctly and not export it in the entry point when "export=false" 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -161,8 +161,8 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator should create the component correctly and not export it in the entry point when is standalone and "export=false" 1`] = `
-"import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+"import { Component } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 
 @Component({
   selector: 'proj-example',
@@ -176,7 +176,7 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator should create the component correctly and not export it when "--skip-import=true" 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -188,7 +188,7 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator should create the component correctly but not export it in the entry point when it does not exist 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -200,7 +200,7 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator should inline styles when --inline-style=true 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
@@ -212,7 +212,7 @@ export class ExampleComponent {}
 `;
 
 exports[`component Generator should inline template when --inline-template=true 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-example',
