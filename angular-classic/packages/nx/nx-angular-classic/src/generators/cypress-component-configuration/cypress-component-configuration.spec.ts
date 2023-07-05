@@ -365,7 +365,7 @@ describe('Cypress Component Testing Configuration', () => {
 
     expect(tree.read('libs/my-lib/cypress.config.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { nxComponentTestingPreset } from '@angular-classic/nx-angular/plugins/component-testing';
+      "import { nxComponentTestingPreset } from '@nx/angular/plugins/component-testing';
       import { defineConfig } from 'cypress';
 
       export default defineConfig({
@@ -735,7 +735,7 @@ describe('Cypress Component Testing Configuration', () => {
     tree.write(
       `libs/multiple-components/src/lib/cmp-one.component.ts`,
       `
-import { Component, OnInit } from '@angular-classic/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'proj-cmp-one',
@@ -767,8 +767,8 @@ export class CmpMultiComponent implements OnInit {
     tree.write(
       '',
       `
-import { NgModule } from '@angular-classic/core';
-import { CommonModule } from '@angular-classic/common';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { CmpOneComponent, CmpMultiComponent } from './cmp-one.component';
 import { CmpTwoComponent } from './cmp-two.component';
 
