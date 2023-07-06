@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular-classic/core';
+import { Injectable, inject } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';<% if (!importFromOperators) { %>
 import { switchMap, catchError, of } from 'rxjs';<% } else { %>
 import { of } from 'rxjs';
