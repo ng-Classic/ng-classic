@@ -1,5 +1,5 @@
-import { Component<% if(viewEncapsulation) { %>, ViewEncapsulation<% } %> } from '@angular/core';<% if(routing) { %>
-import { RouterModule } from '@angular/router';<% } %><% if(!minimal) { %>
+import { Component<% if(viewEncapsulation) { %>, ViewEncapsulation<% } %> } from '@angular-classic/core';<% if(routing) { %>
+import { RouterModule } from '@angular-classic/router';<% } %><% if(!minimal) { %>
 import { NxWelcomeComponent } from './nx-welcome.component';<% } %>
 
 @Component({

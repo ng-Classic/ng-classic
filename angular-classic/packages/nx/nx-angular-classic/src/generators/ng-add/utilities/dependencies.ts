@@ -13,7 +13,7 @@ export function ensureAngularDevKitPeerDependenciesAreInstalled(
 
   const { devDependencies, dependencies } = readJson(tree, 'package.json');
   let angularCliVersion =
-    devDependencies?.['@angular/cli'] ?? dependencies?.['@angular/cli'];
+    devDependencies?.['@angular-classic/cli'] ?? dependencies?.['@angular-classic/cli'];
 
   if (!angularCliVersion) {
     const angularMajorVersion = getInstalledAngularMajorVersion(tree);
