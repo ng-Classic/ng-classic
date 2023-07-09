@@ -29,7 +29,7 @@ describe('componentCypressSpec generator', () => {
 
     tree.write(
       `apps/${appName}/src/app/test-button/test-button.component.ts`,
-      `import { Component, Input } from '@angular-classic/core';
+      `import { Component, Input } from '@angular/core';
 
 export type ButtonStyle = 'default' | 'primary' | 'accent';
 
