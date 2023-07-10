@@ -1,10 +1,10 @@
 describe('temporary disabled', () => {
   it('temporary disabled', () => {});
 });
-// import { Component, Injectable } from '@angular/core';
-// import { fakeAsync, TestBed, tick } from '@angular/core/testing';
-// import { Router } from '@angular/router';
-// import { RouterTestingModule } from '@angular/router/testing';
+// import { Component, Injectable } from '@angular-classic/core';
+// import { fakeAsync, TestBed, tick } from '@angular-classic/core/testing';
+// import { Router } from '@angular-classic/router';
+// import { RouterTestingModule } from '@angular-classic/router/testing';
 // import { Actions, Effect, EffectsModule, ofType } from '@ngrx/effects';
 // import { provideMockActions } from '@ngrx/effects/testing';
 // import {
