@@ -8,13 +8,13 @@ describe('checkSharedNpmPackagesMatchExpected', () => {
             plugins: [
                 new ModuleFederationPlugin({
                     shared: share({
-                        '@angular/core': {
+                        '@angular-classic/core': {
                             singleton: true,
                             strictVersion: true,
                             requiredVersion: 'auto',
                             includeSecondaries: true
                         },
-                        '@angular/common': {
+                        '@angular-classic/common': {
                             singleton: true,
                             strictVersion: true,
                             requiredVersion: 'auto',
@@ -46,11 +46,11 @@ describe('checkSharedNpmPackagesMatchExpected', () => {
             plugins: [
                 new ModuleFederationPlugin({
                     shared: {
-                        '@angular/core': {
+                        '@angular-classic/core': {
                             singleton: true,
                             strictVersion: true,
                         },
-                        '@angular/common': {
+                        '@angular-classic/common': {
                             singleton: true,
                             strictVersion: true,
                         },
@@ -78,11 +78,11 @@ describe('checkSharedNpmPackagesMatchExpected', () => {
             plugins: [
                 new ModuleFederationPlugin({
                     shared: {
-                        '@angular/core': {
+                        '@angular-classic/core': {
                             singleton: true,
                             strictVersion: true,
                         },
-                        '@angular/common': {
+                        '@angular-classic/common': {
                             singleton: true,
                             strictVersion: false,
                         },
@@ -148,13 +148,13 @@ describe('checkSharedNpmPackagesMatchExpected', () => {
             plugins: [
                 new ModuleFederationPlugin({
                     shared: share({
-                        '@angular/core': {
+                        '@angular-classic/core': {
                             singleton: true,
                             strictVersion: true,
                             requiredVersion: 'auto',
                             includeSecondaries: true
                         },
-                        '@angular/common': {
+                        '@angular-classic/common': {
                             singleton: true,
                             strictVersion: false,
                             requiredVersion: 'auto',
