@@ -166,8 +166,8 @@ export function updatePackageJson(tree: Tree): void {
 
     packageJson.devDependencies = packageJson.devDependencies ?? {};
     packageJson.dependencies = packageJson.dependencies ?? {};
-    if (!packageJson.devDependencies['@angular/cli']) {
-      packageJson.devDependencies['@angular/cli'] = angularDevkitVersion;
+    if (!packageJson.devDependencies['@angular-classic/cli']) {
+      packageJson.devDependencies['@angular-classic/cli'] = angularDevkitVersion;
     }
     if (
       !packageJson.devDependencies['@nx/workspace'] &&

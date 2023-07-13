@@ -104,7 +104,7 @@ function getModuleFederationConfig(
     };
   } catch {
     throw new Error(
-      `Could not load ${moduleFederationConfigPath}. Was this project generated with "@nx/angular:host"?`
+      `Could not load ${moduleFederationConfigPath}. Was this project generated with "@angular-classic/nx-angular:host"?`
     );
   }
 }
