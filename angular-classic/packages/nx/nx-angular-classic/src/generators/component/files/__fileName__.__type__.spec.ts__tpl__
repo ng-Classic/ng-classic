@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { <%= className %><%= typeClassName %> } from './<%= fileName %><%= type ? '.' + type: '' %>';
 
 describe('<%= className %><%= typeClassName %>', () => {
