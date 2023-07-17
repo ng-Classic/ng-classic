@@ -29,7 +29,7 @@ describe('update-router-initial-navigation migration', () => {
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular/router',
+            target: 'npm:@angular-classic/router',
           },
         ],
       },
@@ -41,11 +41,11 @@ describe('update-router-initial-navigation migration', () => {
     });
     tree.write(
       'apps/app1/src/app/app.module.ts',
-      `import { NgModule } from '@angular/core';
-      import { BrowserModule } from '@angular/platform-browser';
+      `import { NgModule } from '@angular-classic/core';
+      import { BrowserModule } from '@angular-classic/platform-browser';
       import { AppComponent } from './app.component';
       import { NxWelcomeComponent } from './nx-welcome.component';
-      import { RouterModule } from '@angular/router';
+      import { RouterModule } from '@angular-classic/router';
 
       @NgModule({
         declarations: [AppComponent, NxWelcomeComponent],
@@ -62,11 +62,11 @@ describe('update-router-initial-navigation migration', () => {
 
     expect(tree.read('apps/app1/src/app/app.module.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { BrowserModule } from '@angular/platform-browser';
+      "import { NgModule } from '@angular-classic/core';
+      import { BrowserModule } from '@angular-classic/platform-browser';
       import { AppComponent } from './app.component';
       import { NxWelcomeComponent } from './nx-welcome.component';
-      import { RouterModule } from '@angular/router';
+      import { RouterModule } from '@angular-classic/router';
 
       @NgModule({
         declarations: [AppComponent, NxWelcomeComponent],
@@ -91,7 +91,7 @@ describe('update-router-initial-navigation migration', () => {
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular/router',
+            target: 'npm:@angular-classic/router',
           },
         ],
       },
@@ -101,11 +101,11 @@ describe('update-router-initial-navigation migration', () => {
       root: 'apps/app1',
       sourceRoot: 'apps/app1/src',
     });
-    const moduleContent = `import { NgModule } from '@angular/core';
-    import { BrowserModule } from '@angular/platform-browser';
+    const moduleContent = `import { NgModule } from '@angular-classic/core';
+    import { BrowserModule } from '@angular-classic/platform-browser';
     import { AppComponent } from './app.component';
     import { NxWelcomeComponent } from './nx-welcome.component';
-    import { RouterModule } from '@angular/router';
+    import { RouterModule } from '@angular-classic/router';
 
     @NgModule({
       declarations: [AppComponent, NxWelcomeComponent],
@@ -122,11 +122,11 @@ describe('update-router-initial-navigation migration', () => {
 
     expect(tree.read('apps/app1/src/app/app.module.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { BrowserModule } from '@angular/platform-browser';
+      "import { NgModule } from '@angular-classic/core';
+      import { BrowserModule } from '@angular-classic/platform-browser';
       import { AppComponent } from './app.component';
       import { NxWelcomeComponent } from './nx-welcome.component';
-      import { RouterModule } from '@angular/router';
+      import { RouterModule } from '@angular-classic/router';
 
       @NgModule({
         declarations: [AppComponent, NxWelcomeComponent],
@@ -151,7 +151,7 @@ describe('update-router-initial-navigation migration', () => {
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular/router',
+            target: 'npm:@angular-classic/router',
           },
         ],
       },
@@ -161,11 +161,11 @@ describe('update-router-initial-navigation migration', () => {
       root: 'apps/app1',
       sourceRoot: 'apps/app1/src',
     });
-    const moduleContent = `import { NgModule } from '@angular/core';
-    import { BrowserModule } from '@angular/platform-browser';
+    const moduleContent = `import { NgModule } from '@angular-classic/core';
+    import { BrowserModule } from '@angular-classic/platform-browser';
     import { AppComponent } from './app.component';
     import { NxWelcomeComponent } from './nx-welcome.component';
-    import { RouterModule } from '@angular/router';
+    import { RouterModule } from '@angular-classic/router';
 
     @NgModule({
       declarations: [AppComponent, NxWelcomeComponent],
@@ -182,11 +182,11 @@ describe('update-router-initial-navigation migration', () => {
 
     expect(tree.read('apps/app1/src/app/app.module.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { BrowserModule } from '@angular/platform-browser';
+      "import { NgModule } from '@angular-classic/core';
+      import { BrowserModule } from '@angular-classic/platform-browser';
       import { AppComponent } from './app.component';
       import { NxWelcomeComponent } from './nx-welcome.component';
-      import { RouterModule } from '@angular/router';
+      import { RouterModule } from '@angular-classic/router';
 
       @NgModule({
         declarations: [AppComponent, NxWelcomeComponent],
@@ -208,7 +208,7 @@ describe('update-router-initial-navigation migration', () => {
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular/router',
+            target: 'npm:@angular-classic/router',
           },
         ],
       },
@@ -218,11 +218,11 @@ describe('update-router-initial-navigation migration', () => {
       root: 'apps/app1',
       sourceRoot: 'apps/app1/src',
     });
-    const moduleContent = `import { NgModule } from '@angular/core';
-    import { BrowserModule } from '@angular/platform-browser';
+    const moduleContent = `import { NgModule } from '@angular-classic/core';
+    import { BrowserModule } from '@angular-classic/platform-browser';
     import { AppComponent } from './app.component';
     import { NxWelcomeComponent } from './nx-welcome.component';
-    import { RouterModule } from '@angular/router';
+    import { RouterModule } from '@angular-classic/router';
 
     @NgModule({
       declarations: [AppComponent, NxWelcomeComponent],
@@ -236,11 +236,11 @@ describe('update-router-initial-navigation migration', () => {
 
     expect(tree.read('apps/app1/src/app/app.module.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { BrowserModule } from '@angular/platform-browser';
+      "import { NgModule } from '@angular-classic/core';
+      import { BrowserModule } from '@angular-classic/platform-browser';
       import { AppComponent } from './app.component';
       import { NxWelcomeComponent } from './nx-welcome.component';
-      import { RouterModule } from '@angular/router';
+      import { RouterModule } from '@angular-classic/router';
 
       @NgModule({
         declarations: [AppComponent, NxWelcomeComponent],
@@ -259,7 +259,7 @@ describe('update-router-initial-navigation migration', () => {
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular/router',
+            target: 'npm:@angular-classic/router',
           },
         ],
       },
@@ -269,7 +269,7 @@ describe('update-router-initial-navigation migration', () => {
       root: 'apps/app1',
       sourceRoot: 'apps/app1/src',
     });
-    const moduleContent = `import { NgModule } from '@angular/core';
+    const moduleContent = `import { NgModule } from '@angular-classic/core';
     import { OtherModule } from '@foo/bar';
     import { FooComponent } from './foo.component';
 
@@ -285,7 +285,7 @@ describe('update-router-initial-navigation migration', () => {
 
     expect(tree.read('apps/app1/src/app/app.module.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
+      "import { NgModule } from '@angular-classic/core';
       import { OtherModule } from '@foo/bar';
       import { FooComponent } from './foo.component';
 
@@ -302,14 +302,14 @@ describe('update-router-initial-navigation migration', () => {
     `);
   });
 
-  it('should do nothing when not using "@angular/router"', async () => {
+  it('should do nothing when not using "@angular-classic/router"', async () => {
     projectGraph = {
       dependencies: {
         app1: [
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular/common',
+            target: 'npm:@angular-classic/common',
           },
         ],
       },
@@ -319,8 +319,8 @@ describe('update-router-initial-navigation migration', () => {
       root: 'apps/app1',
       sourceRoot: 'apps/app1/src',
     });
-    const moduleContent = `import { NgModule } from '@angular/core';
-    import { BrowserModule } from '@angular/platform-browser';
+    const moduleContent = `import { NgModule } from '@angular-classic/core';
+    import { BrowserModule } from '@angular-classic/platform-browser';
     import { AppComponent } from './app.component';
     import { NxWelcomeComponent } from './nx-welcome.component';
 
@@ -336,8 +336,8 @@ describe('update-router-initial-navigation migration', () => {
 
     expect(tree.read('apps/app1/src/app/app.module.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { BrowserModule } from '@angular/platform-browser';
+      "import { NgModule } from '@angular-classic/core';
+      import { BrowserModule } from '@angular-classic/platform-browser';
       import { AppComponent } from './app.component';
       import { NxWelcomeComponent } from './nx-welcome.component';
 
@@ -358,7 +358,7 @@ describe('update-router-initial-navigation migration', () => {
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular/router',
+            target: 'npm:@angular-classic/router',
           },
         ],
       },
@@ -368,8 +368,8 @@ describe('update-router-initial-navigation migration', () => {
       root: 'apps/app1',
       sourceRoot: 'apps/app1/src',
     });
-    const moduleContent = `import { NgModule } from '@angular/core';
-    import { RouterModule } from '@angular/router';
+    const moduleContent = `import { NgModule } from '@angular-classic/core';
+    import { RouterModule } from '@angular-classic/router';
     import { FooComponent } from './foo.component';
 
     @NgModule({
@@ -384,8 +384,8 @@ describe('update-router-initial-navigation migration', () => {
 
     expect(tree.read('apps/app1/src/app/foo/foo.module.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { RouterModule } from '@angular/router';
+      "import { NgModule } from '@angular-classic/core';
+      import { RouterModule } from '@angular-classic/router';
       import { FooComponent } from './foo.component';
 
       @NgModule({
