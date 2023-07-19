@@ -255,7 +255,7 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
   "overrides": [
     {
       "extends": [
-        "plugin:@angular-classic/nx-angular",
+        "plugin:@nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates",
       ],
       "files": [
@@ -287,7 +287,7 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
     },
     {
       "extends": [
-        "plugin:@angular-classic/nx-angular-template",
+        "plugin:@nx/angular-template",
       ],
       "files": [
         "*.html",
@@ -556,8 +556,8 @@ exports[`convert-tslint-to-eslint should work for Angular applications 1`] = `
     "@angular-eslint/template-parser": "~16.0.0",
     "@nx/eslint-plugin": "0.0.1",
     "@nx/linter": "0.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.58.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-import": "latest",
@@ -845,7 +845,7 @@ exports[`convert-tslint-to-eslint should work for Angular applications 4`] = `
   "overrides": [
     {
       "extends": [
-        "plugin:@angular-classic/nx-angular",
+        "plugin:@nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates",
       ],
       "files": [
@@ -883,7 +883,7 @@ exports[`convert-tslint-to-eslint should work for Angular applications 4`] = `
     },
     {
       "extends": [
-        "plugin:@angular-classic/nx-angular-template",
+        "plugin:@nx/angular-template",
       ],
       "files": [
         "*.html",
@@ -908,8 +908,8 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 1`] = `
     "@angular-eslint/template-parser": "~16.0.0",
     "@nx/eslint-plugin": "0.0.1",
     "@nx/linter": "0.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.58.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-import": "latest",
@@ -1197,7 +1197,7 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 4`] = `
   "overrides": [
     {
       "extends": [
-        "plugin:@angular-classic/nx-angular",
+        "plugin:@nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates",
       ],
       "files": [
@@ -1229,7 +1229,7 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 4`] = `
     },
     {
       "extends": [
-        "plugin:@angular-classic/nx-angular-template",
+        "plugin:@nx/angular-template",
       ],
       "files": [
         "*.html",
