@@ -1,6 +1,6 @@
 import 'zone.js/dist/zone-node';
 
-import { APP_BASE_HREF } from '@angular/common';
+import { APP_BASE_HREF } from '@angular-classic/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import * as cors from 'cors';
