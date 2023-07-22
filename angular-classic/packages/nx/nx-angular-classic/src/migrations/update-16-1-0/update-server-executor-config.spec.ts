@@ -5,7 +5,7 @@ import migration from './update-server-executor-config';
 
 describe.each([
   '@angular-devkit/build-angular:server',
-  '@nx/angular:server',
+  '@angular-classic/nx-angular:server',
   '@nrwl/angular:server',
 ])('update-server-executor-config migration', (executor) => {
   let tree: Tree;
