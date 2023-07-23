@@ -32,7 +32,7 @@ function _angularImportsFromNode(
       return {};
   }
 
-  if (!modulePath.startsWith('@angular/')) {
+  if (!modulePath.startsWith('@angular-classic/')) {
     return {};
   }
 
@@ -82,7 +82,7 @@ export function isStandalone(
   const decoratorMetadata = getDecoratorMetadata(
     sourceFile,
     decoratorName,
-    '@angular/core'
+    '@angular-classic/core'
   );
   return decoratorMetadata.some((node) =>
     node.getText().includes('standalone: true')
@@ -167,7 +167,7 @@ function _addSymbolToDecoratorMetadata(
   expression: string,
   decoratorName: DecoratorName
 ): ts.SourceFile {
-  const nodes = getDecoratorMetadata(source, decoratorName, '@angular/core');
+  const nodes = getDecoratorMetadata(source, decoratorName, '@angular-classic/core');
   let node: any = nodes[0]; // tslint:disable-line:no-any
 
   // Find the decorator declaration.
@@ -325,7 +325,7 @@ export function removeFromNgModule(
   modulePath: string,
   property: string
 ): ts.SourceFile {
-  const nodes = getDecoratorMetadata(source, 'NgModule', '@angular/core');
+  const nodes = getDecoratorMetadata(source, 'NgModule', '@angular-classic/core');
   let node: any = nodes[0]; // tslint:disable-line:no-any
 
   // Find the decorator declaration.
@@ -338,7 +338,7 @@ export function removeFromNgModule(
     source,
     property,
     'NgModule',
-    '@angular/core'
+    '@angular-classic/core'
   );
   if (matchingProperty) {
     return removeChange(
@@ -575,7 +575,7 @@ export function getBootstrapComponent(
     source,
     'bootstrap',
     'NgModule',
-    '@angular/core'
+    '@angular-classic/core'
   );
   if (!bootstrap) {
     throw new Error(`Cannot find bootstrap components in '${moduleClassName}'`);
@@ -632,7 +632,7 @@ function getListOfRoutes(
     source,
     'imports',
     'NgModule',
-    '@angular/core'
+    '@angular-classic/core'
   );
 
   if (
