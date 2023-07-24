@@ -26,8 +26,8 @@ describe('SCAM Directive Generator', () => {
       'utf-8'
     );
     expect(directiveSource).toMatchInlineSnapshot(`
-      "import { Directive, NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { Directive, NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
 
       @Directive({
         selector: '[projExample]',
@@ -69,8 +69,8 @@ describe('SCAM Directive Generator', () => {
       'utf-8'
     );
     expect(directiveModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
       import { ExampleDirective } from './example.directive';
 
       @NgModule({
@@ -111,8 +111,8 @@ describe('SCAM Directive Generator', () => {
       'utf-8'
     );
     expect(directiveModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
       import { ExampleDirective } from './example.directive';
 
       @NgModule({
@@ -159,8 +159,8 @@ describe('SCAM Directive Generator', () => {
         'utf-8'
       );
       expect(directiveSource).toMatchInlineSnapshot(`
-        "import { Directive, NgModule } from '@angular-classic/core';
-        import { CommonModule } from '@angular-classic/common';
+        "import { Directive, NgModule } from '@angular/core';
+        import { CommonModule } from '@angular/common';
 
         @Directive({
           selector: '[projExample]',
@@ -203,8 +203,8 @@ describe('SCAM Directive Generator', () => {
         'utf-8'
       );
       expect(directiveSource).toMatchInlineSnapshot(`
-        "import { Directive, NgModule } from '@angular-classic/core';
-        import { CommonModule } from '@angular-classic/common';
+        "import { Directive, NgModule } from '@angular/core';
+        import { CommonModule } from '@angular/common';
 
         @Directive({
           selector: '[projExample]',
