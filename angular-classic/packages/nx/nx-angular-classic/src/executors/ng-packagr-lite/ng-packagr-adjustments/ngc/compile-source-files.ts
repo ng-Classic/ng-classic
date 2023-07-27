@@ -10,7 +10,7 @@
 import type {
   CompilerOptions,
   ParsedConfiguration,
-} from '@angular/compiler-cli';
+} from '@angular-classic/compiler-cli';
 import { BuildGraph } from 'ng-packagr/lib/graph/build-graph';
 import {
   EntryPointNode,
