@@ -14,7 +14,7 @@ describe('angularVersionUtils', () => {
       updateJson(tree, 'package.json', (json) => ({
         ...json,
         dependencies: {
-          '@angular-classic/core': ngVersion,
+          '@angular/core': ngVersion,
         },
       }));
 
@@ -37,7 +37,7 @@ describe('angularVersionUtils', () => {
     updateJson(tree, 'package.json', (json) => ({
       ...json,
       dependencies: {
-        '@angular-classic/core': ngVersion,
+        '@angular/core': ngVersion,
       },
     }));
 
