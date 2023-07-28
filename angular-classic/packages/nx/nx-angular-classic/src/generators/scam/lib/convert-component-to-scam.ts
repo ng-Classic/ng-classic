@@ -35,14 +35,14 @@ export function convertComponentToScam(tree: Tree, options: NormalizedSchema) {
       source,
       options.filePath,
       'NgModule',
-      '@angular-classic/core'
+      '@angular/core'
     );
     source = insertImport(
       tree,
       source,
       options.filePath,
       'CommonModule',
-      '@angular-classic/common'
+      '@angular/common'
     );
 
     let updatedComponentSource = source.getText();
@@ -69,8 +69,8 @@ function getModuleFileContent(
   componentClassName: string,
   componentFileName: string
 ): string {
-  return `import { NgModule } from '@angular-classic/core';
-import { CommonModule } from '@angular-classic/common';
+  return `import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ${componentClassName} } from './${componentFileName}';
 ${getNgModuleDeclaration(componentClassName)}`;
 }
