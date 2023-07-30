@@ -96,7 +96,7 @@ async function getProjectsWithAngularRouter(
     .filter(([node, dep]) =>
       dep.some(
         ({ target }) =>
-          target === 'npm:@angular-classic/router' &&
+          target === 'npm:@angular/router' &&
           !projectGraph.externalNodes?.[node]
       )
     )
