@@ -27,8 +27,8 @@ describe('scam-to-standalone', () => {
 
     expect(tree.read('apps/foo/src/app/bar/bar.component.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { Component, NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { Component, NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
 
       @Component({
         standalone: true,
@@ -54,7 +54,7 @@ describe('scam-to-standalone', () => {
 
     expect(tree.read('apps/foo/src/app/bar/bar.component.spec.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { ComponentFixture, TestBed } from '@angular/core/testing';
+      "import { ComponentFixture, TestBed } from '@angular-classic/core/testing';
       import { BarComponent } from './bar.component';
 
       describe('BarComponent', () => {
@@ -85,7 +85,7 @@ describe('scam-to-standalone', () => {
     updateJson(tree, 'package.json', (json) => ({
       ...json,
       dependencies: {
-        '@angular/core': '14.0.0',
+        '@angular-classic/core': '14.0.0',
       },
     }));
 

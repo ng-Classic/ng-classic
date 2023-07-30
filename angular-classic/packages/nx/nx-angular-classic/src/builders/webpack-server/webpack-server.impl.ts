@@ -52,7 +52,7 @@ function buildServerAppWithCustomWebpackConfiguration(
     switchMap(({ executeServerBuilder }) =>
       executeServerBuilder(options, context as any, {
         webpackConfiguration: async (baseWebpackConfig) => {
-          // Angular 15 auto includes code from @angular/platform-server
+          // Angular 15 auto includes code from @angular-classic/platform-server
           // This includes the code outside the shared scope created by ModuleFederation
           // This code will be included in the generated code from our generators,
           // maintaining it within the shared scope.
@@ -71,7 +71,7 @@ function buildServerAppWithCustomWebpackConfiguration(
               .includes('UniversalFederationPlugin')
           ) {
             mergedConfig.entry.main = mergedConfig.entry.main.filter(
-              (m) => !m.startsWith('@angular/platform-server/init')
+              (m) => !m.startsWith('@angular-classic/platform-server/init')
             );
             mergedConfig.module.rules = mergedConfig.module.rules.filter((m) =>
               !m.loader
