@@ -15,7 +15,7 @@ describe('Angular AST Utils', () => {
     // ARRANGE
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     const pathToModule = `my.module.ts`;
-    const originalContents = `import { NgModule } from '@angular-classic/core';
+    const originalContents = `import { NgModule } from '@angular/core';
     
     @NgModule({})
     export class MyModule {}
@@ -38,7 +38,7 @@ describe('Angular AST Utils', () => {
 
     // ASSERT
     expect(tree.read(pathToModule, 'utf-8')).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
+      "import { NgModule } from '@angular/core';
           
           @NgModule({  imports: [CommonModule]
       })
@@ -51,7 +51,7 @@ describe('Angular AST Utils', () => {
     // ARRANGE
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     const pathToFile = `my.component.ts`;
-    const originalContents = `import { Component } from '@angular-classic/core';
+    const originalContents = `import { Component } from '@angular/core';
     
     @Component({})
     export class MyComponent {}
@@ -74,7 +74,7 @@ describe('Angular AST Utils', () => {
 
     // ASSERT
     expect(tree.read(pathToFile, 'utf-8')).toMatchInlineSnapshot(`
-      "import { Component } from '@angular-classic/core';
+      "import { Component } from '@angular/core';
           
           @Component({  imports: [CommonModule]
       })
@@ -87,7 +87,7 @@ describe('Angular AST Utils', () => {
     // ARRANGE
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     const pathToFile = `my.directive.ts`;
-    const originalContents = `import { Directive } from '@angular-classic/core';
+    const originalContents = `import { Directive } from '@angular/core';
     
     @Directive({})
     export class MyDirective {}
@@ -110,7 +110,7 @@ describe('Angular AST Utils', () => {
 
     // ASSERT
     expect(tree.read(pathToFile, 'utf-8')).toMatchInlineSnapshot(`
-      "import { Directive } from '@angular-classic/core';
+      "import { Directive } from '@angular/core';
           
           @Directive({  imports: [CommonModule]
       })
@@ -123,7 +123,7 @@ describe('Angular AST Utils', () => {
     // ARRANGE
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     const pathToFile = `my.pipe.ts`;
-    const originalContents = `import { Pipe } from '@angular-classic/core';
+    const originalContents = `import { Pipe } from '@angular/core';
     
     @Pipe({})
     export class MyPipe {}
@@ -146,7 +146,7 @@ describe('Angular AST Utils', () => {
 
     // ASSERT
     expect(tree.read(pathToFile, 'utf-8')).toMatchInlineSnapshot(`
-      "import { Pipe } from '@angular-classic/core';
+      "import { Pipe } from '@angular/core';
           
           @Pipe({  imports: [CommonModule]
       })
@@ -159,7 +159,7 @@ describe('Angular AST Utils', () => {
     // ARRANGE
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     const pathToFile = `my.component.ts`;
-    const originalContents = `import { Component } from '@angular-classic/core';
+    const originalContents = `import { Component } from '@angular/core';
     
     @Component({
       standalone: true
@@ -186,7 +186,7 @@ describe('Angular AST Utils', () => {
     // ARRANGE
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     const pathToFile = `my.component.ts`;
-    const originalContents = `import { Component } from '@angular-classic/core';
+    const originalContents = `import { Component } from '@angular/core';
     
     @Component({
       standalone: false
@@ -213,7 +213,7 @@ describe('Angular AST Utils', () => {
     // ARRANGE
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     const pathToFile = `my.directive.ts`;
-    const originalContents = `import { Directive } from '@angular-classic/core';
+    const originalContents = `import { Directive } from '@angular/core';
     
     @Directive({
       standalone: true
@@ -240,7 +240,7 @@ describe('Angular AST Utils', () => {
     // ARRANGE
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     const pathToFile = `my.pipe.ts`;
-    const originalContents = `import { Pipe } from '@angular-classic/core';
+    const originalContents = `import { Pipe } from '@angular/core';
     
     @Pipe({
       standalone: true
@@ -268,11 +268,11 @@ describe('Angular AST Utils', () => {
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     tree.write(
       'main.ts',
-      `import { bootstrapApplication } from '@angular-classic/platform-browser';
+      `import { bootstrapApplication } from '@angular/platform-browser';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
-} from '@angular-classic/router';
+} from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { appRoutes } from './app/app.routes';
 
@@ -288,11 +288,11 @@ bootstrapApplication(AppComponent, {
 
     // ASSERT
     expect(tree.read('main.ts', 'utf-8')).toMatchInlineSnapshot(`
-      "import { bootstrapApplication } from '@angular-classic/platform-browser';
+      "import { bootstrapApplication } from '@angular/platform-browser';
       import {
         provideRouter,
         withEnabledBlockingInitialNavigation,
-      } from '@angular-classic/router';
+      } from '@angular/router';
       import { AppComponent } from './app/app.component';
       import { appRoutes } from './app/app.routes';
 
@@ -309,8 +309,8 @@ bootstrapApplication(AppComponent, {
     const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
     tree.write(
       'app.config.ts',
-      `import { ApplicationConfig } from '@angular-classic/core';
-import { provideRouter } from '@angular-classic/router';
+      `import { ApplicationConfig } from '@angular/core';
+import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 
@@ -324,8 +324,8 @@ export const appConfig: ApplicationConfig = {
 
     // ASSERT
     expect(tree.read('app.config.ts', 'utf-8')).toMatchInlineSnapshot(`
-      "import { ApplicationConfig } from '@angular-classic/core';
-      import { provideRouter } from '@angular-classic/router';
+      "import { ApplicationConfig } from '@angular/core';
+      import { provideRouter } from '@angular/router';
 
       import { routes } from './app.routes';
 
