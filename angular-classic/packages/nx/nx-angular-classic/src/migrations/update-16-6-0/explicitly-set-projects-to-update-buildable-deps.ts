@@ -7,9 +7,9 @@ import {
 } from '@nx/devkit';
 
 const executors = new Set([
-  '@nx/angular:ng-packagr-lite',
+  '@angular-classic/nx-angular:ng-packagr-lite',
   '@nrwl/angular:ng-packagr-lite',
-  '@nx/angular:package',
+  '@angular-classic/nx-angular:package',
   '@nrwl/angular:package',
 ]);
 
