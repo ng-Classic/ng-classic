@@ -38,8 +38,8 @@ describe('convertComponentToScam', () => {
       'utf-8'
     );
     expect(componentSource).toMatchInlineSnapshot(`
-      "import { Component, NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { Component, NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
 
       @Component({
         selector: 'proj-example',
@@ -91,8 +91,8 @@ describe('convertComponentToScam', () => {
       'utf-8'
     );
     expect(componentModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
       import { ExampleComponent } from './example.component';
 
       @NgModule({
@@ -140,8 +140,8 @@ describe('convertComponentToScam', () => {
       'utf-8'
     );
     expect(componentSource).toMatchInlineSnapshot(`
-      "import { Component, NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { Component, NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
 
       @Component({
         selector: 'proj-example',
@@ -195,8 +195,8 @@ describe('convertComponentToScam', () => {
       'utf-8'
     );
     expect(componentModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
       import { ExampleComponent } from './example.component';
 
       @NgModule({
@@ -246,8 +246,8 @@ describe('convertComponentToScam', () => {
       'utf-8'
     );
     expect(componentSource).toMatchInlineSnapshot(`
-      "import { Component, NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { Component, NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
 
       @Component({
         selector: 'proj-example',
@@ -303,8 +303,8 @@ describe('convertComponentToScam', () => {
       'utf-8'
     );
     expect(componentModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
       import { ExampleRandom } from './example.random';
 
       @NgModule({
@@ -353,8 +353,8 @@ describe('convertComponentToScam', () => {
       'utf-8'
     );
     expect(componentModuleSource).toMatchInlineSnapshot(`
-      "import { Component, NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { Component, NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
 
       @Component({
         selector: 'proj-example',
@@ -409,8 +409,8 @@ describe('convertComponentToScam', () => {
       'utf-8'
     );
     expect(componentModuleSource).toMatchInlineSnapshot(`
-      "import { Component, NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { Component, NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
 
       @Component({
         selector: 'proj-example',
