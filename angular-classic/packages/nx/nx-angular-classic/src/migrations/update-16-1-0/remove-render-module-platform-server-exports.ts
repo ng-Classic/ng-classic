@@ -8,7 +8,7 @@ export default async function (tree: Tree) {
     if (path.endsWith('.ts') && !path.endsWith('.d.ts')) {
       const content = tree.read(path, 'utf8');
       if (
-        content.includes('@angular/platform-server') &&
+        content.includes('@angular-classic/platform-server') &&
         content.includes('renderModule')
       ) {
         const source = ts.createSourceFile(
@@ -27,12 +27,12 @@ export default async function (tree: Tree) {
               ts.isExportDeclaration(node) &&
               node.moduleSpecifier &&
               ts.isStringLiteral(node.moduleSpecifier) &&
-              node.moduleSpecifier.text === '@angular/platform-server' &&
+              node.moduleSpecifier.text === '@angular-classic/platform-server' &&
               node.exportClause &&
               ts.isNamedExports(node.exportClause)
             )
           ) {
-            // Not a @angular/platform-server named export.
+            // Not a @angular-classic/platform-server named export.
             return;
           }
 
