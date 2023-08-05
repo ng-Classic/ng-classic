@@ -125,10 +125,10 @@ describe('Init MF', () => {
 
       expect(serve.executor).toEqual(
         type === 'host'
-          ? '@nx/angular:module-federation-dev-server'
-          : '@nx/angular:webpack-dev-server'
+          ? '@angular-classic/nx-angular:module-federation-dev-server'
+          : '@angular-classic/nx-angular:webpack-dev-server'
       );
-      expect(build.executor).toEqual('@nx/angular:webpack-browser');
+      expect(build.executor).toEqual('@angular-classic/nx-angular:webpack-browser');
       expect(build.options.customWebpackConfig.path).toEqual(
         `apps/${app}/webpack.config.js`
       );
@@ -336,7 +336,7 @@ describe('Init MF', () => {
       ...json,
       dependencies: {
         ...json.dependencies,
-        '@angular/core': '14.1.0',
+        '@angular-classic/core': '14.1.0',
       },
     }));
 
@@ -357,10 +357,10 @@ describe('Init MF', () => {
     // ASSERT
     expect(tree.read('apps/ng14/src/bootstrap.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { bootstrapApplication } from '@angular/platform-browser';
+      "import { bootstrapApplication } from '@angular-classic/platform-browser';
       import { appConfig } from './app/app.config';
       import { RemoteEntryComponent } from './app/remote-entry/entry.component';
-      import { enableProdMode } from '@angular/core';
+      import { enableProdMode } from '@angular-classic/core';
       import { environment } from './environments/environment';
       if (environment.production) {
         enableProdMode();
@@ -411,7 +411,7 @@ describe('Init MF', () => {
       ...json,
       dependencies: {
         ...json.dependencies,
-        '@angular/core': '14.0.0',
+        '@angular-classic/core': '14.0.0',
       },
     }));
 
