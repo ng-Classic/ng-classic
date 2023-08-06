@@ -1,3 +1,3 @@
-import { Route } from '@angular/router';
+import { Route } from '@angular-classic/router';
 
 export const appRoutes: Route[] = [];
