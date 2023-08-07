@@ -1,4 +1,4 @@
-import { Component } from '@angular-classic/core';
+import { Component } from '@angular/core';
 
 @Component({<% if (prefix) { %>
   selector: '<%= prefix %>-<%= appName %>-entry',

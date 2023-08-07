@@ -12,7 +12,7 @@ import {
 } from '@nx/devkit';
 
 const GENERATORS = ['application', 'host', 'remote'];
-const CANDIDATE_GENERATOR_COLLECTIONS = ['@nrwl/angular', '@angular-classic/nx-angular'];
+const CANDIDATE_GENERATOR_COLLECTIONS = ['@nrwl/angular', '@nx/angular'];
 
 export default async function removeProtractorDefaults(tree: Tree) {
   const nxJson = readNxJson(tree);
@@ -65,7 +65,7 @@ function updateE2ETestRunner(
 
     if (
       !GENERATORS.map((v) => `@nrwl/angular:${v}`).includes(generatorName) &&
-      !GENERATORS.map((v) => `@angular-classic/nx-angular:${v}`).includes(generatorName)
+      !GENERATORS.map((v) => `@nx/angular:${v}`).includes(generatorName)
     ) {
       continue;
     }
