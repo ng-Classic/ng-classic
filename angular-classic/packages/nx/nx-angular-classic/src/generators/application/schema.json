@@ -105,8 +105,9 @@
     },
     "e2eTestRunner": {
       "type": "string",
-      "enum": ["cypress", "none"],
+      "enum": ["cypress", "playwright", "none"],
       "description": "Test runner to use for end to end (E2E) tests.",
+      "x-prompt": "Which E2E test runner would you like to use?",
       "default": "cypress"
     },
     "tags": {
@@ -164,6 +165,12 @@
       "description": "Generate a Angular app with a minimal setup.",
       "type": "boolean",
       "default": false
+    },
+    "bundler": {
+      "description": "Bundler to use to build the application.",
+      "type": "string",
+      "enum": ["webpack", "esbuild"],
+      "default": "webpack"
     }
   },
   "additionalProperties": false,
