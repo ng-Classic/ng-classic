@@ -7,12 +7,12 @@
     "test": {},
     "build-ng": {
       "dependsOn": ["build-base"],
-      "executor": "@angular-classic/nx-angular:package",
+      "executor": "@nx/angular:package",
       "options": {
         "project": "packages/angular/ng-package.json",
         "tsConfig": "packages/angular/tsconfig.lib.runtime.json"
       },
-      "outputs": ["build/packages/angular"]
+      "outputs": ["{workspaceRoot}/build/packages/angular"]
     },
     "build-base": {
       "executor": "@nx/js:tsc",
@@ -74,5 +74,5 @@
     },
     "lint": {}
   },
-  "implicitDependencies": ["workspace", "cypress", "jest"]
+  "implicitDependencies": []
 }
