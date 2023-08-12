@@ -18,7 +18,7 @@ export function fixBootstrap(tree: Tree, appRoot: string, options: Schema) {
 
   const bootstrapImportCode = `import('./bootstrap').catch(err => console.error(err))`;
 
-  const fetchMFManifestCode = `import { setRemoteDefinitions } from '@nx/angular/mf';
+  const fetchMFManifestCode = `import { setRemoteDefinitions } from '@angular-classic/nx-angular/mf';
 
   fetch('/assets/module-federation.manifest.json')
   .then((res) => res.json())
@@ -35,12 +35,12 @@ export function fixBootstrap(tree: Tree, appRoot: string, options: Schema) {
 
 const standaloneBootstrapCode = (
   includeEnvironments: boolean = false
-) => `import {bootstrapApplication} from "@angular/platform-browser";
+) => `import {bootstrapApplication} from "@angular-classic/platform-browser";
 import {appConfig} from './app/app.config';
 import {RemoteEntryComponent} from './app/remote-entry/entry.component';
 ${
   includeEnvironments
-    ? `import {enableProdMode} from '@angular/core';
+    ? `import {enableProdMode} from '@angular-classic/core';
 import {environment} from './environments/environment';
 if(environment.production) {
   enableProdMode();
