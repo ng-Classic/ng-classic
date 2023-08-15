@@ -1,8 +1,8 @@
-import type { Type } from '@angular-classic/core';
+import type { Type } from '@angular/core';
 import type {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
-} from '@angular-classic/router';
+} from '@angular/router';
 import type { RouterNavigationAction } from '@ngrx/router-store';
 import { ROUTER_NAVIGATION } from '@ngrx/router-store';
 import type { Action } from '@ngrx/store';

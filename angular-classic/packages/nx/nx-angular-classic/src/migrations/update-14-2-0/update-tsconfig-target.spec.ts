@@ -41,7 +41,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -80,7 +80,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -124,7 +124,7 @@ describe('update-tsconfig-target migration', () => {
             {
               type: DependencyType.static,
               source: 'app1',
-              target: 'npm:@angular-classic/core',
+              target: 'npm:@angular/core',
             },
           ],
         },
@@ -168,7 +168,7 @@ describe('update-tsconfig-target migration', () => {
             {
               type: DependencyType.static,
               source: 'lib1',
-              target: 'npm:@angular-classic/core',
+              target: 'npm:@angular/core',
             },
           ],
         },
@@ -207,7 +207,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'lib1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -241,7 +241,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'lib1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -300,7 +300,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'lib1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -346,7 +346,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'lib1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -382,7 +382,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'lib1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -412,7 +412,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'lib1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -448,7 +448,7 @@ describe('update-tsconfig-target migration', () => {
             {
               type: DependencyType.static,
               source: 'app1',
-              target: 'npm:@angular-classic/core',
+              target: 'npm:@angular/core',
             },
           ],
         },
@@ -512,7 +512,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'lib1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -553,7 +553,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'lib1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
@@ -587,7 +587,7 @@ describe('update-tsconfig-target migration', () => {
           {
             type: DependencyType.static,
             source: 'app1',
-            target: 'npm:@angular-classic/core',
+            target: 'npm:@angular/core',
           },
         ],
       },
