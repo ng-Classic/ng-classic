@@ -23,9 +23,9 @@ describe('explicitly-set-projects-to-update-buildable-deps migration', () => {
   });
 
   it.each([
-    '@nx/angular:ng-packagr-lite',
+    '@angular-classic/nx-angular:ng-packagr-lite',
     '@nrwl/angular:ng-packagr-lite',
-    '@nx/angular:package',
+    '@angular-classic/nx-angular:package',
     '@nrwl/angular:package',
   ])(
     'should set updateBuildableProjectDepsInPackageJson option to "true" when not specified in target using "%s"',
@@ -46,9 +46,9 @@ describe('explicitly-set-projects-to-update-buildable-deps migration', () => {
   );
 
   it.each([
-    '@nx/angular:ng-packagr-lite',
+    '@angular-classic/nx-angular:ng-packagr-lite',
     '@nrwl/angular:ng-packagr-lite',
-    '@nx/angular:package',
+    '@angular-classic/nx-angular:package',
     '@nrwl/angular:package',
   ])(
     'should set updateBuildableProjectDepsInPackageJson option to "true" when target has no options object defined using "%s"',
@@ -69,9 +69,9 @@ describe('explicitly-set-projects-to-update-buildable-deps migration', () => {
   );
 
   it.each([
-    '@nx/angular:ng-packagr-lite',
+    '@angular-classic/nx-angular:ng-packagr-lite',
     '@nrwl/angular:ng-packagr-lite',
-    '@nx/angular:package',
+    '@angular-classic/nx-angular:package',
     '@nrwl/angular:package',
   ])(
     'should not overwrite updateBuildableProjectDepsInPackageJson option when it is specified in target using "%s"',

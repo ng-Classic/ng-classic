@@ -124,7 +124,7 @@ function getAppConfigFileContents(
   const buildAppConfigFileContents = (
     importStatements: string[],
     appConfig: string
-  ) => `import { ApplicationConfig } from '@angular/core';${importStatements.join(
+  ) => `import { ApplicationConfig } from '@angular-classic/core';${importStatements.join(
     '\n'
   )}
         export const appConfig: ApplicationConfig = ${appConfig}`;
@@ -165,7 +165,7 @@ export default async function extractStandaloneConfig(tree: Tree) {
   }
 
   const projects = await getProjectsFilteredByDependencies(tree, [
-    'npm:@angular/core',
+    'npm:@angular-classic/core',
   ]);
 
   const BOOTSTRAP_APPLICATION_CALL_SELECTOR =
