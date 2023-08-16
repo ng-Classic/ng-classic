@@ -26,8 +26,8 @@ describe('SCAM Pipe Generator', () => {
       'utf-8'
     );
     expect(pipeSource).toMatchInlineSnapshot(`
-      "import { Pipe, PipeTransform, NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { Pipe, PipeTransform, NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
 
       @Pipe({
         name: 'example',
@@ -71,8 +71,8 @@ describe('SCAM Pipe Generator', () => {
       'utf-8'
     );
     expect(pipeModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
       import { ExamplePipe } from './example.pipe';
 
       @NgModule({
@@ -113,8 +113,8 @@ describe('SCAM Pipe Generator', () => {
       'utf-8'
     );
     expect(pipeModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      "import { NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
       import { ExamplePipe } from './example.pipe';
 
       @NgModule({
@@ -161,8 +161,8 @@ describe('SCAM Pipe Generator', () => {
         'utf-8'
       );
       expect(pipeSource).toMatchInlineSnapshot(`
-        "import { Pipe, PipeTransform, NgModule } from '@angular-classic/core';
-        import { CommonModule } from '@angular-classic/common';
+        "import { Pipe, PipeTransform, NgModule } from '@angular/core';
+        import { CommonModule } from '@angular/common';
 
         @Pipe({
           name: 'example',
@@ -207,8 +207,8 @@ describe('SCAM Pipe Generator', () => {
         'utf-8'
       );
       expect(pipeSource).toMatchInlineSnapshot(`
-        "import { Pipe, PipeTransform, NgModule } from '@angular-classic/core';
-        import { CommonModule } from '@angular-classic/common';
+        "import { Pipe, PipeTransform, NgModule } from '@angular/core';
+        import { CommonModule } from '@angular/common';
 
         @Pipe({
           name: 'example',
