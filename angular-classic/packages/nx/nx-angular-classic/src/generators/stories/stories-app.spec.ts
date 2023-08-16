@@ -109,7 +109,7 @@ describe('angularStories generator: applications', () => {
     tree.write(
       `apps/${appName}/src/app/component/component.module.ts`,
       stripIndents`
-      import { NgModule } from '@angular/core';
+      import { NgModule } from '@angular-classic/core';
       
       @NgModule({})
       export class ComponentModule {}
@@ -118,8 +118,8 @@ describe('angularStories generator: applications', () => {
     tree.write(
       `apps/${appName}/src/app/component/component-routing.module.ts`,
       stripIndents`
-      import { NgModule } from '@angular/core';
-      import { RouterModule, Routes } from '@angular/router';
+      import { NgModule } from '@angular-classic/core';
+      import { RouterModule, Routes } from '@angular-classic/router';
       
       const routes: Routes = [];
       
