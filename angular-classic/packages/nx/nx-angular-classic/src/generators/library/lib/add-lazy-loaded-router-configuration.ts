@@ -17,7 +17,7 @@ export function addLazyLoadedRouterConfiguration(
   const constName = `${names(options.fileName).propertyName}Routes`;
   tree.write(
     joinPathFragments(dirname(options.modulePath), 'lib.routes.ts'),
-    `import { Route } from '@angular-classic/router';
+    `import { Route } from '@angular/router';
 
 export const ${constName}: Route[] = [/* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */];`
   );
@@ -35,7 +35,7 @@ export const ${constName}: Route[] = [/* {path: '', pathMatch: 'full', component
     sourceFile,
     options.modulePath,
     'RouterModule',
-    '@angular-classic/router'
+    '@angular/router'
   );
   sourceFile = insertImport(
     tree,

@@ -76,7 +76,9 @@ export function createNxJson(
               '!{projectRoot}/karma.conf.js',
             ]
           : []),
-        targets.lint ? '!{projectRoot}/.eslintrc.json' : undefined,
+        ...(targets.lint
+          ? ['!{projectRoot}/.eslintrc.json', '!{projectRoot}/eslint.config.js']
+          : []),
       ].filter(Boolean),
     },
     targetDefaults: {
@@ -91,7 +93,11 @@ export function createNxJson(
         : undefined,
       lint: targets.lint
         ? {
-            inputs: ['default', '{workspaceRoot}/.eslintrc.json'],
+            inputs: [
+              'default',
+              '{workspaceRoot}/.eslintrc.json',
+              '{workspaceRoot}/eslint.config.js',
+            ],
           }
         : undefined,
       e2e: targets.e2e
@@ -166,8 +172,8 @@ export function updatePackageJson(tree: Tree): void {
 
     packageJson.devDependencies = packageJson.devDependencies ?? {};
     packageJson.dependencies = packageJson.dependencies ?? {};
-    if (!packageJson.devDependencies['@angular-classic/cli']) {
-      packageJson.devDependencies['@angular-classic/cli'] = angularDevkitVersion;
+    if (!packageJson.devDependencies['@angular/cli']) {
+      packageJson.devDependencies['@angular/cli'] = angularDevkitVersion;
     }
     if (
       !packageJson.devDependencies['@nx/workspace'] &&
