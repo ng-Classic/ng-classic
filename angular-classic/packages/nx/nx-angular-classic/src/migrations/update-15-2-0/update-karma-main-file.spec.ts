@@ -32,11 +32,11 @@ describe(`Migration to karma builder main file (test.ts)`, () => {
     tree.write(
       'test.ts',
       stripIndents`
-  import { getTestBed } from '@angular/core/testing';
+  import { getTestBed } from '@angular-classic/core/testing';
   import {
     BrowserDynamicTestingModule,
     platformBrowserDynamicTesting
-  } from '@angular/platform-browser-dynamic/testing';
+  } from '@angular-classic/platform-browser-dynamic/testing';
   declare const require: {
     context(path: string, deep?: boolean, filter?: RegExp): {
       <T>(id: string): T;
@@ -58,11 +58,11 @@ describe(`Migration to karma builder main file (test.ts)`, () => {
     tree.write(
       'test-multiple-context.ts',
       stripIndents`
-  import { getTestBed } from '@angular/core/testing';
+  import { getTestBed } from '@angular-classic/core/testing';
   import {
     BrowserDynamicTestingModule,
     platformBrowserDynamicTesting
-  } from '@angular/platform-browser-dynamic/testing';
+  } from '@angular-classic/platform-browser-dynamic/testing';
   declare const require: {
     context(path: string, deep?: boolean, filter?: RegExp): {
       <T>(id: string): T;
@@ -88,11 +88,11 @@ describe(`Migration to karma builder main file (test.ts)`, () => {
     await updateKarmaMainFile(tree);
 
     expect(tree.read('test.ts', 'utf-8')).toMatchInlineSnapshot(`
-      "import { getTestBed } from '@angular/core/testing';
+      "import { getTestBed } from '@angular-classic/core/testing';
       import {
         BrowserDynamicTestingModule,
         platformBrowserDynamicTesting,
-      } from '@angular/platform-browser-dynamic/testing';
+      } from '@angular-classic/platform-browser-dynamic/testing';
       // First, initialize the Angular testing environment.
       getTestBed().initTestEnvironment(
         BrowserDynamicTestingModule,
@@ -107,11 +107,11 @@ describe(`Migration to karma builder main file (test.ts)`, () => {
 
     expect(tree.read('test-multiple-context.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { getTestBed } from '@angular/core/testing';
+      "import { getTestBed } from '@angular-classic/core/testing';
       import {
         BrowserDynamicTestingModule,
         platformBrowserDynamicTesting,
-      } from '@angular/platform-browser-dynamic/testing';
+      } from '@angular-classic/platform-browser-dynamic/testing';
       // First, initialize the Angular testing environment.
       getTestBed().initTestEnvironment(
         BrowserDynamicTestingModule,
