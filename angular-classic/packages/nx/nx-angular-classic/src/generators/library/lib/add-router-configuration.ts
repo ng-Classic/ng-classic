@@ -35,7 +35,7 @@ export function addRouterConfiguration(
     moduleSourceFile,
     options.modulePath,
     'RouterModule, Route',
-    '@angular/router'
+    '@angular-classic/router'
   );
   moduleSourceFile = insertImport(
     tree,
@@ -47,7 +47,7 @@ export function addRouterConfiguration(
 
   tree.write(
     joinPathFragments(dirname(options.modulePath), 'lib.routes.ts'),
-    `import { Route } from '@angular/router';
+    `import { Route } from '@angular-classic/router';
 
 export const ${constName}: Route[] = [];`
   );
