@@ -38,9 +38,9 @@ export function createApp(
   tree.write(
     appConfig.appModule,
     `
-     import { NgModule } from '@angular/core';
-     import { BrowserModule } from '@angular/platform-browser';
-     ${routing ? "import { RouterModule } from '@angular/router'" : ''};
+     import { NgModule } from '@angular-classic/core';
+     import { BrowserModule } from '@angular-classic/platform-browser';
+     ${routing ? "import { RouterModule } from '@angular-classic/router'" : ''};
      import { AppComponent } from './app.component';
      @NgModule({
        imports: [BrowserModule, ${routing ? 'RouterModule.forRoot([])' : ''}],
@@ -53,7 +53,7 @@ export function createApp(
   tree.write(
     `/apps/${appName}/src/main.ts`,
     `
-    import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+    import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
 
     import { AppModule } from './app/app.module';
 
@@ -103,8 +103,8 @@ export function createLib(tree: Tree, libName: string) {
   tree.write(
     libConfig.module,
     `
-      import { NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      import { NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
       @NgModule({
         imports: [
           CommonModule
