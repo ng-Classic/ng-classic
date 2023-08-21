@@ -52,7 +52,7 @@ export function addHydration(tree: Tree, options: Schema) {
   sourceFile = addImport(
     sourceFile,
     'provideClientHydration',
-    '@angular/platform-browser',
+    '@angular-classic/platform-browser',
     pathToClientConfigFile
   );
 
