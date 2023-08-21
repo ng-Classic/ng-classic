@@ -26,6 +26,13 @@ import type { Schema } from './schema';
 //  which is v9 while we are testing for the new v10 version
 jest.mock('@nx/cypress/src/utils/cypress-version');
 jest.mock('enquirer');
+jest.mock('@nx/devkit', () => {
+  const original = jest.requireActual('@nx/devkit');
+  return {
+    ...original,
+    ensurePackage: (pkg: string) => jest.requireActual(pkg),
+  };
+});
 
 describe('app', () => {
   let appTree: Tree;
@@ -126,6 +133,23 @@ describe('app', () => {
         appTree.read('apps/my-app-e2e/tsconfig.json', 'utf-8')
       );
       expect(tsconfigE2E).toMatchSnapshot('e2e tsconfig.json');
+    });
+
+    it('should setup playwright', async () => {
+      await generateApp(appTree, 'playwright-app', {
+        e2eTestRunner: E2eTestRunner.Playwright,
+      });
+
+      expect(
+        appTree.exists('apps/playwright-app-e2e/playwright.config.ts')
+      ).toBeTruthy();
+      expect(
+        appTree.exists('apps/playwright-app-e2e/src/example.spec.ts')
+      ).toBeTruthy();
+      expect(
+        readProjectConfiguration(appTree, 'playwright-app-e2e')?.targets?.e2e
+          ?.executor
+      ).toEqual('@nx/playwright:playwright');
     });
 
     it('should setup jest with serializers', async () => {
@@ -506,7 +530,7 @@ describe('app', () => {
             "overrides": [
               {
                 "extends": [
-                  "plugin:@angular-classic/nx-angular",
+                  "plugin:@nx/angular",
                   "plugin:@angular-eslint/template/process-inline-templates",
                 ],
                 "files": [
@@ -533,7 +557,7 @@ describe('app', () => {
               },
               {
                 "extends": [
-                  "plugin:@angular-classic/nx-angular-template",
+                  "plugin:@nx/angular-template",
                 ],
                 "files": [
                   "*.html",
@@ -666,7 +690,7 @@ describe('app', () => {
       // should not update workspace configuration since --strict=true is the default
       const nxJson = readJson<NxJsonConfiguration>(appTree, 'nx.json');
       expect(
-        nxJson.generators['@angular-classic/nx-angular:application'].strict
+        nxJson.generators['@nx/angular:application'].strict
       ).not.toBeDefined();
     });
 
@@ -676,7 +700,7 @@ describe('app', () => {
       // check to see if the workspace configuration has been updated to turn off
       // strict mode by default in future applications
       const nxJson = readJson<NxJsonConfiguration>(appTree, 'nx.json');
-      expect(nxJson.generators['@angular-classic/nx-angular:application'].strict).toBe(false);
+      expect(nxJson.generators['@nx/angular:application'].strict).toBe(false);
     });
   });
 
@@ -712,7 +736,7 @@ describe('app', () => {
       // ASSERT
       expect(appTree.read('apps/app1/tailwind.config.js', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@angular-classic/nx-angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */
@@ -845,7 +869,7 @@ describe('app', () => {
     // ASSERT
     expect(appTree.read('apps/myapp/src/main.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
+      "import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
       import { AppModule } from './app/app.module';
 
       platformBrowserDynamic()
@@ -869,6 +893,18 @@ describe('app', () => {
       const project = readProjectConfiguration(appTree, 'my-app');
       expect(project.targets.build.options['outputPath']).toBe('dist/my-app');
     });
+
+    it('should generate playwright with root project', async () => {
+      await generateApp(appTree, 'root-app', {
+        e2eTestRunner: E2eTestRunner.Playwright,
+        rootProject: true,
+      });
+      expect(
+        readProjectConfiguration(appTree, 'e2e').targets.e2e.executor
+      ).toEqual('@nx/playwright:playwright');
+      expect(appTree.exists('e2e/playwright.config.ts')).toBeTruthy();
+      expect(appTree.exists('e2e/src/example.spec.ts')).toBeTruthy();
+    });
   });
 
   it('should error correctly when Angular version does not support standalone', async () => {
@@ -877,7 +913,7 @@ describe('app', () => {
     updateJson(tree, 'package.json', (json) => ({
       ...json,
       dependencies: {
-        '@angular-classic/core': '14.0.0',
+        '@angular/core': '14.0.0',
       },
     }));
 
@@ -968,6 +1004,27 @@ describe('app', () => {
       expect(
         appTree.read('apps/plain/src/app/app.component.html', 'utf-8')
       ).toMatchSnapshot();
+    });
+
+    it('should generate a correct build target for --bundler=esbuild', async () => {
+      await generateApp(appTree, 'ngesbuild', {
+        routing: true,
+        bundler: 'esbuild',
+      });
+
+      const project = readProjectConfiguration(appTree, 'ngesbuild');
+      expect(project.targets.build.executor).toEqual(
+        '@angular-devkit/build-angular:browser-esbuild'
+      );
+      expect(
+        project.targets.build.configurations.development.namedChunks
+      ).toBeUndefined();
+      expect(
+        project.targets.build.configurations.development.vendorChunks
+      ).toBeUndefined();
+      expect(
+        project.targets.build.configurations.production.budgets
+      ).toBeUndefined();
     });
   });
 });
