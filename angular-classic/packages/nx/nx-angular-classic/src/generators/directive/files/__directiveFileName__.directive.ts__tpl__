@@ -1,4 +1,4 @@
-import { Directive } from '@angular-classic/core';
+import { Directive } from '@angular/core';
 
 @Directive({
   selector: '[<%= selector %>]'<% if(standalone) {%>,
