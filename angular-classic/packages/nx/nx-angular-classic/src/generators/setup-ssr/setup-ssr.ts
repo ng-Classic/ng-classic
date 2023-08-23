@@ -41,8 +41,8 @@ export async function setupSsr(tree: Tree, schema: Schema) {
       '@nguniversal/express-engine':
         getInstalledPackageVersionInfo(tree, '@nguniversal/express-engine')
           ?.version ?? pkgVersions.ngUniversalVersion,
-      '@angular/platform-server':
-        getInstalledPackageVersionInfo(tree, '@angular/platform-server')
+      '@angular-classic/platform-server':
+        getInstalledPackageVersionInfo(tree, '@angular-classic/platform-server')
           ?.version ?? pkgVersions.angularVersion,
     },
     {

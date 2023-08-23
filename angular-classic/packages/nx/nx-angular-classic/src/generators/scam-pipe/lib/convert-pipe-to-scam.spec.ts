@@ -40,8 +40,8 @@ describe('convertPipeToScam', () => {
       'utf-8'
     );
     expect(pipeSource).toMatchInlineSnapshot(`
-      "import { Pipe, PipeTransform, NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { Pipe, PipeTransform, NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
 
       @Pipe({
         name: 'example',
@@ -97,8 +97,8 @@ describe('convertPipeToScam', () => {
       'utf-8'
     );
     expect(pipeModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
       import { ExamplePipe } from './example.pipe';
 
       @NgModule({
@@ -143,8 +143,8 @@ describe('convertPipeToScam', () => {
     // ASSERT
     const pipeSource = tree.read('apps/app1/src/app/example.pipe.ts', 'utf-8');
     expect(pipeSource).toMatchInlineSnapshot(`
-      "import { Pipe, PipeTransform, NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { Pipe, PipeTransform, NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
 
       @Pipe({
         name: 'example',
@@ -200,8 +200,8 @@ describe('convertPipeToScam', () => {
       'utf-8'
     );
     expect(pipeModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
       import { ExamplePipe } from './example.pipe';
 
       @NgModule({
@@ -250,8 +250,8 @@ describe('convertPipeToScam', () => {
       'utf-8'
     );
     expect(pipeModuleSource).toMatchInlineSnapshot(`
-      "import { Pipe, PipeTransform, NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { Pipe, PipeTransform, NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
 
       @Pipe({
         name: 'example',
@@ -308,8 +308,8 @@ describe('convertPipeToScam', () => {
       'utf-8'
     );
     expect(pipeModuleSource).toMatchInlineSnapshot(`
-      "import { Pipe, PipeTransform, NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { Pipe, PipeTransform, NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
 
       @Pipe({
         name: 'example',
