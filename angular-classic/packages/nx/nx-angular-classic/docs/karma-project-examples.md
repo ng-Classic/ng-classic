@@ -7,7 +7,7 @@
 To add karma to project, run the following command.
 
 ```bash
-nx g @nx/angular:karma-project --project=myapp
+nx g @angular-classic/nx-angular:karma-project --project=myapp
 ```
 
 {% /tab %}
