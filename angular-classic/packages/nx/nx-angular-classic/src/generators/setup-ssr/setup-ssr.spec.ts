@@ -34,7 +34,7 @@ describe('setupSSR', () => {
       "
     `);
     expect(tree.read('apps/app1/src/main.ts', 'utf-8')).toMatchInlineSnapshot(`
-      "import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
+      "import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
       import { AppModule } from './app/app.module';
 
       platformBrowserDynamic()
@@ -58,8 +58,8 @@ describe('setupSSR', () => {
     `);
     expect(tree.read('apps/app1/src/app/app.server.module.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { ServerModule } from '@angular-classic/platform-server';
+      "import { NgModule } from '@angular/core';
+      import { ServerModule } from '@angular/platform-server';
 
       import { AppModule } from './app.module';
       import { AppComponent } from './app.component';
@@ -73,8 +73,8 @@ describe('setupSSR', () => {
     `);
     expect(tree.read('apps/app1/src/app/app.module.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { BrowserModule } from '@angular-classic/platform-browser';
+      "import { NgModule } from '@angular/core';
+      import { BrowserModule } from '@angular/platform-browser';
       import { AppComponent } from './app.component';
       import { NxWelcomeComponent } from './nx-welcome.component';
 
@@ -90,7 +90,7 @@ describe('setupSSR', () => {
     const packageJson = readJson<PackageJson>(tree, 'package.json');
     const dependencies = {
       '@nguniversal/express-engine': ngUniversalVersion,
-      '@angular-classic/platform-server': angularVersion,
+      '@angular/platform-server': angularVersion,
     };
     for (const [dep, version] of Object.entries(dependencies)) {
       expect(packageJson.dependencies[dep]).toEqual(version);
@@ -167,7 +167,7 @@ describe('setupSSR', () => {
     expect(tree.read('apps/app1/server.ts', 'utf-8')).toMatchSnapshot();
     expect(tree.read('apps/app1/src/main.server.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { bootstrapApplication } from '@angular-classic/platform-browser';
+      "import { bootstrapApplication } from '@angular/platform-browser';
       import { AppComponent } from './app/app.component';
       import { config } from './app/app.config.server';
 
@@ -192,8 +192,8 @@ describe('setupSSR', () => {
     `);
     expect(tree.read('apps/app1/src/app/app.config.server.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { mergeApplicationConfig, ApplicationConfig } from '@angular-classic/core';
-      import { provideServerRendering } from '@angular-classic/platform-server';
+      "import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
+      import { provideServerRendering } from '@angular/platform-server';
       import { appConfig } from './app.config';
 
       const serverConfig: ApplicationConfig = {
@@ -207,7 +207,7 @@ describe('setupSSR', () => {
     const packageJson = readJson<PackageJson>(tree, 'package.json');
     const dependencies = {
       '@nguniversal/express-engine': ngUniversalVersion,
-      '@angular-classic/platform-server': angularVersion,
+      '@angular/platform-server': angularVersion,
     };
     for (const [dep, version] of Object.entries(dependencies)) {
       expect(packageJson.dependencies[dep]).toEqual(version);
@@ -237,6 +237,78 @@ describe('setupSSR', () => {
     `);
   });
 
+  it('should add hydration correctly for NgModule apps', async () => {
+    // ARRANGE
+    const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
+
+    await generateTestApplication(tree, {
+      name: 'app1',
+    });
+
+    // ACT
+    await setupSsr(tree, { project: 'app1', hydration: true });
+
+    // ASSERT
+    expect(tree.read('apps/app1/src/app/app.module.ts', 'utf-8'))
+      .toMatchInlineSnapshot(`
+      "import { NgModule } from '@angular/core';
+      import {
+        BrowserModule,
+        provideClientHydration,
+      } from '@angular/platform-browser';
+      import { AppComponent } from './app.component';
+      import { NxWelcomeComponent } from './nx-welcome.component';
+
+      @NgModule({
+        declarations: [AppComponent, NxWelcomeComponent],
+        imports: [BrowserModule],
+        providers: [provideClientHydration()],
+        bootstrap: [AppComponent],
+      })
+      export class AppModule {}
+      "
+    `);
+  });
+
+  it('should add hydration correctly to standalone', async () => {
+    // ARRANGE
+    const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
+
+    await generateTestApplication(tree, {
+      name: 'app1',
+      standalone: true,
+    });
+
+    // ACT
+    await setupSsr(tree, { project: 'app1', hydration: true });
+
+    // ASSERT
+    expect(tree.read('apps/app1/src/app/app.config.ts', 'utf-8'))
+      .toMatchInlineSnapshot(`
+      "import { ApplicationConfig } from '@angular/core';
+      import { provideClientHydration } from '@angular/platform-browser';
+
+      export const appConfig: ApplicationConfig = {
+        providers: [provideClientHydration()],
+      };
+      "
+    `);
+
+    expect(tree.read('apps/app1/src/app/app.config.server.ts', 'utf-8'))
+      .toMatchInlineSnapshot(`
+      "import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
+      import { provideServerRendering } from '@angular/platform-server';
+      import { appConfig } from './app.config';
+
+      const serverConfig: ApplicationConfig = {
+        providers: [provideServerRendering()],
+      };
+
+      export const config = mergeApplicationConfig(appConfig, serverConfig);
+      "
+    `);
+  });
+
   describe('compat', () => {
     it('should install the correct versions when using older versions of Angular', async () => {
       // ARRANGE
@@ -249,7 +321,7 @@ describe('setupSSR', () => {
       updateJson(tree, 'package.json', (json) => ({
         ...json,
         dependencies: {
-          '@angular-classic/core': '14.2.0',
+          '@angular/core': '14.2.0',
         },
       }));
 
@@ -258,7 +330,7 @@ describe('setupSSR', () => {
 
       // ASSERT
       const pkgJson = readJson(tree, 'package.json');
-      expect(pkgJson.dependencies['@angular-classic/platform-server']).toEqual(
+      expect(pkgJson.dependencies['@angular/platform-server']).toEqual(
         '~14.2.0'
       );
       expect(pkgJson.dependencies['@nguniversal/express-engine']).toEqual(
@@ -277,7 +349,7 @@ describe('setupSSR', () => {
       });
       updateJson(tree, 'package.json', (json) => ({
         ...json,
-        dependencies: { '@angular-classic/core': '14.2.0' },
+        dependencies: { '@angular/core': '14.2.0' },
       }));
 
       // ACT
@@ -291,12 +363,12 @@ describe('setupSSR', () => {
          *
          * NOTE:
          * This import must come before any imports (direct or transitive) that rely on DOM built-ins being
-         * available, such as \`@angular-classic/elements\`.
+         * available, such as \`@angular/elements\`.
          */
-        import '@angular-classic/platform-server/init';
+        import '@angular/platform-server/init';
 
         export { AppServerModule } from './app/app.server.module';
-        export { renderModule } from '@angular-classic/platform-server';
+        export { renderModule } from '@angular/platform-server';
         "
       `);
     });
@@ -306,7 +378,7 @@ describe('setupSSR', () => {
       const tree = createTreeWithEmptyWorkspace({ layout: 'apps-libs' });
       updateJson(tree, 'package.json', (json) => ({
         ...json,
-        dependencies: { ...json.dependencies, '@angular-classic/core': '^15.2.0' },
+        dependencies: { ...json.dependencies, '@angular/core': '^15.2.0' },
       }));
 
       await generateTestApplication(tree, {
@@ -319,20 +391,20 @@ describe('setupSSR', () => {
       // ASSERT
       expect(tree.read('apps/app1/src/app/app.module.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular-classic/core';
-      import { BrowserModule } from '@angular-classic/platform-browser';
-      import { AppComponent } from './app.component';
-      import { NxWelcomeComponent } from './nx-welcome.component';
+              "import { NgModule } from '@angular/core';
+              import { BrowserModule } from '@angular/platform-browser';
+              import { AppComponent } from './app.component';
+              import { NxWelcomeComponent } from './nx-welcome.component';
 
-      @NgModule({
-        declarations: [AppComponent, NxWelcomeComponent],
-        imports: [BrowserModule.withServerTransition({ appId: 'serverApp' })],
-        providers: [],
-        bootstrap: [AppComponent],
-      })
-      export class AppModule {}
-      "
-    `);
+              @NgModule({
+                declarations: [AppComponent, NxWelcomeComponent],
+                imports: [BrowserModule.withServerTransition({ appId: 'serverApp' })],
+                providers: [],
+                bootstrap: [AppComponent],
+              })
+              export class AppModule {}
+              "
+          `);
     });
 
     it('should wrap bootstrap call for Angular versions lower than 15.2', async () => {
@@ -343,7 +415,7 @@ describe('setupSSR', () => {
       });
       updateJson(tree, 'package.json', (json) => ({
         ...json,
-        dependencies: { '@angular-classic/core': '15.1.0' },
+        dependencies: { '@angular/core': '15.1.0' },
       }));
 
       // ACT
@@ -352,22 +424,22 @@ describe('setupSSR', () => {
       // ASSERT
       expect(tree.read('apps/app1/src/main.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-      "import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
-      import { AppModule } from './app/app.module';
+              "import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+              import { AppModule } from './app/app.module';
 
-      function bootstrap() {
-        platformBrowserDynamic()
-          .bootstrapModule(AppModule)
-          .catch((err) => console.error(err));
-      }
+              function bootstrap() {
+                platformBrowserDynamic()
+                  .bootstrapModule(AppModule)
+                  .catch((err) => console.error(err));
+              }
 
-      if (document.readyState !== 'loading') {
-        bootstrap();
-      } else {
-        document.addEventListener('DOMContentLoaded', bootstrap);
-      }
-      "
-    `);
+              if (document.readyState !== 'loading') {
+                bootstrap();
+              } else {
+                document.addEventListener('DOMContentLoaded', bootstrap);
+              }
+              "
+          `);
     });
   });
 });
