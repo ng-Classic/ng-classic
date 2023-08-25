@@ -40,8 +40,8 @@ describe('convertDirectiveToScam', () => {
       'utf-8'
     );
     expect(directiveSource).toMatchInlineSnapshot(`
-      "import { Directive, NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { Directive, NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
 
       @Directive({
         selector: '[projExample]',
@@ -95,8 +95,8 @@ describe('convertDirectiveToScam', () => {
       'utf-8'
     );
     expect(directiveModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
       import { ExampleDirective } from './example.directive';
 
       @NgModule({
@@ -144,8 +144,8 @@ describe('convertDirectiveToScam', () => {
       'utf-8'
     );
     expect(directiveSource).toMatchInlineSnapshot(`
-      "import { Directive, NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { Directive, NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
 
       @Directive({
         selector: '[projExample]',
@@ -199,8 +199,8 @@ describe('convertDirectiveToScam', () => {
       'utf-8'
     );
     expect(directiveModuleSource).toMatchInlineSnapshot(`
-      "import { NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
       import { ExampleDirective } from './example.directive';
 
       @NgModule({
@@ -249,8 +249,8 @@ describe('convertDirectiveToScam', () => {
       'utf-8'
     );
     expect(directiveModuleSource).toMatchInlineSnapshot(`
-      "import { Directive, NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { Directive, NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
 
       @Directive({
         selector: '[projExample]',
@@ -305,8 +305,8 @@ describe('convertDirectiveToScam', () => {
       'utf-8'
     );
     expect(directiveModuleSource).toMatchInlineSnapshot(`
-      "import { Directive, NgModule } from '@angular/core';
-      import { CommonModule } from '@angular/common';
+      "import { Directive, NgModule } from '@angular-classic/core';
+      import { CommonModule } from '@angular-classic/common';
 
       @Directive({
         selector: '[projExample]',
