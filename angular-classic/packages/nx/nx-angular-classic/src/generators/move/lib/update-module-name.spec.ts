@@ -73,8 +73,8 @@ describe('updateModuleName Rule', () => {
       });
       tree.write(
         'my-first/src/lib/my-first.module.ts',
-        `import { NgModule } from '@angular/core';
-    import { CommonModule } from '@angular/common';
+        `import { NgModule } from '@angular-classic/core';
+    import { CommonModule } from '@angular-classic/common';
 
     @NgModule({
       imports: [CommonModule]
@@ -84,7 +84,7 @@ describe('updateModuleName Rule', () => {
 
       tree.write(
         'my-first/src/lib/my-first.module.spec.ts',
-        `import { async, TestBed } from '@angular/core/testing';
+        `import { async, TestBed } from '@angular-classic/core/testing';
     import { MyFirstModule } from './my-first.module';
 
     describe('MyFirstModule', () => {
@@ -182,8 +182,8 @@ describe('updateModuleName Rule', () => {
 
       tree.write(
         'my-destination/src/lib/my-source.module.ts',
-        `import { NgModule } from '@angular/core';
-        import { CommonModule } from '@angular/common';
+        `import { NgModule } from '@angular-classic/core';
+        import { CommonModule } from '@angular-classic/common';
         @NgModule({
           imports: [CommonModule]
         })
@@ -192,7 +192,7 @@ describe('updateModuleName Rule', () => {
 
       tree.write(
         'my-destination/src/lib/my-source.module.spec.ts',
-        `import { async, TestBed } from '@angular/core/testing';
+        `import { async, TestBed } from '@angular-classic/core/testing';
         import { MySourceModule } from './my-source.module';
         describe('MySourceModule', () => {
           beforeEach(async(() => {

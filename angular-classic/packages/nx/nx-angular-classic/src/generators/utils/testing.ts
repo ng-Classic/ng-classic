@@ -81,7 +81,7 @@ export async function createStorybookTestWorkspaceForLib(
 
   tree.write(
     `${libName}/src/lib/test-button/test-button.component.ts`,
-    `import { Component, Input } from '@angular/core';
+    `import { Component, Input } from '@angular-classic/core';
 
 export type ButtonStyle = 'default' | 'primary' | 'accent';
 
@@ -130,8 +130,8 @@ export class TestButtonComponent {
 
   tree.write(
     `${libName}/src/lib/barrel/barrel.module.ts`,
-    `import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+    `import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { BarrelButtonComponent } from './barrel-button';
 
 @NgModule({
@@ -163,8 +163,8 @@ export class BarrelModule {}`
 
   tree.write(
     `${libName}/src/lib/variable-declare/variable-declare.module.ts`,
-    `import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+    `import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { VariableDeclareButtonComponent } from './variable-declare-button/variable-declare-button.component';
 import { VariableDeclareViewComponent } from './variable-declare-view/variable-declare-view.component';
 
@@ -210,8 +210,8 @@ export class VariableDeclareModule {}`
 
   tree.write(
     `${libName}/src/lib/variable-spread-declare/variable-spread-declare.module.ts`,
-    `import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+    `import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { VariableSpreadDeclareButtonComponent } from './variable-spread-declare-button/variable-spread-declare-button.component';
 import { VariableSpreadDeclareViewComponent } from './variable-spread-declare-view/variable-spread-declare-view.component';
 import { VariableSpreadDeclareAnotherviewComponent } from './variable-spread-declare-anotherview/variable-spread-declare-anotherview.component';
@@ -250,8 +250,8 @@ export class VariableSpreadDeclareModule {}`
 
   tree.write(
     `${libName}/src/lib/static-member-declarations/static-member-declarations.module.ts`,
-    `import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+    `import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { Cmp1Component } from './cmp1/cmp1.component';
 import { Cmp2Component } from './cmp2/cmp2.component';
 
@@ -317,8 +317,8 @@ function generateModule(
 
   tree.write(
     moduleFilePath,
-    `import { NgModule } from '@angular/core';
-  import { CommonModule } from '@angular/common';
+    `import { NgModule } from '@angular-classic/core';
+  import { CommonModule } from '@angular-classic/common';
   
   @NgModule({
     declarations: [],

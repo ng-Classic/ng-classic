@@ -262,7 +262,7 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
     },
     {
       "extends": [
-        "plugin:@nx/angular",
+        "plugin:@angular-classic/nx-angular",
         "plugin:@angular-eslint/template/process-inline-templates",
       ],
       "files": [
@@ -294,7 +294,7 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
     },
     {
       "extends": [
-        "plugin:@nx/angular-template",
+        "plugin:@angular-classic/nx-angular-template",
       ],
       "files": [
         "*.html",
@@ -860,7 +860,7 @@ exports[`convert-tslint-to-eslint should work for Angular applications 4`] = `
     },
     {
       "extends": [
-        "plugin:@nx/angular",
+        "plugin:@angular-classic/nx-angular",
         "plugin:@angular-eslint/template/process-inline-templates",
       ],
       "files": [
@@ -898,7 +898,7 @@ exports[`convert-tslint-to-eslint should work for Angular applications 4`] = `
     },
     {
       "extends": [
-        "plugin:@nx/angular-template",
+        "plugin:@angular-classic/nx-angular-template",
       ],
       "files": [
         "*.html",
@@ -1220,7 +1220,7 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 4`] = `
     },
     {
       "extends": [
-        "plugin:@nx/angular",
+        "plugin:@angular-classic/nx-angular",
         "plugin:@angular-eslint/template/process-inline-templates",
       ],
       "files": [
@@ -1252,7 +1252,7 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 4`] = `
     },
     {
       "extends": [
-        "plugin:@nx/angular-template",
+        "plugin:@angular-classic/nx-angular-template",
       ],
       "files": [
         "*.html",

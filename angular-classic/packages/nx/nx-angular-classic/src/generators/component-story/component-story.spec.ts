@@ -22,7 +22,7 @@ describe('componentStory generator', () => {
 
     tree.write(
       `${libName}/src/lib/test-button/test-button.component.ts`,
-      `import { Component, Input } from '@angular/core';
+      `import { Component, Input } from '@angular-classic/core';
 
         export type ButtonStyle = 'default' | 'primary' | 'accent';
 

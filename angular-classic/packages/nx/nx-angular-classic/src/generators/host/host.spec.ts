@@ -270,7 +270,7 @@ describe('Host App Generator', () => {
     updateJson(tree, 'package.json', (json) => ({
       ...json,
       dependencies: {
-        '@angular/core': '14.0.0',
+        '@angular-classic/core': '14.0.0',
       },
     }));
 
