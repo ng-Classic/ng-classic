@@ -34,14 +34,14 @@ export function convertPipeToScam(tree: Tree, options: NormalizedSchema) {
       source,
       options.filePath,
       'NgModule',
-      '@angular/core'
+      '@angular-classic/core'
     );
     source = insertImport(
       tree,
       source,
       options.filePath,
       'CommonModule',
-      '@angular/common'
+      '@angular-classic/common'
     );
 
     let updatedPipeSource = source.getText();
@@ -68,8 +68,8 @@ function getModuleFileContent(
   pipeClassName: string,
   pipeFileName: string
 ): string {
-  return `import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+  return `import { NgModule } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 import { ${pipeClassName} } from './${pipeFileName}';
 ${getNgModuleDeclaration(pipeClassName)}`;
 }
