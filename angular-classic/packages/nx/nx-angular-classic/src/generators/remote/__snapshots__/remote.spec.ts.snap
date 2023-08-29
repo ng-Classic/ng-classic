@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MF Remote App Generator --ssr should generate the correct files 1`] = `
-"import { NgModule } from '@angular-classic/core';
-import { BrowserModule } from '@angular-classic/platform-browser';
-import { RouterModule } from '@angular-classic/router';
+"import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -31,7 +31,7 @@ export class AppModule {}
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 2`] = `
-"import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
+"import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 
 platformBrowserDynamic()
@@ -48,7 +48,7 @@ exports[`MF Remote App Generator --ssr should generate the correct files 3`] = `
 exports[`MF Remote App Generator --ssr should generate the correct files 4`] = `
 "import 'zone.js/dist/zone-node';
 
-import { APP_BASE_HREF } from '@angular-classic/common';
+import { APP_BASE_HREF } from '@angular/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import * as cors from 'cors';
@@ -106,7 +106,7 @@ function run(): void {
     console.log(\`Node Express server listening on http://localhost:\${port}\`);
 
     /**
-     * DO NOT REMOVE IF USING @angular-classic/nx-angular:module-federation-dev-ssr executor
+     * DO NOT REMOVE IF USING @nx/angular:module-federation-dev-ssr executor
      * to serve your Host application with this Remote application.
      * This message allows Nx to determine when the Remote is ready to be
      * consumed by the Host.
@@ -130,21 +130,21 @@ exports[`MF Remote App Generator --ssr should generate the correct files 6`] = `
 "module.exports = {
   name: 'test',
   exposes: {
-    './Module': 'apps/test/src/app/remote-entry/entry.module.ts',
+    './Module': 'test/src/app/remote-entry/entry.module.ts',
   },
 };
 "
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 7`] = `
-"const { withModuleFederationForSSR } = require('@angular-classic/nx-angular/module-federation');
+"const { withModuleFederationForSSR } = require('@nx/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederationForSSR(config);
 "
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 8`] = `
-"import { Component } from '@angular-classic/core';
+"import { Component } from '@angular/core';
 
 @Component({
   selector: 'proj-test-entry',
@@ -155,7 +155,7 @@ export class RemoteEntryComponent {}
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 9`] = `
-"import { Route } from '@angular-classic/router';
+"import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
   {
@@ -168,7 +168,7 @@ export const appRoutes: Route[] = [
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 10`] = `
-"import { Route } from '@angular-classic/router';
+"import { Route } from '@angular/router';
 import { RemoteEntryComponent } from './entry.component';
 
 export const remoteRoutes: Route[] = [
@@ -195,20 +195,20 @@ exports[`MF Remote App Generator --ssr should generate the correct files 11`] = 
   "dependsOn": [
     "build",
   ],
-  "executor": "@angular-classic/nx-angular:webpack-server",
+  "executor": "@nx/angular:webpack-server",
   "options": {
     "customWebpackConfig": {
-      "path": "apps/test/webpack.server.config.js",
+      "path": "test/webpack.server.config.js",
     },
-    "main": "apps/test/server.ts",
-    "outputPath": "dist/apps/test/server",
-    "tsConfig": "apps/test/tsconfig.server.json",
+    "main": "test/server.ts",
+    "outputPath": "dist/test/server",
+    "tsConfig": "test/tsconfig.server.json",
   },
 }
 `;
 
 exports[`MF Remote App Generator --ssr should generate the correct files 12`] = `
-"import { Route } from '@angular-classic/router';
+"import { Route } from '@angular/router';
 import { RemoteEntryComponent } from './entry.component';
 
 export const remoteRoutes: Route[] = [
@@ -225,46 +225,40 @@ exports[`MF Remote App Generator --ssr should generate the correct files 13`] = 
   ],
   "executor": "nx:run-commands",
   "options": {
-    "command": "PORT=4201 node dist/apps/test/server/main.js",
+    "command": "PORT=4201 node dist/test/server/main.js",
   },
 }
 `;
 
 exports[`MF Remote App Generator should generate a remote mf app with a host 1`] = `
-"const { withModuleFederation } = require('@angular-classic/nx-angular/module-federation');
+"const { withModuleFederation } = require('@nx/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederation(config);
 "
 `;
 
 exports[`MF Remote App Generator should generate a remote mf app with a host 2`] = `
-"const { withModuleFederation } = require('@angular-classic/nx-angular/module-federation');
+"const { withModuleFederation } = require('@nx/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederation(config);
 "
 `;
 
 exports[`MF Remote App Generator should generate a remote mf app with no host 1`] = `
-"const { withModuleFederation } = require('@angular-classic/nx-angular/module-federation');
+"const { withModuleFederation } = require('@nx/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederation(config);
 "
 `;
 
 exports[`MF Remote App Generator should generate the a remote setup for standalone components 1`] = `
-"import { importProvidersFrom } from '@angular-classic/core';
-import { bootstrapApplication } from '@angular-classic/platform-browser';
-import { RouterModule } from '@angular-classic/router';
+"import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
 import { RemoteEntryComponent } from './app/remote-entry/entry.component';
-import { appRoutes } from './app/app.routes';
 
-bootstrapApplication(RemoteEntryComponent, {
-  providers: [
-    importProvidersFrom(
-      RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' })
-    ),
-  ],
-});
+bootstrapApplication(RemoteEntryComponent, appConfig).catch((err) =>
+  console.error(err)
+);
 "
 `;
 
@@ -272,15 +266,15 @@ exports[`MF Remote App Generator should generate the a remote setup for standalo
 "module.exports = {
   name: 'test',
   exposes: {
-    './Routes': 'apps/test/src/app/remote-entry/entry.routes.ts',
+    './Routes': 'test/src/app/remote-entry/entry.routes.ts',
   },
 };
 "
 `;
 
 exports[`MF Remote App Generator should generate the a remote setup for standalone components 3`] = `
-"import { Component } from '@angular-classic/core';
-import { CommonModule } from '@angular-classic/common';
+"import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
@@ -294,7 +288,7 @@ export class RemoteEntryComponent {}
 `;
 
 exports[`MF Remote App Generator should generate the a remote setup for standalone components 4`] = `
-"import { Route } from '@angular-classic/router';
+"import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
   {
@@ -307,7 +301,7 @@ export const appRoutes: Route[] = [
 `;
 
 exports[`MF Remote App Generator should generate the a remote setup for standalone components 5`] = `
-"import { Route } from '@angular-classic/router';
+"import { Route } from '@angular/router';
 import { RemoteEntryComponent } from './entry.component';
 
 export const remoteRoutes: Route[] = [
