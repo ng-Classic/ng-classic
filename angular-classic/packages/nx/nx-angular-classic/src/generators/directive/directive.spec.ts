@@ -17,7 +17,7 @@ describe('directive generator', () => {
 
     tree.write(
       'test/src/app/test.module.ts',
-      `import {NgModule} from "@angular/core";
+      `import {NgModule} from "@angular-classic/core";
     @NgModule({
       imports: [],
       declarations: [],
