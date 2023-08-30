@@ -247,7 +247,7 @@ async function writePackageJson(
   // set additional properties
   const packageJson = { ...entryPoint.packageJson, ...additionalProperties };
 
-  // read tslib version from `@angular/compiler` so that our tslib
+  // read tslib version from `@angular-classic/compiler` so that our tslib
   // version at least matches that of angular if we use require('tslib').version
   // it will get what installed and not the minimum version nor if it is a `~` or `^`
   // this is only required for primary
@@ -264,7 +264,7 @@ async function writePackageJson(
     const {
       peerDependencies: angularPeerDependencies = {},
       dependencies: angularDependencies = {},
-    } = require('@angular/compiler/package.json');
+    } = require('@angular-classic/compiler/package.json');
     const tsLibVersion =
       angularPeerDependencies.tslib || angularDependencies.tslib;
 
