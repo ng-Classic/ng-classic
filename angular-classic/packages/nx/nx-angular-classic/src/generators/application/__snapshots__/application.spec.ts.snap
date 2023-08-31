@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for non-standalone apps with routing 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 
@@ -21,7 +21,7 @@ export class AppModule {}
 `;
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for non-standalone apps with routing 2`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-root',
@@ -33,9 +33,9 @@ export class AppComponent {}
 `;
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for non-standalone apps with routing 3`] = `
-"import { TestBed } from '@angular/core/testing';
+"import { TestBed } from '@angular-classic/core/testing';
 import { AppComponent } from './app.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { RouterTestingModule } from '@angular-classic/router/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -64,8 +64,8 @@ exports[`app --minimal should skip "nx-welcome.component.ts" file and references
 `;
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for non-standalone apps without routing 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -79,7 +79,7 @@ export class AppModule {}
 `;
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for non-standalone apps without routing 2`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   selector: 'proj-root',
@@ -91,7 +91,7 @@ export class AppComponent {}
 `;
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for non-standalone apps without routing 3`] = `
-"import { TestBed } from '@angular/core/testing';
+"import { TestBed } from '@angular-classic/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -120,8 +120,8 @@ exports[`app --minimal should skip "nx-welcome.component.ts" file and references
 `;
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for standalone apps with routing 1`] = `
-"import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+"import { Component } from '@angular-classic/core';
+import { RouterModule } from '@angular-classic/router';
 
 @Component({
   standalone: true,
@@ -135,9 +135,9 @@ export class AppComponent {}
 `;
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for standalone apps with routing 2`] = `
-"import { TestBed } from '@angular/core/testing';
+"import { TestBed } from '@angular-classic/core/testing';
 import { AppComponent } from './app.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { RouterTestingModule } from '@angular-classic/router/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -165,7 +165,7 @@ exports[`app --minimal should skip "nx-welcome.component.ts" file and references
 `;
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for standalone apps without routing 1`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 
 @Component({
   standalone: true,
@@ -179,7 +179,7 @@ export class AppComponent {}
 `;
 
 exports[`app --minimal should skip "nx-welcome.component.ts" file and references for standalone apps without routing 2`] = `
-"import { TestBed } from '@angular/core/testing';
+"import { TestBed } from '@angular-classic/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -687,7 +687,7 @@ exports[`app --project-name-and-root-format=derived should generate correctly wh
 `;
 
 exports[`app --standalone should generate a standalone app correctly with routing 1`] = `
-"import { bootstrapApplication } from '@angular/platform-browser';
+"import { bootstrapApplication } from '@angular-classic/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 
@@ -698,11 +698,11 @@ bootstrapApplication(AppComponent, appConfig).catch((err) =>
 `;
 
 exports[`app --standalone should generate a standalone app correctly with routing 2`] = `
-"import { ApplicationConfig } from '@angular/core';
+"import { ApplicationConfig } from '@angular-classic/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
-} from '@angular/router';
+} from '@angular-classic/router';
 import { appRoutes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -712,15 +712,15 @@ export const appConfig: ApplicationConfig = {
 `;
 
 exports[`app --standalone should generate a standalone app correctly with routing 3`] = `
-"import { Route } from '@angular/router';
+"import { Route } from '@angular-classic/router';
 
 export const appRoutes: Route[] = [];
 "
 `;
 
 exports[`app --standalone should generate a standalone app correctly with routing 4`] = `
-"import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+"import { Component } from '@angular-classic/core';
+import { RouterModule } from '@angular-classic/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
@@ -737,10 +737,10 @@ export class AppComponent {
 `;
 
 exports[`app --standalone should generate a standalone app correctly with routing 5`] = `
-"import { TestBed } from '@angular/core/testing';
+"import { TestBed } from '@angular-classic/core/testing';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { RouterTestingModule } from '@angular-classic/router/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -768,7 +768,7 @@ describe('AppComponent', () => {
 `;
 
 exports[`app --standalone should generate a standalone app correctly without routing 1`] = `
-"import { bootstrapApplication } from '@angular/platform-browser';
+"import { bootstrapApplication } from '@angular-classic/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 
@@ -779,7 +779,7 @@ bootstrapApplication(AppComponent, appConfig).catch((err) =>
 `;
 
 exports[`app --standalone should generate a standalone app correctly without routing 2`] = `
-"import { ApplicationConfig } from '@angular/core';
+"import { ApplicationConfig } from '@angular-classic/core';
 
 export const appConfig: ApplicationConfig = {
   providers: [],
@@ -788,7 +788,7 @@ export const appConfig: ApplicationConfig = {
 `;
 
 exports[`app --standalone should generate a standalone app correctly without routing 3`] = `
-"import { Component } from '@angular/core';
+"import { Component } from '@angular-classic/core';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
@@ -805,7 +805,7 @@ export class AppComponent {
 `;
 
 exports[`app --standalone should generate a standalone app correctly without routing 4`] = `
-"import { TestBed } from '@angular/core/testing';
+"import { TestBed } from '@angular-classic/core/testing';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
