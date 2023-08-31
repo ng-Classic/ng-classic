@@ -5,6 +5,9 @@ import type { Linter } from 'eslint';
 import type { AngularProjectConfiguration } from '../../utils/types';
 import { addLintingGenerator } from '../add-linting/add-linting';
 
+/**
+ * @deprecated This generator will be removed in v17
+ */
 export async function conversionGenerator(
   host: Tree,
   options: ConvertTSLintToESLintSchema
@@ -14,7 +17,7 @@ export async function conversionGenerator(
    * to perform in order to convert a project from TSLint to ESLint, as well as some
    * extensibility points for adjusting the behavior on a per package basis.
    *
-   * E.g. @angular-classic/nx-angular projects might need to make different changes to the final
+   * E.g. @nx/angular projects might need to make different changes to the final
    * ESLint config when compared with @nx/next projects.
    *
    * See the ProjectConverter implementation for a full breakdown of what it does.
@@ -82,7 +85,7 @@ export async function conversionGenerator(
   /**
    * Store user preferences for the collection
    */
-  projectConverter.setDefaults('@angular-classic/nx-angular', defaults);
+  projectConverter.setDefaults('@nx/angular', defaults);
 
   /**
    * If the Angular project is an app which has an e2e project, try and convert that as well.

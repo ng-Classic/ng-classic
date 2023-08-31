@@ -5,7 +5,7 @@
  * - Changed filePath passed to the StylesheetProcessor.parse when is a .ts file and inlineStyleLanguage is set.
  */
 
-import type { CompilerHost, CompilerOptions } from '@angular-classic/compiler-cli';
+import type { CompilerHost, CompilerOptions } from '@angular/compiler-cli';
 import { createHash } from 'crypto';
 import { FileCache } from 'ng-packagr/lib/file-system/file-cache';
 import { BuildGraph } from 'ng-packagr/lib/graph/build-graph';
