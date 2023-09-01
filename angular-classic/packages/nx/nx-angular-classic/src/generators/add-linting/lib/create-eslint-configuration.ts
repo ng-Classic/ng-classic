@@ -21,7 +21,7 @@ export const extendAngularEslintJson = (
       files: ['*.ts'],
       extends: [
         ...(json.overrides[0].extends || []),
-        'plugin:@nx/angular',
+        'plugin:@angular-classic/nx-angular',
         'plugin:@angular-eslint/template/process-inline-templates',
       ],
       rules: {
@@ -45,7 +45,7 @@ export const extendAngularEslintJson = (
     },
     {
       files: ['*.html'],
-      extends: ['plugin:@nx/angular-template'],
+      extends: ['plugin:@angular-classic/nx-angular-template'],
       /**
        * Having an empty rules object present makes it more obvious to the user where they would
        * extend things from if they needed to
@@ -78,7 +78,7 @@ export function createEsLintConfiguration(
       {
         files: ['*.ts'],
         extends: [
-          'plugin:@nx/angular',
+          'plugin:@angular-classic/nx-angular',
           'plugin:@angular-eslint/template/process-inline-templates',
         ],
         /**
@@ -120,7 +120,7 @@ export function createEsLintConfiguration(
       },
       {
         files: ['*.html'],
-        extends: ['plugin:@nx/angular-template'],
+        extends: ['plugin:@angular-classic/nx-angular-template'],
         /**
          * Having an empty rules object present makes it more obvious to the user where they would
          * extend things from if they needed to
