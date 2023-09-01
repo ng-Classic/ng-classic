@@ -41,12 +41,23 @@ export async function addSsr(
     "import('./src/main.server');"
   );
 
+  const browserBundleOutput = joinPathFragments(
+    project.targets.build.options.outputPath,
+    'browser'
+  );
+  const serverBundleOutput = joinPathFragments(
+    project.targets.build.options.outputPath,
+    'server'
+  );
+
   generateFiles(
     tree,
     joinPathFragments(__dirname, '../files/base'),
     project.root,
     {
       appName,
+      browserBundleOutput,
+      serverBundleOutput,
       standalone,
       tmpl: '',
     }
@@ -68,7 +79,7 @@ export async function addSsr(
   // update project.json
   project = readProjectConfiguration(tree, appName);
 
-  project.targets.server.executor = '@angular-classic/nx-angular:webpack-server';
+  project.targets.server.executor = '@nx/angular:webpack-server';
   project.targets.server.options.customWebpackConfig = {
     path: joinPathFragments(project.root, 'webpack.server.config.js'),
   };
