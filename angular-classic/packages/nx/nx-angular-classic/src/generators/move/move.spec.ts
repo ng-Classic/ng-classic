@@ -7,7 +7,7 @@ import librarySecondaryEntryPointGenerator from '../library-secondary-entry-poin
 import { generateTestLibrary } from '../utils/testing';
 import { angularMoveGenerator } from './move';
 
-describe('@nx/angular:move', () => {
+describe('@angular-classic/nx-angular:move', () => {
   let tree: Tree;
 
   beforeEach(async () => {
