@@ -56,7 +56,7 @@ describe('Angular Cypress Component Test Generator', () => {
     tree.write(
       'my-lib/src/lib/my-lib/my-lib.component.ts',
       `
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular-classic/core';
 
 export type ButtonStyle = 'default' | 'primary' | 'accent';
 
@@ -108,8 +108,8 @@ export class MyLibComponent implements OnInit {
     tree.write(
       'my-lib/src/lib/my-lib/my-lib.component.ts',
       `
-import { Component, OnInit, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, Input } from '@angular-classic/core';
+import { CommonModule } from '@angular-classic/common';
 
 @Component({
   selector: 'proj-my-lib',
@@ -179,7 +179,7 @@ export class MyLibComponent implements OnInit {
 
     await componentGenerator(tree, { name: 'my-lib', project: 'my-lib' });
 
-    const expected = `import { TestBed } from '@angular/core/testing';
+    const expected = `import { TestBed } from '@angular-classic/core/testing';
 import { MyLibComponent } from './my-lib.component';
 
 describe(MyLibComponent.name, () => {

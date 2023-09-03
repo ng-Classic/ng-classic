@@ -8,7 +8,7 @@ import { backwardCompatibleVersions } from '../../utils/backward-compatible-vers
 export function getInstalledAngularVersion(tree: Tree): string {
   const pkgJson = readJson(tree, 'package.json');
   const installedAngularVersion =
-    pkgJson.dependencies && pkgJson.dependencies['@angular/core'];
+    pkgJson.dependencies && pkgJson.dependencies['@angular-classic/core'];
 
   if (
     !installedAngularVersion ||
