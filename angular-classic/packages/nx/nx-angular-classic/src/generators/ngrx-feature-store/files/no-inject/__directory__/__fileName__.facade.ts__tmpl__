@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular-classic/core';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as <%= className %>Actions from './<%= relativeFileName %>.actions';
