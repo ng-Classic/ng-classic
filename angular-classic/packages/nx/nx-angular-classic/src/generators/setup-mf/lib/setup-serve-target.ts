@@ -12,8 +12,8 @@ export function setupServeTarget(host: Tree, options: Schema) {
     ...appConfig.targets['serve'],
     executor:
       options.mfType === 'host'
-        ? '@angular-classic/nx-angular:module-federation-dev-server'
-        : '@angular-classic/nx-angular:webpack-dev-server',
+        ? '@nx/angular:module-federation-dev-server'
+        : '@nx/angular:webpack-dev-server',
     options: {
       ...appConfig.targets['serve'].options,
       port: options.port ?? undefined,
@@ -24,7 +24,7 @@ export function setupServeTarget(host: Tree, options: Schema) {
   if (options.mfType === 'remote') {
     appConfig.targets['serve-static'] = {
       executor: '@nx/web:file-server',
-      defaultConfiguration: 'development',
+      defaultConfiguration: 'production',
       options: {
         buildTarget: `${options.appName}:build`,
         port: options.port,

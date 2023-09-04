@@ -1,4 +1,4 @@
-import { Component<% if(viewEncapsulation) { %>, ViewEncapsulation<% } %> } from '@angular-classic/core';
+import { Component<% if(viewEncapsulation) { %>, ViewEncapsulation<% } %> } from '@angular/core';
 
 @Component({
   selector: '<%= rootSelector %>',<% if(!inlineTemplate) { %>

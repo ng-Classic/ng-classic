@@ -4,7 +4,7 @@ import { major } from 'semver';
 export type VersionInfo = { major: number; version: string };
 
 export function getInstalledAngularVersionInfo(): VersionInfo | null {
-  return getInstalledPackageVersionInfo('@angular-classic/core');
+  return getInstalledPackageVersionInfo('@angular/core');
 }
 
 export function getInstalledPackageVersionInfo(
