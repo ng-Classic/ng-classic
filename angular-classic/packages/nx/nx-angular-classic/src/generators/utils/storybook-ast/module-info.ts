@@ -191,7 +191,7 @@ function getDeclarationsArray(
 
   if (!declarationArray) {
     logger.warn(
-      stripIndents`No stories generated because the declarations in ${moduleFilePath} is not an array literal or the variable could not be found. Hint: you can always generate stories later with the 'nx generate @angular-classic/nx-angular:stories --name=${projectName}' command.`
+      stripIndents`No stories generated because the declarations in ${moduleFilePath} is not an array literal or the variable could not be found. Hint: you can always generate stories later with the 'nx generate @nx/angular:stories --name=${projectName}' command.`
     );
   }
 
@@ -358,7 +358,7 @@ function getNgModuleDeclarationsPropertyAssignment(
 
   if (!declarationsPropertyAssignment) {
     logger.warn(
-      stripIndents`No stories generated because there were no components declared in ${moduleFilePath}. Hint: you can always generate stories later with the 'nx generate @angular-classic/nx-angular:stories --name=${projectName}' command.`
+      stripIndents`No stories generated because there were no components declared in ${moduleFilePath}. Hint: you can always generate stories later with the 'nx generate @nx/angular:stories --name=${projectName}' command.`
     );
   }
 
@@ -369,7 +369,7 @@ function getNgModuleDecorator(file: SourceFile, moduleFilePath: string): Node {
   const ngModuleDecorators = getDecoratorMetadata(
     file,
     'NgModule',
-    '@angular-classic/core'
+    '@angular/core'
   );
 
   if (ngModuleDecorators.length === 0) {
