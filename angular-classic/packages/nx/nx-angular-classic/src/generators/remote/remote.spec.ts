@@ -168,7 +168,7 @@ describe('MF Remote App Generator', () => {
     // ASSERT
     expect(tree.read('test/src/app/app.component.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { Component } from '@angular/core';
+      "import { Component } from '@angular-classic/core';
 
       @Component({
         selector: 'proj-root',
@@ -252,7 +252,7 @@ describe('MF Remote App Generator', () => {
     updateJson(tree, 'package.json', (json) => ({
       ...json,
       dependencies: {
-        '@angular/core': '14.0.0',
+        '@angular-classic/core': '14.0.0',
       },
     }));
 

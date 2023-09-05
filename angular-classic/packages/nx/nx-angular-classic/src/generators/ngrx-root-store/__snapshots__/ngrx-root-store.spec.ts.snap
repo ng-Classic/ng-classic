@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NgRxRootStoreGenerator NgModule should add a facade when --facade=true 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
@@ -42,7 +42,7 @@ export class AppModule {}
 `;
 
 exports[`NgRxRootStoreGenerator NgModule should add a facade when --facade=true 2`] = `
-"import { Injectable, inject } from '@angular/core';
+"import { Injectable, inject } from '@angular-classic/core';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as UsersActions from './users.actions';
@@ -73,9 +73,9 @@ export class UsersFacade {
 `;
 
 exports[`NgRxRootStoreGenerator NgModule should add a root module and root state when --minimal=false 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
@@ -131,7 +131,7 @@ export const loadUsersFailure = createAction(
 `;
 
 exports[`NgRxRootStoreGenerator NgModule should add a root module and root state when --minimal=false 3`] = `
-"import { Injectable, inject } from '@angular/core';
+"import { Injectable, inject } from '@angular-classic/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { switchMap, catchError, of } from 'rxjs';
 import * as UsersActions from './users.actions';
@@ -156,7 +156,7 @@ export class UsersEffects {
 `;
 
 exports[`NgRxRootStoreGenerator NgModule should add a root module and root state when --minimal=false 4`] = `
-"import { TestBed } from '@angular/core/testing';
+"import { TestBed } from '@angular-classic/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Action } from '@ngrx/store';
 import { provideMockStore } from '@ngrx/store/testing';
@@ -358,9 +358,9 @@ describe('Users Selectors', () => {
 `;
 
 exports[`NgRxRootStoreGenerator NgModule should add an empty root module when --minimal=true 1`] = `
-"import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
@@ -394,9 +394,9 @@ export class AppModule {}
 `;
 
 exports[`NgRxRootStoreGenerator NgModule should instrument the store devtools when "addDevTools: true" 1`] = `
-"import { NgModule, isDevMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+"import { NgModule, isDevMode } from '@angular-classic/core';
+import { BrowserModule } from '@angular-classic/platform-browser';
+import { RouterModule } from '@angular-classic/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
@@ -432,11 +432,11 @@ export class AppModule {}
 `;
 
 exports[`NgRxRootStoreGenerator Standalone APIs should add a facade when --facade=true 1`] = `
-"import { ApplicationConfig } from '@angular/core';
+"import { ApplicationConfig } from '@angular-classic/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
-} from '@angular/router';
+} from '@angular-classic/router';
 import { appRoutes } from './app.routes';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -458,7 +458,7 @@ export const appConfig: ApplicationConfig = {
 `;
 
 exports[`NgRxRootStoreGenerator Standalone APIs should add a facade when --facade=true 2`] = `
-"import { Injectable, inject } from '@angular/core';
+"import { Injectable, inject } from '@angular-classic/core';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as UsersActions from './users.actions';
@@ -489,11 +489,11 @@ export class UsersFacade {
 `;
 
 exports[`NgRxRootStoreGenerator Standalone APIs should add a root module and root state when --minimal=false 1`] = `
-"import { ApplicationConfig } from '@angular/core';
+"import { ApplicationConfig } from '@angular-classic/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
-} from '@angular/router';
+} from '@angular-classic/router';
 import { appRoutes } from './app.routes';
 import { provideStore, provideState } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -531,7 +531,7 @@ export const loadUsersFailure = createAction(
 `;
 
 exports[`NgRxRootStoreGenerator Standalone APIs should add a root module and root state when --minimal=false 3`] = `
-"import { Injectable, inject } from '@angular/core';
+"import { Injectable, inject } from '@angular-classic/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { switchMap, catchError, of } from 'rxjs';
 import * as UsersActions from './users.actions';
@@ -556,7 +556,7 @@ export class UsersEffects {
 `;
 
 exports[`NgRxRootStoreGenerator Standalone APIs should add a root module and root state when --minimal=false 4`] = `
-"import { TestBed } from '@angular/core/testing';
+"import { TestBed } from '@angular-classic/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { Action } from '@ngrx/store';
 import { provideMockStore } from '@ngrx/store/testing';
@@ -758,11 +758,11 @@ describe('Users Selectors', () => {
 `;
 
 exports[`NgRxRootStoreGenerator Standalone APIs should add an empty root module when --minimal=true 1`] = `
-"import { ApplicationConfig } from '@angular/core';
+"import { ApplicationConfig } from '@angular-classic/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
-} from '@angular/router';
+} from '@angular-classic/router';
 import { appRoutes } from './app.routes';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
@@ -778,11 +778,11 @@ export const appConfig: ApplicationConfig = {
 `;
 
 exports[`NgRxRootStoreGenerator Standalone APIs should instrument the store devtools when "addDevTools: true" 1`] = `
-"import { ApplicationConfig, isDevMode } from '@angular/core';
+"import { ApplicationConfig, isDevMode } from '@angular-classic/core';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
-} from '@angular/router';
+} from '@angular-classic/router';
 import { appRoutes } from './app.routes';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
