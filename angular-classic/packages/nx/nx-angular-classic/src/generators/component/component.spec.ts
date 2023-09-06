@@ -19,7 +19,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -64,7 +64,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -98,7 +98,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -135,7 +135,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -172,7 +172,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -195,7 +195,7 @@ describe('component Generator', () => {
     ).toBeFalsy();
     expect(tree.read('libs/lib1/src/lib/example/example.component.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { Component } from '@angular/core';
+      "import { Component } from '@angular-classic/core';
 
       @Component({
         selector: 'proj-example',
@@ -217,7 +217,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -256,7 +256,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -299,7 +299,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -340,7 +340,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -382,7 +382,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -423,7 +423,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -461,7 +461,7 @@ describe('component Generator', () => {
     tree.write(
       'libs/lib1/src/lib/lib.module.ts',
       `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -495,7 +495,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/lib.module.ts',
         `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -535,7 +535,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/lib.module.ts',
         `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -579,7 +579,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/lib.module.ts',
         `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -621,7 +621,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/lib.module.ts',
         `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -664,7 +664,7 @@ describe('component Generator', () => {
         tree.write(
           'libs/lib1/src/lib/lib.module.ts',
           `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -704,7 +704,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/shared/ui/src/lib/lib.module.ts',
         `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -744,7 +744,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/lib.module.ts',
         `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -755,7 +755,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/not-exported.module.ts',
         `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -792,7 +792,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/lib.module.ts',
         `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -803,7 +803,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/lib2.module.ts',
         `
-    import { NgModule } from '@angular/core';
+    import { NgModule } from '@angular-classic/core';
     
     @NgModule({
       declarations: [],
@@ -835,7 +835,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/lib.module.ts',
         `
-      import { NgModule } from '@angular/core';
+      import { NgModule } from '@angular-classic/core';
       
       @NgModule({
         declarations: [],
@@ -856,7 +856,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/secondary/src/lib/secondary.module.ts',
         `
-      import { NgModule } from '@angular/core';
+      import { NgModule } from '@angular-classic/core';
       
       @NgModule({
         declarations: [],
@@ -898,7 +898,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/src/lib/lib.module.ts',
         `
-      import { NgModule } from '@angular/core';
+      import { NgModule } from '@angular-classic/core';
       
       @NgModule({
         declarations: [],
@@ -916,7 +916,7 @@ describe('component Generator', () => {
       tree.write(
         'libs/lib1/secondary/src/lib/secondary.module.ts',
         `
-      import { NgModule } from '@angular/core';
+      import { NgModule } from '@angular-classic/core';
       
       @NgModule({
         declarations: [],
@@ -947,7 +947,7 @@ describe('component Generator', () => {
     updateJson(tree, 'package.json', (json) => ({
       ...json,
       dependencies: {
-        '@angular/core': '14.0.0',
+        '@angular-classic/core': '14.0.0',
       },
     }));
 

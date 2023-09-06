@@ -12,8 +12,8 @@ export function setupServeTarget(host: Tree, options: Schema) {
     ...appConfig.targets['serve'],
     executor:
       options.mfType === 'host'
-        ? '@nx/angular:module-federation-dev-server'
-        : '@nx/angular:webpack-dev-server',
+        ? '@angular-classic/nx-angular:module-federation-dev-server'
+        : '@angular-classic/nx-angular:webpack-dev-server',
     options: {
       ...appConfig.targets['serve'].options,
       port: options.port ?? undefined,
