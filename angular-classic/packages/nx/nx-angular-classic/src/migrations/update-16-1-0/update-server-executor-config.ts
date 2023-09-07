@@ -9,7 +9,7 @@ import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-optio
 
 const executors = [
   '@angular-devkit/build-angular:server',
-  '@nx/angular:server',
+  '@angular-classic/nx-angular:server',
   '@nrwl/angular:server',
 ];
 

@@ -7,7 +7,7 @@ import { librarySecondaryEntryPointGenerator } from '../library-secondary-entry-
 import { generateTestLibrary } from '../utils/testing';
 import { angularMoveGenerator } from './move';
 
-describe('@nx/angular:move', () => {
+describe('@angular-classic/nx-angular:move', () => {
   let tree: Tree;
   let projectGraph: ProjectGraph;
 
@@ -15,7 +15,7 @@ describe('@nx/angular:move', () => {
     projectGraph = {
       dependencies: {
         [project]: [
-          { source: project, target: 'npm:@angular/core', type: 'static' },
+          { source: project, target: 'npm:@angular-classic/core', type: 'static' },
         ],
       },
       nodes: {
@@ -128,8 +128,8 @@ describe('@nx/angular:move', () => {
       });
       tree.write(
         'my-lib/src/lib/my-lib.module.ts',
-        `import { NgModule } from '@angular/core';
-    import { CommonModule } from '@angular/common';
+        `import { NgModule } from '@angular-classic/core';
+    import { CommonModule } from '@angular-classic/common';
 
     @NgModule({
       imports: [CommonModule]
@@ -139,7 +139,7 @@ describe('@nx/angular:move', () => {
 
       tree.write(
         'my-lib/src/lib/my-lib.module.spec.ts',
-        `import { async, TestBed } from '@angular/core/testing';
+        `import { async, TestBed } from '@angular-classic/core/testing';
     import { MyLibModule } from './my-lib.module';
 
     describe('MyLibModule', () => {

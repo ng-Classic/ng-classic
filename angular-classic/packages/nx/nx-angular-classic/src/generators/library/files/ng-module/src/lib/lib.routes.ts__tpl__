@@ -1,4 +1,4 @@
-import { Route } from '@angular/router';
+import { Route } from '@angular-classic/router';
 
 export const <%= libPropertyName %>Routes: Route[] = [
   /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
