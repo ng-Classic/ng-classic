@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
+import { NgModule } from '@angular-classic/core';
+import { TestBed } from '@angular-classic/core/testing';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule, Store } from '@ngrx/store';
-import { readFirst } from '@nx/angular/testing';
+import { readFirst } from '@angular-classic/nx-angular/testing';
 
 import * as <%= className %>Actions from './<%= relativeFileName %>.actions';
 import { <%= className %>Effects } from './<%= relativeFileName %>.effects';
