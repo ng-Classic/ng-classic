@@ -600,7 +600,7 @@ describe('lib', () => {
             {
               "files": ["*.ts"],
               "extends": [
-                "plugin:@nx/angular",
+                "plugin:@angular-classic/nx-angular",
                 "plugin:@angular-eslint/template/process-inline-templates"
               ],
               "rules": {
@@ -624,7 +624,7 @@ describe('lib', () => {
             },
             {
               "files": ["*.html"],
-              "extends": ["plugin:@nx/angular-template"],
+              "extends": ["plugin:@angular-classic/nx-angular-template"],
               "rules": {}
             },
             {
@@ -773,9 +773,9 @@ describe('lib', () => {
         ]);
 
         expect(moduleContents2).toMatchInlineSnapshot(`
-          "import { NgModule } from '@angular/core';
-          import { BrowserModule } from '@angular/platform-browser';
-          import { RouterModule } from '@angular/router';
+          "import { NgModule } from '@angular-classic/core';
+          import { BrowserModule } from '@angular-classic/platform-browser';
+          import { RouterModule } from '@angular-classic/router';
           import { AppComponent } from './app.component';
           @NgModule({
             imports: [
@@ -821,9 +821,9 @@ describe('lib', () => {
         tree.write(
           'myapp/src/app/app.module.ts',
           `
-          import { NgModule } from '@angular/core';
-          import { BrowserModule } from '@angular/platform-browser';
-          import { RouterModule } from '@angular/router';
+          import { NgModule } from '@angular-classic/core';
+          import { BrowserModule } from '@angular-classic/platform-browser';
+          import { RouterModule } from '@angular-classic/router';
           import { AppComponent } from './app.component';
 
           const routes = [];
@@ -965,9 +965,9 @@ describe('lib', () => {
         tree.write(
           'myapp/src/app/app.module.ts',
           `
-          import { NgModule } from '@angular/core';
-          import { BrowserModule } from '@angular/platform-browser';
-          import { RouterModule } from '@angular/router';
+          import { NgModule } from '@angular-classic/core';
+          import { BrowserModule } from '@angular-classic/platform-browser';
+          import { RouterModule } from '@angular-classic/router';
           import { AppComponent } from './app.component';
 
           const routes = [];
@@ -1099,7 +1099,7 @@ describe('lib', () => {
 
       // check to see if the workspace configuration has been updated to use strict
       // mode by default in future libraries
-      expect(generators['@nx/angular:library'].strict).not.toBeDefined();
+      expect(generators['@angular-classic/nx-angular:library'].strict).not.toBeDefined();
     });
 
     it('should set defaults when --strict=false', async () => {
@@ -1114,7 +1114,7 @@ describe('lib', () => {
       // check to see if the workspace configuration has been updated to turn off
       // strict mode by default in future libraries
       const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
-      expect(generators['@nx/angular:library'].strict).toBe(false);
+      expect(generators['@angular-classic/nx-angular:library'].strict).toBe(false);
     });
   });
 
@@ -1161,7 +1161,7 @@ describe('lib', () => {
             "overrides": [
               {
                 "extends": [
-                  "plugin:@nx/angular",
+                  "plugin:@angular-classic/nx-angular",
                   "plugin:@angular-eslint/template/process-inline-templates",
                 ],
                 "files": [
@@ -1188,7 +1188,7 @@ describe('lib', () => {
               },
               {
                 "extends": [
-                  "plugin:@nx/angular-template",
+                  "plugin:@angular-classic/nx-angular-template",
                 ],
                 "files": [
                   "*.html",
@@ -1221,7 +1221,7 @@ describe('lib', () => {
             "overrides": [
               {
                 "extends": [
-                  "plugin:@nx/angular",
+                  "plugin:@angular-classic/nx-angular",
                   "plugin:@angular-eslint/template/process-inline-templates",
                 ],
                 "files": [
@@ -1248,7 +1248,7 @@ describe('lib', () => {
               },
               {
                 "extends": [
-                  "plugin:@nx/angular-template",
+                  "plugin:@angular-classic/nx-angular-template",
                 ],
                 "files": [
                   "*.html",
@@ -1324,7 +1324,7 @@ describe('lib', () => {
       // ASSERT
       expect(tree.read('my-lib/tailwind.config.js', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@angular-classic/nx-angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */
@@ -1549,7 +1549,7 @@ describe('lib', () => {
       // ASSERT
       expect(tree.read('app1/src/app/app.routes.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { Route } from '@angular/router';
+        "import { Route } from '@angular-classic/router';
         import { myLibRoutes } from '@proj/my-lib';
 
         export const appRoutes: Route[] = [{ path: 'my-lib', children: myLibRoutes }];
@@ -1576,7 +1576,7 @@ describe('lib', () => {
       // ASSERT
       expect(tree.read('app1/src/app/app.routes.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { Route } from '@angular/router';
+        "import { Route } from '@angular-classic/router';
 
         export const appRoutes: Route[] = [
           {
@@ -1687,7 +1687,7 @@ describe('lib', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.1.0',
+          '@angular-classic/core': '14.1.0',
         },
       }));
     });
@@ -1745,8 +1745,8 @@ describe('lib', () => {
           },
           "name": "@myorg/lib",
           "peerDependencies": {
-            "@angular/common": "^14.1.0",
-            "@angular/core": "^14.1.0",
+            "@angular-classic/common": "^14.1.0",
+            "@angular-classic/core": "^14.1.0",
           },
           "sideEffects": false,
           "version": "0.0.1",
@@ -1771,7 +1771,7 @@ describe('lib', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.0.0',
+          '@angular-classic/core': '14.0.0',
         },
       }));
 

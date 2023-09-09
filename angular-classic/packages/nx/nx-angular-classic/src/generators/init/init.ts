@@ -102,21 +102,21 @@ function setDefaults(host: Tree, options: Schema) {
   const nxJson = readNxJson(host);
 
   nxJson.generators = nxJson.generators || {};
-  nxJson.generators['@nx/angular:application'] = {
+  nxJson.generators['@angular-classic/nx-angular:application'] = {
     style: options.style,
     linter: options.linter,
     unitTestRunner: options.unitTestRunner,
     e2eTestRunner: options.e2eTestRunner,
-    ...(nxJson.generators['@nx/angular:application'] || {}),
+    ...(nxJson.generators['@angular-classic/nx-angular:application'] || {}),
   };
-  nxJson.generators['@nx/angular:library'] = {
+  nxJson.generators['@angular-classic/nx-angular:library'] = {
     linter: options.linter,
     unitTestRunner: options.unitTestRunner,
-    ...(nxJson.generators['@nx/angular:library'] || {}),
+    ...(nxJson.generators['@angular-classic/nx-angular:library'] || {}),
   };
-  nxJson.generators['@nx/angular:component'] = {
+  nxJson.generators['@angular-classic/nx-angular:component'] = {
     style: options.style,
-    ...(nxJson.generators['@nx/angular:component'] || {}),
+    ...(nxJson.generators['@angular-classic/nx-angular:component'] || {}),
   };
 
   updateNxJson(host, nxJson);
@@ -127,7 +127,7 @@ function updateDependencies(
   versions: PackageVersions
 ): GeneratorCallback {
   const angularVersion =
-    getInstalledPackageVersion(tree, '@angular/core') ??
+    getInstalledPackageVersion(tree, '@angular-classic/core') ??
     versions.angularVersion;
   const angularDevkitVersion =
     getInstalledPackageVersion(tree, '@angular-devkit/build-angular') ??
@@ -142,22 +142,22 @@ function updateDependencies(
   return addDependenciesToPackageJsonIfDontExist(
     tree,
     {
-      '@angular/animations': angularVersion,
-      '@angular/common': angularVersion,
-      '@angular/compiler': angularVersion,
-      '@angular/core': angularVersion,
-      '@angular/forms': angularVersion,
-      '@angular/platform-browser': angularVersion,
-      '@angular/platform-browser-dynamic': angularVersion,
-      '@angular/router': angularVersion,
+      '@angular-classic/animations': angularVersion,
+      '@angular-classic/common': angularVersion,
+      '@angular-classic/compiler': angularVersion,
+      '@angular-classic/core': angularVersion,
+      '@angular-classic/forms': angularVersion,
+      '@angular-classic/platform-browser': angularVersion,
+      '@angular-classic/platform-browser-dynamic': angularVersion,
+      '@angular-classic/router': angularVersion,
       rxjs: rxjsVersion,
       tslib: tsLibVersion,
       'zone.js': zoneJsVersion,
     },
     {
-      '@angular/cli': angularDevkitVersion,
-      '@angular/compiler-cli': angularVersion,
-      '@angular/language-service': angularVersion,
+      '@angular-classic/cli': angularDevkitVersion,
+      '@angular-classic/compiler-cli': angularVersion,
+      '@angular-classic/language-service': angularVersion,
       '@angular-devkit/build-angular': angularDevkitVersion,
       '@angular-devkit/schematics': angularDevkitVersion,
       '@schematics/angular': angularDevkitVersion,

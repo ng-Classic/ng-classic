@@ -30,7 +30,7 @@ exports[`setupSSR should create the files correctly for ssr 1`] = `
 exports[`setupSSR should create the files correctly for ssr 2`] = `
 "import 'zone.js/dist/zone-node';
 
-import { APP_BASE_HREF } from '@angular/common';
+import { APP_BASE_HREF } from '@angular-classic/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { existsSync } from 'fs';
@@ -132,7 +132,7 @@ exports[`setupSSR should create the files correctly for ssr when app is standalo
 exports[`setupSSR should create the files correctly for ssr when app is standalone 2`] = `
 "import 'zone.js/dist/zone-node';
 
-import { APP_BASE_HREF } from '@angular/common';
+import { APP_BASE_HREF } from '@angular-classic/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { existsSync } from 'fs';
