@@ -24,13 +24,13 @@ describe('update-16-0-0-add-nx-packages', () => {
     ).not.toBeDefined();
   });
 
-  it('should add a dependency on @angular-classic/nx-angular', async () => {
+  it('should add a dependency on @nx/angular', async () => {
     await replacePackage(tree);
 
     const packageJson = readJson(tree, 'package.json');
     const newDependencyVersion =
-      packageJson.devDependencies['@angular-classic/nx-angular'] ??
-      packageJson.dependencies['@angular-classic/nx-angular'];
+      packageJson.devDependencies['@nx/angular'] ??
+      packageJson.dependencies['@nx/angular'];
 
     expect(newDependencyVersion).toBeDefined();
   });

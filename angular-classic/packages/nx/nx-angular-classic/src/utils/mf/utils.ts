@@ -8,7 +8,7 @@ import {
   SharedLibraryConfig,
   sharePackages,
   shareWorkspaceLibraries,
-} from '@nx/devkit/src/utils/module-federation';
+} from '@nx/webpack/src/utils/module-federation';
 
 import {
   createProjectGraphAsync,
@@ -21,8 +21,8 @@ export function applyDefaultEagerPackages(
   sharedConfig: Record<string, SharedLibraryConfig>
 ) {
   const DEFAULT_PACKAGES_TO_LOAD_EAGERLY = [
-    '@angular-classic/localize',
-    '@angular-classic/localize/init',
+    '@angular/localize',
+    '@angular/localize/init',
   ];
   for (const pkg of DEFAULT_PACKAGES_TO_LOAD_EAGERLY) {
     if (!sharedConfig[pkg]) {
@@ -35,12 +35,12 @@ export function applyDefaultEagerPackages(
 
 export const DEFAULT_NPM_PACKAGES_TO_AVOID = [
   'zone.js',
-  '@angular-classic/nx-angular/mf',
+  '@nx/angular/mf',
   '@nrwl/angular/mf',
 ];
 export const DEFAULT_ANGULAR_PACKAGES_TO_SHARE = [
-  '@angular-classic/animations',
-  '@angular-classic/common',
+  '@angular/animations',
+  '@angular/common',
 ];
 
 export function getFunctionDeterminateRemoteUrl(isServer: boolean = false) {
