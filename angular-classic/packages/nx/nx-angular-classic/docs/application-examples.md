@@ -6,7 +6,7 @@
 Create an application named `my-app`:
 
 ```bash
-nx g @angular-classic/nx-angular:application my-app
+nx g @nx/angular:application my-app
 ```
 
 {% /tab %}
@@ -15,8 +15,12 @@ nx g @angular-classic/nx-angular:application my-app
 
 Create an application named `my-app` in the `my-dir` directory and use `scss` for styles:
 
+{% callout type="note" title="Directory Flag Behavior Changes" %}
+The command below uses the `as-provided` directory flag behavior, which is the default in Nx 16.8.0. If you're on an earlier version of Nx or using the `derived` option, use `--directory=my-dir`. See the [workspace layout documentation](/reference/nx-json#workspace-layout) for more details.
+{% /callout %}
+
 ```bash
-nx g @angular-classic/nx-angular:app my-app --directory=my-dir --style=scss
+nx g @nx/angular:app my-app --directory=my-dir/my-app --style=scss
 ```
 
 {% /tab %}
@@ -26,7 +30,7 @@ nx g @angular-classic/nx-angular:app my-app --directory=my-dir --style=scss
 Create an application with Single File Components (inline styles and inline templates):
 
 ```bash
-nx g @angular-classic/nx-angular:app my-app --inlineStyle --inlineTemplate
+nx g @nx/angular:app my-app --inlineStyle --inlineTemplate
 ```
 
 {% /tab %}
@@ -36,7 +40,7 @@ nx g @angular-classic/nx-angular:app my-app --inlineStyle --inlineTemplate
 Create an application that is setup to use standalone components:
 
 ```bash
-nx g @angular-classic/nx-angular:app my-app --standalone
+nx g @nx/angular:app my-app --standalone
 ```
 
 {% /tab %}
@@ -46,7 +50,7 @@ nx g @angular-classic/nx-angular:app my-app --standalone
 Set the prefix to apply to generated selectors and add tags to the application (used for linting).
 
 ```bash
-nx g @angular-classic/nx-angular:app my-app --prefix=admin --tags=scope:admin,type:ui
+nx g @nx/angular:app my-app --prefix=admin --tags=scope:admin,type:ui
 ```
 
 {% /tab %}

@@ -16,6 +16,7 @@ import {
   typesCorsVersion,
   typesExpressVersion,
 } from '../../../utils/versions';
+import { join } from 'path';
 
 export async function addSsr(tree: Tree, options: Schema, appName: string) {
   let project = readProjectConfiguration(tree, appName);
@@ -34,8 +35,14 @@ export async function addSsr(tree: Tree, options: Schema, appName: string) {
     "import('./src/main.server');"
   );
 
-  generateFiles(tree, joinPathFragments(__dirname, '../files'), project.root, {
+  const browserBundleOutput = joinPathFragments(
+    project.targets.build.options.outputPath,
+    'browser'
+  );
+
+  generateFiles(tree, join(__dirname, '../files'), project.root, {
     appName,
+    browserBundleOutput,
     standalone: options.standalone,
     tmpl: '',
   });
@@ -43,13 +50,13 @@ export async function addSsr(tree: Tree, options: Schema, appName: string) {
   // update project.json
   project = readProjectConfiguration(tree, appName);
 
-  project.targets.server.executor = '@angular-classic/nx-angular:webpack-server';
+  project.targets.server.executor = '@nx/angular:webpack-server';
   project.targets.server.options.customWebpackConfig = {
     path: joinPathFragments(project.root, 'webpack.server.config.js'),
   };
 
   project.targets['serve-ssr'].executor =
-    '@angular-classic/nx-angular:module-federation-dev-ssr';
+    '@nx/angular:module-federation-dev-ssr';
 
   updateProjectConfiguration(tree, appName, project);
 
