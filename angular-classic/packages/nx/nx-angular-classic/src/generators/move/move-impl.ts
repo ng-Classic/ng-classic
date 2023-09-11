@@ -30,6 +30,6 @@ async function isAngularProject(project: string): Promise<boolean> {
   const projectGraph = await createProjectGraphAsync();
 
   return projectGraph.dependencies[project]?.some(
-    (dependency) => dependency.target === 'npm:@angular/core'
+    (dependency) => dependency.target === 'npm:@angular-classic/core'
   );
 }

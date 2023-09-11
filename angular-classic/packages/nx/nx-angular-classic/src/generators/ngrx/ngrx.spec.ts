@@ -501,7 +501,7 @@ describe('ngrx', () => {
       );
       tree.write(
         'my-app/src/app/app.routes.ts',
-        `import { Routes } from '@angular/router';
+        `import { Routes } from '@angular-classic/router';
         import { NxWelcomeComponent } from './nx-welcome.component'; 
       export const appRoutes: Routes = [{ path: '', component: NxWelcomeComponent }];`
       );
@@ -574,7 +574,7 @@ describe('ngrx', () => {
     it('should add a feature module when route is non-empty', async () => {
       tree.write(
         'my-app/src/app/app.routes.ts',
-        `import { Routes } from '@angular/router';
+        `import { Routes } from '@angular-classic/router';
         import { NxWelcomeComponent } from './nx-welcome.component'; 
       export const appRoutes: Routes = [{ path: 'home', component: NxWelcomeComponent }];`
       );
@@ -642,7 +642,7 @@ describe('ngrx', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.0.0',
+          '@angular-classic/core': '14.0.0',
         },
       }));
     });
@@ -688,7 +688,7 @@ describe('ngrx', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.1.0',
+          '@angular-classic/core': '14.1.0',
         },
       }));
 
@@ -712,7 +712,7 @@ describe('ngrx', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.1.0',
+          '@angular-classic/core': '14.1.0',
         },
       }));
 
@@ -727,7 +727,7 @@ describe('ngrx', () => {
       const parentPath = 'myapp/src/app/app.routes.ts';
       tree.write(
         parentPath,
-        `import { Routes } from '@angular/router';
+        `import { Routes } from '@angular-classic/router';
         import { NxWelcomeComponent } from './nx-welcome.component'; 
         export const appRoutes: Routes = [{ path: '', component: NxWelcomeComponent }];`
       );
@@ -736,7 +736,7 @@ describe('ngrx', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.1.0',
+          '@angular-classic/core': '14.1.0',
           '@ngrx/store': '14.1.0',
         },
       }));
@@ -756,7 +756,7 @@ describe('ngrx', () => {
       const parentPath = 'myapp/src/app/app.routes.ts';
       tree.write(
         parentPath,
-        `import { Routes } from '@angular/router';
+        `import { Routes } from '@angular-classic/router';
         import { NxWelcomeComponent } from './nx-welcome.component'; 
         export const appRoutes: Routes = [{ path: '', component: NxWelcomeComponent }];`
       );
@@ -765,7 +765,7 @@ describe('ngrx', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular/core': '14.2.0',
+          '@angular-classic/core': '14.2.0',
         },
       }));
 
@@ -784,7 +784,7 @@ describe('ngrx', () => {
       const parentPath = 'myapp/src/app/app.routes.ts';
       tree.write(
         parentPath,
-        `import { Routes } from '@angular/router';
+        `import { Routes } from '@angular-classic/router';
         import { NxWelcomeComponent } from './nx-welcome.component'; 
         export const appRoutes: Routes = [{ path: '', component: NxWelcomeComponent }];`
       );

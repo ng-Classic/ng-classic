@@ -11,20 +11,20 @@ describe('remove-platform-server-exports', () => {
     tree = createTreeWithEmptyWorkspace();
   });
 
-  describe(`Migration to remove '@angular/platform-server' exports`, () => {
-    it(`should delete '@angular/platform-server' export when 'renderModule' is the only exported symbol`, async () => {
+  describe(`Migration to remove '@angular-classic/platform-server' exports`, () => {
+    it(`should delete '@angular-classic/platform-server' export when 'renderModule' is the only exported symbol`, async () => {
       tree.write(
         testTypeScriptFilePath,
         `
           import { Path, join } from '@angular-devkit/core';
-          export { renderModule } from '@angular/platform-server';
+          export { renderModule } from '@angular-classic/platform-server';
         `
       );
 
       await removePlatformServerExports(tree);
 
       const content = tree.read(testTypeScriptFilePath, 'utf-8');
-      expect(content).not.toContain('@angular/platform-server');
+      expect(content).not.toContain('@angular-classic/platform-server');
       expect(content).toContain(
         `import { Path, join } from '@angular-devkit/core';`
       );
@@ -35,7 +35,7 @@ describe('remove-platform-server-exports', () => {
         testTypeScriptFilePath,
         `
           import { Path, join } from '@angular-devkit/core';
-          export { renderModule, ServerModule } from '@angular/platform-server';
+          export { renderModule, ServerModule } from '@angular-classic/platform-server';
         `
       );
 
@@ -47,7 +47,7 @@ describe('remove-platform-server-exports', () => {
         `import { Path, join } from '@angular-devkit/core';`
       );
       expect(content).toContain(
-        `export { ServerModule } from '@angular/platform-server';`
+        `export { ServerModule } from '@angular-classic/platform-server';`
       );
     });
 
@@ -55,7 +55,7 @@ describe('remove-platform-server-exports', () => {
       tree.write(
         testTypeScriptFilePath,
         `
-          export { renderModule } from '@angular/core';
+          export { renderModule } from '@angular-classic/core';
         `
       );
 
@@ -63,15 +63,15 @@ describe('remove-platform-server-exports', () => {
 
       const content = tree.read(testTypeScriptFilePath, 'utf-8');
       expect(content).toContain(
-        `export { renderModule } from '@angular/core';`
+        `export { renderModule } from '@angular-classic/core';`
       );
     });
 
-    it(`should not delete 'renderModule' when it's imported from '@angular/platform-server'`, async () => {
+    it(`should not delete 'renderModule' when it's imported from '@angular-classic/platform-server'`, async () => {
       tree.write(
         testTypeScriptFilePath,
         `
-          import { renderModule } from '@angular/platform-server';
+          import { renderModule } from '@angular-classic/platform-server';
         `
       );
 
@@ -79,7 +79,7 @@ describe('remove-platform-server-exports', () => {
 
       const content = tree.read(testTypeScriptFilePath, 'utf-8');
       expect(content).toContain(
-        `import { renderModule } from '@angular/platform-server'`
+        `import { renderModule } from '@angular-classic/platform-server'`
       );
     });
   });
