@@ -14,7 +14,7 @@ import { fileDataDepTarget } from 'nx/src/config/project-graph';
 
 let tsquery: typeof import('@phenomnomnominal/tsquery').tsquery;
 
-const angularPluginTargetNames = ['npm:@angular-classic/nx-angular', 'npm:@nrwl/angular'];
+const angularPluginTargetNames = ['npm:@nx/angular', 'npm:@nrwl/angular'];
 const dataPersistenceOperators = [
   'fetch',
   'navigation',

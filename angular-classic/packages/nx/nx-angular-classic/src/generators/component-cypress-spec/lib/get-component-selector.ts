@@ -19,7 +19,7 @@ export function getComponentSelector(tree: Tree, path: string): string {
   const componentDecorators = getDecoratorMetadata(
     file,
     'Component',
-    '@angular-classic/core'
+    '@angular/core'
   );
   if (componentDecorators.length === 0) {
     throw new Error(`No @Component decorator in ${path}.`);

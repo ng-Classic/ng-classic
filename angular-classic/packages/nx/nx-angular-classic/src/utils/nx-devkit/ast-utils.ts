@@ -32,7 +32,7 @@ function _angularImportsFromNode(
       return {};
   }
 
-  if (!modulePath.startsWith('@angular-classic/')) {
+  if (!modulePath.startsWith('@angular/')) {
     return {};
   }
 
@@ -82,7 +82,7 @@ export function isStandalone(
   const decoratorMetadata = getDecoratorMetadata(
     sourceFile,
     decoratorName,
-    '@angular-classic/core'
+    '@angular/core'
   );
   return decoratorMetadata.some((node) =>
     node.getText().includes('standalone: true')
@@ -167,8 +167,8 @@ function _addSymbolToDecoratorMetadata(
   expression: string,
   decoratorName: DecoratorName
 ): ts.SourceFile {
-  const nodes = getDecoratorMetadata(source, decoratorName, '@angular-classic/core');
-  let node: any = nodes[0]; // tslint:disable-line:no-any
+  const nodes = getDecoratorMetadata(source, decoratorName, '@angular/core');
+  let node: any = nodes[0];
 
   // Find the decorator declaration.
   if (!node) {
@@ -325,8 +325,8 @@ export function removeFromNgModule(
   modulePath: string,
   property: string
 ): ts.SourceFile {
-  const nodes = getDecoratorMetadata(source, 'NgModule', '@angular-classic/core');
-  let node: any = nodes[0]; // tslint:disable-line:no-any
+  const nodes = getDecoratorMetadata(source, 'NgModule', '@angular/core');
+  let node: any = nodes[0];
 
   // Find the decorator declaration.
   if (!node) {
@@ -338,7 +338,7 @@ export function removeFromNgModule(
     source,
     property,
     'NgModule',
-    '@angular-classic/core'
+    '@angular/core'
   );
   if (matchingProperty) {
     return removeChange(
@@ -575,7 +575,7 @@ export function getBootstrapComponent(
     source,
     'bootstrap',
     'NgModule',
-    '@angular-classic/core'
+    '@angular/core'
   );
   if (!bootstrap) {
     throw new Error(`Cannot find bootstrap components in '${moduleClassName}'`);
@@ -598,7 +598,7 @@ function getMatchingProperty(
   module: string
 ): ts.ObjectLiteralElement {
   const nodes = getDecoratorMetadata(source, identifier, module);
-  let node: any = nodes[0]; // tslint:disable-line:no-any
+  let node: any = nodes[0];
 
   if (!node) return null;
 
@@ -632,7 +632,7 @@ function getListOfRoutes(
     source,
     'imports',
     'NgModule',
-    '@angular-classic/core'
+    '@angular/core'
   );
 
   if (
