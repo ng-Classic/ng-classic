@@ -10,7 +10,7 @@
 import type {
   CompilerOptions,
   ParsedConfiguration,
-} from '@angular/compiler-cli';
+} from '@angular-classic/compiler-cli';
 import { ngCompilerCli } from 'ng-packagr/lib/utils/ng-compiler-cli';
 import { resolve } from 'path';
 import * as ts from 'typescript';
