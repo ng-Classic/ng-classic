@@ -32,15 +32,15 @@ export function createApp(
   // save for getAppDir() lookup by external *.spec.ts tests
   appConfig = {
     appName,
-    appModule: `/apps/${appName}/src/app/app.module.ts`,
+    appModule: `${appName}/src/app/app.module.ts`,
   };
 
   tree.write(
     appConfig.appModule,
     `
-     import { NgModule } from '@angular-classic/core';
-     import { BrowserModule } from '@angular-classic/platform-browser';
-     ${routing ? "import { RouterModule } from '@angular-classic/router'" : ''};
+     import { NgModule } from '@angular/core';
+     import { BrowserModule } from '@angular/platform-browser';
+     ${routing ? "import { RouterModule } from '@angular/router'" : ''};
      import { AppComponent } from './app.component';
      @NgModule({
        imports: [BrowserModule, ${routing ? 'RouterModule.forRoot([])' : ''}],
@@ -51,9 +51,9 @@ export function createApp(
   `
   );
   tree.write(
-    `/apps/${appName}/src/main.ts`,
+    `${appName}/src/main.ts`,
     `
-    import { platformBrowserDynamic } from '@angular-classic/platform-browser-dynamic';
+    import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
     import { AppModule } from './app/app.module';
 
@@ -63,24 +63,24 @@ export function createApp(
   `
   );
   tree.write(
-    `/apps/${appName}/tsconfig.app.json`,
+    `${appName}/tsconfig.app.json`,
     JSON.stringify({
       include: ['**/*.ts'],
     })
   );
   tree.write(
-    `/apps/${appName}-e2e/tsconfig.e2e.json`,
+    `${appName}-e2e/tsconfig.e2e.json`,
     JSON.stringify({
       include: ['../**/*.ts'],
     })
   );
   addProjectConfiguration(tree, appName, {
-    root: `apps/${appName}`,
-    sourceRoot: `apps/${appName}/src`,
+    root: `${appName}`,
+    sourceRoot: `${appName}/src`,
     targets: {
       build: {
         options: {
-          main: `apps/${appName}/src/main.ts`,
+          main: `${appName}/src/main.ts`,
         },
       },
       serve: {
@@ -96,15 +96,15 @@ export function createLib(tree: Tree, libName: string) {
 
   libConfig = {
     name,
-    module: `/libs/${propertyName}/src/lib/${fileName}.module.ts`,
-    barrel: `/libs/${propertyName}/src/index.ts`,
+    module: `${propertyName}/src/lib/${fileName}.module.ts`,
+    barrel: `${propertyName}/src/index.ts`,
   };
 
   tree.write(
     libConfig.module,
     `
-      import { NgModule } from '@angular-classic/core';
-      import { CommonModule } from '@angular-classic/common';
+      import { NgModule } from '@angular/core';
+      import { CommonModule } from '@angular/common';
       @NgModule({
         imports: [
           CommonModule

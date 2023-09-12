@@ -3,12 +3,12 @@
   "$id": "SchematicsAngularModuleInit",
   "cli": "nx",
   "title": "Init Angular Plugin",
-  "description": "Initializes the `@angular-classic/nx-angular` plugin. NOTE: Does not work in the `--dry-run` mode.",
+  "description": "Initializes the `@nx/angular` plugin. NOTE: Does not work in the `--dry-run` mode.",
   "type": "object",
   "examples": [
     {
-      "command": "nx g @angular-classic/nx-angular:init --style=scss",
-      "description": "Installs angular dependencies and initializes the `@angular-classic/nx-angular` plugin with the `scss` stylesheet format."
+      "command": "nx g @nx/angular:init --style=scss",
+      "description": "Installs angular dependencies and initializes the `@nx/angular` plugin with the `scss` stylesheet format."
     }
   ],
   "properties": {
@@ -21,7 +21,8 @@
     },
     "e2eTestRunner": {
       "type": "string",
-      "enum": ["cypress", "none"],
+      "enum": ["cypress", "playwright", "none"],
+      "x-prompt": "Which E2E test runner would you like to use?",
       "description": "Test runner to use for end to end (e2e) tests.",
       "default": "cypress",
       "x-priority": "important"

@@ -90,7 +90,7 @@ describe('addLinting generator', () => {
         ...json,
         dependencies: {
           ...json.dependencies,
-          '@angular-classic/core': '14.1.0',
+          '@angular/core': '14.1.0',
         },
       }));
 
@@ -122,7 +122,7 @@ describe('addLinting generator', () => {
       });
 
       const { dependencies, devDependencies } = readJson(tree, 'package.json');
-      expect(dependencies['@angular-classic/core']).toEqual('14.1.0');
+      expect(dependencies['@angular/core']).toEqual('14.1.0');
       expect(devDependencies['@angular-eslint/eslint-plugin']).toBeDefined();
       expect(
         devDependencies['@angular-eslint/eslint-plugin-template']
