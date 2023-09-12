@@ -35,11 +35,9 @@ export function fixBootstrap(tree: Tree, appRoot: string, options: Schema) {
 
 const standaloneBootstrapCode = (
   includeEnvironments: boolean = false
-) => `import {importProvidersFrom} from "@angular-classic/core";
-import {bootstrapApplication} from "@angular-classic/platform-browser";
-import {RouterModule} from "@angular-classic/router";
-import {RemoteEntryComponent} from "./app/remote-entry/entry.component";
-import {appRoutes} from "./app/app.routes";
+) => `import {bootstrapApplication} from "@angular-classic/platform-browser";
+import {appConfig} from './app/app.config';
+import {RemoteEntryComponent} from './app/remote-entry/entry.component';
 ${
   includeEnvironments
     ? `import {enableProdMode} from '@angular-classic/core';
@@ -50,10 +48,6 @@ if(environment.production) {
 `
     : ``
 }
-bootstrapApplication(RemoteEntryComponent, {
-  providers: [
-    importProvidersFrom(
-      RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'})
-    )
-  ]
-});`;
+bootstrapApplication(RemoteEntryComponent, appConfig).catch((err) =>
+  console.error(err)
+);`;
