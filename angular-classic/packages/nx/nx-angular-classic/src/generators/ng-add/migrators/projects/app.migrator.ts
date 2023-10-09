@@ -32,18 +32,18 @@ type SupportedTargets =
   | 'server'
   | 'serveSsr';
 const supportedTargets: Record<SupportedTargets, Target> = {
-  build: { builders: ['@angular-devkit/build-angular:browser'] },
+  build: { builders: ['@angular-classic-devkit/build-angular:browser'] },
   e2e: {
     acceptMultipleDefinitions: true,
     builders: [
-      '@angular-devkit/build-angular:protractor',
+      '@angular-classic-devkit/build-angular:protractor',
       '@cypress/schematic:cypress',
     ],
   },
-  i18n: { builders: ['@angular-devkit/build-angular:extract-i18n'] },
+  i18n: { builders: ['@angular-classic-devkit/build-angular:extract-i18n'] },
   prerender: { builders: ['@nguniversal/builders:prerender'] },
-  serve: { builders: ['@angular-devkit/build-angular:dev-server'] },
-  server: { builders: ['@angular-devkit/build-angular:server'] },
+  serve: { builders: ['@angular-classic-devkit/build-angular:dev-server'] },
+  server: { builders: ['@angular-classic-devkit/build-angular:server'] },
   serveSsr: { builders: ['@nguniversal/builders:ssr-dev-server'] },
 };
 

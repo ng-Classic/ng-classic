@@ -134,7 +134,7 @@ export async function conversionGenerator(
 
 /**
  * In the case of Angular lint rules, we need to apply them to correct override depending upon whether
- * or not they require @typescript-eslint/parser or @angular-eslint/template-parser in order to function.
+ * or not they require @typescript-eslint/parser or @angular-classic-eslint/template-parser in order to function.
  *
  * By this point, the applicable overrides have already been scaffolded for us by the Nx generators
  * that ran earlier within this generator.
@@ -149,7 +149,7 @@ function applyAngularRulesToCorrectOverrides(
       for (const override of json.overrides) {
         if (
           override.files.includes('*.html') &&
-          ruleName.startsWith('@angular-eslint/template')
+          ruleName.startsWith('@angular-classic-eslint/template')
         ) {
           // Prioritize the converted rules over any base implementations from the original Nx generator
           override.rules[ruleName] = ruleConfig;
@@ -162,7 +162,7 @@ function applyAngularRulesToCorrectOverrides(
          */
         if (
           override.files.includes('*.ts') &&
-          !ruleName.startsWith('@angular-eslint/template')
+          !ruleName.startsWith('@angular-classic-eslint/template')
         ) {
           // Prioritize the converted rules over any base implementations from the original Nx generator
           override.rules[ruleName] = ruleConfig;
@@ -179,16 +179,16 @@ function applyAngularRulesToCorrectOverrides(
         override.plugins = [
           ...override.plugins,
           ...json.plugins.filter(
-            (plugin) => plugin !== '@angular-eslint/eslint-plugin-template'
+            (plugin) => plugin !== '@angular-classic-eslint/eslint-plugin-template'
           ),
         ];
       }
 
       if (
         override.files.includes('*.html') &&
-        json.plugins.includes('@angular-eslint/eslint-plugin-template')
+        json.plugins.includes('@angular-classic-eslint/eslint-plugin-template')
       ) {
-        override.plugins = ['@angular-eslint/eslint-plugin-template'];
+        override.plugins = ['@angular-classic-eslint/eslint-plugin-template'];
       }
     }
     delete json.plugins;

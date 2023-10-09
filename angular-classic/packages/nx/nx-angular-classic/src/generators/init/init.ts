@@ -31,14 +31,14 @@ export async function angularInitGenerator(
 
   const pkgVersions = versions(tree);
 
-  const peerDepsToInstall = ['@angular-devkit/core'];
+  const peerDepsToInstall = ['@angular-classic-devkit/core'];
   let devkitVersion: string;
   peerDepsToInstall.forEach((pkg) => {
     const packageVersion = getInstalledPackageVersion(tree, pkg);
 
     if (!packageVersion) {
       devkitVersion ??=
-        getInstalledPackageVersion(tree, '@angular-devkit/build-angular') ??
+        getInstalledPackageVersion(tree, '@angular-classic-devkit/build-angular') ??
         pkgVersions.angularDevkitVersion;
 
       try {
@@ -130,7 +130,7 @@ function updateDependencies(
     getInstalledPackageVersion(tree, '@angular-classic/core') ??
     versions.angularVersion;
   const angularDevkitVersion =
-    getInstalledPackageVersion(tree, '@angular-devkit/build-angular') ??
+    getInstalledPackageVersion(tree, '@angular-classic-devkit/build-angular') ??
     versions.angularDevkitVersion;
   const rxjsVersion =
     getInstalledPackageVersion(tree, 'rxjs') ?? versions.rxjsVersion;
@@ -158,8 +158,8 @@ function updateDependencies(
       '@angular-classic/cli': angularDevkitVersion,
       '@angular-classic/compiler-cli': angularVersion,
       '@angular-classic/language-service': angularVersion,
-      '@angular-devkit/build-angular': angularDevkitVersion,
-      '@angular-devkit/schematics': angularDevkitVersion,
+      '@angular-classic-devkit/build-angular': angularDevkitVersion,
+      '@angular-classic-devkit/schematics': angularDevkitVersion,
       '@schematics/angular': angularDevkitVersion,
     }
   );

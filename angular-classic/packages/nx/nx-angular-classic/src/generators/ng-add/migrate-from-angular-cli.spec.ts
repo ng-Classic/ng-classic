@@ -29,27 +29,27 @@ describe('workspace', () => {
               sourceRoot: 'src',
               architect: {
                 build: {
-                  builder: '@angular-devkit/build-angular:browser',
+                  builder: '@angular-classic-devkit/build-angular:browser',
                   options: {
                     tsConfig: 'tsconfig.app.json',
                   },
                   configurations: {},
                 },
                 test: {
-                  builder: '@angular-devkit/build-angular:karma',
+                  builder: '@angular-classic-devkit/build-angular:karma',
                   options: {
                     karmaConfig: 'karma.conf.js',
                     tsConfig: 'tsconfig.spec.json',
                   },
                 },
                 lint: {
-                  builder: '@angular-eslint/builder:lint',
+                  builder: '@angular-classic-eslint/builder:lint',
                   options: {
                     lintFilePatterns: ['src/**/*.ts', 'src/**/*.html'],
                   },
                 },
                 e2e: {
-                  builder: '@angular-devkit/build-angular:protractor',
+                  builder: '@angular-classic-devkit/build-angular:protractor',
                   options: {
                     protractorConfig: 'e2e/protractor.conf.js',
                   },
@@ -85,15 +85,15 @@ describe('workspace', () => {
                 createDefaultProgram: true,
               },
               extends: [
-                'plugin:@angular-eslint/recommended',
-                'plugin:@angular-eslint/template/process-inline-templates',
+                'plugin:@angular-classic-eslint/recommended',
+                'plugin:@angular-classic-eslint/template/process-inline-templates',
               ],
               rules: {
-                '@angular-eslint/directive-selector': [
+                '@angular-classic-eslint/directive-selector': [
                   'error',
                   { type: 'attribute', prefix: 'app', style: 'camelCase' },
                 ],
-                '@angular-eslint/component-selector': [
+                '@angular-classic-eslint/component-selector': [
                   'error',
                   { type: 'element', prefix: 'app', style: 'kebab-case' },
                 ],
@@ -101,7 +101,7 @@ describe('workspace', () => {
             },
             {
               files: ['*.html'],
-              extends: ['plugin:@angular-eslint/template/recommended'],
+              extends: ['plugin:@angular-classic-eslint/template/recommended'],
               rules: {},
             },
           ],
@@ -168,20 +168,20 @@ describe('workspace', () => {
               sourceRoot: 'projects/myApp/src',
               architect: {
                 build: {
-                  builder: '@angular-devkit/build-angular:browser',
+                  builder: '@angular-classic-devkit/build-angular:browser',
                   options: {
                     tsConfig: 'projects/myApp/tsconfig.app.json',
                   },
                   configurations: {},
                 },
                 test: {
-                  builder: '@angular-devkit/build-angular:karma',
+                  builder: '@angular-classic-devkit/build-angular:karma',
                   options: {
                     tsConfig: 'projects/myApp/tsconfig.spec.json',
                   },
                 },
                 lint: {
-                  builder: '@angular-eslint/builder:lint',
+                  builder: '@angular-classic-eslint/builder:lint',
                   options: {
                     lintFilePatterns: [
                       'projects/myApp/src/**/*.ts',
@@ -190,7 +190,7 @@ describe('workspace', () => {
                   },
                 },
                 e2e: {
-                  builder: '@angular-devkit/build-angular:protractor',
+                  builder: '@angular-classic-devkit/build-angular:protractor',
                   options: {
                     protractorConfig: 'projects/myApp/e2e/protractor.conf.js',
                   },
@@ -264,11 +264,11 @@ describe('workspace', () => {
             projectType: 'library',
             architect: {
               build: {
-                builder: '@angular-devkit/build-angular:ng-packagr',
+                builder: '@angular-classic-devkit/build-angular:ng-packagr',
                 options: { tsConfig: 'projects/lib1/tsconfig.lib.json' },
               },
               test: {
-                builder: '@angular-devkit/build-angular:karma',
+                builder: '@angular-classic-devkit/build-angular:karma',
                 options: { tsConfig: 'projects/lib1/tsconfig.spec.json' },
               },
             },
@@ -308,15 +308,15 @@ describe('workspace', () => {
             projectType: 'application',
             architect: {
               build: {
-                builder: '@angular-devkit/build-angular:browser',
+                builder: '@angular-classic-devkit/build-angular:browser',
                 options: { tsConfig: 'tsconfig.app.json' },
               },
               test: {
-                builder: '@angular-devkit/build-angular:karma',
+                builder: '@angular-classic-devkit/build-angular:karma',
                 options: { tsConfig: 'tsconfig.spec.json' },
               },
               e2e: {
-                builder: '@angular-devkit/build-angular:protractor',
+                builder: '@angular-classic-devkit/build-angular:protractor',
                 options: { protractorConfig: 'e2e/protractor.conf.js' },
               },
             },
@@ -327,11 +327,11 @@ describe('workspace', () => {
             projectType: 'library',
             architect: {
               build: {
-                builder: '@angular-devkit/build-angular:ng-packagr',
+                builder: '@angular-classic-devkit/build-angular:ng-packagr',
                 options: { tsConfig: 'projects/lib1/tsconfig.lib.json' },
               },
               test: {
-                builder: '@angular-devkit/build-angular:karma',
+                builder: '@angular-classic-devkit/build-angular:karma',
                 options: { tsConfig: 'projects/lib1/tsconfig.spec.json' },
               },
             },
@@ -385,15 +385,15 @@ describe('workspace', () => {
             projectType: 'application',
             architect: {
               build: {
-                builder: '@angular-devkit/build-angular:browser',
+                builder: '@angular-classic-devkit/build-angular:browser',
                 options: { tsConfig: 'tsconfig.app.json' },
               },
               test: {
-                builder: '@angular-devkit/build-angular:karma',
+                builder: '@angular-classic-devkit/build-angular:karma',
                 options: { tsConfig: 'tsconfig.spec.json' },
               },
               e2e: {
-                builder: '@angular-devkit/build-angular:protractor',
+                builder: '@angular-classic-devkit/build-angular:protractor',
                 options: { protractorConfig: 'e2e/protractor.conf.js' },
               },
             },
@@ -404,15 +404,15 @@ describe('workspace', () => {
             projectType: 'application',
             architect: {
               build: {
-                builder: '@angular-devkit/build-angular:browser',
+                builder: '@angular-classic-devkit/build-angular:browser',
                 options: { tsConfig: 'projects/app2/tsconfig.app.json' },
               },
               test: {
-                builder: '@angular-devkit/build-angular:karma',
+                builder: '@angular-classic-devkit/build-angular:karma',
                 options: { tsConfig: 'projects/app2/tsconfig.spec.json' },
               },
               e2e: {
-                builder: '@angular-devkit/build-angular:protractor',
+                builder: '@angular-classic-devkit/build-angular:protractor',
                 options: {
                   protractorConfig: 'projects/app2/e2e/protractor.conf.js',
                 },
@@ -472,15 +472,15 @@ describe('workspace', () => {
             projectType: 'application',
             architect: {
               build: {
-                builder: '@angular-devkit/build-angular:browser',
+                builder: '@angular-classic-devkit/build-angular:browser',
                 options: { tsConfig: 'tsconfig.app.json' },
               },
               test: {
-                builder: '@angular-devkit/build-angular:karma',
+                builder: '@angular-classic-devkit/build-angular:karma',
                 options: { tsConfig: 'tsconfig.spec.json' },
               },
               e2e: {
-                builder: '@angular-devkit/build-angular:protractor',
+                builder: '@angular-classic-devkit/build-angular:protractor',
                 options: { protractorConfig: 'e2e/protractor.conf.js' },
               },
             },
@@ -491,11 +491,11 @@ describe('workspace', () => {
             projectType: 'library',
             architect: {
               build: {
-                builder: '@angular-devkit/build-angular:ng-packagr',
+                builder: '@angular-classic-devkit/build-angular:ng-packagr',
                 options: { tsConfig: 'projects/lib1/tsconfig.lib.json' },
               },
               test: {
-                builder: '@angular-devkit/build-angular:karma',
+                builder: '@angular-classic-devkit/build-angular:karma',
                 options: { tsConfig: 'projects/lib1/tsconfig.spec.json' },
               },
             },
@@ -506,11 +506,11 @@ describe('workspace', () => {
             projectType: 'library',
             architect: {
               build: {
-                builder: '@angular-devkit/build-angular:ng-packagr',
+                builder: '@angular-classic-devkit/build-angular:ng-packagr',
                 options: { tsConfig: 'projects/lib2/tsconfig.lib.json' },
               },
               test: {
-                builder: '@angular-devkit/build-angular:karma',
+                builder: '@angular-classic-devkit/build-angular:karma',
                 options: { tsConfig: 'projects/lib2/tsconfig.spec.json' },
               },
             },

@@ -8,9 +8,9 @@
 
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
+import {MatButtonModule} from '@angular-classic/material/button';
+import {MatCardModule} from '@angular-classic/material/card';
 import {MatIconModule} from '@angular-classic/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
-import {MatLegacyCardModule as MatCardModule} from '@angular-classic/material/legacy-card';
 
 import {FilterComponent} from './filter.component';
 

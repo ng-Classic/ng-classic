@@ -7,7 +7,7 @@
  */
 
 import {Component} from '@angular-classic/core';
-import {MatLegacyDialog as MatDialog} from '@angular-classic/material/legacy-dialog';
+import {MatDialog} from '@angular-classic/material/dialog';
 
 import {DialogComponent} from './dialog.component';
 

@@ -8,7 +8,7 @@
   "allowedNonPeerDependencies": [
     "@nx/",
     "@angular-devkit",
-    "@angular-eslint/",
+    "@angular-classic-eslint/",
     "@nguniversal/builders",
     "@schematics",
     "@phenomnomnominal/tsquery",

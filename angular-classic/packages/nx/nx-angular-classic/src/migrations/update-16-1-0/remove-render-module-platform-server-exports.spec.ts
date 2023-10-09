@@ -15,7 +15,7 @@ describe('remove-render-module-platform-server-exports migration', () => {
       tree.write(
         testTypeScriptFilePath,
         `
-          import { Path, join } from '@angular-devkit/core';
+          import { Path, join } from '@angular-classic-devkit/core';
           export { renderModule } from '@angular-classic/platform-server';
         `
       );
@@ -25,7 +25,7 @@ describe('remove-render-module-platform-server-exports migration', () => {
       const content = tree.read(testTypeScriptFilePath, 'utf-8');
       expect(content).not.toContain('@angular-classic/platform-server');
       expect(content).toContain(
-        `import { Path, join } from '@angular-devkit/core';`
+        `import { Path, join } from '@angular-classic-devkit/core';`
       );
     });
 
@@ -33,7 +33,7 @@ describe('remove-render-module-platform-server-exports migration', () => {
       tree.write(
         testTypeScriptFilePath,
         `
-          import { Path, join } from '@angular-devkit/core';
+          import { Path, join } from '@angular-classic-devkit/core';
           export { renderModule, ServerModule } from '@angular-classic/platform-server';
         `
       );
@@ -43,7 +43,7 @@ describe('remove-render-module-platform-server-exports migration', () => {
       const content = tree.read(testTypeScriptFilePath, 'utf-8');
 
       expect(content).toContain(
-        `import { Path, join } from '@angular-devkit/core';`
+        `import { Path, join } from '@angular-classic-devkit/core';`
       );
       expect(content).toContain(
         `export { ServerModule } from '@angular-classic/platform-server';`

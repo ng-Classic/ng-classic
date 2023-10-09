@@ -8,8 +8,8 @@ exports[`workspace move to nx layout should create a root eslint config 1`] = `
   "overrides": [
     {
       "extends": [
-        "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:@angular-classic-eslint/recommended",
+        "plugin:@angular-classic-eslint/template/process-inline-templates",
       ],
       "files": [
         "*.ts",
@@ -18,7 +18,7 @@ exports[`workspace move to nx layout should create a root eslint config 1`] = `
         "createDefaultProgram": true,
       },
       "rules": {
-        "@angular-eslint/component-selector": [
+        "@angular-classic-eslint/component-selector": [
           "error",
           {
             "prefix": "app",
@@ -26,7 +26,7 @@ exports[`workspace move to nx layout should create a root eslint config 1`] = `
             "type": "element",
           },
         ],
-        "@angular-eslint/directive-selector": [
+        "@angular-classic-eslint/directive-selector": [
           "error",
           {
             "prefix": "app",
@@ -38,7 +38,7 @@ exports[`workspace move to nx layout should create a root eslint config 1`] = `
     },
     {
       "extends": [
-        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-classic-eslint/template/recommended",
       ],
       "files": [
         "*.html",

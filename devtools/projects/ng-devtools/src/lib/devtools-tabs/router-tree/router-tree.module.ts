@@ -8,7 +8,7 @@
 
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
-import {MatLegacyDialogModule as MatDialogModule} from '@angular-classic/material/legacy-dialog';
+import {MatDialogModule} from '@angular-classic/material/dialog';
 import {MatSelectModule} from '@angular-classic/material/select';
 
 import {RouterTreeComponent} from './router-tree.component';

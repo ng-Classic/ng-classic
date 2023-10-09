@@ -10,7 +10,6 @@ import {CommonModule} from '@angular-classic/common';
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Input, TemplateRef, Type, ViewChild, ViewContainerRef} from '@angular-classic/core';
 import {AfterViewChecked} from '@angular-classic/core/src/core';
 import {ComponentFixture, TestBed} from '@angular-classic/core/testing';
-import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('change detection for transplanted views', () => {
   describe('when declaration appears before insertion', () => {

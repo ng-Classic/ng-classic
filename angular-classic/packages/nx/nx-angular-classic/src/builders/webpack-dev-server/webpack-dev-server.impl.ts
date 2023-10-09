@@ -28,7 +28,7 @@ type BuildTargetOptions = {
 
 export function executeWebpackDevServerBuilder(
   rawOptions: Schema,
-  context: import('@angular-devkit/architect').BuilderContext
+  context: import('@angular-classic-devkit/architect').BuilderContext
 ) {
   process.env.NX_TSCONFIG_PATH = getRootTsConfigPath();
 
@@ -115,7 +115,7 @@ export function executeWebpackDevServerBuilder(
     buildTargetOptions.tsConfig = tsConfigPath;
   }
 
-  return from(import('@angular-devkit/build-angular')).pipe(
+  return from(import('@angular-classic-devkit/build-angular')).pipe(
     switchMap(({ executeDevServerBuilder }) =>
       executeDevServerBuilder(options, context, {
         webpackConfiguration: async (baseWebpackConfig) => {
@@ -164,6 +164,6 @@ export function executeWebpackDevServerBuilder(
   );
 }
 
-export default require('@angular-devkit/architect').createBuilder(
+export default require('@angular-classic-devkit/architect').createBuilder(
   executeWebpackDevServerBuilder
 ) as any;

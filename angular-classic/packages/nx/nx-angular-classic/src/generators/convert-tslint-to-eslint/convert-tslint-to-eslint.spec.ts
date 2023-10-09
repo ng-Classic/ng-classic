@@ -148,7 +148,7 @@ describe('convert-tslint-to-eslint', () => {
          * TSLint executor configured for the project
          */
         lint: {
-          executor: '@angular-devkit/build-angular:tslint',
+          executor: '@angular-classic-devkit/build-angular:tslint',
           options: {
             exclude: ['**/node_modules/**', '!apps/angular-app-1/**/*'],
             tsConfig: ['apps/angular-app-1/tsconfig.app.json'],
@@ -168,7 +168,7 @@ describe('convert-tslint-to-eslint', () => {
          * TSLint executor configured for the project
          */
         lint: {
-          executor: '@angular-devkit/build-angular:tslint',
+          executor: '@angular-classic-devkit/build-angular:tslint',
           options: {
             exclude: ['**/node_modules/**', '!libs/angular-lib-1/**/*'],
             tsConfig: ['libs/angular-lib-1/tsconfig.app.json'],

@@ -9,8 +9,8 @@
 import {CommonModule} from '@angular-classic/common';
 import {Component, Inject} from '@angular-classic/core';
 import {FormsModule} from '@angular-classic/forms';
-import {MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA, MatLegacyDialogModule as MatDialogModule, MatLegacyDialogRef as MatDialogRef} from '@angular-classic/material/legacy-dialog';
-import {MatLegacyFormFieldModule as MatFormFieldModule} from '@angular-classic/material/legacy-form-field';
+import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular-classic/material/dialog';
+import {MatFormFieldModule} from '@angular-classic/material/form-field';
 
 
 export interface DialogData {

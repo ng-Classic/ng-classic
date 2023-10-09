@@ -285,8 +285,8 @@ function addAngularPluginPeerDeps(tree: Tree): void {
     ...json,
     devDependencies: {
       ...json.devDependencies,
-      '@angular-devkit/core': angularDevkitVersion,
-      '@angular-devkit/schematics': angularDevkitVersion,
+      '@angular-classic-devkit/core': angularDevkitVersion,
+      '@angular-classic-devkit/schematics': angularDevkitVersion,
       '@schematics/angular': angularDevkitVersion,
     },
   }));

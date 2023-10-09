@@ -24,7 +24,7 @@ export class AngularDevkitNgPackagrMigrator extends BuilderMigrator {
   ) {
     super(
       tree,
-      '@angular-devkit/build-angular:ng-packagr',
+      '@angular-classic-devkit/build-angular:ng-packagr',
       undefined,
       project,
       projectConfig,

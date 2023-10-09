@@ -12,8 +12,8 @@ import { getPkgVersionForAngularMajorVersion } from '../../utils/version-utils';
 
 export default async function (tree: Tree) {
   const packagesToInstall = [
-    '@angular-devkit/core',
-    '@angular-devkit/schematics',
+    '@angular-classic-devkit/core',
+    '@angular-classic-devkit/schematics',
     '@schematics/angular',
   ];
   const pkgJson = readJson(tree, 'package.json');
@@ -25,8 +25,8 @@ export default async function (tree: Tree) {
   );
 
   const angularCliVersion =
-    pkgJson.devDependencies?.['@angular-devkit/build-angular'] ??
-    pkgJson.dependencies?.['@angular-devkit/build-angular'] ??
+    pkgJson.devDependencies?.['@angular-classic-devkit/build-angular'] ??
+    pkgJson.dependencies?.['@angular-classic-devkit/build-angular'] ??
     angularDevkitVersion;
 
   const filteredPackages: Record<string, string> = packagesToInstall

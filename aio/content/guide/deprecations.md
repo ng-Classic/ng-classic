@@ -124,6 +124,13 @@ v16 - v19
 | `@angular-classic/platform-browser`         | [`BrowserModule.withServerTransition`](api/platform-browser/BrowserModule#withservertransition)            | v16           | v18         |
 | `@angular-classic/platform-browser`         | [`makeStateKey`, `StateKey` and `TransferState`](#platform-browser), symbols were moved to `@angular-classic/core`                                        | v16           | v18         |
 
+
+### Deprecated features that can be removed in v19 or later
+
+| Area                                | API or Feature                                                                                             | Deprecated in | May be removed in |
+|:---                                 |:---                                                                                                        |:---           |:---               |
+| `@angular-classic/core` | `PACKAGE_ROOT_URL` | v17 | v19 |
+
 ### Deprecated features with no planned removal version
 
 | Area                                | API or Feature                                                                                             | Deprecated in | May be removed in |
@@ -446,40 +453,6 @@ in the lifecycle of a navigation. A `CanMatch` guard which returns false will pr
 matched at all and also prevent loading the children of the `Route`. `CanMatch` guards can accomplish the same
 goals as `CanLoad` but with the addition of allowing the navigation to match other routes when they reject
 (such as a wildcard route). There is no need to have both types of guards in the API surface.
-
-<a id="loadChildren"></a>
-
-### `loadChildren` string syntax
-
-When Angular Classic first introduced lazy routes, there wasn't browser support for dynamically loading additional JavaScript.
-Angular Classic created its own scheme using the syntax `loadChildren: './lazy/lazy.module#LazyModule'` and built tooling to support it.
-Now that ECMAScript dynamic import is supported in many browsers, Angular Classic is moving toward this new syntax.
-
-In version 8, the string syntax for the [`loadChildren`](api/router/LoadChildren) route specification was deprecated, in favor of new syntax that uses `import()` syntax.
-
-**Before**:
-
-<code-example path="deprecation-guide/src/app/app.module.ts" language="typescript" region="lazyload-deprecated-syntax"></code-example>
-
-**After**:
-
-<code-example path="deprecation-guide/src/app/app.module.ts" language="typescript" region="lazyload-syntax"></code-example>
-
-<div class="alert is-helpful">
-
-**Version 8 update**: When you update to version 8, the [`ng update`](cli/update) command performs the transformation automatically.
-Prior to version 7, the `import()` syntax only works in JIT mode \(with view engine\).
-
-</div>
-
-<div class="alert is-helpful">
-
-**Declaration syntax**: <br />
-It's important to follow the route declaration syntax `loadChildren: () => import('...').then(m => m.ModuleName)` to allow `ngc` to discover the lazy-loaded module and the associated `NgModule`.
-You can find the complete list of allowed syntax constructs [here](https://github.com/ng-classic/ng-classic-cli/blob/a491b09800b493fe01301387fa9a025f7c7d4808/packages/ngtools/webpack/src/transformers/import_factory.ts#L104-L113).
-These restrictions will be relaxed with the release of Ivy since it'll no longer use `NgFactories`.
-
-</div>
 
 <a id="reflect-metadata"></a>
 

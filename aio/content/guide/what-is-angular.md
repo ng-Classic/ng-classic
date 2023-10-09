@@ -188,9 +188,9 @@ Some of the libraries available to you include:
 
 | Library                                   | Details |
 |:---                                       |:---     |
-| [Angular Classic Router](guide/router)            | Advanced client-side navigation and routing based on Angular Classic components. Supports lazy-loading, nested routes, custom path matching, and more. |
+| [Angular Classic Router](guide/router)    | Advanced client-side navigation and routing based on Angular Classic components. Supports lazy-loading, nested routes, custom path matching, and more. |
 | [Angular Classic Forms](guide/forms-overview)     | Uniform system for form participation and validation.                                                                                          |
-| [Angular Classic HttpClient](guide/http)          | Robust HTTP client that can power more advanced client-server communication.                                                                   |
+| [Angular Classic HttpClient](guide/understanding-communicating-with-http)          | Robust HTTP client that can power more advanced client-server communication.                                                                   |
 | [Angular Classic Animations](guide/animations)    | Rich system for driving animations based on application state.                                                                                 |
 | [Angular Classic PWA](guide/service-worker-intro) | Tools for building Progressive Web Applications \(PWA\) including a service worker and Web application manifest.                                      |
 | [Angular Classic Schematics](guide/schematics)    | Automated scaffolding, refactoring, and update tools that simplify development at large scale.                                                 |

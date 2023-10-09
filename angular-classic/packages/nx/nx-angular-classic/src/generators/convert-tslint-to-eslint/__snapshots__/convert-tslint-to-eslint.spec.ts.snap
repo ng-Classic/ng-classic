@@ -116,11 +116,11 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
       ],
       "plugins": [
         "eslint-plugin-import",
-        "@angular-eslint/eslint-plugin",
+        "@angular-classic-eslint/eslint-plugin",
         "@typescript-eslint",
       ],
       "rules": {
-        "@angular-eslint/component-selector": [
+        "@angular-classic-eslint/component-selector": [
           "error",
           {
             "prefix": "app",
@@ -128,7 +128,7 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
             "type": "element",
           },
         ],
-        "@angular-eslint/directive-selector": [
+        "@angular-classic-eslint/directive-selector": [
           "error",
           {
             "prefix": "app",
@@ -136,16 +136,16 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
             "type": "attribute",
           },
         ],
-        "@angular-eslint/no-conflicting-lifecycle": "error",
-        "@angular-eslint/no-host-metadata-property": "error",
-        "@angular-eslint/no-input-rename": "error",
-        "@angular-eslint/no-inputs-metadata-property": "error",
-        "@angular-eslint/no-output-native": "error",
-        "@angular-eslint/no-output-on-prefix": "error",
-        "@angular-eslint/no-output-rename": "error",
-        "@angular-eslint/no-outputs-metadata-property": "error",
-        "@angular-eslint/use-lifecycle-interface": "error",
-        "@angular-eslint/use-pipe-transform-interface": "error",
+        "@angular-classic-eslint/no-conflicting-lifecycle": "error",
+        "@angular-classic-eslint/no-host-metadata-property": "error",
+        "@angular-classic-eslint/no-input-rename": "error",
+        "@angular-classic-eslint/no-inputs-metadata-property": "error",
+        "@angular-classic-eslint/no-output-native": "error",
+        "@angular-classic-eslint/no-output-on-prefix": "error",
+        "@angular-classic-eslint/no-output-rename": "error",
+        "@angular-classic-eslint/no-outputs-metadata-property": "error",
+        "@angular-classic-eslint/use-lifecycle-interface": "error",
+        "@angular-classic-eslint/use-pipe-transform-interface": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/dot-notation": "off",
         "@typescript-eslint/explicit-member-accessibility": [
@@ -228,12 +228,12 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
         "*.html",
       ],
       "plugins": [
-        "@angular-eslint/eslint-plugin-template",
+        "@angular-classic-eslint/eslint-plugin-template",
       ],
       "rules": {
-        "@angular-eslint/template/banana-in-box": "error",
-        "@angular-eslint/template/eqeqeq": "error",
-        "@angular-eslint/template/no-negated-async": "error",
+        "@angular-classic-eslint/template/banana-in-box": "error",
+        "@angular-classic-eslint/template/eqeqeq": "error",
+        "@angular-classic-eslint/template/no-negated-async": "error",
       },
     },
   ],
@@ -256,17 +256,17 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
     {
       "extends": [
         "plugin:@angular-classic/nx-angular",
-        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:@angular-classic-eslint/template/process-inline-templates",
       ],
       "files": [
         "*.ts",
       ],
       "plugins": [
-        "@angular-eslint/eslint-plugin",
+        "@angular-classic-eslint/eslint-plugin",
         "@typescript-eslint",
       ],
       "rules": {
-        "@angular-eslint/component-selector": [
+        "@angular-classic-eslint/component-selector": [
           "error",
           {
             "prefix": "angular-app",
@@ -274,7 +274,7 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
             "type": "element",
           },
         ],
-        "@angular-eslint/directive-selector": [
+        "@angular-classic-eslint/directive-selector": [
           "error",
           {
             "prefix": "angular-app",
@@ -293,10 +293,10 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
         "*.html",
       ],
       "plugins": [
-        "@angular-eslint/eslint-plugin-template",
+        "@angular-classic-eslint/eslint-plugin-template",
       ],
       "rules": {
-        "@angular-eslint/template/banana-in-box": "error",
+        "@angular-classic-eslint/template/banana-in-box": "error",
       },
     },
   ],
@@ -419,11 +419,11 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
       ],
       "plugins": [
         "eslint-plugin-import",
-        "@angular-eslint/eslint-plugin",
+        "@angular-classic-eslint/eslint-plugin",
         "@typescript-eslint",
       ],
       "rules": {
-        "@angular-eslint/component-selector": [
+        "@angular-classic-eslint/component-selector": [
           "error",
           {
             "prefix": "app",
@@ -431,7 +431,7 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
             "type": "element",
           },
         ],
-        "@angular-eslint/directive-selector": [
+        "@angular-classic-eslint/directive-selector": [
           "error",
           {
             "prefix": "app",
@@ -439,16 +439,16 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
             "type": "attribute",
           },
         ],
-        "@angular-eslint/no-conflicting-lifecycle": "error",
-        "@angular-eslint/no-host-metadata-property": "error",
-        "@angular-eslint/no-input-rename": "error",
-        "@angular-eslint/no-inputs-metadata-property": "error",
-        "@angular-eslint/no-output-native": "error",
-        "@angular-eslint/no-output-on-prefix": "error",
-        "@angular-eslint/no-output-rename": "error",
-        "@angular-eslint/no-outputs-metadata-property": "error",
-        "@angular-eslint/use-lifecycle-interface": "error",
-        "@angular-eslint/use-pipe-transform-interface": "error",
+        "@angular-classic-eslint/no-conflicting-lifecycle": "error",
+        "@angular-classic-eslint/no-host-metadata-property": "error",
+        "@angular-classic-eslint/no-input-rename": "error",
+        "@angular-classic-eslint/no-inputs-metadata-property": "error",
+        "@angular-classic-eslint/no-output-native": "error",
+        "@angular-classic-eslint/no-output-on-prefix": "error",
+        "@angular-classic-eslint/no-output-rename": "error",
+        "@angular-classic-eslint/no-outputs-metadata-property": "error",
+        "@angular-classic-eslint/use-lifecycle-interface": "error",
+        "@angular-classic-eslint/use-pipe-transform-interface": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/dot-notation": "off",
         "@typescript-eslint/explicit-member-accessibility": [
@@ -531,12 +531,12 @@ exports[`convert-tslint-to-eslint should not override .eslint config if migratio
         "*.html",
       ],
       "plugins": [
-        "@angular-eslint/eslint-plugin-template",
+        "@angular-classic-eslint/eslint-plugin-template",
       ],
       "rules": {
-        "@angular-eslint/template/banana-in-box": "error",
-        "@angular-eslint/template/eqeqeq": "error",
-        "@angular-eslint/template/no-negated-async": "error",
+        "@angular-classic-eslint/template/banana-in-box": "error",
+        "@angular-classic-eslint/template/eqeqeq": "error",
+        "@angular-classic-eslint/template/no-negated-async": "error",
       },
     },
   ],
@@ -551,9 +551,9 @@ exports[`convert-tslint-to-eslint should work for Angular applications 1`] = `
 {
   "dependencies": {},
   "devDependencies": {
-    "@angular-eslint/eslint-plugin": "~16.0.0",
-    "@angular-eslint/eslint-plugin-template": "~16.0.0",
-    "@angular-eslint/template-parser": "~16.0.0",
+    "@angular-classic-eslint/eslint-plugin": "~16.0.0",
+    "@angular-classic-eslint/eslint-plugin-template": "~16.0.0",
+    "@angular-classic-eslint/template-parser": "~16.0.0",
     "@nx/eslint-plugin": "0.0.1",
     "@nx/linter": "0.0.1",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
@@ -706,11 +706,11 @@ exports[`convert-tslint-to-eslint should work for Angular applications 3`] = `
       ],
       "plugins": [
         "eslint-plugin-import",
-        "@angular-eslint/eslint-plugin",
+        "@angular-classic-eslint/eslint-plugin",
         "@typescript-eslint",
       ],
       "rules": {
-        "@angular-eslint/component-selector": [
+        "@angular-classic-eslint/component-selector": [
           "error",
           {
             "prefix": "app",
@@ -718,7 +718,7 @@ exports[`convert-tslint-to-eslint should work for Angular applications 3`] = `
             "type": "element",
           },
         ],
-        "@angular-eslint/directive-selector": [
+        "@angular-classic-eslint/directive-selector": [
           "error",
           {
             "prefix": "app",
@@ -726,16 +726,16 @@ exports[`convert-tslint-to-eslint should work for Angular applications 3`] = `
             "type": "attribute",
           },
         ],
-        "@angular-eslint/no-conflicting-lifecycle": "error",
-        "@angular-eslint/no-host-metadata-property": "error",
-        "@angular-eslint/no-input-rename": "error",
-        "@angular-eslint/no-inputs-metadata-property": "error",
-        "@angular-eslint/no-output-native": "error",
-        "@angular-eslint/no-output-on-prefix": "error",
-        "@angular-eslint/no-output-rename": "error",
-        "@angular-eslint/no-outputs-metadata-property": "error",
-        "@angular-eslint/use-lifecycle-interface": "error",
-        "@angular-eslint/use-pipe-transform-interface": "error",
+        "@angular-classic-eslint/no-conflicting-lifecycle": "error",
+        "@angular-classic-eslint/no-host-metadata-property": "error",
+        "@angular-classic-eslint/no-input-rename": "error",
+        "@angular-classic-eslint/no-inputs-metadata-property": "error",
+        "@angular-classic-eslint/no-output-native": "error",
+        "@angular-classic-eslint/no-output-on-prefix": "error",
+        "@angular-classic-eslint/no-output-rename": "error",
+        "@angular-classic-eslint/no-outputs-metadata-property": "error",
+        "@angular-classic-eslint/use-lifecycle-interface": "error",
+        "@angular-classic-eslint/use-pipe-transform-interface": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/dot-notation": "off",
         "@typescript-eslint/explicit-member-accessibility": [
@@ -818,12 +818,12 @@ exports[`convert-tslint-to-eslint should work for Angular applications 3`] = `
         "*.html",
       ],
       "plugins": [
-        "@angular-eslint/eslint-plugin-template",
+        "@angular-classic-eslint/eslint-plugin-template",
       ],
       "rules": {
-        "@angular-eslint/template/banana-in-box": "error",
-        "@angular-eslint/template/eqeqeq": "error",
-        "@angular-eslint/template/no-negated-async": "error",
+        "@angular-classic-eslint/template/banana-in-box": "error",
+        "@angular-classic-eslint/template/eqeqeq": "error",
+        "@angular-classic-eslint/template/no-negated-async": "error",
       },
     },
   ],
@@ -846,7 +846,7 @@ exports[`convert-tslint-to-eslint should work for Angular applications 4`] = `
     {
       "extends": [
         "plugin:@angular-classic/nx-angular",
-        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:@angular-classic-eslint/template/process-inline-templates",
       ],
       "files": [
         "*.ts",
@@ -857,11 +857,11 @@ exports[`convert-tslint-to-eslint should work for Angular applications 4`] = `
         ],
       },
       "plugins": [
-        "@angular-eslint/eslint-plugin",
+        "@angular-classic-eslint/eslint-plugin",
         "@typescript-eslint",
       ],
       "rules": {
-        "@angular-eslint/component-selector": [
+        "@angular-classic-eslint/component-selector": [
           "error",
           {
             "prefix": "angular-app",
@@ -869,7 +869,7 @@ exports[`convert-tslint-to-eslint should work for Angular applications 4`] = `
             "type": "element",
           },
         ],
-        "@angular-eslint/directive-selector": [
+        "@angular-classic-eslint/directive-selector": [
           "error",
           {
             "prefix": "angular-app",
@@ -889,10 +889,10 @@ exports[`convert-tslint-to-eslint should work for Angular applications 4`] = `
         "*.html",
       ],
       "plugins": [
-        "@angular-eslint/eslint-plugin-template",
+        "@angular-classic-eslint/eslint-plugin-template",
       ],
       "rules": {
-        "@angular-eslint/template/banana-in-box": "error",
+        "@angular-classic-eslint/template/banana-in-box": "error",
       },
     },
   ],
@@ -903,9 +903,9 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 1`] = `
 {
   "dependencies": {},
   "devDependencies": {
-    "@angular-eslint/eslint-plugin": "~16.0.0",
-    "@angular-eslint/eslint-plugin-template": "~16.0.0",
-    "@angular-eslint/template-parser": "~16.0.0",
+    "@angular-classic-eslint/eslint-plugin": "~16.0.0",
+    "@angular-classic-eslint/eslint-plugin-template": "~16.0.0",
+    "@angular-classic-eslint/template-parser": "~16.0.0",
     "@nx/eslint-plugin": "0.0.1",
     "@nx/linter": "0.0.1",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
@@ -1058,11 +1058,11 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 3`] = `
       ],
       "plugins": [
         "eslint-plugin-import",
-        "@angular-eslint/eslint-plugin",
+        "@angular-classic-eslint/eslint-plugin",
         "@typescript-eslint",
       ],
       "rules": {
-        "@angular-eslint/component-selector": [
+        "@angular-classic-eslint/component-selector": [
           "error",
           {
             "prefix": "app",
@@ -1070,7 +1070,7 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 3`] = `
             "type": "element",
           },
         ],
-        "@angular-eslint/directive-selector": [
+        "@angular-classic-eslint/directive-selector": [
           "error",
           {
             "prefix": "app",
@@ -1078,16 +1078,16 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 3`] = `
             "type": "attribute",
           },
         ],
-        "@angular-eslint/no-conflicting-lifecycle": "error",
-        "@angular-eslint/no-host-metadata-property": "error",
-        "@angular-eslint/no-input-rename": "error",
-        "@angular-eslint/no-inputs-metadata-property": "error",
-        "@angular-eslint/no-output-native": "error",
-        "@angular-eslint/no-output-on-prefix": "error",
-        "@angular-eslint/no-output-rename": "error",
-        "@angular-eslint/no-outputs-metadata-property": "error",
-        "@angular-eslint/use-lifecycle-interface": "error",
-        "@angular-eslint/use-pipe-transform-interface": "error",
+        "@angular-classic-eslint/no-conflicting-lifecycle": "error",
+        "@angular-classic-eslint/no-host-metadata-property": "error",
+        "@angular-classic-eslint/no-input-rename": "error",
+        "@angular-classic-eslint/no-inputs-metadata-property": "error",
+        "@angular-classic-eslint/no-output-native": "error",
+        "@angular-classic-eslint/no-output-on-prefix": "error",
+        "@angular-classic-eslint/no-output-rename": "error",
+        "@angular-classic-eslint/no-outputs-metadata-property": "error",
+        "@angular-classic-eslint/use-lifecycle-interface": "error",
+        "@angular-classic-eslint/use-pipe-transform-interface": "error",
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/dot-notation": "off",
         "@typescript-eslint/explicit-member-accessibility": [
@@ -1170,12 +1170,12 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 3`] = `
         "*.html",
       ],
       "plugins": [
-        "@angular-eslint/eslint-plugin-template",
+        "@angular-classic-eslint/eslint-plugin-template",
       ],
       "rules": {
-        "@angular-eslint/template/banana-in-box": "error",
-        "@angular-eslint/template/eqeqeq": "error",
-        "@angular-eslint/template/no-negated-async": "error",
+        "@angular-classic-eslint/template/banana-in-box": "error",
+        "@angular-classic-eslint/template/eqeqeq": "error",
+        "@angular-classic-eslint/template/no-negated-async": "error",
       },
     },
   ],
@@ -1198,17 +1198,17 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 4`] = `
     {
       "extends": [
         "plugin:@angular-classic/nx-angular",
-        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:@angular-classic-eslint/template/process-inline-templates",
       ],
       "files": [
         "*.ts",
       ],
       "plugins": [
-        "@angular-eslint/eslint-plugin",
+        "@angular-classic-eslint/eslint-plugin",
         "@typescript-eslint",
       ],
       "rules": {
-        "@angular-eslint/component-selector": [
+        "@angular-classic-eslint/component-selector": [
           "error",
           {
             "prefix": "angular-app",
@@ -1216,7 +1216,7 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 4`] = `
             "type": "element",
           },
         ],
-        "@angular-eslint/directive-selector": [
+        "@angular-classic-eslint/directive-selector": [
           "error",
           {
             "prefix": "angular-app",
@@ -1235,10 +1235,10 @@ exports[`convert-tslint-to-eslint should work for Angular libraries 4`] = `
         "*.html",
       ],
       "plugins": [
-        "@angular-eslint/eslint-plugin-template",
+        "@angular-classic-eslint/eslint-plugin-template",
       ],
       "rules": {
-        "@angular-eslint/template/banana-in-box": "error",
+        "@angular-classic-eslint/template/banana-in-box": "error",
       },
     },
   ],

@@ -12,6 +12,9 @@
     "name": "APP_INITIALIZER"
   },
   {
+    "name": "AfterRenderEventManager"
+  },
+  {
     "name": "AnonymousSubject"
   },
   {
@@ -58,6 +61,9 @@
   },
   {
     "name": "CSP_NONCE"
+  },
+  {
+    "name": "ChainedInjector"
   },
   {
     "name": "ChangeDetectionStrategy"
@@ -111,7 +117,13 @@
     "name": "DefaultIfEmptySubscriber"
   },
   {
+    "name": "DistinctUntilChangedOperator"
+  },
+  {
     "name": "DistinctUntilChangedSubscriber"
+  },
+  {
+    "name": "DoOperator"
   },
   {
     "name": "DomAdapter"
@@ -378,6 +390,12 @@
     "name": "R3Injector"
   },
   {
+    "name": "REACTIVE_LVIEW_CONSUMER_NODE"
+  },
+  {
+    "name": "REACTIVE_NODE"
+  },
+  {
     "name": "REFERENCE_NODE_BODY"
   },
   {
@@ -388,12 +406,6 @@
   },
   {
     "name": "REMOVE_STYLES_ON_COMPONENT_DESTROY"
-  },
-  {
-    "name": "ReactiveLViewConsumer"
-  },
-  {
-    "name": "ReactiveNode"
   },
   {
     "name": "RefCountOperator"
@@ -510,10 +522,7 @@
     "name": "ViewRef"
   },
   {
-    "name": "Watch"
-  },
-  {
-    "name": "WeakRefImpl"
+    "name": "WATCH_NODE"
   },
   {
     "name": "ZONE_IS_STABLE_OBSERVABLE"
@@ -553,9 +562,6 @@
   },
   {
     "name": "_locateOrCreateTextNode"
-  },
-  {
-    "name": "_nextReactiveId"
   },
   {
     "name": "_platformInjector"
@@ -603,6 +609,9 @@
     "name": "applyView"
   },
   {
+    "name": "assertConsumerNode"
+  },
+  {
     "name": "attachPatchData"
   },
   {
@@ -645,6 +654,9 @@
     "name": "collectNativeNodes"
   },
   {
+    "name": "collectNativeNodesInLContainer"
+  },
+  {
     "name": "commitLViewConsumerIfHasProducers"
   },
   {
@@ -658,6 +670,24 @@
   },
   {
     "name": "connectableObservableDescriptor"
+  },
+  {
+    "name": "consumerAfterComputation"
+  },
+  {
+    "name": "consumerBeforeComputation"
+  },
+  {
+    "name": "consumerDestroy"
+  },
+  {
+    "name": "consumerIsLive"
+  },
+  {
+    "name": "consumerMarkDirty"
+  },
+  {
+    "name": "consumerPollProducersForChange"
   },
   {
     "name": "convertToBitFlags"
@@ -676,6 +706,9 @@
   },
   {
     "name": "createLView"
+  },
+  {
+    "name": "createLViewConsumer"
   },
   {
     "name": "createNodeInjector"
@@ -786,9 +819,6 @@
     "name": "getComponentLViewByIndex"
   },
   {
-    "name": "getComponentLViewForHydration"
-  },
-  {
     "name": "getCurrentTNode"
   },
   {
@@ -823,6 +853,9 @@
   },
   {
     "name": "getInjectorIndex"
+  },
+  {
+    "name": "getLNodeForHydration"
   },
   {
     "name": "getLView"
@@ -975,9 +1008,6 @@
     "name": "isArrayLike"
   },
   {
-    "name": "isBrowser"
-  },
-  {
     "name": "isComponentDef"
   },
   {
@@ -1009,6 +1039,9 @@
   },
   {
     "name": "isObject"
+  },
+  {
+    "name": "isPlatformBrowser"
   },
   {
     "name": "isPlatformServer"
@@ -1149,6 +1182,12 @@
     "name": "processInjectorTypesWithProviders"
   },
   {
+    "name": "producerRemoveLiveConsumerAtIndex"
+  },
+  {
+    "name": "producerUpdateValueVersion"
+  },
+  {
     "name": "profiler"
   },
   {
@@ -1231,6 +1270,9 @@
   },
   {
     "name": "setInjectImplementation"
+  },
+  {
+    "name": "setSegmentHead"
   },
   {
     "name": "setSelectedIndex"

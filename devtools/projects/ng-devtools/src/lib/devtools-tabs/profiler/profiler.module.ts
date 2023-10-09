@@ -9,12 +9,12 @@
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
 import {FormsModule} from '@angular-classic/forms';
+import {MatButtonModule} from '@angular-classic/material/button';
+import {MatCardModule} from '@angular-classic/material/card';
+import {MatDialogModule} from '@angular-classic/material/dialog';
 import {MatIconModule} from '@angular-classic/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
-import {MatLegacyCardModule as MatCardModule} from '@angular-classic/material/legacy-card';
-import {MatLegacyDialogModule as MatDialogModule} from '@angular-classic/material/legacy-dialog';
-import {MatLegacySelectModule as MatSelectModule} from '@angular-classic/material/legacy-select';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
+import {MatSelectModule} from '@angular-classic/material/select';
+import {MatTooltipModule} from '@angular-classic/material/tooltip';
 
 import {ProfilerImportDialogComponent} from './profiler-import-dialog.component';
 import {ProfilerComponent} from './profiler.component';

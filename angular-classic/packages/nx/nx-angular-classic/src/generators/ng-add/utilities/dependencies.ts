@@ -6,8 +6,8 @@ export function ensureAngularDevKitPeerDependenciesAreInstalled(
   tree: Tree
 ): void {
   const packagesToInstall = [
-    '@angular-devkit/core',
-    '@angular-devkit/schematics',
+    '@angular-classic-devkit/core',
+    '@angular-classic-devkit/schematics',
     '@schematics/angular',
   ];
 

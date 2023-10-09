@@ -8,12 +8,12 @@
 
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
+import {MatButtonModule} from '@angular-classic/material/button';
 import {MatIconModule} from '@angular-classic/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
-import {MatLegacyMenuModule as MatMenuModule} from '@angular-classic/material/legacy-menu';
-import {MatLegacySlideToggleModule as MatSlideToggleModule} from '@angular-classic/material/legacy-slide-toggle';
-import {MatLegacyTabsModule as MatTabsModule} from '@angular-classic/material/legacy-tabs';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
+import {MatMenuModule} from '@angular-classic/material/menu';
+import {MatSlideToggleModule} from '@angular-classic/material/slide-toggle';
+import {MatTabsModule} from '@angular-classic/material/tabs';
+import {MatTooltipModule} from '@angular-classic/material/tooltip';
 
 import {DevToolsTabsComponent} from './devtools-tabs.component';
 import {DirectiveExplorerModule} from './directive-explorer/directive-explorer.module';

@@ -225,5 +225,4 @@ reference GitHub issues that this commit **Closes**.
 A detailed explanation can be found in this [document][commit-message-format].
 
 [github]: https://github.com/ng-classic/ng-classic
-[gitter]: https://gitter.im/ng-classic/ng-classic
-[stackoverflow]: http://stackoverflow.com/questions/tagged/angular-devtools
+[stackoverflow]: http://stackoverflow.com/questions/tagged/angular-classic-devtools

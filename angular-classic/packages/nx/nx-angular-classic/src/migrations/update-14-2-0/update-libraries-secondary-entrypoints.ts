@@ -11,7 +11,7 @@ import {
 import { basename, dirname } from 'path';
 
 const libraryExecutors = [
-  '@angular-devkit/build-angular:ng-packagr',
+  '@angular-classic-devkit/build-angular:ng-packagr',
   '@nrwl/angular:ng-packagr-lite',
   '@nrwl/angular:package',
 ];

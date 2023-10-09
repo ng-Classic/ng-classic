@@ -10,11 +10,11 @@ import {DragDropModule} from '@angular-classic/cdk/drag-drop';
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
 import {FormsModule} from '@angular-classic/forms';
+import {MatButtonModule} from '@angular-classic/material/button';
 import {MatExpansionModule} from '@angular-classic/material/expansion';
 import {MatIconModule} from '@angular-classic/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
 import {MatToolbarModule} from '@angular-classic/material/toolbar';
+import {MatTooltipModule} from '@angular-classic/material/tooltip';
 import {MatTreeModule} from '@angular-classic/material/tree';
 
 import {PropertyEditorComponent} from './property-editor.component';

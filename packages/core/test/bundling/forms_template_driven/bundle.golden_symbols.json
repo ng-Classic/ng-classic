@@ -27,6 +27,9 @@
     "name": "AbstractValidatorDirective"
   },
   {
+    "name": "AfterRenderEventManager"
+  },
+  {
     "name": "AnonymousSubject"
   },
   {
@@ -88,6 +91,9 @@
   },
   {
     "name": "CSP_NONCE"
+  },
+  {
+    "name": "ChainedInjector"
   },
   {
     "name": "ChangeDetectionStrategy"
@@ -154,6 +160,9 @@
   },
   {
     "name": "DefaultValueAccessor"
+  },
+  {
+    "name": "DistinctUntilChangedOperator"
   },
   {
     "name": "DistinctUntilChangedSubscriber"
@@ -375,6 +384,9 @@
     "name": "NgForOf"
   },
   {
+    "name": "NgForOfContext"
+  },
+  {
     "name": "NgForm"
   },
   {
@@ -414,6 +426,9 @@
     "name": "NoneEncapsulationDomRenderer"
   },
   {
+    "name": "NoopNgZone"
+  },
+  {
     "name": "NullInjector"
   },
   {
@@ -450,6 +465,12 @@
     "name": "R3ViewContainerRef"
   },
   {
+    "name": "REACTIVE_LVIEW_CONSUMER_NODE"
+  },
+  {
+    "name": "REACTIVE_NODE"
+  },
+  {
     "name": "REMOVE_STYLES_ON_COMPONENT_DESTROY"
   },
   {
@@ -457,12 +478,6 @@
   },
   {
     "name": "RadioControlRegistryModule"
-  },
-  {
-    "name": "ReactiveLViewConsumer"
-  },
-  {
-    "name": "ReactiveNode"
   },
   {
     "name": "RefCountOperator"
@@ -600,16 +615,16 @@
     "name": "ViewRef"
   },
   {
-    "name": "Watch"
-  },
-  {
-    "name": "WeakRefImpl"
+    "name": "WATCH_NODE"
   },
   {
     "name": "ZONE_IS_STABLE_OBSERVABLE"
   },
   {
     "name": "_DOM"
+  },
+  {
+    "name": "_DuplicateItemRecordList"
   },
   {
     "name": "_DuplicateMap"
@@ -657,9 +672,6 @@
     "name": "_locateOrCreateTextNode"
   },
   {
-    "name": "_nextReactiveId"
-  },
-  {
     "name": "_platformInjector"
   },
   {
@@ -679,6 +691,9 @@
   },
   {
     "name": "activeConsumer"
+  },
+  {
+    "name": "addLViewToLContainer"
   },
   {
     "name": "addPropertyAlias"
@@ -715,6 +730,9 @@
   },
   {
     "name": "applyViewChange"
+  },
+  {
+    "name": "assertConsumerNode"
   },
   {
     "name": "attachInjectFlag"
@@ -759,6 +777,9 @@
     "name": "collectNativeNodes"
   },
   {
+    "name": "collectNativeNodesInLContainer"
+  },
+  {
     "name": "collectStylingFromDirectives"
   },
   {
@@ -789,6 +810,24 @@
     "name": "connectableObservableDescriptor"
   },
   {
+    "name": "consumerAfterComputation"
+  },
+  {
+    "name": "consumerBeforeComputation"
+  },
+  {
+    "name": "consumerDestroy"
+  },
+  {
+    "name": "consumerIsLive"
+  },
+  {
+    "name": "consumerMarkDirty"
+  },
+  {
+    "name": "consumerPollProducersForChange"
+  },
+  {
     "name": "controlPath"
   },
   {
@@ -817,6 +856,9 @@
   },
   {
     "name": "createLView"
+  },
+  {
+    "name": "createLViewConsumer"
   },
   {
     "name": "createNodeInjector"
@@ -1459,6 +1501,12 @@
   },
   {
     "name": "processInjectorTypesWithProviders"
+  },
+  {
+    "name": "producerRemoveLiveConsumerAtIndex"
+  },
+  {
+    "name": "producerUpdateValueVersion"
   },
   {
     "name": "profiler"

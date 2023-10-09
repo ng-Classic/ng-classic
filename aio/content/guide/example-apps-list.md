@@ -408,7 +408,7 @@ For more information, see [Angular Classic documentation style guide](guide/docs
 <live-example name="http"></live-example>
 
 Demonstrates server interaction using HTTP.
-For more information, see [Communicating with backend services using HTTP](guide/http).
+For more information, see [Communicating with backend services using HTTP](guide/understanding-communicating-with-http).
 
 ## Workflow
 

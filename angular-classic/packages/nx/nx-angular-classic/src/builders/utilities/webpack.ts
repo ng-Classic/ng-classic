@@ -4,7 +4,7 @@ export async function mergeCustomWebpackConfig(
   baseWebpackConfig: any,
   pathToWebpackConfig: string,
   options: { tsConfig: string; [k: string]: any },
-  target: import('@angular-devkit/architect').Target
+  target: import('@angular-classic-devkit/architect').Target
 ) {
   const customWebpackConfiguration = resolveCustomWebpackConfig(
     pathToWebpackConfig,
@@ -39,7 +39,7 @@ export function resolveCustomWebpackConfig(path: string, tsConfig: string) {
 export function resolveIndexHtmlTransformer(
   path: string,
   tsConfig: string,
-  target: import('@angular-devkit/architect').Target
+  target: import('@angular-classic-devkit/architect').Target
 ) {
   tsNodeRegister(path, tsConfig);
 

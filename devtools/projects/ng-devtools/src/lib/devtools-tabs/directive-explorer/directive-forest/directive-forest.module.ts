@@ -9,9 +9,9 @@
 import {ScrollingModule} from '@angular-classic/cdk/scrolling';
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
+import {MatButtonModule} from '@angular-classic/material/button';
+import {MatCardModule} from '@angular-classic/material/card';
 import {MatIconModule} from '@angular-classic/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
-import {MatLegacyCardModule as MatCardModule} from '@angular-classic/material/legacy-card';
 
 import {BreadcrumbsModule} from './breadcrumbs/breadcrumbs.module';
 import {DirectiveForestComponent} from './directive-forest.component';

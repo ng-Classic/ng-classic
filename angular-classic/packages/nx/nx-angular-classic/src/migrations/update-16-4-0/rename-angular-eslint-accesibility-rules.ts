@@ -29,12 +29,12 @@ function modifyRules(parent: { rules?: Record<string, unknown> }) {
   }
 
   for (const rule of Object.keys(parent.rules)) {
-    if (rule.startsWith('@angular-eslint/template/accessibility-')) {
+    if (rule.startsWith('@angular-classic-eslint/template/accessibility-')) {
       const ruleConfig = parent.rules[rule];
       parent.rules[
         rule.replace(
-          '@angular-eslint/template/accessibility-',
-          '@angular-eslint/template/'
+          '@angular-classic-eslint/template/accessibility-',
+          '@angular-classic-eslint/template/'
         )
       ] = ruleConfig;
       delete parent.rules[rule];

@@ -8,9 +8,9 @@ export function addAngularEsLintDependencies(tree: Tree): GeneratorCallback {
     tree,
     {},
     {
-      '@angular-eslint/eslint-plugin': angularEslintVersionToInstall,
-      '@angular-eslint/eslint-plugin-template': angularEslintVersionToInstall,
-      '@angular-eslint/template-parser': angularEslintVersionToInstall,
+      '@angular-classic-eslint/eslint-plugin': angularEslintVersionToInstall,
+      '@angular-classic-eslint/eslint-plugin-template': angularEslintVersionToInstall,
+      '@angular-classic-eslint/template-parser': angularEslintVersionToInstall,
     }
   );
 }

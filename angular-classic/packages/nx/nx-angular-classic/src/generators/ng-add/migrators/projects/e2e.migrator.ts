@@ -51,7 +51,7 @@ const supportedTargets: Record<SupportedTargets, Target> = {
   e2e: {
     acceptMultipleDefinitions: true,
     builders: [
-      '@angular-devkit/build-angular:protractor',
+      '@angular-classic-devkit/build-angular:protractor',
       '@cypress/schematic:cypress',
     ],
   },
@@ -167,7 +167,7 @@ export class E2eMigrator extends ProjectMigrator<SupportedTargets> {
         return [
           {
             message:
-              'The "e2e" target is using the "@angular-devkit/build-angular:protractor" builder but the Protractor config file is not specified. The target will be skipped.',
+              'The "e2e" target is using the "@angular-classic-devkit/build-angular:protractor" builder but the Protractor config file is not specified. The target will be skipped.',
             hint:
               `Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could ` +
               `revert the migration, ensure the "${this.appName}.architect.e2e.options.protractorConfig" is correctly set ` +
@@ -927,7 +927,7 @@ export class E2eMigrator extends ProjectMigrator<SupportedTargets> {
   private isProtractorE2eProject(): boolean {
     return (
       this.projectConfig.targets[this.targetNames.e2e].executor ===
-      '@angular-devkit/build-angular:protractor'
+      '@angular-classic-devkit/build-angular:protractor'
     );
   }
 }

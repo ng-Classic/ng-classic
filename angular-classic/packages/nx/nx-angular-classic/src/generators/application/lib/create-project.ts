@@ -15,7 +15,7 @@ export function createProject(tree: Tree, options: NormalizedSchema) {
     tags: options.parsedTags,
     targets: {
       build: {
-        executor: '@angular-devkit/build-angular:browser',
+        executor: '@angular-classic-devkit/build-angular:browser',
         outputs: ['{options.outputPath}'],
         options: {
           outputPath: `dist/${
@@ -72,7 +72,7 @@ export function createProject(tree: Tree, options: NormalizedSchema) {
         defaultConfiguration: 'production',
       },
       serve: {
-        executor: '@angular-devkit/build-angular:dev-server',
+        executor: '@angular-classic-devkit/build-angular:dev-server',
         options: options.port
           ? {
               port: options.port,
@@ -89,7 +89,7 @@ export function createProject(tree: Tree, options: NormalizedSchema) {
         defaultConfiguration: 'development',
       },
       'extract-i18n': {
-        executor: '@angular-devkit/build-angular:extract-i18n',
+        executor: '@angular-classic-devkit/build-angular:extract-i18n',
         options: {
           browserTarget: `${options.name}:build`,
         },

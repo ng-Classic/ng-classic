@@ -9,6 +9,9 @@
     "name": "APP_INITIALIZER"
   },
   {
+    "name": "AfterRenderEventManager"
+  },
+  {
     "name": "AnonymousSubject"
   },
   {
@@ -36,6 +39,9 @@
     "name": "CONTAINER_HEADER_OFFSET"
   },
   {
+    "name": "ChainedInjector"
+  },
+  {
     "name": "ComponentFactory"
   },
   {
@@ -61,6 +67,9 @@
   },
   {
     "name": "DOCUMENT2"
+  },
+  {
+    "name": "DistinctUntilChangedOperator"
   },
   {
     "name": "DistinctUntilChangedSubscriber"
@@ -234,6 +243,9 @@
     "name": "NodeInjectorFactory"
   },
   {
+    "name": "NoopNgZone"
+  },
+  {
     "name": "NullInjector"
   },
   {
@@ -261,10 +273,10 @@
     "name": "R3Injector"
   },
   {
-    "name": "ReactiveLViewConsumer"
+    "name": "REACTIVE_LVIEW_CONSUMER_NODE"
   },
   {
-    "name": "ReactiveNode"
+    "name": "REACTIVE_NODE"
   },
   {
     "name": "RefCountOperator"
@@ -348,10 +360,7 @@
     "name": "ViewRef"
   },
   {
-    "name": "Watch"
-  },
-  {
-    "name": "WeakRefImpl"
+    "name": "WATCH_NODE"
   },
   {
     "name": "ZONE_IS_STABLE_OBSERVABLE"
@@ -382,9 +391,6 @@
   },
   {
     "name": "_injectImplementation"
-  },
-  {
-    "name": "_nextReactiveId"
   },
   {
     "name": "_platformInjector"
@@ -420,6 +426,9 @@
     "name": "applyView"
   },
   {
+    "name": "assertConsumerNode"
+  },
+  {
     "name": "attachPatchData"
   },
   {
@@ -450,6 +459,9 @@
     "name": "collectNativeNodes"
   },
   {
+    "name": "collectNativeNodesInLContainer"
+  },
+  {
     "name": "commitLViewConsumerIfHasProducers"
   },
   {
@@ -463,6 +475,24 @@
   },
   {
     "name": "connectableObservableDescriptor"
+  },
+  {
+    "name": "consumerAfterComputation"
+  },
+  {
+    "name": "consumerBeforeComputation"
+  },
+  {
+    "name": "consumerDestroy"
+  },
+  {
+    "name": "consumerIsLive"
+  },
+  {
+    "name": "consumerMarkDirty"
+  },
+  {
+    "name": "consumerPollProducersForChange"
   },
   {
     "name": "convertToBitFlags"
@@ -481,6 +511,9 @@
   },
   {
     "name": "createLView"
+  },
+  {
+    "name": "createLViewConsumer"
   },
   {
     "name": "createNodeInjector"
@@ -853,6 +886,12 @@
   },
   {
     "name": "processInjectorTypesWithProviders"
+  },
+  {
+    "name": "producerRemoveLiveConsumerAtIndex"
+  },
+  {
+    "name": "producerUpdateValueVersion"
   },
   {
     "name": "profiler"

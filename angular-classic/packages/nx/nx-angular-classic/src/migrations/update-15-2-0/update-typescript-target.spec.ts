@@ -24,7 +24,7 @@ describe('Migration to update target and add useDefineForClassFields', () => {
 
     const karmaProject = readProjectConfiguration(tree, 'karma');
     karmaProject.targets.test = {
-      executor: '@angular-devkit/build-angular:karma',
+      executor: '@angular-classic-devkit/build-angular:karma',
       options: {
         tsConfig: 'apps/karma/tsconfig.spec.json',
       },

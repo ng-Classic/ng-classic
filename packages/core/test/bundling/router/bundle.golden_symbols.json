@@ -15,10 +15,22 @@
     "name": "AbsoluteRedirect"
   },
   {
+    "name": "ActivateRoutes"
+  },
+  {
     "name": "ActivatedRoute"
   },
   {
     "name": "ActivatedRouteSnapshot"
+  },
+  {
+    "name": "ActivationEnd"
+  },
+  {
+    "name": "ActivationStart"
+  },
+  {
+    "name": "AfterRenderEventManager"
   },
   {
     "name": "AnonymousSubject"
@@ -28,6 +40,9 @@
   },
   {
     "name": "ApplicationRef"
+  },
+  {
+    "name": "ApplyRedirects"
   },
   {
     "name": "ArgumentOutOfRangeError"
@@ -46,6 +61,9 @@
   },
   {
     "name": "BaseRouteReuseStrategy"
+  },
+  {
+    "name": "BeforeActivateRoutes"
   },
   {
     "name": "BehaviorSubject"
@@ -84,10 +102,19 @@
     "name": "CatchSubscriber"
   },
   {
+    "name": "ChainedInjector"
+  },
+  {
     "name": "ChangeDetectionStrategy"
   },
   {
     "name": "ChangeDetectorRef"
+  },
+  {
+    "name": "ChildActivationEnd"
+  },
+  {
+    "name": "ChildActivationStart"
   },
   {
     "name": "ChildrenOutletContexts"
@@ -160,6 +187,9 @@
   },
   {
     "name": "DefaultUrlSerializer"
+  },
+  {
+    "name": "DistinctUntilChangedOperator"
   },
   {
     "name": "DistinctUntilChangedSubscriber"
@@ -330,6 +360,9 @@
     "name": "MapSubscriber"
   },
   {
+    "name": "MapToOperator"
+  },
+  {
     "name": "MapToSubscriber"
   },
   {
@@ -337,6 +370,9 @@
   },
   {
     "name": "MergeMapSubscriber"
+  },
+  {
+    "name": "ModuleWithComponentFactories"
   },
   {
     "name": "NAMESPACE_URIS"
@@ -480,6 +516,9 @@
     "name": "OuterSubscriber"
   },
   {
+    "name": "OutletContext"
+  },
+  {
     "name": "OutletInjector"
   },
   {
@@ -496,6 +535,9 @@
   },
   {
     "name": "PRIMARY_OUTLET"
+  },
+  {
+    "name": "ParamsAsMap"
   },
   {
     "name": "PathLocationStrategy"
@@ -525,6 +567,12 @@
     "name": "R3ViewContainerRef"
   },
   {
+    "name": "REACTIVE_LVIEW_CONSUMER_NODE"
+  },
+  {
+    "name": "REACTIVE_NODE"
+  },
+  {
     "name": "REMOVE_STYLES_ON_COMPONENT_DESTROY"
   },
   {
@@ -540,10 +588,10 @@
     "name": "ROUTES"
   },
   {
-    "name": "ReactiveLViewConsumer"
+    "name": "Recognizer"
   },
   {
-    "name": "ReactiveNode"
+    "name": "RedirectRequest"
   },
   {
     "name": "RefCountOperator"
@@ -568,6 +616,12 @@
   },
   {
     "name": "RootViewRef"
+  },
+  {
+    "name": "RouteConfigLoadEnd"
+  },
+  {
+    "name": "RouteConfigLoadStart"
   },
   {
     "name": "RouteReuseStrategy"
@@ -624,6 +678,9 @@
     "name": "Sanitizer"
   },
   {
+    "name": "ScanOperator"
+  },
+  {
     "name": "ScanSubscriber"
   },
   {
@@ -678,6 +735,9 @@
     "name": "TQueries_"
   },
   {
+    "name": "TQueryMetadata_"
+  },
+  {
     "name": "TQuery_"
   },
   {
@@ -697,6 +757,12 @@
   },
   {
     "name": "TakeSubscriber"
+  },
+  {
+    "name": "TakeUntilOperator"
+  },
+  {
+    "name": "TakeUntilSubscriber"
   },
   {
     "name": "TapSubscriber"
@@ -765,10 +831,7 @@
     "name": "ViewRef"
   },
   {
-    "name": "Watch"
-  },
-  {
-    "name": "WeakRefImpl"
+    "name": "WATCH_NODE"
   },
   {
     "name": "XSS_SECURITY_URL"
@@ -819,9 +882,6 @@
     "name": "_locateOrCreateTextNode"
   },
   {
-    "name": "_nextReactiveId"
-  },
-  {
     "name": "_platformInjector"
   },
   {
@@ -847,6 +907,9 @@
   },
   {
     "name": "addEmptyPathsToChildrenIfNeeded"
+  },
+  {
+    "name": "addLViewToLContainer"
   },
   {
     "name": "addPropertyAlias"
@@ -883,6 +946,9 @@
   },
   {
     "name": "applyView"
+  },
+  {
+    "name": "assertConsumerNode"
   },
   {
     "name": "attachPatchData"
@@ -927,6 +993,9 @@
     "name": "collectNativeNodes"
   },
   {
+    "name": "collectNativeNodesInLContainer"
+  },
+  {
     "name": "collectQueryResults"
   },
   {
@@ -958,6 +1027,24 @@
   },
   {
     "name": "connectableObservableDescriptor"
+  },
+  {
+    "name": "consumerAfterComputation"
+  },
+  {
+    "name": "consumerBeforeComputation"
+  },
+  {
+    "name": "consumerDestroy"
+  },
+  {
+    "name": "consumerIsLive"
+  },
+  {
+    "name": "consumerMarkDirty"
+  },
+  {
+    "name": "consumerPollProducersForChange"
   },
   {
     "name": "containsSegmentGroup"
@@ -1003,6 +1090,9 @@
   },
   {
     "name": "createLView"
+  },
+  {
+    "name": "createLViewConsumer"
   },
   {
     "name": "createNewSegmentChildren"
@@ -1569,7 +1659,7 @@
     "name": "isPromise2"
   },
   {
-    "name": "isRedirectingNavigationCancelingError"
+    "name": "isPublicRouterEvent"
   },
   {
     "name": "isScheduler"
@@ -1761,13 +1851,16 @@
     "name": "processInjectorTypesWithProviders"
   },
   {
+    "name": "producerRemoveLiveConsumerAtIndex"
+  },
+  {
+    "name": "producerUpdateValueVersion"
+  },
+  {
     "name": "profiler"
   },
   {
     "name": "provideZoneChangeDetection"
-  },
-  {
-    "name": "recognize2"
   },
   {
     "name": "redirectIfUrlTree"
@@ -1810,9 +1903,6 @@
   },
   {
     "name": "resetPreOrderHookFlags"
-  },
-  {
-    "name": "resolveData"
   },
   {
     "name": "resolveForwardRef"
@@ -1962,7 +2052,7 @@
     "name": "tap"
   },
   {
-    "name": "throwError5"
+    "name": "throwError2"
   },
   {
     "name": "throwIfEmpty"

@@ -10,6 +10,8 @@ import {ApplicationRef, Injector, ɵglobal as global} from '@angular-classic/cor
 import {ComponentRef} from '@angular-classic/core/src/render3';
 import {disableDebugTools, enableDebugTools} from '@angular-classic/platform-browser';
 
+import {AngularProfiler} from '../../../src/browser/tools/common_tools';
+
 {
   describe('profiler', () => {
     if (isNode) {
@@ -45,6 +47,6 @@ import {disableDebugTools, enableDebugTools} from '@angular-classic/platform-bro
   });
 }
 
-export function callNgProfilerTimeChangeDetection(config?: any /** TODO #9100 */): void {
-  (<any>global).ng.profiler.timeChangeDetection(config);
+export function callNgProfilerTimeChangeDetection(config?: {record: true}): void {
+  (global.ng.profiler as AngularProfiler).timeChangeDetection(config);
 }

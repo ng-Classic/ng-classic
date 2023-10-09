@@ -87,7 +87,7 @@ describe('e2e migrator', () => {
       const project = addProject('app1', {
         root: '',
         targets: {
-          e2e: { executor: '@angular-devkit/build-angular:protractor' },
+          e2e: { executor: '@angular-classic-devkit/build-angular:protractor' },
         },
       });
       createMigrator(project);
@@ -108,7 +108,7 @@ describe('e2e migrator', () => {
         root: '',
         targets: {
           e2e: {
-            executor: '@angular-devkit/build-angular:protractor',
+            executor: '@angular-classic-devkit/build-angular:protractor',
             options: {},
           },
         },
@@ -119,7 +119,7 @@ describe('e2e migrator', () => {
 
       expect(result).toHaveLength(1);
       expect(result[0].message).toBe(
-        'The "e2e" target is using the "@angular-devkit/build-angular:protractor" builder but the Protractor config file is not specified. The target will be skipped.'
+        'The "e2e" target is using the "@angular-classic-devkit/build-angular:protractor" builder but the Protractor config file is not specified. The target will be skipped.'
       );
       expect(result[0].hint).toBe(
         'Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, ensure the "app1.architect.e2e.options.protractorConfig" is correctly set or remove the "app1.architect.e2e" target if it is not valid, and run the migration again.'
@@ -131,7 +131,7 @@ describe('e2e migrator', () => {
         root: '',
         targets: {
           e2e: {
-            executor: '@angular-devkit/build-angular:protractor',
+            executor: '@angular-classic-devkit/build-angular:protractor',
             options: { protractorConfig: 'protractor.conf.js' },
           },
         },
@@ -155,7 +155,7 @@ describe('e2e migrator', () => {
         root: '',
         targets: {
           e2e: {
-            executor: '@angular-devkit/build-angular:protractor',
+            executor: '@angular-classic-devkit/build-angular:protractor',
             options: { protractorConfig: 'protractor.conf.js' },
           },
         },
@@ -320,7 +320,7 @@ describe('e2e migrator', () => {
         root: '',
         targets: {
           e2e: {
-            executor: '@angular-devkit/build-angular:protractor',
+            executor: '@angular-classic-devkit/build-angular:protractor',
             options: { protractorConfig: 'e2e/protractor.conf.js' },
           },
         },
@@ -363,7 +363,7 @@ describe('e2e migrator', () => {
           root,
           targets: {
             e2e: {
-              executor: '@angular-devkit/build-angular:protractor',
+              executor: '@angular-classic-devkit/build-angular:protractor',
               options: {
                 protractorConfig: joinPathFragments(
                   root,
@@ -389,7 +389,7 @@ describe('e2e migrator', () => {
           root,
           targets: {
             e2e: {
-              executor: '@angular-devkit/build-angular:protractor',
+              executor: '@angular-classic-devkit/build-angular:protractor',
               options: {
                 protractorConfig: joinPathFragments(
                   root,
@@ -414,7 +414,7 @@ describe('e2e migrator', () => {
           projectType: 'application',
           targets: {
             e2e: {
-              executor: '@angular-devkit/build-angular:protractor',
+              executor: '@angular-classic-devkit/build-angular:protractor',
               options: { protractorConfig: 'apps/app1-e2e/protractor.conf.js' },
             },
           },
@@ -429,7 +429,7 @@ describe('e2e migrator', () => {
           root,
           targets: {
             e2e: {
-              executor: '@angular-devkit/build-angular:protractor',
+              executor: '@angular-classic-devkit/build-angular:protractor',
               options: {
                 protractorConfig: joinPathFragments(
                   root,
@@ -453,7 +453,7 @@ describe('e2e migrator', () => {
           root,
           targets: {
             e2e: {
-              executor: '@angular-devkit/build-angular:protractor',
+              executor: '@angular-classic-devkit/build-angular:protractor',
               options: {
                 protractorConfig: joinPathFragments(
                   root,
@@ -461,7 +461,7 @@ describe('e2e migrator', () => {
                 ),
               },
             },
-            lint: { executor: '@angular-eslint/builder:lint', options: {} },
+            lint: { executor: '@angular-classic-eslint/builder:lint', options: {} },
           },
         });
         createMigrator(project, 'lint');
@@ -478,7 +478,7 @@ describe('e2e migrator', () => {
           root,
           targets: {
             e2e: {
-              executor: '@angular-devkit/build-angular:protractor',
+              executor: '@angular-classic-devkit/build-angular:protractor',
               options: {
                 protractorConfig: joinPathFragments(
                   root,
@@ -694,7 +694,7 @@ describe('e2e migrator', () => {
           root,
           targets: {
             e2e: { executor: '@cypress/schematic:cypress', options: {} },
-            lint: { executor: '@angular-eslint/builder:lint', options: {} },
+            lint: { executor: '@angular-classic-eslint/builder:lint', options: {} },
           },
         });
         createMigrator(project, 'lint');
