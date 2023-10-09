@@ -13,6 +13,7 @@ import {SchemaMetadata} from '../../metadata/schema';
 import {Sanitizer} from '../../sanitization/sanitizer';
 import type {ReactiveLViewConsumer} from '../reactive_lview_consumer';
 import type {EffectManager} from '../reactivity/effect';
+import type {AfterRenderEventManager} from '../after_render_hooks';
 
 import {LContainer} from './container';
 import {ComponentDef, ComponentTemplate, DirectiveDef, DirectiveDefList, HostBindingsFunction, PipeDef, PipeDefList, ViewQueriesFunction} from './definition';
@@ -371,6 +372,9 @@ export interface LViewEnvironment {
 
   /** Container for reactivity system `effect`s. */
   effectManager: EffectManager|null;
+
+  /** Container for after render hooks */
+  afterRenderEventManager: AfterRenderEventManager|null;
 }
 
 /** Flags associated with an LView (saved in LView[FLAGS]) */
@@ -431,17 +435,18 @@ export const enum LViewFlags {
   SignalView = 1 << 12,
 
   /**
-   * Index of the current init phase on last 21 bits
-   */
-  IndexWithinInitPhaseIncrementer = 1 << 13,
-  /**
    * This is the count of the bits the 1 was shifted above (base 10)
    */
   IndexWithinInitPhaseShift = 13,
 
+  /**
+   * Index of the current init phase on last 21 bits
+   */
+  IndexWithinInitPhaseIncrementer = 1 << IndexWithinInitPhaseShift,
+
   // Subtracting 1 gives all 1s to the right of the initial shift
   // So `(1 << 3) - 1` would give 3 1s: 1 << 3 = 0b01000, subtract 1 = 0b00111
-  IndexWithinInitPhaseReset = (1 << 13) - 1,
+  IndexWithinInitPhaseReset = (1 << IndexWithinInitPhaseShift) - 1,
 }
 
 /**

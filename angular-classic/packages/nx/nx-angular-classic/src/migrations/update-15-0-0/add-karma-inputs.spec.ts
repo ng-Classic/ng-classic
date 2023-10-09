@@ -26,11 +26,11 @@ describe('15.0.0 migration (add-karma-inputs)', () => {
       root: 'proj',
       targets: {
         test: {
-          executor: '@angular-devkit/build-angular:karma',
+          executor: '@angular-classic-devkit/build-angular:karma',
           options: {},
         },
         test2: {
-          executor: '@angular-devkit/build-angular:karma',
+          executor: '@angular-classic-devkit/build-angular:karma',
           options: {},
         },
         notTest: {

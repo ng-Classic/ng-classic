@@ -454,7 +454,7 @@ exports[`app nested should create project configs 1`] = `
         },
       },
       "defaultConfiguration": "production",
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-classic-devkit/build-angular:browser",
       "options": {
         "assets": [
           "apps/my-dir/my-app/src/favicon.ico",
@@ -477,7 +477,7 @@ exports[`app nested should create project configs 1`] = `
       ],
     },
     "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "executor": "@angular-classic-devkit/build-angular:extract-i18n",
       "options": {
         "browserTarget": "my-dir-my-app:build",
       },
@@ -504,7 +504,7 @@ exports[`app nested should create project configs 1`] = `
         },
       },
       "defaultConfiguration": "development",
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@angular-classic-devkit/build-angular:dev-server",
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
@@ -612,7 +612,7 @@ exports[`app not nested should create project configs 1`] = `
         },
       },
       "defaultConfiguration": "production",
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-classic-devkit/build-angular:browser",
       "options": {
         "assets": [
           "apps/my-app/src/favicon.ico",
@@ -635,7 +635,7 @@ exports[`app not nested should create project configs 1`] = `
       ],
     },
     "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "executor": "@angular-classic-devkit/build-angular:extract-i18n",
       "options": {
         "browserTarget": "my-app:build",
       },
@@ -662,7 +662,7 @@ exports[`app not nested should create project configs 1`] = `
         },
       },
       "defaultConfiguration": "development",
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@angular-classic-devkit/build-angular:dev-server",
     },
     "serve-static": {
       "executor": "@nx/web:file-server",

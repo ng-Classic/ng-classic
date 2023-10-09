@@ -16,7 +16,7 @@ import {Directive, ElementRef, InjectionToken, Renderer2} from '@angular-classic
  * Implement this interface to create a custom form control directive
  * that integrates with Angular Classic forms.
  *
- * @see DefaultValueAccessor
+ * @see {@link DefaultValueAccessor}
  *
  * @publicApi
  */

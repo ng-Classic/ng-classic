@@ -102,8 +102,8 @@ describe('update-tsconfig-target migration', () => {
   });
 
   it.each([
-    ['@angular-devkit/build-angular:browser', 'tsconfig.app.json'],
-    ['@angular-devkit/build-angular:karma', 'tsconfig.spec.json'],
+    ['@angular-classic-devkit/build-angular:browser', 'tsconfig.app.json'],
+    ['@angular-classic-devkit/build-angular:karma', 'tsconfig.spec.json'],
     ['@nrwl/angular:webpack-browser', 'tsconfig.app.json'],
     ['@nrwl/angular:delegate-build', 'tsconfig.app.json'],
   ])(
@@ -142,7 +142,7 @@ describe('update-tsconfig-target migration', () => {
   );
 
   it.each([
-    '@angular-devkit/build-angular:ng-packagr',
+    '@angular-classic-devkit/build-angular:ng-packagr',
     '@nrwl/angular:ng-packagr-lite',
     '@nrwl/angular:package',
   ])(
@@ -437,7 +437,7 @@ describe('update-tsconfig-target migration', () => {
         projectType: 'library',
         targets: {
           build: {
-            executor: '@angular-devkit/build-angular:browser',
+            executor: '@angular-classic-devkit/build-angular:browser',
             options: { tsConfig: 'apps/app1/tsconfig.other.json' },
           },
         },

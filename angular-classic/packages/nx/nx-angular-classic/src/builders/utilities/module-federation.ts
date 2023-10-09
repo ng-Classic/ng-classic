@@ -5,7 +5,7 @@ import { Remotes } from '@nx/devkit';
 
 export function getDynamicRemotes(
   project: ProjectConfiguration,
-  context: import('@angular-devkit/architect').BuilderContext,
+  context: import('@angular-classic-devkit/architect').BuilderContext,
   workspaceProjects: Record<string, ProjectConfiguration>,
   remotesToSkip: Set<string>,
   pathToManifestFile = join(
@@ -66,7 +66,7 @@ export function getDynamicRemotes(
 
 export function getStaticRemotes(
   project: ProjectConfiguration,
-  context: import('@angular-devkit/architect').BuilderContext,
+  context: import('@angular-classic-devkit/architect').BuilderContext,
   workspaceProjects: Record<string, ProjectConfiguration>,
   remotesToSkip: Set<string>
 ): string[] {

@@ -8,8 +8,8 @@
 
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
-import {MatLegacyProgressSpinnerModule as MatProgressSpinnerModule} from '@angular-classic/material/legacy-progress-spinner';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
+import {MatProgressSpinnerModule} from '@angular-classic/material/progress-spinner';
+import {MatTooltipModule} from '@angular-classic/material/tooltip';
 
 import {DevToolsTabModule} from './devtools-tabs/devtools-tabs.module';
 import {DevToolsComponent} from './devtools.component';

@@ -8,9 +8,9 @@
 
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
-import {MatLegacyCardModule as MatCardModule} from '@angular-classic/material/legacy-card';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
+import {MatCardModule} from '@angular-classic/material/card';
 import {MatToolbarModule} from '@angular-classic/material/toolbar';
+import {MatTooltipModule} from '@angular-classic/material/tooltip';
 import {NgxFlamegraphModule} from 'ngx-flamegraph';
 
 import {AngularSplitModule} from '../../../../vendor/angular-split/public_api';

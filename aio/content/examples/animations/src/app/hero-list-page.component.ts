@@ -4,10 +4,13 @@ import { Component, HostBinding, OnInit } from '@angular-classic/core';
 import { trigger, transition, animate, style, query, stagger } from '@angular-classic/animations';
 import { HEROES } from './mock-heroes';
 import { Hero } from './hero';
+import { NgFor } from '@angular-classic/common';
 
 // #docregion filter-animations
 @Component({
 // #enddocregion filter-animations
+  standalone: true,
+  imports: [NgFor],
   selector: 'app-hero-list-page',
   templateUrl: 'hero-list-page.component.html',
   styleUrls: ['hero-list-page.component.css'],

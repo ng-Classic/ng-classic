@@ -52,7 +52,7 @@ describe('init', () => {
     expect(devDependencies['@angular-classic/cli']).toBe(angularDevkitVersion);
     expect(devDependencies['@angular-classic/compiler-cli']).toBe(angularVersion);
     expect(devDependencies['@angular-classic/language-service']).toBe(angularVersion);
-    expect(devDependencies['@angular-devkit/build-angular']).toBe(
+    expect(devDependencies['@angular-classic-devkit/build-angular']).toBe(
       angularDevkitVersion
     );
 
@@ -70,7 +70,7 @@ describe('init', () => {
       },
       devDependencies: {
         ...json.devDependencies,
-        '@angular-devkit/build-angular': '~15.0.0',
+        '@angular-classic-devkit/build-angular': '~15.0.0',
       },
     }));
 
@@ -93,7 +93,7 @@ describe('init', () => {
     expect(devDependencies['@angular-classic/cli']).toBe('~15.0.0');
     expect(devDependencies['@angular-classic/compiler-cli']).toBe('~15.0.0');
     expect(devDependencies['@angular-classic/language-service']).toBe('~15.0.0');
-    expect(devDependencies['@angular-devkit/build-angular']).toBe('~15.0.0');
+    expect(devDependencies['@angular-classic-devkit/build-angular']).toBe('~15.0.0');
   });
 
   it('should not overwrite already installed dependencies', async () => {
@@ -402,7 +402,7 @@ bar
       expect(devDependencies['@angular-classic/language-service']).toEqual(
         backwardCompatibleVersions.angularV14.angularVersion
       );
-      expect(devDependencies['@angular-devkit/build-angular']).toEqual(
+      expect(devDependencies['@angular-classic-devkit/build-angular']).toEqual(
         backwardCompatibleVersions.angularV14.angularDevkitVersion
       );
 
@@ -420,7 +420,7 @@ bar
         },
         devDependencies: {
           ...json.devDependencies,
-          '@angular-devkit/build-angular': '~14.0.0',
+          '@angular-classic-devkit/build-angular': '~14.0.0',
         },
       }));
 
@@ -443,7 +443,7 @@ bar
       expect(devDependencies['@angular-classic/cli']).toBe('~14.0.0');
       expect(devDependencies['@angular-classic/compiler-cli']).toBe('~14.0.0');
       expect(devDependencies['@angular-classic/language-service']).toBe('~14.0.0');
-      expect(devDependencies['@angular-devkit/build-angular']).toBe('~14.0.0');
+      expect(devDependencies['@angular-classic-devkit/build-angular']).toBe('~14.0.0');
     });
 
     it('should not overwrite already installed dependencies', async () => {

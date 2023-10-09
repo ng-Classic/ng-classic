@@ -7,8 +7,8 @@ import {
 import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
 
 const executors = [
-  '@angular-devkit/build-angular:browser',
-  '@angular-devkit/build-angular:server',
+  '@angular-classic-devkit/build-angular:browser',
+  '@angular-classic-devkit/build-angular:server',
   '@nrwl/angular:webpack-browser',
 ];
 

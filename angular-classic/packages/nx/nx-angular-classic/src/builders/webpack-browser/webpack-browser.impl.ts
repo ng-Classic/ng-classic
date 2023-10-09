@@ -45,8 +45,8 @@ function shouldSkipInitialTargetRun(
 
 export function executeWebpackBrowserBuilder(
   options: BrowserBuilderSchema,
-  context: import('@angular-devkit/architect').BuilderContext
-): Observable<import('@angular-devkit/architect').BuilderOutput> {
+  context: import('@angular-classic-devkit/architect').BuilderContext
+): Observable<import('@angular-classic-devkit/architect').BuilderOutput> {
   validateOptions(options);
   options.buildLibsFromSource ??= true;
 
@@ -89,7 +89,7 @@ export function executeWebpackBrowserBuilder(
     delegateBuilderOptions.tsConfig = tsConfigPath;
   }
 
-  return from(import('@angular-devkit/build-angular')).pipe(
+  return from(import('@angular-classic-devkit/build-angular')).pipe(
     switchMap(({ executeBrowserBuilder }) =>
       executeBrowserBuilder(delegateBuilderOptions, context as any, {
         webpackConfiguration: (baseWebpackConfig) => {
@@ -144,6 +144,6 @@ export function executeWebpackBrowserBuilder(
   );
 }
 
-export default require('@angular-devkit/architect').createBuilder(
+export default require('@angular-classic-devkit/architect').createBuilder(
   executeWebpackBrowserBuilder
 ) as any;

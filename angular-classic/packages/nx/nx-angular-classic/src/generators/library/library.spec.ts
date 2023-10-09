@@ -1142,13 +1142,13 @@ describe('lib', () => {
               {
                 "extends": [
                   "plugin:@angular-classic/nx-angular",
-                  "plugin:@angular-eslint/template/process-inline-templates",
+                  "plugin:@angular-classic-eslint/template/process-inline-templates",
                 ],
                 "files": [
                   "*.ts",
                 ],
                 "rules": {
-                  "@angular-eslint/component-selector": [
+                  "@angular-classic-eslint/component-selector": [
                     "error",
                     {
                       "prefix": "proj",
@@ -1156,7 +1156,7 @@ describe('lib', () => {
                       "type": "element",
                     },
                   ],
-                  "@angular-eslint/directive-selector": [
+                  "@angular-classic-eslint/directive-selector": [
                     "error",
                     {
                       "prefix": "proj",

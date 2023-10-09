@@ -6,8 +6,6 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import '@angular-classic/core/test/bundling/util/src/reflect_metadata';
-
 import {CommonModule} from '@angular-classic/common';
 import {Component, Injectable, NgModule} from '@angular-classic/core';
 import {BrowserModule, platformBrowser} from '@angular-classic/platform-browser';

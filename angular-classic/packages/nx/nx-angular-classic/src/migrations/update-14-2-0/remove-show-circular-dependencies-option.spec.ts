@@ -14,8 +14,8 @@ describe('remove-show-circular-dependencies-option migration', () => {
   });
 
   it.each([
-    '@angular-devkit/build-angular:browser',
-    '@angular-devkit/build-angular:server',
+    '@angular-classic-devkit/build-angular:browser',
+    '@angular-classic-devkit/build-angular:server',
     '@nrwl/angular:webpack-browser',
   ])(
     'should remove "showCircularDependencies" option from target using the "%s" executor',

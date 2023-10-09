@@ -35,7 +35,7 @@ jobs:
           # take files from temporary branch and put them where we need them
           git rm -r angular-classic/packages/nx/nx-angular-classic
           git read-tree --prefix angular-classic/packages/nx/nx-angular-classic -u tmp/angular-updates
-      - name: Replace '@angular/' with '@angular-classic/' and push
+      - name: Replace '@angular-classic/' with '@angular-classic/' and push
         run: |
           find angular-classic/packages/nx/nx-angular-classic -type f -exec sed -i 's/@angular\//@angular-classic\//g' {} +
           find angular-classic/packages/nx/nx-angular-classic -type f -exec sed -i 's/@nx\/angular/@angular-classic\/nx-angular/g' {} +

@@ -44,7 +44,7 @@ export default defineConfig({
 Component testing requires a _build target_ to correctly run the component test dev server. This option can be manually specified with `--build-target=some-angular-app:build`, but Nx will infer this usage from the [project graph](/concepts/mental-model#the-project-graph) if one isn't provided.
 
 For Angular projects, the build target needs to be using the `@angular-classic/nx-angular:webpack-browser` or
-`@angular-devkit/build-angular:browser` executor.
+`@angular-classic-devkit/build-angular:browser` executor.
 The generator will throw an error if a build target can't be found and suggest passing one in manually.
 
 Letting Nx infer the build target by default

@@ -18,9 +18,9 @@ import type { StringLiteral } from 'typescript';
 
 const jestExecutor = '@nrwl/jest:jest';
 const executors = [
-  '@angular-devkit/build-angular:browser',
-  '@angular-devkit/build-angular:karma',
-  '@angular-devkit/build-angular:ng-packagr',
+  '@angular-classic-devkit/build-angular:browser',
+  '@angular-classic-devkit/build-angular:karma',
+  '@angular-classic-devkit/build-angular:ng-packagr',
   '@nrwl/angular:webpack-browser',
   '@nrwl/angular:delegate-build',
   '@nrwl/angular:ng-packagr-lite',

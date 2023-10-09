@@ -1,7 +1,7 @@
 import type {
   BrowserBuilderOptions,
   ServerBuilderOptions,
-} from '@angular-devkit/build-angular';
+} from '@angular-classic-devkit/build-angular';
 import type { Tree } from '@nx/devkit';
 import {
   joinPathFragments,
@@ -28,7 +28,7 @@ export function updateProjectConfig(tree: Tree, schema: Schema) {
 
   projectConfig.targets.server = {
     dependsOn: ['build'],
-    executor: '@angular-devkit/build-angular:server',
+    executor: '@angular-classic-devkit/build-angular:server',
     options: {
       outputPath: joinPathFragments(baseOutputPath, 'server'),
       main: joinPathFragments(projectConfig.root, schema.serverFileName),

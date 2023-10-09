@@ -8,10 +8,10 @@
 
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
+import {MatButtonModule} from '@angular-classic/material/button';
 import {MatExpansionModule} from '@angular-classic/material/expansion';
 import {MatIconModule} from '@angular-classic/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
+import {MatTooltipModule} from '@angular-classic/material/tooltip';
 
 import {ComponentMetadataComponent} from './component-metadata.component';
 import {PropertyTabHeaderComponent} from './property-tab-header.component';

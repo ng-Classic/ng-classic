@@ -68,7 +68,16 @@ class HeroListComponent {
 }
 </code-example>
 
-When Angular Classic discovers that a component depends on a service, it first checks if the injector has any existing instances of that service. If a requested service instance doesn't yet exist, the injector creates one using the registered provider, and adds it to the injector before returning the service to Angular.
+Another option is to use the [inject](api/core/inject) method:
+
+<code-example language="typescript">
+@Component({ … })
+class HeroListComponent {
+  private service = inject(HeroService);
+}
+</code-example>
+
+When Angular discovers that a component depends on a service, it first checks if the injector has any existing instances of that service. If a requested service instance doesn't yet exist, the injector creates one using the registered provider, and adds it to the injector before returning the service to Angular.
 
 When all requested services have been resolved and returned, Angular Classic can call the component's constructor with those services as arguments.
 

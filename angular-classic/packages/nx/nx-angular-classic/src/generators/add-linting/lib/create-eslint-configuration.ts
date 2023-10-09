@@ -19,10 +19,10 @@ export const extendAngularEslintJson = (
       extends: [
         ...(json.overrides[0].extends || []),
         'plugin:@angular-classic/nx-angular',
-        'plugin:@angular-eslint/template/process-inline-templates',
+        'plugin:@angular-classic-eslint/template/process-inline-templates',
       ],
       rules: {
-        '@angular-eslint/directive-selector': [
+        '@angular-classic-eslint/directive-selector': [
           'error',
           {
             type: 'attribute',
@@ -30,7 +30,7 @@ export const extendAngularEslintJson = (
             style: 'camelCase',
           },
         ],
-        '@angular-eslint/component-selector': [
+        '@angular-classic-eslint/component-selector': [
           'error',
           {
             type: 'element',
@@ -76,7 +76,7 @@ export function createEsLintConfiguration(
         files: ['*.ts'],
         extends: [
           'plugin:@angular-classic/nx-angular',
-          'plugin:@angular-eslint/template/process-inline-templates',
+          'plugin:@angular-classic-eslint/template/process-inline-templates',
         ],
         /**
          * NOTE: We no longer set parserOptions.project by default when creating new projects.
@@ -97,7 +97,7 @@ export function createEsLintConfiguration(
               project: [`${options.projectRoot}/tsconfig.*?.json`],
             },
         rules: {
-          '@angular-eslint/directive-selector': [
+          '@angular-classic-eslint/directive-selector': [
             'error',
             {
               type: 'attribute',
@@ -105,7 +105,7 @@ export function createEsLintConfiguration(
               style: 'camelCase',
             },
           ],
-          '@angular-eslint/component-selector': [
+          '@angular-classic-eslint/component-selector': [
             'error',
             {
               type: 'element',

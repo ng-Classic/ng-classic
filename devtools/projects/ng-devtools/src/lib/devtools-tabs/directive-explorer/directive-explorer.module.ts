@@ -9,11 +9,11 @@
 import {ScrollingModule} from '@angular-classic/cdk/scrolling';
 import {CommonModule} from '@angular-classic/common';
 import {NgModule} from '@angular-classic/core';
+import {MatButtonModule} from '@angular-classic/material/button';
+import {MatCardModule} from '@angular-classic/material/card';
 import {MatIconModule} from '@angular-classic/material/icon';
-import {MatLegacyButtonModule as MatButtonModule} from '@angular-classic/material/legacy-button';
-import {MatLegacyCardModule as MatCardModule} from '@angular-classic/material/legacy-card';
-import {MatLegacySnackBarModule as MatSnackBarModule} from '@angular-classic/material/legacy-snack-bar';
-import {MatLegacyTooltipModule as MatTooltipModule} from '@angular-classic/material/legacy-tooltip';
+import {MatSnackBarModule} from '@angular-classic/material/snack-bar';
+import {MatTooltipModule} from '@angular-classic/material/tooltip';
 import {MatTreeModule} from '@angular-classic/material/tree';
 
 import {AngularSplitModule} from '../../vendor/angular-split/public_api';

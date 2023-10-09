@@ -2,6 +2,7 @@
 import { Component, HostBinding } from '@angular-classic/core';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],

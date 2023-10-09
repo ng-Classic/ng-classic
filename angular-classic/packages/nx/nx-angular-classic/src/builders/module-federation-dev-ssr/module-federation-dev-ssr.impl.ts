@@ -15,7 +15,7 @@ import { existsSync } from 'fs';
 
 export function executeModuleFederationDevSSRBuilder(
   schema: Schema,
-  context: import('@angular-devkit/architect').BuilderContext
+  context: import('@angular-classic-devkit/architect').BuilderContext
 ) {
   const { ...options } = schema;
   const projectGraph = readCachedProjectGraph();
@@ -156,6 +156,6 @@ export function executeModuleFederationDevSSRBuilder(
   );
 }
 
-export default require('@angular-devkit/architect').createBuilder(
+export default require('@angular-classic-devkit/architect').createBuilder(
   executeModuleFederationDevSSRBuilder
 );

@@ -10,7 +10,6 @@ import {CommonModule} from '@angular-classic/common';
 import {AfterViewInit, Component, ContentChild, ContentChildren, Directive, ElementRef, EventEmitter, forwardRef, InjectionToken, Input, QueryList, TemplateRef, Type, ViewChild, ViewChildren, ViewContainerRef, ViewRef} from '@angular-classic/core';
 import {TestBed} from '@angular-classic/core/testing';
 import {By} from '@angular-classic/platform-browser';
-import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('query logic', () => {
   beforeEach(() => {

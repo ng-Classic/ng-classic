@@ -8,7 +8,6 @@
 
 import {Component, Injector, TemplateRef, ViewChild, ViewContainerRef} from '@angular-classic/core';
 import {TestBed} from '@angular-classic/core/testing';
-import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 
 describe('TemplateRef', () => {
   describe('rootNodes', () => {

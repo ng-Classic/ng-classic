@@ -246,17 +246,17 @@ export function updateRootEsLintConfig(
 
 export function cleanupEsLintPackages(tree: Tree): void {
   updateJson(tree, 'package.json', (json) => {
-    if (json.devDependencies?.['@angular-eslint/builder']) {
-      delete json.devDependencies['@angular-eslint/builder'];
+    if (json.devDependencies?.['@angular-classic-eslint/builder']) {
+      delete json.devDependencies['@angular-classic-eslint/builder'];
     }
-    if (json.dependencies?.['@angular-eslint/builder']) {
-      delete json.dependencies['@angular-eslint/builder'];
+    if (json.dependencies?.['@angular-classic-eslint/builder']) {
+      delete json.dependencies['@angular-classic-eslint/builder'];
     }
-    if (json.devDependencies?.['@angular-eslint/schematics']) {
-      delete json.devDependencies['@angular-eslint/schematics'];
+    if (json.devDependencies?.['@angular-classic-eslint/schematics']) {
+      delete json.devDependencies['@angular-classic-eslint/schematics'];
     }
-    if (json.dependencies?.['@angular-eslint/schematics']) {
-      delete json.dependencies['@angular-eslint/schematics'];
+    if (json.dependencies?.['@angular-classic-eslint/schematics']) {
+      delete json.dependencies['@angular-classic-eslint/schematics'];
     }
 
     return json;

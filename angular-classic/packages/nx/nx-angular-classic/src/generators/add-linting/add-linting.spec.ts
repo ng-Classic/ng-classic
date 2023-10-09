@@ -45,11 +45,11 @@ describe('addLinting generator', () => {
     });
 
     const { devDependencies } = readJson(tree, 'package.json');
-    expect(devDependencies['@angular-eslint/eslint-plugin']).toBeDefined();
+    expect(devDependencies['@angular-classic-eslint/eslint-plugin']).toBeDefined();
     expect(
-      devDependencies['@angular-eslint/eslint-plugin-template']
+      devDependencies['@angular-classic-eslint/eslint-plugin-template']
     ).toBeDefined();
-    expect(devDependencies['@angular-eslint/template-parser']).toBeDefined();
+    expect(devDependencies['@angular-classic-eslint/template-parser']).toBeDefined();
   });
 
   it('should correctly generate the .eslintrc.json file', async () => {
@@ -123,11 +123,11 @@ describe('addLinting generator', () => {
 
       const { dependencies, devDependencies } = readJson(tree, 'package.json');
       expect(dependencies['@angular-classic/core']).toEqual('14.1.0');
-      expect(devDependencies['@angular-eslint/eslint-plugin']).toBeDefined();
+      expect(devDependencies['@angular-classic-eslint/eslint-plugin']).toBeDefined();
       expect(
-        devDependencies['@angular-eslint/eslint-plugin-template']
+        devDependencies['@angular-classic-eslint/eslint-plugin-template']
       ).toBeDefined();
-      expect(devDependencies['@angular-eslint/template-parser']).toBeDefined();
+      expect(devDependencies['@angular-classic-eslint/template-parser']).toBeDefined();
     });
 
     it('should correctly generate the .eslintrc.json file', async () => {

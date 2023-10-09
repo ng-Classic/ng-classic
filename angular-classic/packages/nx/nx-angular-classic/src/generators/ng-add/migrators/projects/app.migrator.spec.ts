@@ -125,7 +125,7 @@ describe('app migrator', () => {
         `The "build" target is using a builder "@not/supported:builder" that's not currently supported by the automated migration. The target will be skipped.`,
       ]);
       expect(result[0].hint).toMatchInlineSnapshot(
-        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-devkit/build-angular:browser", "@angular-devkit/build-angular:protractor", "@cypress/schematic:cypress", "@angular-devkit/build-angular:extract-i18n", "@nguniversal/builders:prerender", "@angular-devkit/build-angular:dev-server", "@angular-devkit/build-angular:server", "@nguniversal/builders:ssr-dev-server", "@angular-devkit/build-angular:karma" and "@angular-eslint/builder:lint"), and run the migration again."`
+        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-classic-devkit/build-angular:browser", "@angular-classic-devkit/build-angular:protractor", "@cypress/schematic:cypress", "@angular-classic-devkit/build-angular:extract-i18n", "@nguniversal/builders:prerender", "@angular-classic-devkit/build-angular:dev-server", "@angular-classic-devkit/build-angular:server", "@nguniversal/builders:ssr-dev-server", "@angular-classic-devkit/build-angular:karma" and "@angular-classic-eslint/builder:lint"), and run the migration again."`
       );
     });
 
@@ -148,7 +148,7 @@ describe('app migrator', () => {
         `The "test" target is using a builder "@other/not-supported:builder" that's not currently supported by the automated migration. The target will be skipped.`,
       ]);
       expect(result[0].hint).toMatchInlineSnapshot(
-        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-devkit/build-angular:browser", "@angular-devkit/build-angular:protractor", "@cypress/schematic:cypress", "@angular-devkit/build-angular:extract-i18n", "@nguniversal/builders:prerender", "@angular-devkit/build-angular:dev-server", "@angular-devkit/build-angular:server", "@nguniversal/builders:ssr-dev-server", "@angular-devkit/build-angular:karma" and "@angular-eslint/builder:lint"), and run the migration again."`
+        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-classic-devkit/build-angular:browser", "@angular-classic-devkit/build-angular:protractor", "@cypress/schematic:cypress", "@angular-classic-devkit/build-angular:extract-i18n", "@nguniversal/builders:prerender", "@angular-classic-devkit/build-angular:dev-server", "@angular-classic-devkit/build-angular:server", "@nguniversal/builders:ssr-dev-server", "@angular-classic-devkit/build-angular:karma" and "@angular-classic-eslint/builder:lint"), and run the migration again."`
       );
     });
 
@@ -167,7 +167,7 @@ describe('app migrator', () => {
         `The "my-build" target is using a builder "@not/supported:builder" that's not currently supported by the automated migration. The target will be skipped.`,
       ]);
       expect(result[0].hint).toMatchInlineSnapshot(
-        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-devkit/build-angular:browser", "@angular-devkit/build-angular:protractor", "@cypress/schematic:cypress", "@angular-devkit/build-angular:extract-i18n", "@nguniversal/builders:prerender", "@angular-devkit/build-angular:dev-server", "@angular-devkit/build-angular:server", "@nguniversal/builders:ssr-dev-server", "@angular-devkit/build-angular:karma" and "@angular-eslint/builder:lint"), and run the migration again."`
+        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-classic-devkit/build-angular:browser", "@angular-classic-devkit/build-angular:protractor", "@cypress/schematic:cypress", "@angular-classic-devkit/build-angular:extract-i18n", "@nguniversal/builders:prerender", "@angular-classic-devkit/build-angular:dev-server", "@angular-classic-devkit/build-angular:server", "@nguniversal/builders:ssr-dev-server", "@angular-classic-devkit/build-angular:karma" and "@angular-classic-eslint/builder:lint"), and run the migration again."`
       );
     });
 
@@ -175,8 +175,8 @@ describe('app migrator', () => {
       const project = addProject('app1', {
         root: '',
         architect: {
-          build1: { builder: '@angular-devkit/build-angular:browser' },
-          build2: { builder: '@angular-devkit/build-angular:browser' },
+          build1: { builder: '@angular-classic-devkit/build-angular:browser' },
+          build2: { builder: '@angular-classic-devkit/build-angular:browser' },
         },
       });
       const migrator = new AppMigrator(tree, {}, project);
@@ -196,10 +196,10 @@ describe('app migrator', () => {
       const project = addProject('app1', {
         root: '',
         architect: {
-          build1: { builder: '@angular-devkit/build-angular:browser' },
-          build2: { builder: '@angular-devkit/build-angular:browser' },
-          lint1: { builder: '@angular-eslint/builder:lint' },
-          lint2: { builder: '@angular-eslint/builder:lint' },
+          build1: { builder: '@angular-classic-devkit/build-angular:browser' },
+          build2: { builder: '@angular-classic-devkit/build-angular:browser' },
+          lint1: { builder: '@angular-classic-eslint/builder:lint' },
+          lint2: { builder: '@angular-classic-eslint/builder:lint' },
         },
       });
       const migrator = new AppMigrator(tree, {}, project);
@@ -214,7 +214,7 @@ describe('app migrator', () => {
         'Make sure to manually migrate their configuration and any possible associated files.'
       );
       expect(result[1].message).toBe(
-        'There is more than one target using the builder "@angular-eslint/builder:lint": "lint1" and "lint2". This is not currently supported by the automated migration. These targets will be skipped.'
+        'There is more than one target using the builder "@angular-classic-eslint/builder:lint": "lint1" and "lint2". This is not currently supported by the automated migration. These targets will be skipped.'
       );
       expect(result[1].hint).toBe(
         'Make sure to manually migrate their configuration and any possible associated files.'
@@ -226,7 +226,7 @@ describe('app migrator', () => {
         root: '',
         sourceRoot: 'src',
         architect: {
-          build: { builder: '@angular-devkit/build-angular:browser' },
+          build: { builder: '@angular-classic-devkit/build-angular:browser' },
         },
       });
       const migrator = new AppMigrator(tree, {}, project);
@@ -263,7 +263,7 @@ describe('app migrator', () => {
     it('should warn when there is no build target', async () => {
       const project = addProject('app1', {
         root: '',
-        architect: { test: { builder: '@angular-devkit/build-angular:karma' } },
+        architect: { test: { builder: '@angular-classic-devkit/build-angular:karma' } },
       });
       const migrator = new AppMigrator(tree, {}, project, mockedLogger as any);
 
@@ -278,7 +278,7 @@ describe('app migrator', () => {
       const project = addProject('app1', {
         root: '',
         architect: {
-          build: { builder: '@angular-devkit/build-angular:browser' },
+          build: { builder: '@angular-classic-devkit/build-angular:browser' },
         },
       });
       const migrator = new AppMigrator(tree, {}, project, mockedLogger as any);
@@ -295,7 +295,7 @@ describe('app migrator', () => {
         root: '',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             options: {},
             configurations: { development: {} },
           },
@@ -315,7 +315,7 @@ describe('app migrator', () => {
         root: '',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             options: { tsConfig: 'tsconfig.app.json' },
           },
         },
@@ -332,7 +332,7 @@ describe('app migrator', () => {
     it('should warn when the lint target does not have any options', async () => {
       const project = addProject('app1', {
         root: '',
-        architect: { lint: { builder: '@angular-eslint/builder:lint' } },
+        architect: { lint: { builder: '@angular-classic-eslint/builder:lint' } },
       });
       const migrator = new AppMigrator(tree, {}, project, mockedLogger as any);
 
@@ -348,7 +348,7 @@ describe('app migrator', () => {
         root: '',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: { eslintConfig: '.non-existent-eslintrc.json' },
           },
         },
@@ -366,7 +366,7 @@ describe('app migrator', () => {
       const project = addProject('app1', {
         root: '',
         architect: {
-          lint: { builder: '@angular-eslint/builder:lint', options: {} },
+          lint: { builder: '@angular-classic-eslint/builder:lint', options: {} },
         },
       });
       const migrator = new AppMigrator(tree, {}, project, mockedLogger as any);
@@ -383,7 +383,7 @@ describe('app migrator', () => {
         root: 'projects/app1',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: { lintFilePatterns: ['not-within-project/**/*.ts'] },
           },
         },
@@ -401,7 +401,7 @@ describe('app migrator', () => {
       const project = addProject('app1', {
         root: '',
         architect: {
-          server: { builder: '@angular-devkit/build-angular:server' },
+          server: { builder: '@angular-classic-devkit/build-angular:server' },
         },
       });
       const migrator = new AppMigrator(tree, {}, project, mockedLogger as any);
@@ -418,7 +418,7 @@ describe('app migrator', () => {
         root: '',
         architect: {
           server: {
-            builder: '@angular-devkit/build-angular:server',
+            builder: '@angular-classic-devkit/build-angular:server',
             options: {},
             configurations: { development: {} },
           },
@@ -438,7 +438,7 @@ describe('app migrator', () => {
         root: '',
         architect: {
           server: {
-            builder: '@angular-devkit/build-angular:server',
+            builder: '@angular-classic-devkit/build-angular:server',
             options: { tsConfig: 'tsconfig.server.json' },
           },
         },
@@ -455,7 +455,7 @@ describe('app migrator', () => {
     it('should warn when the test target does not have any options', async () => {
       const project = addProject('app1', {
         root: '',
-        architect: { test: { builder: '@angular-devkit/build-angular:karma' } },
+        architect: { test: { builder: '@angular-classic-devkit/build-angular:karma' } },
       });
       const migrator = new AppMigrator(tree, {}, project, mockedLogger as any);
 
@@ -470,7 +470,7 @@ describe('app migrator', () => {
       const project = addProject('app1', {
         root: '',
         architect: {
-          test: { builder: '@angular-devkit/build-angular:karma', options: {} },
+          test: { builder: '@angular-classic-devkit/build-angular:karma', options: {} },
         },
       });
       const migrator = new AppMigrator(tree, {}, project, mockedLogger as any);
@@ -487,7 +487,7 @@ describe('app migrator', () => {
         root: '',
         architect: {
           test: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: { tsConfig: 'tsconfig.spec.json' },
           },
         },
@@ -548,19 +548,19 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             options: { tsConfig: 'tsconfig.app.json' },
           },
           test: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: { tsConfig: 'tsconfig.spec.json' },
           },
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {},
           },
           e2e: {
-            builder: '@angular-devkit/build-angular:protractor',
+            builder: '@angular-classic-devkit/build-angular:protractor',
             options: { protractorConfig: 'e2e/protractor.conf.json' },
           },
         },
@@ -591,19 +591,19 @@ describe('app migrator', () => {
         sourceRoot: 'projects/app1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             options: { tsConfig: 'projects/app1/tsconfig.app.json' },
           },
           test: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: { tsConfig: 'projects/app1/tsconfig.spec.json' },
           },
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {},
           },
           e2e: {
-            builder: '@angular-devkit/build-angular:protractor',
+            builder: '@angular-classic-devkit/build-angular:protractor',
             options: {
               protractorConfig: 'projects/app1/e2e/protractor.conf.json',
             },
@@ -663,7 +663,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             options: {
               outputPath: 'dist/app1',
               index: 'src/index.html',
@@ -695,7 +695,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.build).toStrictEqual({
-        executor: '@angular-devkit/build-angular:browser',
+        executor: '@angular-classic-devkit/build-angular:browser',
         options: {
           outputPath: 'dist/apps/app1',
           index: 'apps/app1/src/index.html',
@@ -727,7 +727,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             options: {
               outputPath: 'dist/app1',
               index: 'src/index.html',
@@ -752,7 +752,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.build).toStrictEqual({
-        executor: '@angular-devkit/build-angular:browser',
+        executor: '@angular-classic-devkit/build-angular:browser',
         options: {
           outputPath: 'dist/apps/app1',
           index: 'apps/app1/src/index.html',
@@ -777,7 +777,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           myCustomBuildTarget: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             options: {
               outputPath: 'dist/app1',
               index: 'src/index.html',
@@ -809,7 +809,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.myCustomBuildTarget).toStrictEqual({
-        executor: '@angular-devkit/build-angular:browser',
+        executor: '@angular-classic-devkit/build-angular:browser',
         options: {
           outputPath: 'dist/apps/app1',
           index: 'apps/app1/src/index.html',
@@ -841,10 +841,10 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             options: { outputPath: 'dist/app1' },
           },
-          server: { builder: '@angular-devkit/build-angular:server' },
+          server: { builder: '@angular-classic-devkit/build-angular:server' },
         },
       });
       const migrator = new AppMigrator(tree, {}, project);
@@ -853,7 +853,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.build).toStrictEqual({
-        executor: '@angular-devkit/build-angular:browser',
+        executor: '@angular-classic-devkit/build-angular:browser',
         options: { outputPath: 'dist/apps/app1/browser' },
       });
     });
@@ -864,7 +864,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: ['src/**/*.ts', 'src/**/*.html'],
             },
@@ -890,7 +890,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           myCustomLintTarget: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: ['src/**/*.ts', 'src/**/*.html'],
             },
@@ -916,7 +916,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               eslintConfig: '.eslintrc.json',
               lintFilePatterns: ['src/**/*.ts', 'src/**/*.html'],
@@ -955,7 +955,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               eslintConfig: '.eslintrc.json',
               lintFilePatterns: ['src/**/*.ts', 'src/**/*.html'],
@@ -984,7 +984,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           server: {
-            builder: '@angular-devkit/build-angular:server',
+            builder: '@angular-classic-devkit/build-angular:server',
             options: {
               outputPath: 'dist/app1/server',
               main: 'server.ts',
@@ -1012,7 +1012,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.server).toStrictEqual({
-        executor: '@angular-devkit/build-angular:server',
+        executor: '@angular-classic-devkit/build-angular:server',
         options: {
           outputPath: 'dist/apps/app1/server',
           main: 'apps/app1/server.ts',
@@ -1040,7 +1040,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           myCustomServerTarget: {
-            builder: '@angular-devkit/build-angular:server',
+            builder: '@angular-classic-devkit/build-angular:server',
             options: {
               outputPath: 'dist/app1/server',
               main: 'server.ts',
@@ -1068,7 +1068,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.myCustomServerTarget).toStrictEqual({
-        executor: '@angular-devkit/build-angular:server',
+        executor: '@angular-classic-devkit/build-angular:server',
         options: {
           outputPath: 'dist/apps/app1/server',
           main: 'apps/app1/server.ts',
@@ -1096,7 +1096,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           test: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: {
               main: 'src/test.ts',
               tsConfig: 'tsconfig.spec.json',
@@ -1111,7 +1111,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.test).toStrictEqual({
-        executor: '@angular-devkit/build-angular:karma',
+        executor: '@angular-classic-devkit/build-angular:karma',
         options: {
           main: 'apps/app1/src/test.ts',
           tsConfig: 'apps/app1/tsconfig.spec.json',
@@ -1126,7 +1126,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           myCustomTestTarget: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: {
               main: 'src/test.ts',
               tsConfig: 'tsconfig.spec.json',
@@ -1141,7 +1141,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.myCustomTestTarget).toStrictEqual({
-        executor: '@angular-devkit/build-angular:karma',
+        executor: '@angular-classic-devkit/build-angular:karma',
         options: {
           main: 'apps/app1/src/test.ts',
           tsConfig: 'apps/app1/tsconfig.spec.json',
@@ -1271,7 +1271,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             options: { tsConfig: 'tsconfig.app.json' },
           },
         },
@@ -1306,7 +1306,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
             configurations: {
               development: { tsConfig: 'tsconfig.app.json' },
             },
@@ -1343,7 +1343,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           test: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: { tsConfig: 'tsconfig.spec.json' },
           },
         },
@@ -1381,7 +1381,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           server: {
-            builder: '@angular-devkit/build-angular:server',
+            builder: '@angular-classic-devkit/build-angular:server',
             options: { tsConfig: 'tsconfig.server.json' },
           },
         },
@@ -1422,7 +1422,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           server: {
-            builder: '@angular-devkit/build-angular:server',
+            builder: '@angular-classic-devkit/build-angular:server',
             configurations: {
               development: { tsConfig: 'tsconfig.server.json' },
             },
@@ -1458,7 +1458,7 @@ describe('app migrator', () => {
         sourceRoot: 'projects/parent/app1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/parent/app1/**/*.ts',
@@ -1484,7 +1484,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: ['src/**/*.ts', 'src/**/*.html'],
             },
@@ -1509,7 +1509,7 @@ describe('app migrator', () => {
         sourceRoot: 'projects/parent/app1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/parent/app1/**/*.ts',
@@ -1537,7 +1537,7 @@ describe('app migrator', () => {
         sourceRoot: 'projects/parent/app1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/parent/app1/**/*.ts',
@@ -1574,7 +1574,7 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: ['src/**/*.ts', 'src/**/*.html'],
             },
@@ -1608,10 +1608,10 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           myCustomBuild: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
           },
-          myCustomLint: { builder: '@angular-eslint/builder:lint' },
-          myCustomTest: { builder: '@angular-devkit/build-angular:karma' },
+          myCustomLint: { builder: '@angular-classic-eslint/builder:lint' },
+          myCustomTest: { builder: '@angular-classic-devkit/build-angular:karma' },
         },
       });
       const migrator = new AppMigrator(tree, {}, project);
@@ -1640,12 +1640,12 @@ describe('app migrator', () => {
         sourceRoot: 'src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:browser',
+            builder: '@angular-classic-devkit/build-angular:browser',
           },
-          lint: { builder: '@angular-eslint/builder:lint' },
-          myCustomTest: { builder: '@angular-devkit/build-angular:karma' },
+          lint: { builder: '@angular-classic-eslint/builder:lint' },
+          myCustomTest: { builder: '@angular-classic-devkit/build-angular:karma' },
           e2e: {
-            builder: '@angular-devkit/build-angular:protractor',
+            builder: '@angular-classic-devkit/build-angular:protractor',
             options: { protractorConfig: 'protractor.conf.js' },
           },
         },

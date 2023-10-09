@@ -20,7 +20,6 @@ import {getLView} from '@angular-classic/core/src/render3/state';
 import {ngDevModeResetPerfCounters} from '@angular-classic/core/src/util/ng_dev_mode';
 import {fakeAsync, flushMicrotasks, TestBed} from '@angular-classic/core/testing';
 import {By} from '@angular-classic/platform-browser';
-import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 import {expectPerfCounters} from '@angular-classic/private/testing';
 
 describe('acceptance integration tests', () => {

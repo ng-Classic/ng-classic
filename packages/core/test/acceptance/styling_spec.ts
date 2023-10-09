@@ -12,7 +12,6 @@ import {ngDevModeResetPerfCounters} from '@angular-classic/core/src/util/ng_dev_
 import {TestBed} from '@angular-classic/core/testing';
 import {getElementClasses, getElementStyles, getSortedClassName, getSortedStyle} from '@angular-classic/core/testing/src/styling';
 import {By, DomSanitizer, SafeStyle} from '@angular-classic/platform-browser';
-import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 import {expectPerfCounters} from '@angular-classic/private/testing';
 
 describe('styling', () => {
@@ -2476,10 +2475,10 @@ describe('styling', () => {
        }
 
        const header = fixture.nativeElement.querySelector('header');
-       expect(header.classList.contains('header'));
+       expect(header.classList.contains('header')).toBeTrue();
 
        const footer = fixture.nativeElement.querySelector('footer');
-       expect(footer.classList.contains('footer'));
+       expect(footer.classList.contains('footer')).toBeTrue();
 
        expect(getItemElements().length).toEqual(3);
        expect(getItemClasses()).toEqual([

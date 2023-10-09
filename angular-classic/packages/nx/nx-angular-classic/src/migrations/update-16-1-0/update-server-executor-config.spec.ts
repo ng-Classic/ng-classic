@@ -4,7 +4,7 @@ import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
 import migration from './update-server-executor-config';
 
 describe.each([
-  '@angular-devkit/build-angular:server',
+  '@angular-classic-devkit/build-angular:server',
   '@angular-classic/nx-angular:server',
   '@nrwl/angular:server',
 ])('update-server-executor-config migration', (executor) => {

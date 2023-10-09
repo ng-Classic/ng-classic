@@ -8,7 +8,7 @@ import { join } from 'path';
 
 export function createTmpTsConfigForBuildableLibs(
   tsConfigPath: string,
-  context: import('@angular-devkit/architect').BuilderContext,
+  context: import('@angular-classic-devkit/architect').BuilderContext,
   options?: { projectGraph?: ProjectGraph; target?: string }
 ) {
   let dependencies: DependentBuildableProjectNode[];

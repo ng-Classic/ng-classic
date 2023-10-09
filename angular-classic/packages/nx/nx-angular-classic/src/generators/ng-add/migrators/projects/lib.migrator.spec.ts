@@ -128,7 +128,7 @@ describe('lib migrator', () => {
         `The "build" target is using a builder "@not/supported:builder" that's not currently supported by the automated migration. The target will be skipped.`,
       ]);
       expect(result[0].hint).toMatchInlineSnapshot(
-        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-devkit/build-angular:ng-packagr", "@angular-devkit/build-angular:karma" and "@angular-eslint/builder:lint"), and run the migration again."`
+        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-classic-devkit/build-angular:ng-packagr", "@angular-classic-devkit/build-angular:karma" and "@angular-classic-eslint/builder:lint"), and run the migration again."`
       );
     });
 
@@ -151,7 +151,7 @@ describe('lib migrator', () => {
         `The "test" target is using a builder "@other/not-supported:builder" that's not currently supported by the automated migration. The target will be skipped.`,
       ]);
       expect(result[0].hint).toMatchInlineSnapshot(
-        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-devkit/build-angular:ng-packagr", "@angular-devkit/build-angular:karma" and "@angular-eslint/builder:lint"), and run the migration again."`
+        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-classic-devkit/build-angular:ng-packagr", "@angular-classic-devkit/build-angular:karma" and "@angular-classic-eslint/builder:lint"), and run the migration again."`
       );
     });
 
@@ -170,7 +170,7 @@ describe('lib migrator', () => {
         `The "my-build" target is using a builder "@not/supported:builder" that's not currently supported by the automated migration. The target will be skipped.`,
       ]);
       expect(result[0].hint).toMatchInlineSnapshot(
-        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-devkit/build-angular:ng-packagr", "@angular-devkit/build-angular:karma" and "@angular-eslint/builder:lint"), and run the migration again."`
+        `"Make sure to manually migrate the target configuration and any possible associated files. Alternatively, you could revert the migration, change the builder to one of the builders supported by the automated migration ("@angular-classic-devkit/build-angular:ng-packagr", "@angular-classic-devkit/build-angular:karma" and "@angular-classic-eslint/builder:lint"), and run the migration again."`
       );
     });
 
@@ -178,8 +178,8 @@ describe('lib migrator', () => {
       const project = addProject('lib1', {
         root: 'projects/lib1',
         architect: {
-          build1: { builder: '@angular-devkit/build-angular:ng-packagr' },
-          build2: { builder: '@angular-devkit/build-angular:ng-packagr' },
+          build1: { builder: '@angular-classic-devkit/build-angular:ng-packagr' },
+          build2: { builder: '@angular-classic-devkit/build-angular:ng-packagr' },
         },
       });
       const migrator = new LibMigrator(tree, {}, project);
@@ -188,7 +188,7 @@ describe('lib migrator', () => {
 
       expect(result).toHaveLength(1);
       expect(result[0].message).toBe(
-        'There is more than one target using the builder "@angular-devkit/build-angular:ng-packagr": "build1" and "build2". This is not currently supported by the automated migration. These targets will be skipped.'
+        'There is more than one target using the builder "@angular-classic-devkit/build-angular:ng-packagr": "build1" and "build2". This is not currently supported by the automated migration. These targets will be skipped.'
       );
       expect(result[0].hint).toBe(
         'Make sure to manually migrate their configuration and any possible associated files.'
@@ -199,10 +199,10 @@ describe('lib migrator', () => {
       const project = addProject('lib1', {
         root: 'projects/lib1',
         architect: {
-          build1: { builder: '@angular-devkit/build-angular:ng-packagr' },
-          build2: { builder: '@angular-devkit/build-angular:ng-packagr' },
-          lint1: { builder: '@angular-eslint/builder:lint' },
-          lint2: { builder: '@angular-eslint/builder:lint' },
+          build1: { builder: '@angular-classic-devkit/build-angular:ng-packagr' },
+          build2: { builder: '@angular-classic-devkit/build-angular:ng-packagr' },
+          lint1: { builder: '@angular-classic-eslint/builder:lint' },
+          lint2: { builder: '@angular-classic-eslint/builder:lint' },
         },
       });
       const migrator = new LibMigrator(tree, {}, project);
@@ -211,13 +211,13 @@ describe('lib migrator', () => {
 
       expect(result).toHaveLength(2);
       expect(result[0].message).toBe(
-        'There is more than one target using the builder "@angular-devkit/build-angular:ng-packagr": "build1" and "build2". This is not currently supported by the automated migration. These targets will be skipped.'
+        'There is more than one target using the builder "@angular-classic-devkit/build-angular:ng-packagr": "build1" and "build2". This is not currently supported by the automated migration. These targets will be skipped.'
       );
       expect(result[0].hint).toBe(
         'Make sure to manually migrate their configuration and any possible associated files.'
       );
       expect(result[1].message).toBe(
-        'There is more than one target using the builder "@angular-eslint/builder:lint": "lint1" and "lint2". This is not currently supported by the automated migration. These targets will be skipped.'
+        'There is more than one target using the builder "@angular-classic-eslint/builder:lint": "lint1" and "lint2". This is not currently supported by the automated migration. These targets will be skipped.'
       );
       expect(result[1].hint).toBe(
         'Make sure to manually migrate their configuration and any possible associated files.'
@@ -228,7 +228,7 @@ describe('lib migrator', () => {
       const project = addProject('lib1', {
         root: 'projects/lib1',
         architect: {
-          build: { builder: '@angular-devkit/build-angular:ng-packagr' },
+          build: { builder: '@angular-classic-devkit/build-angular:ng-packagr' },
         },
       });
       const migrator = new LibMigrator(tree, {}, project);
@@ -268,14 +268,14 @@ describe('lib migrator', () => {
     it('should warn when there is no build target', async () => {
       const project = addProject('lib1', {
         root: 'projects/lib1',
-        architect: { test: { builder: '@angular-devkit/build-angular:karma' } },
+        architect: { test: { builder: '@angular-classic-devkit/build-angular:karma' } },
       });
       const migrator = new LibMigrator(tree, {}, project, mockedLogger as any);
 
       await expect(migrator.migrate()).resolves.not.toThrow();
 
       expect(mockedLogger.warn).toHaveBeenCalledWith(
-        'There is no target in the project configuration using the @angular-devkit/build-angular:ng-packagr builder. This might not be an issue. Skipping updating the build configuration.'
+        'There is no target in the project configuration using the @angular-classic-devkit/build-angular:ng-packagr builder. This might not be an issue. Skipping updating the build configuration.'
       );
     });
 
@@ -283,7 +283,7 @@ describe('lib migrator', () => {
       const project = addProject('lib1', {
         root: 'projects/lib1',
         architect: {
-          build: { builder: '@angular-devkit/build-angular:ng-packagr' },
+          build: { builder: '@angular-classic-devkit/build-angular:ng-packagr' },
         },
       });
       const migrator = new LibMigrator(tree, {}, project, mockedLogger as any);
@@ -300,7 +300,7 @@ describe('lib migrator', () => {
         root: 'projects/lib1',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: {},
             configurations: { development: {} },
           },
@@ -320,7 +320,7 @@ describe('lib migrator', () => {
         root: 'projects/lib1',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: { tsConfig: 'projects/lib1/tsconfig.lib.json' },
           },
         },
@@ -339,7 +339,7 @@ describe('lib migrator', () => {
         root: 'projects/lib1',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: {},
           },
         },
@@ -358,7 +358,7 @@ describe('lib migrator', () => {
         root: 'projects/lib1',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: { project: 'projects/lib1/ng-package.json' },
           },
         },
@@ -375,7 +375,7 @@ describe('lib migrator', () => {
     it('should warn when the lint target does not have any options', async () => {
       const project = addProject('lib1', {
         root: 'projects/lib1',
-        architect: { lint: { builder: '@angular-eslint/builder:lint' } },
+        architect: { lint: { builder: '@angular-classic-eslint/builder:lint' } },
       });
       const migrator = new LibMigrator(tree, {}, project, mockedLogger as any);
 
@@ -391,7 +391,7 @@ describe('lib migrator', () => {
         root: 'projects/lib1',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: { eslintConfig: '.non-existent-eslintrc.json' },
           },
         },
@@ -409,7 +409,7 @@ describe('lib migrator', () => {
       const project = addProject('lib1', {
         root: 'projects/lib1',
         architect: {
-          lint: { builder: '@angular-eslint/builder:lint', options: {} },
+          lint: { builder: '@angular-classic-eslint/builder:lint', options: {} },
         },
       });
       const migrator = new LibMigrator(tree, {}, project, mockedLogger as any);
@@ -426,7 +426,7 @@ describe('lib migrator', () => {
         root: 'projects/lib1',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: { lintFilePatterns: ['not-within-project/**/*.ts'] },
           },
         },
@@ -443,7 +443,7 @@ describe('lib migrator', () => {
     it('should warn when the test target does not have any options', async () => {
       const project = addProject('lib1', {
         root: 'projects/lib1',
-        architect: { test: { builder: '@angular-devkit/build-angular:karma' } },
+        architect: { test: { builder: '@angular-classic-devkit/build-angular:karma' } },
       });
       const migrator = new LibMigrator(tree, {}, project, mockedLogger as any);
 
@@ -458,7 +458,7 @@ describe('lib migrator', () => {
       const project = addProject('lib1', {
         root: 'projects/lib1',
         architect: {
-          test: { builder: '@angular-devkit/build-angular:karma', options: {} },
+          test: { builder: '@angular-classic-devkit/build-angular:karma', options: {} },
         },
       });
       const migrator = new LibMigrator(tree, {}, project, mockedLogger as any);
@@ -475,7 +475,7 @@ describe('lib migrator', () => {
         root: 'projects/lib1',
         architect: {
           test: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: { tsConfig: 'projects/lib1/tsconfig.spec.json' },
           },
         },
@@ -554,7 +554,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: { project: 'projects/lib1/ng-package.json' },
             configurations: {
               production: { tsConfig: 'projects/lib1/tsconfig.lib.prod.json' },
@@ -586,7 +586,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           myCustomBuildTarget: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: { project: 'projects/lib1/ng-package.json' },
             configurations: {
               production: { tsConfig: 'projects/lib1/tsconfig.lib.prod.json' },
@@ -618,7 +618,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             configurations: {
               production: {
                 project: 'projects/lib1/ng-package.json',
@@ -660,7 +660,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: {
               project: 'projects/lib1/ng-package.json',
               tsConfig: 'projects/lib1/tsconfig.lib.json',
@@ -694,7 +694,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/lib1/**/*.ts',
@@ -723,7 +723,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           myCustomLintTarget: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/lib1/**/*.ts',
@@ -752,7 +752,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               eslintConfig: 'projects/lib1/.eslintrc.json',
               lintFilePatterns: [
@@ -794,7 +794,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               eslintConfig: 'projects/lib1/.eslintrc.json',
               lintFilePatterns: [
@@ -826,7 +826,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           test: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: {
               main: 'projects/lib1/src/test.ts',
               tsConfig: 'projects/lib1/tsconfig.spec.json',
@@ -841,7 +841,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.test).toStrictEqual({
-        executor: '@angular-devkit/build-angular:karma',
+        executor: '@angular-classic-devkit/build-angular:karma',
         options: {
           main: 'libs/lib1/src/test.ts',
           tsConfig: 'libs/lib1/tsconfig.spec.json',
@@ -856,7 +856,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           myCustomTestTarget: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: {
               main: 'projects/lib1/src/test.ts',
               tsConfig: 'projects/lib1/tsconfig.spec.json',
@@ -871,7 +871,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.myCustomTestTarget).toStrictEqual({
-        executor: '@angular-devkit/build-angular:karma',
+        executor: '@angular-classic-devkit/build-angular:karma',
         options: {
           main: 'libs/lib1/src/test.ts',
           tsConfig: 'libs/lib1/tsconfig.spec.json',
@@ -893,7 +893,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/parent/lib1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: { project: 'projects/parent/lib1/ng-package.json' },
           },
         },
@@ -930,7 +930,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: { tsConfig: 'projects/lib1/tsconfig.lib.json' },
           },
         },
@@ -967,7 +967,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: { tsConfig: 'projects/lib1/tsconfig.lib.json' },
           },
         },
@@ -996,7 +996,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             options: { tsConfig: 'projects/lib1/tsconfig.lib.json' },
           },
         },
@@ -1032,7 +1032,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
             configurations: {
               development: { tsConfig: 'projects/lib1/tsconfig.lib.json' },
             },
@@ -1074,7 +1074,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           test: {
-            builder: '@angular-devkit/build-angular:karma',
+            builder: '@angular-classic-devkit/build-angular:karma',
             options: { tsConfig: 'projects/lib1/tsconfig.spec.json' },
           },
         },
@@ -1105,7 +1105,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/parent/lib1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/parent/lib1/**/*.ts',
@@ -1131,7 +1131,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/lib1/**/*.ts',
@@ -1159,7 +1159,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/parent/lib1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/parent/lib1/**/*.ts',
@@ -1187,7 +1187,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/parent/lib1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/parent/lib1/**/*.ts',
@@ -1227,7 +1227,7 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           lint: {
-            builder: '@angular-eslint/builder:lint',
+            builder: '@angular-classic-eslint/builder:lint',
             options: {
               lintFilePatterns: [
                 'projects/lib1/**/*.ts',
@@ -1264,10 +1264,10 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           myCustomBuild: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
           },
-          myCustomLint: { builder: '@angular-eslint/builder:lint' },
-          myCustomTest: { builder: '@angular-devkit/build-angular:karma' },
+          myCustomLint: { builder: '@angular-classic-eslint/builder:lint' },
+          myCustomTest: { builder: '@angular-classic-devkit/build-angular:karma' },
         },
       });
       const migrator = new LibMigrator(tree, {}, project);
@@ -1294,10 +1294,10 @@ describe('lib migrator', () => {
         sourceRoot: 'projects/lib1/src',
         architect: {
           build: {
-            builder: '@angular-devkit/build-angular:ng-packagr',
+            builder: '@angular-classic-devkit/build-angular:ng-packagr',
           },
-          lint: { builder: '@angular-eslint/builder:lint' },
-          myCustomTest: { builder: '@angular-devkit/build-angular:karma' },
+          lint: { builder: '@angular-classic-eslint/builder:lint' },
+          myCustomTest: { builder: '@angular-classic-devkit/build-angular:karma' },
         },
       });
       const migrator = new LibMigrator(tree, {}, project);

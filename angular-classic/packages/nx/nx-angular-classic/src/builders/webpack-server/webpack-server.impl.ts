@@ -11,8 +11,8 @@ import { validateOptions } from './validate-options';
 
 function buildServerApp(
   options: Schema,
-  context: import('@angular-devkit/architect').BuilderContext
-): Observable<import('@angular-devkit/build-angular').ServerBuilderOutput> {
+  context: import('@angular-classic-devkit/architect').BuilderContext
+): Observable<import('@angular-classic-devkit/build-angular').ServerBuilderOutput> {
   const { buildLibsFromSource, customWebpackConfig, ...delegateOptions } =
     options;
   // If there is a path to custom webpack config
@@ -36,7 +36,7 @@ function buildServerApp(
     }
   }
 
-  return from(import('@angular-devkit/build-angular')).pipe(
+  return from(import('@angular-classic-devkit/build-angular')).pipe(
     switchMap(({ executeServerBuilder }) =>
       executeServerBuilder(delegateOptions, context)
     )
@@ -45,10 +45,10 @@ function buildServerApp(
 
 function buildServerAppWithCustomWebpackConfiguration(
   options: Schema,
-  context: import('@angular-devkit/architect').BuilderContext,
+  context: import('@angular-classic-devkit/architect').BuilderContext,
   pathToWebpackConfig: string
 ) {
-  return from(import('@angular-devkit/build-angular')).pipe(
+  return from(import('@angular-classic-devkit/build-angular')).pipe(
     switchMap(({ executeServerBuilder }) =>
       executeServerBuilder(options, context as any, {
         webpackConfiguration: async (baseWebpackConfig) => {
@@ -77,7 +77,7 @@ function buildServerAppWithCustomWebpackConfiguration(
               !m.loader
                 ? true
                 : !m.loader.endsWith(
-                    '@angular-devkit/build-angular/src/builders/server/platform-server-exports-loader.js'
+                    '@angular-classic-devkit/build-angular/src/builders/server/platform-server-exports-loader.js'
                   )
             );
           }
@@ -91,8 +91,8 @@ function buildServerAppWithCustomWebpackConfiguration(
 
 export function executeWebpackServerBuilder(
   options: Schema,
-  context: import('@angular-devkit/architect').BuilderContext
-): Observable<import('@angular-devkit/build-angular').ServerBuilderOutput> {
+  context: import('@angular-classic-devkit/architect').BuilderContext
+): Observable<import('@angular-classic-devkit/build-angular').ServerBuilderOutput> {
   validateOptions(options);
 
   const installedAngularVersionInfo = getInstalledAngularVersionInfo();
@@ -117,6 +117,6 @@ export function executeWebpackServerBuilder(
   return buildServerApp(options, context);
 }
 
-export default require('@angular-devkit/architect').createBuilder(
+export default require('@angular-classic-devkit/architect').createBuilder(
   executeWebpackServerBuilder
 ) as any;

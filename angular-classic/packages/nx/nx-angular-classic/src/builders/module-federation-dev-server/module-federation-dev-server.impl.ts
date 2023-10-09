@@ -14,7 +14,7 @@ import { findMatchingProjects } from 'nx/src/utils/find-matching-projects';
 
 export function executeModuleFederationDevServerBuilder(
   schema: Schema,
-  context: import('@angular-devkit/architect').BuilderContext
+  context: import('@angular-classic-devkit/architect').BuilderContext
 ) {
   const { ...options } = schema;
   const projectGraph = readCachedProjectGraph();
@@ -118,6 +118,6 @@ export function executeModuleFederationDevServerBuilder(
   return executeWebpackDevServerBuilder(options, context);
 }
 
-export default require('@angular-devkit/architect').createBuilder(
+export default require('@angular-classic-devkit/architect').createBuilder(
   executeModuleFederationDevServerBuilder
 );

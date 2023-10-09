@@ -38,8 +38,8 @@ export interface ToSignalOptions<T> {
   /**
    * `Injector` which will provide the `DestroyRef` used to clean up the Observable subscription.
    *
-   * If this is not provided, a `DestroyRef` will be retrieved from the current injection context,
-   * unless manual cleanup is requested.
+   * If this is not provided, a `DestroyRef` will be retrieved from the current [injection
+   * context](/guide/dependency-injection-context), unless manual cleanup is requested.
    */
   injector?: Injector;
 
@@ -64,10 +64,11 @@ export interface ToSignalOptions<T> {
  * Before the `Observable` emits its first value, the `Signal` will return `undefined`. To avoid
  * this, either an `initialValue` can be passed or the `requireSync` option enabled.
  *
- * By default, the subscription will be automatically cleaned up when the current injection context
- * is destroyed. For example, when `toObservable` is called during the construction of a component,
- * the subscription will be cleaned up when the component is destroyed. If an injection context is
- * not available, an explicit `Injector` can be passed instead.
+ * By default, the subscription will be automatically cleaned up when the current [injection
+ * context](guide/dependency-injection-context) is destroyed. For example, when `toObservable` is
+ * called during the construction of a component, the subscription will be cleaned up when the
+ * component is destroyed. If an [injection context](/guide/dependency-injection-context) is not
+ * available, an explicit `Injector` can be passed instead.
  *
  * If the subscription should persist until the `Observable` itself completes, the `manualCleanup`
  * option can be specified instead, which disables the automatic subscription teardown. No injection
@@ -87,10 +88,11 @@ export function toSignal<T>(source: Observable<T>|Subscribable<T>): Signal<T|und
  * `initialValue`, or `undefined` if no `initialValue` is provided. If the `Observable` is
  * guaranteed to emit synchronously, then the `requireSync` option can be passed instead.
  *
- * By default, the subscription will be automatically cleaned up when the current injection context
- * is destroyed. For example, when `toObservable` is called during the construction of a component,
- * the subscription will be cleaned up when the component is destroyed. If an injection context is
- * not available, an explicit `Injector` can be passed instead.
+ * By default, the subscription will be automatically cleaned up when the current [injection
+ * context](/guide/dependency-injection-context) is destroyed. For example, when `toObservable` is
+ * called during the construction of a component, the subscription will be cleaned up when the
+ * component is destroyed. If an injection context is not available, an explicit `Injector` can be
+ * passed instead.
  *
  * If the subscription should persist until the `Observable` itself completes, the `manualCleanup`
  * option can be specified instead, which disables the automatic subscription teardown. No injection
@@ -115,10 +117,11 @@ export function toSignal<T>(
  * `initialValue`. If the `Observable` is guaranteed to emit synchronously, then the `requireSync`
  * option can be passed instead.
  *
- * By default, the subscription will be automatically cleaned up when the current injection context
- * is destroyed. For example, when `toObservable` is called during the construction of a component,
- * the subscription will be cleaned up when the component is destroyed. If an injection context is
- * not available, an explicit `Injector` can be passed instead.
+ * By default, the subscription will be automatically cleaned up when the current [injection
+ * context](guide/dependency-injection-context) is destroyed. For example, when `toObservable` is
+ * called during the construction of a component, the subscription will be cleaned up when the
+ * component is destroyed. If an [injection context](/guide/dependency-injection-context) is not
+ * available, an explicit `Injector` can be passed instead.
  *
  * If the subscription should persist until the `Observable` itself completes, the `manualCleanup`
  * option can be specified instead, which disables the automatic subscription teardown. No injection
@@ -142,10 +145,11 @@ export function toSignal<T, U extends T|null|undefined>(
  * immediately upon subscription. No `initialValue` is needed in this case, and the returned signal
  * does not include an `undefined` type.
  *
- * By default, the subscription will be automatically cleaned up when the current injection context
- * is destroyed. For example, when `toObservable` is called during the construction of a component,
- * the subscription will be cleaned up when the component is destroyed. If an injection context is
- * not available, an explicit `Injector` can be passed instead.
+ * By default, the subscription will be automatically cleaned up when the current [injection
+ * context](/guide/dependency-injection-context) is destroyed. For example, when `toObservable` is
+ * called during the construction of a component, the subscription will be cleaned up when the
+ * component is destroyed. If an injection context is not available, an explicit `Injector` can be
+ * passed instead.
  *
  * If the subscription should persist until the `Observable` itself completes, the `manualCleanup`
  * option can be specified instead, which disables the automatic subscription teardown. No injection
@@ -174,21 +178,23 @@ export function toSignal<T, U = undefined>(
     state = signal<State<T|U>>({kind: StateKind.Value, value: options?.initialValue as U});
   }
 
-  const sub = source.subscribe({
-    next: value => state.set({kind: StateKind.Value, value}),
-    error: error => state.set({kind: StateKind.Error, error}),
-    // Completion of the Observable is meaningless to the signal. Signals don't have a concept of
-    // "complete".
+  untracked(() => {
+    const sub = source.subscribe({
+      next: value => state.set({kind: StateKind.Value, value}),
+      error: error => state.set({kind: StateKind.Error, error}),
+      // Completion of the Observable is meaningless to the signal. Signals don't have a concept of
+      // "complete".
+    });
+
+    if (ngDevMode && options?.requireSync && state().kind === StateKind.NoValue) {
+      throw new RuntimeError(
+          RuntimeErrorCode.REQUIRE_SYNC_WITHOUT_SYNC_EMIT,
+          '`toSignal()` called with `requireSync` but `Observable` did not emit synchronously.');
+    }
+
+    // Unsubscribe when the current context is destroyed, if requested.
+    cleanupRef?.onDestroy(sub.unsubscribe.bind(sub));
   });
-
-  if (ngDevMode && options?.requireSync && untracked(state).kind === StateKind.NoValue) {
-    throw new RuntimeError(
-        RuntimeErrorCode.REQUIRE_SYNC_WITHOUT_SYNC_EMIT,
-        '`toSignal()` called with `requireSync` but `Observable` did not emit synchronously.');
-  }
-
-  // Unsubscribe when the current context is destroyed, if requested.
-  cleanupRef?.onDestroy(sub.unsubscribe.bind(sub));
 
   // The actual returned signal is a `computed` of the `State` signal, which maps the various states
   // to either values or errors.

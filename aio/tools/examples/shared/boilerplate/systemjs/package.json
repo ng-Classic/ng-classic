@@ -34,7 +34,7 @@
     "@angular-classic/platform-browser-dynamic": "^16.1.0-rc.0",
     "@angular-classic/router": "^16.1.0-rc.0",
     "@angular-classic/upgrade": "^16.1.0-rc.0",
-    "core-js": "^2.5.4",
+    "core-js": "^3.0.0",
     "rxjs": "~7.8.0",
     "systemjs": "~0.19.39",
     "systemjs-plugin-babel": "~0.0.25",

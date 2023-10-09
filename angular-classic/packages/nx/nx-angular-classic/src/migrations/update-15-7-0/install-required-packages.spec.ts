@@ -20,7 +20,7 @@ describe('installed-required-packages', () => {
         '@angular-classic/core': '~15.0.0',
       },
       devDependencies: {
-        '@angular-devkit/build-angular': '~15.0.0',
+        '@angular-classic-devkit/build-angular': '~15.0.0',
       },
     }));
 
@@ -36,9 +36,9 @@ describe('installed-required-packages', () => {
     `);
     expect(pkgJson.devDependencies).toMatchInlineSnapshot(`
       {
-        "@angular-devkit/build-angular": "~15.0.0",
-        "@angular-devkit/core": "~15.0.0",
-        "@angular-devkit/schematics": "~15.0.0",
+        "@angular-classic-devkit/build-angular": "~15.0.0",
+        "@angular-classic-devkit/core": "~15.0.0",
+        "@angular-classic-devkit/schematics": "~15.0.0",
         "@schematics/angular": "~15.0.0",
       }
     `);
@@ -53,7 +53,7 @@ describe('installed-required-packages', () => {
         '@angular-classic/core': '~14.0.0',
       },
       devDependencies: {
-        '@angular-devkit/build-angular': '~14.0.0',
+        '@angular-classic-devkit/build-angular': '~14.0.0',
       },
     }));
 
@@ -69,9 +69,9 @@ describe('installed-required-packages', () => {
     `);
     expect(pkgJson.devDependencies).toMatchInlineSnapshot(`
       {
-        "@angular-devkit/build-angular": "~14.0.0",
-        "@angular-devkit/core": "~14.0.0",
-        "@angular-devkit/schematics": "~14.0.0",
+        "@angular-classic-devkit/build-angular": "~14.0.0",
+        "@angular-classic-devkit/core": "~14.0.0",
+        "@angular-classic-devkit/schematics": "~14.0.0",
         "@schematics/angular": "~14.0.0",
       }
     `);
@@ -86,9 +86,9 @@ describe('installed-required-packages', () => {
         '@angular-classic/core': '~15.0.0',
       },
       devDependencies: {
-        '@angular-devkit/build-angular': '~15.0.0',
-        '@angular-devkit/core': '~15.0.0',
-        '@angular-devkit/schematics': '~15.0.0',
+        '@angular-classic-devkit/build-angular': '~15.0.0',
+        '@angular-classic-devkit/core': '~15.0.0',
+        '@angular-classic-devkit/schematics': '~15.0.0',
         '@schematics/angular': '~15.0.0',
       },
     }));
@@ -105,9 +105,9 @@ describe('installed-required-packages', () => {
     `);
     expect(pkgJson.devDependencies).toMatchInlineSnapshot(`
       {
-        "@angular-devkit/build-angular": "~15.0.0",
-        "@angular-devkit/core": "~15.0.0",
-        "@angular-devkit/schematics": "~15.0.0",
+        "@angular-classic-devkit/build-angular": "~15.0.0",
+        "@angular-classic-devkit/core": "~15.0.0",
+        "@angular-classic-devkit/schematics": "~15.0.0",
         "@schematics/angular": "~15.0.0",
       }
     `);
@@ -122,9 +122,9 @@ describe('installed-required-packages', () => {
         '@angular-classic/core': '~14.0.0',
       },
       devDependencies: {
-        '@angular-devkit/build-angular': '~14.0.0',
-        '@angular-devkit/core': '~14.0.0',
-        '@angular-devkit/schematics': '~14.0.0',
+        '@angular-classic-devkit/build-angular': '~14.0.0',
+        '@angular-classic-devkit/core': '~14.0.0',
+        '@angular-classic-devkit/schematics': '~14.0.0',
         '@schematics/angular': '~14.0.0',
       },
     }));
@@ -141,9 +141,9 @@ describe('installed-required-packages', () => {
     `);
     expect(pkgJson.devDependencies).toMatchInlineSnapshot(`
       {
-        "@angular-devkit/build-angular": "~14.0.0",
-        "@angular-devkit/core": "~14.0.0",
-        "@angular-devkit/schematics": "~14.0.0",
+        "@angular-classic-devkit/build-angular": "~14.0.0",
+        "@angular-classic-devkit/core": "~14.0.0",
+        "@angular-classic-devkit/schematics": "~14.0.0",
         "@schematics/angular": "~14.0.0",
       }
     `);
@@ -158,8 +158,8 @@ describe('installed-required-packages', () => {
         '@angular-classic/core': '~15.0.0',
       },
       devDependencies: {
-        '@angular-devkit/build-angular': '~15.0.0',
-        '@angular-devkit/core': '~15.0.0',
+        '@angular-classic-devkit/build-angular': '~15.0.0',
+        '@angular-classic-devkit/core': '~15.0.0',
         '@schematics/angular': '~15.0.0',
       },
     }));
@@ -176,9 +176,9 @@ describe('installed-required-packages', () => {
     `);
     expect(pkgJson.devDependencies).toMatchInlineSnapshot(`
       {
-        "@angular-devkit/build-angular": "~15.0.0",
-        "@angular-devkit/core": "~15.0.0",
-        "@angular-devkit/schematics": "~15.0.0",
+        "@angular-classic-devkit/build-angular": "~15.0.0",
+        "@angular-classic-devkit/core": "~15.0.0",
+        "@angular-classic-devkit/schematics": "~15.0.0",
         "@schematics/angular": "~15.0.0",
       }
     `);
@@ -193,8 +193,8 @@ describe('installed-required-packages', () => {
         '@angular-classic/core': '~14.0.0',
       },
       devDependencies: {
-        '@angular-devkit/build-angular': '~14.0.0',
-        '@angular-devkit/core': '~14.0.0',
+        '@angular-classic-devkit/build-angular': '~14.0.0',
+        '@angular-classic-devkit/core': '~14.0.0',
         '@schematics/angular': '~14.0.0',
       },
     }));
@@ -211,9 +211,9 @@ describe('installed-required-packages', () => {
     `);
     expect(pkgJson.devDependencies).toMatchInlineSnapshot(`
       {
-        "@angular-devkit/build-angular": "~14.0.0",
-        "@angular-devkit/core": "~14.0.0",
-        "@angular-devkit/schematics": "~14.0.0",
+        "@angular-classic-devkit/build-angular": "~14.0.0",
+        "@angular-classic-devkit/core": "~14.0.0",
+        "@angular-classic-devkit/schematics": "~14.0.0",
         "@schematics/angular": "~14.0.0",
       }
     `);

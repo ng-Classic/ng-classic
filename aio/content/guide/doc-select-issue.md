@@ -2,8 +2,8 @@
 
 This topic describes how to select an Angular Classic documentation issue to fix.
 
-Angular Classic documentation issues are stored in the **Issues** tab of the [ng-classic/ng-classic](https://github.com/ng-classic/ng-classic) repo.
-Documentation issues can be identified by the `area: docs` label and they are labeled by priority.
+Angular documentation issues are stored in the **Issues** tab of the [ng-classic/ng-classic](https://github.com/ng-classic/ng-classic) repo.
+Documentation issues can be identified by the `area: docs` label, and they are labeled by priority.
 
 You are welcome to work on [any issue](#links-to-documentation-issues) that someone else isn't already working on.
 If you know of a problem in the documentation that hasn't been reported, you can also [create a new documentation issue](https://github.com/ng-classic/ng-classic/issues/new?assignees=&labels=&template=3-docs-bug.yaml).

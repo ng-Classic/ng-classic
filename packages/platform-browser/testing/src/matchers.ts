@@ -8,7 +8,7 @@
 
 
 import {ɵgetDOM as getDOM} from '@angular-classic/common';
-import {Type, ɵglobal as global} from '@angular-classic/core';
+import {Type} from '@angular-classic/core';
 import {ComponentFixture} from '@angular-classic/core/testing';
 import {By} from '@angular-classic/platform-browser';
 
@@ -72,8 +72,6 @@ export interface NgMatchers<T = any> extends jasmine.Matchers<T> {
   not: NgMatchers<T>;
 }
 
-const _global = <any>(typeof window === 'undefined' ? global : window);
-
 /**
  * Jasmine matching function with Angular Classic matchers mixed in.
  *
@@ -81,9 +79,10 @@ const _global = <any>(typeof window === 'undefined' ? global : window);
  *
  * {@example testing/ts/matchers.ts region='toHaveText'}
  */
-export const expect: <T = any>(actual: T) => NgMatchers<T> = _global.expect;
+const _expect: <T = any>(actual: T) => NgMatchers<T> = expect as any;
+export {_expect as expect};
 
-_global.beforeEach(function() {
+beforeEach(function() {
   jasmine.addMatchers({
     toHaveText: function() {
       return {

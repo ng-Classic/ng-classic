@@ -1,21 +1,12 @@
 # Security
 
-This topic describes Angular's built-in protections against common web-application vulnerabilities and attacks such as cross-site scripting attacks.
+This topic describes Angular Classic's built-in protections against common web-application vulnerabilities and attacks such as cross-site scripting attacks.
 It doesn't cover application-level security, such as authentication and authorization.
 
 For more information about the attacks and mitigations described below, see the [Open Web Application Security Project (OWASP) Guide](https://www.owasp.org/index.php/Category:OWASP_Guide_Project).
 
 You can run the <live-example></live-example> in Stackblitz and download the code from there.
 
-<a id="report-issues"></a>
-
-<div class="callout is-important">
-
-<header>Reporting vulnerabilities</header>
-
-Angular Classic is part of Google [Open Source Software Vulnerability Reward Program](https://bughunters.google.com/about/rules/6521337925468160/google-open-source-software-vulnerability-reward-program-rules), for vulnerabilities in Angular Classic please submit your report [here](https://bughunters.google.com/report).
-
-For more information about how Google handles security issues, see [Google's security philosophy](https://www.google.com/about/appsecurity).
 
 </div>
 
@@ -344,7 +335,7 @@ That means only your application can read this cookie token and set the custom h
 The malicious code on `evil.com` can't.
 
 Angular's `HttpClient` has built-in support for the client-side half of this technique.
-Read about it more in the [HttpClient guide](guide/http#security-xsrf-protection).
+Read about it more in the [HttpClient guide](guide/http-security-xsrf-protection).
 
 For information about CSRF at the Open Web Application Security Project \(OWASP\), see [Cross-Site Request Forgery (CSRF)](https://owasp.org/www-community/attacks/csrf) and [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html).
 The Stanford University paper [Robust Defenses for Cross-Site Request Forgery](https://seclab.stanford.edu/websec/csrf/csrf.pdf) is a rich source of detail.

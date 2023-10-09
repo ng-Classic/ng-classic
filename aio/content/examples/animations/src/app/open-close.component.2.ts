@@ -2,6 +2,7 @@ import { Component } from '@angular-classic/core';
 import { trigger, transition, state, animate, style } from '@angular-classic/animations';
 
 @Component({
+  standalone: true,
   selector: 'app-open-close-boolean',
 // #docregion trigger-boolean
   animations: [

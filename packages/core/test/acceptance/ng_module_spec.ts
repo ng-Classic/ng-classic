@@ -12,7 +12,6 @@ import {KNOWN_CONTROL_FLOW_DIRECTIVES} from '@angular-classic/core/src/render3/i
 import {TestBed} from '@angular-classic/core/testing';
 import {BrowserModule} from '@angular-classic/platform-browser';
 import {platformBrowserDynamic} from '@angular-classic/platform-browser-dynamic';
-import {expect} from '@angular-classic/platform-browser/testing/src/matchers';
 import {withBody} from '@angular-classic/private/testing';
 
 describe('NgModule', () => {

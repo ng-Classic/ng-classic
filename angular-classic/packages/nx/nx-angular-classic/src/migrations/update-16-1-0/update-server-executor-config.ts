@@ -1,4 +1,4 @@
-import type { ServerBuilderOptions } from '@angular-devkit/build-angular';
+import type { ServerBuilderOptions } from '@angular-classic-devkit/build-angular';
 import type { Tree } from '@nx/devkit';
 import {
   formatFiles,
@@ -8,7 +8,7 @@ import {
 import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
 
 const executors = [
-  '@angular-devkit/build-angular:server',
+  '@angular-classic-devkit/build-angular:server',
   '@angular-classic/nx-angular:server',
   '@nrwl/angular:server',
 ];

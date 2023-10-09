@@ -41,7 +41,7 @@ function getKarmaTargetNames(tree: Tree) {
   const karmaTargetNames = new Set<string>();
   forEachExecutorOptions(
     tree,
-    '@angular-devkit/build-angular:karma',
+    '@angular-classic-devkit/build-angular:karma',
     (_, __, target) => {
       karmaTargetNames.add(target);
     }

@@ -18,7 +18,7 @@ exports[`setupSSR should create the files correctly for ssr 1`] = `
   "dependsOn": [
     "build",
   ],
-  "executor": "@angular-devkit/build-angular:server",
+  "executor": "@angular-classic-devkit/build-angular:server",
   "options": {
     "main": "apps/app1/server.ts",
     "outputPath": "dist/apps/app1/server",
@@ -120,7 +120,7 @@ exports[`setupSSR should create the files correctly for ssr when app is standalo
   "dependsOn": [
     "build",
   ],
-  "executor": "@angular-devkit/build-angular:server",
+  "executor": "@angular-classic-devkit/build-angular:server",
   "options": {
     "main": "apps/app1/server.ts",
     "outputPath": "dist/apps/app1/server",
@@ -228,7 +228,7 @@ exports[`setupSSR should use fileReplacements if they already exist 1`] = `
   "dependsOn": [
     "build",
   ],
-  "executor": "@angular-devkit/build-angular:server",
+  "executor": "@angular-classic-devkit/build-angular:server",
   "options": {
     "main": "apps/app1/server.ts",
     "outputPath": "dist/apps/app1/server",
